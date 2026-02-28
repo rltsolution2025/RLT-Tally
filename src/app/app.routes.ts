@@ -1,0 +1,37 @@
+import { Routes } from '@angular/router';
+import { Home } from './component/home/home';
+import { Header } from './component/header/header';
+import { Footer } from './component/footer/footer';
+import { About } from './component/about/about';
+import { Contact } from './component/contact/contact';
+import { TallyEssential } from './component/courses/tally-essential/tally-essential';
+import { TallyPrime } from './component/courses/tally-prime/tally-prime';
+import { TallyProfessional } from './component/courses/tally-professional/tally-professional';
+import { GSTSimulation } from './component/courses/gst-simulation/gst-simulation';
+import { MasterAccountant } from './component/courses/master-accountant/master-accountant';
+import { OfficeAutomation } from './component/courses/office-automation/office-automation';
+import { PayrollIncomeTax } from './component/courses/payroll-income-tax/payroll-income-tax';
+import { Career } from './component/career/career';
+import { Hire } from './component/hire/hire';
+import { Platform } from './component/platform/platform';
+import { Refer } from './component/refer/refer';
+
+export const routes: Routes = [
+    { path: '', component: Home },
+    { path: 'header', component: Header },
+    { path: 'footer', component: Footer },
+    { path: '', redirectTo: '', pathMatch: "full" },
+    { path: 'about', component: About },
+    { path: 'contact', component: Contact },
+    { path: 'tally-essential', component: TallyEssential },
+    { path: 'tally-prime', component: TallyPrime },
+    { path: 'tally-professional', component: TallyProfessional },
+    { path: 'gst-simulation', component: GSTSimulation },
+    { path: 'master-accountant', component: MasterAccountant },
+    { path: 'office-automation', component: OfficeAutomation },
+    { path: 'payroll-&-income-tax', component: PayrollIncomeTax },
+    { path: 'career', component: Career },
+    { path: 'hire-for-us', component: Hire },
+    { path: 'platform', component: Platform },
+    { path: 'referral', component: Refer },
+];

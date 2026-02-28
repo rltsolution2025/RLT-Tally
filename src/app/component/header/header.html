@@ -1,0 +1,139 @@
+<!-- Welcome Top Bar -->
+<nav class="navbar welcome-navbar">
+  <div class="container-fluid welcome-wrapper">
+
+    <!-- Left: Gradient Style News Ticker -->
+    <div class="professional-ticker">
+      <div class="ticker-track gradient-text">
+
+        <!-- Original -->
+        <span>Welcome to RLT Edzaro – Certified Tally Training for Future Accountants</span>
+        <span>Enroll Now for Expert Tally Training and Career Success.</span>
+        <span>
+          For Your Assistance:
+          <a href="tel:+919600681581">+91 96006 81581</a> | <a href="mailto:tally@rltedzaro.com">tally@rltedzaro.com</a>
+        </span>
+
+        <!-- Duplicate (required for mobile) -->
+        <span>Welcome to RLT Edzaro – Certified Tally Training for Future Accountants</span>
+        <span>Enroll Now for Expert Tally Training and Career Success.</span>
+        <span>
+          For Your Assistance:
+          <a href="tel:+919600681581">+91 96006 81581</a> | <a href="mailto:tally@rltedzaro.com">tally@rltedzaro.com</a>
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Right: Social Icons -->
+    <div class="welcome-social">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- Secondary Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar">
+  <div class="container-fluid">
+
+    <!-- Logo (Left) -->
+    <a routerLink="/" class="navbar-brand logo-link">
+      <img src="/Logo/RLT  Logo Final.png" alt="RLT Edzaro Logo" class="logo-1">
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu (Right) -->
+    <div class="collapse navbar-collapse justify-content" id="mainNavbar">
+      <ul class="navbar-nav align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true}">Explore us</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Career Programs
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+
+            <!-- Popular Courses -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Popular Courses</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/tally-essential" routerLinkActive="active">Tally Essential</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="/tally-professional" routerLinkActive="active">Tally
+                    Professional</a></li>
+                <li><a class="dropdown-item" routerLink="/tally-prime" routerLinkActive="active">Tally Prime – ERP</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Specialization Courses -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Specialization Courses</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/gst-simulation" routerLinkActive="active">GST Simulation</a>
+                </li>
+                <li><a class="dropdown-item" routerLink="/office-automation" routerLinkActive="active">Office
+                    Automation</a></li>
+                <li><a class="dropdown-item" routerLink="/payroll-income-tax" routerLinkActive="active">Payroll & Income
+                    Tax</a></li>
+              </ul>
+            </li>
+
+            <!-- Premium Courses -->
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Premium Courses</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/master-accountant" routerLinkActive="active">Master
+                    Accountant</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <!-- Other Links -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/career" routerLinkActive="active">Career</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/platform" routerLinkActive="active">Platform</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/hire-for-us" routerLinkActive="active">Hire for Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            For More
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/about" routerLinkActive="active">About us</a></li>
+            <li><a class="dropdown-item" routerLink="/referral" routerLinkActive="active">Refer</a></li>
+            <li><a class="dropdown-item" routerLink="/" routerLinkActive="active">Blogs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

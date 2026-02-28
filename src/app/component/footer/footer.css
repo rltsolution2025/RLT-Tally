@@ -1,0 +1,179 @@
+/* ===============================
+   Footer – Education Professional
+   =============================== */
+
+.main-footer {
+    background:
+        linear-gradient(135deg,
+            #e9f2f7 0%,
+            /* Light Sky */
+            #1f6aa5 40%,
+            /* Corporate Blue */
+            #2bb0a6 80%
+            /* Teal */
+        );
+    color: #ffffff;
+    padding: 60px 0 0;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/Footer/footer.svg');
+    background-repeat: no-repeat;
+    background-position: left ;
+    background-size: 520px;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+/* Keep footer content above illustration */
+.footer-col,
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+/* Mobile – hide illustration */
+@media (max-width: 768px) {
+    .main-footer::before {
+        display: none;
+    }
+}
+
+/* Footer Columns */
+.footer-col {
+    margin-bottom: 30px;
+}
+
+/* Logo */
+.footer-logo {
+    width: 220px;
+    margin-bottom: 15px;
+}
+
+/* About text */
+.footer-about {
+    color: #dce7ec;
+    line-height: 1.7;
+}
+
+/* Titles */
+.footer-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-title::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #d1eaf1;
+    display: block;
+    margin-top: 6px;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+/* Branch Grid */
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+  margin-right:0px;
+}
+
+.branch-item {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Mobile – stack vertically */
+@media (max-width: 768px) {
+  .branch-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer-links a {
+    color: #dce7ec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Contact */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 10px;
+    color: #dce7ec;
+}
+
+/* Social Icons */
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px);
+    color: #d1eaf1;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background-color: #012635;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #cbdde5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}

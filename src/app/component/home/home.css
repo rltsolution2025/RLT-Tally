@@ -1,0 +1,503 @@
+/* ===============================
+   Home Carousel – Full Working
+   =============================== */
+
+.home-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Images */
+.home-carousel .carousel-item img {
+  height: 80vh;
+  width: 100%;
+  object-fit: top cover;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.home-carousel .carousel-item.active img {
+  transform: scale(1);
+}
+
+/* Overlay (DOES NOT BLOCK CLICKS) */
+.home-carousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.75),
+    rgba(15, 23, 42, 0.35)
+  );
+  z-index: 1;
+  pointer-events: none; /* 🔥 IMPORTANT FIX */
+}
+
+/* Caption – Full Width */
+.home-carousel .carousel-caption {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 8%;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Full width text */
+.home-carousel .carousel-caption h2,
+.home-carousel .carousel-caption p {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Title */
+.home-carousel .carousel-caption h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Paragraph */
+.home-carousel .carousel-caption p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #e5e7eb;
+}
+
+/* Button */
+.home-carousel .carousel-caption .btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+/* Indicators */
+.home-carousel .carousel-indicators button {
+  width: 28px;
+  height: 4px;
+  border-radius: 0;
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+
+.home-carousel .carousel-indicators .active {
+  opacity: 1;
+}
+
+/* Controls – FIXED */
+.home-carousel .carousel-control-prev,
+.home-carousel .carousel-control-next {
+  z-index: 5;
+}
+
+.home-carousel .carousel-control-prev-icon,
+.home-carousel .carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Fade animation */
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+
+@media (max-width: 992px) {
+  .home-carousel .carousel-item img {
+    height: 65vh;
+  }
+
+  .home-carousel .carousel-caption h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-carousel .carousel-item img {
+    height: 55vh;
+  }
+
+  .home-carousel .carousel-caption {
+    padding: 0 5%;
+  }
+
+  .home-carousel .carousel-caption h2 {
+    font-size: 24px;
+  }
+
+  .home-carousel .carousel-caption p {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   END OF HOME CAROUSEL
+   =============================== */
+/* ===============================
+   Strategic Partner – Colored Style
+   =============================== */
+
+.strategic-partner-section {
+  background: linear-gradient(135deg, #eef6ff, #f8fafc);
+}
+
+/* Heading */
+.partner-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.partner-title span {
+  color: #2563eb; /* Blue highlight */
+}
+
+.partner-description {
+  font-size: 16px;
+  color: #475569;
+  max-width: 720px;
+  margin: 10px auto 0;
+}
+
+/* Card */
+.partner-card {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Logo */
+.partner-logo {
+  max-width: 260px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Subtitle */
+.partner-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.partner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+/* Points */
+.partner-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partner-points li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #0f766e; /* Teal */
+}
+
+.partner-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #22c55e; /* Green check */
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partner-title {
+    font-size: 26px;
+  }
+
+  .partner-card {
+    padding: 30px 20px;
+  }
+
+  .partner-logo {
+    max-width: 220px;
+  }
+}
+/* ===============================
+   Scroll Reveal Animations
+   =============================== */
+
+/* Initial hidden state */
+.reveal,
+.reveal-up,
+.reveal-fade,
+.reveal-right,
+.reveal-zoom {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+/* Individual directions */
+.reveal-up {
+  transform: translateY(50px);
+}
+
+.reveal-fade {
+  transform: translateY(30px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-zoom {
+  transform: scale(0.85);
+}
+
+/* Active state (when visible) */
+.reveal.active,
+.reveal-up.active,
+.reveal-fade.active,
+.reveal-right.active,
+.reveal-zoom.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+
+/* ===============================
+   Explore Programs Section
+   =============================== */
+
+.explore-program-section {
+ background: linear-gradient(135deg, #eef6ff, #f8fafc);
+}
+
+/* Heading */
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #475569;
+  max-width: 720px;
+  margin: 10px auto 0;
+}
+
+/* ===============================
+   Filter Pills
+   =============================== */
+
+.program-filter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.scroll-btn {
+  background: #eef2ff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  background: #dbeafe;
+}
+
+.program-filter {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 10px 16px;
+  scrollbar-width: none;
+}
+
+.program-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill {
+  white-space: nowrap;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  background: #eef2ff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-pill:hover {
+  background: #dbeafe;
+}
+
+.filter-pill.active {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+/* ===============================
+   Explore Programs – Alt Style
+   =============================== */
+
+.explore-alt-section {
+  background: linear-gradient(135deg, #eef6ff, #f8fafc);
+}
+
+/* Heading */
+.alt-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.alt-subtitle {
+  font-size: 16px;
+  color: #475569;
+  max-width: 720px;
+  margin: 10px auto 0;
+}
+
+/* ===============================
+   Tabs (Underline Style)
+   =============================== */
+
+.program-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 10px 4px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  transition: width 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #1d4ed8;
+}
+
+.tab-btn.active {
+  color: #1d4ed8;
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   Cards – Glass Effect
+   =============================== */
+
+.alt-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alt-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px rgba(15, 23, 42, 0.15);
+}
+.alt-card-image{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.alt-card-image:hover {
+  transform: scale(1.05);
+}
+.alt-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 12px;
+}
+
+.alt-card-text {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Link */
+.alt-card-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.alt-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .alt-title {
+    font-size: 26px;
+  }
+
+  .program-tabs {
+    gap: 18px;
+  }
+}
