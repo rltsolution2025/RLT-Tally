@@ -1,0 +1,1354 @@
+/* ===============================
+Career Section
+================================ */
+
+.career-section {
+    padding: 100px 7%;
+    position: relative;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+}
+
+/* Floating Gradient Circles */
+
+.career-section::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 50%;
+    top: -120px;
+    left: -120px;
+    opacity: .25;
+    filter: blur(40px);
+    animation: move1 12s infinite alternate ease-in-out;
+}
+
+.career-section::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border-radius: 50%;
+    bottom: -120px;
+    right: -120px;
+    opacity: .25;
+    filter: blur(40px);
+    animation: move2 12s infinite alternate ease-in-out;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(50px)
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-50px)
+    }
+}
+
+
+/* ===============================
+Floating Accounting Icons
+================================ */
+
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.icon {
+    position: absolute;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.12);
+}
+
+.icon1 {
+    top: 18%;
+    left: 8%;
+    animation: floatIcon1 12s infinite ease-in-out;
+}
+
+.icon2 {
+    top: 70%;
+    left: 15%;
+    animation: floatIcon2 14s infinite ease-in-out;
+}
+
+.icon3 {
+    top: 30%;
+    right: 12%;
+    animation: floatIcon3 16s infinite ease-in-out;
+}
+
+.icon4 {
+    bottom: 15%;
+    right: 8%;
+    animation: floatIcon4 18s infinite ease-in-out;
+}
+
+@keyframes floatIcon1 {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-25px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes floatIcon2 {
+    0% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(30px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes floatIcon3 {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(25px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes floatIcon4 {
+    0% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(-30px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+
+/* ===============================
+Career Content Left Section
+================================ */
+
+.career-content {
+    position: relative;
+    padding-right: 40px;
+}
+
+.career-title {
+    font-size: 44px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    position: relative;
+}
+
+.career-title::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    display: block;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+.career-description {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #e6e6e6;
+    max-width: 520px;
+}
+
+.career-highlights {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 40px;
+    font-weight: 600;
+    color: #fff;
+    backdrop-filter: blur(8px);
+}
+
+.highlight-partner {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #dcdcdc;
+    border-left: 3px solid #ffb347;
+    padding-left: 12px;
+}
+
+
+/* ===============================
+Feature Cards
+================================ */
+
+.career-features {
+    display: flex;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 18px;
+    flex: 1;
+    text-align: center;
+    transition: .3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.feature-icon {
+    font-size: 26px;
+    color: #ffb347;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    font-size: 14px;
+    color: #eee;
+}
+
+
+/* ===============================
+Form Card
+================================ */
+
+.career-form {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-form {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: white;
+}
+
+
+/* Shimmer animation */
+
+.career-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+
+}
+
+
+
+/* ===============================
+Form Fields
+================================ */
+
+.form-title {
+    margin-top: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 6px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+
+/* ===============================
+Button
+================================ */
+
+.submit-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===============================
+Error Text
+================================ */
+
+.error-text {
+    color: #ffb3b3;
+    font-size: 13px;
+}
+
+
+/* ===============================
+Responsive
+================================ */
+
+@media(max-width:991px) {
+
+    .career-title {
+        font-size: 32px;
+    }
+
+    .career-form {
+        margin-top: 40px;
+    }
+
+    .career-features {
+        flex-direction: column;
+    }
+
+}
+
+/* ===============================
+Popular Courses Section
+================================ */
+
+.course-section {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #f5f9fc, #eaf2f7);
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    max-width: 650px;
+    margin: auto;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+
+/* Course Card */
+
+.course-card {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: .35s;
+
+    height: 100%;
+
+}
+
+.course-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Icons */
+
+.course-icon {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Icon Colors */
+
+.bg-blue {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.bg-gold {
+    background: linear-gradient(135deg, #b45309, #f59e0b);
+}
+
+
+/* Title */
+
+.course-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+
+/* Text */
+
+.course-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* Button */
+
+.course-btn {
+
+    display: inline-block;
+
+    padding: 9px 22px;
+
+    border-radius: 8px;
+
+    background: #1f6aa5;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+.course-btn:hover {
+    background: #2bb0a6;
+}
+
+
+/* Featured Course */
+
+.featured-course {
+
+    border: 2px solid #1f6aa5;
+
+    box-shadow: 0 12px 35px rgba(31, 106, 165, 0.25);
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .section-title {
+        font-size: 30px;
+    }
+
+}
+
+/* ===============================
+Why Choose Section
+================================ */
+
+.why-section {
+
+    padding: 90px 0;
+
+    background: linear-gradient(135deg, #f5f9fc, #eaf2f7);
+
+}
+
+/* Header */
+
+.why-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    color: #0f172a;
+
+    margin-bottom: 10px;
+
+}
+
+.why-subtitle {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    margin-bottom: 50px;
+
+    font-size: 16px;
+
+}
+
+
+/* Card */
+
+.why-card {
+
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: all .35s ease;
+
+    height: 100%;
+
+}
+
+.why-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Icons */
+
+.why-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 26px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Icon colors */
+
+.bg-blue {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.bg-teal {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+.bg-red {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+
+/* Title */
+
+.why-card h5 {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+}
+
+
+/* Text */
+
+.why-card p {
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .why-title {
+        font-size: 30px;
+    }
+
+}
+
+/* ================================
+In Demand Roles Section
+================================ */
+
+.demand-role-section {
+
+    padding: 90px 0;
+
+    background: #f9fbfd;
+
+}
+
+/* Header */
+
+.role-main-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    color: #0f172a;
+
+    margin-bottom: 12px;
+
+}
+
+.role-main-desc {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    margin-bottom: 60px;
+
+    font-size: 16px;
+
+}
+
+
+/* Role Box */
+
+.role-box {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e6edf2;
+
+    transition: all .35s ease;
+
+    height: 100%;
+
+    position: relative;
+
+}
+
+/* Hover effect */
+
+.role-box:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #1f6aa5;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* Icon */
+
+.role-icon-box {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #1f6aa5;
+
+    color: white;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* Icon Colors */
+
+.icon-purple {
+    background: #7c3aed;
+}
+
+.icon-green {
+    background: #10b981;
+}
+
+.icon-orange {
+    background: #f97316;
+}
+
+.icon-teal {
+    background: #14b8a6;
+}
+
+.icon-red {
+    background: #ef4444;
+}
+
+
+/* Content */
+
+.role-content h5 {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+
+    color: #0f172a;
+
+}
+
+.role-content p {
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .role-main-title {
+
+        font-size: 30px;
+
+    }
+
+    .role-box {
+
+        padding: 22px;
+
+    }
+
+}
+
+/* ================================
+Ideal For Dark Section
+================================ */
+
+.ideal-dark-section {
+
+    padding: 90px 0;
+
+    background: linear-gradient(135deg, #0f172a, #020617);
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Animated background shapes */
+
+.ideal-dark-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    background: radial-gradient(circle, #3b82f620, transparent);
+
+    top: -120px;
+
+    left: -120px;
+
+    animation: float1 12s infinite ease-in-out;
+
+}
+
+.ideal-dark-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    background: radial-gradient(circle, #10b98120, transparent);
+
+    bottom: -120px;
+
+    right: -120px;
+
+    animation: float2 10s infinite ease-in-out;
+
+}
+
+
+/* animation */
+
+@keyframes float1 {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(30px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes float2 {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-30px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+
+/* Title */
+
+.ideal-dark-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+.ideal-dark-subtitle {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #cbd5e1;
+
+    margin-bottom: 50px;
+
+}
+
+
+/* Item */
+
+.ideal-dark-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: .35s;
+
+    backdrop-filter: blur(10px);
+
+}
+
+.ideal-dark-item:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/* Icon */
+
+.ideal-dark-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #3b82f6;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+
+/* icon colors */
+
+.icon-green {
+    background: #10b981;
+}
+
+.icon-orange {
+    background: #f97316;
+}
+
+.icon-purple {
+    background: #8b5cf6;
+}
+
+.icon-red {
+    background: #ef4444;
+}
+
+.icon-blue {
+    background: #06b6d4;
+}
+
+
+/* text */
+
+.ideal-dark-item p {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #e2e8f0;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .ideal-dark-title {
+
+        font-size: 30px;
+
+    }
+
+}
+
+/* ================================
+FAQ Section – Glass Modern Style
+================================ */
+
+.faq-modern-section {
+
+    padding: 100px 0;
+
+    background: linear-gradient(135deg, #eef4ff, #f5fbff);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Floating background shapes */
+
+.faq-modern-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    background: radial-gradient(circle, #3b82f620 0%, transparent 70%);
+
+    top: -120px;
+
+    left: -120px;
+
+    animation: faqFloat1 12s infinite ease-in-out;
+
+}
+
+.faq-modern-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    background: radial-gradient(circle, #10b98120 0%, transparent 70%);
+
+    bottom: -120px;
+
+    right: -120px;
+
+    animation: faqFloat2 14s infinite ease-in-out;
+
+}
+
+
+/* animation */
+
+@keyframes faqFloat1 {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(25px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes faqFloat2 {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-25px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+
+/* Title */
+
+.faq-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    color: #0f172a;
+
+    margin-bottom: 12px;
+
+}
+
+.faq-subtitle {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    margin-bottom: 60px;
+
+}
+
+
+/* Accordion */
+
+.faq-accordion .accordion-item {
+
+    border: none;
+
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition: .3s;
+
+}
+
+
+/* Hover effect */
+
+.faq-accordion .accordion-item:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Question button */
+
+.faq-accordion .accordion-button {
+
+    background: transparent;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    color: #1e293b;
+
+    padding: 18px 22px;
+
+    border: none;
+
+    box-shadow: none;
+
+}
+
+
+/* Active question */
+
+.faq-accordion .accordion-button:not(.collapsed) {
+
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+    color: white;
+
+}
+
+
+/* FAQ Icon */
+
+.faq-icon {
+
+    margin-right: 10px;
+
+    font-size: 16px;
+
+    color: #3b82f6;
+
+}
+
+.accordion-button:not(.collapsed) .faq-icon {
+
+    color: white;
+
+}
+
+
+/* Answer */
+
+.faq-accordion .accordion-body {
+
+    background: white;
+
+    padding: 18px 22px;
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+}
+
+
+/* Remove bootstrap arrow style */
+
+.accordion-button::after {
+
+    filter: invert(0.4);
+
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .faq-title {
+
+        font-size: 30px;
+
+    }
+
+}

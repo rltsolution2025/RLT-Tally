@@ -9,9 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit {
-  
+
   ngAfterViewInit(): void {
-     const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -27,51 +27,64 @@ export class Home implements AfterViewInit {
       '.reveal, .reveal-up, .reveal-fade, .reveal-right, .reveal-zoom'
     ).forEach(el => observer.observe(el));
   }
- categories = [
+  categories = [
     'All',
     'Popular Programs',
-    'Corporate Training',
-    'Colleges Programs',
-    'Program for Schools'
+    'Specialization Programs',
+    'Premium Programs',
   ];
 
   activeCategory = 'All';
 
   programs = [
     {
-      image: 'assets/tally-essential.jpg',
-      name: 'Tally Essential',
-      description: 'Accounting fundamentals and Tally basics.',
+      image: 'Program-Image/Tally Essential.jpg',
+      name: 'Tally Essentials – Tally Foundation Program',
+      description: 'Master accounting fundamentals and essential Tally skills for managing business transactions, ledgers, vouchers, and reports.',
       category: 'Popular Programs',
       link: '/tally-essential'
     },
     {
-      image: 'assets/tally-professional.jpg',
-      name: 'Tally Professional',
-      description: 'Advanced accounting, GST & payroll.',
-      category: 'Institute Programs',
+      image: 'Program-Image/Tally professional.jpg',
+      name: 'Tally Professional - Industry Accounting Skills',
+      description: 'Become a professional accountant by mastering Tally with GST, payroll, inventory management, and financial reporting.',
+      category: 'Popular Programs',
       link: '/tally-professional'
     },
     {
-      image: 'assets/corporate-training.jpg',
-      name: 'Corporate Accounting Training',
-      description: 'Customized accounting training for organizations.',
-      category: 'Corporate Training',
-      link: '/corporate-training'
+      image: 'Program-Image/Tally Prime.jpg',
+      name: 'TallyPrime – Complete ERP Accounting Solution',
+      description: 'Learn Tally Prime / Tally ERP to efficiently manage accounting, inventory, vouchers, and financial reports for businesses.',
+      category: 'Popular Programs',
+      link: '/tally-prime'
     },
     {
-      image: 'assets/college-program.jpg',
-      name: 'College Accounting Program',
-      description: 'Skill-based learning for college students.',
-      category: 'Colleges Programs',
-      link: '/college-programs'
+      image: 'Program-Image/GST Simulation.jpg',
+      name: 'GST Simulation – Real-Time GST Practice',
+      description: 'Become a professional accountant by mastering Tally with GST, payroll, inventory management, and financial reporting.',
+      category: 'Specialization Programs',
+      link: '/gst-simulation'
     },
     {
-      image: 'assets/school-commerce.jpg',
-      name: 'School Commerce Foundation',
-      description: 'Early exposure to commerce & accounting.',
-      category: 'Program for Schools',
-      link: '/school-programs'
+      image: 'Program-Image/Office Automation.jpg',
+      name: 'Office Automation – Workplace Computer Skills',
+      description: 'Master MS Office tools including Word, Excel, and PowerPoint to handle everyday office tasks efficiently and professionally for business',
+      category: 'Specialization Programs',
+      link: '/office-automation'
+    },
+    {
+      image: 'Program-Image/P & IT.jpg',
+      name: 'Payroll & Income Tax – Tax & Salary Management',
+      description: 'Learn payroll processing, salary management, and income tax calculation for efficient employee and tax management.',
+      category: 'Specialization Programs',
+      link: '/payroll-&-income-tax'
+    },
+    {
+      image: 'Program-Image/Master Accountant.png',
+      name: 'Master Accountant – Advanced Tally Program',
+      description: 'Master accounting with Tally, covering GST, payroll, taxation, and financial management for business operations.',
+      category: 'Premium Programs',
+      link: '/master-accountant'
     }
   ];
 

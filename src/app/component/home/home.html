@@ -12,7 +12,7 @@
   <div class="carousel-inner">
 
     <div class="carousel-item active">
-      <img src="assets/slider/tally-training.jpg" class="d-block w-100" alt="Tally Training">
+      <img src="Home-page/Master Tally and Accounting.jpg.jpeg" class="d-block w-100" alt="Tally Training">
       <div class="carousel-caption">
         <h2>Master Tally & Accounting</h2>
         <p>Industry-ready training with real-time practice</p>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="carousel-item">
-      <img src="assets/slider/gst-course.jpg" class="d-block w-100" alt="GST Course">
+      <img src="Home-page/GST & Taxation Program.jpg.jpeg" class="d-block w-100" alt="GST Course">
       <div class="carousel-caption">
         <h2>GST & Taxation Programs</h2>
         <p>Learn GST filing, returns & compliance</p>
@@ -78,7 +78,7 @@
 
       <!-- Logo -->
       <div class="col-lg-4 col-md-5 text-center mb-4 mb-lg-0 reveal-zoom">
-        <img src="assets/colab/colab1.png" alt="Strategic Partner" class="partner-logo img-fluid">
+        <img src="partnered-image/Tally website partnership.jpeg" alt="Strategic Partner" class="partner-logo img-fluid">
       </div>
 
       <!-- Text -->
@@ -102,6 +102,7 @@
   </div>
 </section>
 
+<!-- Explore Programs Section   -->
 <section class="explore-alt-section py-5">
 
   <!-- Header -->
@@ -115,38 +116,56 @@
   <!-- Tabs -->
   <div class="container mb-5">
     <div class="program-tabs">
-      <button
-        *ngFor="let category of categories"
-        class="tab-btn"
-        [class.active]="activeCategory === category"
+      <button *ngFor="let category of categories" class="tab-btn" [class.active]="activeCategory === category"
         (click)="selectCategory(category)">
         {{ category }}
       </button>
     </div>
   </div>
-
-  <!-- Cards -->
   <div class="container">
     <div class="row justify-content-center">
 
-      <div
-        class="col-lg-4 col-md-6 mb-4"
-        *ngFor="let program of filteredPrograms"
-      >
-        <div class="alt-card h-100">
-          <img src="{{ program.image }}" alt="{{ program.name }}" class="alt-card-image">
-          <h3 class="alt-card-title">{{ program.name }}</h3>
-          <p class="alt-card-text">{{ program.description }}</p>
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let program of filteredPrograms">
 
-          <a
-            [routerLink]="program.link"
-            class="alt-card-link mt-auto">
-            View Details →
-          </a>
+        <div class="program-card-modern">
+
+          <!-- Image -->
+          <div class="program-image-box">
+            <img src="{{ program.image }}" alt="{{ program.name }}">
+            <span class="program-tag">{{ program.category }}</span>
+          </div>
+
+          <!-- Content -->
+          <div class="program-content">
+
+            <h3 class="program-name">
+              {{ program.name }}
+            </h3>
+
+            <p class="program-desc">
+              {{ program.description }}
+            </p>
+            <div class="program-actions">
+
+              <a [routerLink]="program.link" class="program-btn primary-btn">
+                View Program
+                <span>→</span>
+              </a>
+
+              <a routerLink="/contact" class="program-btn secondary-btn">
+                Enquiry Now
+                <span>→</span>
+              </a>
+
+            </div>
+          </div>
+
         </div>
+
       </div>
 
     </div>
   </div>
-
 </section>
+
+<section class=""></section>

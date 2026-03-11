@@ -1,1 +1,955 @@
-<p>career works!</p>
+<div class="career-section container-fluid">
+
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <span class="icon icon1"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        <span class="icon icon2"><i class="fa-solid fa-calculator"></i></span>
+        <span class="icon icon3"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="icon icon4"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+    </div>
+
+    <div class="row align-items-center">
+
+        <!-- Left Content -->
+        <div class="col-lg-6 career-content">
+
+            <h2 class="career-title">
+                Industry - Ready Tally Education & Master Accountant
+            </h2>
+
+            <p class="career-description">
+                Build a strong career in accounting with industry-focused Tally training.
+                This program covers Accounting Fundamentals, Tally Prime, GST, Payroll,
+                Income Tax, and Financial Reporting.
+            </p>
+
+            <span class="career-highlights">
+                Industry-Centric Curriculum
+                <i class="fa-solid fa-diamond"></i>
+                Hands-on Experience
+            </span>
+
+            <p class="highlight-partner">
+                Authorized Training Partnered by Tally Education
+            </p>
+
+            <!-- Feature Cards -->
+            <div class="career-features">
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="feature-text">Job-Oriented Training</div>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div class="feature-text">Industry Curriculum</div>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="feature-text">Career Support</div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Form -->
+        <div class="col-lg-6">
+
+            <div class="career-form">
+
+                <h3 class="header-form">
+                    Apply for your Career Growth in Accounting Skills
+                </h3>
+
+                <form [formGroup]="careerForm" (ngSubmit)="onSubmit()">
+
+                    <!-- Name -->
+                    <label class="form-title">Name</label>
+                    <input type="text" formControlName="name" class="form-control" placeholder="Enter your name">
+
+                    <small *ngIf="submitted && f['name'].errors" class="error-text">
+                        Name is required
+                    </small>
+
+
+                    <!-- Email -->
+                    <label class="form-title">Email</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter your email">
+
+                    <small *ngIf="submitted && f['email'].errors" class="error-text">
+                        Valid email required
+                    </small>
+
+
+                    <!-- Mobile -->
+                    <label class="form-title">Mobile</label>
+                    <input type="tel" formControlName="mobile" class="form-control" placeholder="Enter mobile number">
+
+                    <small *ngIf="submitted && f['mobile'].errors" class="error-text">
+                        Enter valid 10 digit number
+                    </small>
+
+                    <!-- Message -->
+                    <label class="form-title">Message</label>
+                    <textarea formControlName="message" class="form-control" rows="4"
+                        placeholder="Enter your message"></textarea>
+
+                    <small *ngIf="submitted && f['message'].errors" class="error-text">
+                        Message is required
+                    </small>
+
+
+                    <button class="submit-btn" type="submit">
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="course-section">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+            Popular Accounting Courses
+        </h2>
+
+        <p class="section-subtitle text-center">
+            Explore our most popular career programs designed to build strong
+            skills in accounting, taxation and finance.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Tally Essential -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="course-card">
+
+                    <div class="course-icon bg-blue">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+
+                    <h5>Tally Essential</h5>
+
+                    <p>
+                        Foundation program covering <strong>Level 1, 2 & 3</strong>.
+                        Learn accounting basics, voucher entries, ledger creation,
+                        inventory and financial reports using Tally.
+                    </p>
+
+                    <a routerLink="/tally-essential" class="course-btn">
+                        View Course
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tally Professional -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="course-card">
+
+                    <div class="course-icon bg-purple">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h5>Tally Professional</h5>
+
+                    <p>
+                        Advanced accounting training covering <strong>Level 4 & 5</strong>.
+                        Includes corporate accounting, GST compliance and financial analysis.
+                    </p>
+
+                    <a routerLink="/tally-professional" class="course-btn">
+                        View Course
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tally Prime -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="course-card">
+
+                    <div class="course-icon bg-green">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+
+                    <h5>Tally Prime</h5>
+
+                    <p>
+                        Learn the latest Tally Prime software for business accounting,
+                        inventory management and GST reporting.
+                    </p>
+
+                    <a routerLink="/tally-prime" class="course-btn">
+                        View Course
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GST Simulation -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="course-card">
+
+                    <div class="course-icon bg-orange">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+
+                    <h5>GST Simulation</h5>
+
+                    <p>
+                        Practical GST training with real-time scenarios,
+                        return filing and tax compliance for businesses.
+                    </p>
+
+                    <a routerLink="/gst-simulation" class="course-btn">
+                        View Course
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Master Accountant -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="course-card featured-course">
+
+                    <div class="course-icon bg-gold">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <h5>Master Accountant</h5>
+
+                    <p>
+                        Complete professional accounting program covering
+                        Tally, GST, taxation, payroll and financial reporting.
+                    </p>
+
+                    <a routerLink="/master-accountant" class="course-btn">
+                        View Course
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose RLT Edzaro -->
+<section class="why-section">
+
+    <div class="container">
+
+        <div class="text-center section-header">
+
+            <h2 class="why-title">
+                Why Choose RLT Edzaro – Tally Academy?
+            </h2>
+
+            <p class="why-subtitle">
+                Build a successful accounting career with industry-focused training,
+                expert mentors and real-world practical learning.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Feature 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-blue">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+
+                    <h5>Industry Expert Trainers</h5>
+
+                    <p>
+                        Learn from experienced professionals with strong
+                        knowledge in accounting, taxation and Tally software.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-purple">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <h5>Hands-on Practical Training</h5>
+
+                    <p>
+                        Work on real-time accounting scenarios,
+                        GST filings and business case studies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-green">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+
+                    <h5>Tally Authorized Certification</h5>
+
+                    <p>
+                        Receive recognized certification aligned
+                        with industry accounting standards.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-orange">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <h5>Career & Placement Assistance</h5>
+
+                    <p>
+                        Get career guidance, resume support
+                        and interview preparation for accounting jobs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 5 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-teal">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <h5>Industry Relevant Curriculum</h5>
+
+                    <p>
+                        Courses designed based on real accounting
+                        practices used by companies and businesses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature 6 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-icon bg-red">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <h5>Student Support & Guidance</h5>
+
+                    <p>
+                        Continuous mentoring and academic support
+                        to help students succeed in their careers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- In Demand Roles -->
+<section class="demand-role-section">
+
+    <div class="container">
+
+        <div class="text-center role-header">
+
+            <h2 class="role-main-title">
+                In-Demand Accounting Career Roles
+            </h2>
+
+            <p class="role-main-desc">
+                Top career opportunities available after completing accounting
+                and Tally certification programs.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>Accountant</h5>
+
+                        <p>
+                            Maintain financial records, prepare financial statements
+                            and manage daily accounting operations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box icon-purple">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>GST Executive</h5>
+
+                        <p>
+                            Handle GST registration, return filing
+                            and compliance for business taxation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box icon-green">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>Financial Analyst</h5>
+
+                        <p>
+                            Analyze financial reports and provide
+                            business insights for decision making.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box icon-orange">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>Payroll Executive</h5>
+
+                        <p>
+                            Manage employee payroll, salary processing,
+                            tax deductions and compliance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box icon-teal">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>Tax Consultant</h5>
+
+                        <p>
+                            Provide tax advisory, planning
+                            and income tax filing services.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Role -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="role-box">
+
+                    <div class="role-icon-box icon-red">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div class="role-content">
+
+                        <h5>Accounts Executive</h5>
+
+                        <p>
+                            Support business accounting activities
+                            and prepare financial reports.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Ideal Audience Section -->
+<section class="ideal-dark-section">
+
+    <div class="container">
+
+        <div class="text-center section-header">
+
+            <h2 class="ideal-dark-title">
+                Who Should Join This Program?
+            </h2>
+
+            <p class="ideal-dark-subtitle">
+                Perfect for students, professionals and job seekers who want
+                to build strong accounting and Tally skills.
+            </p>
+
+        </div>
+
+        <div class="row g-4 justify-content-center ideal-dark-grid">
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+
+                    <p>Final Year Commerce Students</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon icon-green">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <p>B.Com & BBA Students</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon icon-orange">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <p>Accounting Professionals</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon icon-purple">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <p>Freshers Seeking Accounting Jobs</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon icon-red">
+                        <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                    </div>
+
+                    <p>Job Seekers in Finance Field</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Item -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="ideal-dark-item">
+
+                    <div class="ideal-dark-icon icon-blue">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+
+                    <p>Entrepreneurs & Business Owners</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FAQ Section -->
+<section class="faq-modern-section">
+
+    <div class="container">
+
+        <div class="text-center faq-header">
+
+            <h2 class="faq-title">
+                Frequently Asked Questions
+            </h2>
+
+            <p class="faq-subtitle">
+                Find answers to common questions about our Tally, GST and accounting training programs.
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="accordion faq-accordion" id="faqAccordion">
+
+
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+
+                                <i class="fa-solid fa-clock faq-icon"></i>
+
+                                What is the duration of the Tally course?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                The duration depends on the course level. Most programs range from
+                                <strong>2 to 6 months</strong> depending on the modules and practical training.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+
+                                <i class="fa-solid fa-briefcase faq-icon"></i>
+
+                                Do you provide placement support?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes. We provide <strong>placement assistance</strong> including resume preparation,
+                                interview training and job referrals through our hiring network.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+
+                                <i class="fa-solid fa-user-graduate faq-icon"></i>
+
+                                Can beginners join this course?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes. Our courses start with basic accounting concepts and gradually
+                                move to advanced topics like GST, payroll and taxation.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+
+                                <i class="fa-solid fa-certificate faq-icon"></i>
+
+                                Will I receive a certificate after completing the course?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Students receive a Tally Education certification after passing the examination, validating their accounting and Tally skills.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+
+                                <i class="fa-solid fa-laptop-code faq-icon"></i>
+
+                                Is practical training included in the program?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes. Our programs include <strong>hands-on training, case studies
+                                    and real accounting scenarios</strong> to ensure practical learning.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 6 -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+
+                                <i class="fa-solid fa-calendar-check faq-icon"></i>
+
+                                Do you offer flexible class timings?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes. We offer <strong>weekday and weekend batches</strong> so students
+                                and working professionals can learn comfortably.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

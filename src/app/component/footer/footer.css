@@ -1,179 +1,383 @@
 /* ===============================
-   Footer – Education Professional
-   =============================== */
+Modern Animated Footer
+================================ */
 
-.main-footer {
-    background:
-        linear-gradient(135deg,
-            #e9f2f7 0%,
-            /* Light Sky */
-            #1f6aa5 40%,
-            /* Corporate Blue */
-            #2bb0a6 80%
-            /* Teal */
-        );
-    color: #ffffff;
-    padding: 60px 0 0;
-    font-size: 14px;
-    position: relative;
-    overflow: hidden;
+.main-footer{
+
+background:linear-gradient(135deg,#eef4f8,#dce9f2,#eef4f8);
+
+padding:90px 0 0;
+
+position:relative;
+
+overflow:hidden;
+
+color:#334155;
+
 }
 
-.main-footer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('/Footer/footer.svg');
-    background-repeat: no-repeat;
-    background-position: left ;
-    background-size: 520px;
-    opacity: 0.45;
-    pointer-events: none;
+/* floating vector shapes */
+
+.main-footer::before{
+
+content:"";
+
+position:absolute;
+
+width:400px;
+
+height:400px;
+
+background:radial-gradient(circle,#1f6aa520,transparent 70%);
+
+top:-150px;
+
+right:-120px;
+
+animation:floatShape 8s infinite ease-in-out;
+
 }
 
-/* Keep footer content above illustration */
-.footer-col,
-.footer-bottom {
-    position: relative;
-    z-index: 2;
+.main-footer::after{
+
+content:"";
+
+position:absolute;
+
+width:300px;
+
+height:300px;
+
+background:radial-gradient(circle,#2bb0a620,transparent 70%);
+
+bottom:-120px;
+
+left:-120px;
+
+animation:floatShape2 10s infinite ease-in-out;
+
 }
 
-.footer-contact a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
+/* animation */
+
+@keyframes floatShape{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(20px)}
+
+100%{transform:translateY(0)}
+
 }
 
-.footer-contact a:hover {
-  text-decoration: underline;
-}
-/* Mobile – hide illustration */
-@media (max-width: 768px) {
-    .main-footer::before {
-        display: none;
-    }
+@keyframes floatShape2{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-20px)}
+
+100%{transform:translateY(0)}
+
 }
 
-/* Footer Columns */
-.footer-col {
-    margin-bottom: 30px;
+/* footer columns */
+
+.footer-col{
+
+position:relative;
+
+z-index:2;
+
 }
 
-/* Logo */
-.footer-logo {
-    width: 220px;
-    margin-bottom: 15px;
+/* logo */
+
+.footer-logo{
+
+width:230px;
+
+margin-bottom:20px;
+
 }
 
-/* About text */
-.footer-about {
-    color: #dce7ec;
-    line-height: 1.7;
+/* about */
+
+.footer-about{
+
+font-size:14px;
+
+line-height:1.8;
+
+color:#475569;
+
+margin-bottom:20px;
+
 }
 
-/* Titles */
-.footer-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    position: relative;
+/* CTA */
+
+.footer-cta{
+
+margin-bottom:20px;
+
 }
 
-.footer-title::after {
-    content: "";
-    width: 40px;
-    height: 2px;
-    background-color: #d1eaf1;
-    display: block;
-    margin-top: 6px;
+.cta-text{
+
+font-weight:600;
+
+margin-bottom:10px;
+
 }
 
-/* Links */
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.cta-btn{
+
+display:inline-block;
+
+padding:10px 20px;
+
+background:linear-gradient(135deg,#1f6aa5,#2bb0a6);
+
+color:white;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-size:14px;
+
+transition:.3s;
+
 }
 
-.footer-links li {
-    margin-bottom: 10px;
-}
-/* Branch Grid */
-.branch-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 10px;
-  margin-right:0px;
+.cta-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 6px 14px rgba(0,0,0,0.2);
+
 }
 
-.branch-item {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #ffffff;
+/* titles */
+
+.footer-title{
+
+font-size:18px;
+
+font-weight:600;
+
+margin-bottom:16px;
+
+color:#0f172a;
+
+position:relative;
+
 }
 
-/* Mobile – stack vertically */
-@media (max-width: 768px) {
-  .branch-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.footer-links a {
-    color: #dce7ec;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+.footer-title::after{
 
-.footer-links a:hover {
-    color: #ffffff;
-}
+content:"";
 
-/* Contact */
-.footer-contact {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+width:40px;
+
+height:3px;
+
+background:linear-gradient(90deg,#1f6aa5,#2bb0a6);
+
+display:block;
+
+margin-top:6px;
+
 }
 
-.footer-contact li {
-    margin-bottom: 10px;
-    color: #dce7ec;
+/* links */
+
+.footer-links{
+
+list-style:none;
+
+padding:0;
+
 }
 
-/* Social Icons */
-.footer-social {
-    margin-top: 15px;
+.footer-links li{
+
+margin-bottom:10px;
+
 }
 
-.footer-social a {
-    color: #ffffff;
-    font-size: 18px;
-    margin-right: 12px;
-    transition: transform 0.3s ease, color 0.3s ease;
+.footer-links a{
+
+color:#475569;
+
+text-decoration:none;
+
+transition:.3s;
+
 }
 
-.footer-social a:hover {
-    transform: translateY(-3px);
-    color: #d1eaf1;
+.footer-links a:hover{
+
+color:#1f6aa5;
+
+padding-left:6px;
+
 }
 
-/* Bottom Bar */
-.footer-bottom {
-    background-color: #012635;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #cbdde5;
+/* contact */
+
+.contact-item{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:12px;
+
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-logo {
-        width: 200px;
-    }
+.contact-item i{
 
-    .footer-bottom {
-        font-size: 12px;
-    }
+color:#1f6aa5;
+
+}
+
+/* branch cards */
+
+.branch-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-top:12px;
+
+}
+
+.branch-item{
+
+background:white;
+
+padding:14px;
+
+border-radius:10px;
+
+font-size:13px;
+
+line-height:1.6;
+
+box-shadow:0 6px 14px rgba(0,0,0,0.05);
+
+border-left:4px solid #1f6aa5;
+
+}
+
+/* social icons */
+
+.footer-social a{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:40px;
+
+height:40px;
+
+margin-right:10px;
+
+border-radius:50%;
+
+background:#e8f1f7;
+
+color:#1f6aa5;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+background:#1f6aa5;
+
+color:white;
+
+transform:translateY(-3px);
+
+}
+
+/* bottom section */
+
+.footer-bottom{
+
+margin-top:60px;
+
+background:#0f172a;
+
+color:#cbd5e1;
+
+padding:18px 0;
+
+}
+
+.footer-bottom-inner{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+}
+
+/* bottom links */
+
+.footer-bottom-links a{
+
+color:#cbd5e1;
+
+margin-left:18px;
+
+text-decoration:none;
+
+font-size:13px;
+
+}
+
+.footer-bottom-links a:hover{
+
+color:white;
+
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.branch-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-bottom-inner{
+
+flex-direction:column;
+
+gap:10px;
+
+text-align:center;
+
+}
+
 }

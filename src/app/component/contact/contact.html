@@ -1,1 +1,116 @@
-<p>contact works!</p>
+<section class="contact-section py-5">
+
+  <div class="container">
+
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <h1 class="contact-title">Get in Touch</h1>
+      <p class="contact-subtitle">
+        We're here to help you with any questions or concerns you may have.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+
+        <div class="contact-card">
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+            <div class="row">
+
+              <div class="col-md-6 mb-3">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Your Name">
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Your Email">
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6 mb-3">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" formControlName="mobile" placeholder="Your Phone Number">
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label>Select Course</label>
+
+                <select class="form-select" formControlName="course">
+
+                  <option value="">Select a course</option>
+
+                  <option *ngFor="let course of courses">
+                    {{course}}
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+            <div class="mb-3">
+              <label>Message</label>
+              <textarea class="form-control" rows="4" formControlName="message" placeholder="Your Message"></textarea>
+            </div>
+
+            <button class="btn btn-primary contact-btn" type="submit">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+
+        <div class="contact-info-card">
+
+          <h4>Contact Information</h4>
+
+          <p>
+            <i class="bi bi-envelope-fill me-2"></i>
+            <strong>Email:</strong> <a href="mailto:tally@rltedzaro.com">tally@rltedzaro.com</a>
+          </p>
+
+          <p>
+            <i class="bi bi-telephone-fill me-2"></i>
+            <strong>Phone:</strong>
+            <a href="tel:+919600681581">+91 96006 81581</a>
+          </p>
+
+          <p class="address">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            <span>
+              <strong>Kodambakkam Branch:</strong><br>
+              2, 1st St, Corporation Colony, Rangarajapuram, Kodambakkam,<br> Chennai – 600024
+            </span>
+          </p>
+          <p class="address">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            <span>
+              <strong>Maraimalai Nagar Branch:</strong><br>
+              No. 48, HIG NH1, Vallal MGR Salai, Valial, Maraimalai Nagar, Tamil Nadu 603209
+            </span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

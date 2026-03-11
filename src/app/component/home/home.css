@@ -1,151 +1,182 @@
 /* ===============================
-   Home Carousel – Full Working
+   Education Hero Slider
    =============================== */
 
-.home-carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.home-carousel{
+  position:relative;
+  width:100%;
+  overflow:hidden;
 }
 
-/* Images */
-.home-carousel .carousel-item img {
-  height: 80vh;
-  width: 100%;
-  object-fit: top cover;
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+/* Carousel Images */
+
+.home-carousel .carousel-item img{
+  height:80vh;
+  width:100%;
+  object-fit:cover top;
 }
 
-.home-carousel .carousel-item.active img {
-  transform: scale(1);
-}
+/* ===============================
+   Dark Education Glass Overlay
+   =============================== */
 
-/* Overlay (DOES NOT BLOCK CLICKS) */
-.home-carousel .carousel-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(15, 23, 42, 0.75),
-    rgba(15, 23, 42, 0.35)
+.home-carousel .carousel-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  /* Gradient + glass effect */
+  background:linear-gradient(
+    90deg,
+    rgba(0,40,85,0.75),
+    rgba(0,60,120,0.55),
+    rgba(0,0,0,0.25)
   );
-  z-index: 1;
-  pointer-events: none; /* 🔥 IMPORTANT FIX */
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  z-index:1;
+  pointer-events:none;
 }
 
-/* Caption – Full Width */
-.home-carousel .carousel-caption {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  padding: 0 8%;
-  text-align: left;
-  max-width: 100%;
+
+/* ===============================
+   Caption Container
+   =============================== */
+
+.home-carousel .carousel-caption{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:0;
+  right:0;
+
+  padding:30px 8%;
+  text-align:left;
+
+  max-width:100%;
+  z-index:2;
+
+  /* Glass box effect */
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.2);
+
+  width:fit-content;
+  max-width:650px;
 }
 
-/* Full width text */
-.home-carousel .carousel-caption h2,
-.home-carousel .carousel-caption p {
-  width: 100%;
-  color: #ffffff;
-}
+/* Heading */
 
-/* Title */
-.home-carousel .carousel-caption h2 {
-  font-size: 46px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.home-carousel .carousel-caption h2{
+  width:100%;
+  font-size:48px;
+  font-weight:700;
+  color:#ffffff;
+  margin-bottom:15px;
+  line-height:1.2;
 }
 
 /* Paragraph */
-.home-carousel .carousel-caption p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #e5e7eb;
-}
 
+.home-carousel .carousel-caption p{
+  width:100%;
+  font-size:18px;
+  color:#e2e8f0;
+  margin-bottom:25px;
+}
 /* Button */
-.home-carousel .carousel-caption .btn {
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 30px;
+
+.home-carousel .carousel-caption .btn{
+  padding:12px 28px;
+  font-size:16px;
+  font-weight:600;
+
+  border-radius:6px;
+  background:#2563eb;
+  border:none;
+
+  transition:all .3s ease;
 }
 
-/* Indicators */
+.home-carousel .carousel-caption .btn:hover{
+  background:#1d4ed8;
+  box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+/* Carousel Indicators */
+
+.home-carousel .carousel-indicators {
+  bottom: 25px;
+}
+
 .home-carousel .carousel-indicators button {
-  width: 28px;
-  height: 4px;
-  border-radius: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   background-color: #ffffff;
   opacity: 0.4;
+  margin: 0 6px;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .home-carousel .carousel-indicators .active {
   opacity: 1;
+  transform: scale(1.3);
 }
+/* Controls */
 
-/* Controls – FIXED */
 .home-carousel .carousel-control-prev,
-.home-carousel .carousel-control-next {
-  z-index: 5;
+.home-carousel .carousel-control-next{
+  margin-left:-60px;
+  margin-right:-60px;
+  z-index:5;
 }
 
 .home-carousel .carousel-control-prev-icon,
-.home-carousel .carousel-control-next-icon {
-  filter: brightness(0) invert(1);
-}
-
-/* Fade animation */
-.carousel-item {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.carousel-item.active {
-  opacity: 1;
+.home-carousel .carousel-control-next-icon{
+  filter:brightness(0) invert(1);
 }
 
 /* ===============================
    Responsive
    =============================== */
 
-@media (max-width: 992px) {
-  .home-carousel .carousel-item img {
-    height: 65vh;
-  }
+@media(max-width:992px){
 
-  .home-carousel .carousel-caption h2 {
-    font-size: 32px;
-  }
+.home-carousel .carousel-item img{
+  height:65vh;
 }
 
-@media (max-width: 576px) {
-  .home-carousel .carousel-item img {
-    height: 55vh;
-  }
-
-  .home-carousel .carousel-caption {
-    padding: 0 5%;
-  }
-
-  .home-carousel .carousel-caption h2 {
-    font-size: 24px;
-  }
-
-  .home-carousel .carousel-caption p {
-    font-size: 14px;
-  }
+.home-carousel .carousel-caption h2{
+  font-size:32px;
 }
 
-/* ===============================
-   END OF HOME CAROUSEL
-   =============================== */
+}
+
+@media(max-width:576px){
+
+.home-carousel .carousel-item img{
+  height:55vh;
+}
+
+.home-carousel .carousel-caption{
+  padding:0 6%;
+}
+
+.home-carousel .carousel-caption h2{
+  font-size:24px;
+}
+
+.home-carousel .carousel-caption p{
+  font-size:14px;
+}
+
+}
 /* ===============================
    Strategic Partner – Colored Style
    =============================== */
@@ -182,8 +213,9 @@
 
 /* Logo */
 .partner-logo {
-  max-width: 260px;
+  max-width: 400px;
   transition: transform 0.3s ease;
+  margin-left:-100px;
 }
 
 .partner-logo:hover {
@@ -373,7 +405,26 @@
    =============================== */
 
 .explore-alt-section {
+  position: relative;
   background: linear-gradient(135deg, #eef6ff, #f8fafc);
+  overflow: hidden;
+}
+
+/* Vector Background */
+
+.explore-alt-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url('/Program-Image/Tally Background Vector.svg'); /* your vector */
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.07; /* subtle effect */
+  pointer-events: none;
 }
 
 /* Heading */
@@ -435,69 +486,164 @@
 .tab-btn.active::after {
   width: 100%;
 }
-
 /* ===============================
-   Cards – Glass Effect
+   Modern Program Card
    =============================== */
 
-.alt-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 30px;
-  height: 100%;
+.program-card-modern {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
 }
 
-.alt-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 70px rgba(15, 23, 42, 0.15);
+/* Hover */
+.program-card-modern:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
 }
-.alt-card-image{
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
+
+/* ===============================
+   Image
+   =============================== */
+
+.program-image-box {
+  position: relative;
+  overflow: hidden;
 }
-.alt-card-image:hover {
-  transform: scale(1.05);
+
+.program-image-box img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
-.alt-card-title {
-  font-size: 20px;
+
+.program-card-modern:hover .program-image-box img {
+  transform: scale(1.1);
+}
+
+/* Category Tag */
+
+.program-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-size: 12px;
   font-weight: 600;
-  color: #1d4ed8;
-  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
 }
 
-.alt-card-text {
-  font-size: 14px;
-  color: #334155;
-  line-height: 1.6;
-  margin-bottom: 20px;
+/* ===============================
+   Content
+   =============================== */
+
+.program-content {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-/* Link */
-.alt-card-link {
-  font-size: 14px;
-  font-weight: 600;
+/* Program Name */
+
+.program-name {
+  font-size: 21px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.program-card-modern:hover .program-name {
   color: #2563eb;
-  text-decoration: none;
 }
 
-.alt-card-link:hover {
-  text-decoration: underline;
+/* Description */
+
+.program-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+/* ===============================
+   Button Container
+   =============================== */
+
+.program-actions{
+  display:flex;
+  gap:10px;
+  margin-top:auto;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .alt-title {
-    font-size: 26px;
-  }
+/* ===============================
+   Base Button
+   =============================== */
 
-  .program-tabs {
-    gap: 18px;
-  }
+.program-btn{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+
+  padding:11px 12px;
+  border-radius:8px;
+
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+
+  transition:all .3s ease;
 }
+
+/* ===============================
+   Primary Button
+   =============================== */
+
+.primary-btn{
+  background:#2563eb;
+  color:white;
+}
+
+.primary-btn:hover{
+  background:#1d4ed8;
+  box-shadow:0 6px 18px rgba(37,99,235,.35);
+}
+
+/* ===============================
+   Secondary Button
+   =============================== */
+
+.secondary-btn{
+  border:2px solid #2563eb;
+  color:#2563eb;
+  background:white;
+}
+
+.secondary-btn:hover{
+  background:#2563eb;
+  color:white;
+}
+
+/* ===============================
+   Arrow Animation
+   =============================== */
+
+.program-btn span{
+  transition:transform .3s ease;
+}
+
+.program-btn:hover span{
+  transform:translateX(5px);
+}
+
