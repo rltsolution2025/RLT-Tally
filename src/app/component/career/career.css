@@ -175,6 +175,7 @@ Career Content Left Section
     color: #ffffff;
     line-height: 1.3;
     position: relative;
+
 }
 
 .career-title::after {
@@ -193,6 +194,8 @@ Career Content Left Section
     line-height: 1.8;
     color: #e6e6e6;
     max-width: 520px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .career-highlights {
@@ -394,6 +397,8 @@ Popular Courses Section
     margin: auto;
     color: #64748b;
     margin-bottom: 50px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -401,7 +406,7 @@ Popular Courses Section
 
 .course-card {
 
-    background: white;
+    background: rgb(240, 241, 241);
 
     padding: 32px;
 
@@ -490,6 +495,8 @@ Popular Courses Section
     color: #64748b;
     line-height: 1.7;
     margin-bottom: 20px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -517,6 +524,7 @@ Popular Courses Section
 
 .course-btn:hover {
     background: #2bb0a6;
+    cursor: pointer;
 }
 
 
@@ -578,6 +586,8 @@ Why Choose Section
     margin-bottom: 50px;
 
     font-size: 16px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -689,6 +699,8 @@ Why Choose Section
     color: #64748b;
 
     line-height: 1.7;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -740,6 +752,8 @@ In Demand Roles Section
     margin-bottom: 60px;
 
     font-size: 16px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -856,6 +870,8 @@ In Demand Roles Section
     line-height: 1.6;
 
     margin: 0;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -996,6 +1012,8 @@ Ideal For Dark Section
     color: #cbd5e1;
 
     margin-bottom: 50px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -1092,6 +1110,8 @@ Ideal For Dark Section
     font-size: 15px;
 
     color: #e2e8f0;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -1103,6 +1123,7 @@ Ideal For Dark Section
     .ideal-dark-title {
 
         font-size: 30px;
+
 
     }
 

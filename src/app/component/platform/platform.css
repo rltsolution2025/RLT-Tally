@@ -87,6 +87,7 @@ Hero Section
 
     margin-bottom: 20px;
 
+
 }
 
 
@@ -101,6 +102,8 @@ Hero Section
     margin-bottom: 30px;
 
     max-width: 500px;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -252,6 +255,8 @@ Platform Features Section
     max-width: 700px;
 
     margin: auto;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -341,6 +346,8 @@ Platform Features Section
     color: #64748b;
 
     line-height: 1.7;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 

@@ -30,6 +30,8 @@ TICKER
   white-space:nowrap;
   min-width:max-content;
   animation:tickerMove 32s linear infinite;
+  font-style: oblique;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @keyframes tickerMove{
@@ -116,6 +118,8 @@ NAVBAR LINKS
   font-weight:600;
   padding:8px 18px;
   transition:.3s;
+  font-style: oblique;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* underline hover */
@@ -168,6 +172,8 @@ DROPDOWN MENU
   font-size:14px;
   padding:9px 18px;
   transition:.2s;
+  font-style: oblique;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .dropdown-item:hover{
