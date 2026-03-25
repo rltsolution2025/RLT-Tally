@@ -1373,3 +1373,338 @@ FAQ Section – Glass Modern Style
     }
 
 }
+
+/* =====================================================
+LARGE TABLETS (≤ 1024px)
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .career-title {
+        font-size: 36px;
+    }
+
+    .section-title,
+    .why-title,
+    .role-main-title,
+    .ideal-dark-title,
+    .faq-title {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =====================================================
+TABLETS (≤ 768px)
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ================= CAREER SECTION ================= */
+
+    .career-section {
+        padding: 70px 5%;
+        text-align: center;
+    }
+
+    .career-content {
+        padding-right: 0;
+    }
+
+    .career-title {
+        font-size: 28px;
+    }
+
+    .career-description {
+        font-size: 15px;
+        margin: 15px auto;
+    }
+
+    .career-highlights {
+        justify-content: center;
+    }
+
+    .highlight-partner {
+        text-align: center;
+    }
+
+    .career-features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        padding: 15px;
+    }
+
+    .career-form {
+        margin-top: 40px;
+        padding: 30px;
+    }
+
+
+    /* ================= COURSE SECTION ================= */
+
+    .course-section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+
+
+    /* ================= WHY SECTION ================= */
+
+    .why-section {
+        padding: 70px 0;
+    }
+
+    .why-title {
+        font-size: 28px;
+    }
+
+    .why-subtitle {
+        font-size: 14px;
+    }
+
+
+    /* ================= ROLE SECTION ================= */
+
+    .demand-role-section {
+        padding: 70px 0;
+    }
+
+    .role-main-title {
+        font-size: 28px;
+    }
+
+    .role-main-desc {
+        font-size: 14px;
+    }
+
+    .role-box {
+        padding: 20px;
+    }
+
+
+    /* ================= IDEAL SECTION ================= */
+
+    .ideal-dark-section {
+        padding: 70px 0;
+    }
+
+    .ideal-dark-title {
+        font-size: 28px;
+    }
+
+    .ideal-dark-subtitle {
+        font-size: 14px;
+    }
+
+
+    /* ================= FAQ SECTION ================= */
+
+    .faq-modern-section {
+        padding: 70px 0;
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-subtitle {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+MOBILE (≤ 576px)
+===================================================== */
+
+@media (max-width: 576px) {
+
+    /* ================= CAREER ================= */
+
+    .career-section {
+        padding: 60px 15px;
+    }
+
+    .career-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .career-description {
+        font-size: 14px;
+    }
+
+    .career-highlights {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .highlight-partner {
+        font-size: 13px;
+    }
+
+    /* REMOVE FLOATING ICONS */
+
+    .floating-icons {
+        display: none;
+    }
+
+    .career-section::before,
+    .career-section::after {
+        display: none;
+    }
+
+
+    /* ================= FORM ================= */
+
+    .career-form {
+        padding: 25px 18px;
+    }
+
+    .header-form {
+        font-size: 18px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+
+    /* ================= COURSE ================= */
+
+    .course-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+    .course-card {
+        padding: 20px;
+    }
+
+    .course-card h5 {
+        font-size: 18px;
+    }
+
+    .course-card p {
+        font-size: 13px;
+    }
+
+
+    /* GRID FIX */
+
+    .row>[class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    /* ================= WHY ================= */
+
+    .why-title {
+        font-size: 24px;
+    }
+
+    .why-card {
+        padding: 20px;
+    }
+
+
+    /* ================= ROLE ================= */
+
+    .role-main-title {
+        font-size: 24px;
+    }
+
+    .role-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .role-icon-box {
+        margin-bottom: 10px;
+    }
+
+
+    /* ================= IDEAL ================= */
+
+    .ideal-dark-title {
+        font-size: 24px;
+    }
+
+    .ideal-dark-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    /* ================= FAQ ================= */
+
+    .faq-title {
+        font-size: 24px;
+    }
+
+    .faq-accordion .accordion-button {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .faq-accordion .accordion-body {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+SMALL MOBILE (≤ 400px)
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .career-title {
+        font-size: 20px;
+    }
+
+    .section-title,
+    .why-title,
+    .role-main-title,
+    .ideal-dark-title,
+    .faq-title {
+        font-size: 20px;
+    }
+
+    .career-description,
+    .section-subtitle,
+    .role-main-desc {
+        font-size: 12px;
+    }
+
+}

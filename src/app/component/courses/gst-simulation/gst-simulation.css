@@ -1,0 +1,1468 @@
+/* ===============================
+Tally Course Hero Section
+=============================== */
+
+.tally-course-hero {
+
+    padding: 140px 0;
+
+    background-image: url('/Programs/GST Simulation/GST Simulation.jpeg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+/* dark overlay */
+
+.tally-course-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+   
+
+    z-index: 1;
+
+}
+
+/* container above overlay */
+
+.tally-course-hero .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* ===============================
+Hero Text
+=============================== */
+
+.hero-title {
+
+    font-size: 52px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+
+}
+
+.hero-subtitle {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin-bottom: 35px;
+
+    opacity: .95;
+
+}
+
+/* ===============================
+Buttons
+=============================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+.hero-btn-primary {
+
+    background: #facc15;
+
+    color: #000;
+
+    padding: 12px 30px;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: .3s;
+
+}
+
+.hero-btn-primary:hover {
+
+    background: #eab308;
+
+    color: #000;
+
+}
+
+.hero-btn-outline {
+
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 11px 28px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+
+}
+
+.hero-btn-outline:hover {
+
+    background: white;
+
+    color: #065f46;
+
+}
+
+/* ===============================
+Floating Accounting Icons
+=============================== */
+
+.floating-icons {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+.floating-icons i {
+
+    position: absolute;
+
+    font-size: 36px;
+
+    color: rgba(255, 255, 255, 0.12);
+
+    animation: floatIcons 10s infinite ease-in-out;
+
+}
+
+/* icon positions */
+
+.floating-icons i:nth-child(1) {
+    top: 20%;
+    left: 10%;
+}
+
+.floating-icons i:nth-child(2) {
+    top: 35%;
+    right: 15%;
+}
+
+.floating-icons i:nth-child(3) {
+    bottom: 25%;
+    left: 18%;
+}
+
+.floating-icons i:nth-child(4) {
+    bottom: 20%;
+    right: 12%;
+}
+
+/* floating animation */
+
+@keyframes floatIcons {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+/* ===============================
+Responsive
+=============================== */
+
+@media(max-width:768px) {
+
+    .hero-title {
+
+        font-size: 36px;
+
+    }
+
+    .hero-subtitle {
+
+        font-size: 16px;
+
+    }
+
+    .tally-course-hero {
+
+        padding: 100px 0;
+
+    }
+
+}
+
+
+/* ===============================
+Course Overview Section
+=============================== */
+
+.course-overview-section {
+
+    padding: 100px 0;
+
+    background: linear-gradient(135deg, #f4f9ff, #e8f3ff);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* floating accounting icons */
+
+.floating-accounting-icons {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+}
+
+.floating-accounting-icons i {
+
+    position: absolute;
+
+    font-size: 32px;
+
+    color: rgba(37, 99, 235, 0.12);
+
+    animation: floatIcons 10s ease-in-out infinite;
+
+}
+
+.floating-accounting-icons i:nth-child(1) {
+    top: 15%;
+    left: 10%;
+}
+
+.floating-accounting-icons i:nth-child(2) {
+    top: 35%;
+    right: 12%;
+}
+
+.floating-accounting-icons i:nth-child(3) {
+    bottom: 20%;
+    left: 18%;
+}
+
+.floating-accounting-icons i:nth-child(4) {
+    bottom: 15%;
+    right: 10%;
+}
+
+@keyframes floatIcons {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-20px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+
+/* titles */
+
+.overview-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+}
+
+.overview-subtitle {
+
+    font-size: 20px;
+
+    color: #2563eb;
+
+    margin-bottom: 20px;
+
+}
+
+.overview-text {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #475569;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* level cards */
+
+.level-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition: .3s;
+
+    height: 100%;
+
+}
+
+.level-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* icons */
+
+.level-icon {
+
+    font-size: 34px;
+
+    color: #2563eb;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* highlight card */
+
+.level-card.highlight {
+
+    border: 2px solid #2563eb;
+
+    background: #f8fbff;
+
+}
+
+
+/* responsive */
+
+@media(max-width:768px) {
+
+    .overview-title {
+
+        font-size: 28px;
+
+    }
+
+}
+
+/* ==============================
+Program Features Section
+============================== */
+
+.tally-features {
+
+    padding: 100px 0;
+
+    background: linear-gradient(135deg, #f4f9ff, #e8f3ff);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* Floating Icons */
+
+.floating-icons {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+}
+
+.floating-icons i {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    color: rgba(37, 99, 235, 0.12);
+
+    animation: floatIcons 10s infinite ease-in-out;
+
+}
+
+.floating-icons i:nth-child(1) {
+    top: 18%;
+    left: 10%;
+}
+
+.floating-icons i:nth-child(2) {
+    top: 35%;
+    right: 12%;
+}
+
+.floating-icons i:nth-child(3) {
+    bottom: 25%;
+    left: 15%;
+}
+
+.floating-icons i:nth-child(4) {
+    bottom: 18%;
+    right: 10%;
+}
+
+@keyframes floatIcons {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-20px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+
+/* Section header */
+
+.feature-heading {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+.feature-subheading {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #64748b;
+
+}
+
+
+/* Feature card */
+
+.feature-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition: .3s;
+
+    height: 100%;
+
+}
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* Icon */
+
+.feature-icon {
+
+    font-size: 34px;
+
+    color: #2563eb;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Text */
+
+.feature-card h5 {
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+}
+
+.feature-card p {
+
+    font-size: 14px;
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+}
+
+/* ==============================
+Course Curriculum Section
+============================== */
+
+.course-curriculum-section {
+
+    padding: 100px 0;
+
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
+
+}
+
+
+/* Header */
+
+.curriculum-title {
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+.curriculum-subtitle {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #64748b;
+
+}
+
+
+/* Accordion */
+
+.curriculum-accordion {
+
+    margin-top: 40px;
+
+}
+
+
+.curriculum-accordion .accordion-item {
+
+    border: none;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.curriculum-accordion .accordion-button {
+
+    font-weight: 600;
+
+    background: #ffffff;
+
+    padding: 16px 20px;
+
+    box-shadow: none;
+
+}
+
+
+.curriculum-accordion .accordion-button:not(.collapsed) {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+.curriculum-accordion .accordion-body {
+
+    background: #ffffff;
+
+    padding: 20px 25px;
+
+}
+
+
+/* List */
+
+.curriculum-accordion ul {
+
+    padding-left: 18px;
+
+}
+
+.curriculum-accordion li {
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    color: #374151;
+
+}
+
+
+/* Duration */
+
+.duration {
+
+    font-size: 13px;
+
+    margin-left: 10px;
+
+    color: #64748b;
+
+}
+
+/* ===============================
+What You Will Learn Section
+================================ */
+
+.learn-section {
+    padding: 90px 0;
+    background: #f4f6f8;
+}
+
+
+/* Title */
+
+.learn-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #1e293b;
+}
+
+
+/* ===============================
+LEVEL HEADER
+================================ */
+
+.level-item {
+    border: none;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+.level-btn {
+    background: #3f9cb3;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 20px;
+    border: none;
+    box-shadow: none;
+}
+
+
+.level-btn:not(.collapsed) {
+    background: #3f9cb3;
+    color: #fff;
+}
+
+
+.level-btn i {
+    font-size: 16px;
+}
+
+
+/* arrow color */
+
+.level-btn::after {
+    filter: invert(1);
+}
+
+
+/* ===============================
+MODULE ACCORDION
+================================ */
+
+.module-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+.module-accordion .accordion-button {
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 18px;
+    box-shadow: none;
+    color: #1f2937;
+}
+
+
+.module-accordion .accordion-button:hover {
+    background: #f9fafb;
+}
+
+
+.module-accordion .accordion-button:not(.collapsed) {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+
+/* module icon */
+
+.module-accordion .accordion-button i {
+    color: #3f9cb3;
+    font-size: 14px;
+}
+
+
+/* ===============================
+MODULE CONTENT
+================================ */
+
+.module-accordion .accordion-body {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #475569;
+    background: #ffffff;
+    padding: 18px 22px;
+}
+
+
+/* ===============================
+ACCORDION GENERAL
+================================ */
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+/* ===============================
+RESPONSIVE
+================================ */
+
+@media(max-width:768px) {
+
+    .learn-title {
+        font-size: 28px;
+    }
+
+    .level-btn {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+
+    .module-accordion .accordion-button {
+        font-size: 14px;
+    }
+
+}
+
+/* ===============================
+Enroll Section
+================================ */
+
+.enroll-section {
+    padding: 0;
+    background: linear-gradient(120deg, #f0fdf4, #ecfeff);
+    overflow: hidden;
+}
+
+
+/* LEFT IMAGE SIDE */
+
+.enroll-image {
+
+    min-height: 520px;
+
+    /* background: url("assets/images/tally-course.jpg") center/cover no-repeat; */
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* overlay */
+
+.enroll-overlay {
+
+    background: rgba(6, 95, 70, 0.75);
+
+    color: white;
+
+    padding: 60px;
+
+    text-align: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+/* text */
+
+.image-title {
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+.image-text {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    opacity: .9;
+
+    max-width: 420px;
+
+    margin: auto;
+
+}
+
+
+/* ===============================
+FORM SIDE
+================================ */
+
+.enroll-form-wrapper {
+
+    padding: 80px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+/* form card */
+
+.enroll-form-wrapper form {
+
+    background: rgba(255, 255, 255, 0.7);
+
+    backdrop-filter: blur(12px);
+
+    padding: 45px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* heading */
+
+.form-heading {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    color: #065f46;
+
+}
+
+
+/* ===============================
+INPUT STYLE
+================================ */
+
+.input-box {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+}
+
+.input-box i {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #10b981;
+
+    font-size: 16px;
+
+}
+
+
+/* input fields */
+
+.input-box input,
+.input-box textarea {
+
+    border: none;
+
+    border-bottom: 2px solid #d1d5db;
+
+    border-radius: 0;
+
+    padding-left: 28px;
+
+    padding-bottom: 8px;
+
+    background: transparent;
+
+    transition: all .3s;
+
+}
+
+
+/* focus */
+
+.input-box input:focus,
+.input-box textarea:focus {
+
+    border-color: #059669;
+
+    box-shadow: none;
+
+}
+
+
+/* ===============================
+BUTTON
+================================ */
+
+.enroll-btn {
+
+    background: linear-gradient(135deg, #059669, #047857);
+
+    color: white;
+
+    padding: 13px;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition: all .3s;
+
+    border: none;
+
+}
+
+.enroll-btn:hover {
+
+    background: linear-gradient(135deg, #047857, #065f46);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ===============================
+FLOATING ICONS
+================================ */
+
+.enroll-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    background: #10b98120;
+
+    border-radius: 50%;
+
+    top: 40px;
+
+    left: 40px;
+
+    animation: float 6s ease-in-out infinite;
+
+}
+
+.enroll-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+
+    height: 160px;
+
+    background: #22c55e15;
+
+    border-radius: 50%;
+
+    bottom: 50px;
+
+    right: 60px;
+
+    animation: float 8s ease-in-out infinite;
+
+}
+
+
+/* animation */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-15px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+
+}
+
+
+/* ===============================
+RESPONSIVE
+================================ */
+
+@media(max-width:768px) {
+
+    .enroll-form-wrapper {
+
+        padding: 40px 25px;
+
+    }
+
+    .image-title {
+
+        font-size: 28px;
+
+    }
+
+}
+
+/* =====================================================
+GLOBAL RESPONSIVE FIXES
+===================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* =====================================================
+LARGE DEVICES (≤ 1200px)
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =====================================================
+TABLET LANDSCAPE (≤ 1024px)
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .overview-title,
+    .feature-heading,
+    .learn-title {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =====================================================
+TABLETS (≤ 768px)
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+
+    .tally-course-hero {
+        padding: 90px 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        margin: 0 auto 25px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-buttons a {
+        padding: 10px 20px;
+    }
+
+
+    /* OVERVIEW */
+
+    .course-overview-section {
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    .overview-title {
+        font-size: 26px;
+    }
+
+    .overview-subtitle {
+        font-size: 18px;
+    }
+
+    .overview-text {
+        font-size: 15px;
+    }
+
+
+    /* LEVEL CARDS */
+
+    .level-card {
+        padding: 20px;
+    }
+
+    .level-icon {
+        font-size: 28px;
+    }
+
+
+    /* GRID FIX */
+
+    .row.g-4 > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    /* FEATURES */
+
+    .tally-features {
+        padding: 70px 0;
+    }
+
+    .feature-heading {
+        font-size: 26px;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    /* ACCORDION */
+
+    .learn-section {
+        padding: 70px 0;
+    }
+
+    .learn-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .level-btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .module-accordion .accordion-button {
+        font-size: 14px;
+    }
+
+
+    /* ENROLL */
+
+    .enroll-form-wrapper {
+        padding: 40px 25px;
+    }
+
+    .enroll-overlay {
+        padding: 40px 25px;
+    }
+
+    .image-title {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =====================================================
+MOBILE (≤ 576px)
+===================================================== */
+
+@media (max-width: 576px) {
+
+    /* HERO */
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+
+    /* REMOVE FLOATING ICONS */
+
+    .floating-icons,
+    .floating-accounting-icons {
+        display: none;
+    }
+
+
+    /* OVERVIEW */
+
+    .overview-title {
+        font-size: 22px;
+    }
+
+    .overview-subtitle {
+        font-size: 16px;
+    }
+
+    .overview-text {
+        font-size: 14px;
+    }
+
+
+    /* FEATURE */
+
+    .feature-heading {
+        font-size: 22px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+    }
+
+
+    /* ACCORDION */
+
+    .learn-title {
+        font-size: 22px;
+    }
+
+    .module-accordion .accordion-body {
+        font-size: 13px;
+    }
+
+
+    /* ENROLL */
+
+    .enroll-overlay {
+        padding: 25px 15px;
+    }
+
+    .image-title {
+        font-size: 22px;
+    }
+
+    .image-text {
+        font-size: 14px;
+    }
+
+    .enroll-form-wrapper form {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================================
+SMALL MOBILE (≤ 400px)
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .overview-title {
+        font-size: 20px;
+    }
+
+    .feature-heading {
+        font-size: 20px;
+    }
+
+    .learn-title {
+        font-size: 20px;
+    }
+
+}

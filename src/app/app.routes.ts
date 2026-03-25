@@ -33,5 +33,5 @@ export const routes: Routes = [
     { path: 'career', component: Career },
     { path: 'hire-for-us', component: Hire },
     { path: 'platform', component: Platform },
-    { path: 'referral', component: Refer },
+    { path: 'register', component: Refer },
 ];
