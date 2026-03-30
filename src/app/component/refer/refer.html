@@ -1,10 +1,153 @@
-<section class="register-form">
-    <div class="register-container">
-        <form action="">
-            <label for="name">Name</label>
-            <input type="text" name="" id="">
-            <label for="phone">Phone Number</label>
-            <input type="tel">
-        </form>
+<section class="register-modern">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 mb-4">
+
+        <h2 class="register-heading">
+          Build Your Career in Accounting 🚀
+        </h2>
+
+        <p class="register-desc">
+          Join our industry-focused Tally programs and gain practical skills in
+          accounting, GST, payroll, and taxation.
+        </p>
+
+        <ul class="register-points">
+          <li><i class="fa-solid fa-check"></i> 100% Practical Training</li>
+          <li><i class="fa-solid fa-check"></i> Certification</li>
+          <li><i class="fa-solid fa-check"></i> Placement Support</li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="col-lg-6">
+
+        <div class="form-box">
+
+          <h4 class="form-title text-center mb-3">Register Now</h4>
+
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <div class="row g-3">
+
+              <!-- Name -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" formControlName="name" placeholder="Full Name"
+                    [ngClass]="getClass('name')">
+                </div>
+                <small class="text-danger" *ngIf="showError('name')">
+                  Enter valid name
+                </small>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" formControlName="phone" placeholder="Phone"
+                    [ngClass]="getClass('phone')">
+                </div>
+                <small class="text-danger" *ngIf="showError('phone')">
+                  Enter valid 10 digit number
+                </small>
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-12">
+                <div class="input-field">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" formControlName="email" placeholder="Email"
+                    [ngClass]="getClass('email')">
+                </div>
+                <small class="text-danger" *ngIf="showError('email')">
+                  Enter valid email
+                </small>
+              </div>
+
+              <!-- Course -->
+              <div class="col-md-12">
+                <div class="input-field">
+                  <i class="fa-solid fa-book"></i>
+                  <select formControlName="course" [ngClass]="getClass('course')">
+                    <option value="" selected>Select Course</option>
+                    <option>Tally Essential Comprehensive</option>
+                    <option>Tally Professional</option>
+                    <option>GST using TallyPrime</option>
+                    <option>GST Simulation</option>
+                    <option>Office Automation</option>
+                    <option>Payroll & Income Tax</option>
+                    <option>Master Accountant Using Tally</option>
+                  </select>
+                </div>
+                <small class="text-danger" *ngIf="showError('course')">
+                  Select a course
+                </small>
+              </div>
+
+              <!-- College -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-building"></i>
+                  <input type="text" formControlName="college" placeholder="College"
+                    [ngClass]="getClass('college')">
+                </div>
+              </div>
+
+              <!-- Qualification -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <input type="text" formControlName="qualification" placeholder="Qualification">
+                </div>
+              </div>
+
+              <!-- State -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-map"></i>
+                  <input type="text" formControlName="state" placeholder="State"
+                    [ngClass]="getClass('state')">
+                </div>
+              </div>
+
+              <!-- District -->
+              <div class="col-md-6">
+                <div class="input-field">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <input type="text" formControlName="district" placeholder="District"
+                    [ngClass]="getClass('district')">
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-md-12">
+                <div class="input-field">
+                  <i class="fa-solid fa-message"></i>
+                  <textarea rows="1" formControlName="message" placeholder="Message"></textarea>
+                </div>
+              </div>
+
+            </div>
+
+            <button type="submit" class="submit-btn w-100 mt-3">
+              Enroll Now
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
     </div>
+
+  </div>
+
 </section>

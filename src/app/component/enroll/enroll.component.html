@@ -1,0 +1,35 @@
+<div class="enroll-form-wrapper">
+  <h2 class="form-heading">Enroll for the Course</h2>
+
+  <form [formGroup]="enrollForm" (ngSubmit)="submitForm()">
+
+    <!-- Name -->
+    <div class="input-box">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" formControlName="name" placeholder="Full Name">
+    </div>
+
+    <!-- Phone -->
+    <div class="input-box">
+      <i class="fa-solid fa-phone"></i>
+      <input type="tel" formControlName="phone" placeholder="Phone Number">
+    </div>
+
+    <!-- Email -->
+    <div class="input-box">
+      <i class="fa-solid fa-envelope"></i>
+      <input type="email" formControlName="email" placeholder="Email Address">
+    </div>
+
+    <!-- Message -->
+    <div class="input-box">
+      <i class="fa-solid fa-comment"></i>
+      <textarea formControlName="message" rows="1" placeholder="Your Message"></textarea>
+    </div>
+
+    <button type="submit" class="enroll-btn">
+      Enroll Now
+    </button>
+
+  </form>
+</div>

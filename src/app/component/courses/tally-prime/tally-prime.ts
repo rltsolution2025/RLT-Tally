@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { EnrollComponent } from '../../enroll/enroll.component';
 
 @Component({
   selector: 'app-tally-prime',
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, EnrollComponent],
   templateUrl: './tally-prime.html',
   styleUrl: './tally-prime.css',
 })

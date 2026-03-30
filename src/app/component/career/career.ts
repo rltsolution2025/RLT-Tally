@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-career',
@@ -14,7 +15,7 @@ export class Career {
   careerForm: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private api: ApiService) {
     this.careerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -30,13 +31,19 @@ export class Career {
   onSubmit() {
     this.submitted = true;
 
-    if (this.careerForm.invalid) {
+    if (this.careerForm.invalid) 
       return;
-    }
 
-    console.log('Form Submitted', this.careerForm.value);
-    alert('Your application has been submitted successfully!');
-    this.careerForm.reset();
-    this.submitted = false;
+    this.api.career(this.careerForm.value).subscribe({
+      next:()=>{
+        alert('✅ Application Submitted');
+        this.careerForm.reset();
+        this.submitted = false;
+      },
+      error:(err)=>{
+        console.error('Career submission error:', err);
+        alert('❌ Submission Failed. Please try again properly.');
+      }
+    });
   }
 }

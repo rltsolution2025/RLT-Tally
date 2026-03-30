@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { EnrollComponent } from '../../enroll/enroll.component';
 
 @Component({
   selector: 'app-office-automation',
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, EnrollComponent],
   templateUrl: './office-automation.html',
   styleUrl: './office-automation.css',
 })

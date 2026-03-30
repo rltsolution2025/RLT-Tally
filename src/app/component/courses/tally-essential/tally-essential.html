@@ -1208,65 +1208,7 @@
 
                 <div class="enroll-form-wrapper">
 
-                    <h3 class="form-heading">
-                        Enroll for the Course
-                    </h3>
-
-                    <form [formGroup]="enrollForm" (ngSubmit)="submitForm()">
-
-                        <!-- Name -->
-
-                        <div class="mb-3 input-box">
-
-                            <i class="fa-solid fa-user"></i>
-
-                            <input type="text" class="form-control" formControlName="name" placeholder="Full Name">
-
-                        </div>
-
-
-                        <!-- Phone -->
-
-                        <div class="mb-3 input-box">
-
-                            <i class="fa-solid fa-phone"></i>
-
-                            <input type="tel" class="form-control" formControlName="phone" placeholder="Phone Number">
-
-                        </div>
-
-
-                        <!-- Email -->
-
-                        <div class="mb-3 input-box">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                            <input type="email" class="form-control" formControlName="email"
-                                placeholder="Email Address">
-
-                        </div>
-
-
-                        <!-- Message -->
-
-                        <div class="mb-3 input-box">
-
-                            <i class="fa-solid fa-message"></i>
-
-                            <textarea rows="1" class="form-control" formControlName="message"
-                                placeholder="Your Message"></textarea>
-
-                        </div>
-
-
-                        <button class="btn enroll-btn w-100" type="submit">
-
-                            Enroll Now
-
-                        </button>
-
-                    </form>
+                    <app-enroll [courseName]="'Tally Essential Comprehensive'"></app-enroll>
 
                 </div>
 

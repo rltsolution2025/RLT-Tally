@@ -1,0 +1,72 @@
+
+
+/* Card */
+.enroll-form-wrapper form {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px);
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.form-heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #065f46;
+}
+
+/* Input Box */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Icons */
+.input-box i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #10b981;
+    font-size: 16px;
+}
+
+/* Inputs */
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #d1d5db;
+    padding: 10px 0 8px 30px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+/* Focus Effect */
+.input-box input:focus,
+.input-box textarea:focus {
+    border-bottom: 2px solid #059669;
+}
+
+/* Button */
+.enroll-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #059669, #047857);
+    color: #fff;
+    padding: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover */
+.enroll-btn:hover {
+    background: linear-gradient(135deg, #047857, #065f46);
+    transform: translateY(-2px);
+}

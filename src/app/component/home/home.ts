@@ -30,7 +30,7 @@ export class Home implements AfterViewInit {
   categories = [
     'All',
     'Popular Programs',
-    'Specialization Programs',
+    'Add-On Programs',
     'Premium Programs',
   ];
 
@@ -62,21 +62,21 @@ export class Home implements AfterViewInit {
       image: 'Program-Image/GST Simulation.jpg',
       name: 'GST Simulation – Real-Time GST Practice',
       description: 'Become a professional accountant by mastering Tally with GST, payroll, inventory management, and financial reporting.',
-      category: 'Specialization Programs',
+      category: 'Add-On Programs',
       link: '/gst-simulation'
     },
     {
       image: 'Program-Image/Office Automation.jpg',
       name: 'Office Automation – Workplace Computer Skills',
       description: 'Master MS Office tools including Word, Excel, and PowerPoint to handle everyday office tasks efficiently and professionally for business',
-      category: 'Specialization Programs',
+      category: 'Add-On Programs',
       link: '/office-automation'
     },
     {
       image: 'Program-Image/P & IT.jpg',
       name: 'Payroll & Income Tax – Tax & Salary Management',
       description: 'Learn payroll processing, salary management, and income tax calculation for efficient employee and tax management.',
-      category: 'Specialization Programs',
+      category: 'Add-On Programs',
       link: '/payroll-&-income-tax'
     },
     {

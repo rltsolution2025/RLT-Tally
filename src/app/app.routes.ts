@@ -15,6 +15,7 @@ import { Career } from './component/career/career';
 import { Hire } from './component/hire/hire';
 import { Platform } from './component/platform/platform';
 import { Refer } from './component/refer/refer';
+import { EnrollComponent } from './component/enroll/enroll.component';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -34,4 +35,5 @@ export const routes: Routes = [
     { path: 'hire-for-us', component: Hire },
     { path: 'platform', component: Platform },
     { path: 'register', component: Refer },
+    { path: 'enroll', component: EnrollComponent }
 ];

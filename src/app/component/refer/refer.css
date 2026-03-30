@@ -1,0 +1,84 @@
+.register-modern {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+/* LEFT */
+.register-heading {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.register-desc {
+  color: #475569;
+  margin-top: 10px;
+}
+
+.register-points {
+  list-style: none;
+  padding: 0;
+}
+
+.register-points li {
+  margin: 8px 0;
+}
+
+.register-points i {
+  color: green;
+}
+
+/* FORM */
+.form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+.input-field {
+  position: relative;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #2563eb;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* VALIDATION */
+.is-invalid {
+  border-color: red !important;
+}
+
+.is-valid {
+  border-color: green !important;
+}
+
+.text-danger {
+  font-size: 12px;
+}
+
+/* BUTTON */
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}

@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { EnrollComponent } from '../../enroll/enroll.component';
 
 @Component({
   selector: 'app-master-accountant',
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, EnrollComponent],
   templateUrl: './master-accountant.html',
   styleUrl: './master-accountant.css',
 })
