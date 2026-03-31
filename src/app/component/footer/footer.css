@@ -230,6 +230,7 @@ Modern Animated Footer
 
 .footer-links a:hover {
     color: #1f6aa5;
+    font-weight: bolder;
 }
 
 /* contact */
