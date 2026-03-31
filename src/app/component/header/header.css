@@ -34,6 +34,20 @@ TICKER
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.register-link{
+  margin-left:20px;
+}
+.register-link .nav-link-2{
+  color:#ffffff;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+  cursor: pointer;
+}
+.register-link .nav-link-2:hover{
+  color:#ffffff;
+  transform:translateY(-2px);
+}
 @keyframes tickerMove{
   from{transform:translateX(0)}
   to{transform:translateX(-50%)}
