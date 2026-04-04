@@ -1,0 +1,75 @@
+<!-- Hamburger -->
+<button class="hamburger" (click)="toggleMenu($event)">
+    ☰
+</button>
+
+<!-- Overlay -->
+<div class="menu-overlay" *ngIf="isMenuOpen">
+
+    <div class="menu-content">
+
+        <!-- Header -->
+        <div class="menu-header">
+            <div class="logo-area">
+                <img src="/Logo/RLT  Logo Final.png" class="logo">
+            </div>
+            <button class="close-btn" (click)="closeMenu()">✕</button>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu-items">
+
+            <!-- Home -->
+            <a routerLink="/" (click)="closeMenu()">Home</a>
+
+            <!-- COURSES -->
+            <div class="menu-section">
+
+                <!-- Main Title -->
+                <div class="section-title" (click)="toggleDropdown('courses',$event)">
+                    <span>Our Specialized Programs</span>
+                    <span class="plus" [class.open]="isDropdownOpen('courses')">+</span>
+                </div>
+
+                <!-- Submenu -->
+                <div class="submenu" *ngIf="isDropdownOpen('courses')">
+
+                    <!-- Popular -->
+                    <div class="sub-section">
+                        <p class="submenu-title">Popular Programs</p>
+                        <a routerLink="/tally-essential" (click)="closeMenu()">Tally Essential Comprehensive</a>
+                        <a routerLink="/tally-professional" (click)="closeMenu()">Tally Professional</a>
+                        <a routerLink="/tally-prime" (click)="closeMenu()">GST Using TallyPrime</a>
+                    </div>
+
+                    <!-- Add-On -->
+                    <div class="sub-section">
+                        <p class="submenu-title">Add-On Programs</p>
+                        <a routerLink="/gst-simulation" (click)="closeMenu()">GST Simulation</a>
+                        <a routerLink="/office-automation" (click)="closeMenu()">Office Automation</a>
+                        <a routerLink="/payroll-&-income-tax" (click)="closeMenu()">Payroll & Income Tax</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="sub-section">
+                        <p class="submenu-title">Premium Programs</p>
+                        <a routerLink="/master-accountant" (click)="closeMenu()">Master Accountant Using Tally</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- About -->
+            <a routerLink="/about" (click)="closeMenu()">About Us</a>
+
+            <!-- Contact -->
+            <a routerLink="/contact" (click)="closeMenu()">Contact Us</a>
+
+            <!-- Career -->
+            <a routerLink="/career" (click)="closeMenu()">Career</a>
+
+            <!-- Platform -->
+            <a routerLink="/platform" (click)="closeMenu()">Platform</a>
+        </div>
+    </div>
+</div>

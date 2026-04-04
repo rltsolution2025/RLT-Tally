@@ -324,3 +324,31 @@ EXTRA SMALL DEVICES
   }
 
 }
+
+@media (max-width: 991.98px) {
+  .desktop-header {
+    display: none;
+  }
+
+  app-mobile-header {
+    display: block;
+  }
+}
+
+/* Desktop Header shown above 992px */
+.desktop-header {
+  display: block;
+}
+app-mobile-header {
+  display: none;
+}
+
+/* Mobile Header shown below 992px */
+@media (max-width: 991.98px) {
+  .desktop-header {
+    display: none;
+  }
+  app-mobile-header {
+    display: block;
+  }
+}
