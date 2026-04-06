@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:5000/api';
+  private baseUrl = 'https://rlt-tally-1.onrender.com/api'; 
   constructor(private http: HttpClient) { }
 
   //Enroll

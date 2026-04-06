@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +9,20 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit {
+  constructor(private route: ActivatedRoute) { }
 
   ngAfterViewInit(): void {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        setTimeout(() => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    });
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -97,4 +109,6 @@ export class Home implements AfterViewInit {
   selectCategory(category: string) {
     this.activeCategory = category;
   }
+
+
 }
