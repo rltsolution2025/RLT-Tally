@@ -17,6 +17,16 @@ import { Platform } from './component/platform/platform';
 import { Refer } from './component/refer/refer';
 import { EnrollComponent } from './component/enroll/enroll.component';
 import { PrivacyPolicyComponent } from './component/privacy-policy/privacy-policy.component';
+import { TallyKodambakkamComponent } from './component/tally-kodambakkam/tally-kodambakkam.component';
+import { TallyMaraimalaiNagarComponent } from './component/tally-maraimalai-nagar/tally-maraimalai-nagar.component';
+import { TallyChennaiComponent } from './component/tally-chennai/tally-chennai.component';
+import { TallyMambalamComponent } from './component/tally-mambalam/tally-mambalam.component';
+import { TallySaidapetComponent } from './component/tally-saidapet/tally-saidapet.component';
+import { TallyVadapalaniComponent } from './component/tally-vadapalani/tally-vadapalani.component';
+import { TallyKkNagarComponent } from './component/tally-kk-nagar/tally-kk-nagar.component';
+import { TallyAshokNagarComponent } from './component/tally-ashok-nagar/tally-ashok-nagar.component';
+import { TallyNungambakkamComponent } from './component/tally-nungambakkam/tally-nungambakkam.component';
+import { TallyTNagarComponent } from './component/tally-t-nagar/tally-t-nagar.component';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -38,4 +48,14 @@ export const routes: Routes = [
     { path: 'register', component: Refer },
     { path: 'enroll', component: EnrollComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'tally-training-institute-in-kodambakkam', component: TallyKodambakkamComponent },
+    { path: 'tally-training-institute-in-maraimalai-nagar', component: TallyMaraimalaiNagarComponent },
+    { path: 'tally-training-institute-in-chennai', component: TallyChennaiComponent },
+    { path: 'tally-training-institute-in-mambalam', component: TallyMambalamComponent },
+    { path: 'tally-training-institute-in-saidapet', component: TallySaidapetComponent },
+    { path: 'tally-training-institute-in-vadapalani', component: TallyVadapalaniComponent },
+    { path: 'tally-training-institute-in-kk-nagar', component: TallyKkNagarComponent  },
+    { path: 'tally-training-institute-in-ashok-nagar', component: TallyAshokNagarComponent  },
+    { path: 'tally-training-institute-in-nungambakkam', component: TallyNungambakkamComponent  },
+    { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent  },
 ];

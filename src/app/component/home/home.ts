@@ -50,49 +50,49 @@ export class Home implements AfterViewInit {
 
   programs = [
     {
-      image: 'Program-Image/Tally Essential.jpg',
+      image: 'Program-Image/Tally-Essential.jpg',
       name: 'Tally Essentials – Tally Foundation Program',
       description: 'Master accounting fundamentals and essential Tally skills for managing business transactions, ledgers, vouchers, and reports.',
       category: 'Popular Programs',
       link: '/tally-essential'
     },
     {
-      image: 'Program-Image/Tally professional.jpg',
+      image: 'Program-Image/Tally-professional.jpg',
       name: 'Tally Professional - Industry Accounting Skills',
       description: 'Become a professional accountant by mastering Tally with GST, payroll, inventory management, and financial reporting.',
       category: 'Popular Programs',
       link: '/tally-professional'
     },
     {
-      image: 'Program-Image/Tally Prime.jpg',
+      image: 'Program-Image/Tally-Prime.jpg',
       name: 'TallyPrime – Complete ERP Accounting Solution',
       description: 'Learn Tally Prime / Tally ERP to efficiently manage accounting, inventory, vouchers, and financial reports for businesses.',
       category: 'Popular Programs',
       link: '/tally-prime'
     },
     {
-      image: 'Program-Image/GST Simulation.jpg',
+      image: 'Program-Image/GST-Simulation.jpg',
       name: 'GST Simulation – Real-Time GST Practice',
       description: 'Become a professional accountant by mastering Tally with GST, payroll, inventory management, and financial reporting.',
       category: 'Add-On Programs',
       link: '/gst-simulation'
     },
     {
-      image: 'Program-Image/Office Automation.jpg',
+      image: 'Program-Image/Office-Automation.jpg',
       name: 'Office Automation – Workplace Computer Skills',
       description: 'Master MS Office tools including Word, Excel, and PowerPoint to handle everyday office tasks efficiently and professionally for business',
       category: 'Add-On Programs',
       link: '/office-automation'
     },
     {
-      image: 'Program-Image/P & IT.jpg',
+      image: 'Program-Image/Payroll-&-Income-Tax.jpg',
       name: 'Payroll & Income Tax – Tax & Salary Management',
       description: 'Learn payroll processing, salary management, and income tax calculation for efficient employee and tax management.',
       category: 'Add-On Programs',
       link: '/payroll-&-income-tax'
     },
     {
-      image: 'Program-Image/Master Accountant.png',
+      image: 'Program-Image/Master-Accountant.png',
       name: 'Master Accountant – Advanced Tally Program',
       description: 'Master accounting with Tally, covering GST, payroll, taxation, and financial management for business operations.',
       category: 'Premium Programs',
