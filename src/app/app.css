@@ -1,0 +1,133 @@
+/* WhatsApp Floating Widget */
+.whatsapp-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #ffffff;
+  color: #333;
+  text-decoration: none;
+
+  padding: 12px 18px;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e9ecef;
+
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  min-width: 280px;
+}
+
+.whatsapp-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  color: #333;
+  text-decoration: none;
+}
+
+/* WhatsApp Icon */
+.wa-icon {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25d366;
+  border-radius: 50%;
+}
+
+.wa-icon i {
+  font-size: 30px;
+  color: #fff;
+}
+
+/* Content */
+.wa-content {
+  flex: 1;
+}
+
+.wa-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.online-dot {
+  width: 8px;
+  height: 8px;
+  background: #25d366;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.online-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #25d366;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wa-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #212529;
+}
+
+.wa-subtitle {
+  font-size: 13px;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .whatsapp-widget {
+    min-width: auto;
+    padding: 10px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50px;
+  }
+
+  .wa-content {
+    display: none;
+  }
+
+  .wa-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+  }
+
+  .wa-icon i {
+    font-size: 32px;
+  }
+}

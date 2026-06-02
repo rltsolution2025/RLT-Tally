@@ -41,7 +41,7 @@ export const routes: Routes = [
     { path: 'gst-simulation', component: GSTSimulation },
     { path: 'master-accountant', component: MasterAccountant },
     { path: 'office-automation', component: OfficeAutomation },
-    { path: 'payroll-&-income-tax', component: PayrollIncomeTax },
+    { path: 'payroll-and-income-tax', component: PayrollIncomeTax },
     { path: 'career', component: Career },
     { path: 'hire-for-us', component: Hire },
     { path: 'platform', component: Platform },

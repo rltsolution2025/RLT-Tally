@@ -89,7 +89,7 @@ export class Home implements AfterViewInit {
       name: 'Payroll & Income Tax – Tax & Salary Management',
       description: 'Learn payroll processing, salary management, and income tax calculation for efficient employee and tax management.',
       category: 'Add-On Programs',
-      link: '/payroll-&-income-tax'
+      link: '/payroll-and-income-tax'
     },
     {
       image: 'Program-Image/Master-Accountant.png',
