@@ -1,20 +1,24 @@
 const career = require('../models/career');
 
 exports.createCareer = async (req, res) => {
-    try {
-        const data = await career.create(req.body);
+  try {
+    const start = Date.now();
 
-        res.status(201).json({
-            success: true,
-            message: 'Career form submitted',
-            data
-        });
-    } catch (error) {
-        res.status(500).json({ message: error.message })
-    }
-};
+    const data = await career.create(req.body);
 
-exports.getCareers = async (req, res) => {
-    const data = await career.find().sort({ createdAt: -1 });
-    res.json(data);
+    console.log(`Career saved in ${Date.now() - start}ms`);
+
+    res.status(201).json({
+      success: true,
+      message: 'Career form submitted',
+      data,
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };

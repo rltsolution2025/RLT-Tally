@@ -1,32 +1,105 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
 require('dotenv').config();
 
 const connectDB = require('./config/db');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-// ✅ Connect DB
+
+// =========================
+// Connect MongoDB
+// =========================
 connectDB();
 
-// ✅ Middleware (FIXED)
-app.use(cors());
-app.use(express.json()); // 🔥 THIS FIXES YOUR ISSUE
+// =========================
+// Security Middleware
+// =========================
+app.use(helmet());
+app.disable('x-powered-by');
 
-// Routes
+// =========================
+// CORS Configuration
+// =========================
+app.use(
+  cors({
+    origin: ['https://rltedzaro.com', 'https://www.rltedzaro.com', 'http://localhost:4200'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  }),
+);
+
+// =========================
+// Body Parser
+// =========================
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// =========================
+// Request Time Logger
+// =========================
+app.use((req, res, next) => {
+  const start = Date.now();
+
+  res.on('finish', () => {
+    console.log(`${req.method} ${req.originalUrl} - ${Date.now() - start}ms`);
+  });
+
+  next();
+});
+
+// =========================
+// Health Check Route
+// =========================
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    success: true,
+    status: 'Server Running',
+    timestamp: new Date(),
+  });
+});
+
+// =========================
+// API Routes
+// =========================
 app.use('/api', require('./routes/careerRoutes'));
 app.use('/api', require('./routes/contactRoutes'));
 app.use('/api', require('./routes/registerRoutes'));
 app.use('/api', require('./routes/enrollRoutes'));
 
-// Test Route
+// =========================
+// Root Route
+// =========================
 app.get('/', (req, res) => {
-    res.send('API Running...');
+  res.send('🚀 API Running...');
 });
 
-// Server
+// =========================
+// 404 Handler
+// =========================
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: 'Route not found',
+  });
+});
 
+// =========================
+// Global Error Handler
+// =========================
+app.use((err, req, res, next) => {
+  console.error(err.stack);
 
+  res.status(500).json({
+    success: false,
+    message: 'Internal Server Error',
+  });
+});
+
+// =========================
+// Start Server
+// =========================
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
