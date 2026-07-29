@@ -41,7 +41,6 @@ export class Career {
         this.submitted = false;
       },
       error:(err)=>{
-        console.error('Career submission error:', err);
         alert('❌ Submission Failed. Please try again properly.');
       }
     });

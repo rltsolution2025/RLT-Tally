@@ -43,7 +43,6 @@ export class Contact {
         this.contactForm.reset();
       },
       error: (err) => {
-        console.error('Contact form submission error:', err);
         alert('❌ Submission failed. Please try again.');
       }
     });

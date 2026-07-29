@@ -27,35 +27,56 @@ import { TallyKkNagarComponent } from './component/tally-kk-nagar/tally-kk-nagar
 import { TallyAshokNagarComponent } from './component/tally-ashok-nagar/tally-ashok-nagar.component';
 import { TallyNungambakkamComponent } from './component/tally-nungambakkam/tally-nungambakkam.component';
 import { TallyTNagarComponent } from './component/tally-t-nagar/tally-t-nagar.component';
+import { AIMLLearningComponent } from './IT-industries/ai-ml-learning/ai-ml-learning.component';
+import { CloudComponent } from './IT-industries/cloud/cloud.component';
+import { DatascienceComponent } from './IT-industries/datascience/datascience.component';
+import { DigitalMarketingComponent } from './IT-industries/digital-marketing/digital-marketing.component';
+import { JavaFullstackComponent } from './IT-industries/java-fullstack/java-fullstack.component';
+import { DotnetFullstackComponent } from './IT-industries/dotnet-fullstack/dotnet-fullstack.component';
+import { PythonFullStackComponent } from './IT-industries/python-full-stack/python-full-stack.component';
+import { UiUxDesignerComponent } from './IT-industries/ui-ux-designer/ui-ux-designer.component';
 
 export const routes: Routes = [
-    { path: '', component: Home },
-    { path: 'header', component: Header },
-    { path: 'footer', component: Footer },
-    { path: '', redirectTo: '', pathMatch: "full" },
-    { path: 'about', component: About },
-    { path: 'contact', component: Contact },
-    { path: 'tally-essential', component: TallyEssential },
-    { path: 'tally-prime', component: TallyPrime },
-    { path: 'tally-professional', component: TallyProfessional },
-    { path: 'gst-simulation', component: GSTSimulation },
-    { path: 'master-accountant', component: MasterAccountant },
-    { path: 'office-automation', component: OfficeAutomation },
-    { path: 'payroll-and-income-tax', component: PayrollIncomeTax },
-    { path: 'career', component: Career },
-    { path: 'hire-for-us', component: Hire },
-    { path: 'platform', component: Platform },
-    { path: 'register', component: Refer },
-    { path: 'enroll', component: EnrollComponent },
-    { path: 'privacy-policy', component: PrivacyPolicyComponent },
-    { path: 'tally-training-institute-in-kodambakkam', component: TallyKodambakkamComponent },
-    { path: 'tally-training-institute-in-maraimalai-nagar', component: TallyMaraimalaiNagarComponent },
-    { path: 'tally-training-institute-in-chennai', component: TallyChennaiComponent },
-    { path: 'tally-training-institute-in-mambalam', component: TallyMambalamComponent },
-    { path: 'tally-training-institute-in-saidapet', component: TallySaidapetComponent },
-    { path: 'tally-training-institute-in-vadapalani', component: TallyVadapalaniComponent },
-    { path: 'tally-training-institute-in-kk-nagar', component: TallyKkNagarComponent  },
-    { path: 'tally-training-institute-in-ashok-nagar', component: TallyAshokNagarComponent  },
-    { path: 'tally-training-institute-in-nungambakkam', component: TallyNungambakkamComponent  },
-    { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent  },
+  { path: '', component: Home },
+  { path: 'header', component: Header },
+  { path: 'footer', component: Footer },
+  { path: '', redirectTo: '', pathMatch: 'full' },
+  { path: 'about', component: About },
+  { path: 'contact', component: Contact },
+  { path: 'tally-essential', component: TallyEssential },
+  { path: 'tally-prime', component: TallyPrime },
+  { path: 'tally-professional', component: TallyProfessional },
+  { path: 'gst-simulation', component: GSTSimulation },
+  { path: 'master-accountant', component: MasterAccountant },
+  { path: 'office-automation', component: OfficeAutomation },
+  { path: 'payroll-and-income-tax', component: PayrollIncomeTax },
+  { path: 'career', component: Career },
+  { path: 'hire-for-us', component: Hire },
+  { path: 'platform', component: Platform },
+  { path: 'register', component: Refer },
+  { path: 'enroll', component: EnrollComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'tally-training-institute-in-kodambakkam', component: TallyKodambakkamComponent },
+  {
+    path: 'tally-training-institute-in-maraimalai-nagar',
+    component: TallyMaraimalaiNagarComponent,
+  },
+  { path: 'tally-training-institute-in-chennai', component: TallyChennaiComponent },
+  { path: 'tally-training-institute-in-mambalam', component: TallyMambalamComponent },
+  { path: 'tally-training-institute-in-saidapet', component: TallySaidapetComponent },
+  { path: 'tally-training-institute-in-vadapalani', component: TallyVadapalaniComponent },
+  { path: 'tally-training-institute-in-kk-nagar', component: TallyKkNagarComponent },
+  { path: 'tally-training-institute-in-ashok-nagar', component: TallyAshokNagarComponent },
+  { path: 'tally-training-institute-in-nungambakkam', component: TallyNungambakkamComponent },
+  { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent },
+
+  //IT Industries
+  { path: 'artificial-intelligence-machine-learning-course', component: AIMLLearningComponent },
+  { path: 'cloud-computing-course', component: CloudComponent },
+  { path: 'data-science-course', component: DatascienceComponent },
+  { path: 'digital-marketing-course', component: DigitalMarketingComponent },
+  { path: 'java-full-stack-developer-course', component: JavaFullstackComponent },
+  { path: 'dotnet-full-stack-developer-course', component: DotnetFullstackComponent },
+  { path: 'python-full-stack-developer-course', component: PythonFullStackComponent },
+  { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
 ];

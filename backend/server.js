@@ -22,13 +22,15 @@ app.disable('x-powered-by');
 // =========================
 // CORS Configuration
 // =========================
-app.use(
-  cors({
-    origin: ['https://rltedzaro.com', 'https://www.rltedzaro.com', 'http://localhost:4200'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-  }),
-);
+const corsOptions = {
+  origin: ['https://rltedzaro.com', 'https://www.rltedzaro.com', 'http://localhost:4200'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ← Added OPTIONS
+  allowedHeaders: ['Content-Type', 'Authorization'], // ← Added explicitly
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // =========================
 // Body Parser
