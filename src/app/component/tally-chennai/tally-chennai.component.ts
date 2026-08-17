@@ -23,7 +23,9 @@ export class TallyChennaiComponent implements OnInit {
     // ✅ BASIC SEO
     // =====================================================
 
-    this.title.setTitle('Tally Training Institute in Chennai | GST & Accounting Course');
+    this.title.setTitle(
+      'Tally Training Institute in Chennai | Authorized Tally Partner | GST & Accounting Course',
+    );
 
     this.meta.updateTag({
       name: 'description',
@@ -64,7 +66,7 @@ export class TallyChennaiComponent implements OnInit {
     this.meta.updateTag({
       property: 'og:title',
       content:
-        'Tally Training Institute in Chennai | Autthorized Tally Partner | GST & Tally Prime, Master Accountant Using Tally',
+        'Tally Training Institute in Chennai | Authorized Tally Partner | GST & Tally Prime, Master Accountant Using Tally',
     });
 
     this.meta.updateTag({
