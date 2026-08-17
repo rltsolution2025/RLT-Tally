@@ -23,7 +23,7 @@ export class TallyVadapalaniComponent implements OnInit {
     // ✅ SEO - TITLE (No "Best")
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Vadapalani, Chennai | GST & Accounting Course',
+      'Tally Training Institute in Vadapalani, Chennai | Authorized Tally Partner | GST & Accounting Course',
     );
 
     // ============================
