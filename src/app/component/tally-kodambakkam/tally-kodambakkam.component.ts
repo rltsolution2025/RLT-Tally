@@ -21,7 +21,7 @@ export class TallyKodambakkamComponent implements OnInit {
     ========================== */
 
     this.title.setTitle(
-      'Tally Training Institute in Kodambakkam | Practical TallyPrime & GST Training',
+      'Tally Training Institute in Kodambakkam | Authorized Tally Partner | Practical TallyPrime & GST Training',
     );
 
     /* ==========================
@@ -90,7 +90,7 @@ export class TallyKodambakkamComponent implements OnInit {
 
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Tally Training Institute in Kodambakkam',
+      content: 'Tally Training Institute in Kodambakkam | Authorized Tally Partner',
     });
 
     this.meta.updateTag({

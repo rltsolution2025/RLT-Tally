@@ -35,6 +35,7 @@ import { JavaFullstackComponent } from './IT-industries/java-fullstack/java-full
 import { DotnetFullstackComponent } from './IT-industries/dotnet-fullstack/dotnet-fullstack.component';
 import { PythonFullStackComponent } from './IT-industries/python-full-stack/python-full-stack.component';
 import { UiUxDesignerComponent } from './IT-industries/ui-ux-designer/ui-ux-designer.component';
+import { CCNAComponent } from './IT-industries/ccna/ccna.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -73,10 +74,12 @@ export const routes: Routes = [
   //IT Industries
   { path: 'artificial-intelligence-machine-learning-course', component: AIMLLearningComponent },
   { path: 'cloud-computing-course', component: CloudComponent },
-  { path: 'data-science-course', component: DatascienceComponent },
+  { path: 'data-science-with-ai-course', component: DatascienceComponent },
   { path: 'digital-marketing-course', component: DigitalMarketingComponent },
   { path: 'java-full-stack-developer-course', component: JavaFullstackComponent },
   { path: 'dotnet-full-stack-developer-course', component: DotnetFullstackComponent },
   { path: 'python-full-stack-developer-course', component: PythonFullStackComponent },
   { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
+  { path: 'ccna-networking-course', component: CCNAComponent },
+  { path: ''}
 ];

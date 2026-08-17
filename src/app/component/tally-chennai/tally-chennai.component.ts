@@ -63,7 +63,8 @@ export class TallyChennaiComponent implements OnInit {
 
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Tally Training Institute in Chennai',
+      content:
+        'Tally Training Institute in Chennai | Autthorized Tally Partner | GST & Tally Prime, Master Accountant Using Tally',
     });
 
     this.meta.updateTag({
@@ -107,7 +108,8 @@ export class TallyChennaiComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'twitter:title',
-      content: 'Tally Training Institute in Chennai',
+      content:
+        'Tally Training Institute in Chennai | Authorized Tally Partner | GST Simulation, Master Accountant using Tally',
     });
 
     this.meta.updateTag({

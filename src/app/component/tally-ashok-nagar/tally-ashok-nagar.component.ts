@@ -23,7 +23,7 @@ export class TallyAshokNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Ashok Nagar, Chennai | GST & Accounting Course',
+      'Tally Training Institute in Ashok Nagar, Chennai | Authorized Tally partner | GST & Accounting Course',
     );
 
     // ============================
@@ -38,7 +38,7 @@ export class TallyAshokNagarComponent implements OnInit {
     this.meta.updateTag({
       name: 'keywords',
       content:
-        'Tally training institute in Ashok Nagar, Tally course Ashok Nagar Chennai, GST training Ashok Nagar, accounting course Chennai, TallyPrime training Chennai, best tally institute Ashok Nagar',
+        'Authorized Tally training institute in Ashok Nagar, Tally course Ashok Nagar Chennai, GST training Ashok Nagar, accounting course Chennai, TallyPrime training Chennai, best tally institute Ashok Nagar',
     });
 
     this.meta.updateTag({
@@ -57,7 +57,7 @@ export class TallyAshokNagarComponent implements OnInit {
     this.meta.updateTag({
       property: 'og:description',
       content:
-        'Learn TallyPrime, GST & accounting with practical training in Ashok Nagar. Job-oriented course with real-time exposure.',
+        'Learn TallyPrime, GST & accounting with practical training in Ashok Nagar. Authorized Tally Partner. Job-oriented course with real-time exposure.',
     });
 
     this.meta.updateTag({
@@ -141,7 +141,6 @@ export class TallyAshokNagarComponent implements OnInit {
         name: 'RLT Edzaro Tally Academy',
       },
     });
-
   }
 
   // ============================

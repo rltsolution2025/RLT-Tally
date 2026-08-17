@@ -23,7 +23,7 @@ export class TallyMambalamComponent implements OnInit {
     // ✅ TITLE
     // ============================
     this.titleService.setTitle(
-      'Tally Training Institute in Mambalam, Chennai | GST & Accounting Course',
+      'Tally Training Institute in Mambalam, Chennai | Authorized Tally Partner | GST & Accounting Course',
     );
 
     // ============================
@@ -38,7 +38,7 @@ export class TallyMambalamComponent implements OnInit {
     this.metaService.updateTag({
       name: 'keywords',
       content:
-        'Tally training institute in Mambalam, Tally course Mambalam Chennai, GST training Mambalam, accounting course Chennai, TallyPrime training Chennai, best tally institute Mambalam',
+        'Authorized Tally training institute in Mambalam, Tally course Mambalam Chennai, GST training Mambalam, accounting course Chennai, TallyPrime training Chennai, best tally institute Mambalam',
     });
 
     // ============================

@@ -22,7 +22,9 @@ export class TallyKkNagarComponent implements OnInit {
     // ============================
     // ✅ SEO - TITLE
     // ============================
-    this.title.setTitle('Tally Training Institute in KK Nagar, Chennai | GST & Accounting Course');
+    this.title.setTitle(
+      'Tally Training Institute in KK Nagar, Chennai | Authorized Tally Partnered | GST & Accounting Course',
+    );
 
     // ============================
     // ✅ META TAGS
@@ -30,13 +32,13 @@ export class TallyKkNagarComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in KK Nagar, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and career support.',
+        'Join the best Tally training institute in KK Nagar, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and career support. We are a Certified Authorized Tally Partner.',
     });
 
     this.meta.updateTag({
       name: 'keywords',
       content:
-        'Tally training institute in KK Nagar, Tally course KK Nagar Chennai, GST training KK Nagar, accounting course Chennai, TallyPrime training Chennai, best tally institute KK Nagar',
+        'Authorized Tally training institute in KK Nagar, Tally course KK Nagar Chennai, GST training KK Nagar, accounting course Chennai, TallyPrime training Chennai, best tally institute KK Nagar',
     });
 
     this.meta.updateTag({

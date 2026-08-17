@@ -23,7 +23,7 @@ export class TallyNungambakkamComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Nungambakkam, Chennai | GST & Accounting Course',
+      'Tally Training Institute in Nungambakkam, Chennai | Authorized Tally Partner | GST & Accounting Course',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallyNungambakkamComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in Nungambakkam, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support.',
+        'Join the best Tally training institute in Nungambakkam, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support. We are an authorized tally partner',
     });
 
     this.meta.updateTag({

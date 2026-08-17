@@ -23,7 +23,7 @@ export class TallyTNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Best Tally Training Institute in T Nagar, Chennai | GST & Accounting Course',
+      'Best Tally Training Institute in T Nagar, Chennai | Authorized Tally Partner | GST & Accounting Course',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallyTNagarComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in T Nagar, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support.',
+        'Join the best Tally training institute in T Nagar, Chennai. We are an Authorized tally partner. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support.',
     });
 
     this.meta.updateTag({
@@ -85,7 +85,8 @@ export class TallyTNagarComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'Learn TallyPrime, GST & accounting with practical training in T Nagar.',
+      content:
+        'Learn TallyPrime, GST & accounting with practical training in T Nagar. We are an authorized tally partner',
     });
 
     // ============================
