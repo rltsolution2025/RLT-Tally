@@ -5,8 +5,8 @@ Tally Course Hero Section
 .tally-course-hero {
   padding: 140px 0;
 
-  /*background-image: url('/Programs/GST Simulation/GST-Simulation.jpeg');*/
-  background: linear-gradient(35deg, #cfd4db, #6d747c);
+  background-image: url('/IT Course/Java Course.jpeg');
+  /*background: linear-gradient(35deg, #cfd4db, #6d747c);*/
 
   background-size: cover;
 
@@ -43,6 +43,9 @@ Tally Course Hero Section
   position: relative;
 
   z-index: 2;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  margin-left: 30px;
 }
 
 /* ===========================

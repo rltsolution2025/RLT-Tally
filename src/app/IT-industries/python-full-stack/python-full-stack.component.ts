@@ -145,7 +145,7 @@ export class PythonFullStackComponent implements AfterViewInit {
 
   {
     initials: 'NP',
-    name: 'Nithya P',
+    name: 'Nithya T',
     course: 'Python Full Stack Professional',
     review:
       'The live projects, mock technical interviews, resume building, GitHub portfolio development, and placement support were very helpful. The course gave me practical experience in Python Full Stack development and prepared me for software developer interviews.',
