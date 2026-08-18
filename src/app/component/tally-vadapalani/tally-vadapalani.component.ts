@@ -23,7 +23,7 @@ export class TallyVadapalaniComponent implements OnInit {
     // ✅ SEO - TITLE (No "Best")
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Vadapalani, Chennai | Authorized Tally Partner | GST & Accounting Course',
+      'Tally Training Institute in Vadapalani, Chennai | Authorized Tally Partner | Placement Assistance | GST & Accounting Course',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallyVadapalaniComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join RLT Edzaro Tally Academy in Vadapalani, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and career support.',
+        'Build practical accounting skills with RLT Edzaro Tally Academy in Vadapalani, Chennai. Learn TallyPrime, GST, taxation, and accounting with industry-focused training and career support.',
     });
 
     this.meta.updateTag({

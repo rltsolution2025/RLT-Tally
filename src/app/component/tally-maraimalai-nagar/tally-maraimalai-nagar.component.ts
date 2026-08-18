@@ -15,7 +15,10 @@ export class TallyMaraimalaiNagarComponent {
   ngOnInit(): void {
     this.title.setTitle('Tally Training Institute in Maraimalai Nagar | Authorized Tally Partner | Best Tally Training in Maraimalai Nagar');
     this.meta.addTags([
-      { name: 'description', content: 'Join the best Tally training institute in Maraimalai Nagar. Get hands-on training from experts and boost your accounting career with practical skills.' },
+      { 
+        name: 'description', 
+        content: 
+        'Looking to learn Tally in Maraimalai Nagar? RLT Edzaro Tally Academy offers practical training in TallyPrime, GST, accounting, payroll, and taxation to develop career-ready skills.' },
       { name: 'keywords', content: 'Tally academy in Maraimalai Nagar, Tally training in Maraimalai Nagar, Best Tally institute in Maraimalai Nagar, Tally courses in Maraimalai Nagar, Tally classes in Maraimalai Nagar' }
     ]);
 

@@ -36,6 +36,7 @@ import { DotnetFullstackComponent } from './IT-industries/dotnet-fullstack/dotne
 import { PythonFullStackComponent } from './IT-industries/python-full-stack/python-full-stack.component';
 import { UiUxDesignerComponent } from './IT-industries/ui-ux-designer/ui-ux-designer.component';
 import { CCNAComponent } from './IT-industries/ccna/ccna.component';
+import { PowerBIComponent } from './IT-industries/power-bi/power-bi.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -81,5 +82,5 @@ export const routes: Routes = [
   { path: 'python-full-stack-developer-course', component: PythonFullStackComponent },
   { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
   { path: 'ccna-networking-course', component: CCNAComponent },
-  { path: ''}
+  { path: 'power-bi-tableau-course', component: PowerBIComponent}
 ];

@@ -23,7 +23,7 @@ export class TallyTNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Best Tally Training Institute in T Nagar, Chennai | Authorized Tally Partner | GST & Accounting Course',
+      'Best Tally Training Institute in T Nagar, Chennai | Authorized Tally Partner | Placement Assistance | GST & Accounting Course',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallyTNagarComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in T Nagar, Chennai. We are an Authorized tally partner. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support.',
+        'Looking to learn Tally in T Nagar, Chennai? RLT Edzaro Tally Academy offers practical TallyPrime, GST, taxation, and accounting training with placement support from an Authorized Tally Partner.',
     });
 
     this.meta.updateTag({

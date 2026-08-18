@@ -23,7 +23,7 @@ export class TallySaidapetComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Saidapet, Chennai | Authorized Tally Partner | GST & Accounting Course',
+      'Tally Training Institute in Saidapet, Chennai | Authorized Tally Partner | Placement Assistance | GST & Accounting Course',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallySaidapetComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in Saidapet, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and placement support. We are an authorized tally partner',
+        'Start your accounting career in Saidapet, Chennai with RLT Edzaro Tally Academy. Gain practical TallyPrime, GST, taxation, and accounting skills with placement assistance and industry-focused training.',
     });
 
     this.meta.updateTag({

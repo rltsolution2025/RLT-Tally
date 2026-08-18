@@ -23,7 +23,7 @@ export class TallyMambalamComponent implements OnInit {
     // ✅ TITLE
     // ============================
     this.titleService.setTitle(
-      'Tally Training Institute in Mambalam, Chennai | Authorized Tally Partner | GST & Accounting Course',
+      'Tally Training Institute in Mambalam, Chennai | Authorized Tally Partner | Placement Assistance | Tally Essential Comprehensive',
     );
 
     // ============================

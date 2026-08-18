@@ -23,7 +23,7 @@ export class TallyAshokNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Ashok Nagar, Chennai | Authorized Tally partner | GST & Accounting Course',
+      'Tally Training Institute in Ashok Nagar, Chennai | Authorized Tally Partner | Payroll & Income Tax | Placement Assistance',
     );
 
     // ============================
@@ -32,7 +32,7 @@ export class TallyAshokNagarComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join the best Tally training institute in Ashok Nagar, Chennai. Learn TallyPrime, GST, taxation, and accounting with practical training and career support.',
+        'Looking for Tally training in Ashok Nagar, Chennai? Learn TallyPrime, GST, payroll, taxation, and accounting with practical sessions, certification, and placement assistance.',
     });
 
     this.meta.updateTag({

@@ -21,7 +21,7 @@ export class TallyKodambakkamComponent implements OnInit {
     ========================== */
 
     this.title.setTitle(
-      'Tally Training Institute in Kodambakkam | Authorized Tally Partner | Practical TallyPrime & GST Training',
+      'Tally Training Institute in Kodambakkam | Authorized Tally Partner | TallyPrime & GST | Placement Assistance',
     );
 
     /* ==========================
@@ -31,7 +31,7 @@ export class TallyKodambakkamComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Join Tally training in Kodambakkam and learn practical TallyPrime, GST systems, accounting workflows, inventory management, payroll and financial reporting.',
+        'Looking to develop accounting skills in Kodambakkam, Chennai? Learn TallyPrime, GST, accounting, inventory management, payroll, and financial reporting through practical training at RLT Edzaro.',
     });
 
     this.meta.updateTag({

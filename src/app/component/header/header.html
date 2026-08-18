@@ -1,17 +1,17 @@
 <!-- Welcome Top Bar -->
 <nav class="navbar welcome-navbar">
   <div class="container-fluid welcome-wrapper">
-
     <!-- Left: Gradient Style News Ticker -->
     <div class="professional-ticker">
       <div class="ticker-track gradient-text">
-
         <!-- Original -->
         <span>Welcome to RLT Edzaro – Certified Tally Training for Future Accountants</span>
         <span>Enroll Now for Expert Tally Training and Career Success.</span>
         <span>
           For Your Assistance:
-          <a href="tel:+919600681581">+91 96006 81581</a> / <a href="tel:+918925500513">+91 89255 00513</a> | <a href="mailto:contact@rltedzaro.com">contact@rltedzaro.com</a>
+          <a href="tel:+919600681581">+91 96006 81581</a> /
+          <a href="tel:+918925500513">+91 89255 00513</a> |
+          <a href="mailto:contact@rltedzaro.com">contact@rltedzaro.com</a>
         </span>
 
         <!-- Duplicate (required for mobile) -->
@@ -19,95 +19,222 @@
         <span>Enroll Now for Expert Tally Training and Career Success.</span>
         <span>
           For Your Assistance:
-          <a href="tel:+919600681581">+91 96006 81581</a> / <a href="tel:+918925500513">+91 89255 00513</a> | <a href="mailto:contact@rltedzaro.com">contact@rltedzaro.com</a>
+          <a href="tel:+919600681581">+91 96006 81581</a> /
+          <a href="tel:+918925500513">+91 89255 00513</a> |
+          <a href="mailto:contact@rltedzaro.com">contact@rltedzaro.com</a>
         </span>
-
       </div>
     </div>
     <div class="register-link">
-      <a class="nav-link-2" routerLink="/register" routerLinkActive="active">Register Now <i
-          class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a class="nav-link-2" routerLink="/register" routerLinkActive="active"
+        >Register Now <i class="fa-solid fa-arrow-up-right-from-square"></i
+      ></a>
     </div>
 
     <!-- Right: Social Icons -->
     <div class="welcome-social">
-      <a href="https://www.facebook.com/profile.php?id=61587292501752" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.instagram.com/tallyrltedzaro/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/company/rlt-edzaro-tally-academy" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61587292501752" target="_blank"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a href="https://www.instagram.com/tallyrltedzaro/" target="_blank"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://www.linkedin.com/company/rlt-edzaro-tally-academy" target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
     </div>
-
   </div>
 </nav>
-
 
 <!-- Secondary Navbar -->
 <nav class="navbar navbar-expand-lg main-navbar">
   <div class="container-fluid">
-
     <!-- Logo (Left) -->
     <a routerLink="/" class="navbar-brand logo-link">
-      <img src="Logo/RLT-Logo-Final.png" alt="RLT Edzaro Logo" class="logo-1">
+      <img src="Logo/RLT-Logo-Final.png" alt="RLT Edzaro Logo" class="logo-1" />
     </a>
 
     <!-- Menu (Right) -->
     <div class="collapse navbar-collapse justify-content" id="mainNavbar">
       <ul class="navbar-nav align-items-lg-center">
-
         <li class="nav-item">
-          <a class="nav-link active" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true}">Home</a>
+          <a
+            class="nav-link active"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
         </li>
 
         <!-- Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Our Specialized Programs
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Specialized Software Programs
           </a>
 
           <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/python-full-stack-developer-course"
+                routerLinkActive="active"
+                >Python Full Stack Development Program</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/java-full-stack-developer-course"
+                routerLinkActive="active"
+                >Java Full Stack Development Program</a
+              >
+            </li>
 
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/dotnet-full-stack-developer-course"
+                routerLinkActive="active"
+                >.Net Full Stack Development Program</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/cloud-computing-course"
+                routerLinkActive="active"
+                >Cloud Computing and Database Mangament Program</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/data-science-with-ai-course"
+                routerLinkActive="active"
+                >Data Science with Artificial Intelligence Program</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/artificial-intelligence-machine-learning-course"
+                routerLinkActive="active"
+                >Artificial Intelligence & Machine Learning Program</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/digital-marketing-course"
+                routerLinkActive="active"
+                >Digital Marketing & Business Development Program</a
+              >
+            </li>
+
+            <li>
+              <a class="dropdown-item" routerLink="/ui-ux-designer-course" routerLinkActive="active"
+                >UI & UX Designer Program</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="dropdown-item"
+                routerLink="/ccna-networking-course"
+                routerLinkActive="active"
+                >CCNA, Networking & Server Management Program</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Specialized Tally Programs
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end">
             <!-- Popular Courses -->
             <li class="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#">Popular Courses</a>
+              <a class="dropdown-item dropdown-toggle">Popular Courses</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/tally-essential" routerLinkActive="active">Tally Essential
-                    comprehensive</a>
+                <li>
+                  <a class="dropdown-item" routerLink="/tally-essential" routerLinkActive="active"
+                    >Tally Essential comprehensive</a
+                  >
                 </li>
-                <li><a class="dropdown-item" routerLink="/tally-professional" routerLinkActive="active">Tally
-                    Professional</a></li>
-                <li><a class="dropdown-item" routerLink="/tally-prime" routerLinkActive="active">GST Using
-                    TallyPrime</a>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    routerLink="/tally-professional"
+                    routerLinkActive="active"
+                    >Tally Professional</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/tally-prime" routerLinkActive="active"
+                    >GST Using TallyPrime</a
+                  >
                 </li>
               </ul>
             </li>
 
             <!-- Specialization Courses -->
             <li class="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#">Add-On Courses</a>
+              <a class="dropdown-item dropdown-toggle">Add-On Courses</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/gst-simulation" routerLinkActive="active">GST Simulation</a>
+                <li>
+                  <a class="dropdown-item" routerLink="/gst-simulation" routerLinkActive="active"
+                    >GST Simulation</a
+                  >
                 </li>
-                <li><a class="dropdown-item" routerLink="/office-automation" routerLinkActive="active">Office
-                    Automation</a></li>
-                <li><a class="dropdown-item" routerLink="/payroll-and-income-tax" routerLinkActive="active">Payroll &
-                    Income
-                    Tax</a></li>
+                <li>
+                  <a class="dropdown-item" routerLink="/office-automation" routerLinkActive="active"
+                    >Office Automation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    routerLink="/payroll-and-income-tax"
+                    routerLinkActive="active"
+                    >Payroll & Income Tax</a
+                  >
+                </li>
               </ul>
             </li>
 
             <!-- Premium Courses -->
             <li class="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#">Premium Courses</a>
+              <a class="dropdown-item dropdown-toggle">Premium Courses</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="/master-accountant" routerLinkActive="active">Master
-                    Accountant Using Tally</a></li>
+                <li>
+                  <a class="dropdown-item" routerLink="/master-accountant" routerLinkActive="active"
+                    >Master Accountant Using Tally</a
+                  >
+                </li>
               </ul>
             </li>
-
           </ul>
         </li>
 
