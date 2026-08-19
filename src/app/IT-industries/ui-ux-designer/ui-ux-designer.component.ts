@@ -97,56 +97,56 @@ export class UiUxDesignerComponent implements AfterViewInit {
   totalReviews = 250;
   testimonials: Testimonial[] = [
     {
-      initials: 'AK',
-      name: 'Arun Kumar',
-      course: 'Python Full Stack Developer Student',
+      initials: 'SK',
+      name: 'Suresh Kumar',
+      course: 'UI & UX Design Student',
       review:
-        'The Python Full Stack course was excellent. I learned Python programming, Django, Django REST Framework, React.js, MySQL, and REST APIs through practical projects. The trainers explained every concept clearly and provided excellent hands-on guidance.',
+        'The UI & UX Design course was very practical. I learned UX research, user personas, wireframing, Figma, UI design, and interactive prototyping through real-world projects. The mentors explained every concept clearly and guided us throughout the design process.',
       date: '2 weeks ago',
     },
 
     {
-      initials: 'VD',
-      name: 'Vignesh D',
-      course: 'Django Developer Student',
+      initials: 'VN',
+      name: 'Vignesh N',
+      course: 'Figma UI Design Student',
       review:
-        'The Django training was highly practical. I learned how to build backend applications, work with Django ORM, create REST APIs, integrate MySQL, and implement authentication. The real-time projects gave me confidence to develop web applications.',
+        'The Figma training was excellent and completely hands-on. I learned Auto Layout, components, variants, typography, color systems, responsive layouts, and interactive prototypes. The practical design assignments helped me improve my confidence in creating professional interfaces.',
       date: '1 month ago',
     },
 
     {
-      initials: 'PM',
-      name: 'Pradeep M',
-      course: 'React.js Developer Student',
+      initials: 'DP',
+      name: 'Dinesh Prabhu',
+      course: 'UX Design Student',
       review:
-        'The React.js modules were very useful and practical. I learned components, props, state, hooks, routing, Redux Toolkit, API integration, and responsive UI development. Building projects helped me understand modern frontend development.',
+        'The UX research modules were very useful. I learned user interviews, personas, empathy maps, customer journey mapping, information architecture, user flows, and usability testing. Working on real case studies helped me understand how professional UX design works.',
       date: '3 weeks ago',
     },
 
     {
-      initials: 'KS',
-      name: 'Keerthana S',
-      course: 'Python Full Stack Student',
+      initials: 'KR',
+      name: 'Kavya R',
+      course: 'UI & UX Design Student',
       review:
-        'I learned Python, Django, REST APIs, React.js, MySQL, JWT authentication, Docker, Git, and AWS deployment through practical projects. The trainers focused on real-world development, which made the concepts much easier to understand.',
+        'I learned Figma, wireframing, high-fidelity UI design, design systems, responsive web design, mobile app design, and prototyping through practical projects. The design reviews and mentor feedback helped me improve both my visual design and UX thinking.',
       date: '5 days ago',
     },
 
     {
-      initials: 'AR',
-      name: 'Aravind Raj',
-      course: 'Software Development Student',
+      initials: 'AJ',
+      name: 'Arjun J',
+      course: 'Product Design Student',
       review:
-        'The curriculum covers Python programming, Django, Django REST Framework, React, database development, full stack integration, and cloud deployment. The capstone project helped me create a strong GitHub portfolio and improve my development skills.',
+        'The curriculum covers UX research, information architecture, UI design, Figma, design systems, responsive interfaces, usability testing, and real-world product design. The capstone project helped me create a strong portfolio with a complete UX case study.',
       date: '2 months ago',
     },
 
     {
-      initials: 'NP',
-      name: 'Nithya T',
-      course: 'Python Full Stack Professional',
+      initials: 'SR',
+      name: 'Saranya R',
+      course: 'UI & UX Design Professional',
       review:
-        'The live projects, mock technical interviews, resume building, GitHub portfolio development, and placement support were very helpful. The course gave me practical experience in Python Full Stack development and prepared me for software developer interviews.',
+        'The live projects, portfolio development, case study preparation, mock interviews, and placement support were very helpful. I gained practical experience in designing websites and mobile applications and feel much more confident about starting my UI/UX design career.',
       date: '1 week ago',
     },
   ];
