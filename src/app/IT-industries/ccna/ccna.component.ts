@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { EnrollComponent } from '../../component/enroll/enroll.component';
-interface Testimonial{
+interface Testimonial {
   initials: string;
 
   name: string;
@@ -98,55 +98,56 @@ export class CCNAComponent implements AfterViewInit {
 
   testimonials: Testimonial[] = [
     {
-      initials: 'RK',
-      name: 'Rakesh Kumar',
-      course: 'AI & ML Student',
+      initials: 'SK',
+      name: 'Suresh Kumar',
+      course: 'CCNA & Networking Student',
       review:
-        'Excellent training with real-time projects. The trainers explained every AI concept clearly and provided outstanding placement support.',
+        'The CCNA training was excellent. I learned networking fundamentals, IP addressing, subnetting, VLANs, routing, and Cisco configuration through practical lab sessions. The trainers explained every concept clearly.',
       date: '2 weeks ago',
     },
 
     {
-      initials: 'AP',
-      name: 'Arun Prakash',
-      course: 'Python & AI Student',
+      initials: 'VP',
+      name: 'Vignesh Prakash',
+      course: 'Cisco Networking Student',
       review:
-        'One of the best AI courses. Practical sessions, coding exercises, and live projects helped me gain confidence.',
+        'The Cisco networking labs were very practical. I gained hands-on experience with routers, switches, VLAN configuration, trunking, and troubleshooting. The real-world scenarios made networking much easier to understand.',
       date: '1 month ago',
     },
 
     {
       initials: 'SK',
-      name: 'Sanjay Kumar',
-      course: 'Machine Learning Student',
+      name: 'Surya Kumar',
+      course: 'Network Engineer Student',
       review:
-        'Highly recommended for beginners. Every topic was taught with practical examples and hands-on coding.',
+        'Highly recommended for beginners in networking. The course covered OSI and TCP/IP models, subnetting, switching, routing, and OSPF with practical examples and hands-on Cisco exercises.',
       date: '3 weeks ago',
     },
 
     {
-      initials: 'VP',
-      name: 'Vignesh Prabu',
-      course: 'AI Engineer Student',
+      initials: 'AP',
+      name: 'Aravind Prasad',
+      course: 'CCNA Certification Student',
       review:
-        'The certification and placement guidance helped me prepare confidently for interviews.',
+        'The CCNA preparation was very useful. I improved my subnetting, routing, VLAN, and troubleshooting skills through regular lab practice and mock assessments. The career guidance also helped me prepare for networking interviews.',
       date: '5 days ago',
     },
 
     {
-      initials: 'MJ',
-      name: 'Meena Joseph',
-      course: 'Generative AI Student',
+      initials: 'KR',
+      name: 'Keerthana R',
+      course: 'Network Security Student',
       review:
-        'Excellent explanation of ChatGPT, Prompt Engineering, AI Agents and LLMs. Worth every session.',
+        'The networking security modules were excellent. I learned ACLs, NAT, secure device management, wireless security, and network troubleshooting through practical exercises. The trainers were very supportive throughout the course.',
       date: '2 months ago',
     },
 
     {
-      initials: 'KR',
-      name: 'Karthik Raj',
-      course: 'Data Science Student',
-      review: 'Very supportive trainers, structured curriculum and excellent learning environment.',
+      initials: 'MB',
+      name: 'Manoj Balaji',
+      course: 'Network Management Student',
+      review:
+        'The curriculum is well structured and practical. I learned Cisco IOS, IP addressing, routing, switching, OSPF, DHCP, network security, and enterprise network management. The hands-on projects gave me confidence to pursue networking roles.',
       date: '1 week ago',
     },
   ];

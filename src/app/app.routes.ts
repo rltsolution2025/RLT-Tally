@@ -37,6 +37,11 @@ import { PythonFullStackComponent } from './IT-industries/python-full-stack/pyth
 import { UiUxDesignerComponent } from './IT-industries/ui-ux-designer/ui-ux-designer.component';
 import { CCNAComponent } from './IT-industries/ccna/ccna.component';
 import { PowerBIComponent } from './IT-industries/power-bi/power-bi.component';
+import { BlogsComponent } from './blogs/blogs/blogs.component';
+import { TallyprimeVsExcelComponent } from './blogs/tallyprime-vs-excel/tallyprime-vs-excel.component';
+import { TallyAccountantSalaryInIndiaComponent } from './blogs/tally-accountant-salary-in-india/tally-accountant-salary-in-india.component';
+import { JobsAfterLearningTallyComponent } from './blogs/jobs-after-learning-tally/jobs-after-learning-tally.component';
+import { TallyCourseAfterTwelfthComponent } from './blogs/tally-course-after-twelfth/tally-course-after-twelfth.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -82,5 +87,11 @@ export const routes: Routes = [
   { path: 'python-full-stack-developer-course', component: PythonFullStackComponent },
   { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
   { path: 'ccna-networking-course', component: CCNAComponent },
-  { path: 'power-bi-tableau-course', component: PowerBIComponent}
+  { path: 'power-bi-tableau-course', component: PowerBIComponent },
+  { path: 'blogs', component: BlogsComponent },
+  { path: 'tallyprime-vs-excel-for-accounting', component: TallyprimeVsExcelComponent },
+  { path: 'tally-accountant-salary-in-india', component: TallyAccountantSalaryInIndiaComponent },
+  { path: 'jobs-after-learning-tally', component: JobsAfterLearningTallyComponent },
+  { path: 'tally-course-after-12th', component: TallyCourseAfterTwelfthComponent },
+  
 ];

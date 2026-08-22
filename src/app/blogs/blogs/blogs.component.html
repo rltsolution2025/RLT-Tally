@@ -1,0 +1,210 @@
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-hero-content">
+      <span class="blog-badge">
+        <i class="fa-solid fa-pen-nib"></i>
+        RLT Edzaro Blog
+      </span>
+
+      <h1>
+        Learn. Explore.
+        <span>Grow.</span>
+      </h1>
+
+      <p>
+        Explore the latest insights, career guidance, technology trends, course updates, and
+        learning resources from RLT Edzaro.
+      </p>
+
+      <div class="blog-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search articles..." [(ngModel)]="searchTerm" />
+        <button (click)="searchBlogs()">Search</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="blog-categories">
+  <div class="container">
+    <div class="section-heading">
+      <span>Explore Topics</span>
+      <h2>Browse Our <strong>Latest Articles</strong></h2>
+    </div>
+
+    <div class="category-list">
+      <button [class.active]="selectedCategory === 'All'" (click)="filterCategory('All')">
+        All
+      </button>
+
+     <!--<button
+        [class.active]="selectedCategory === 'Technology'"
+        (click)="filterCategory('Technology')"
+      >
+        Technology
+      </button> 
+
+      <button [class.active]="selectedCategory === 'Career'" (click)="filterCategory('Career')">
+        Career
+      </button>
+
+      <button
+        [class.active]="selectedCategory === 'Cloud Computing'"
+        (click)="filterCategory('Cloud Computing')"
+      >
+        Cloud Computing
+      </button>
+
+      <button [class.active]="selectedCategory === 'AI & ML'" (click)="filterCategory('AI & ML')">
+        AI & ML
+      </button>
+
+      <button
+        [class.active]="selectedCategory === 'Education'"
+        (click)="filterCategory('Education')"
+      >
+        Education
+      </button>-->
+
+      <button
+        [class.active]="selectedCategory === 'Tally & Finance'"
+        (click)="filterCategory('Tally & Finance')"
+      >
+        Tally & Finance
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Blog -->
+<section class="featured-blog" *ngIf="featuredBlog">
+  <div class="container">
+    <div class="featured-wrapper">
+      <div class="featured-image">
+        <img [src]="featuredBlog.image" [alt]="featuredBlog.title" loading="lazy" />
+
+        <span class="featured-label"> Featured Article </span>
+      </div>
+
+      <div class="featured-content">
+        <span class="blog-category">
+          {{ featuredBlog.category }}
+        </span>
+
+        <h2>{{ featuredBlog.title }}</h2>
+
+        <p>
+          {{ featuredBlog.description }}
+        </p>
+
+        <div class="blog-meta">
+          <span>
+            <i class="fa-regular fa-calendar"></i>
+            {{ featuredBlog.date }}
+          </span>
+
+          <span>
+            <i class="fa-regular fa-clock"></i>
+            {{ featuredBlog.readTime }}
+          </span>
+        </div>
+
+        <a [routerLink]="featuredBlog.url" class="read-more">
+          Read Full Article
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Listing -->
+<section class="blog-listing">
+  <div class="container">
+    <div class="section-heading listing-heading">
+      <div>
+        <span>Fresh From Our Blog</span>
+        <h2>Latest <strong>Articles</strong></h2>
+      </div>
+
+      <p>
+        Stay updated with useful knowledge, career tips, technology insights and learning resources.
+      </p>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card" *ngFor="let blog of filteredBlogs">
+        <div class="blog-image">
+          <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
+
+          <span class="card-category">
+            {{ blog.category }}
+          </span>
+        </div>
+
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span>
+              <i class="fa-regular fa-calendar"></i>
+              {{ blog.date }}
+            </span>
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              {{ blog.readTime }}
+            </span>
+          </div>
+
+          <h3>
+            {{ blog.title }}
+          </h3>
+
+          <p>
+            {{ blog.description }}
+          </p>
+
+          <a [routerLink]="blog.url" class="card-read-more">
+            Read More
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <!-- No Results -->
+    <div class="no-results" *ngIf="filteredBlogs.length === 0">
+      <i class="fa-regular fa-face-frown"></i>
+
+      <h3>No articles found</h3>
+
+      <p>Try searching with a different keyword or category.</p>
+
+      <button (click)="clearFilters()">View All Articles</button>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter / CTA -->
+<section class="blog-cta">
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-icon">
+        <i class="fa-solid fa-lightbulb"></i>
+      </div>
+
+      <div>
+        <span>Keep Learning</span>
+
+        <h2>Build Your Skills. Shape Your Future.</h2>
+
+        <p>Discover courses, career opportunities and practical learning programs at RLT Edzaro.</p>
+      </div>
+
+      <a routerLink="/courses" class="cta-button">
+        Explore Courses
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
