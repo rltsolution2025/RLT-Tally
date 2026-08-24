@@ -22,9 +22,7 @@ export class TallyNungambakkamComponent implements OnInit {
     // ============================
     // ✅ SEO - TITLE
     // ============================
-    this.title.setTitle(
-      'Tally Training Institute in Nungambakkam, Chennai | Authorized Tally Partner | Placement Assistance | Office Automation ',
-    );
+    this.title.setTitle('Tally Course in Nungambakkam | Authorized Tally Partner ');
 
     // ============================
     // ✅ META TAGS
@@ -32,7 +30,7 @@ export class TallyNungambakkamComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Looking to learn Tally in Nungambakkam, Chennai? RLT Edzaro Tally Academy offers practical training in TallyPrime, GST, taxation, and accounting with placement support and career-focused learning.',
+        'Boost your accountant career with our certified Tally course in Nungambakkam. Our authorized institute offers 100% practical classes covering real-time GST tax compliance.',
     });
 
     this.meta.updateTag({

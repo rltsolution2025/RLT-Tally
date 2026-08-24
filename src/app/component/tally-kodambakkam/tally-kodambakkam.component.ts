@@ -21,7 +21,7 @@ export class TallyKodambakkamComponent implements OnInit {
     ========================== */
 
     this.title.setTitle(
-      'Tally Training Institute in Kodambakkam | Authorized Tally Partner | TallyPrime & GST | Placement Assistance',
+      'Tally Course in Kodambakkam, Chennai | Authorized Tally Training | Tally Class | Placement Assistance',
     );
 
     /* ==========================
@@ -90,7 +90,7 @@ export class TallyKodambakkamComponent implements OnInit {
 
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Tally Training Institute in Kodambakkam | Authorized Tally Partner',
+      content: 'Tally Course in Kodambakkam, Chennai | Authorized Tally Training',
     });
 
     this.meta.updateTag({

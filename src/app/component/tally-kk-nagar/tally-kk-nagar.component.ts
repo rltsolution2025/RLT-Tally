@@ -23,7 +23,7 @@ export class TallyKkNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in KK Nagar, Chennai | Authorized Tally Partner | GST & Accounting | Placement Assistance',
+      'Tally Course & Tally Class in KK Nagar, Chennai | Authorized Tally Training | GST & Accounting | Placement Assistance',
     );
 
     // ============================
@@ -51,7 +51,7 @@ export class TallyKkNagarComponent implements OnInit {
     // ============================
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Tally Training Institute in KK Nagar, Chennai',
+      content: 'Tally Course in KK Nagar, Chennai | Authorized Tally Training',
     });
 
     this.meta.updateTag({

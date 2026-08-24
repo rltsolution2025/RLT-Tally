@@ -23,7 +23,7 @@ export class TallyAshokNagarComponent implements OnInit {
     // ✅ SEO - TITLE
     // ============================
     this.title.setTitle(
-      'Tally Training Institute in Ashok Nagar, Chennai | Authorized Tally Partner | Payroll & Income Tax | Placement Assistance',
+      'Tally Course in Ashok Nagar, Chennai | Tally Class | Authorized Tally Training | Placement Assistance',
     );
 
     // ============================
@@ -51,7 +51,7 @@ export class TallyAshokNagarComponent implements OnInit {
     // ============================
     this.meta.updateTag({
       property: 'og:title',
-      content: 'Tally Training Institute in Ashok Nagar, Chennai',
+      content: 'Tally Course in Ashok Nagar, Chennai | Authorized Tally Training',
     });
 
     this.meta.updateTag({

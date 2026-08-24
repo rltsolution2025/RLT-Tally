@@ -42,6 +42,9 @@ import { TallyprimeVsExcelComponent } from './blogs/tallyprime-vs-excel/tallypri
 import { TallyAccountantSalaryInIndiaComponent } from './blogs/tally-accountant-salary-in-india/tally-accountant-salary-in-india.component';
 import { JobsAfterLearningTallyComponent } from './blogs/jobs-after-learning-tally/jobs-after-learning-tally.component';
 import { TallyCourseAfterTwelfthComponent } from './blogs/tally-course-after-twelfth/tally-course-after-twelfth.component';
+import { TallyCourseFeesDurationSyllabusCareerComponent } from './blogs/tally-course-fees-duration-syllabus-career/tally-course-fees-duration-syllabus-career.component';
+import { LearnTallyWithoutAccountingKnowledgeComponent } from './blogs/learn-tally-without-accounting-knowledge/learn-tally-without-accounting-knowledge.component';
+import { HowLongDoesItTakeToLearnTallyprimeComponent } from './blogs/how-long-does-it-take-to-learn-tallyprime/how-long-does-it-take-to-learn-tallyprime.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -88,10 +91,23 @@ export const routes: Routes = [
   { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
   { path: 'ccna-networking-course', component: CCNAComponent },
   { path: 'power-bi-tableau-course', component: PowerBIComponent },
+
+  //blogs
   { path: 'blogs', component: BlogsComponent },
   { path: 'tallyprime-vs-excel-for-accounting', component: TallyprimeVsExcelComponent },
   { path: 'tally-accountant-salary-in-india', component: TallyAccountantSalaryInIndiaComponent },
   { path: 'jobs-after-learning-tally', component: JobsAfterLearningTallyComponent },
   { path: 'tally-course-after-12th', component: TallyCourseAfterTwelfthComponent },
-  
+  {
+    path: 'tally-course-fees-duration-syllabus-career',
+    component: TallyCourseFeesDurationSyllabusCareerComponent,
+  },
+  {
+    path: 'learn-tally-without-accounting-knowledge',
+    component: LearnTallyWithoutAccountingKnowledgeComponent,
+  },
+  {
+    path: 'how-long-does-it-take-to-learn-tallyprime',
+    component: HowLongDoesItTakeToLearnTallyprimeComponent,
+  },
 ];

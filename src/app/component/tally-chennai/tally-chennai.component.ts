@@ -24,13 +24,13 @@ export class TallyChennaiComponent implements OnInit {
     // =====================================================
 
     this.title.setTitle(
-      'Tally Training Institute in Chennai | Authorized Tally Partner | Master Accountant Using Tally | Placement Assistance',
+      'Tally Course in Chennai with GST | Authorized Training Institute | Placement Assistance',
     );
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Build your accounting career with RLT Edzaro Tally Academy in Chennai. Master TallyPrime, GST, taxation, payroll, and accounting through practical, industry-focused training.',
+        'Learn from an authorized Tally training institute in Chennai. Get hands-on TallyPrime and GST classes with official certification and placement assistance.',
     });
 
     this.meta.updateTag({
@@ -65,8 +65,7 @@ export class TallyChennaiComponent implements OnInit {
 
     this.meta.updateTag({
       property: 'og:title',
-      content:
-        'Tally Training Institute in Chennai | Authorized Tally Partner | GST & Tally Prime, Master Accountant Using Tally',
+      content: 'Tally Course in Chennai with GST | Authorized Training Institute ',
     });
 
     this.meta.updateTag({
@@ -261,7 +260,7 @@ export class TallyChennaiComponent implements OnInit {
 
       '@type': 'Course',
 
-      name: 'Tally Training Course in Chennai',
+      name: 'Tally Course in Chennai | Authorized Tally Training',
 
       description:
         'Learn TallyPrime, GST, accounting, taxation, and financial management with practical training.',

@@ -70,6 +70,40 @@ export class BlogsComponent {
       url: '/tally-course-after-12th',
       featured: true,
     },
+    {
+      title: 'Tally Course: Fees, Duration, Syllabus & Career Opportunities',
+      description:
+        'Explore Tally course fees, duration, syllabus, eligibility, practical training and career opportunities. Learn what to check before joining a Tally course.',
+      image: 'blogs/Tally Course.png',
+      category: 'Tally & Finance',
+      date: 'August 22, 2026',
+      readTime: '7 min read',
+      url: '/tally-course-fees-duration-syllabus-career',
+      featured: true,
+    },
+
+    {
+      title: 'Can You Learn Tally Without Knowing Accounting?',
+      description:
+        'Learn whether you can start TallyPrime without accounting knowledge, what accounting basics beginners should learn, whether a commerce degree is required and how to build practical Tally skills.',
+      image: 'blogs/Can You Learn Tally Without Knowing.png',
+      category: 'Tally & Finance',
+      date: 'August 22, 2026',
+      readTime: '6 min read',
+      url: '/learn-tally-without-accounting-knowledge',
+      featured: true,
+    },
+    {
+      title: 'How Long Does It Take to Learn TallyPrime?',
+      description:
+        'Find out how long it takes to learn TallyPrime, from accounting fundamentals and voucher entry to GST, inventory, payroll, reporting and practical accounting skills.',
+      image: 'blogs/How Long Does It Take to Learn TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'August 24, 2026',
+      readTime: '7 min read',
+      url: '/how-long-does-it-take-to-learn-tallyprime',
+      featured: true,
+    },
   ];
 
   // ================================
