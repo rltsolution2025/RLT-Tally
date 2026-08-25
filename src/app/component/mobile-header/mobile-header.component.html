@@ -1,75 +1,346 @@
-<!-- Hamburger -->
-<button class="hamburger" (click)="toggleMenu($event)">
-    ☰
-</button>
+<!-- =====================================================
+     MOBILE HEADER
+====================================================== -->
 
-<!-- Overlay -->
-<div class="menu-overlay" *ngIf="isMenuOpen">
+<div class="mobile-header-bar">
+  <!-- Logo 
+  <a routerLink="/" class="mobile-logo-link" (click)="closeMenu()" aria-label="RLT Edzaro Home">
+    <img
+      src="Logo/RLT-Logo-Final.png"
+      alt="RLT Edzaro Tally Training Institute"
+      class="mobile-logo"
+    />
+  </a>-->
 
-    <div class="menu-content">
+  <!-- Hamburger -->
+  <button
+    type="button"
+    class="hamburger"
+    (click)="toggleMenu($event)"
+    aria-label="Open navigation menu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
 
-        <!-- Header -->
-        <div class="menu-header">
-            <div class="logo-area">
-                <img src="Logo/RLT-Logo-Final.png" class="logo">
-            </div>
-            <button class="close-btn" (click)="closeMenu()">✕</button>
-        </div>
+<!-- =====================================================
+     MOBILE MENU OVERLAY
+====================================================== -->
 
-        <!-- Menu -->
-        <div class="menu-items">
+<div class="menu-overlay" *ngIf="isMenuOpen" (click)="closeMenu()">
+  <div class="menu-content" (click)="$event.stopPropagation()">
+    <!-- =================================================
+         MENU HEADER
+    ================================================== -->
 
-            <!-- Home -->
-            <a routerLink="/" (click)="closeMenu()">Home</a>
+    <div class="menu-header">
+      <a routerLink="/" class="menu-logo-link" (click)="closeMenu()">
+        <img src="Logo/RLT-Logo-Final.png" alt="RLT Edzaro" class="menu-logo" />
+      </a>
 
-            <!-- COURSES -->
-            <div class="menu-section">
-
-                <!-- Main Title -->
-                <div class="section-title" (click)="toggleDropdown('courses',$event)">
-                    <span>Our Specialized Programs</span>
-                    <span class="plus" [class.open]="isDropdownOpen('courses')">+</span>
-                </div>
-
-                <!-- Submenu -->
-                <div class="submenu" *ngIf="isDropdownOpen('courses')">
-
-                    <!-- Popular -->
-                    <div class="sub-section">
-                        <p class="submenu-title">Popular Programs</p>
-                        <a routerLink="/tally-essential" (click)="closeMenu()">Tally Essential Comprehensive</a>
-                        <a routerLink="/tally-professional" (click)="closeMenu()">Tally Professional</a>
-                        <a routerLink="/tally-prime" (click)="closeMenu()">GST Using TallyPrime</a>
-                    </div>
-
-                    <!-- Add-On -->
-                    <div class="sub-section">
-                        <p class="submenu-title">Add-On Programs</p>
-                        <a routerLink="/gst-simulation" (click)="closeMenu()">GST Simulation</a>
-                        <a routerLink="/office-automation" (click)="closeMenu()">Office Automation</a>
-                        <a routerLink="/payroll-and-income-tax" (click)="closeMenu()">Payroll & Income Tax</a>
-                    </div>
-
-                    <!-- Premium -->
-                    <div class="sub-section">
-                        <p class="submenu-title">Premium Programs</p>
-                        <a routerLink="/master-accountant" (click)="closeMenu()">Master Accountant Using Tally</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- About -->
-            <a routerLink="/about" (click)="closeMenu()">About Us</a>
-
-            <!-- Contact -->
-            <a routerLink="/contact" (click)="closeMenu()">Contact Us</a>
-
-            <!-- Career -->
-            <a routerLink="/career" (click)="closeMenu()">Career</a>
-
-            <!-- Platform -->
-            <a routerLink="/platform" (click)="closeMenu()">Platform</a>
-        </div>
+      <button
+        type="button"
+        class="close-btn"
+        (click)="closeMenu()"
+        aria-label="Close navigation menu"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
+
+    <!-- =================================================
+         MENU CONTENT
+    ================================================== -->
+
+    <nav class="menu-items" aria-label="Mobile Navigation">
+      <!-- HOME -->
+
+      <a
+        routerLink="/"
+        routerLinkActive="mobile-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-house"></i>
+        </span>
+
+        <span class="menu-text"> Home </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- ABOUT -->
+
+      <a
+        routerLink="/about"
+        routerLinkActive="mobile-active"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-building"></i>
+        </span>
+
+        <span class="menu-text"> About Us </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- =================================================
+           SOFTWARE PROGRAMS
+      ================================================== -->
+
+      <div class="mobile-menu-group">
+        <button type="button" class="section-title" (click)="toggleDropdown('software', $event)">
+          <span class="section-title-left">
+            <span class="menu-icon">
+              <i class="fa-solid fa-code"></i>
+            </span>
+
+            <span class="menu-text"> Software Programs </span>
+          </span>
+
+          <span class="plus" [class.open]="isDropdownOpen('software')"> + </span>
+        </button>
+
+        <!-- Software Dropdown -->
+
+        <div class="submenu" *ngIf="isDropdownOpen('software')">
+          <div class="submenu-header">
+            <span> Technology Programs </span>
+          </div>
+
+          <a routerLink="/python-full-stack-developer-course" (click)="closeMenu()">
+            Python Full Stack Development
+          </a>
+
+          <a routerLink="/java-full-stack-developer-course" (click)="closeMenu()">
+            Java Full Stack Development
+          </a>
+
+          <a routerLink="/dotnet-full-stack-developer-course" (click)="closeMenu()">
+            .Net Full Stack Development
+          </a>
+
+          <a routerLink="/cloud-computing-course" (click)="closeMenu()">
+            Cloud Computing &amp; Database Management
+          </a>
+
+          <a routerLink="/data-science-with-ai-course" (click)="closeMenu()">
+            Data Science with AI
+          </a>
+
+          <a routerLink="/artificial-intelligence-machine-learning-course" (click)="closeMenu()">
+            Artificial Intelligence &amp; Machine Learning
+          </a>
+
+          <a routerLink="/digital-marketing-course" (click)="closeMenu()">
+            Digital Marketing &amp; Business Development
+          </a>
+
+          <a routerLink="/ui-ux-designer-course" (click)="closeMenu()"> UI &amp; UX Designer </a>
+
+          <a routerLink="/ccna-networking-course" (click)="closeMenu()">
+            CCNA, Networking &amp; Server Management
+          </a>
+
+          <a routerLink="/power-bi-tableau-course" (click)="closeMenu()">
+            Power BI &amp; Tableau
+          </a>
+        </div>
+      </div>
+
+      <!-- =================================================
+           TALLY PROGRAMS
+      ================================================== -->
+
+      <div class="mobile-menu-group">
+        <button type="button" class="section-title" (click)="toggleDropdown('tally', $event)">
+          <span class="section-title-left">
+            <span class="menu-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </span>
+
+            <span class="menu-text"> Tally Programs </span>
+          </span>
+
+          <span class="plus" [class.open]="isDropdownOpen('tally')"> + </span>
+        </button>
+
+        <!-- Tally Dropdown -->
+
+        <div class="submenu tally-submenu" *ngIf="isDropdownOpen('tally')">
+          <!-- Popular Programs -->
+
+          <div class="sub-section">
+            <p class="submenu-title">Popular Programs</p>
+
+            <a routerLink="/tally-essential" (click)="closeMenu()">
+              Tally Essential Comprehensive
+            </a>
+
+            <a routerLink="/tally-professional" (click)="closeMenu()"> Tally Professional </a>
+
+            <a routerLink="/tally-prime" (click)="closeMenu()"> GST Using TallyPrime </a>
+          </div>
+
+          <!-- Add-On Programs -->
+
+          <div class="sub-section">
+            <p class="submenu-title">Add-On Programs</p>
+
+            <a routerLink="/gst-simulation" (click)="closeMenu()"> GST Simulation </a>
+
+            <a routerLink="/office-automation" (click)="closeMenu()"> Office Automation </a>
+
+            <a routerLink="/payroll-and-income-tax" (click)="closeMenu()">
+              Payroll &amp; Income Tax
+            </a>
+          </div>
+
+          <!-- Premium Programs -->
+
+          <div class="sub-section">
+            <p class="submenu-title">Premium Programs</p>
+
+            <a routerLink="/master-accountant" (click)="closeMenu()">
+              Master Accountant Using Tally
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAREER -->
+
+      <a
+        routerLink="/career"
+        routerLinkActive="mobile-active"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-briefcase"></i>
+        </span>
+
+        <span class="menu-text"> Career </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- PLATFORM -->
+
+      <a
+        routerLink="/platform"
+        routerLinkActive="mobile-active"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </span>
+
+        <span class="menu-text"> Platform </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- CONTACT -->
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="mobile-active"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-headset"></i>
+        </span>
+
+        <span class="menu-text"> Contact Us </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- BLOGS -->
+
+      <a
+        routerLink="/blogs"
+        routerLinkActive="mobile-active"
+        (click)="closeMenu()"
+        class="main-menu-link"
+      >
+        <span class="menu-icon">
+          <i class="fa-solid fa-pen-nib"></i>
+        </span>
+
+        <span class="menu-text"> Our Blogs </span>
+
+        <i class="fa-solid fa-chevron-right menu-arrow"></i>
+      </a>
+
+      <!-- REGISTER -->
+
+      <a routerLink="/register" (click)="closeMenu()" class="mobile-register">
+        <span>
+          <i class="fa-solid fa-user-plus"></i>
+          Register Now
+        </span>
+
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </nav>
+
+    <!-- =================================================
+         MOBILE CONTACT FOOTER
+    ================================================== -->
+
+    <div class="mobile-menu-footer">
+      <div class="mobile-contact-title">Need Assistance?</div>
+
+      <div class="mobile-contact-links">
+        <a href="tel:+919600681581">
+          <i class="fa-solid fa-phone"></i>
+          +91 96006 81581
+        </a>
+
+        <a href="mailto:contact@rltedzaro.com">
+          <i class="fa-solid fa-envelope"></i>
+          contact@rltedzaro.com
+        </a>
+      </div>
+
+      <div class="mobile-social">
+        <a
+          href="https://www.facebook.com/profile.php?id=61587292501752"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/tallyrltedzaro/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/rlt-edzaro-tally-academy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>

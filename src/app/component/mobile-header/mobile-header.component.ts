@@ -1,69 +1,100 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './mobile-header.component.html',
-  styleUrl: './mobile-header.component.css'
+  styleUrl: './mobile-header.component.css',
 })
 export class MobileHeaderComponent {
-
   isMenuOpen = false;
 
-  // Dropdown state (scalable for future menus)
-  dropdownStates: { [key: string]: boolean } = {
-    courses: false
+  dropdownStates: {
+    [key: string]: boolean;
+  } = {
+    software: false,
+    tally: false,
   };
 
-  constructor(private router: Router) {}
+  // =====================================================
+  // OPEN / CLOSE MENU
+  // =====================================================
 
-  toggleMenu(event: Event) {
-  event.stopPropagation();
-  this.isMenuOpen = !this.isMenuOpen;
+  toggleMenu(event?: Event): void {
+    event?.stopPropagation();
 
-  if (this.isMenuOpen) {
-    document.body.classList.add('menu-open');
-  } else {
-    document.body.classList.remove('menu-open');
+    this.isMenuOpen = !this.isMenuOpen;
+
+    this.updateBodyScroll();
   }
-}
 
-  // Close full menu
-  closeMenu() {
+  closeMenu(): void {
     this.isMenuOpen = false;
 
-    // Reset all dropdowns
-    Object.keys(this.dropdownStates).forEach(key => {
-      this.dropdownStates[key] = false;
-    });
+    this.closeAllDropdowns();
+
+    this.updateBodyScroll();
   }
 
-  // Toggle dropdown (Courses, etc.)
-  toggleDropdown(key: string, event: Event) {
+  // =====================================================
+  // DROPDOWN
+  // =====================================================
+
+  toggleDropdown(key: string, event: Event): void {
     event.preventDefault();
+
     event.stopPropagation();
 
-    // Close others
-    Object.keys(this.dropdownStates).forEach(k => {
-      if (k !== key) {
-        this.dropdownStates[k] = false;
+    Object.keys(this.dropdownStates).forEach((dropdownKey) => {
+      if (dropdownKey !== key) {
+        this.dropdownStates[dropdownKey] = false;
       }
     });
 
-    // Toggle selected
     this.dropdownStates[key] = !this.dropdownStates[key];
   }
 
-  // Check dropdown state
+  // =====================================================
+  // CHECK DROPDOWN
+  // =====================================================
+
   isDropdownOpen(key: string): boolean {
     return !!this.dropdownStates[key];
   }
 
-  // Navigate + close menu
-  navigateAndClose() {
-    this.closeMenu();
+  // =====================================================
+  // CLOSE ALL DROPDOWNS
+  // =====================================================
+
+  private closeAllDropdowns(): void {
+    Object.keys(this.dropdownStates).forEach((key) => {
+      this.dropdownStates[key] = false;
+    });
+  }
+
+  // =====================================================
+  // BODY SCROLL CONTROL
+  // =====================================================
+
+  private updateBodyScroll(): void {
+    if (this.isMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+  }
+
+  // =====================================================
+  // ESCAPE KEY
+  // =====================================================
+
+  @HostListener('document:keydown.escape')
+  handleEscapeKey(): void {
+    if (this.isMenuOpen) {
+      this.closeMenu();
+    }
   }
 }

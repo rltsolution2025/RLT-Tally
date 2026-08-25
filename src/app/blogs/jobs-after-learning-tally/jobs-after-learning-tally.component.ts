@@ -21,9 +21,9 @@ export class JobsAfterLearningTallyComponent implements OnInit {
   private readonly metaDescription =
     'Explore jobs after learning TallyPrime, including accountant, accounts assistant, billing executive, GST and payroll roles, plus required skills.';
 
-  private readonly canonicalUrl = 'https://www.rltedzaro.com/blog/jobs-after-learning-tally';
+  private readonly canonicalUrl = 'https://www.rltedzaro.com/jobs-after-learning-tally';
 
-  private readonly pageUrl = 'https://www.rltedzaro.com/blog/jobs-after-learning-tally';
+  private readonly pageUrl = 'https://www.rltedzaro.com/jobs-after-learning-tally';
 
   private readonly imageUrl =
     'https://www.rltedzaro.com/assets/blogs/jobs-after-learning-tally.png';

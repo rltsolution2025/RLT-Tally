@@ -45,6 +45,8 @@ import { TallyCourseAfterTwelfthComponent } from './blogs/tally-course-after-twe
 import { TallyCourseFeesDurationSyllabusCareerComponent } from './blogs/tally-course-fees-duration-syllabus-career/tally-course-fees-duration-syllabus-career.component';
 import { LearnTallyWithoutAccountingKnowledgeComponent } from './blogs/learn-tally-without-accounting-knowledge/learn-tally-without-accounting-knowledge.component';
 import { HowLongDoesItTakeToLearnTallyprimeComponent } from './blogs/how-long-does-it-take-to-learn-tallyprime/how-long-does-it-take-to-learn-tallyprime.component';
+import { IsTallyprimeEasyToLearnForBeginnersComponent } from './blogs/is-tallyprime-easy-to-learn-for-beginners/is-tallyprime-easy-to-learn-for-beginners.component';
+import { TallyCourseInTambaramComponent } from './component/tally-course-in-tambaram/tally-course-in-tambaram.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -110,4 +112,9 @@ export const routes: Routes = [
     path: 'how-long-does-it-take-to-learn-tallyprime',
     component: HowLongDoesItTakeToLearnTallyprimeComponent,
   },
+  {
+    path: 'is-tallyprime-easy-to-learn-for-beginners',
+    component: IsTallyprimeEasyToLearnForBeginnersComponent,
+  },
+  { path: 'tally-course-in-tambaram', component: TallyCourseInTambaramComponent },
 ];

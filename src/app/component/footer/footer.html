@@ -1,102 +1,430 @@
 <footer class="main-footer">
-  <div class="container">
-    <div class="row gy-5">
-      <!-- About -->
-      <div class="col-lg-4 footer-col">
-        <img src="/Logo/RLT-Logo-Final.png" alt="RLT Edzaro" class="footer-logo" />
+  <!-- =====================================================
+       DECORATIVE BACKGROUND
+  ====================================================== -->
+
+  <div class="footer-decoration footer-decoration-one"></div>
+  <div class="footer-decoration footer-decoration-two"></div>
+
+  <div class="container footer-container">
+    <!-- =====================================================
+         ROW 1 : BRAND / CTA
+    ====================================================== -->
+
+    <div class="footer-brand-row">
+      <div class="footer-brand-content">
+        <a routerLink="/" class="footer-brand" aria-label="RLT Edzaro Home">
+          <img
+            src="/Logo/RLT-Logo-Final.png"
+            alt="RLT Edzaro Tally Training Institute"
+            class="footer-logo"
+          />
+        </a>
 
         <p class="footer-about">
-          RLT Edzaro provides career-oriented training in Tally, Accounting, GST, ERP, Payroll and
-          office automation to help students build industry-ready skills for modern businesses.
+          RLT Edzaro provides career-oriented Software and Tally training programs covering Full
+          Stack Development, Cloud Computing, Data Science, AI & ML, Digital Marketing, UI/UX
+          Design, CCNA & Networking, Power BI & Tableau, TallyPrime, GST, Payroll, Office Automation
+          and Accounting. Our practical training helps students and professionals develop
+          industry-ready skills for technology, accounting and business careers.
         </p>
+      </div>
 
-        <div class="footer-cta">
-          <p class="cta-text">Start Your Career in Accounting Today</p>
-          <a routerLink="/register" class="cta-btn">Register Now</a>
+      <!-- CTA CARD -->
+
+      <div class="footer-career-card">
+        <div class="career-card-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
         </div>
+
+        <div class="career-card-content">
+          <span> BUILD YOUR CAREER </span>
+
+          <h4>Learn Practical Skills. Grow With Confidence.</h4>
+        </div>
+
+        <a routerLink="/register" class="footer-register-btn">
+          Register Now
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         ROW 2 : PROGRAMS
+    ====================================================== -->
+
+    <div class="footer-program-row">
+      <!-- =================================================
+           SOFTWARE PROGRAMS
+      ================================================== -->
+
+      <section class="footer-section software-section">
+        <div class="footer-section-heading">
+          <span class="heading-icon">
+            <i class="fa-solid fa-code"></i>
+          </span>
+
+          <div>
+            <span class="section-label"> TECHNOLOGY </span>
+
+            <h5>Software Programs</h5>
+          </div>
+        </div>
+
+        <nav class="footer-link-list" aria-label="Software Programs">
+          <a routerLink="/python-full-stack-developer-course">
+            <span>Python Full Stack Development</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/java-full-stack-developer-course">
+            <span>Java Full Stack Development</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/dotnet-full-stack-developer-course">
+            <span>.Net Full Stack Development</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/cloud-computing-course">
+            <span>Cloud Computing &amp; Database Management</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/data-science-with-ai-course">
+            <span>Data Science with AI</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/artificial-intelligence-machine-learning-course">
+            <span>Artificial Intelligence &amp; Machine Learning</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/digital-marketing-course">
+            <span>Digital Marketing &amp; Business Development</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/ui-ux-designer-course">
+            <span>UI &amp; UX Designer</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/ccna-networking-course">
+            <span>CCNA &amp; Networking</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/power-bi-tableau-course">
+            <span>Power BI &amp; Tableau</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </nav>
+      </section>
+
+      <!-- =================================================
+           TALLY PROGRAMS
+      ================================================== -->
+
+      <section class="footer-section tally-section">
+        <div class="footer-section-heading">
+          <span class="heading-icon">
+            <i class="fa-solid fa-calculator"></i>
+          </span>
+
+          <div>
+            <span class="section-label"> ACCOUNTING </span>
+
+            <h5>Tally Programs</h5>
+          </div>
+        </div>
+
+        <!-- Popular -->
+
+        <div class="program-category">
+          <span class="category-title"> Popular Courses </span>
+
+          <a routerLink="/tally-essential">
+            <span>Tally Essential Comprehensive</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/tally-professional">
+            <span>Tally Professional</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/tally-prime">
+            <span>GST Using TallyPrime</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Add-On -->
+
+        <div class="program-category">
+          <span class="category-title"> Add-On Courses </span>
+
+          <a routerLink="/gst-simulation">
+            <span>GST Simulation</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/office-automation">
+            <span>Office Automation</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a routerLink="/payroll-and-income-tax">
+            <span>Payroll &amp; Income Tax</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Premium -->
+
+        <div class="program-category">
+          <span class="category-title"> Premium Course </span>
+
+          <a routerLink="/master-accountant">
+            <span>Master Accountant Using Tally</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- =================================================
+           QUICK LINKS
+      ================================================== -->
+
+      <section class="footer-section quick-section">
+        <div class="footer-section-heading">
+          <span class="heading-icon">
+            <i class="fa-solid fa-compass"></i>
+          </span>
+
+          <div>
+            <span class="section-label"> EXPLORE </span>
+
+            <h5>Quick Links</h5>
+          </div>
+        </div>
+
+        <nav class="quick-links" aria-label="Quick Links">
+          <a routerLink="/">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+
+          <a routerLink="/about">
+            <i class="fa-solid fa-building"></i>
+            <span>About Us</span>
+          </a>
+
+          <a routerLink="/career">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Career</span>
+          </a>
+
+          <a routerLink="/platform">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Platform</span>
+          </a>
+
+          <a routerLink="/contact">
+            <i class="fa-solid fa-headset"></i>
+            <span>Contact Us</span>
+          </a>
+
+          <a routerLink="/blogs">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>Our Blogs</span>
+          </a>
+
+          <a routerLink="/register">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Register Now</span>
+          </a>
+
+          <a routerLink="/privacy-policy">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Privacy Policy</span>
+          </a>
+        </nav>
+
+        <!-- SOCIAL -->
+
+        <div class="footer-social-title">Follow RLT Edzaro</div>
 
         <div class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61587292501752" target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/tallyrltedzaro/" target="_blank"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="https://www.linkedin.com/company/rlt-edzaro-tally-academy" target="_blank"
-            ><i class="bi bi-linkedin"></i
-          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61587292501752"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="RLT Edzaro Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/tallyrltedzaro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="RLT Edzaro Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/rlt-edzaro-tally-academy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="RLT Edzaro LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
         </div>
-      </div>
+      </section>
+    </div>
 
-      <!-- Career Programs -->
-      <div class="col-lg-2 footer-col">
-        <h5 class="footer-title">Career Programs</h5>
+    <!-- =====================================================
+         ROW 3 : CONTACT + LOCATIONS
+    ====================================================== -->
 
-        <ul class="footer-links">
-          <li><a routerLink="/tally-essential">Tally Essential Comprehensive</a></li>
-          <li><a routerLink="/tally-professional">Tally Professional</a></li>
-          <li><a routerLink="/tally-prime">GST Using TallyPrime</a></li>
-          <li><a routerLink="/gst-simulation">GST Simulation</a></li>
-          <li><a routerLink="/master-accountant">Master Accountant using Tally</a></li>
-        </ul>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-lg-2 footer-col">
-        <h5 class="footer-title">Quick Links</h5>
-
-        <ul class="footer-links">
-          <li><a routerLink="/">Explore Us</a></li>
-          <li><a routerLink="/about">About Us</a></li>
-          <li><a routerLink="/career">Career</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-          <li><a routerLink="/blogs">Blogs</a></li>
-        </ul>
-      </div>
-
-      
-
+    <div class="footer-contact-row">
       <!-- Contact -->
-      <div class="col-lg-4 footer-col">
-        <h5 class="footer-title">Contact Us</h5>
 
-        <div class="contact-item">
-          <i class="bi bi-telephone-fill"></i>
-          <a href="tel:+919600681581">+91 96006 81581</a>
-          / <a href="tel:+918925500513">+9189255 00513</a>
+      <div class="contact-column">
+        <div class="contact-heading">
+          <span class="contact-heading-icon">
+            <i class="fa-solid fa-phone"></i>
+          </span>
+
+          <div>
+            <span> GET IN TOUCH </span>
+
+            <h5>Contact RLT Edzaro</h5>
+          </div>
         </div>
 
-        <div class="contact-item">
-          <i class="bi bi-envelope-fill"></i>
-          <a href="mailto:contact@rltedzaro.com">contact@rltedzaro.com</a>
+        <div class="contact-details">
+          <a href="tel:+919600681581" class="contact-card">
+            <span class="contact-card-icon">
+              <i class="fa-solid fa-phone"></i>
+            </span>
+
+            <span>
+              <small> Call Us </small>
+
+              <strong> +91 96006 81581 </strong>
+            </span>
+          </a>
+
+          <a href="tel:+918925500513" class="contact-card">
+            <span class="contact-card-icon">
+              <i class="fa-solid fa-phone"></i>
+            </span>
+
+            <span>
+              <small> Alternate Number </small>
+
+              <strong> +91 89255 00513 </strong>
+            </span>
+          </a>
+
+          <a href="mailto:contact@rltedzaro.com" class="contact-card">
+            <span class="contact-card-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <span>
+              <small> Email </small>
+
+              <strong> contact@rltedzaro.com </strong>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Branches -->
+
+      <div class="branches-column">
+        <div class="contact-heading">
+          <span class="contact-heading-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+
+          <div>
+            <span> VISIT US </span>
+
+            <h5>Our Branches</h5>
+          </div>
         </div>
 
-        <h6 class="branch-title">Our Branches</h6>
+        <div class="branch-grid">
+          <!-- Kodambakkam -->
 
-        <div class="branch-item">
-          <strong>Kodambakkam</strong><br />
-          2, 1st St, Corporation Colony,<br />
-          Rangarajapuram, Kodambakkam,<br />
-          Chennai – 600024
-        </div>
-        <br />
-        <div class="branch-item">
-          <strong>Chengalpattu</strong><br />
-          No.1 School Road, Athur,<br />
-          Chengalpattu, Tamil Nadu – 603101
+          <address class="branch-card">
+            <div class="branch-card-top">
+              <span class="branch-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+
+              <strong> Kodambakkam </strong>
+            </div>
+
+            <p>
+              2, 1st St, Corporation Colony,<br />
+              Rangarajapuram, Kodambakkam,<br />
+              Chennai – 600024
+            </p>
+          </address>
+
+          <!-- Chengalpattu -->
+
+          <address class="branch-card">
+            <div class="branch-card-top">
+              <span class="branch-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+
+              <strong> Chengalpattu </strong>
+            </div>
+
+            <p>
+              No.1 School Road, Athur,<br />
+              Chengalpattu,<br />
+              Tamil Nadu – 603101
+            </p>
+          </address>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer Bottom -->
+  <!-- =====================================================
+       FOOTER BOTTOM
+  ====================================================== -->
 
   <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <p>© 2026 RLT Edzaro – A Unit of RLT Academy of Eexcellence</p>
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>© 2026 RLT Edzaro – A Unit of RLT Academy of Excellence. All Rights Reserved.</p>
 
-      <div class="footer-bottom-links">
-        <a routerLink="/privacy-policy">Privacy Policy</a>
+        <nav class="footer-bottom-links" aria-label="Footer Legal Navigation">
+          <a routerLink="/privacy-policy"> Privacy Policy </a>
+
+          <span>•</span>
+
+          <a routerLink="/blogs"> Blogs </a>
+
+          <span>•</span>
+
+          <a routerLink="/contact"> Contact </a>
+        </nav>
       </div>
     </div>
   </div>

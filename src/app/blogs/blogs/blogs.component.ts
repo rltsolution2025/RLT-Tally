@@ -104,6 +104,17 @@ export class BlogsComponent {
       url: '/how-long-does-it-take-to-learn-tallyprime',
       featured: true,
     },
+    {
+      title: 'Is TallyPrime Easy to Learn for Beginners? Complete Guide',
+      description:
+        'Is TallyPrime easy for beginners? Learn the basics, required accounting knowledge, learning stages, common challenges and tips for learning TallyPrime.',
+      image: 'blogs/Is TallyPrime Easy to Learn for Beginners.png',
+      category: 'Tally & Finance',
+      date: 'August 24, 2026',
+      readTime: '7 min read',
+      url: '/is-tallyprime-easy-to-learn-for-beginners',
+      featured: true,
+    },
   ];
 
   // ================================

@@ -1,219 +1,920 @@
-/* Overlay (keep same but smoother) */
+/* =========================================================
+   RLT EDZARO MOBILE HEADER
+   BLUE + TEAL THEME
+========================================================= */
+
+/* =========================================================
+   BODY LOCK
+========================================================= */
+
+:global(body.mobile-menu-open) {
+  overflow: hidden;
+}
+
+/* =========================================================
+   MOBILE HEADER BAR
+========================================================= */
+
+.mobile-header-bar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 8px 15px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(31, 106, 165, 0.1);
+
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.07);
+
+  position: relative;
+
+  z-index: 9998;
+}
+
+/* =========================================================
+   MOBILE LOGO
+========================================================= */
+
+.mobile-logo-link {
+  display: flex;
+
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.mobile-logo {
+  width: 175px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  transition: 0.3s ease;
+}
+
+.mobile-logo:hover {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+  width: 43px;
+
+  height: 43px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: linear-gradient(135deg, #157480, #3b7cb9);
+
+  box-shadow: 0 6px 15px rgba(31, 106, 165, 0.2);
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 20px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(31, 106, 165, 0.25);
+}
+
+/* =========================================================
+   MENU OVERLAY
+========================================================= */
+
 .menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+
+  inset: 0;
+
   width: 100%;
-  height: 100vh;
-  background: #ffffff;
-  z-index: 9999;
+
+  height: 100dvh;
+
+  background: rgba(15, 32, 39, 0.25);
+
+  backdrop-filter: blur(5px);
+
+  z-index: 99999;
+
   overflow-y: auto;
-  animation: fadeIn 0.3s ease;
+
+  animation: overlayFade 0.25s ease;
 }
 
-/* Smooth fade */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Menu Container */
-.menu-content {
-  padding: 20px;
-  min-height: 100vh;
-  animation: slideUp 0.35s ease;
-}
-
-/* Slight slide effect */
-@keyframes slideUp {
+@keyframes overlayFade {
   from {
-    transform: translateY(10px);
     opacity: 0;
   }
+
   to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
 
-/* Header */
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
+/* =========================================================
+   MENU CONTENT
+========================================================= */
+
+.menu-content {
+  width: min(100%, 430px);
+
+  min-height: 100dvh;
+
+  margin-left: auto;
+
+  padding: 18px 18px 25px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+
+  box-shadow: -10px 0 35px rgba(15, 23, 42, 0.12);
+
+  animation: menuSlide 0.3s ease;
+
+  overflow-y: auto;
 }
 
-/* Logo */
-.logo {
-  width: 240px;
+@keyframes menuSlide {
+  from {
+    transform: translateX(35px);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MENU HEADER
+========================================================= */
+
+.menu-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-bottom: 18px;
+
+  margin-bottom: 8px;
+
+  border-bottom: 1px solid rgba(31, 106, 165, 0.1);
+}
+
+.menu-logo-link {
+  display: flex;
+
+  align-items: center;
+}
+
+.menu-logo {
+  width: 185px;
+
+  max-width: 100%;
+
   height: auto;
 }
 
-/* Close Button (improved) */
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
 .close-btn {
-  font-size: 20px;
+  width: 38px;
+
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   border: none;
-  background: #f1f5f9;
-  color: #dc2626;
+
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+
+  background: #e9f2f6;
+
+  color: #1f6aa5;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
 }
 
 .close-btn:hover {
-  background: #fee2e2;
+  background: linear-gradient(135deg, #1f6aa5, #2bb0a6);
+
+  color: #ffffff;
+
+  transform: rotate(90deg);
 }
 
-/* Menu Items */
-.menu-items a,
-.section-title {
+/* =========================================================
+   MENU ITEMS
+========================================================= */
+
+.menu-items {
   display: flex;
-  justify-content: space-between;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+/* =========================================================
+   MAIN MENU LINK
+========================================================= */
+
+.main-menu-link {
+  position: relative;
+
+  display: flex;
+
   align-items: center;
-  padding: 14px 8px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #3b7cb9;
+
+  gap: 12px;
+
+  min-height: 50px;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  color: #1f3b57;
+
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.25s ease;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.25s ease;
 }
 
-/* ✨ Unique Left Highlight Effect */
-.menu-items a:hover,
-.section-title:hover {
-  background: #f0f7ff;
-  padding-left: 14px;
-  border-left: 3px solid #3b7cb9;
+.main-menu-link:hover,
+.main-menu-link.mobile-active {
+  background: linear-gradient(90deg, #edf7fb, #f7fbfd);
+
+  color: #1f6aa5;
+
+  transform: translateX(3px);
 }
 
-/* Section */
+.main-menu-link::before {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+
+  top: 10px;
+
+  bottom: 10px;
+
+  width: 3px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, #1f6aa5, #2bb0a6);
+
+  opacity: 0;
+
+  transition: 0.25s ease;
+}
+
+.main-menu-link:hover::before,
+.main-menu-link.mobile-active::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+.menu-icon {
+  width: 36px;
+
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #e8f2f6;
+
+  color: #1f6aa5;
+
+  font-size: 13px;
+
+  transition: 0.25s ease;
+}
+
+.main-menu-link:hover .menu-icon,
+.main-menu-link.mobile-active .menu-icon {
+  background: linear-gradient(135deg, #1f6aa5, #2bb0a6);
+
+  color: #ffffff;
+}
+
+.menu-text {
+  flex: 1;
+}
+
+.menu-arrow {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  transition: 0.25s ease;
+}
+
+.main-menu-link:hover .menu-arrow {
+  color: #1f6aa5;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   DROPDOWN SECTION
+========================================================= */
+
+.mobile-menu-group {
+  width: 100%;
+}
+
 .section-title {
+  width: 100%;
+
+  min-height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 7px 12px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #1f3b57;
+
   cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.25s ease;
 }
 
-/* Plus icon */
+.section-title:hover {
+  background: linear-gradient(90deg, #edf7fb, #f7fbfd);
+
+  color: #1f6aa5;
+}
+
+.section-title-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex: 1;
+}
+
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
 .plus {
-  font-size: 20px;
-  transition: 0.3s ease;
+  width: 30px;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f2f6;
+
   color: #157480;
+
+  font-size: 21px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition: 0.3s ease;
 }
 
-/* Rotate */
 .plus.open {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #1f6aa5, #2bb0a6);
+
   transform: rotate(45deg);
 }
 
+/* =========================================================
+   SUBMENU
+========================================================= */
 
+.submenu {
+  position: relative;
 
-/* Smooth dropdown */
-@keyframes dropdown {
+  margin: 3px 0 8px 17px;
+
+  padding: 10px 0 10px 17px;
+
+  border-left: 2px solid #dbe9ef;
+
+  animation: dropdownOpen 0.25s ease;
+}
+
+@keyframes dropdownOpen {
   from {
     opacity: 0;
+
     transform: translateY(-6px);
   }
+
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
 
-/* Sub Titles */
-.submenu-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: #64748b;
-  margin: 10px 0 5px;
-  letter-spacing: 0.5px;
-}
+/* =========================================================
+   SUBMENU HEADER
+========================================================= */
 
-/* Submenu Container */
-.submenu {
-  margin-top: 10px;
-  padding-left: 8px;
-  border-left: 2px solid #e2e8f0; /* vertical guide line */
-  animation: dropdown 0.3s ease;
-}
+.submenu-header {
+  margin-bottom: 7px;
 
-/* Submenu Group */
-.sub-section {
-  margin-bottom: 12px;
-}
+  color: #2bb0a6;
 
-/* Submenu Title (IMPORTANT FIX) */
-.submenu-title {
-  font-size: 12px;
-  font-weight: 700;
-  color: #3b7cb9;
-  margin: 12px 0 6px;
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  position: relative;
 }
 
-/* Small dot indicator */
-.submenu-title::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #3b7cb9;
-  border-radius: 50%;
-  position: absolute;
-  left: -12px;
-  top: 6px;
-}
+/* =========================================================
+   SUBMENU LINKS
+========================================================= */
 
-/* Submenu Links */
 .submenu a {
-  display: block;
-  padding: 10px 12px;
-  font-size: 14px;
-  color: #334155;
-  border-radius: 6px;
-  transition: all 0.25s ease;
   position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 42px;
+
+  padding: 9px 30px 9px 13px;
+
+  margin-bottom: 3px;
+
+  border-radius: 7px;
+
+  color: #475569;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  transition: 0.25s ease;
 }
 
-/* Hover effect */
-.submenu a:hover {
-  background: #f1f7ff;
-  padding-left: 18px;
-  color: #1d4ed8;
-}
+.submenu a::before {
+  content: '';
 
-/* Arrow indicator on hover */
-.submenu a::after {
-  content: "›";
   position: absolute;
+
+  left: 0;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #2bb0a6;
+}
+
+.submenu a::after {
+  content: '›';
+
+  position: absolute;
+
   right: 10px;
+
+  color: #1f6aa5;
+
+  font-size: 17px;
+
   opacity: 0;
-  transition: 0.3s;
+
+  transform: translateX(-4px);
+
+  transition: 0.25s ease;
+}
+
+.submenu a:hover {
+  background: #edf7fb;
+
+  color: #1f6aa5;
+
+  padding-left: 18px;
 }
 
 .submenu a:hover::after {
   opacity: 1;
+
+  transform: translateX(0);
 }
 
-/* Divider between sections */
-.sub-section:not(:last-child) {
-  border-bottom: 1px dashed #e5e7eb;
-  padding-bottom: 8px;
+/* =========================================================
+   TALLY SUBMENU
+========================================================= */
+
+.tally-submenu {
+  padding-top: 5px;
 }
 
-/* Hamburger */
-.hamburger {
-  font-size: 24px;
-  border: none;
-  background: linear-gradient(135deg, #157480, #3b7cb9);
-  color: #fff;
-  padding: 8px 12px;
+.sub-section {
+  padding-bottom: 9px;
+
+  margin-bottom: 9px;
+
+  border-bottom: 1px dashed #dfe8ec;
+}
+
+.sub-section:last-child {
+  margin-bottom: 0;
+
+  padding-bottom: 0;
+
+  border-bottom: none;
+}
+
+.submenu-title {
+  position: relative;
+
+  margin: 4px 0 6px;
+
+  color: #1f6aa5;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.submenu-title::before {
+  content: '';
+
+  display: inline-block;
+
+  width: 5px;
+
+  height: 5px;
+
+  margin-right: 7px;
+
+  margin-bottom: 2px;
+
+  border-radius: 50%;
+
+  background: #2bb0a6;
+}
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.mobile-register {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 12px;
+
+  padding: 13px 15px;
+
+  border-radius: 9px;
+
+  background: linear-gradient(135deg, #1f6aa5, #2bb0a6);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow: 0 7px 18px rgba(31, 106, 165, 0.18);
+
+  transition: 0.3s ease;
+}
+
+.mobile-register span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.mobile-register:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 22px rgba(31, 106, 165, 0.25);
+}
+
+.mobile-register > i {
+  transition: 0.3s ease;
+}
+
+.mobile-register:hover > i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   MOBILE MENU FOOTER
+========================================================= */
+
+.mobile-menu-footer {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(31, 106, 165, 0.1);
+}
+
+.mobile-contact-title {
+  margin-bottom: 10px;
+
+  color: #1f3b57;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.mobile-contact-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.mobile-contact-links a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #64748b;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.25s ease;
+}
+
+.mobile-contact-links a i {
+  width: 27px;
+
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   border-radius: 6px;
-  transition: 0.3s;
+
+  background: #e8f2f6;
+
+  color: #1f6aa5;
+
+  font-size: 10px;
 }
 
-/* Hover */
-.hamburger:hover {
-  transform: scale(1.05);
+.mobile-contact-links a:hover {
+  color: #1f6aa5;
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.mobile-social {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.mobile-social a {
+  width: 33px;
+
+  height: 33px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #e8f2f6;
+
+  color: #1f6aa5;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: 0.25s ease;
+}
+
+.mobile-social a:hover {
+  background: linear-gradient(135deg, #1f6aa5, #2bb0a6);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .mobile-header-bar {
+    padding: 8px 12px;
+  }
+
+  .mobile-logo {
+    width: 160px;
+  }
+
+  .menu-content {
+    width: 100%;
+
+    padding: 15px 15px 25px;
+  }
+
+  .menu-logo {
+    width: 175px;
+  }
+}
+
+/* =========================================================
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+  .mobile-logo {
+    width: 145px;
+  }
+
+  .menu-logo {
+    width: 160px;
+  }
+
+  .hamburger {
+    width: 40px;
+
+    height: 40px;
+  }
+
+  .main-menu-link,
+  .section-title {
+    font-size: 14px;
+  }
+
+  .submenu a {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 350px) {
+  .mobile-logo {
+    width: 135px;
+  }
+
+  .menu-logo {
+    width: 145px;
+  }
+
+  .menu-content {
+    padding: 12px;
+  }
 }
