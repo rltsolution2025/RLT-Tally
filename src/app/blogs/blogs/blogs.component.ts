@@ -30,7 +30,7 @@ export class BlogsComponent {
       title: 'TallyPrime vs Excel: Which Is Better for Accounting?',
       description:
         'TallyPrime vs Excel for accounting: compare features, accounting workflows, reporting, inventory, GST, flexibility and when to use each tool.',
-      image: 'blogs/tallyprime vs Excel.png',
+      image: 'blogs-image/tallyprime vs Excel.png',
       category: 'Tally & Finance',
       date: 'August 20, 2026',
       readTime: '6 min read',
@@ -41,7 +41,7 @@ export class BlogsComponent {
       title: 'Tally Accountant Salary in India: Fresher to Experienced',
       description:
         'Learn about Tally accountant salaries in India, factors affecting pay, entry-level roles, required skills and career growth opportunities for accounting professionals.',
-      image: 'blogs/Tally Accountant Salary in India.png',
+      image: 'blogs-image/Tally Accountant Salary in India.png',
       category: 'Tally & Finance',
       date: 'August 20, 2026',
       readTime: '6 min read',
@@ -52,7 +52,7 @@ export class BlogsComponent {
       title: 'What Jobs Can You Get After Learning Tally?',
       description:
         'Explore jobs after learning TallyPrime, including accountant, accounts assistant, billing executive, GST and payroll roles, plus the skills employers may look for.',
-      image: 'blogs/Jobs After Learning Tally.png',
+      image: 'blogs-image/Jobs After Learning Tally.png',
       category: 'Tally & Finance',
       date: 'August 20, 2026',
       readTime: '6 min read',
@@ -63,7 +63,7 @@ export class BlogsComponent {
       title: 'Tally Course After 12th: Career Options',
       description:
         'Learn how TallyPrime after 12th can build practical accounting skills and explore career options such as accounts assistant, billing executive, junior accountant, accounts executive, payroll assistant and GST assistant.',
-      image: 'blogs/tally after 12.png',
+      image: 'blogs-image/tally after 12.png',
       category: 'Tally & Finance',
       date: 'August 22, 2026',
       readTime: '7 min read',
@@ -74,7 +74,7 @@ export class BlogsComponent {
       title: 'Tally Course: Fees, Duration, Syllabus & Career Opportunities',
       description:
         'Explore Tally course fees, duration, syllabus, eligibility, practical training and career opportunities. Learn what to check before joining a Tally course.',
-      image: 'blogs/Tally Course.png',
+      image: 'blogs-image/Tally Course.png',
       category: 'Tally & Finance',
       date: 'August 22, 2026',
       readTime: '7 min read',
@@ -86,7 +86,7 @@ export class BlogsComponent {
       title: 'Can You Learn Tally Without Knowing Accounting?',
       description:
         'Learn whether you can start TallyPrime without accounting knowledge, what accounting basics beginners should learn, whether a commerce degree is required and how to build practical Tally skills.',
-      image: 'blogs/Can You Learn Tally Without Knowing.png',
+      image: 'blogs-image/Can You Learn Tally Without Knowing.png',
       category: 'Tally & Finance',
       date: 'August 22, 2026',
       readTime: '6 min read',
@@ -97,7 +97,7 @@ export class BlogsComponent {
       title: 'How Long Does It Take to Learn TallyPrime?',
       description:
         'Find out how long it takes to learn TallyPrime, from accounting fundamentals and voucher entry to GST, inventory, payroll, reporting and practical accounting skills.',
-      image: 'blogs/How Long Does It Take to Learn TallyPrime.png',
+      image: 'blogs-image/How Long Does It Take to Learn TallyPrime.png',
       category: 'Tally & Finance',
       date: 'August 24, 2026',
       readTime: '7 min read',
@@ -108,7 +108,7 @@ export class BlogsComponent {
       title: 'Is TallyPrime Easy to Learn for Beginners? Complete Guide',
       description:
         'Is TallyPrime easy for beginners? Learn the basics, required accounting knowledge, learning stages, common challenges and tips for learning TallyPrime.',
-      image: 'blogs/Is TallyPrime Easy to Learn for Beginners.png',
+      image: 'blogs-image/Is TallyPrime Easy to Learn for Beginners.png',
       category: 'Tally & Finance',
       date: 'August 24, 2026',
       readTime: '7 min read',
