@@ -1,73 +1,84 @@
+<!-- =========================================================
+     BLOG HERO
+========================================================= -->
+
 <section class="blog-hero">
   <div class="container">
     <div class="blog-hero-content">
+      <!-- Badge -->
+
       <span class="blog-badge">
         <i class="fa-solid fa-pen-nib"></i>
+
         RLT Edzaro Blog
       </span>
 
+      <!-- Heading -->
+
       <h1>
         Learn. Explore.
+
         <span>Grow.</span>
       </h1>
 
+      <!-- Description -->
+
       <p>
-        Explore the latest insights, career guidance, technology trends, course updates, and
-        learning resources from RLT Edzaro.
+        Explore practical accounting insights, TallyPrime learning resources, career guidance,
+        course information and useful tips for students and accounting professionals.
       </p>
+
+      <!-- Search -->
 
       <div class="blog-search">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search articles..." [(ngModel)]="searchTerm" />
-        <button (click)="searchBlogs()">Search</button>
+
+        <input
+          type="text"
+          placeholder="Search Tally, accounting, GST, career..."
+          [(ngModel)]="searchTerm"
+          (keyup.enter)="searchBlogs()"
+        />
+
+        <button type="button" (click)="searchBlogs()">Search</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Categories -->
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
 <section class="blog-categories">
   <div class="container">
     <div class="section-heading">
       <span>Explore Topics</span>
-      <h2>Browse Our <strong>Latest Articles</strong></h2>
+
+      <h2>
+        Browse Our
+
+        <strong>Latest Articles</strong>
+      </h2>
     </div>
 
+    <!-- Category Buttons -->
+
     <div class="category-list">
-      <button [class.active]="selectedCategory === 'All'" (click)="filterCategory('All')">
+      <!-- All -->
+
+      <button
+        type="button"
+        [class.active]="selectedCategory === 'All'"
+        (click)="filterCategory('All')"
+      >
         All
       </button>
 
-     <!--<button
-        [class.active]="selectedCategory === 'Technology'"
-        (click)="filterCategory('Technology')"
-      >
-        Technology
-      </button> 
-
-      <button [class.active]="selectedCategory === 'Career'" (click)="filterCategory('Career')">
-        Career
-      </button>
+      <!-- Tally & Finance -->
 
       <button
-        [class.active]="selectedCategory === 'Cloud Computing'"
-        (click)="filterCategory('Cloud Computing')"
-      >
-        Cloud Computing
-      </button>
-
-      <button [class.active]="selectedCategory === 'AI & ML'" (click)="filterCategory('AI & ML')">
-        AI & ML
-      </button>
-
-      <button
-        [class.active]="selectedCategory === 'Education'"
-        (click)="filterCategory('Education')"
-      >
-        Education
-      </button>-->
-
-      <button
+        type="button"
         [class.active]="selectedCategory === 'Tally & Finance'"
         (click)="filterCategory('Tally & Finance')"
       >
@@ -77,41 +88,67 @@
   </div>
 </section>
 
-<!-- Featured Blog -->
+<!-- =========================================================
+     FEATURED ARTICLE
+========================================================= -->
+
 <section class="featured-blog" *ngIf="featuredBlog">
   <div class="container">
     <div class="featured-wrapper">
+      <!-- Featured Image -->
+
       <div class="featured-image">
         <img [src]="featuredBlog.image" [alt]="featuredBlog.title" loading="lazy" />
 
-        <span class="featured-label"> Featured Article </span>
+        <span class="featured-label">
+          <i class="fa-solid fa-star"></i>
+
+          Featured Article
+        </span>
       </div>
 
+      <!-- Featured Content -->
+
       <div class="featured-content">
+        <!-- Category -->
+
         <span class="blog-category">
           {{ featuredBlog.category }}
         </span>
 
-        <h2>{{ featuredBlog.title }}</h2>
+        <!-- Title -->
+
+        <h2>
+          {{ featuredBlog.title }}
+        </h2>
+
+        <!-- Description -->
 
         <p>
           {{ featuredBlog.description }}
         </p>
 
+        <!-- Meta -->
+
         <div class="blog-meta">
           <span>
             <i class="fa-regular fa-calendar"></i>
+
             {{ featuredBlog.date }}
           </span>
 
           <span>
             <i class="fa-regular fa-clock"></i>
+
             {{ featuredBlog.readTime }}
           </span>
         </div>
 
+        <!-- Read Article -->
+
         <a [routerLink]="featuredBlog.url" class="read-more">
           Read Full Article
+
           <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
@@ -119,90 +156,260 @@
   </div>
 </section>
 
-<!-- Blog Listing -->
-<section class="blog-listing">
+<!-- =========================================================
+     LATEST ARTICLES
+========================================================= -->
+
+<section class="blog-listing" id="latest-articles">
   <div class="container">
+    <!-- Section Heading -->
+
     <div class="section-heading listing-heading">
       <div>
         <span>Fresh From Our Blog</span>
-        <h2>Latest <strong>Articles</strong></h2>
+
+        <h2>
+          Latest
+
+          <strong>Articles</strong>
+        </h2>
       </div>
 
       <p>
-        Stay updated with useful knowledge, career tips, technology insights and learning resources.
+        Stay updated with TallyPrime, accounting, GST, career opportunities, training guidance and
+        practical learning resources.
       </p>
     </div>
 
-    <div class="blog-grid">
-      <article class="blog-card" *ngFor="let blog of filteredBlogs">
+    <!-- =====================================================
+         ARTICLE RESULT INFORMATION
+    ====================================================== -->
+
+    <div class="article-result-info" *ngIf="filteredBlogs.length > 0">
+      <span>
+        Showing
+
+        <strong>
+          {{ currentStartItem }}
+        </strong>
+
+        -
+
+        <strong>
+          {{ currentEndItem }}
+        </strong>
+
+        of
+
+        <strong>
+          {{ filteredBlogs.length }}
+        </strong>
+
+        articles
+      </span>
+
+      <span *ngIf="totalPages > 1" class="page-info">
+        Page
+
+        <strong>
+          {{ currentPage }}
+        </strong>
+
+        of
+
+        <strong>
+          {{ totalPages }}
+        </strong>
+      </span>
+    </div>
+
+    <!-- =====================================================
+         BLOG GRID
+    ====================================================== -->
+
+    <div class="blog-grid" *ngIf="paginatedBlogs.length > 0">
+      <!-- Blog Card -->
+
+      <article class="blog-card" *ngFor="let blog of paginatedBlogs">
+        <!-- Image -->
+
         <div class="blog-image">
           <img [src]="blog.image" [alt]="blog.title" loading="lazy" />
+
+          <!-- Category -->
 
           <span class="card-category">
             {{ blog.category }}
           </span>
         </div>
 
+        <!-- Card Content -->
+
         <div class="blog-card-content">
+          <!-- Meta -->
+
           <div class="blog-card-meta">
             <span>
               <i class="fa-regular fa-calendar"></i>
+
               {{ blog.date }}
             </span>
 
             <span>
               <i class="fa-regular fa-clock"></i>
+
               {{ blog.readTime }}
             </span>
           </div>
+
+          <!-- Title -->
 
           <h3>
             {{ blog.title }}
           </h3>
 
+          <!-- Description -->
+
           <p>
             {{ blog.description }}
           </p>
 
+          <!-- Read More -->
+
           <a [routerLink]="blog.url" class="card-read-more">
             Read More
+
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
     </div>
 
-    <!-- No Results -->
+    <!-- =====================================================
+         NO RESULTS
+    ====================================================== -->
+
     <div class="no-results" *ngIf="filteredBlogs.length === 0">
-      <i class="fa-regular fa-face-frown"></i>
+      <div class="no-results-icon">
+        <i class="fa-regular fa-face-frown"></i>
+      </div>
 
       <h3>No articles found</h3>
 
-      <p>Try searching with a different keyword or category.</p>
+      <p>
+        We couldn't find any articles matching your search. Try another keyword or view all
+        articles.
+      </p>
 
-      <button (click)="clearFilters()">View All Articles</button>
+      <button type="button" (click)="clearFilters()">
+        <i class="fa-solid fa-rotate-left"></i>
+
+        View All Articles
+      </button>
+    </div>
+
+    <!-- =====================================================
+         PAGINATION
+    ====================================================== -->
+
+    <div class="blog-pagination" *ngIf="totalPages > 1">
+      <!-- Previous -->
+
+      <button
+        type="button"
+        class="pagination-arrow"
+        [disabled]="currentPage === 1"
+        [class.disabled]="currentPage === 1"
+        (click)="previousPage()"
+        aria-label="Previous page"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+
+        <span>Previous</span>
+      </button>
+
+      <!-- Page Numbers -->
+
+      <div class="pagination-numbers">
+        <button
+          type="button"
+          *ngFor="let page of pageNumbers"
+          [class.active]="currentPage === page"
+          (click)="goToPage(page)"
+          [attr.aria-label]="'Go to page ' + page"
+          [attr.aria-current]="currentPage === page ? 'page' : null"
+        >
+          {{ page }}
+        </button>
+      </div>
+
+      <!-- Next -->
+
+      <button
+        type="button"
+        class="pagination-arrow"
+        [disabled]="currentPage === totalPages"
+        [class.disabled]="currentPage === totalPages"
+        (click)="nextPage()"
+        aria-label="Next page"
+      >
+        <span>Next</span>
+
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- =====================================================
+         PAGINATION MOBILE TEXT
+    ====================================================== -->
+
+    <div class="pagination-mobile-info" *ngIf="totalPages > 1">
+      Page
+
+      <strong>
+        {{ currentPage }}
+      </strong>
+
+      of
+
+      <strong>
+        {{ totalPages }}
+      </strong>
     </div>
   </div>
 </section>
 
-<!-- Newsletter / CTA -->
+<!-- =========================================================
+     LEARNING CTA
+========================================================= -->
+
 <section class="blog-cta">
   <div class="container">
     <div class="cta-content">
+      <!-- Icon -->
+
       <div class="cta-icon">
         <i class="fa-solid fa-lightbulb"></i>
       </div>
 
-      <div>
-        <span>Keep Learning</span>
+      <!-- Content -->
+
+      <div class="cta-text">
+        <span> Keep Learning </span>
 
         <h2>Build Your Skills. Shape Your Future.</h2>
 
-        <p>Discover courses, career opportunities and practical learning programs at RLT Edzaro.</p>
+        <p>
+          Explore practical TallyPrime training, accounting programs, GST learning and
+          career-focused courses at RLT Edzaro.
+        </p>
       </div>
 
-      <a routerLink="/courses" class="cta-button">
+      <!-- CTA Button -->
+
+      <a routerLink="/" class="cta-button">
         Explore Courses
+
         <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>

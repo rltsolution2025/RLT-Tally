@@ -47,6 +47,7 @@ import { LearnTallyWithoutAccountingKnowledgeComponent } from './blogs/learn-tal
 import { HowLongDoesItTakeToLearnTallyprimeComponent } from './blogs/how-long-does-it-take-to-learn-tallyprime/how-long-does-it-take-to-learn-tallyprime.component';
 import { IsTallyprimeEasyToLearnForBeginnersComponent } from './blogs/is-tallyprime-easy-to-learn-for-beginners/is-tallyprime-easy-to-learn-for-beginners.component';
 import { TallyCourseInTambaramComponent } from './component/tally-course-in-tambaram/tally-course-in-tambaram.component';
+import { TallyCourseInChengalpattuComponent } from './component/tally-course-in-chengalpattu/tally-course-in-chengalpattu.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -68,6 +69,8 @@ export const routes: Routes = [
   { path: 'register', component: Refer },
   { path: 'enroll', component: EnrollComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
+
+  //SEO
   { path: 'tally-training-institute-in-kodambakkam', component: TallyKodambakkamComponent },
   {
     path: 'tally-training-institute-in-maraimalai-nagar',
@@ -81,6 +84,8 @@ export const routes: Routes = [
   { path: 'tally-training-institute-in-ashok-nagar', component: TallyAshokNagarComponent },
   { path: 'tally-training-institute-in-nungambakkam', component: TallyNungambakkamComponent },
   { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent },
+  { path: 'tally-course-in-chengalpattu', component: TallyCourseInChengalpattuComponent },
+  { path: 'tally-course-in-tambaram', component: TallyCourseInTambaramComponent },
 
   //IT Industries
   { path: 'artificial-intelligence-machine-learning-course', component: AIMLLearningComponent },
@@ -116,5 +121,4 @@ export const routes: Routes = [
     path: 'is-tallyprime-easy-to-learn-for-beginners',
     component: IsTallyprimeEasyToLearnForBeginnersComponent,
   },
-  { path: 'tally-course-in-tambaram', component: TallyCourseInTambaramComponent },
 ];
