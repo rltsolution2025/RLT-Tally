@@ -48,6 +48,19 @@ import { HowLongDoesItTakeToLearnTallyprimeComponent } from './blogs/how-long-do
 import { IsTallyprimeEasyToLearnForBeginnersComponent } from './blogs/is-tallyprime-easy-to-learn-for-beginners/is-tallyprime-easy-to-learn-for-beginners.component';
 import { TallyCourseInTambaramComponent } from './component/tally-course-in-tambaram/tally-course-in-tambaram.component';
 import { TallyCourseInChengalpattuComponent } from './component/tally-course-in-chengalpattu/tally-course-in-chengalpattu.component';
+import { TallyMaduraiComponent } from './component/city/tally-madurai/tally-madurai.component';
+import { TallyTrichyComponent } from './component/city/tally-trichy/tally-trichy.component';
+import { TallyThiruvallurComponent } from './component/city/tally-thiruvallur/tally-thiruvallur.component';
+import { TallyKanchipuramComponent } from './component/city/tally-kanchipuram/tally-kanchipuram.component';
+import { TallyCoimbatoreComponent } from './component/city/tally-coimbatore/tally-coimbatore.component';
+import { TallyCuddaloreComponent } from './component/city/tally-cuddalore/tally-cuddalore.component';
+import { TallyErodeComponent } from './component/city/tally-erode/tally-erode.component';
+import { TallyNammakalComponent } from './component/city/tally-nammakal/tally-nammakal.component';
+import { TallyPondyComponent } from './component/city/tally-pondy/tally-pondy.component';
+import { TallySalemComponent } from './component/city/tally-salem/tally-salem.component';
+import { TallyVelloreComponent } from './component/city/tally-vellore/tally-vellore.component';
+import { TDLComponent } from './component/courses/tdl/tdl.component';
+import { InventoryManagementComponent } from './component/courses/inventory-management/inventory-management.component';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -56,13 +69,6 @@ export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: 'about', component: About },
   { path: 'contact', component: Contact },
-  { path: 'tally-essential', component: TallyEssential },
-  { path: 'tally-prime', component: TallyPrime },
-  { path: 'tally-professional', component: TallyProfessional },
-  { path: 'gst-simulation', component: GSTSimulation },
-  { path: 'master-accountant', component: MasterAccountant },
-  { path: 'office-automation', component: OfficeAutomation },
-  { path: 'payroll-and-income-tax', component: PayrollIncomeTax },
   { path: 'career', component: Career },
   { path: 'hire-for-us', component: Hire },
   { path: 'platform', component: Platform },
@@ -70,7 +76,18 @@ export const routes: Routes = [
   { path: 'enroll', component: EnrollComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
-  //SEO
+  // Tally Course
+  { path: 'tally-essential', component: TallyEssential },
+  { path: 'tally-prime', component: TallyPrime },
+  { path: 'tally-professional', component: TallyProfessional },
+  { path: 'gst-simulation', component: GSTSimulation },
+  { path: 'master-accountant', component: MasterAccountant },
+  { path: 'office-automation', component: OfficeAutomation },
+  { path: 'payroll-and-income-tax', component: PayrollIncomeTax },
+  { path: 'tdl-essential', component: TDLComponent },
+  { path: 'complete-guide-to-inventory-management', component: InventoryManagementComponent },
+
+  //SEO - Chennai major city
   { path: 'tally-training-institute-in-kodambakkam', component: TallyKodambakkamComponent },
   {
     path: 'tally-training-institute-in-maraimalai-nagar',
@@ -86,6 +103,19 @@ export const routes: Routes = [
   { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent },
   { path: 'tally-course-in-chengalpattu', component: TallyCourseInChengalpattuComponent },
   { path: 'tally-course-in-tambaram', component: TallyCourseInTambaramComponent },
+
+  //District
+  { path: 'tally-course-in-madurai', component: TallyMaduraiComponent },
+  { path: 'tally-course-in-trichy', component: TallyTrichyComponent },
+  { path: 'tally-course-in-thiruvallur', component: TallyThiruvallurComponent },
+  { path: 'tally-course-in-kanchipuran', component: TallyKanchipuramComponent },
+  { path: 'tally-course-in-coimbatore', component: TallyCoimbatoreComponent },
+  { path: 'tally-course-in-cuddalore', component: TallyCuddaloreComponent },
+  { path: 'tally-course-in-erode', component: TallyErodeComponent },
+  { path: 'tally-course-in-namakkal', component: TallyNammakalComponent },
+  { path: 'tally-course-in-pondicherry', component: TallyPondyComponent },
+  { path: 'tally-course-in-salem', component: TallySalemComponent },
+  { path: 'tally-course-in-vellore', component: TallyVelloreComponent },
 
   //IT Industries
   { path: 'artificial-intelligence-machine-learning-course', component: AIMLLearningComponent },
@@ -121,4 +151,5 @@ export const routes: Routes = [
     path: 'is-tallyprime-easy-to-learn-for-beginners',
     component: IsTallyprimeEasyToLearnForBeginnersComponent,
   },
+
 ];

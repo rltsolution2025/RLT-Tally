@@ -13,12 +13,7 @@
   </a>-->
 
   <!-- Hamburger -->
-  <button
-    type="button"
-    class="hamburger"
-    (click)="toggleMenu($event)"
-    aria-label="Open navigation menu"
-  >
+  <button type="button" class="hamburger" (click)="toggleMenu($event)" aria-label="Open navigation menu">
     <span></span>
     <span></span>
     <span></span>
@@ -40,12 +35,7 @@
         <img src="Logo/RLT-Logo-Final.png" alt="RLT Edzaro" class="menu-logo" />
       </a>
 
-      <button
-        type="button"
-        class="close-btn"
-        (click)="closeMenu()"
-        aria-label="Close navigation menu"
-      >
+      <button type="button" class="close-btn" (click)="closeMenu()" aria-label="Close navigation menu">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
@@ -57,13 +47,8 @@
     <nav class="menu-items" aria-label="Mobile Navigation">
       <!-- HOME -->
 
-      <a
-        routerLink="/"
-        routerLinkActive="mobile-active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/" routerLinkActive="mobile-active" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-house"></i>
         </span>
@@ -75,12 +60,7 @@
 
       <!-- ABOUT -->
 
-      <a
-        routerLink="/about"
-        routerLinkActive="mobile-active"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/about" routerLinkActive="mobile-active" (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-building"></i>
         </span>
@@ -210,18 +190,19 @@
             <a routerLink="/master-accountant" (click)="closeMenu()">
               Master Accountant Using Tally
             </a>
+            <a routerLink="/tdl-essential" (click)="closeMenu()">
+              TDL Essential
+            </a>
+            <a routerLink="/complete-guide-to-inventory-management" (click)="closeMenu()">
+              Complete Guide to Inventory Management
+            </a>
           </div>
         </div>
       </div>
 
       <!-- CAREER -->
 
-      <a
-        routerLink="/career"
-        routerLinkActive="mobile-active"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/career" routerLinkActive="mobile-active" (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-briefcase"></i>
         </span>
@@ -233,12 +214,7 @@
 
       <!-- PLATFORM -->
 
-      <a
-        routerLink="/platform"
-        routerLinkActive="mobile-active"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/platform" routerLinkActive="mobile-active" (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-layer-group"></i>
         </span>
@@ -250,12 +226,7 @@
 
       <!-- CONTACT -->
 
-      <a
-        routerLink="/contact"
-        routerLinkActive="mobile-active"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/contact" routerLinkActive="mobile-active" (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-headset"></i>
         </span>
@@ -267,12 +238,7 @@
 
       <!-- BLOGS -->
 
-      <a
-        routerLink="/blogs"
-        routerLinkActive="mobile-active"
-        (click)="closeMenu()"
-        class="main-menu-link"
-      >
+      <a routerLink="/blogs" routerLinkActive="mobile-active" (click)="closeMenu()" class="main-menu-link">
         <span class="menu-icon">
           <i class="fa-solid fa-pen-nib"></i>
         </span>
@@ -314,30 +280,18 @@
       </div>
 
       <div class="mobile-social">
-        <a
-          href="https://www.facebook.com/profile.php?id=61587292501752"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
+        <a href="https://www.facebook.com/profile.php?id=61587292501752" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a
-          href="https://www.instagram.com/tallyrltedzaro/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
+        <a href="https://www.instagram.com/tallyrltedzaro/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a
-          href="https://www.linkedin.com/company/rlt-edzaro-tally-academy"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
+        <a href="https://www.linkedin.com/company/rlt-edzaro-tally-academy" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
       </div>
