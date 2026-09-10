@@ -1,31 +1,314 @@
+<!-- =========================================================
+     WAITING / LOADING POPUP
+     ========================================================= -->
+
+<div class="enrollment-loading-overlay" *ngIf="isSubmitting" aria-live="polite" aria-busy="true">
+  <div class="enrollment-loading-popup">
+
+    <!-- LOADING ICON -->
+    <div class="loading-icon-wrapper">
+      <div class="loading-spinner"></div>
+
+      <div class="loading-icon">
+        <i class="fa-solid fa-paper-plane"></i>
+      </div>
+    </div>
+
+    <!-- TITLE -->
+    <h3>Please Wait...</h3>
+
+    <!-- DESCRIPTION -->
+    <p>
+      Your enrollment request is being submitted.
+    </p>
+
+    <!-- NOTE -->
+    <span class="loading-note">
+      Please do not close or refresh this page.
+    </span>
+
+    <!-- PROGRESS BAR -->
+    <div class="loading-progress">
+      <span></span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =========================================================
+     ENROLLMENT FORM WRAPPER
+     ========================================================= -->
+
 <div class="enroll-form-wrapper">
-  <h2 class="form-heading" *ngIf="!isModal">Enroll for the Course</h2>
 
-  <form [formGroup]="enrollForm" (ngSubmit)="submitForm()" [class.modal-form]="isModal">
-    <!-- Name -->
-    <div class="input-box">
-      <i class="fa-solid fa-user"></i>
-      <input type="text" formControlName="name" placeholder="Full Name" />
+  <!-- =======================================================
+       FORM HEADING
+       ======================================================= -->
+
+  <h2 class="form-heading" *ngIf="!isModal">
+    Enroll for the Course
+  </h2>
+
+
+  <!-- =======================================================
+       FORM
+       ======================================================= -->
+
+  <form [formGroup]="enrollForm" (ngSubmit)="submitForm()" [class.modal-form]="isModal" novalidate>
+
+    <!-- =====================================================
+         NAME
+         ===================================================== -->
+
+    <div class="input-group-wrapper">
+
+      <div class="input-box" [class.invalid]="
+          nameControl.invalid &&
+          (nameControl.touched || submitted)
+        " [class.valid]="
+          nameControl.valid &&
+          nameControl.touched
+        ">
+
+        <i class="fa-solid fa-user"></i>
+
+        <input type="text" formControlName="name" placeholder="Full Name" autocomplete="name" maxlength="50" />
+
+      </div>
+
+
+      <!-- NAME VALIDATION -->
+
+      <div class="validation-message" *ngIf="
+          nameControl.invalid &&
+          (nameControl.touched || submitted)
+        ">
+
+        <span *ngIf="nameControl.hasError('required')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter your full name.
+        </span>
+
+        <span *ngIf="nameControl.hasError('minlength')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Name must contain at least 3 characters.
+        </span>
+
+        <span *ngIf="nameControl.hasError('maxlength')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Name cannot exceed 50 characters.
+        </span>
+
+        <span *ngIf="nameControl.hasError('pattern')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter a valid name using letters only.
+        </span>
+
+      </div>
+
     </div>
 
-    <!-- Phone -->
-    <div class="input-box">
-      <i class="fa-solid fa-phone"></i>
-      <input type="tel" formControlName="phone" placeholder="Phone Number" />
+
+    <!-- =====================================================
+         PHONE
+         ===================================================== -->
+
+    <div class="input-group-wrapper">
+
+      <div class="input-box" [class.invalid]="
+          phoneControl.invalid &&
+          (phoneControl.touched || submitted)
+        " [class.valid]="
+          phoneControl.valid &&
+          phoneControl.touched
+        ">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <input type="tel" formControlName="phone" placeholder="Phone Number" autocomplete="tel" inputmode="numeric"
+          maxlength="10" />
+
+      </div>
+
+
+      <!-- PHONE VALIDATION -->
+
+      <div class="validation-message" *ngIf="
+          phoneControl.invalid &&
+          (phoneControl.touched || submitted)
+        ">
+
+        <span *ngIf="phoneControl.hasError('required')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter your phone number.
+        </span>
+
+        <span *ngIf="phoneControl.hasError('pattern')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter a valid 10-digit phone number.
+        </span>
+
+      </div>
+
     </div>
 
-    <!-- Email -->
-    <div class="input-box">
-      <i class="fa-solid fa-envelope"></i>
-      <input type="email" formControlName="email" placeholder="Email Address" />
+
+    <!-- =====================================================
+         EMAIL
+         ===================================================== -->
+
+    <div class="input-group-wrapper">
+
+      <div class="input-box" [class.invalid]="
+          emailControl.invalid &&
+          (emailControl.touched || submitted)
+        " [class.valid]="
+          emailControl.valid &&
+          emailControl.touched
+        ">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <input type="email" formControlName="email" placeholder="Email Address" autocomplete="email" maxlength="100" />
+
+      </div>
+
+
+      <!-- EMAIL VALIDATION -->
+
+      <div class="validation-message" *ngIf="
+          emailControl.invalid &&
+          (emailControl.touched || submitted)
+        ">
+
+        <span *ngIf="emailControl.hasError('required')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter your email address.
+        </span>
+
+        <span *ngIf="emailControl.hasError('email')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Please enter a valid email address.
+        </span>
+
+        <span *ngIf="emailControl.hasError('maxlength')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Email cannot exceed 100 characters.
+        </span>
+
+      </div>
+
     </div>
 
-    <!-- Message -->
-    <div class="input-box">
-      <i class="fa-solid fa-comment"></i>
-      <textarea formControlName="message" rows="1" placeholder="Your Message"></textarea>
+
+    <!-- =====================================================
+         MESSAGE
+         ===================================================== -->
+
+    <div class="input-group-wrapper">
+
+      <div class="input-box textarea-box" [class.valid]="
+          messageControl.value &&
+          messageControl.value.trim().length > 0
+        " [class.invalid]="
+          messageControl.invalid &&
+          (messageControl.touched || submitted)
+        ">
+
+        <i class="fa-solid fa-comment"></i>
+
+        <textarea formControlName="message" rows="3" placeholder="Your Message" maxlength="500"></textarea>
+
+      </div>
+
+
+      <!-- CHARACTER COUNT -->
+
+      <div class="character-count" [class.character-limit]="
+          messageControl.value?.length >= 450
+        ">
+        {{ messageControl.value?.length || 0 }}/500
+      </div>
+
+
+      <!-- MESSAGE VALIDATION -->
+
+      <div class="validation-message" *ngIf="
+          messageControl.invalid &&
+          (messageControl.touched || submitted)
+        ">
+
+        <span *ngIf="messageControl.hasError('maxlength')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          Message cannot exceed 500 characters.
+        </span>
+
+      </div>
+
     </div>
 
-    <button type="submit" class="enroll-btn">Enroll Now</button>
+
+    <!-- =====================================================
+         HIDDEN COURSE FIELD
+         ===================================================== -->
+
+    <input type="hidden" formControlName="course" />
+
+
+    <!-- =====================================================
+         SUBMIT BUTTON
+         ===================================================== -->
+
+    <button type="submit" class="enroll-btn" [disabled]="isSubmitting">
+
+      <!-- NORMAL STATE -->
+
+      <span *ngIf="!isSubmitting" class="submit-content">
+        <i class="fa-solid fa-paper-plane"></i>
+        Enroll Now
+      </span>
+
+
+      <!-- LOADING STATE -->
+
+      <span *ngIf="isSubmitting" class="submit-loading">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        Submitting...
+      </span>
+
+    </button>
+
+
+    <!-- =====================================================
+         FORM ERROR
+         ===================================================== -->
+
+    <div class="form-alert error-alert" *ngIf="formError" role="alert">
+
+      <i class="fa-solid fa-circle-exclamation"></i>
+
+      <span>
+        {{ formError }}
+      </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         FORM SUCCESS
+         ===================================================== -->
+
+    <div class="form-alert success-alert" *ngIf="formSuccess" role="status">
+
+      <i class="fa-solid fa-circle-check"></i>
+
+      <span>
+        {{ formSuccess }}
+      </span>
+
+    </div>
+
   </form>
+
 </div>

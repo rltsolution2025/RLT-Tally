@@ -1,76 +1,900 @@
-.modal-form {
-  background: transparent !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-/* Card */
-.enroll-form-wrapper form {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(14px);
-  padding: 45px;
-  border-radius: 16px;
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+/* =========================================================
+   WAITING / LOADING POPUP OVERLAY
+   ========================================================= */
+
+.enrollment-loading-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    rgba(3, 31, 24, 0.58);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  animation:
+    loadingOverlayFadeIn 0.25s ease;
 }
 
-/* Heading */
-.form-heading {
-  font-size: 30px;
+
+/* =========================================================
+   WAITING POPUP
+   ========================================================= */
+
+.enrollment-loading-popup {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 42px 32px 35px;
+
+  text-align: center;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.85);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    0 10px 30px rgba(5, 150, 105, 0.12);
+
+  animation:
+    loadingPopupScale 0.35s ease;
+}
+
+
+/* =========================================================
+   LOADING ICON WRAPPER
+   ========================================================= */
+
+.loading-icon-wrapper {
+  position: relative;
+
+  width: 90px;
+  height: 90px;
+
+  margin:
+    0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   OUTER SPINNER
+   ========================================================= */
+
+.loading-spinner {
+  position: absolute;
+
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+
+  border:
+    4px solid #d1fae5;
+
+  border-top-color: #059669;
+
+  border-right-color: #10b981;
+
+  animation:
+    enrollmentSpin 1s linear infinite;
+}
+
+
+/* =========================================================
+   INNER ICON
+   ========================================================= */
+
+.loading-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(135deg,
+      #059669,
+      #047857);
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 8px 20px rgba(5, 150, 105, 0.25);
+}
+
+
+/* =========================================================
+   POPUP TITLE
+   ========================================================= */
+
+.enrollment-loading-popup h3 {
+  margin:
+    0 0 10px;
+
+  font-size: 25px;
+
   font-weight: 700;
-  margin-bottom: 30px;
+
   color: #065f46;
 }
 
-/* Input Box */
+
+/* =========================================================
+   POPUP DESCRIPTION
+   ========================================================= */
+
+.enrollment-loading-popup p {
+  margin:
+    0 auto 8px;
+
+  max-width: 320px;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #4b5563;
+}
+
+
+/* =========================================================
+   POPUP NOTE
+   ========================================================= */
+
+.loading-note {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #9ca3af;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.loading-progress {
+  width: 100%;
+  height: 4px;
+
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  border-radius: 50px;
+
+  background:
+    #d1fae5;
+}
+
+
+/* =========================================================
+   PROGRESS BAR ANIMATION
+   ========================================================= */
+
+.loading-progress span {
+  display: block;
+
+  width: 35%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(90deg,
+      #059669,
+      #10b981);
+
+  animation:
+    enrollmentProgress 1.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MODAL FORM
+   ========================================================= */
+
+.modal-form {
+  background: transparent !important;
+
+  padding: 0 !important;
+
+  box-shadow: none !important;
+
+  border-radius: 0 !important;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.enroll-form-wrapper form {
+  background:
+    rgba(255, 255, 255, 0.65);
+
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
+
+  padding: 45px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   FORM HEADING
+   ========================================================= */
+
+.form-heading {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  margin:
+    0 0 30px;
+
+  color: #065f46;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group-wrapper {
+  position: relative;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   INPUT BOX
+   ========================================================= */
+
 .input-box {
   position: relative;
-  margin-bottom: 25px;
 }
 
-/* Icons */
-.input-box i {
+
+/* =========================================================
+   INPUT ICON
+   ========================================================= */
+
+.input-box>i {
   position: absolute;
+
   left: 0;
   top: 50%;
-  transform: translateY(-50%);
+
+  transform:
+    translateY(-50%);
+
   color: #10b981;
+
   font-size: 16px;
+
+  pointer-events: none;
+
+  transition:
+    all 0.3s ease;
 }
 
-/* Inputs */
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
 .input-box input,
 .input-box textarea {
   width: 100%;
+
   border: none;
-  border-bottom: 2px solid #d1d5db;
-  padding: 10px 0 8px 30px;
+
+  border-bottom:
+    2px solid #d1d5db;
+
+  padding:
+    10px 0 8px 30px;
+
   background: transparent;
+
   outline: none;
-  transition: all 0.3s ease;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
   font-size: 15px;
+
+  font-family: inherit;
+
+  color: #1f2937;
 }
 
-/* Focus Effect */
+
+/* =========================================================
+   INPUT PLACEHOLDER
+   ========================================================= */
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: #6b7280;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
 .input-box input:focus,
 .input-box textarea:focus {
-  border-bottom: 2px solid #059669;
+  border-bottom-color:
+    #059669;
 }
 
-/* Button */
+
+/* =========================================================
+   FOCUS ICON
+   ========================================================= */
+
+.input-box:focus-within>i {
+  color:
+    #047857;
+
+  transform:
+    translateY(-50%) scale(1.08);
+}
+
+
+/* =========================================================
+   VALID FIELD
+   ========================================================= */
+
+.input-box.valid input,
+.input-box.valid textarea {
+  border-bottom-color:
+    #10b981;
+}
+
+
+/* =========================================================
+   INVALID FIELD
+   ========================================================= */
+
+.input-box.invalid input,
+.input-box.invalid textarea {
+  border-bottom-color:
+    #dc2626;
+}
+
+
+/* =========================================================
+   INVALID ICON
+   ========================================================= */
+
+.input-box.invalid>i {
+  color:
+    #dc2626;
+}
+
+
+/* =========================================================
+   VALIDATION MESSAGE
+   ========================================================= */
+
+.validation-message {
+  margin-top: 7px;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color:
+    #dc2626;
+}
+
+
+/* =========================================================
+   VALIDATION TEXT
+   ========================================================= */
+
+.validation-message span {
+  display: block;
+}
+
+
+/* =========================================================
+   VALIDATION ICON
+   ========================================================= */
+
+.validation-message i {
+  margin-right: 5px;
+}
+
+
+/* =========================================================
+   TEXTAREA BOX
+   ========================================================= */
+
+.textarea-box {
+  position: relative;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.input-box textarea {
+  min-height: 65px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+
+  padding-top: 10px;
+}
+
+
+/* =========================================================
+   TEXTAREA ICON
+   ========================================================= */
+
+.textarea-box>i {
+  top: 18px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   TEXTAREA FOCUS ICON
+   ========================================================= */
+
+.textarea-box:focus-within>i {
+  transform:
+    scale(1.08);
+}
+
+
+/* =========================================================
+   CHARACTER COUNT
+   ========================================================= */
+
+.character-count {
+  text-align: right;
+
+  font-size: 11px;
+
+  color:
+    #6b7280;
+
+  margin-top: 4px;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+/* =========================================================
+   CHARACTER LIMIT WARNING
+   ========================================================= */
+
+.character-count.character-limit {
+  color:
+    #d97706;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ENROLL BUTTON
+   ========================================================= */
+
 .enroll-btn {
   width: 100%;
-  background: linear-gradient(135deg, #059669, #047857);
-  color: #fff;
-  padding: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 50px;
+
+  background:
+    linear-gradient(135deg,
+      #059669,
+      #047857);
+
+  color:
+    #ffffff;
+
+  padding:
+    14px;
+
+  font-size: 15px;
+
   font-weight: 600;
+
   border-radius: 10px;
+
   border: none;
-  transition: all 0.3s ease;
+
+  transition:
+    all 0.3s ease;
+
   margin-top: 10px;
+
+  cursor: pointer;
 }
 
-/* Hover */
-.enroll-btn:hover {
-  background: linear-gradient(135deg, #047857, #065f46);
-  transform: translateY(-2px);
+
+/* =========================================================
+   SUBMIT CONTENT
+   ========================================================= */
+
+.submit-content {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.enroll-btn:hover:not(:disabled) {
+  background:
+    linear-gradient(135deg,
+      #047857,
+      #065f46);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(5, 150, 105, 0.25);
+}
+
+
+/* =========================================================
+   BUTTON ACTIVE
+   ========================================================= */
+
+.enroll-btn:active:not(:disabled) {
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON DISABLED
+   ========================================================= */
+
+.enroll-btn:disabled {
+  opacity:
+    0.65;
+
+  cursor:
+    not-allowed;
+
+  transform:
+    none;
+
+  box-shadow:
+    none;
+}
+
+
+/* =========================================================
+   BUTTON LOADING
+   ========================================================= */
+
+.submit-loading {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   FORM ALERT
+   ========================================================= */
+
+.form-alert {
+  margin-top: 15px;
+
+  padding:
+    11px 14px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   ALERT ICON
+   ========================================================= */
+
+.form-alert>i {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   ERROR ALERT
+   ========================================================= */
+
+.error-alert {
+  color:
+    #991b1b;
+
+  background:
+    #fef2f2;
+
+  border:
+    1px solid #fecaca;
+}
+
+
+/* =========================================================
+   SUCCESS ALERT
+   ========================================================= */
+
+.success-alert {
+  color:
+    #065f46;
+
+  background:
+    #ecfdf5;
+
+  border:
+    1px solid #a7f3d0;
+}
+
+
+/* =========================================================
+   LOADING POPUP FADE
+   ========================================================= */
+
+@keyframes loadingOverlayFadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   LOADING POPUP SCALE
+   ========================================================= */
+
+@keyframes loadingPopupScale {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+@keyframes enrollmentSpin {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+@keyframes enrollmentProgress {
+
+  0% {
+    transform:
+      translateX(-120%);
+  }
+
+  50% {
+    transform:
+      translateX(160%);
+  }
+
+  100% {
+    transform:
+      translateX(300%);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .enroll-form-wrapper form {
+    padding:
+      30px 22px;
+  }
+
+
+  .form-heading {
+    font-size: 25px;
+
+    margin-bottom:
+      25px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .enroll-form-wrapper form {
+    padding:
+      25px 18px;
+  }
+
+
+  .form-heading {
+    font-size: 23px;
+  }
+
+
+  .enrollment-loading-overlay {
+    padding:
+      15px;
+  }
+
+
+  .enrollment-loading-popup {
+    max-width:
+      360px;
+
+    padding:
+      35px 22px 28px;
+
+    border-radius:
+      18px;
+  }
+
+
+  .loading-icon-wrapper {
+    width:
+      78px;
+
+    height:
+      78px;
+  }
+
+
+  .loading-spinner {
+    width:
+      76px;
+
+    height:
+      76px;
+  }
+
+
+  .loading-icon {
+    width:
+      50px;
+
+    height:
+      50px;
+
+    font-size:
+      18px;
+  }
+
+
+  .enrollment-loading-popup h3 {
+    font-size:
+      22px;
+  }
+
+
+  .enrollment-loading-popup p {
+    font-size:
+      13px;
+  }
+
+
+  .loading-note {
+    font-size:
+      11px;
+  }
+
 }

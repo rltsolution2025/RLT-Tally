@@ -1,113 +1,595 @@
 <section class="contact-section py-5">
+
   <div class="container">
-    <!-- Title -->
+
+    <!-- =====================================================
+         SECTION HEADER
+         ===================================================== -->
+
     <div class="text-center mb-5">
-      <h1 class="contact-title">Get in Touch</h1>
+
+      <h1 class="contact-title">
+        Get in Touch
+      </h1>
+
       <p class="contact-subtitle">
         We're here to help you with any questions or concerns you may have.
       </p>
+
     </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
 
     <div class="row g-4">
-      <!-- Contact Form -->
+
+      <!-- ===================================================
+           CONTACT FORM
+           =================================================== -->
+
       <div class="col-lg-7">
+
         <div class="contact-card">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+            <!-- =============================================
+                 NAME + EMAIL
+                 ============================================= -->
+
             <div class="row">
-              <div class="col-md-6 mb-3">
-                <label>Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  formControlName="name"
-                  placeholder="Your Name"
-                />
-              </div>
+
+              <!-- NAME -->
 
               <div class="col-md-6 mb-3">
-                <label>Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  formControlName="email"
-                  placeholder="Your Email"
-                />
+
+                <label for="contact-name">
+                  Name
+                </label>
+
+                <input id="contact-name" type="text" class="form-control" formControlName="name" placeholder="Your Name"
+                  autocomplete="name" maxlength="50" [class.is-invalid]="
+                    nameControl.invalid &&
+                    (nameControl.touched || submitted)
+                  " [class.is-valid]="
+                    nameControl.valid &&
+                    nameControl.touched
+                  " />
+
+
+                <!-- NAME VALIDATION -->
+
+                <div class="field-error" *ngIf="
+                    nameControl.invalid &&
+                    (nameControl.touched || submitted)
+                  ">
+
+                  <span *ngIf="nameControl.hasError('required')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter your name.
+                  </span>
+
+                  <span *ngIf="nameControl.hasError('minlength')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Name must contain at least 3 characters.
+                  </span>
+
+                  <span *ngIf="nameControl.hasError('maxlength')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Name cannot exceed 50 characters.
+                  </span>
+
+                  <span *ngIf="nameControl.hasError('pattern')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter a valid name.
+                  </span>
+
+                </div>
+
               </div>
+
+
+              <!-- EMAIL -->
+
+              <div class="col-md-6 mb-3">
+
+                <label for="contact-email">
+                  Email
+                </label>
+
+                <input id="contact-email" type="email" class="form-control" formControlName="email"
+                  placeholder="Your Email" autocomplete="email" maxlength="100" [class.is-invalid]="
+                    emailControl.invalid &&
+                    (emailControl.touched || submitted)
+                  " [class.is-valid]="
+                    emailControl.valid &&
+                    emailControl.touched
+                  " />
+
+
+                <!-- EMAIL VALIDATION -->
+
+                <div class="field-error" *ngIf="
+                    emailControl.invalid &&
+                    (emailControl.touched || submitted)
+                  ">
+
+                  <span *ngIf="emailControl.hasError('required')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter your email address.
+                  </span>
+
+                  <span *ngIf="emailControl.hasError('email')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter a valid email address.
+                  </span>
+
+                  <span *ngIf="emailControl.hasError('maxlength')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Email cannot exceed 100 characters.
+                  </span>
+
+                </div>
+
+              </div>
+
             </div>
 
+
+            <!-- =============================================
+                 PHONE + COURSE
+                 ============================================= -->
+
             <div class="row">
+
+              <!-- PHONE -->
+
               <div class="col-md-6 mb-3">
-                <label>Phone Number</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  formControlName="mobile"
-                  placeholder="Your Phone Number"
-                />
+
+                <label for="contact-mobile">
+                  Phone Number
+                </label>
+
+                <input id="contact-mobile" type="tel" class="form-control" formControlName="mobile"
+                  placeholder="Your Phone Number" autocomplete="tel" inputmode="numeric" maxlength="10"
+                  [class.is-invalid]="
+                    mobileControl.invalid &&
+                    (mobileControl.touched || submitted)
+                  " [class.is-valid]="
+                    mobileControl.valid &&
+                    mobileControl.touched
+                  " />
+
+
+                <!-- PHONE VALIDATION -->
+
+                <div class="field-error" *ngIf="
+                    mobileControl.invalid &&
+                    (mobileControl.touched || submitted)
+                  ">
+
+                  <span *ngIf="mobileControl.hasError('required')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter your phone number.
+                  </span>
+
+                  <span *ngIf="mobileControl.hasError('pattern')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please enter a valid 10-digit phone number.
+                  </span>
+
+                </div>
+
               </div>
 
+
+              <!-- COURSE -->
+
               <div class="col-md-6 mb-3">
-                <label>Select Course</label>
 
-                <select class="form-select" formControlName="course">
-                  <option value="">Select a course</option>
+                <label for="contact-course">
+                  Select Course
+                </label>
 
-                  <option *ngFor="let course of courses">
+                <select id="contact-course" class="form-select" formControlName="course" [class.is-invalid]="
+                    courseControl.invalid &&
+                    (courseControl.touched || submitted)
+                  " [class.is-valid]="
+                    courseControl.valid &&
+                    courseControl.touched
+                  ">
+
+                  <option value="">
+                    Select a course
+                  </option>
+
+                  <option *ngFor="let course of courses" [value]="course">
                     {{ course }}
                   </option>
+
                 </select>
+
+
+                <!-- COURSE VALIDATION -->
+
+                <div class="field-error" *ngIf="
+                    courseControl.invalid &&
+                    (courseControl.touched || submitted)
+                  ">
+
+                  <span *ngIf="courseControl.hasError('required')">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Please select a course.
+                  </span>
+
+                </div>
+
               </div>
+
             </div>
+
+
+            <!-- =============================================
+                 MESSAGE
+                 ============================================= -->
 
             <div class="mb-3">
-              <label>Message</label>
-              <textarea
-                class="form-control"
-                rows="4"
-                formControlName="message"
-                placeholder="Your Message"
-              ></textarea>
+
+              <label for="contact-message">
+                Message
+              </label>
+
+              <textarea id="contact-message" class="form-control" rows="4" formControlName="message"
+                placeholder="Your Message" maxlength="500" [class.is-invalid]="
+                  messageControl.invalid &&
+                  (messageControl.touched || submitted)
+                " [class.is-valid]="
+                  messageControl.valid &&
+                  messageControl.touched
+                "></textarea>
+
+
+              <!-- CHARACTER COUNTER -->
+
+              <div class="message-counter" [class.warning]="
+                  (messageControl.value?.length || 0) >= 450
+                " [class.danger]="
+                  (messageControl.value?.length || 0) >= 490
+                ">
+                {{ messageControl.value?.length || 0 }}/500
+              </div>
+
+
+              <!-- MESSAGE VALIDATION -->
+
+              <div class="field-error" *ngIf="
+                  messageControl.invalid &&
+                  (messageControl.touched || submitted)
+                ">
+
+                <span *ngIf="messageControl.hasError('required')">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Please enter your message.
+                </span>
+
+                <span *ngIf="messageControl.hasError('minlength')">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Message must contain at least 10 characters.
+                </span>
+
+                <span *ngIf="messageControl.hasError('maxlength')">
+                  <i class="bi bi-exclamation-circle-fill"></i>
+                  Message cannot exceed 500 characters.
+                </span>
+
+              </div>
+
             </div>
 
-            <button class="btn btn-primary contact-btn" type="submit">Send Message</button>
+
+            <!-- =============================================
+                 FORM ERROR
+                 ============================================= -->
+
+            <div class="form-error-alert" *ngIf="formError" role="alert">
+
+              <i class="bi bi-exclamation-triangle-fill"></i>
+
+              <span>
+                {{ formError }}
+              </span>
+
+            </div>
+
+
+            <!-- =============================================
+                 FORM SUCCESS
+                 ============================================= -->
+
+            <div class="form-success-alert" *ngIf="formSuccess" role="status">
+
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                {{ formSuccess }}
+              </span>
+
+            </div>
+
+
+            <!-- =============================================
+                 SUBMIT BUTTON
+                 ============================================= -->
+
+            <button class="btn btn-primary contact-btn" type="submit" [disabled]="isSubmitting">
+
+              <!-- NORMAL -->
+
+              <span *ngIf="!isSubmitting" class="button-content">
+
+                <i class="bi bi-send-fill"></i>
+
+                Send Message
+
+              </span>
+
+
+              <!-- LOADING -->
+
+              <span *ngIf="isSubmitting" class="button-loading">
+
+                <i class="bi bi-arrow-repeat spin"></i>
+
+                Submitting...
+
+              </span>
+
+            </button>
+
           </form>
+
         </div>
+
       </div>
 
-      <!-- Contact Info -->
+
+
+      <!-- ===================================================
+           CONTACT INFORMATION
+           =================================================== -->
+
       <div class="col-lg-5">
+
         <div class="contact-info-card">
-          <h4>Contact Information</h4>
+
+          <h4>
+            Contact Information
+          </h4>
+
+
+          <!-- EMAIL -->
 
           <p>
-            <i class="bi bi-envelope-fill me-2"></i>
-            <strong>Email:</strong> <a href="mailto:tally@rltedzaro.com">contact@rltedzaro.com</a>
+
+            <i class="bi bi-envelope-fill contact-icon"></i>
+
+            <span>
+
+              <strong>
+                Email:
+              </strong>
+
+              <a href="mailto:contact@rltedzaro.com">
+                contact@rltedzaro.com
+              </a>
+
+            </span>
+
           </p>
 
+
+          <!-- PHONE -->
+
           <p>
-            <i class="bi bi-telephone-fill me-2"></i>
-            <strong>Phone:</strong>
-            <a href="tel:+919600681581">+91 96006 81581</a>
+
+            <i class="bi bi-telephone-fill contact-icon"></i>
+
+            <span>
+
+              <strong>
+                Phone:
+              </strong>
+
+              <a href="tel:+919600681581">
+                +91 96006 81581
+              </a>
+
+            </span>
+
           </p>
+
+
+          <!-- ALTERNATE PHONE -->
+
+          <p>
+
+            <i class="bi bi-telephone-fill contact-icon"></i>
+
+            <span>
+
+              <strong>
+                Alternate Phone:
+              </strong>
+
+              <a href="tel:+918925500513">
+                +91 89255 00513
+              </a>
+
+            </span>
+
+          </p>
+
+
+          <!-- BRANCH NUMBER -->
+
+          <p>
+
+            <i class="bi bi-telephone-fill contact-icon"></i>
+
+            <span>
+
+              <strong>
+                Branch Number:
+              </strong>
+
+              <a href="tel:+917299515354">
+                +91 72995 15354
+              </a>
+
+            </span>
+
+          </p>
+
+
+          <!-- KODAMBAKKAM -->
 
           <p class="address">
-            <i class="bi bi-geo-alt-fill me-2"></i>
+
+            <i class="bi bi-geo-alt-fill contact-icon"></i>
+
             <span>
-              <strong>Kodambakkam Branch:</strong><br />
-              2, 1st St, Corporation Colony, Rangarajapuram, Kodambakkam,<br />
+
+              <strong>
+                Kodambakkam Branch:
+              </strong>
+
+              <br />
+
+              2, 1st St, Corporation Colony,
+              Rangarajapuram, Kodambakkam,
+              <br />
+
               Chennai – 600024
+
             </span>
+
           </p>
 
+
+          <!-- CHENGALPATTU -->
+
           <p class="address">
-            <i class="bi bi-geo-alt-fill me-2"></i>
+
+            <i class="bi bi-geo-alt-fill contact-icon"></i>
+
             <span>
-              <strong>Chengalpattu Branch:</strong><br />
-              No.1 School Road, Athur, Chengalpattu, Tamil Nadu - 603101
+
+              <strong>
+                Chengalpattu Branch:
+              </strong>
+
+              <br />
+
+              No.1 School Road,
+              Athur, Chengalpattu,
+              Tamil Nadu - 603101
+
             </span>
+
           </p>
+
+
+          <!-- MADURAI -->
+
+          <p class="address">
+
+            <i class="bi bi-geo-alt-fill contact-icon"></i>
+
+            <span>
+
+              <strong>
+                Madurai Branch:
+              </strong>
+
+              <br />
+
+              First Floor, Kalai Nagar
+              Second Main Road,
+              1st Cross St,
+              near Army Canteen,
+              Madurai,
+              Tamil Nadu 625017
+
+            </span>
+
+          </p>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =========================================================
+     WAITING / SUBMISSION POPUP
+     ========================================================= -->
+
+<div class="contact-loading-overlay" *ngIf="isSubmitting" aria-live="polite" aria-busy="true">
+
+  <div class="contact-loading-popup">
+
+    <!-- ANIMATED ICON -->
+
+    <div class="contact-loading-icon-wrapper">
+
+      <div class="contact-loading-spinner"></div>
+
+      <div class="contact-loading-icon">
+
+        <i class="bi bi-send-fill"></i>
+
+      </div>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h3>
+      Please Wait...
+    </h3>
+
+
+    <!-- DESCRIPTION -->
+
+    <p>
+      Your message is being submitted.
+    </p>
+
+
+    <!-- NOTE -->
+
+    <span class="contact-loading-note">
+      Please do not close or refresh this page.
+    </span>
+
+
+    <!-- PROGRESS -->
+
+    <div class="contact-loading-progress">
+
+      <span></span>
+
+    </div>
+
+  </div>
+
+</div>
