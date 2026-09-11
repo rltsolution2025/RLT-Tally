@@ -2350,25 +2350,53 @@
   </div>
 </section>
 
-<div class="modal fade" id="enrollModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">{{ modalTitle }}</h4>
+<div class="rlt-modal-overlay" *ngIf="showEnrollModal || showSyllabusModal" (click)="closeEnrollModal()">
 
-        <button class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="rlt-modal" (click)="$event.stopPropagation()">
+
+    <div class="rlt-modal-header">
+
+      <div>
+
+        <span class="rlt-modal-brand">
+          RLT EDZARO
+        </span>
+
+        <h4>
+          {{ modalTitle }}
+        </h4>
+
+        <p *ngIf="showEnrollModal">
+          Fill in your details and our team will contact you.
+        </p>
+
+        <p *ngIf="showSyllabusModal">
+          Enter your details and our team will send you the course syllabus.
+        </p>
+
       </div>
 
-      <div class="modal-body">
-        <app-enroll
-          [courseName]="'Data Science with AI'"
-          (enrollSuccess)="goThankYou()"
-          [isModal]="true"
-        >
-        </app-enroll>
-      </div>
+
+      <button type="button" class="rlt-modal-close" (click)="closeEnrollModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
     </div>
+
+
+    <div class="rlt-modal-body">
+
+      <app-enroll [courseName]="
+          showSyllabusModal
+            ? 'Data Science Course - Syllabus Request'
+            : 'Data Science Course'
+        " [isModal]="true" (enrollSuccess)="goThankYou()">
+      </app-enroll>
+
+    </div>
+
   </div>
+
 </div>
 
 <section class="tools-section">

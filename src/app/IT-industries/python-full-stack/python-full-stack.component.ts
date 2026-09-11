@@ -23,7 +23,7 @@ interface Testimonial {
   styleUrl: './python-full-stack.component.css'
 })
 export class PythonFullStackComponent implements AfterViewInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   goThankYou() {
     this.router.navigate(['/thank-you']);
   }
@@ -83,73 +83,102 @@ export class PythonFullStackComponent implements AfterViewInit {
       update();
     });
   }
+  modalTitle = 'Enroll for the Course';
 
-  modalTitle = 'Enroll for the course';
+  showEnrollModal = false;
 
-  openEnrollModal() {
-    this.modalTitle = 'Enroll for the course';
+  showSyllabusModal = false;
+
+
+  openEnrollModal(): void {
+
+    this.modalTitle = 'Enroll for the Course';
+
+    this.showSyllabusModal = false;
+
+    this.showEnrollModal = true;
+
+    document.body.classList.add('modal-open');
   }
 
-  openSyllabusModal() {
-    this.modalTitle = 'Download Course Syllabus';
+
+  openSyllabusModal(): void {
+
+    this.modalTitle = 'Get the Course Syllabus';
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = true;
+
+    document.body.classList.add('modal-open');
+  }
+
+
+  closeEnrollModal(): void {
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = false;
+
+    document.body.classList.remove('modal-open');
   }
 
   overallRating = 4.9;
 
   totalReviews = 250;
- testimonials: Testimonial[] = [
-  {
-    initials: 'AK',
-    name: 'Arun Kumar',
-    course: 'Python Full Stack Developer Student',
-    review:
-      'The Python Full Stack course was excellent. I learned Python programming, Django, Django REST Framework, React.js, MySQL, and REST APIs through practical projects. The trainers explained every concept clearly and provided excellent hands-on guidance.',
-    date: '2 weeks ago',
-  },
+  testimonials: Testimonial[] = [
+    {
+      initials: 'AK',
+      name: 'Arun Kumar',
+      course: 'Python Full Stack Developer Student',
+      review:
+        'The Python Full Stack course was excellent. I learned Python programming, Django, Django REST Framework, React.js, MySQL, and REST APIs through practical projects. The trainers explained every concept clearly and provided excellent hands-on guidance.',
+      date: '2 weeks ago',
+    },
 
-  {
-    initials: 'VD',
-    name: 'Vignesh D',
-    course: 'Django Developer Student',
-    review:
-      'The Django training was highly practical. I learned how to build backend applications, work with Django ORM, create REST APIs, integrate MySQL, and implement authentication. The real-time projects gave me confidence to develop web applications.',
-    date: '1 month ago',
-  },
+    {
+      initials: 'VD',
+      name: 'Vignesh D',
+      course: 'Django Developer Student',
+      review:
+        'The Django training was highly practical. I learned how to build backend applications, work with Django ORM, create REST APIs, integrate MySQL, and implement authentication. The real-time projects gave me confidence to develop web applications.',
+      date: '1 month ago',
+    },
 
-  {
-    initials: 'PM',
-    name: 'Pradeep M',
-    course: 'React.js Developer Student',
-    review:
-      'The React.js modules were very useful and practical. I learned components, props, state, hooks, routing, Redux Toolkit, API integration, and responsive UI development. Building projects helped me understand modern frontend development.',
-    date: '3 weeks ago',
-  },
+    {
+      initials: 'PM',
+      name: 'Pradeep M',
+      course: 'React.js Developer Student',
+      review:
+        'The React.js modules were very useful and practical. I learned components, props, state, hooks, routing, Redux Toolkit, API integration, and responsive UI development. Building projects helped me understand modern frontend development.',
+      date: '3 weeks ago',
+    },
 
-  {
-    initials: 'KS',
-    name: 'Keerthana S',
-    course: 'Python Full Stack Student',
-    review:
-      'I learned Python, Django, REST APIs, React.js, MySQL, JWT authentication, Docker, Git, and AWS deployment through practical projects. The trainers focused on real-world development, which made the concepts much easier to understand.',
-    date: '5 days ago',
-  },
+    {
+      initials: 'KS',
+      name: 'Keerthana S',
+      course: 'Python Full Stack Student',
+      review:
+        'I learned Python, Django, REST APIs, React.js, MySQL, JWT authentication, Docker, Git, and AWS deployment through practical projects. The trainers focused on real-world development, which made the concepts much easier to understand.',
+      date: '5 days ago',
+    },
 
-  {
-    initials: 'AR',
-    name: 'Aravind Raj',
-    course: 'Software Development Student',
-    review:
-      'The curriculum covers Python programming, Django, Django REST Framework, React, database development, full stack integration, and cloud deployment. The capstone project helped me create a strong GitHub portfolio and improve my development skills.',
-    date: '2 months ago',
-  },
+    {
+      initials: 'AR',
+      name: 'Aravind Raj',
+      course: 'Software Development Student',
+      review:
+        'The curriculum covers Python programming, Django, Django REST Framework, React, database development, full stack integration, and cloud deployment. The capstone project helped me create a strong GitHub portfolio and improve my development skills.',
+      date: '2 months ago',
+    },
 
-  {
-    initials: 'NP',
-    name: 'Nithya T',
-    course: 'Python Full Stack Professional',
-    review:
-      'The live projects, mock technical interviews, resume building, GitHub portfolio development, and placement support were very helpful. The course gave me practical experience in Python Full Stack development and prepared me for software developer interviews.',
-    date: '1 week ago',
-  },
-];
+    {
+      initials: 'NP',
+      name: 'Nithya T',
+      course: 'Python Full Stack Professional',
+      review:
+        'The live projects, mock technical interviews, resume building, GitHub portfolio development, and placement support were very helpful. The course gave me practical experience in Python Full Stack development and prepared me for software developer interviews.',
+      date: '1 week ago',
+    },
+  ];
 }

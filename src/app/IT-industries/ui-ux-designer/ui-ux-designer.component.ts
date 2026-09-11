@@ -21,7 +21,7 @@ interface Testimonial {
   styleUrl: './ui-ux-designer.component.css',
 })
 export class UiUxDesignerComponent implements AfterViewInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   goThankYou() {
     this.router.navigate(['/thank-you']);
   }
@@ -82,16 +82,45 @@ export class UiUxDesignerComponent implements AfterViewInit {
     });
   }
 
-  modalTitle = 'Enroll for the course';
+  modalTitle = 'Enroll for the Course';
 
-  openEnrollModal() {
-    this.modalTitle = 'Enroll for the course';
+  showEnrollModal = false;
+
+  showSyllabusModal = false;
+
+
+  openEnrollModal(): void {
+
+    this.modalTitle = 'Enroll for the Course';
+
+    this.showSyllabusModal = false;
+
+    this.showEnrollModal = true;
+
+    document.body.classList.add('modal-open');
   }
 
-  openSyllabusModal() {
-    this.modalTitle = 'Download Course Syllabus';
+
+  openSyllabusModal(): void {
+
+    this.modalTitle = 'Get the Course Syllabus';
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = true;
+
+    document.body.classList.add('modal-open');
   }
 
+
+  closeEnrollModal(): void {
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = false;
+
+    document.body.classList.remove('modal-open');
+  }
   overallRating = 4.9;
 
   totalReviews = 250;

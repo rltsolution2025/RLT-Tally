@@ -1,144 +1,638 @@
+<!-- =========================================================
+     REGISTER / CAREER SECTION
+     ========================================================= -->
+
 <section class="register-modern">
 
   <div class="container">
 
-    <div class="row align-items-center">
+    <div class="row align-items-center g-5">
 
-      <!-- LEFT CONTENT -->
-      <div class="col-lg-6 mb-4">
+      <!-- ===================================================
+           LEFT CONTENT
+           =================================================== -->
 
-        <h2 class="register-heading">
-          Build Your Career in Accounting 🚀
-        </h2>
-
-        <p class="register-desc">
-          Join our industry-focused Tally programs and gain practical skills in
-          accounting, GST, payroll, and taxation.
-        </p>
-
-        <ul class="register-points">
-          <li><i class="fa-solid fa-check"></i> 100% Practical Training</li>
-          <li><i class="fa-solid fa-check"></i> Certification</li>
-          <li><i class="fa-solid fa-check"></i> Placement Assistance</li>
-        </ul>
-
-      </div>
-
-      <!-- RIGHT FORM -->
       <div class="col-lg-6">
 
-        <div class="form-box">
+        <div class="register-content">
 
-          <h4 class="form-title text-center mb-3">Register Now</h4>
+          <!-- TOP TAG -->
 
-          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <span class="register-tag">
+            <i class="fa-solid fa-graduation-cap"></i>
+            RLT Edzaro Career Training
+          </span>
 
-            <div class="row g-3">
 
-              <!-- Name -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-user"></i>
-                  <input type="text" formControlName="name" placeholder="Full Name"
-                    [ngClass]="getClass('name')">
-                </div>
-                <small class="text-danger" *ngIf="showError('name')">
-                  Enter valid name
-                </small>
+          <!-- MAIN HEADING -->
+
+          <h2 class="register-heading">
+            Build Your Skills.
+            <span>Shape Your Future.</span>
+          </h2>
+
+
+          <!-- DESCRIPTION -->
+
+          <p class="register-desc">
+            Take the next step in your career with practical,
+            industry-focused Software, IT, Tally and Accounting
+            training designed to build confidence and job-ready skills.
+          </p>
+
+
+          <!-- =================================================
+               BENEFITS
+               ================================================= -->
+
+          <div class="register-points">
+
+
+            <!-- BENEFIT 1 -->
+
+            <div class="register-point">
+
+              <div class="point-icon">
+                <i class="fa-solid fa-laptop-code"></i>
               </div>
 
-              <!-- Phone -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-phone"></i>
-                  <input type="tel" formControlName="phone" placeholder="Phone"
-                    [ngClass]="getClass('phone')">
-                </div>
-                <small class="text-danger" *ngIf="showError('phone')">
-                  Enter valid 10 digit number
-                </small>
-              </div>
+              <div>
 
-              <!-- Email -->
-              <div class="col-md-12">
-                <div class="input-field">
-                  <i class="fa-solid fa-envelope"></i>
-                  <input type="email" formControlName="email" placeholder="Email"
-                    [ngClass]="getClass('email')">
-                </div>
-                <small class="text-danger" *ngIf="showError('email')">
-                  Enter valid email
-                </small>
-              </div>
+                <h5>
+                  Practical Training
+                </h5>
 
-              <!-- Course -->
-              <div class="col-md-12">
-                <div class="input-field">
-                  <i class="fa-solid fa-book"></i>
-                  <select formControlName="course" [ngClass]="getClass('course')">
-                    <option value="" selected>Select Course</option>
-                    <option>Tally Essential Comprehensive</option>
-                    <option>Tally Professional</option>
-                    <option>GST using TallyPrime</option>
-                    <option>GST Simulation</option>
-                    <option>Office Automation</option>
-                    <option>Payroll & Income Tax</option>
-                    <option>Master Accountant Using Tally</option>
-                  </select>
-                </div>
-                <small class="text-danger" *ngIf="showError('course')">
-                  Select a course
-                </small>
-              </div>
+                <p>
+                  Learn concepts through hands-on training,
+                  practical exercises and guided sessions.
+                </p>
 
-              <!-- College -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-building"></i>
-                  <input type="text" formControlName="college" placeholder="College"
-                    [ngClass]="getClass('college')">
-                </div>
-              </div>
-
-              <!-- Qualification -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <input type="text" formControlName="qualification" placeholder="Qualification">
-                </div>
-              </div>
-
-              <!-- State -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-map"></i>
-                  <input type="text" formControlName="state" placeholder="State"
-                    [ngClass]="getClass('state')">
-                </div>
-              </div>
-
-              <!-- District -->
-              <div class="col-md-6">
-                <div class="input-field">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <input type="text" formControlName="district" placeholder="District"
-                    [ngClass]="getClass('district')">
-                </div>
-              </div>
-
-              <!-- Message -->
-              <div class="col-md-12">
-                <div class="input-field">
-                  <i class="fa-solid fa-message"></i>
-                  <textarea rows="1" formControlName="message" placeholder="Message"></textarea>
-                </div>
               </div>
 
             </div>
 
-            <button type="submit" class="submit-btn w-100 mt-3">
-              Enroll Now
-            </button>
+
+            <!-- BENEFIT 2 -->
+
+            <div class="register-point">
+
+              <div class="point-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+
+              <div>
+
+                <h5>
+                  Project-Based Learning
+                </h5>
+
+                <p>
+                  Apply your knowledge through practical projects
+                  and real-world learning activities.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- BENEFIT 3 -->
+
+            <div class="register-point">
+
+              <div class="point-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+
+              <div>
+
+                <h5>
+                  Career Support
+                </h5>
+
+                <p>
+                  Get guidance for resume preparation, interviews
+                  and career development.
+                </p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- =================================================
+               INFORMATION STRIP
+               ================================================= -->
+
+          <div class="register-info-strip">
+
+            <div class="info-strip-icon">
+
+              <i class="fa-solid fa-phone-volume"></i>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Need help choosing a course?
+              </strong>
+
+              <span>
+                Register your details and our team will guide you.
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           RIGHT REGISTRATION FORM
+           =================================================== -->
+
+      <div class="col-lg-6">
+
+        <div class="register-form-card">
+
+
+          <!-- =================================================
+               FORM HEADER
+               ================================================= -->
+
+          <div class="register-form-header">
+
+            <span class="register-form-label">
+              START YOUR JOURNEY
+            </span>
+
+            <h3>
+              Register Now
+            </h3>
+
+            <p>
+              Fill in your details below and our team will contact
+              you with the right course information.
+            </p>
+
+          </div>
+
+
+
+          <!-- =================================================
+               FORM
+               ================================================= -->
+
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+
+            <div class="row g-3">
+
+
+              <!-- =============================================
+                   NAME
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerName">
+                  Full Name
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('name')" [class.valid]="isValid('name')">
+
+                  <i class="fa-solid fa-user"></i>
+
+                  <input id="registerName" type="text" formControlName="name" placeholder="Enter your full name"
+                    autocomplete="name" maxlength="50" />
+
+                </div>
+
+
+                <!-- NAME VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('name')">
+
+                  <span *ngIf="f['name'].hasError('required')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your name.
+                  </span>
+
+                  <span *ngIf="f['name'].hasError('minlength')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Name must contain at least 3 characters.
+                  </span>
+
+                  <span *ngIf="f['name'].hasError('maxlength')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Name cannot exceed 50 characters.
+                  </span>
+
+                  <span *ngIf="f['name'].hasError('pattern')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter a valid name using letters only.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   PHONE
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerPhone">
+                  Phone Number
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('phone')" [class.valid]="isValid('phone')">
+
+                  <i class="fa-solid fa-phone"></i>
+
+                  <input id="registerPhone" type="tel" formControlName="phone" placeholder="10-digit mobile number"
+                    autocomplete="tel" inputmode="numeric" maxlength="10" (input)="allowOnlyNumbers($event)" />
+
+                </div>
+
+
+                <!-- PHONE VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('phone')">
+
+                  <span *ngIf="f['phone'].hasError('required')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your phone number.
+                  </span>
+
+                  <span *ngIf="f['phone'].hasError('pattern')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Enter a valid 10-digit mobile number.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   EMAIL
+                   ============================================= -->
+
+              <div class="col-md-12">
+
+                <label for="registerEmail">
+                  Email Address
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('email')" [class.valid]="isValid('email')">
+
+                  <i class="fa-solid fa-envelope"></i>
+
+                  <input id="registerEmail" type="email" formControlName="email" placeholder="Enter your email address"
+                    autocomplete="email" maxlength="100" />
+
+                </div>
+
+
+                <!-- EMAIL VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('email')">
+
+                  <span *ngIf="f['email'].hasError('required')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your email address.
+                  </span>
+
+                  <span *ngIf="f['email'].hasError('email')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter a valid email address.
+                  </span>
+
+                  <span *ngIf="f['email'].hasError('maxlength')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Email cannot exceed 100 characters.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   COURSE
+                   ============================================= -->
+
+              <div class="col-md-12">
+
+                <label for="registerCourse">
+                  Select Course
+                </label>
+
+                <div class="register-input select-input" [class.invalid]="showError('course')"
+                  [class.valid]="isValid('course')">
+
+                  <i class="fa-solid fa-book-open"></i>
+
+                  <select id="registerCourse" formControlName="course">
+
+                    <option value="">
+                      Select your course
+                    </option>
+
+                    <option *ngFor="let course of courses" [value]="course">
+                      {{ course }}
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+                <!-- COURSE VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('course')">
+
+                  <span>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please select a course.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   COLLEGE / INSTITUTION
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerCollege">
+                  College / Institution
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('college')" [class.valid]="isValid('college')">
+
+                  <i class="fa-solid fa-building-columns"></i>
+
+                  <input id="registerCollege" type="text" formControlName="college" placeholder="College / Institution"
+                    maxlength="100" />
+
+                </div>
+
+
+                <!-- COLLEGE VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('college')">
+
+                  <span>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your college or institution.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   QUALIFICATION
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerQualification">
+                  Qualification
+                </label>
+
+                <div class="register-input">
+
+                  <i class="fa-solid fa-graduation-cap"></i>
+
+                  <input id="registerQualification" type="text" formControlName="qualification"
+                    placeholder="Your Qualification" maxlength="100" />
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   STATE
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerState">
+                  State
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('state')" [class.valid]="isValid('state')">
+
+                  <i class="fa-solid fa-map-location-dot"></i>
+
+                  <input id="registerState" type="text" formControlName="state" placeholder="Enter your state"
+                    maxlength="50" />
+
+                </div>
+
+
+                <!-- STATE VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('state')">
+
+                  <span>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your state.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   DISTRICT
+                   ============================================= -->
+
+              <div class="col-md-6">
+
+                <label for="registerDistrict">
+                  District
+                </label>
+
+                <div class="register-input" [class.invalid]="showError('district')" [class.valid]="isValid('district')">
+
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <input id="registerDistrict" type="text" formControlName="district" placeholder="Enter your district"
+                    maxlength="50" />
+
+                </div>
+
+
+                <!-- DISTRICT VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('district')">
+
+                  <span>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your district.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   MESSAGE
+                   ============================================= -->
+
+              <div class="col-md-12">
+
+                <label for="registerMessage">
+                  Message
+                </label>
+
+                <div class="register-input textarea-input" [class.invalid]="showError('message')"
+                  [class.valid]="isValid('message')">
+
+                  <i class="fa-solid fa-message"></i>
+
+                  <textarea id="registerMessage" rows="3" formControlName="message"
+                    placeholder="Tell us about your course requirement" maxlength="500"></textarea>
+
+                </div>
+
+
+                <!-- CHARACTER COUNT -->
+
+                <div class="message-counter">
+                  {{ f['message'].value?.length || 0 }}/500
+                </div>
+
+
+                <!-- MESSAGE VALIDATION -->
+
+                <div class="validation-message" *ngIf="showError('message')">
+
+                  <span *ngIf="f['message'].hasError('required')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Please enter your message.
+                  </span>
+
+                  <span *ngIf="f['message'].hasError('minlength')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Message must contain at least 10 characters.
+                  </span>
+
+                  <span *ngIf="f['message'].hasError('maxlength')">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Message cannot exceed 500 characters.
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   FORM ERROR
+                   ============================================= -->
+
+              <div class="col-md-12" *ngIf="formError">
+
+                <div class="form-alert error-alert">
+
+                  <i class="fa-solid fa-circle-exclamation"></i>
+
+                  <span>
+                    {{ formError }}
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   FORM SUCCESS
+                   ============================================= -->
+
+              <div class="col-md-12" *ngIf="formSuccess">
+
+                <div class="form-alert success-alert">
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  <span>
+                    {{ formSuccess }}
+                  </span>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- =============================================
+                   SUBMIT BUTTON
+                   ============================================= -->
+
+              <div class="col-md-12">
+
+                <button type="submit" class="register-submit-btn" [disabled]="isSubmitting">
+
+                  <!-- NORMAL -->
+
+                  <span *ngIf="!isSubmitting">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Register Now
+
+                  </span>
+
+
+                  <!-- LOADING -->
+
+                  <span *ngIf="isSubmitting" class="button-loading">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    Submitting...
+
+                  </span>
+
+                </button>
+
+              </div>
+
+
+            </div>
 
           </form>
 
@@ -151,3 +645,63 @@
   </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     WAITING / SUBMISSION POPUP
+     ========================================================= -->
+
+<div class="register-loading-overlay" *ngIf="isSubmitting" aria-live="polite" aria-busy="true">
+
+  <div class="register-loading-popup">
+
+
+    <!-- LOADING ICON -->
+
+    <div class="register-loading-icon-wrapper">
+
+      <div class="register-loading-spinner"></div>
+
+      <div class="register-loading-icon">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+      </div>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h3>
+      Please Wait...
+    </h3>
+
+
+    <!-- DESCRIPTION -->
+
+    <p>
+      Your registration is being submitted.
+    </p>
+
+
+    <!-- NOTE -->
+
+    <span class="loading-note">
+      Please do not close or refresh this page.
+    </span>
+
+
+    <!-- PROGRESS -->
+
+    <div class="loading-progress">
+
+      <span></span>
+
+    </div>
+
+
+  </div>
+
+</div>

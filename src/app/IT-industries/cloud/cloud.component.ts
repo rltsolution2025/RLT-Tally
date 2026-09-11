@@ -833,21 +833,44 @@ export class CloudComponent
     );
   }
 
-  /* =========================================================
-     ENROLLMENT / SYLLABUS MODAL
-     ========================================================= */
+  modalTitle = 'Enroll for the Course';
 
-  modalTitle =
-    'Enroll for the course';
+  showEnrollModal = false;
+
+  showSyllabusModal = false;
+
 
   openEnrollModal(): void {
-    this.modalTitle =
-      'Enroll for the course';
+
+    this.modalTitle = 'Enroll for the Course';
+
+    this.showSyllabusModal = false;
+
+    this.showEnrollModal = true;
+
+    document.body.classList.add('modal-open');
   }
 
+
   openSyllabusModal(): void {
-    this.modalTitle =
-      'Download Course Syllabus';
+
+    this.modalTitle = 'Get the Course Syllabus';
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = true;
+
+    document.body.classList.add('modal-open');
+  }
+
+
+  closeEnrollModal(): void {
+
+    this.showEnrollModal = false;
+
+    this.showSyllabusModal = false;
+
+    document.body.classList.remove('modal-open');
   }
 
   /* =========================================================
