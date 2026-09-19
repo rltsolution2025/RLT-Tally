@@ -67,7 +67,11 @@ export class Refer implements OnInit {
         'Digital Marketing & Business Development',
         'UI/UX Design & Development',
         'Power BI',
-        'Networking & CCNA'
+        'Networking & CCNA',
+        'Robotics',
+        'IoT',
+        'Drone Technology',
+        'Generative AI (GenAI)'
       ]
     },
 
@@ -89,7 +93,7 @@ export class Refer implements OnInit {
     },
 
 
-    {
+    /*{
       category: 'Emerging Technology Programs',
 
       courses: [
@@ -98,7 +102,7 @@ export class Refer implements OnInit {
         'Drone Technology',
         'Generative AI (GenAI)'
       ]
-    }
+    }*/
 
   ];
 

@@ -90,7 +90,7 @@ export class Contact {
        ======================================================= */
 
     {
-      category: 'Software & IT Programs',
+      category: 'IT & Emerging Technology Programs',
 
       courses: [
 
@@ -112,7 +112,15 @@ export class Contact {
 
         'Power BI',
 
-        'Networking & CCNA'
+        'Networking & CCNA',
+
+        'Robotics',
+
+        'IoT',
+
+        'Drone Technology',
+
+        'Generative AI (GenAI)'
 
       ]
     },
@@ -122,7 +130,7 @@ export class Contact {
        CATEGORY 03
        ======================================================= */
 
-    {
+   /* {
       category: 'Emerging Technology Programs',
 
       courses: [
@@ -136,7 +144,7 @@ export class Contact {
         'Generative AI (GenAI)'
 
       ]
-    }
+    } */
 
   ];
 
