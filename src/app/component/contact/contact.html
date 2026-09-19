@@ -1,3 +1,7 @@
+<!-- =========================================================
+     RLT EDZARO — CONTACT SECTION
+     ========================================================= -->
+
 <section class="contact-section py-5">
 
   <div class="container">
@@ -25,6 +29,7 @@
 
     <div class="row g-4">
 
+
       <!-- ===================================================
            CONTACT FORM
            =================================================== -->
@@ -35,19 +40,23 @@
 
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
 
-            <!-- =============================================
+            <!-- =================================================
                  NAME + EMAIL
-                 ============================================= -->
+                 ================================================= -->
 
             <div class="row">
 
-              <!-- NAME -->
+
+              <!-- =================================================
+                   NAME
+                   ================================================= -->
 
               <div class="col-md-6 mb-3">
 
                 <label for="contact-name">
                   Name
                 </label>
+
 
                 <input id="contact-name" type="text" class="form-control" formControlName="name" placeholder="Your Name"
                   autocomplete="name" maxlength="50" [class.is-invalid]="
@@ -66,24 +75,47 @@
                     (nameControl.touched || submitted)
                   ">
 
+                  <!-- REQUIRED -->
+
                   <span *ngIf="nameControl.hasError('required')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter your name.
+
                   </span>
+
+
+                  <!-- MIN LENGTH -->
 
                   <span *ngIf="nameControl.hasError('minlength')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Name must contain at least 3 characters.
+
                   </span>
+
+
+                  <!-- MAX LENGTH -->
 
                   <span *ngIf="nameControl.hasError('maxlength')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Name cannot exceed 50 characters.
+
                   </span>
 
+
+                  <!-- PATTERN -->
+
                   <span *ngIf="nameControl.hasError('pattern')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter a valid name.
+
                   </span>
 
                 </div>
@@ -91,13 +123,16 @@
               </div>
 
 
-              <!-- EMAIL -->
+              <!-- =================================================
+                   EMAIL
+                   ================================================= -->
 
               <div class="col-md-6 mb-3">
 
                 <label for="contact-email">
                   Email
                 </label>
+
 
                 <input id="contact-email" type="email" class="form-control" formControlName="email"
                   placeholder="Your Email" autocomplete="email" maxlength="100" [class.is-invalid]="
@@ -116,19 +151,36 @@
                     (emailControl.touched || submitted)
                   ">
 
+                  <!-- REQUIRED -->
+
                   <span *ngIf="emailControl.hasError('required')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter your email address.
+
                   </span>
+
+
+                  <!-- INVALID EMAIL -->
 
                   <span *ngIf="emailControl.hasError('email')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter a valid email address.
+
                   </span>
 
+
+                  <!-- MAX LENGTH -->
+
                   <span *ngIf="emailControl.hasError('maxlength')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Email cannot exceed 100 characters.
+
                   </span>
 
                 </div>
@@ -138,19 +190,23 @@
             </div>
 
 
-            <!-- =============================================
-                 PHONE + COURSE
-                 ============================================= -->
+            <!-- =================================================
+                 PHONE + CATEGORY
+                 ================================================= -->
 
             <div class="row">
 
-              <!-- PHONE -->
+
+              <!-- =================================================
+                   PHONE
+                   ================================================= -->
 
               <div class="col-md-6 mb-3">
 
                 <label for="contact-mobile">
                   Phone Number
                 </label>
+
 
                 <input id="contact-mobile" type="tel" class="form-control" formControlName="mobile"
                   placeholder="Your Phone Number" autocomplete="tel" inputmode="numeric" maxlength="10"
@@ -170,14 +226,25 @@
                     (mobileControl.touched || submitted)
                   ">
 
+                  <!-- REQUIRED -->
+
                   <span *ngIf="mobileControl.hasError('required')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter your phone number.
+
                   </span>
 
+
+                  <!-- INVALID PHONE -->
+
                   <span *ngIf="mobileControl.hasError('pattern')">
+
                     <i class="bi bi-exclamation-circle-fill"></i>
+
                     Please enter a valid 10-digit phone number.
+
                   </span>
 
                 </div>
@@ -185,43 +252,64 @@
               </div>
 
 
-              <!-- COURSE -->
+              <!-- =================================================
+                   PROGRAM CATEGORY
+                   ================================================= -->
 
               <div class="col-md-6 mb-3">
 
-                <label for="contact-course">
-                  Select Course
+                <label for="contact-category">
+                  Program Category
                 </label>
 
-                <select id="contact-course" class="form-select" formControlName="course" [class.is-invalid]="
-                    courseControl.invalid &&
-                    (courseControl.touched || submitted)
-                  " [class.is-valid]="
-                    courseControl.valid &&
-                    courseControl.touched
-                  ">
 
-                  <option value="">
-                    Select a course
-                  </option>
+                <div class="contact-select-wrapper">
 
-                  <option *ngFor="let course of courses" [value]="course">
-                    {{ course }}
-                  </option>
+                  <select id="contact-category" class="form-select" formControlName="category"
+                    (change)="onCategoryChange()" [class.is-invalid]="
+                      categoryControl.invalid &&
+                      (categoryControl.touched || submitted)
+                    " [class.is-valid]="
+                      categoryControl.valid &&
+                      categoryControl.touched
+                    ">
 
-                </select>
+                    <!-- DEFAULT -->
+
+                    <option value="" disabled>
+                      Select Category
+                    </option>
 
 
-                <!-- COURSE VALIDATION -->
+                    <!-- CATEGORY OPTIONS -->
+
+                    <option *ngFor="let group of courseGroups" [value]="group.category">
+
+                      {{ group.category }}
+
+                    </option>
+
+                  </select>
+
+
+                  <i class="bi bi-chevron-down contact-select-arrow"></i>
+
+                </div>
+
+
+                <!-- CATEGORY VALIDATION -->
 
                 <div class="field-error" *ngIf="
-                    courseControl.invalid &&
-                    (courseControl.touched || submitted)
+                    categoryControl.invalid &&
+                    (categoryControl.touched || submitted)
                   ">
 
-                  <span *ngIf="courseControl.hasError('required')">
+                  <span>
+
                     <i class="bi bi-exclamation-circle-fill"></i>
-                    Please select a course.
+
+                    Please select a program category.
+
                   </span>
 
                 </div>
@@ -231,15 +319,131 @@
             </div>
 
 
-            <!-- =============================================
+            <!-- =================================================
+                 COURSE DROPDOWN
+                 ================================================= -->
+
+            <div class="row">
+
+              <div class="col-md-12 mb-3">
+
+                <label for="contact-course">
+                  Select Course
+                </label>
+
+
+                <div class="contact-select-wrapper" [class.select-disabled]="
+                    availableCourses.length === 0
+                  ">
+
+                  <select id="contact-course" class="form-select" formControlName="course" [disabled]="
+                      availableCourses.length === 0
+                    " [class.is-invalid]="
+                      courseControl.invalid &&
+                      (courseControl.touched || submitted)
+                    " [class.is-valid]="
+                      courseControl.valid &&
+                      courseControl.touched
+                    ">
+
+                    <!-- DEFAULT -->
+
+                    <option value="" disabled>
+
+                      {{
+                      availableCourses.length > 0
+                      ? 'Select Course'
+                      : 'Select Category First'
+                      }}
+
+                    </option>
+
+
+                    <!-- COURSE OPTIONS -->
+
+                    <option *ngFor="let course of availableCourses" [value]="course">
+
+                      {{ course }}
+
+                    </option>
+
+                  </select>
+
+
+                  <i class="bi bi-chevron-down contact-select-arrow"></i>
+
+                </div>
+
+
+                <!-- COURSE VALIDATION -->
+
+                <div class="field-error" *ngIf="
+                    courseControl.invalid &&
+                    (courseControl.touched || submitted)
+                  ">
+
+                  <span>
+
+                    <i class="bi bi-exclamation-circle-fill"></i>
+
+                    Please select a course.
+
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SELECTED PROGRAM
+                 ================================================= -->
+
+            <div class="selected-course-box" *ngIf="
+                categoryControl.value &&
+                courseControl.value
+              ">
+
+              <div class="selected-course-icon">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+              </div>
+
+
+              <div class="selected-course-content">
+
+                <span>
+                  SELECTED PROGRAM
+                </span>
+
+
+                <strong>
+                  {{ categoryControl.value }}
+                </strong>
+
+
+                <small>
+                  {{ courseControl.value }}
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
                  MESSAGE
-                 ============================================= -->
+                 ================================================= -->
 
             <div class="mb-3">
 
               <label for="contact-message">
                 Message
               </label>
+
 
               <textarea id="contact-message" class="form-control" rows="4" formControlName="message"
                 placeholder="Your Message" maxlength="500" [class.is-invalid]="
@@ -258,7 +462,9 @@
                 " [class.danger]="
                   (messageControl.value?.length || 0) >= 490
                 ">
+
                 {{ messageControl.value?.length || 0 }}/500
+
               </div>
 
 
@@ -269,19 +475,42 @@
                   (messageControl.touched || submitted)
                 ">
 
-                <span *ngIf="messageControl.hasError('required')">
+                <!-- REQUIRED -->
+
+                <span *ngIf="
+                    messageControl.hasError('required')
+                  ">
+
                   <i class="bi bi-exclamation-circle-fill"></i>
+
                   Please enter your message.
+
                 </span>
 
-                <span *ngIf="messageControl.hasError('minlength')">
+
+                <!-- MIN LENGTH -->
+
+                <span *ngIf="
+                    messageControl.hasError('minlength')
+                  ">
+
                   <i class="bi bi-exclamation-circle-fill"></i>
+
                   Message must contain at least 10 characters.
+
                 </span>
 
-                <span *ngIf="messageControl.hasError('maxlength')">
+
+                <!-- MAX LENGTH -->
+
+                <span *ngIf="
+                    messageControl.hasError('maxlength')
+                  ">
+
                   <i class="bi bi-exclamation-circle-fill"></i>
+
                   Message cannot exceed 500 characters.
+
                 </span>
 
               </div>
@@ -289,9 +518,9 @@
             </div>
 
 
-            <!-- =============================================
+            <!-- =================================================
                  FORM ERROR
-                 ============================================= -->
+                 ================================================= -->
 
             <div class="form-error-alert" *ngIf="formError" role="alert">
 
@@ -304,9 +533,9 @@
             </div>
 
 
-            <!-- =============================================
+            <!-- =================================================
                  FORM SUCCESS
-                 ============================================= -->
+                 ================================================= -->
 
             <div class="form-success-alert" *ngIf="formSuccess" role="status">
 
@@ -319,13 +548,14 @@
             </div>
 
 
-            <!-- =============================================
+            <!-- =================================================
                  SUBMIT BUTTON
-                 ============================================= -->
+                 ================================================= -->
 
             <button class="btn btn-primary contact-btn" type="submit" [disabled]="isSubmitting">
 
-              <!-- NORMAL -->
+
+              <!-- NORMAL STATE -->
 
               <span *ngIf="!isSubmitting" class="button-content">
 
@@ -336,7 +566,7 @@
               </span>
 
 
-              <!-- LOADING -->
+              <!-- LOADING STATE -->
 
               <span *ngIf="isSubmitting" class="button-loading">
 
@@ -355,7 +585,6 @@
       </div>
 
 
-
       <!-- ===================================================
            CONTACT INFORMATION
            =================================================== -->
@@ -364,12 +593,15 @@
 
         <div class="contact-info-card">
 
+
           <h4>
             Contact Information
           </h4>
 
 
-          <!-- EMAIL -->
+          <!-- =================================================
+               EMAIL
+               ================================================= -->
 
           <p>
 
@@ -390,7 +622,9 @@
           </p>
 
 
-          <!-- PHONE -->
+          <!-- =================================================
+               PHONE
+               ================================================= -->
 
           <p>
 
@@ -411,7 +645,9 @@
           </p>
 
 
-          <!-- ALTERNATE PHONE -->
+          <!-- =================================================
+               ALTERNATE PHONE
+               ================================================= -->
 
           <p>
 
@@ -432,7 +668,9 @@
           </p>
 
 
-          <!-- BRANCH NUMBER -->
+          <!-- =================================================
+               BRANCH NUMBER
+               ================================================= -->
 
           <p>
 
@@ -453,7 +691,9 @@
           </p>
 
 
-          <!-- KODAMBAKKAM -->
+          <!-- =================================================
+               KODAMBAKKAM
+               ================================================= -->
 
           <p class="address">
 
@@ -469,6 +709,7 @@
 
               2, 1st St, Corporation Colony,
               Rangarajapuram, Kodambakkam,
+
               <br />
 
               Chennai – 600024
@@ -478,7 +719,9 @@
           </p>
 
 
-          <!-- CHENGALPATTU -->
+          <!-- =================================================
+               CHENGALPATTU
+               ================================================= -->
 
           <p class="address">
 
@@ -494,6 +737,9 @@
 
               No.1 School Road,
               Athur, Chengalpattu,
+
+              <br />
+
               Tamil Nadu - 603101
 
             </span>
@@ -501,7 +747,9 @@
           </p>
 
 
-          <!-- MADURAI -->
+          <!-- =================================================
+               MADURAI
+               ================================================= -->
 
           <p class="address">
 
@@ -520,6 +768,9 @@
               1st Cross St,
               near Army Canteen,
               Madurai,
+
+              <br />
+
               Tamil Nadu 625017
 
             </span>
@@ -537,7 +788,6 @@
 </section>
 
 
-
 <!-- =========================================================
      WAITING / SUBMISSION POPUP
      ========================================================= -->
@@ -546,7 +796,10 @@
 
   <div class="contact-loading-popup">
 
-    <!-- ANIMATED ICON -->
+
+    <!-- =====================================================
+         ANIMATED ICON
+         ===================================================== -->
 
     <div class="contact-loading-icon-wrapper">
 
@@ -561,28 +814,36 @@
     </div>
 
 
-    <!-- TITLE -->
+    <!-- =====================================================
+         TITLE
+         ===================================================== -->
 
     <h3>
       Please Wait...
     </h3>
 
 
-    <!-- DESCRIPTION -->
+    <!-- =====================================================
+         DESCRIPTION
+         ===================================================== -->
 
     <p>
       Your message is being submitted.
     </p>
 
 
-    <!-- NOTE -->
+    <!-- =====================================================
+         NOTE
+         ===================================================== -->
 
     <span class="contact-loading-note">
       Please do not close or refresh this page.
     </span>
 
 
-    <!-- PROGRESS -->
+    <!-- =====================================================
+         PROGRESS
+         ===================================================== -->
 
     <div class="contact-loading-progress">
 

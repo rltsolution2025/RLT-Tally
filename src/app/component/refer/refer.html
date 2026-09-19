@@ -1,5 +1,5 @@
 <!-- =========================================================
-     REGISTER / CAREER SECTION
+     RLT EDZARO — REGISTRATION SECTION
      ========================================================= -->
 
 <section class="register-modern">
@@ -8,15 +8,14 @@
 
     <div class="row align-items-center g-5">
 
-      <!-- ===================================================
+
+      <!-- =====================================================
            LEFT CONTENT
-           =================================================== -->
+           ===================================================== -->
 
       <div class="col-lg-6">
 
         <div class="register-content">
-
-          <!-- TOP TAG -->
 
           <span class="register-tag">
             <i class="fa-solid fa-graduation-cap"></i>
@@ -24,20 +23,23 @@
           </span>
 
 
-          <!-- MAIN HEADING -->
-
           <h2 class="register-heading">
+
             Build Your Skills.
-            <span>Shape Your Future.</span>
+
+            <span>
+              Shape Your Future.
+            </span>
+
           </h2>
 
 
-          <!-- DESCRIPTION -->
-
           <p class="register-desc">
             Take the next step in your career with practical,
-            industry-focused Software, IT, Tally and Accounting
-            training designed to build confidence and job-ready skills.
+            industry-focused programs across Software &amp; IT,
+            Tally &amp; Accounting, and Emerging Technologies.
+            Build practical skills, explore real-world applications,
+            and prepare for your future career.
           </p>
 
 
@@ -47,8 +49,6 @@
 
           <div class="register-points">
 
-
-            <!-- BENEFIT 1 -->
 
             <div class="register-point">
 
@@ -72,8 +72,6 @@
             </div>
 
 
-            <!-- BENEFIT 2 -->
-
             <div class="register-point">
 
               <div class="point-icon">
@@ -96,8 +94,6 @@
             </div>
 
 
-            <!-- BENEFIT 3 -->
-
             <div class="register-point">
 
               <div class="point-icon">
@@ -119,7 +115,6 @@
 
             </div>
 
-
           </div>
 
 
@@ -138,7 +133,7 @@
             <div>
 
               <strong>
-                Need help choosing a course?
+                Need help choosing a program?
               </strong>
 
               <span>
@@ -149,16 +144,14 @@
 
           </div>
 
-
         </div>
 
       </div>
 
 
-
-      <!-- ===================================================
-           RIGHT REGISTRATION FORM
-           =================================================== -->
+      <!-- =====================================================
+           RIGHT FORM
+           ===================================================== -->
 
       <div class="col-lg-6">
 
@@ -181,11 +174,10 @@
 
             <p>
               Fill in your details below and our team will contact
-              you with the right course information.
+              you with the right program information.
             </p>
 
           </div>
-
 
 
           <!-- =================================================
@@ -197,9 +189,9 @@
             <div class="row g-3">
 
 
-              <!-- =============================================
-                   NAME
-                   ============================================= -->
+              <!-- =================================================
+                   FULL NAME
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -217,28 +209,41 @@
                 </div>
 
 
-                <!-- NAME VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('name')">
 
                   <span *ngIf="f['name'].hasError('required')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your name.
+
                   </span>
+
 
                   <span *ngIf="f['name'].hasError('minlength')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Name must contain at least 3 characters.
+
                   </span>
+
 
                   <span *ngIf="f['name'].hasError('maxlength')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Name cannot exceed 50 characters.
+
                   </span>
 
+
                   <span *ngIf="f['name'].hasError('pattern')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter a valid name using letters only.
+
                   </span>
 
                 </div>
@@ -246,10 +251,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    PHONE
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -267,18 +271,23 @@
                 </div>
 
 
-                <!-- PHONE VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('phone')">
 
                   <span *ngIf="f['phone'].hasError('required')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your phone number.
+
                   </span>
 
+
                   <span *ngIf="f['phone'].hasError('pattern')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Enter a valid 10-digit mobile number.
+
                   </span>
 
                 </div>
@@ -286,10 +295,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    EMAIL
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-12">
 
@@ -307,23 +315,32 @@
                 </div>
 
 
-                <!-- EMAIL VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('email')">
 
                   <span *ngIf="f['email'].hasError('required')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your email address.
+
                   </span>
+
 
                   <span *ngIf="f['email'].hasError('email')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter a valid email address.
+
                   </span>
 
+
                   <span *ngIf="f['email'].hasError('maxlength')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Email cannot exceed 100 characters.
+
                   </span>
 
                 </div>
@@ -331,44 +348,115 @@
               </div>
 
 
+              <!-- =================================================
+                   CATEGORY DROPDOWN
+                   ================================================= -->
 
-              <!-- =============================================
-                   COURSE
-                   ============================================= -->
+              <div class="col-md-6">
 
-              <div class="col-md-12">
+                <label for="registerCategory">
+                  Program Category
+                </label>
+
+
+                <div class="register-select" [class.invalid]="showError('category')"
+                  [class.valid]="isValid('category')">
+
+                  <i class="fa-solid fa-layer-group"></i>
+
+
+                  <select id="registerCategory" formControlName="category" (change)="onCategoryChange()">
+
+                    <option value="" disabled>
+                      Select Category
+                    </option>
+
+
+                    <option *ngFor="let group of courseGroups" [value]="group.category">
+
+                      {{ group.category }}
+
+                    </option>
+
+                  </select>
+
+
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                </div>
+
+
+                <!-- CATEGORY ERROR -->
+
+                <div class="validation-message" *ngIf="showError('category')">
+
+                  <span>
+
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    Please select a program category.
+
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================================
+                   COURSE DROPDOWN
+                   ================================================= -->
+
+              <div class="col-md-6">
 
                 <label for="registerCourse">
                   Select Course
                 </label>
 
-                <div class="register-input select-input" [class.invalid]="showError('course')"
-                  [class.valid]="isValid('course')">
+
+                <div class="register-select" [class.disabled]="availableCourses.length === 0"
+                  [class.invalid]="showError('course')" [class.valid]="isValid('course')">
 
                   <i class="fa-solid fa-book-open"></i>
 
-                  <select id="registerCourse" formControlName="course">
 
-                    <option value="">
-                      Select your course
+                  <select id="registerCourse" formControlName="course" [disabled]="availableCourses.length === 0">
+
+                    <option value="" disabled>
+
+                      {{
+                      availableCourses.length
+                      ? 'Select Course'
+                      : 'Select Category First'
+                      }}
+
                     </option>
 
-                    <option *ngFor="let course of courses" [value]="course">
+
+                    <option *ngFor="let course of availableCourses" [value]="course">
+
                       {{ course }}
+
                     </option>
 
                   </select>
 
+
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+
                 </div>
 
 
-                <!-- COURSE VALIDATION -->
+                <!-- COURSE ERROR -->
 
                 <div class="validation-message" *ngIf="showError('course')">
 
                   <span>
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please select a course.
+
                   </span>
 
                 </div>
@@ -376,10 +464,47 @@
               </div>
 
 
+              <!-- =================================================
+                   SELECTED PROGRAM
+                   ================================================= -->
 
-              <!-- =============================================
-                   COLLEGE / INSTITUTION
-                   ============================================= -->
+              <div class="col-md-12" *ngIf="f['category'].value && f['course'].value">
+
+                <div class="selected-program">
+
+                  <div class="selected-program-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                  </div>
+
+
+                  <div class="selected-program-content">
+
+                    <span>
+                      SELECTED PROGRAM
+                    </span>
+
+
+                    <strong>
+                      {{ f['category'].value }}
+                    </strong>
+
+
+                    <small>
+                      {{ f['course'].value }}
+                    </small>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <!-- =================================================
+                   COLLEGE
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -397,13 +522,14 @@
                 </div>
 
 
-                <!-- COLLEGE VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('college')">
 
                   <span>
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your college or institution.
+
                   </span>
 
                 </div>
@@ -411,10 +537,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    QUALIFICATION
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -434,10 +559,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    STATE
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -455,13 +579,14 @@
                 </div>
 
 
-                <!-- STATE VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('state')">
 
                   <span>
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your state.
+
                   </span>
 
                 </div>
@@ -469,10 +594,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    DISTRICT
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-6">
 
@@ -490,13 +614,14 @@
                 </div>
 
 
-                <!-- DISTRICT VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('district')">
 
                   <span>
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your district.
+
                   </span>
 
                 </div>
@@ -504,10 +629,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    MESSAGE
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-12">
 
@@ -521,35 +645,42 @@
                   <i class="fa-solid fa-message"></i>
 
                   <textarea id="registerMessage" rows="3" formControlName="message"
-                    placeholder="Tell us about your course requirement" maxlength="500"></textarea>
+                    placeholder="Tell us about your program requirement" maxlength="500"></textarea>
 
                 </div>
 
-
-                <!-- CHARACTER COUNT -->
 
                 <div class="message-counter">
                   {{ f['message'].value?.length || 0 }}/500
                 </div>
 
 
-                <!-- MESSAGE VALIDATION -->
-
                 <div class="validation-message" *ngIf="showError('message')">
 
                   <span *ngIf="f['message'].hasError('required')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Please enter your message.
+
                   </span>
+
 
                   <span *ngIf="f['message'].hasError('minlength')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Message must contain at least 10 characters.
+
                   </span>
 
+
                   <span *ngIf="f['message'].hasError('maxlength')">
+
                     <i class="fa-solid fa-circle-exclamation"></i>
+
                     Message cannot exceed 500 characters.
+
                   </span>
 
                 </div>
@@ -557,10 +688,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    FORM ERROR
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-12" *ngIf="formError">
 
@@ -577,10 +707,9 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    FORM SUCCESS
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-12" *ngIf="formSuccess">
 
@@ -597,16 +726,13 @@
               </div>
 
 
-
-              <!-- =============================================
+              <!-- =================================================
                    SUBMIT BUTTON
-                   ============================================= -->
+                   ================================================= -->
 
               <div class="col-md-12">
 
                 <button type="submit" class="register-submit-btn" [disabled]="isSubmitting">
-
-                  <!-- NORMAL -->
 
                   <span *ngIf="!isSubmitting">
 
@@ -616,8 +742,6 @@
 
                   </span>
 
-
-                  <!-- LOADING -->
 
                   <span *ngIf="isSubmitting" class="button-loading">
 
@@ -630,7 +754,6 @@
                 </button>
 
               </div>
-
 
             </div>
 
@@ -647,17 +770,13 @@
 </section>
 
 
-
 <!-- =========================================================
-     WAITING / SUBMISSION POPUP
+     SUBMISSION WAITING POPUP
      ========================================================= -->
 
 <div class="register-loading-overlay" *ngIf="isSubmitting" aria-live="polite" aria-busy="true">
 
   <div class="register-loading-popup">
-
-
-    <!-- LOADING ICON -->
 
     <div class="register-loading-icon-wrapper">
 
@@ -672,35 +791,26 @@
     </div>
 
 
-    <!-- TITLE -->
-
     <h3>
       Please Wait...
     </h3>
 
-
-    <!-- DESCRIPTION -->
 
     <p>
       Your registration is being submitted.
     </p>
 
 
-    <!-- NOTE -->
-
     <span class="loading-note">
       Please do not close or refresh this page.
     </span>
 
-
-    <!-- PROGRESS -->
 
     <div class="loading-progress">
 
       <span></span>
 
     </div>
-
 
   </div>
 

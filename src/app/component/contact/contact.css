@@ -1,8 +1,15 @@
 /* =========================================================
-   CONTACT SECTION
+   RLT EDZARO — CONTACT SECTION
+   Premium Blue Theme
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN CONTACT SECTION
    ========================================================= */
 
 .contact-section {
+
   position: relative;
 
   overflow: hidden;
@@ -19,6 +26,7 @@
    ========================================================= */
 
 .contact-title {
+
   margin-bottom: 12px;
 
   font-size: 42px;
@@ -34,6 +42,7 @@
    ========================================================= */
 
 .contact-subtitle {
+
   max-width: 650px;
 
   margin:
@@ -48,10 +57,11 @@
 
 
 /* =========================================================
-   CONTACT CARD
+   CONTACT FORM CARD
    ========================================================= */
 
 .contact-card {
+
   height: 100%;
 
   padding: 40px;
@@ -59,7 +69,7 @@
   border-radius: 18px;
 
   background:
-    rgba(255, 255, 255, 0.9);
+    rgba(255, 255, 255, 0.94);
 
   border:
     1px solid rgba(226, 232, 240, 0.9);
@@ -80,6 +90,7 @@
    ========================================================= */
 
 .contact-card label {
+
   display: block;
 
   margin-bottom: 8px;
@@ -98,6 +109,9 @@
 
 .contact-card .form-control,
 .contact-card .form-select {
+
+  width: 100%;
+
   min-height: 48px;
 
   padding:
@@ -114,7 +128,8 @@
   color:
     #1f2937;
 
-  font-size: 14px;
+  font-size:
+    14px;
 
   box-shadow:
     none;
@@ -122,7 +137,20 @@
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT HOVER
+   ========================================================= */
+
+.contact-card .form-control:hover,
+.contact-card .form-select:hover {
+
+  border-color:
+    #bfdbfe;
 }
 
 
@@ -131,11 +159,15 @@
    ========================================================= */
 
 .contact-card textarea.form-control {
-  min-height: 120px;
 
-  resize: vertical;
+  min-height:
+    120px;
 
-  line-height: 1.6;
+  resize:
+    vertical;
+
+  line-height:
+    1.6;
 }
 
 
@@ -144,10 +176,12 @@
    ========================================================= */
 
 .contact-card .form-control::placeholder {
+
   color:
     #94a3b8;
 
-  opacity: 1;
+  opacity:
+    1;
 }
 
 
@@ -157,6 +191,7 @@
 
 .contact-card .form-control:focus,
 .contact-card .form-select:focus {
+
   border-color:
     #2563eb;
 
@@ -164,7 +199,7 @@
     none;
 
   box-shadow:
-    0 0 0 3px rgba(37, 99, 235, 0.1);
+    0 0 0 3px rgba(37, 99, 235, 0.10);
 
   transform:
     translateY(-1px);
@@ -177,8 +212,9 @@
 
 .contact-card .form-control.is-valid,
 .contact-card .form-select.is-valid {
+
   border-color:
-    #10b981;
+    #93c5fd;
 
   background-image:
     none;
@@ -191,6 +227,7 @@
 
 .contact-card .form-control.is-invalid,
 .contact-card .form-select.is-invalid {
+
   border-color:
     #dc2626;
 
@@ -203,15 +240,387 @@
 
 
 /* =========================================================
+   CUSTOM SELECT WRAPPER
+   ========================================================= */
+
+.contact-select-wrapper {
+
+  position:
+    relative;
+
+  width:
+    100%;
+}
+
+
+/* =========================================================
+   CUSTOM SELECT
+   ========================================================= */
+
+.contact-select-wrapper .form-select {
+
+  width:
+    100%;
+
+  padding:
+    11px 44px 11px 14px;
+
+  appearance:
+    none;
+
+  -webkit-appearance:
+    none;
+
+  -moz-appearance:
+    none;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+.contact-select-arrow {
+
+  position:
+    absolute;
+
+  top:
+    50%;
+
+  right:
+    15px;
+
+  transform:
+    translateY(-50%);
+
+  color:
+    #64748b;
+
+  font-size:
+    11px;
+
+  pointer-events:
+    none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   SELECT FOCUS ARROW
+   ========================================================= */
+
+.contact-select-wrapper:focus-within .contact-select-arrow {
+
+  color:
+    #2563eb;
+
+  transform:
+    translateY(-50%) rotate(180deg);
+}
+
+
+/* =========================================================
+   SELECT DISABLED
+   ========================================================= */
+
+.contact-select-wrapper.select-disabled .form-select {
+
+  background:
+    #f8fafc;
+
+  color:
+    #94a3b8;
+
+  border-color:
+    #e2e8f0;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================================
+   DISABLED ARROW
+   ========================================================= */
+
+.contact-select-wrapper.select-disabled .contact-select-arrow {
+
+  color:
+    #94a3b8;
+}
+
+
+/* =========================================================
+   SELECT OPTIONS
+   ========================================================= */
+
+.contact-select-wrapper .form-select option {
+
+  background:
+    #ffffff;
+
+  color:
+    #1f2937;
+
+  padding:
+    10px;
+}
+
+
+/* =========================================================
+   FIRST PLACEHOLDER OPTION
+   ========================================================= */
+
+.contact-select-wrapper .form-select option[value=""] {
+
+  color:
+    #94a3b8;
+}
+
+
+/* =========================================================
+   SELECTED COURSE BOX
+   ========================================================= */
+
+.selected-course-box {
+
+  position:
+    relative;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    2px 0 16px;
+
+  padding:
+    13px 15px;
+
+  border:
+    1px solid #bfdbfe;
+
+  border-radius:
+    13px;
+
+  background:
+    linear-gradient(110deg,
+      #eff6ff 0%,
+      #f8fbff 60%,
+      #ffffff 100%);
+
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.07);
+
+  animation:
+    selectedCourseIn 0.3s ease both;
+
+  overflow:
+    hidden;
+}
+
+
+/* =========================================================
+   SELECTED COURSE ACCENT
+   ========================================================= */
+
+.selected-course-box::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    0;
+
+  left:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    4px;
+
+  background:
+    linear-gradient(180deg,
+      #1d4ed8,
+      #60a5fa);
+}
+
+
+/* =========================================================
+   SELECTED COURSE ICON
+   ========================================================= */
+
+.selected-course-icon {
+
+  flex:
+    0 0 38px;
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    10px;
+
+  background:
+    linear-gradient(135deg,
+      #2563eb,
+      #1d4ed8);
+
+  color:
+    #ffffff;
+
+  font-size:
+    14px;
+
+  box-shadow:
+    0 7px 16px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================================
+   SELECTED COURSE CONTENT
+   ========================================================= */
+
+.selected-course-content {
+
+  min-width:
+    0;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+}
+
+
+/* =========================================================
+   SELECTED COURSE LABEL
+   ========================================================= */
+
+.selected-course-content span {
+
+  margin-bottom:
+    2px;
+
+  color:
+    #64748b;
+
+  font-size:
+    8px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.2px;
+
+  line-height:
+    1.2;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================================
+   SELECTED CATEGORY
+   ========================================================= */
+
+.selected-course-content strong {
+
+  display:
+    block;
+
+  color:
+    #1d4ed8;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.4;
+
+  word-break:
+    break-word;
+}
+
+
+/* =========================================================
+   SELECTED COURSE
+   ========================================================= */
+
+.selected-course-content small {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  color:
+    #475569;
+
+  font-size:
+    11px;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.4;
+
+  word-break:
+    break-word;
+}
+
+
+/* =========================================================
    FIELD ERROR
    ========================================================= */
 
 .field-error {
-  margin-top: 6px;
 
-  font-size: 12px;
+  margin-top:
+    6px;
 
-  line-height: 1.5;
+  font-size:
+    12px;
+
+  line-height:
+    1.5;
 
   color:
     #dc2626;
@@ -223,7 +632,9 @@
    ========================================================= */
 
 .field-error span {
-  display: block;
+
+  display:
+    block;
 }
 
 
@@ -232,9 +643,12 @@
    ========================================================= */
 
 .field-error i {
-  margin-right: 5px;
 
-  font-size: 11px;
+  margin-right:
+    5px;
+
+  font-size:
+    11px;
 }
 
 
@@ -243,7 +657,9 @@
    ========================================================= */
 
 .message-counter {
-  margin-top: 5px;
+
+  margin-top:
+    5px;
 
   text-align:
     right;
@@ -264,6 +680,7 @@
    ========================================================= */
 
 .message-counter.warning {
+
   color:
     #d97706;
 
@@ -277,6 +694,7 @@
    ========================================================= */
 
 .message-counter.danger {
+
   color:
     #dc2626;
 
@@ -290,11 +708,15 @@
    ========================================================= */
 
 .contact-btn {
-  width: 100%;
 
-  min-height: 50px;
+  width:
+    100%;
 
-  margin-top: 10px;
+  min-height:
+    50px;
+
+  margin-top:
+    10px;
 
   display:
     flex;
@@ -357,6 +779,7 @@
    ========================================================= */
 
 .contact-btn:active:not(:disabled) {
+
   transform:
     translateY(0);
 }
@@ -367,6 +790,7 @@
    ========================================================= */
 
 .contact-btn:disabled {
+
   opacity:
     0.65;
 
@@ -386,6 +810,7 @@
    ========================================================= */
 
 .button-content {
+
   display:
     inline-flex;
 
@@ -405,6 +830,7 @@
    ========================================================= */
 
 .button-loading {
+
   display:
     inline-flex;
 
@@ -420,21 +846,23 @@
 
 
 /* =========================================================
-   LOADING ICON
+   BUTTON SPIN
    ========================================================= */
 
 .spin {
+
   animation:
     buttonSpin 1s linear infinite;
 }
 
 
 /* =========================================================
-   FORM ERROR ALERT
+   FORM ERROR / SUCCESS ALERT
    ========================================================= */
 
 .form-error-alert,
 .form-success-alert {
+
   display:
     flex;
 
@@ -466,6 +894,7 @@
    ========================================================= */
 
 .form-error-alert {
+
   color:
     #991b1b;
 
@@ -482,14 +911,15 @@
    ========================================================= */
 
 .form-success-alert {
+
   color:
-    #065f46;
+    #1d4ed8;
 
   background:
-    #ecfdf5;
+    #eff6ff;
 
   border:
-    1px solid #a7f3d0;
+    1px solid #bfdbfe;
 }
 
 
@@ -498,6 +928,7 @@
    ========================================================= */
 
 .contact-info-card {
+
   position:
     relative;
 
@@ -535,6 +966,7 @@
 
 .contact-info-card h4,
 .contact-info-card p {
+
   position:
     relative;
 
@@ -544,10 +976,11 @@
 
 
 /* =========================================================
-   VECTOR CIRCLE 1
+   DECORATION CIRCLE 1
    ========================================================= */
 
 .contact-info-card::before {
+
   content:
     "";
 
@@ -581,10 +1014,11 @@
 
 
 /* =========================================================
-   VECTOR CIRCLE 2
+   DECORATION CIRCLE 2
    ========================================================= */
 
 .contact-info-card::after {
+
   content:
     "";
 
@@ -624,18 +1058,24 @@
 @keyframes vectorFloat {
 
   0% {
+
     transform:
       translate(0, 0);
+
   }
 
   50% {
+
     transform:
       translate(-15px, 15px);
+
   }
 
   100% {
+
     transform:
       translate(0, 0);
+
   }
 
 }
@@ -648,18 +1088,24 @@
 @keyframes vectorFloatReverse {
 
   0% {
+
     transform:
       translate(0, 0);
+
   }
 
   50% {
+
     transform:
       translate(15px, -15px);
+
   }
 
   100% {
+
     transform:
       translate(0, 0);
+
   }
 
 }
@@ -670,6 +1116,7 @@
    ========================================================= */
 
 .contact-info-card h4 {
+
   margin:
     0 0 25px;
 
@@ -686,6 +1133,7 @@
    ========================================================= */
 
 .contact-info-card p {
+
   display:
     flex;
 
@@ -711,6 +1159,7 @@
    ========================================================= */
 
 .contact-icon {
+
   width:
     36px;
 
@@ -754,6 +1203,7 @@
    ========================================================= */
 
 .contact-info-card p span {
+
   display:
     block;
 
@@ -767,6 +1217,7 @@
    ========================================================= */
 
 .contact-info-card a {
+
   color:
     #e0f2fe;
 
@@ -782,10 +1233,11 @@
 
 
 /* =========================================================
-   LINK HOVER
+   CONTACT LINK HOVER
    ========================================================= */
 
 .contact-info-card a:hover {
+
   color:
     #ffffff;
 
@@ -799,6 +1251,7 @@
    ========================================================= */
 
 .contact-info-card .address {
+
   display:
     flex;
 
@@ -815,6 +1268,7 @@
    ========================================================= */
 
 .contact-loading-overlay {
+
   position:
     fixed;
 
@@ -861,6 +1315,7 @@
    ========================================================= */
 
 .contact-loading-popup {
+
   width:
     100%;
 
@@ -884,7 +1339,6 @@
 
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.25),
-
     0 10px 30px rgba(37, 99, 235, 0.12);
 
   animation:
@@ -897,6 +1351,7 @@
    ========================================================= */
 
 .contact-loading-icon-wrapper {
+
   position:
     relative;
 
@@ -925,6 +1380,7 @@
    ========================================================= */
 
 .contact-loading-spinner {
+
   position:
     absolute;
 
@@ -956,6 +1412,7 @@
    ========================================================= */
 
 .contact-loading-icon {
+
   width:
     58px;
 
@@ -995,6 +1452,7 @@
    ========================================================= */
 
 .contact-loading-popup h3 {
+
   margin:
     0 0 10px;
 
@@ -1014,6 +1472,7 @@
    ========================================================= */
 
 .contact-loading-popup p {
+
   max-width:
     320px;
 
@@ -1036,6 +1495,7 @@
    ========================================================= */
 
 .contact-loading-note {
+
   display:
     block;
 
@@ -1058,6 +1518,7 @@
    ========================================================= */
 
 .contact-loading-progress {
+
   width:
     100%;
 
@@ -1083,6 +1544,7 @@
    ========================================================= */
 
 .contact-loading-progress span {
+
   display:
     block;
 
@@ -1112,13 +1574,46 @@
 @keyframes buttonSpin {
 
   from {
+
     transform:
       rotate(0deg);
+
   }
 
   to {
+
     transform:
       rotate(360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   SELECTED COURSE ANIMATION
+   ========================================================= */
+
+@keyframes selectedCourseIn {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(-5px);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
   }
 
 }
@@ -1131,13 +1626,17 @@
 @keyframes contactOverlayFadeIn {
 
   from {
+
     opacity:
       0;
+
   }
 
   to {
+
     opacity:
       1;
+
   }
 
 }
@@ -1150,19 +1649,23 @@
 @keyframes contactPopupScale {
 
   from {
+
     opacity:
       0;
 
     transform:
       translateY(15px) scale(0.94);
+
   }
 
   to {
+
     opacity:
       1;
 
     transform:
       translateY(0) scale(1);
+
   }
 
 }
@@ -1175,32 +1678,40 @@
 @keyframes contactSpinner {
 
   to {
+
     transform:
       rotate(360deg);
+
   }
 
 }
 
 
 /* =========================================================
-   POPUP PROGRESS ANIMATION
+   POPUP PROGRESS
    ========================================================= */
 
 @keyframes contactProgress {
 
   0% {
+
     transform:
       translateX(-120%);
+
   }
 
   50% {
+
     transform:
       translateX(160%);
+
   }
 
   100% {
+
     transform:
       translateX(300%);
+
   }
 
 }
@@ -1213,18 +1724,40 @@
 @media (max-width: 768px) {
 
   .contact-card {
+
     padding:
       30px 25px;
   }
 
+
   .contact-info-card {
+
     padding:
       35px 28px;
   }
 
+
   .contact-title {
+
     font-size:
       35px;
+  }
+
+
+  .contact-select-wrapper .form-select {
+
+    min-height:
+      48px;
+  }
+
+
+  .selected-course-box {
+
+    margin-bottom:
+      14px;
+
+    padding:
+      12px 13px;
   }
 
 }
@@ -1237,6 +1770,7 @@
 @media (max-width: 480px) {
 
   .contact-section {
+
     padding-top:
       35px !important;
 
@@ -1244,42 +1778,165 @@
       35px !important;
   }
 
+
   .contact-title {
+
     font-size:
       29px;
   }
 
+
   .contact-subtitle {
+
     font-size:
       14px;
   }
 
+
   .contact-card {
+
     padding:
       25px 18px;
   }
 
+
   .contact-info-card {
+
     padding:
       30px 20px;
   }
 
+
   .contact-info-card h4 {
+
     font-size:
       21px;
   }
 
+
   .contact-info-card p {
+
     font-size:
       14px;
   }
 
+
+  .contact-card .form-control,
+  .contact-card .form-select {
+
+    min-height:
+      48px;
+
+    font-size:
+      13px;
+  }
+
+
+  .contact-select-wrapper .form-select {
+
+    padding:
+      10px 38px 10px 12px;
+  }
+
+
+  .contact-select-arrow {
+
+    right:
+      13px;
+
+    font-size:
+      10px;
+  }
+
+
+  .selected-course-box {
+
+    gap:
+      9px;
+
+    margin-top:
+      0;
+
+    margin-bottom:
+      13px;
+
+    padding:
+      10px 11px;
+
+    border-radius:
+      11px;
+  }
+
+
+  .selected-course-icon {
+
+    flex:
+      0 0 31px;
+
+    width:
+      31px;
+
+    height:
+      31px;
+
+    border-radius:
+      8px;
+
+    font-size:
+      11px;
+  }
+
+
+  .selected-course-content span {
+
+    font-size:
+      7px;
+
+    letter-spacing:
+      1px;
+  }
+
+
+  .selected-course-content strong {
+
+    font-size:
+      10.5px;
+  }
+
+
+  .selected-course-content small {
+
+    font-size:
+      10px;
+  }
+
+
+  .field-error {
+
+    font-size:
+      11px;
+  }
+
+
+  .contact-btn {
+
+    min-height:
+      50px;
+
+    font-size:
+      14px;
+  }
+
+
   .contact-loading-overlay {
+
     padding:
       15px;
   }
 
+
   .contact-loading-popup {
+
     max-width:
       360px;
 
@@ -1290,15 +1947,19 @@
       18px;
   }
 
+
   .contact-loading-icon-wrapper {
+
     width:
       78px;
 
     height:
       78px;
   }
+
 
   .contact-loading-spinner {
+
     width:
       76px;
 
@@ -1306,7 +1967,9 @@
       76px;
   }
 
+
   .contact-loading-icon {
+
     width:
       50px;
 
@@ -1317,14 +1980,46 @@
       18px;
   }
 
+
   .contact-loading-popup h3 {
+
     font-size:
       22px;
   }
 
+
   .contact-loading-popup p {
+
     font-size:
       13px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-info-card::before,
+  .contact-info-card::after,
+  .contact-btn,
+  .contact-card .form-control,
+  .contact-card .form-select,
+  .contact-select-arrow,
+  .selected-course-box,
+  .contact-loading-overlay,
+  .contact-loading-popup,
+  .contact-loading-spinner,
+  .contact-loading-progress span {
+
+    animation:
+      none !important;
+
+    transition:
+      none !important;
   }
 
 }

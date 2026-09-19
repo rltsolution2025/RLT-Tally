@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+
 import {
   AbstractControl,
   FormBuilder,
@@ -7,18 +8,24 @@ import {
   ReactiveFormsModule,
   Validators
 } from '@angular/forms';
+
 import { ApiService } from '../../services/api.service';
+
 
 @Component({
   selector: 'app-refer',
   standalone: true,
+
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
+
   templateUrl: './refer.html',
   styleUrls: ['./refer.css']
 })
+
+
 export class Refer implements OnInit {
 
   /* =========================================================
@@ -42,18 +49,65 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
-     COURSE LIST
+     CATEGORY / COURSE DATA
      ========================================================= */
 
-  courses: string[] = [
-    'Tally Essentials Comprehensive',
-    'Tally Prime - ERP',
-    'Tally Professional',
-    'GST Simulation',
-    'Office Automation',
-    'Payroll & Income Tax',
-    'Master Accountant Using Tally'
+  courseGroups = [
+
+    {
+      category: 'Software & IT Programs',
+
+      courses: [
+        'Python Full Stack Development',
+        'Java Full Stack Development',
+        '.NET Full Stack Development',
+        'Cloud Computing & Database Management',
+        'Data Science with AI',
+        'AI with Machine Learning',
+        'Digital Marketing & Business Development',
+        'UI/UX Design & Development',
+        'Power BI',
+        'Networking & CCNA'
+      ]
+    },
+
+
+    {
+      category: 'Tally & Accounting Programs',
+
+      courses: [
+        'Tally Essentials Comprehensive',
+        'Tally Professional',
+        'GST using TallyPrime',
+        'GST Simulation',
+        'Office Automation',
+        'Payroll & Income Tax',
+        'Master Accountant Using Tally',
+        'Inventory Management',
+        'TDL Essential'
+      ]
+    },
+
+
+    {
+      category: 'Emerging Technology Programs',
+
+      courses: [
+        'Robotics',
+        'IoT',
+        'Drone Technology',
+        'Generative AI (GenAI)'
+      ]
+    }
+
   ];
+
+
+  /* =========================================================
+     AVAILABLE COURSES
+     ========================================================= */
+
+  availableCourses: string[] = [];
 
 
   /* =========================================================
@@ -121,6 +175,18 @@ export class Refer implements OnInit {
 
 
       /* -------------------------------------------------------
+         CATEGORY
+         ------------------------------------------------------- */
+
+      category: [
+        '',
+        [
+          Validators.required
+        ]
+      ],
+
+
+      /* -------------------------------------------------------
          COURSE
          ------------------------------------------------------- */
 
@@ -133,7 +199,7 @@ export class Refer implements OnInit {
 
 
       /* -------------------------------------------------------
-         COLLEGE / INSTITUTION
+         COLLEGE
          ------------------------------------------------------- */
 
       college: [
@@ -205,7 +271,7 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
-     FORM CONTROLS SHORTCUT
+     FORM CONTROLS
      ========================================================= */
 
   get f(): {
@@ -218,7 +284,7 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
-     CHECK FIELD ERROR
+     FIELD ERROR
      ========================================================= */
 
   showError(field: string): boolean {
@@ -238,7 +304,7 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
-     CHECK FIELD VALID
+     FIELD VALID
      ========================================================= */
 
   isValid(field: string): boolean {
@@ -258,9 +324,43 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
+     CATEGORY CHANGE
+     ========================================================= */
+
+  onCategoryChange(): void {
+
+    const selectedCategory =
+      this.registerForm.get('category')?.value;
+
+
+    /* Find selected category */
+    const selectedGroup =
+      this.courseGroups.find(
+        group => group.category === selectedCategory
+      );
+
+
+    /* Load corresponding courses */
+    this.availableCourses =
+      selectedGroup?.courses ?? [];
+
+
+    /* Reset course whenever category changes */
+    this.registerForm
+      .get('course')
+      ?.reset('');
+
+
+    /* Mark course as untouched */
+    this.registerForm
+      .get('course')
+      ?.markAsUntouched();
+
+  }
+
+
+  /* =========================================================
      PHONE INPUT
-     ---------------------------------------------------------
-     Allows only numeric characters
      ========================================================= */
 
   allowOnlyNumbers(event: Event): void {
@@ -272,10 +372,13 @@ export class Refer implements OnInit {
       return;
     }
 
+
     const cleanedValue =
       input.value.replace(/[^0-9]/g, '');
 
+
     input.value = cleanedValue;
+
 
     this.f['phone'].setValue(
       cleanedValue,
@@ -288,14 +391,10 @@ export class Refer implements OnInit {
 
 
   /* =========================================================
-     SUBMIT FORM
+     SUBMIT
      ========================================================= */
 
   onSubmit(): void {
-
-    /* -------------------------------------------------------
-       CLEAR PREVIOUS MESSAGES
-       ------------------------------------------------------- */
 
     this.formError = '';
 
@@ -305,7 +404,7 @@ export class Refer implements OnInit {
 
 
     /* -------------------------------------------------------
-       CHECK FORM VALIDATION
+       VALIDATION
        ------------------------------------------------------- */
 
     if (this.registerForm.invalid) {
@@ -337,20 +436,64 @@ export class Refer implements OnInit {
 
 
     /* -------------------------------------------------------
-       GET FORM DATA
+       FORM DATA
        ------------------------------------------------------- */
 
     const formData = {
-      name: this.registerForm.get('name')?.value?.trim(),
-      phone: this.registerForm.get('phone')?.value?.trim(),
-      email: this.registerForm.get('email')?.value?.trim(),
-      course: this.registerForm.get('course')?.value,
-      college: this.registerForm.get('college')?.value?.trim(),
+
+      name:
+        this.registerForm
+          .get('name')
+          ?.value
+          ?.trim(),
+
+      phone:
+        this.registerForm
+          .get('phone')
+          ?.value
+          ?.trim(),
+
+      email:
+        this.registerForm
+          .get('email')
+          ?.value
+          ?.trim(),
+
+      course:
+        this.registerForm
+          .get('course')
+          ?.value,
+
+      college:
+        this.registerForm
+          .get('college')
+          ?.value
+          ?.trim(),
+
       qualification:
-        this.registerForm.get('qualification')?.value?.trim(),
-      state: this.registerForm.get('state')?.value?.trim(),
-      district: this.registerForm.get('district')?.value?.trim(),
-      message: this.registerForm.get('message')?.value?.trim()
+        this.registerForm
+          .get('qualification')
+          ?.value
+          ?.trim(),
+
+      state:
+        this.registerForm
+          .get('state')
+          ?.value
+          ?.trim(),
+
+      district:
+        this.registerForm
+          .get('district')
+          ?.value
+          ?.trim(),
+
+      message:
+        this.registerForm
+          .get('message')
+          ?.value
+          ?.trim()
+
     };
 
 
@@ -372,39 +515,25 @@ export class Refer implements OnInit {
         );
 
 
-        /* ---------------------------------------------------
-           STOP LOADING
-           --------------------------------------------------- */
-
         this.isSubmitting = false;
 
-
-        /* ---------------------------------------------------
-           SUCCESS MESSAGE
-           --------------------------------------------------- */
 
         this.formSuccess =
           'Registration submitted successfully! Our team will contact you soon.';
 
 
-        /* ---------------------------------------------------
-           RESET FORM
-           --------------------------------------------------- */
-
+        /* Reset form */
         this.registerForm.reset();
 
 
-        /* ---------------------------------------------------
-           RESET SUBMITTED STATE
-           --------------------------------------------------- */
+        /* Reset course list */
+        this.availableCourses = [];
+
 
         this.submitted = false;
 
 
-        /* ---------------------------------------------------
-           CLEAR SUCCESS MESSAGE
-           --------------------------------------------------- */
-
+        /* Hide success message */
         setTimeout(() => {
 
           this.formSuccess = '';
@@ -426,16 +555,8 @@ export class Refer implements OnInit {
         );
 
 
-        /* ---------------------------------------------------
-           STOP LOADING
-           --------------------------------------------------- */
-
         this.isSubmitting = false;
 
-
-        /* ---------------------------------------------------
-           ERROR MESSAGE
-           --------------------------------------------------- */
 
         this.formError =
           'Unable to submit your registration right now. Please try again.';
