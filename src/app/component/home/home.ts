@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Carousel } from 'bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -12,33 +13,81 @@ export class Home implements AfterViewInit {
   constructor(private route: ActivatedRoute) { }
 
   ngAfterViewInit(): void {
+
+    /*==================================================
+                    URL FRAGMENT SCROLL
+    ==================================================*/
+
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
         setTimeout(() => {
           const element = document.getElementById(fragment);
+
           if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
           }
         }, 100);
       }
     });
 
+
+    /*==================================================
+                      HOME CAROUSEL
+    ==================================================*/
+
+    const carouselElement = document.getElementById('homeCarousel');
+
+    if (carouselElement) {
+
+      new Carousel(carouselElement, {
+        interval: 4000,
+        ride: 'carousel',
+        pause: false,
+        wrap: true,
+        touch: true,
+        keyboard: true
+      });
+
+    }
+
+
+    /*==================================================
+                  REVEAL ANIMATIONS
+    ==================================================*/
+
     const observer = new IntersectionObserver(
       entries => {
+
         entries.forEach(entry => {
+
           if (entry.isIntersecting) {
+
             entry.target.classList.add('active');
-            observer.unobserve(entry.target); // animate once
+
+            observer.unobserve(entry.target);
+
           }
+
         });
+
       },
-      { threshold: 0.2 }
+      {
+        threshold: 0.2
+      }
     );
+
 
     document.querySelectorAll(
       '.reveal, .reveal-up, .reveal-fade, .reveal-right, .reveal-zoom'
-    ).forEach(el => observer.observe(el));
+    ).forEach(element => {
+      observer.observe(element);
+    });
+
   }
+  
   categories = [
     'All',
     'Popular Programs',

@@ -306,6 +306,7 @@
       #0891b2);
 
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1592,6 +1593,7 @@ SMALL MOBILE (≤ 400px)
 
 .cert-title span {
   background: linear-gradient(135deg, #0d6efd, #38bdf8);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
