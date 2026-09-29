@@ -125,7 +125,7 @@ export const routes: Routes = [
   { path: 'java-full-stack-developer-course', component: JavaFullstackComponent },
   { path: 'dotnet-full-stack-developer-course', component: DotnetFullstackComponent },
   { path: 'python-full-stack-developer-course', component: PythonFullStackComponent },
-  { path: 'ui-ux-designer-course', component: UiUxDesignerComponent },
+  { path: 'ui-ux-design-course', component: UiUxDesignerComponent },
   { path: 'ccna-networking-course', component: CCNAComponent },
   { path: 'power-bi-tableau-course', component: PowerBIComponent },
 
