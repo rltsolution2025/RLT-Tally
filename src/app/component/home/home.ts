@@ -2,16 +2,17 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Carousel } from 'bootstrap';
+import { GoogleReviews } from '../../components/google-reviews/google-reviews';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, GoogleReviews],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
 export class Home implements AfterViewInit {
   constructor(private route: ActivatedRoute) { }
-
+  
   ngAfterViewInit(): void {
 
     /*==================================================

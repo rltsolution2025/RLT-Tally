@@ -1,0 +1,33 @@
+.google-reviews-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.7;
+}

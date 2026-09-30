@@ -61,6 +61,13 @@ app.get('/health', (req, res) => {
     timestamp: new Date(),
   });
 });
+const googleReviewsRoutes =
+  require('./routes/googleReviews');
+
+app.use(
+  '/api/google-reviews',
+  googleReviewsRoutes
+);
 
 // =========================
 // API Routes

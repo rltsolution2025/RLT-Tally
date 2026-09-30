@@ -61,6 +61,8 @@ import { TallySalemComponent } from './component/city/tally-salem/tally-salem.co
 import { TallyVelloreComponent } from './component/city/tally-vellore/tally-vellore.component';
 import { TDLComponent } from './component/courses/tdl/tdl.component';
 import { InventoryManagementComponent } from './component/courses/inventory-management/inventory-management.component';
+import { GoogleReviews } from './components/google-reviews/google-reviews';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -152,4 +154,5 @@ export const routes: Routes = [
     component: IsTallyprimeEasyToLearnForBeginnersComponent,
   },
 
+  { path: 'google-review', component: GoogleReviews },
 ];
