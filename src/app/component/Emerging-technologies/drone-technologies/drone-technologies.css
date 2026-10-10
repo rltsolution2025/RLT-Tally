@@ -1,0 +1,11517 @@
+/* =========================================================
+   RLT EDZARO
+   DRONE TECHNOLOGY PAGE
+   PREMIUM AERIAL HUD / FLIGHT SYSTEM DESIGN
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:host {
+
+    display: block;
+
+    --drone-950: #020e28;
+    --drone-925: #031431;
+    --drone-900: #052558;
+    --drone-875: #072e69;
+    --drone-850: #083775;
+    --drone-800: #0a4083;
+    --drone-750: #0b478e;
+    --drone-700: #0d47a1;
+    --drone-650: #1058c1;
+    --drone-600: #125fd3;
+    --drone-550: #1568df;
+    --drone-500: #196ee9;
+    --drone-450: #3284ee;
+    --drone-400: #4b98f4;
+    --drone-350: #63a9f7;
+    --drone-300: #78b8fa;
+    --drone-250: #9ccafd;
+    --drone-200: #c1ddff;
+    --drone-150: #d9eafd;
+    --drone-100: #eaf3fd;
+    --drone-75: #f2f7fd;
+    --drone-50: #f8fbff;
+
+    --drone-text: #092651;
+    --drone-muted: #65758d;
+
+    --drone-border: #dce9f8;
+
+    --drone-shadow-sm:
+        0 8px 25px rgba(7, 49, 111, 0.07);
+
+    --drone-shadow-md:
+        0 18px 50px rgba(7, 49, 111, 0.11);
+
+    --drone-shadow-lg:
+        0 30px 85px rgba(3, 30, 74, 0.19);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.drone-page {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    color: var(--drone-text);
+
+    background:
+        #ffffff;
+}
+
+
+.drone-page a {
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.container {
+
+    width:
+        min(1260px, calc(100% - 40px));
+
+    margin:
+        0 auto;
+}
+
+
+.position-relative {
+    position: relative;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section-block {
+
+    position: relative;
+
+    padding:
+        105px 0;
+}
+
+
+.light-section {
+
+    background:
+
+        radial-gradient(circle at 8% 15%,
+            rgba(25, 110, 233, .055),
+            transparent 29%),
+
+        radial-gradient(circle at 92% 85%,
+            rgba(25, 110, 233, .045),
+            transparent 29%),
+
+        var(--drone-50);
+}
+
+
+.section-heading {
+
+    max-width:
+        820px;
+
+    margin-bottom:
+        54px;
+}
+
+
+.section-heading.center {
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+
+    text-align:
+        center;
+}
+
+
+.section-kicker {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--drone-600);
+
+    font-size:
+        10px;
+
+    font-weight:
+        850;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.section-kicker.light {
+
+    color:
+        #9ecbff;
+}
+
+
+.section-heading h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        clamp(35px, 4vw, 58px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.section-heading h2 span {
+
+    color:
+        var(--drone-600);
+}
+
+
+.section-heading p {
+
+    max-width:
+        750px;
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+}
+
+
+.section-heading.center p {
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+}
+
+
+.dark-heading h2 {
+
+    color:
+        #ffffff;
+}
+
+
+.dark-heading p {
+
+    color:
+        #bdd5ef;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.drone-hero {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    min-height:
+        825px;
+
+    padding:
+        90px 0 35px;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 75% 27%,
+            rgba(65, 155, 255, .24),
+            transparent 29%),
+
+        radial-gradient(circle at 13% 83%,
+            rgba(14, 91, 207, .19),
+            transparent 30%),
+
+        linear-gradient(135deg,
+            #020e29 0%,
+            #05285e 49%,
+            #084c99 100%);
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.drone-hero-grid {
+
+    position:
+        absolute;
+
+    inset:
+        -120px;
+
+    z-index:
+        -5;
+
+    opacity:
+        .13;
+
+    background-image:
+
+        linear-gradient(rgba(114, 190, 255, .08) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(114, 190, 255, .08) 1px,
+            transparent 1px);
+
+    background-size:
+        46px 46px;
+
+    transform:
+        perspective(700px) rotateX(58deg) scale(1.45);
+
+    transform-origin:
+        center bottom;
+
+    animation:
+        droneGridMove 18s linear infinite;
+}
+
+
+@keyframes droneGridMove {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            0 46px,
+            46px 0;
+    }
+}
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.drone-hero-glow {
+
+    position:
+        absolute;
+
+    border-radius:
+        50%;
+
+    filter:
+        blur(85px);
+
+    pointer-events:
+        none;
+}
+
+
+.hero-glow-a {
+
+    width:
+        440px;
+
+    height:
+        440px;
+
+    right:
+        -100px;
+
+    top:
+        -40px;
+
+    background:
+        rgba(60, 155, 255, .17);
+
+    animation:
+        heroGlowA 8s ease-in-out infinite;
+}
+
+
+.hero-glow-b {
+
+    width:
+        310px;
+
+    height:
+        310px;
+
+    left:
+        -90px;
+
+    bottom:
+        -90px;
+
+    background:
+        rgba(24, 107, 229, .14);
+
+    animation:
+        heroGlowB 9s ease-in-out infinite;
+}
+
+
+@keyframes heroGlowA {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-25px, 22px) scale(1.12);
+    }
+}
+
+
+@keyframes heroGlowB {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(25px, -20px) scale(1.13);
+    }
+}
+
+
+/* =========================================================
+   SCAN LINE
+========================================================= */
+
+.hero-scan-line {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(107, 183, 255, .55),
+            transparent);
+
+    opacity:
+        .45;
+
+    animation:
+        scanDown 6s linear infinite;
+}
+
+
+@keyframes scanDown {
+
+    from {
+        transform:
+            translateY(0);
+    }
+
+    to {
+        transform:
+            translateY(825px);
+    }
+}
+
+
+/* =========================================================
+   HERO LAYOUT
+========================================================= */
+
+.drone-hero-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.03fr) minmax(450px, .97fr);
+
+    align-items:
+        center;
+
+    gap:
+        60px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.drone-hero-content {
+
+    max-width:
+        730px;
+
+    animation:
+        heroContentEnter 1s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+
+@keyframes heroContentEnter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translate3d(-40px, 16px, 0);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translate3d(0, 0, 0);
+    }
+}
+
+
+.drone-eyebrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid rgba(160, 211, 255, .18);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    color:
+        #9fcaff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .16em;
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.radar-status {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #74baff;
+
+    box-shadow:
+        0 0 15px rgba(74, 169, 255, .95);
+
+    animation:
+        radarStatus 1.7s ease-in-out infinite;
+}
+
+
+@keyframes radarStatus {
+
+    0%,
+    100% {
+        transform:
+            scale(.8);
+
+        opacity:
+            .5;
+    }
+
+    50% {
+        transform:
+            scale(1.4);
+
+        opacity:
+            1;
+    }
+}
+
+
+.drone-hero-content h1 {
+
+    margin:
+        22px 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(50px, 6vw, 80px);
+
+    line-height:
+        .95;
+
+    letter-spacing:
+        -.065em;
+
+    font-weight:
+        900;
+}
+
+
+.drone-hero-content h1 span {
+
+    color:
+        #79baff;
+}
+
+
+.drone-hero-content h1 strong {
+
+    display:
+        block;
+
+    color:
+        #79baff;
+}
+
+
+.drone-hero-content h2 {
+
+    max-width:
+        720px;
+
+    margin:
+        0 0 19px;
+
+    color:
+        #ddecff;
+
+    font-size:
+        clamp(20px, 2vw, 27px);
+
+    line-height:
+        1.35;
+
+    font-weight:
+        700;
+}
+
+
+.hero-lead {
+
+    max-width:
+        670px;
+
+    margin:
+        0 0 9px;
+
+    color:
+        #dbeaff;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+}
+
+
+.hero-copy {
+
+    max-width:
+        660px;
+
+    margin:
+        0;
+
+    color:
+        #b9d0eb;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   PARTNER
+========================================================= */
+
+.drone-partner {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin:
+        25px 0;
+
+    padding:
+        12px 15px;
+
+    border:
+        1px solid rgba(160, 211, 255, .14);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.partner-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex:
+        0 0 auto;
+
+    border-radius:
+        12px;
+
+    color:
+        #84c0ff;
+
+    background:
+        rgba(67, 151, 248, .10);
+}
+
+
+.drone-partner small {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #8ab7e8;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.drone-partner strong {
+
+    display:
+        block;
+
+    color:
+        #ffffff;
+
+    font-size:
+        11px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.drone-hero-actions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+}
+
+
+.drone-primary-btn,
+.drone-outline-btn {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+.drone-primary-btn {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0c5dd6,
+            #378cf4);
+
+    box-shadow:
+        0 15px 35px rgba(8, 77, 174, .28);
+}
+
+
+.drone-primary-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -90%;
+
+    left:
+        -50%;
+
+    width:
+        34%;
+
+    height:
+        280%;
+
+    transform:
+        rotate(25deg);
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .27),
+            transparent);
+
+    animation:
+        buttonSweep 4.5s ease-in-out infinite;
+}
+
+
+@keyframes buttonSweep {
+
+    0%,
+    70% {
+        left:
+            -50%;
+    }
+
+    30% {
+        left:
+            125%;
+    }
+}
+
+
+.drone-primary-btn:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 22px 42px rgba(8, 77, 174, .34);
+}
+
+
+.drone-outline-btn {
+
+    color:
+        #deedff;
+
+    border:
+        1px solid rgba(183, 220, 255, .27);
+
+    background:
+        rgba(255, 255, 255, .035);
+}
+
+
+.drone-outline-btn:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   HERO TAGLINE
+========================================================= */
+
+.drone-tagline {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        24px;
+}
+
+
+.drone-tagline span {
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(157, 207, 255, .10);
+
+    border-radius:
+        999px;
+
+    color:
+        #a9c7e7;
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    font-size:
+        8px;
+
+    font-weight:
+        750;
+}
+
+
+.drone-tagline i {
+
+    color:
+        #6eb2ff;
+
+    font-size:
+        8px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.drone-hero-visual {
+
+    min-height:
+        585px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    animation:
+        heroVisualEnter 1.15s cubic-bezier(.2, .8, .2, 1) .12s both;
+}
+
+
+@keyframes heroVisualEnter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translate3d(40px, 0, 0) scale(.93);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translate3d(0, 0, 0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   FLIGHT INTERFACE
+========================================================= */
+
+.drone-flight-interface {
+
+    position:
+        relative;
+
+    width:
+        min(550px, 100%);
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+/* =========================================================
+   RADAR
+========================================================= */
+
+.drone-radar {
+
+    position:
+        absolute;
+
+    border:
+        1px solid rgba(111, 186, 255, .20);
+
+    border-radius:
+        50%;
+}
+
+
+.radar-one {
+
+    width:
+        93%;
+
+    height:
+        93%;
+
+    animation:
+        radarRotate 26s linear infinite;
+}
+
+
+.radar-two {
+
+    width:
+        71%;
+
+    height:
+        71%;
+
+    border-color:
+        rgba(98, 177, 249, .17);
+
+    animation:
+        radarRotateReverse 18s linear infinite;
+}
+
+
+.radar-three {
+
+    width:
+        48%;
+
+    height:
+        48%;
+
+    border-color:
+        rgba(91, 169, 242, .15);
+
+    animation:
+        radarRotate 12s linear infinite;
+}
+
+
+@keyframes radarRotate {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+@keyframes radarRotateReverse {
+
+    from {
+        transform:
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   HUD LINES
+========================================================= */
+
+.hud-line {
+
+    position:
+        absolute;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(104, 186, 255, .33),
+            transparent);
+}
+
+
+.hud-line-a {
+
+    width:
+        215px;
+
+    top:
+        28%;
+
+    left:
+        13%;
+
+    transform:
+        rotate(19deg);
+}
+
+
+.hud-line-b {
+
+    width:
+        215px;
+
+    top:
+        28%;
+
+    right:
+        12%;
+
+    transform:
+        rotate(161deg);
+}
+
+
+.hud-line-c {
+
+    width:
+        195px;
+
+    bottom:
+        27%;
+
+    left:
+        14%;
+
+    transform:
+        rotate(-19deg);
+}
+
+
+.hud-line-d {
+
+    width:
+        195px;
+
+    right:
+        13%;
+
+    bottom:
+        27%;
+
+    transform:
+        rotate(199deg);
+}
+
+
+/* =========================================================
+   FLIGHT PATH
+========================================================= */
+
+.flight-path {
+
+    position:
+        absolute;
+
+    inset:
+        4%;
+
+    width:
+        92%;
+
+    height:
+        92%;
+
+    overflow:
+        visible;
+}
+
+
+.flight-path path {
+
+    fill:
+        none;
+
+    stroke:
+        rgba(100, 181, 255, .34);
+
+    stroke-width:
+        1.5;
+
+    stroke-dasharray:
+        .025 .018;
+
+    animation:
+        flightPathDash 5s linear infinite;
+}
+
+
+@keyframes flightPathDash {
+
+    to {
+        stroke-dashoffset:
+            -1;
+    }
+}
+
+
+/* =========================================================
+   FLIGHT PARTICLE
+========================================================= */
+
+.flight-particle {
+
+    position:
+        absolute;
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        #72b7ff;
+
+    box-shadow:
+        0 0 18px rgba(69, 165, 255, .9);
+
+    offset-path:
+        path("M70 390 C130 290, 145 360, 220 240 S340 110, 430 65");
+
+    animation:
+        flightParticleMove 5s linear infinite;
+}
+
+
+@keyframes flightParticleMove {
+
+    from {
+        offset-distance:
+            0%;
+    }
+
+    to {
+        offset-distance:
+            100%;
+    }
+}
+
+
+/* =========================================================
+   DRONE
+========================================================= */
+
+.hero-drone {
+
+    position:
+        relative;
+
+    width:
+        255px;
+
+    height:
+        205px;
+
+    animation:
+        droneHover 4.5s ease-in-out infinite;
+}
+
+
+@keyframes droneHover {
+
+    0%,
+    100% {
+        transform:
+            translateY(0) rotateX(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px) rotateX(2deg);
+    }
+}
+
+
+.drone-arm {
+
+    position:
+        absolute;
+
+    width:
+        100px;
+
+    height:
+        10px;
+
+    top:
+        88px;
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(90deg,
+            #153b70,
+            #4f8fdc);
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, .20);
+}
+
+
+.arm-top-left {
+
+    left:
+        5px;
+
+    transform:
+        rotate(-30deg);
+}
+
+
+.arm-top-right {
+
+    right:
+        5px;
+
+    transform:
+        rotate(30deg);
+}
+
+
+.arm-bottom-left {
+
+    left:
+        5px;
+
+    transform:
+        rotate(30deg);
+}
+
+
+.arm-bottom-right {
+
+    right:
+        5px;
+
+    transform:
+        rotate(-30deg);
+}
+
+
+/* propellers */
+
+.drone-propeller {
+
+    position:
+        absolute;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    border:
+        1px solid rgba(123, 191, 255, .22);
+
+    border-radius:
+        50%;
+
+    animation:
+        propellerSpin .6s linear infinite;
+}
+
+
+.drone-propeller::before,
+.drone-propeller::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    background:
+        rgba(117, 184, 248, .55);
+
+    border-radius:
+        999px;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.drone-propeller::before {
+
+    width:
+        47px;
+
+    height:
+        2px;
+}
+
+
+.drone-propeller::after {
+
+    width:
+        2px;
+
+    height:
+        47px;
+}
+
+
+.propeller-one {
+
+    left:
+        3px;
+
+    top:
+        32px;
+}
+
+
+.propeller-two {
+
+    right:
+        3px;
+
+    top:
+        32px;
+}
+
+
+.propeller-three {
+
+    left:
+        3px;
+
+    bottom:
+        30px;
+}
+
+
+.propeller-four {
+
+    right:
+        3px;
+
+    bottom:
+        30px;
+}
+
+
+@keyframes propellerSpin {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+.drone-body {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        100px;
+
+    height:
+        72px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        2px solid #4d90df;
+
+    border-radius:
+        26px 26px 32px 32px;
+
+    background:
+        linear-gradient(145deg,
+            #123a70,
+            #061d44);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .23);
+}
+
+
+.drone-camera {
+
+    width:
+        31px;
+
+    height:
+        31px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(116, 191, 255, .28);
+
+    border-radius:
+        50%;
+
+    color:
+        #83bfff;
+
+    background:
+        rgba(66, 151, 247, .10);
+
+    font-size:
+        12px;
+}
+
+
+.drone-center-light {
+
+    position:
+        absolute;
+
+    top:
+        7px;
+
+    left:
+        50%;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        #73b8ff;
+
+    box-shadow:
+        0 0 13px rgba(72, 168, 255, .95);
+
+    animation:
+        centerLightPulse 1.3s ease-in-out infinite;
+}
+
+
+@keyframes centerLightPulse {
+
+    0%,
+    100% {
+        opacity:
+            .45;
+
+        transform:
+            translateX(-50%) scale(.75);
+    }
+
+    50% {
+        opacity:
+            1;
+
+        transform:
+            translateX(-50%) scale(1.25);
+    }
+}
+
+
+/* =========================================================
+   HUD CARDS
+========================================================= */
+
+.hud-card {
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid rgba(144, 202, 255, .15);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(3, 24, 57, .82);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, .18);
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.hud-card span {
+
+    display:
+        block;
+
+    color:
+        #76b5eb;
+
+    font-size:
+        6px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.hud-card strong {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        .04em;
+}
+
+
+.hud-card small {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        #91b8df;
+
+    font-size:
+        7px;
+}
+
+
+.gps-card {
+
+    top:
+        7%;
+
+    left:
+        0;
+
+    animation:
+        hudFloatA 4.6s ease-in-out infinite;
+}
+
+
+.altitude-card {
+
+    top:
+        12%;
+
+    right:
+        0;
+
+    animation:
+        hudFloatB 4.2s ease-in-out infinite;
+}
+
+
+.signal-card {
+
+    bottom:
+        11%;
+
+    left:
+        3%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    animation:
+        hudFloatC 4.9s ease-in-out infinite;
+}
+
+
+.signal-card>span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        #74b9ff;
+
+    box-shadow:
+        0 0 12px rgba(78, 173, 255, .95);
+}
+
+
+.signal-card strong {
+
+    margin:
+        0;
+
+    font-size:
+        8px;
+}
+
+
+.signal-card i {
+
+    color:
+        #74b7ff;
+
+    font-size:
+        9px;
+}
+
+
+@keyframes hudFloatA {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+@keyframes hudFloatB {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(7px);
+    }
+}
+
+
+@keyframes hudFloatC {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-6px);
+    }
+}
+
+
+/* =========================================================
+   SPEED
+========================================================= */
+
+.speed-indicator {
+
+    position:
+        absolute;
+
+    right:
+        1%;
+
+    bottom:
+        12%;
+
+    width:
+        105px;
+
+    height:
+        105px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(109, 185, 255, .20);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(40, 128, 236, .13),
+            rgba(2, 27, 62, .55));
+
+    box-shadow:
+        0 0 35px rgba(65, 158, 255, .07);
+}
+
+
+.speed-indicator span {
+
+    color:
+        #82b9e7;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.speed-indicator strong {
+
+    margin:
+        4px 0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+}
+
+
+.speed-indicator small {
+
+    color:
+        #80add4;
+
+    font-size:
+        6px;
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.drone-particle {
+
+    position:
+        absolute;
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        #68afff;
+
+    box-shadow:
+        0 0 13px rgba(69, 163, 255, .95);
+}
+
+
+.particle-a {
+
+    top:
+        15%;
+
+    left:
+        39%;
+
+    animation:
+        particleA 4s ease-in-out infinite;
+}
+
+
+.particle-b {
+
+    top:
+        39%;
+
+    right:
+        12%;
+
+    animation:
+        particleB 4.8s ease-in-out infinite;
+}
+
+
+.particle-c {
+
+    bottom:
+        21%;
+
+    left:
+        14%;
+
+    animation:
+        particleC 4.2s ease-in-out infinite;
+}
+
+
+.particle-d {
+
+    bottom:
+        15%;
+
+    right:
+        38%;
+
+    animation:
+        particleD 5s ease-in-out infinite;
+}
+
+
+@keyframes particleA {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-14px, 18px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleB {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-15px, -10px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleC {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(17px, -8px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleD {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-12px, -14px);
+
+        opacity:
+            1;
+    }
+}
+
+
+/* =========================================================
+   HERO SYSTEM STRIP
+========================================================= */
+
+.hero-system-strip {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        30px;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid rgba(160, 210, 255, .11);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    backdrop-filter:
+        blur(13px);
+}
+
+
+.hero-system-strip div {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        #a9c8e7;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+}
+
+
+.hero-system-strip i {
+
+    color:
+        #74b6ff;
+}
+
+
+.hero-system-strip>span {
+
+    width:
+        3px;
+
+    height:
+        3px;
+
+    border-radius:
+        50%;
+
+    background:
+        #4f80b8;
+}
+
+
+/* =========================================================
+   DEFINITION
+========================================================= */
+
+.drone-definition-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.06fr .94fr;
+
+    gap:
+        22px;
+}
+
+
+.definition-system-card,
+.definition-flow-card {
+
+    padding:
+        32px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        23px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+}
+
+
+.system-card-heading {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    margin-bottom:
+        22px;
+}
+
+
+.system-card-heading>div:first-child {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        14px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+}
+
+
+.system-card-heading small {
+
+    color:
+        var(--drone-500);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.system-card-heading h3 {
+
+    margin:
+        5px 0 0;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        24px;
+
+    font-weight:
+        850;
+}
+
+
+.definition-system-card>p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.75;
+}
+
+
+.component-mini-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        23px;
+}
+
+
+.component-mini-grid span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        10px;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        var(--drone-50);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.component-mini-grid i {
+
+    color:
+        var(--drone-600);
+}
+
+
+.flow-card-label {
+
+    color:
+        var(--drone-500);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.definition-flow-visual {
+
+    position:
+        relative;
+
+    width:
+        300px;
+
+    aspect-ratio:
+        1;
+
+    margin:
+        22px auto;
+}
+
+
+.definition-flow-visual::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        18%;
+
+    border:
+        1px dashed #bdd5ee;
+
+    border-radius:
+        50%;
+
+    animation:
+        definitionRotate 18s linear infinite;
+}
+
+
+@keyframes definitionRotate {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+.definition-node {
+
+    position:
+        absolute;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        4px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--drone-600);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    animation:
+        definitionNodeFloat 4s ease-in-out infinite;
+}
+
+
+.definition-node strong {
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .06em;
+}
+
+
+.definition-node:nth-child(1) {
+
+    top:
+        0;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.definition-node:nth-child(2) {
+
+    right:
+        1%;
+
+    top:
+        34%;
+
+    animation-delay:
+        -.8s;
+}
+
+
+.definition-node:nth-child(3) {
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        88px;
+
+    height:
+        88px;
+
+    color:
+        #ffffff;
+
+    border:
+        0;
+
+    background:
+        linear-gradient(145deg,
+            #0d4da7,
+            #237cee);
+
+    box-shadow:
+        0 20px 50px rgba(9, 75, 168, .25);
+
+    animation:
+        centralNodePulse 4s ease-in-out infinite;
+}
+
+
+.definition-node:nth-child(4) {
+
+    left:
+        0;
+
+    bottom:
+        9%;
+
+    animation-delay:
+        -1.5s;
+}
+
+
+.definition-node:nth-child(5) {
+
+    right:
+        18%;
+
+    bottom:
+        0;
+
+    animation-delay:
+        -2.1s;
+}
+
+
+@keyframes definitionNodeFloat {
+
+    0%,
+    100% {
+        margin-top:
+            0;
+    }
+
+    50% {
+        margin-top:
+            -7px;
+    }
+}
+
+
+@keyframes centralNodePulse {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%) scale(1.06);
+    }
+}
+
+
+.definition-flow-card>p {
+
+    max-width:
+        480px;
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   DARK WHY
+========================================================= */
+
+.dark-drone-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 82% 18%,
+            rgba(59, 153, 255, .22),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.dark-grid,
+.programming-grid,
+.build-drone-grid,
+.final-drone-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .07) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .07) 1px,
+            transparent 1px);
+
+    background-size:
+        45px 45px;
+}
+
+
+.why-drone-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        13px;
+}
+
+
+.why-drone-grid article {
+
+    position:
+        relative;
+
+    min-height:
+        260px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid rgba(163, 211, 255, .13);
+
+    border-radius:
+        19px;
+
+    background:
+        rgba(255, 255, 255, .043);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.why-drone-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+    background:
+        rgba(255, 255, 255, .065);
+}
+
+
+.why-drone-grid article>span {
+
+    position:
+        absolute;
+
+    top:
+        13px;
+
+    right:
+        16px;
+
+    color:
+        rgba(145, 202, 255, .20);
+
+    font-size:
+        28px;
+
+    font-weight:
+        900;
+}
+
+
+.why-drone-grid article>div {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+    border-radius:
+        14px;
+
+    color:
+        #7ebaff;
+
+    background:
+        rgba(78, 158, 255, .09);
+}
+
+
+.why-drone-grid h3 {
+
+    margin:
+        0 0 9px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+}
+
+
+.why-drone-grid p {
+
+    margin:
+        0;
+
+    color:
+        #abc6e7;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   WORKING TIMELINE
+========================================================= */
+
+.working-timeline {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    gap:
+        9px;
+}
+
+
+.timeline-line {
+
+    position:
+        absolute;
+
+    left:
+        37px;
+
+    top:
+        32px;
+
+    bottom:
+        32px;
+
+    width:
+        1px;
+
+    background:
+        #c8dbee;
+}
+
+
+.working-step {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        52px 52px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    min-height:
+        95px;
+
+    padding:
+        14px 18px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        16px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 5px 18px rgba(6, 55, 124, .03);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.working-step:hover {
+
+    transform:
+        translateX(4px);
+
+    box-shadow:
+        var(--drone-shadow-sm);
+}
+
+
+.step-number {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid #c9dcf0;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--drone-600);
+
+    background:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+}
+
+
+.step-icon {
+
+    width:
+        49px;
+
+    height:
+        49px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        13px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+}
+
+
+.working-step h3 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        17px;
+
+    font-weight:
+        850;
+}
+
+
+.working-step p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   COMPONENTS
+========================================================= */
+
+.components-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        14px;
+}
+
+
+.component-card {
+
+    position:
+        relative;
+
+    min-height:
+        250px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        19px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.component-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--drone-shadow-md);
+}
+
+
+.component-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        13px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+}
+
+
+.component-card h3 {
+
+    margin:
+        17px 0 8px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+}
+
+
+.component-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+.component-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        5px;
+
+    margin-top:
+        13px;
+}
+
+
+.component-tags span {
+
+    padding:
+        5px 7px;
+
+    border:
+        1px solid #dceafa;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        var(--drone-50);
+
+    font-size:
+        7px;
+
+    font-weight:
+        700;
+}
+
+
+.featured-component {
+
+    background:
+        linear-gradient(145deg,
+            #092c64,
+            #0a58bc);
+
+    border-color:
+        transparent;
+}
+
+
+.featured-component .component-icon {
+
+    color:
+        #8bc2ff;
+
+    background:
+        rgba(255, 255, 255, .08);
+}
+
+
+.featured-component h3 {
+
+    color:
+        #ffffff;
+}
+
+
+.featured-component p {
+
+    color:
+        #c3daf5;
+}
+
+
+/* =========================================================
+   FLIGHT FUNDAMENTALS
+========================================================= */
+
+.flight-fundamentals-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 82% 20%,
+            rgba(59, 153, 255, .20),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 56%,
+            #0a4da0);
+}
+
+
+.flight-control-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        .95fr 1.05fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+/* Visual */
+
+.flight-control-visual {
+
+    position:
+        relative;
+
+    min-height:
+        440px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.flight-axis {
+
+    position:
+        relative;
+
+    width:
+        340px;
+
+    aspect-ratio:
+        1;
+
+    border:
+        1px dashed rgba(126, 192, 255, .23);
+
+    border-radius:
+        50%;
+}
+
+
+.flight-axis::before,
+.flight-axis::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        17%;
+
+    border:
+        1px solid rgba(115, 184, 248, .10);
+
+    border-radius:
+        50%;
+}
+
+
+.axis-horizontal {
+
+    position:
+        absolute;
+
+    left:
+        4%;
+
+    right:
+        4%;
+
+    top:
+        50%;
+
+    height:
+        1px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        rgba(111, 182, 247, .22);
+}
+
+
+.axis-vertical {
+
+    position:
+        absolute;
+
+    top:
+        4%;
+
+    bottom:
+        4%;
+
+    left:
+        50%;
+
+    width:
+        1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(111, 182, 247, .22);
+}
+
+
+.flight-drone-mini {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        120px;
+
+    height:
+        110px;
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        miniDroneMove 4.5s ease-in-out infinite;
+}
+
+
+@keyframes miniDroneMove {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -58%) rotate(-2deg);
+    }
+}
+
+
+.mini-body {
+
+    position:
+        absolute;
+
+    width:
+        62px;
+
+    height:
+        45px;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        2px solid #5a9bea;
+
+    border-radius:
+        16px;
+
+    background:
+        #0b315f;
+}
+
+
+.mini-prop {
+
+    position:
+        absolute;
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    border:
+        1px solid rgba(116, 191, 255, .18);
+
+    border-radius:
+        50%;
+
+    animation:
+        miniPropSpin .7s linear infinite;
+}
+
+
+.mini-prop::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        27px;
+
+    height:
+        2px;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        rgba(112, 183, 248, .42);
+}
+
+
+.p-one {
+    left:
+        2px;
+
+    top:
+        5px;
+}
+
+
+.p-two {
+    right:
+        2px;
+
+    top:
+        5px;
+}
+
+
+.p-three {
+    left:
+        2px;
+
+    bottom:
+        5px;
+}
+
+
+.p-four {
+    right:
+        2px;
+
+    bottom:
+        5px;
+}
+
+
+@keyframes miniPropSpin {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+.axis-label {
+
+    position:
+        absolute;
+
+    padding:
+        5px 8px;
+
+    border:
+        1px solid rgba(142, 200, 255, .11);
+
+    border-radius:
+        999px;
+
+    color:
+        #91bae1;
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    font-size:
+        7px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .10em;
+}
+
+
+.axis-x {
+
+    right:
+        8%;
+
+    top:
+        43%;
+}
+
+
+.axis-y {
+
+    left:
+        45%;
+
+    top:
+        5%;
+}
+
+
+.yaw-ring {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        10%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        85px;
+
+    height:
+        85px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px dashed rgba(124, 192, 255, .17);
+
+    border-radius:
+        50%;
+}
+
+
+.yaw-ring span {
+
+    color:
+        #8db8df;
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .1em;
+}
+
+
+.yaw-ring i {
+
+    margin-top:
+        4px;
+
+    color:
+        #69afff;
+
+    font-size:
+        13px;
+
+    animation:
+        yawSpin 3s linear infinite;
+}
+
+
+@keyframes yawSpin {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+.throttle-meter {
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    bottom:
+        20px;
+
+    width:
+        145px;
+
+    padding:
+        12px;
+
+    border:
+        1px solid rgba(152, 209, 255, .12);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.throttle-meter>span,
+.throttle-meter>strong {
+
+    color:
+        #90bce3;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.throttle-meter>strong {
+
+    float:
+        right;
+
+    color:
+        #ffffff;
+}
+
+
+.meter-track {
+
+    position:
+        relative;
+
+    height:
+        5px;
+
+    margin-top:
+        11px;
+
+    overflow:
+        visible;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(116, 179, 240, .11);
+}
+
+
+.meter-progress {
+
+    width:
+        68%;
+
+    height:
+        100%;
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(90deg,
+            #246ed4,
+            #6bb3ff);
+
+    animation:
+        throttleMove 3s ease-in-out infinite;
+}
+
+
+.meter-dot {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        68%;
+
+    width:
+        9px;
+
+    height:
+        9px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        #79b9ff;
+
+    box-shadow:
+        0 0 13px rgba(73, 171, 255, .95);
+}
+
+
+@keyframes throttleMove {
+
+    0%,
+    100% {
+        width:
+            62%;
+    }
+
+    50% {
+        width:
+            78%;
+    }
+}
+
+
+/* Controls */
+
+.flight-control-content {
+
+    display:
+        grid;
+
+    gap:
+        10px;
+}
+
+
+.control-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        34px 45px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(164, 212, 255, .12);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.control-row:hover {
+
+    transform:
+        translateX(6px);
+
+    background:
+        rgba(255, 255, 255, .06);
+}
+
+
+.control-row>span {
+
+    color:
+        #73b5fb;
+
+    font-size:
+        8px;
+
+    font-weight:
+        900;
+}
+
+
+.control-icon {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        12px;
+
+    color:
+        #80bdff;
+
+    background:
+        rgba(75, 158, 255, .10);
+}
+
+
+.control-row h3 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+    font-weight:
+        850;
+}
+
+
+.control-row p {
+
+    margin:
+        0;
+
+    color:
+        #a7c4e5;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   SENSOR
+========================================================= */
+
+.sensor-system {
+
+    position:
+        relative;
+
+    width:
+        min(620px, 100%);
+
+    aspect-ratio:
+        1;
+
+    margin:
+        0 auto;
+}
+
+
+.sensor-orbit {
+
+    position:
+        absolute;
+
+    border:
+        1px solid #d7e5f4;
+
+    border-radius:
+        50%;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.orbit-one {
+
+    width:
+        89%;
+
+    height:
+        89%;
+
+    border-style:
+        dashed;
+
+    animation:
+        orbitSensorA 22s linear infinite;
+}
+
+
+.orbit-two {
+
+    width:
+        65%;
+
+    height:
+        65%;
+
+    animation:
+        orbitSensorB 15s linear infinite;
+}
+
+
+.orbit-three {
+
+    width:
+        43%;
+
+    height:
+        43%;
+
+    animation:
+        orbitSensorA 11s linear infinite;
+}
+
+
+@keyframes orbitSensorA {
+
+    from {
+        transform:
+            translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+@keyframes orbitSensorB {
+
+    from {
+        transform:
+            translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%) rotate(0);
+    }
+}
+
+
+.sensor-core {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(145deg,
+            #0d4eaa,
+            #217af0);
+
+    box-shadow:
+        0 25px 60px rgba(9, 78, 173, .22);
+
+    animation:
+        sensorCore 4s ease-in-out infinite;
+}
+
+
+@keyframes sensorCore {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%) scale(1.06);
+    }
+}
+
+
+.sensor-core i {
+
+    font-size:
+        28px;
+}
+
+
+.sensor-core strong {
+
+    margin-top:
+        7px;
+
+    font-size:
+        13px;
+}
+
+
+.sensor-core span {
+
+    margin-top:
+        3px;
+
+    color:
+        #c7e0fb;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.sensor-item {
+
+    position:
+        absolute;
+
+    width:
+        110px;
+
+    padding:
+        10px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        14px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    animation:
+        sensorFloat 4.5s ease-in-out infinite;
+}
+
+
+.sensor-item i {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        var(--drone-600);
+
+    font-size:
+        16px;
+}
+
+
+.sensor-item strong {
+
+    display:
+        block;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        9px;
+}
+
+
+.sensor-item small {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        7px;
+}
+
+
+.sensor-top {
+
+    top:
+        0;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.sensor-right {
+
+    right:
+        3%;
+
+    top:
+        28%;
+
+    animation-delay:
+        -.8s;
+}
+
+
+.sensor-bottom-right {
+
+    right:
+        14%;
+
+    bottom:
+        4%;
+
+    animation-delay:
+        -1.4s;
+}
+
+
+.sensor-bottom-left {
+
+    left:
+        14%;
+
+    bottom:
+        4%;
+
+    animation-delay:
+        -2s;
+}
+
+
+.sensor-left {
+
+    left:
+        3%;
+
+    top:
+        28%;
+
+    animation-delay:
+        -2.7s;
+}
+
+
+.sensor-obstacle {
+
+    left:
+        50%;
+
+    bottom:
+        19%;
+
+    transform:
+        translateX(-50%);
+
+    animation-delay:
+        -1.8s;
+}
+
+
+@keyframes sensorFloat {
+
+    0%,
+    100% {
+        margin-top:
+            0;
+    }
+
+    50% {
+        margin-top:
+            -7px;
+    }
+}
+
+
+/* =========================================================
+   PROGRAMMING
+========================================================= */
+
+.programming-drone-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 83% 20%,
+            rgba(59, 153, 255, .21),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.programming-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.programming-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(35px, 4vw, 56px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.programming-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.programming-content>p {
+
+    max-width:
+        670px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.programming-use-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.programming-use-grid span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid rgba(163, 212, 255, .11);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    color:
+        #c9def5;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.programming-use-grid i {
+
+    color:
+        #76b8ff;
+}
+
+
+.programming-progress {
+
+    margin-top:
+        23px;
+}
+
+
+.programming-progress>span {
+
+    color:
+        #89b6e3;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .12em;
+
+    font-weight:
+        850;
+}
+
+
+.programming-progress>div {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        9px;
+}
+
+
+.programming-progress>div span {
+
+    padding:
+        7px 9px;
+
+    border:
+        1px solid rgba(157, 209, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #c8ddf4;
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+}
+
+
+.programming-progress i {
+
+    color:
+        #6eaffb;
+
+    font-size:
+        7px;
+}
+
+
+/* TERMINAL */
+
+.code-terminal {
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(150, 207, 255, .16);
+
+    border-radius:
+        21px;
+
+    background:
+        #041b3b;
+
+    box-shadow:
+        0 30px 75px rgba(0, 0, 0, .22);
+
+    animation:
+        terminalFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes terminalFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+}
+
+
+.terminal-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        13px;
+
+    border-bottom:
+        1px solid rgba(147, 205, 255, .08);
+
+    background:
+        #06254c;
+}
+
+
+.terminal-header>div {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+}
+
+
+.terminal-header>div span {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #5e9ee5;
+}
+
+
+.terminal-header strong {
+
+    margin-left:
+        auto;
+
+    color:
+        #80add6;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.terminal-body {
+
+    padding:
+        27px 20px;
+}
+
+
+.terminal-body>div:not(.terminal-cursor) {
+
+    margin-bottom:
+        17px;
+
+    color:
+        #bdd5ed;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        10px;
+}
+
+
+.code-number {
+
+    display:
+        inline-block;
+
+    width:
+        22px;
+
+    color:
+        #486789;
+}
+
+
+.code-keyword {
+
+    color:
+        #73b5ff;
+}
+
+
+.code-value {
+
+    color:
+        #9dcfff;
+}
+
+
+.terminal-cursor {
+
+    width:
+        8px;
+
+    height:
+        14px;
+
+    background:
+        #72b9ff;
+
+    animation:
+        terminalCursor 1s steps(2) infinite;
+}
+
+
+@keyframes terminalCursor {
+
+    0%,
+    50% {
+        opacity:
+            1;
+    }
+
+    51%,
+    100% {
+        opacity:
+            0;
+    }
+}
+
+
+/* =========================================================
+   AI DRONE
+========================================================= */
+
+.ai-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap:
+        65px;
+
+    align-items:
+        center;
+}
+
+
+.ai-drone-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.ai-drone-network {
+
+    position:
+        relative;
+
+    width:
+        360px;
+
+    aspect-ratio:
+        1;
+
+    border:
+        1px dashed #bdd4ee;
+
+    border-radius:
+        50%;
+}
+
+
+.ai-network-core {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        105px;
+
+    height:
+        105px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #ffffff;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(145deg,
+            #0c4fab,
+            #217cf0);
+
+    box-shadow:
+        0 22px 50px rgba(10, 75, 170, .24);
+
+    animation:
+        aiCoreFloat 4s ease-in-out infinite;
+}
+
+
+.ai-network-core i {
+
+    font-size:
+        26px;
+}
+
+
+.ai-network-core strong {
+
+    margin-top:
+        5px;
+
+    font-size:
+        17px;
+}
+
+
+@keyframes aiCoreFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -55%);
+    }
+}
+
+
+.ai-network-node {
+
+    position:
+        absolute;
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid #cbdef2;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--drone-600);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    animation:
+        aiNodeFloat 4.3s ease-in-out infinite;
+}
+
+
+.ai-node-drone {
+
+    top:
+        2%;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.ai-node-camera {
+
+    top:
+        33%;
+
+    right:
+        0;
+
+    animation-delay:
+        -.8s;
+}
+
+
+.ai-node-data {
+
+    bottom:
+        7%;
+
+    right:
+        17%;
+
+    animation-delay:
+        -1.5s;
+}
+
+
+.ai-node-auto {
+
+    left:
+        17%;
+
+    bottom:
+        7%;
+
+    animation-delay:
+        -2.2s;
+}
+
+
+@keyframes aiNodeFloat {
+
+    0%,
+    100% {
+        margin-top:
+            0;
+    }
+
+    50% {
+        margin-top:
+            -8px;
+    }
+}
+
+
+.ai-network-line {
+
+    position:
+        absolute;
+
+    width:
+        125px;
+
+    height:
+        1px;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #9fc9ef,
+            transparent);
+
+    transform-origin:
+        left center;
+}
+
+
+.ai-line-one {
+    transform:
+        rotate(-90deg);
+}
+
+
+.ai-line-two {
+    transform:
+        rotate(0);
+}
+
+
+.ai-line-three {
+    transform:
+        rotate(135deg);
+}
+
+
+.ai-line-four {
+    transform:
+        rotate(225deg);
+}
+
+
+.ai-drone-content {
+
+    display:
+        grid;
+
+    gap:
+        9px;
+}
+
+
+.ai-application-row {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        45px 1fr;
+
+    gap:
+        11px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        14px;
+
+    background:
+        #ffffff;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.ai-application-row:hover {
+
+    transform:
+        translateX(5px);
+
+    box-shadow:
+        var(--drone-shadow-sm);
+}
+
+
+.ai-application-row>div:first-child {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        12px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+}
+
+
+.ai-application-row h3 {
+
+    margin:
+        1px 0 5px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        14px;
+
+    font-weight:
+        850;
+}
+
+
+.ai-application-row p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+}
+
+
+.ai-ecosystem {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        13px;
+}
+
+
+.ai-ecosystem span {
+
+    padding:
+        7px 9px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        999px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        var(--drone-50);
+
+    font-size:
+        7px;
+
+    font-weight:
+        850;
+}
+
+
+.ai-ecosystem i {
+
+    color:
+        var(--drone-400);
+
+    font-size:
+        7px;
+}
+
+
+/* =========================================================
+   ROBOTICS
+========================================================= */
+
+.robotics-drone-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 81% 20%,
+            rgba(59, 153, 255, .20),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 56%,
+            #0a4da0);
+}
+
+
+.robotics-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:
+        65px;
+
+    align-items:
+        center;
+}
+
+
+.robotics-drone-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 57px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.robotics-drone-content h2 span {
+
+    color:
+        #79baff;
+}
+
+
+.robotics-drone-content>p {
+
+    max-width:
+        660px;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.robotics-formula {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin:
+        23px 0;
+}
+
+
+.robotics-formula span {
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(164, 211, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #c9e0f8;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+}
+
+
+.robotics-formula i {
+
+    color:
+        #6eb1ff;
+
+    font-size:
+        7px;
+}
+
+
+.robotics-note {
+
+    margin-top:
+        20px;
+
+    padding:
+        16px;
+
+    border-left:
+        4px solid #408eea;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+/* visual */
+
+.robotics-drone-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.air-robot-visual {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.air-robot-wave {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        1px solid rgba(106, 182, 253, .22);
+
+    border-radius:
+        50%;
+
+    animation:
+        robotWave 3.2s ease-out infinite;
+}
+
+
+.wave-1 {
+
+    width:
+        130px;
+
+    height:
+        130px;
+}
+
+
+.wave-2 {
+
+    width:
+        205px;
+
+    height:
+        205px;
+
+    animation-delay:
+        .8s;
+}
+
+
+.wave-3 {
+
+    width:
+        280px;
+
+    height:
+        280px;
+
+    animation-delay:
+        1.6s;
+}
+
+
+@keyframes robotWave {
+
+    0% {
+        opacity:
+            .65;
+
+        transform:
+            translate(-50%, -50%) scale(.55);
+    }
+
+    100% {
+        opacity:
+            0;
+
+        transform:
+            translate(-50%, -50%) scale(1);
+    }
+}
+
+
+.air-robot {
+
+    position:
+        relative;
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    animation:
+        airRobotFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes airRobotFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+}
+
+
+.air-robot-body {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        85px;
+
+    height:
+        85px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        2px solid #4f94e3;
+
+    border-radius:
+        23px;
+
+    color:
+        #82beff;
+
+    background:
+        #08285a;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .21);
+
+    font-size:
+        29px;
+}
+
+
+.air-robot>span {
+
+    position:
+        absolute;
+
+    width:
+        19px;
+
+    height:
+        19px;
+
+    border:
+        1px solid #4a91dc;
+
+    border-radius:
+        50%;
+
+    background:
+        #092452;
+}
+
+
+.air-robot>span:nth-child(2) {
+
+    top:
+        5px;
+
+    left:
+        5px;
+}
+
+
+.air-robot>span:nth-child(3) {
+
+    top:
+        5px;
+
+    right:
+        5px;
+}
+
+
+.air-robot>span:nth-child(4) {
+
+    bottom:
+        5px;
+
+    left:
+        5px;
+}
+
+
+.air-robot>span:nth-child(5) {
+
+    bottom:
+        5px;
+
+    right:
+        5px;
+}
+
+
+/* =========================================================
+   APPLICATIONS
+========================================================= */
+
+.drone-applications-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        14px;
+}
+
+
+.drone-applications-grid article {
+
+    min-height:
+        245px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        19px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.drone-applications-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--drone-shadow-md);
+}
+
+
+.drone-applications-grid article>i {
+
+    font-size:
+        22px;
+
+    color:
+        var(--drone-600);
+}
+
+
+.drone-applications-grid h3 {
+
+    margin:
+        15px 0 8px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        17px;
+
+    line-height:
+        1.25;
+
+    font-weight:
+        850;
+}
+
+
+.drone-applications-grid p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.drone-project-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        14px;
+}
+
+
+.drone-project-grid article {
+
+    position:
+        relative;
+
+    min-height:
+        255px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        19px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.drone-project-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--drone-shadow-md);
+}
+
+
+.drone-project-grid article>span {
+
+    position:
+        absolute;
+
+    top:
+        14px;
+
+    right:
+        16px;
+
+    color:
+        #dfeaf5;
+
+    font-size:
+        27px;
+
+    font-weight:
+        900;
+}
+
+
+.drone-project-grid article>div {
+
+    width:
+        49px;
+
+    height:
+        49px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        13px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+}
+
+
+.drone-project-grid h3 {
+
+    margin:
+        17px 0 8px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        17px;
+
+    font-weight:
+        850;
+}
+
+
+.drone-project-grid p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+.featured-drone-project {
+
+    background:
+        linear-gradient(145deg,
+            #092b62,
+            #0a58bd) !important;
+
+    border-color:
+        transparent !important;
+}
+
+
+.featured-drone-project>span {
+
+    color:
+        rgba(255, 255, 255, .16) !important;
+}
+
+
+.featured-drone-project>div {
+
+    color:
+        #8bc3ff !important;
+
+    background:
+        rgba(255, 255, 255, .08) !important;
+}
+
+
+.featured-drone-project h3 {
+
+    color:
+        #ffffff !important;
+}
+
+
+.featured-drone-project p {
+
+    color:
+        #c6dcf6 !important;
+}
+
+
+/* =========================================================
+   SCHOOL
+========================================================= */
+
+.school-drone-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 82% 20%,
+            rgba(59, 153, 255, .21),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.school-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.school-drone-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 58px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.school-drone-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.school-drone-content>p {
+
+    max-width:
+        680px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.school-learning-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.school-learning-tags span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(160, 211, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #cce1f7;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+}
+
+
+.school-learning-tags i {
+
+    color:
+        #76b8ff;
+}
+
+
+/* HUD */
+
+.school-drone-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.school-hud {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    aspect-ratio:
+        1;
+
+    border:
+        1px solid rgba(125, 193, 255, .18);
+
+    background:
+        radial-gradient(circle,
+            rgba(33, 120, 234, .07),
+            transparent 60%);
+}
+
+
+.hud-crosshair {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        120px;
+
+    height:
+        120px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        1px solid rgba(111, 184, 252, .22);
+
+    border-radius:
+        50%;
+
+    animation:
+        crosshairPulse 3s ease-in-out infinite;
+}
+
+
+@keyframes crosshairPulse {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%) scale(.90);
+
+        opacity:
+            .6;
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%) scale(1.10);
+
+        opacity:
+            1;
+    }
+}
+
+
+.hud-target {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        75px;
+
+    height:
+        75px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px dashed rgba(110, 181, 248, .32);
+
+    border-radius:
+        50%;
+}
+
+
+.hud-target span {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        #72b8ff;
+
+    box-shadow:
+        0 0 13px rgba(73, 170, 255, .95);
+}
+
+
+.hud-target small {
+
+    position:
+        absolute;
+
+    top:
+        88px;
+
+    color:
+        #84b5e2;
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.hud-corner {
+
+    position:
+        absolute;
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    border-color:
+        rgba(121, 191, 255, .55);
+
+    border-style:
+        solid;
+}
+
+
+.corner-one {
+
+    left:
+        17px;
+
+    top:
+        17px;
+
+    border-width:
+        1px 0 0 1px;
+}
+
+
+.corner-two {
+
+    right:
+        17px;
+
+    top:
+        17px;
+
+    border-width:
+        1px 1px 0 0;
+}
+
+
+.corner-three {
+
+    left:
+        17px;
+
+    bottom:
+        17px;
+
+    border-width:
+        0 0 1px 1px;
+}
+
+
+.corner-four {
+
+    right:
+        17px;
+
+    bottom:
+        17px;
+
+    border-width:
+        0 1px 1px 0;
+}
+
+
+.hud-text {
+
+    position:
+        absolute;
+
+    padding:
+        5px 8px;
+
+    border:
+        1px solid rgba(123, 194, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #8fbce4;
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .1em;
+}
+
+
+.hud-text-one {
+
+    top:
+        25%;
+
+    left:
+        10%;
+}
+
+
+.hud-text-two {
+
+    top:
+        39%;
+
+    right:
+        8%;
+}
+
+
+.hud-text-three {
+
+    bottom:
+        25%;
+
+    left:
+        14%;
+}
+
+
+.hud-text-four {
+
+    bottom:
+        13%;
+
+    right:
+        17%;
+}
+
+
+/* =========================================================
+   COLLEGE
+========================================================= */
+
+.college-drone-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        10px;
+}
+
+
+.college-drone-grid div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        12px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        750;
+}
+
+
+.college-drone-grid i {
+
+    color:
+        var(--drone-600);
+}
+
+
+/* =========================================================
+   BEGINNER
+========================================================= */
+
+.beginner-drone-section {
+
+    padding:
+        90px 0;
+
+    background:
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.beginner-drone-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.15fr .85fr;
+
+    gap:
+        55px;
+
+    align-items:
+        center;
+
+    padding:
+        50px;
+
+    border:
+        1px solid rgba(163, 211, 255, .15);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.beginner-drone-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 55px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.beginner-drone-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.beginner-drone-content>p {
+
+    max-width:
+        670px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ed;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.beginner-flight-path {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    overflow-x:
+        auto;
+
+    padding-bottom:
+        12px;
+
+    margin-top:
+        28px;
+}
+
+
+.beginner-flight-path>div {
+
+    flex:
+        0 0 94px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid rgba(155, 208, 255, .12);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    text-align:
+        center;
+}
+
+
+.beginner-flight-path>div span {
+
+    display:
+        block;
+
+    color:
+        #76b7ff;
+
+    font-size:
+        7px;
+
+    font-weight:
+        900;
+}
+
+
+.beginner-flight-path>div i {
+
+    display:
+        block;
+
+    margin:
+        6px 0;
+
+    color:
+        #7dbbff;
+}
+
+
+.beginner-flight-path>div strong {
+
+    display:
+        block;
+
+    color:
+        #d4e7fb;
+
+    font-size:
+        7px;
+
+    line-height:
+        1.5;
+}
+
+
+.beginner-flight-path>i {
+
+    flex:
+        0 0 auto;
+
+    color:
+        #6aafff;
+
+    font-size:
+        8px;
+}
+
+
+.beginner-drone-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.beginner-altitude {
+
+    width:
+        240px;
+
+    height:
+        290px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border:
+        1px solid rgba(147, 204, 255, .20);
+
+    border-radius:
+        23px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .13);
+}
+
+
+.beginner-altitude>span {
+
+    color:
+        #88b7e4;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.beginner-altitude strong {
+
+    margin:
+        10px 0 3px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        67px;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.05em;
+}
+
+
+.beginner-altitude small {
+
+    color:
+        #8cafD8;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.altitude-bars {
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    gap:
+        6px;
+
+    height:
+        82px;
+
+    margin-top:
+        20px;
+}
+
+
+.altitude-bars span {
+
+    width:
+        11px;
+
+    border-radius:
+        5px 5px 0 0;
+
+    background:
+        linear-gradient(180deg,
+            #62adff,
+            rgba(72, 158, 255, .10));
+
+    animation:
+        altitudeBars 2.2s ease-in-out infinite;
+}
+
+
+.altitude-bars span:nth-child(1) {
+    height: 22px;
+}
+
+
+.altitude-bars span:nth-child(2) {
+    height: 37px;
+    animation-delay: -.2s;
+}
+
+
+.altitude-bars span:nth-child(3) {
+    height: 54px;
+    animation-delay: -.4s;
+}
+
+
+.altitude-bars span:nth-child(4) {
+    height: 73px;
+    animation-delay: -.6s;
+}
+
+
+.altitude-bars span:nth-child(5) {
+    height: 61px;
+    animation-delay: -.8s;
+}
+
+
+.altitude-bars span:nth-child(6) {
+    height: 46px;
+    animation-delay: -1s;
+}
+
+
+.altitude-bars span:nth-child(7) {
+    height: 30px;
+    animation-delay: -1.2s;
+}
+
+
+@keyframes altitudeBars {
+
+    0%,
+    100% {
+        opacity:
+            .45;
+
+        transform:
+            scaleY(.75);
+    }
+
+    50% {
+        opacity:
+            1;
+
+        transform:
+            scaleY(1);
+    }
+}
+
+
+/* =========================================================
+   WORKSHOP
+========================================================= */
+
+.workshop-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:
+        24px;
+}
+
+
+.workshop-drone-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+}
+
+
+.workshop-drone-list div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        12px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        11px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.workshop-drone-list span {
+
+    width:
+        27px;
+
+    height:
+        27px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex:
+        0 0 auto;
+
+    border-radius:
+        8px;
+
+    color:
+        var(--drone-600);
+
+    background:
+        var(--drone-100);
+
+    font-size:
+        7px;
+
+    font-weight:
+        900;
+}
+
+
+.workshop-adaptation-card {
+
+    padding:
+        31px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        22px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+}
+
+
+.workshop-adaptation-card>span {
+
+    color:
+        var(--drone-500);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.workshop-adaptation-card h3 {
+
+    margin:
+        8px 0 21px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        23px;
+
+    font-weight:
+        850;
+}
+
+
+.adaptation-drone-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+}
+
+
+.adaptation-drone-grid div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        12px;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        var(--drone-50);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+}
+
+
+.adaptation-drone-grid i {
+
+    color:
+        var(--drone-600);
+}
+
+
+.workshop-contact-btn {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-top:
+        20px;
+
+    padding:
+        11px 14px;
+
+    border-radius:
+        10px;
+
+    text-decoration:
+        none;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0d4da8,
+            #1a70e6);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   INSTITUTIONS
+========================================================= */
+
+.institution-drone-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 20%,
+            rgba(57, 151, 255, .22),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.institution-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.03fr .97fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+}
+
+
+.institution-drone-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 57px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.institution-drone-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.institution-drone-content>p {
+
+    max-width:
+        660px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.institution-drone-types {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.institution-drone-types span {
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(160, 211, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #c9e0f7;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+}
+
+
+.institution-programs-drone-card {
+
+    padding:
+        31px;
+
+    border:
+        1px solid rgba(165, 212, 255, .14);
+
+    border-radius:
+        23px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.institution-programs-drone-card>span {
+
+    color:
+        #91bce6;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.institution-drone-program-list {
+
+    display:
+        grid;
+
+    gap:
+        9px;
+
+    margin-top:
+        19px;
+}
+
+
+.institution-drone-program-list>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        39px 1fr;
+
+    gap:
+        10px;
+
+    padding:
+        12px;
+
+    border:
+        1px solid rgba(158, 210, 255, .09);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, .035);
+}
+
+
+.institution-drone-program-list i {
+
+    width:
+        39px;
+
+    height:
+        39px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #80bcff;
+
+    background:
+        rgba(68, 153, 249, .10);
+}
+
+
+.institution-drone-program-list strong {
+
+    display:
+        block;
+
+    color:
+        #ffffff;
+
+    font-size:
+        9px;
+}
+
+
+.institution-drone-program-list small {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #a6c3e4;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   STEM
+========================================================= */
+
+.stem-drone-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        13px;
+}
+
+
+.stem-drone-grid article {
+
+    min-height:
+        245px;
+
+    padding:
+        25px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        19px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.stem-drone-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--drone-shadow-md);
+}
+
+
+.stem-drone-grid article>i {
+
+    color:
+        var(--drone-600);
+
+    font-size:
+        23px;
+}
+
+
+.stem-drone-grid article>span {
+
+    display:
+        block;
+
+    margin-top:
+        17px;
+
+    color:
+        var(--drone-500);
+
+    font-size:
+        7px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.stem-drone-grid h3 {
+
+    margin:
+        5px 0 8px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+}
+
+
+.stem-drone-grid p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-drone-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 20%,
+            rgba(59, 153, 255, .20),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 55%,
+            #0a4da0);
+}
+
+
+.skills-drone-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        11px;
+}
+
+
+.skills-drone-grid>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        41px 1fr;
+
+    gap:
+        10px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid rgba(166, 211, 255, .12);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .043);
+}
+
+
+.skills-drone-grid i {
+
+    grid-row:
+        span 2;
+
+    width:
+        41px;
+
+    height:
+        41px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #81bdff;
+
+    background:
+        rgba(77, 157, 255, .09);
+}
+
+
+.skills-drone-grid strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+}
+
+
+.skills-drone-grid span {
+
+    margin-top:
+        3px;
+
+    color:
+        #a8c5e6;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   DEVELOPMENT
+========================================================= */
+
+.drone-development-track {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    overflow-x:
+        auto;
+
+    padding-bottom:
+        12px;
+
+    scrollbar-width:
+        thin;
+}
+
+
+.development-drone-item {
+
+    flex:
+        0 0 145px;
+
+    text-align:
+        center;
+}
+
+
+.development-drone-item>span {
+
+    display:
+        block;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--drone-350);
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+}
+
+
+.development-drone-item>div {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 13px;
+
+    border:
+        1px solid #cbdef2;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--drone-600);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 9px 24px rgba(7, 57, 127, .06);
+}
+
+
+.development-drone-item h3 {
+
+    margin:
+        0 0 6px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        14px;
+
+    font-weight:
+        850;
+}
+
+
+.development-drone-item p {
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.6;
+}
+
+
+.development-drone-line {
+
+    flex:
+        1;
+
+    min-width:
+        20px;
+
+    height:
+        1px;
+
+    margin-top:
+        101px;
+
+    background:
+        #c8dbee;
+}
+
+
+/* =========================================================
+   WHY RLT
+========================================================= */
+
+.why-drone-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 20%,
+            rgba(60, 152, 255, .22),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da1);
+}
+
+
+.why-drone-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap:
+        65px;
+
+    align-items:
+        start;
+}
+
+
+.why-drone-title {
+
+    position:
+        sticky;
+
+    top:
+        100px;
+}
+
+
+.why-drone-title h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 55px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.why-drone-title h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.why-drone-title p {
+
+    max-width:
+        470px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.why-drone-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+}
+
+
+.why-drone-list>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        41px 1fr;
+
+    gap:
+        10px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid rgba(164, 210, 255, .12);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .043);
+}
+
+
+.why-drone-list>div>i {
+
+    width:
+        41px;
+
+    height:
+        41px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #80bdff;
+
+    background:
+        rgba(77, 157, 255, .09);
+}
+
+
+.why-drone-list strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+}
+
+
+.why-drone-list span {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #a8c4e5;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   AITRA
+========================================================= */
+
+.aitra-drone-section {
+
+    background:
+        var(--drone-50);
+}
+
+
+.aitra-drone-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+
+    padding:
+        55px;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        30px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--drone-shadow-md);
+}
+
+
+.aitra-drone-content h2 {
+
+    margin:
+        11px 0 17px;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        clamp(34px, 4vw, 52px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.aitra-drone-content h2 span {
+
+    color:
+        var(--drone-600);
+}
+
+
+.aitra-drone-content>p {
+
+    max-width:
+        690px;
+
+    margin:
+        0;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.aitra-drone-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        24px;
+}
+
+
+.aitra-drone-tags span {
+
+    padding:
+        8px 10px;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--drone-800);
+
+    background:
+        var(--drone-100);
+
+    font-size:
+        8px;
+
+    font-weight:
+        750;
+}
+
+
+/* map */
+
+.aitra-drone-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.aitra-flight-map {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    aspect-ratio:
+        1;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid #d2e2f3;
+
+    background:
+        radial-gradient(circle,
+            rgba(21, 105, 225, .08),
+            transparent 58%);
+
+    border-radius:
+        24px;
+}
+
+
+.aitra-flight-map::before,
+.aitra-flight-map::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        0;
+
+    width:
+        1px;
+
+    height:
+        100%;
+
+    background:
+        #e4edf7;
+}
+
+
+.aitra-flight-map::after {
+
+    left:
+        0;
+
+    top:
+        50%;
+
+    width:
+        100%;
+
+    height:
+        1px;
+}
+
+
+.map-circle {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    border:
+        1px dashed #c9ddef;
+
+    border-radius:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.map-circle-a {
+
+    width:
+        84%;
+
+    height:
+        84%;
+}
+
+
+.map-circle-b {
+
+    width:
+        59%;
+
+    height:
+        59%;
+}
+
+
+.map-circle-c {
+
+    width:
+        34%;
+
+    height:
+        34%;
+}
+
+
+.map-route {
+
+    position:
+        absolute;
+
+    left:
+        12%;
+
+    top:
+        72%;
+
+    width:
+        75%;
+
+    height:
+        1px;
+
+    transform:
+        rotate(-31deg);
+
+    transform-origin:
+        left;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #4996f2,
+            transparent);
+
+    animation:
+        mapRoute 3.8s linear infinite;
+}
+
+
+@keyframes mapRoute {
+
+    0% {
+        transform:
+            rotate(-31deg) scaleX(.2);
+
+        opacity:
+            .1;
+    }
+
+    50% {
+        transform:
+            rotate(-31deg) scaleX(1);
+
+        opacity:
+            1;
+    }
+
+    100% {
+        transform:
+            rotate(-31deg) scaleX(.2);
+
+        opacity:
+            .1;
+    }
+}
+
+
+.map-point {
+
+    position:
+        absolute;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #397fda;
+
+    box-shadow:
+        0 0 11px rgba(48, 132, 235, .65);
+}
+
+
+.point-1 {
+    left: 12%;
+    top: 71%;
+}
+
+
+.point-2 {
+    left: 35%;
+    top: 57%;
+}
+
+
+.point-3 {
+    left: 58%;
+    top: 38%;
+}
+
+
+.point-4 {
+    left: 81%;
+    top: 22%;
+}
+
+
+.map-drone {
+
+    position:
+        absolute;
+
+    left:
+        79%;
+
+    top:
+        19%;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        29px;
+
+    height:
+        29px;
+
+    border-radius:
+        10px;
+
+    color:
+        #ffffff;
+
+    background:
+        #1769e8;
+
+    box-shadow:
+        0 10px 22px rgba(15, 91, 210, .22);
+
+    animation:
+        mapDroneMove 4s ease-in-out infinite;
+}
+
+
+@keyframes mapDroneMove {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-12px, 9px);
+    }
+}
+
+
+/* =========================================================
+   BUILD CTA
+========================================================= */
+
+.build-drone-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        100px 0;
+
+    color:
+        #ffffff;
+
+    text-align:
+        center;
+
+    background:
+
+        radial-gradient(circle at 80% 20%,
+            rgba(62, 153, 255, .21),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 55%,
+            #0a4da0);
+}
+
+
+.build-drone-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        980px;
+
+    margin:
+        0 auto;
+}
+
+
+.build-drone-content h2 {
+
+    margin:
+        12px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(40px, 5vw, 67px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -.05em;
+
+    font-weight:
+        900;
+}
+
+
+.build-drone-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.build-drone-content>p {
+
+    max-width:
+        800px;
+
+    margin:
+        0 auto;
+
+    color:
+        #bfd6ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+}
+
+
+.drone-journey-tags {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin:
+        27px 0;
+}
+
+
+.drone-journey-tags span {
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(167, 214, 255, .13);
+
+    border-radius:
+        999px;
+
+    color:
+        #c8def5;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+}
+
+
+.build-drone-actions {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+}
+
+
+.build-drone-primary,
+.build-drone-outline {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        0 21px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.build-drone-primary {
+
+    color:
+        #082b60;
+
+    background:
+        #ffffff;
+}
+
+
+.build-drone-primary:hover {
+
+    color:
+        #082b60;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.build-drone-outline {
+
+    color:
+        #deedff;
+
+    border:
+        1px solid rgba(182, 220, 255, .24);
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.build-drone-outline:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   ENROLL
+========================================================= */
+
+.drone-enroll-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        110px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 76% 18%,
+            rgba(61, 153, 255, .24),
+            transparent 29%),
+
+        radial-gradient(circle at 7% 85%,
+            rgba(27, 105, 228, .17),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031333,
+            #062a61 47%,
+            #0a4fa8);
+}
+
+
+.drone-enroll-bg {
+
+    position:
+        absolute;
+
+    inset:
+        -100px;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .075) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .075) 1px,
+            transparent 1px);
+
+    background-size:
+        44px 44px;
+
+    transform:
+        perspective(800px) rotateX(58deg) scale(1.35);
+
+    transform-origin:
+        center bottom;
+
+    animation:
+        enrollGridMove 20s linear infinite;
+}
+
+
+@keyframes enrollGridMove {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            0 44px,
+            44px 0;
+    }
+}
+
+
+.drone-enroll-glow {
+
+    position:
+        absolute;
+
+    width:
+        360px;
+
+    height:
+        360px;
+
+    right:
+        -100px;
+
+    top:
+        -90px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(64, 153, 255, .13);
+
+    filter:
+        blur(80px);
+
+    animation:
+        enrollGlow 8s ease-in-out infinite;
+}
+
+
+@keyframes enrollGlow {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-25px, 20px) scale(1.12);
+    }
+}
+
+
+.drone-enroll-layout {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(430px, .92fr);
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.drone-enroll-content {
+
+    max-width:
+        730px;
+}
+
+
+.drone-enroll-content h2 {
+
+    margin:
+        12px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(42px, 5vw, 70px);
+
+    line-height:
+        1.02;
+
+    letter-spacing:
+        -.055em;
+
+    font-weight:
+        900;
+}
+
+
+.drone-enroll-content h2 span {
+
+    display:
+        block;
+
+    color:
+        #7abaff;
+}
+
+
+.drone-enroll-content>p {
+
+    max-width:
+        680px;
+
+    margin:
+        0;
+
+    color:
+        #bfd5ee;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.drone-enroll-features {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+}
+
+
+.drone-enroll-features>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        40px 1fr;
+
+    gap:
+        10px;
+
+    padding:
+        15px;
+
+    border:
+        1px solid rgba(164, 211, 255, .11);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.drone-enroll-features i {
+
+    grid-row:
+        span 2;
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #82bdff;
+
+    background:
+        rgba(72, 157, 255, .10);
+}
+
+
+.drone-enroll-features strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+}
+
+
+.drone-enroll-features span {
+
+    margin-top:
+        3px;
+
+    color:
+        #a9c5e7;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.5;
+}
+
+
+.drone-enroll-partner {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        23px;
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid rgba(158, 210, 255, .12);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.drone-enroll-partner>div {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #80bbff;
+
+    background:
+        rgba(66, 148, 246, .10);
+}
+
+
+.drone-enroll-partner>span {
+
+    color:
+        #8ab8e6;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.drone-enroll-partner strong {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        normal;
+}
+
+
+/* Form */
+
+.drone-enroll-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        37px 34px 34px;
+
+    border:
+        1px solid rgba(183, 218, 255, .22);
+
+    border-radius:
+        27px;
+
+    color:
+        var(--drone-text);
+
+    background:
+        rgba(255, 255, 255, .97);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, .25);
+
+    backdrop-filter:
+        blur(20px);
+}
+
+
+.enroll-accent {
+
+    position:
+        absolute;
+
+    left:
+        34px;
+
+    right:
+        34px;
+
+    top:
+        0;
+
+    height:
+        4px;
+
+    border-radius:
+        0 0 20px 20px;
+
+    background:
+        linear-gradient(90deg,
+            #0b47a1,
+            #3488f1,
+            #76baff);
+}
+
+
+.enroll-heading>span {
+
+    color:
+        var(--drone-500);
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.enroll-heading h3 {
+
+    margin:
+        8px 0;
+
+    color:
+        #07275b;
+
+    font-size:
+        27px;
+
+    line-height:
+        1.14;
+
+    font-weight:
+        900;
+}
+
+
+.enroll-heading p {
+
+    margin:
+        0;
+
+    color:
+        #667891;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+.drone-form-wrapper {
+
+    margin-top:
+        23px;
+}
+
+
+.drone-enroll-card input,
+.drone-enroll-card select,
+.drone-enroll-card textarea {
+
+    border-color:
+        #d7e3f1;
+
+    border-radius:
+        10px;
+
+    color:
+        #17345f;
+
+    background:
+        #ffffff;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.drone-enroll-card input:focus,
+.drone-enroll-card select:focus,
+.drone-enroll-card textarea:focus {
+
+    outline:
+        none;
+
+    border-color:
+        #3484eb;
+
+    box-shadow:
+        0 0 0 4px rgba(52, 132, 235, .09);
+}
+
+
+.drone-enroll-card button[type="submit"] {
+
+    border:
+        0;
+
+    border-radius:
+        11px;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0d47a1,
+            #1769e8);
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 14px 32px rgba(13, 71, 161, .20);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.drone-faq-section {
+
+    background:
+        #ffffff;
+}
+
+
+.drone-faq-wrapper {
+
+    max-width:
+        920px;
+
+    margin:
+        0 auto;
+}
+
+
+.drone-faq-wrapper details {
+
+    margin-bottom:
+        10px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--drone-border);
+
+    border-radius:
+        16px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 5px 16px rgba(7, 54, 118, .03);
+}
+
+
+.drone-faq-wrapper summary {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        19px 21px;
+
+    cursor:
+        pointer;
+
+    list-style:
+        none;
+
+    color:
+        var(--drone-950);
+
+    font-size:
+        13px;
+
+    font-weight:
+        750;
+}
+
+
+.drone-faq-wrapper summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.drone-faq-wrapper summary i {
+
+    color:
+        var(--drone-500);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.drone-faq-wrapper details[open] summary i {
+
+    transform:
+        rotate(45deg);
+}
+
+
+.drone-faq-wrapper details>div {
+
+    padding:
+        0 21px 20px;
+
+    color:
+        var(--drone-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-drone-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        110px 0;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 77% 23%,
+            rgba(63, 158, 255, .22),
+            transparent 29%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.final-drone-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        930px;
+
+    margin:
+        0 auto;
+}
+
+
+.final-drone-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid rgba(173, 215, 255, .14);
+
+    border-radius:
+        999px;
+
+    color:
+        #aad1ff;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.final-drone-content h2 {
+
+    margin:
+        20px 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(40px, 5vw, 68px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -.05em;
+
+    font-weight:
+        900;
+}
+
+
+.final-drone-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.final-drone-content h3 {
+
+    margin:
+        0 0 16px;
+
+    color:
+        #deedff;
+
+    font-size:
+        clamp(19px, 2vw, 25px);
+
+    font-weight:
+        750;
+}
+
+
+.final-drone-content>p {
+
+    max-width:
+        800px;
+
+    margin:
+        0 auto;
+
+    color:
+        #bfd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+}
+
+
+.final-drone-tags {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin:
+        27px 0;
+}
+
+
+.final-drone-tags span {
+
+    padding:
+        8px 11px;
+
+    border:
+        1px solid rgba(174, 215, 255, .13);
+
+    border-radius:
+        999px;
+
+    color:
+        #cbe0f7;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+}
+
+
+.final-drone-actions {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+}
+
+
+.final-drone-primary,
+.final-drone-outline {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        0 22px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.final-drone-primary {
+
+    color:
+        #082b60;
+
+    background:
+        #ffffff;
+}
+
+
+.final-drone-primary:hover {
+
+    color:
+        #082b60;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.final-drone-outline {
+
+    color:
+        #deedff;
+
+    border:
+        1px solid rgba(183, 220, 255, .24);
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.final-drone-outline:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   RESPONSIVE 1200
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .drone-hero-layout {
+
+        gap:
+            35px;
+    }
+
+
+    .drone-hero-content h1 {
+
+        font-size:
+            clamp(46px, 5.5vw, 70px);
+    }
+
+
+    .why-drone-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .components-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .drone-project-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .college-drone-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+
+    .skills-drone-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 1050
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .drone-hero-layout {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .drone-definition-layout,
+    .programming-layout,
+    .ai-drone-layout,
+    .robotics-drone-layout,
+    .school-drone-layout,
+    .institution-drone-layout,
+    .aitra-drone-card,
+    .drone-enroll-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .definition-flow-card {
+
+        max-width:
+            700px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .programming-content {
+
+        max-width:
+            800px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .code-terminal {
+
+        width:
+            min(700px, 100%);
+
+        margin:
+            0 auto;
+    }
+
+
+    .ai-drone-visual {
+
+        margin:
+            0 auto;
+    }
+
+
+    .robotics-drone-content {
+
+        max-width:
+            800px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .school-drone-content {
+
+        max-width:
+            800px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .institution-drone-content {
+
+        max-width:
+            800px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .why-drone-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .why-drone-title {
+
+        position:
+            static;
+
+        text-align:
+            center;
+    }
+
+
+    .why-drone-title p {
+
+        margin:
+            0 auto;
+    }
+
+
+    .aitra-drone-content {
+
+        text-align:
+            center;
+    }
+
+
+    .aitra-drone-tags {
+
+        justify-content:
+            center;
+    }
+
+
+    .drone-enroll-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .drone-enroll-features {
+
+        margin:
+            28px auto 0;
+
+        text-align:
+            left;
+    }
+
+
+    .drone-enroll-partner {
+
+        text-align:
+            left;
+    }
+
+
+    .drone-enroll-card {
+
+        width:
+            min(100%, 650px);
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 900
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .drone-hero {
+
+        min-height:
+            auto;
+
+        padding:
+            70px 0 32px;
+    }
+
+
+    .drone-hero-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .drone-hero-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .drone-hero-content h2,
+    .hero-lead,
+    .hero-copy {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+
+    .drone-partner {
+
+        text-align:
+            left;
+    }
+
+
+    .drone-hero-actions,
+    .drone-tagline {
+
+        justify-content:
+            center;
+    }
+
+
+    .drone-hero-visual {
+
+        min-height:
+            500px;
+    }
+
+
+    .drone-flight-interface {
+
+        width:
+            500px;
+    }
+
+
+    .flight-control-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .flight-control-visual {
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .why-drone-list {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .stem-drone-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .workshop-drone-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .workshop-adaptation-card {
+
+        max-width:
+            650px;
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 800
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .section-block,
+    .dark-drone-section,
+    .flight-fundamentals-section,
+    .programming-drone-section,
+    .robotics-drone-section,
+    .school-drone-section,
+    .institution-drone-section,
+    .skills-drone-section,
+    .why-drone-section,
+    .drone-enroll-section {
+
+        padding:
+            78px 0;
+    }
+
+
+    .why-drone-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .components-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .drone-applications-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .drone-project-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .college-drone-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .skills-drone-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .stem-drone-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .drone-definition-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .aitra-drone-card {
+
+        padding:
+            40px 30px;
+    }
+
+
+    .beginner-drone-card {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .beginner-drone-content {
+
+        max-width:
+            800px;
+    }
+
+
+    .beginner-drone-visual {
+
+        margin-top:
+            15px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 650
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .drone-hero {
+
+        padding:
+            58px 0 26px;
+    }
+
+
+    .drone-hero-content h1 {
+
+        font-size:
+            clamp(38px, 10.5vw, 53px);
+    }
+
+
+    .drone-hero-content h2 {
+
+        font-size:
+            17px;
+    }
+
+
+    .hero-lead {
+
+        font-size:
+            13px;
+    }
+
+
+    .hero-copy {
+
+        font-size:
+            11px;
+    }
+
+
+    .drone-partner {
+
+        width:
+            100%;
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .drone-hero-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .drone-primary-btn,
+    .drone-outline-btn {
+
+        width:
+            100%;
+    }
+
+
+    .drone-hero-visual {
+
+        min-height:
+            350px;
+    }
+
+
+    .drone-flight-interface {
+
+        width:
+            350px;
+    }
+
+
+    .hero-drone {
+
+        transform:
+            scale(.78);
+    }
+
+
+    .gps-card,
+    .altitude-card,
+    .signal-card {
+
+        padding:
+            7px 8px;
+    }
+
+
+    .gps-card strong,
+    .altitude-card strong {
+
+        font-size:
+            9px;
+    }
+
+
+    .speed-indicator {
+
+        width:
+            77px;
+
+        height:
+            77px;
+    }
+
+
+    .speed-indicator strong {
+
+        font-size:
+            14px;
+    }
+
+
+    .hero-system-strip {
+
+        gap:
+            8px;
+    }
+
+
+    .hero-system-strip>span {
+
+        display:
+            none;
+    }
+
+
+    .hero-system-strip div {
+
+        font-size:
+            6px;
+    }
+
+
+    .component-mini-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .definition-flow-visual {
+
+        width:
+            270px;
+    }
+
+
+    .why-drone-grid,
+    .components-grid,
+    .drone-applications-grid,
+    .drone-project-grid,
+    .skills-drone-grid,
+    .stem-drone-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .why-drone-grid article,
+    .component-card,
+    .drone-project-grid article,
+    .drone-applications-grid article,
+    .stem-drone-grid article {
+
+        min-height:
+            auto;
+    }
+
+
+    .working-step {
+
+        grid-template-columns:
+            39px 44px 1fr;
+
+        gap:
+            9px;
+
+        padding:
+            13px;
+    }
+
+
+    .step-number {
+
+        width:
+            34px;
+
+        height:
+            34px;
+    }
+
+
+    .step-icon {
+
+        width:
+            44px;
+
+        height:
+            44px;
+    }
+
+
+    .working-step h3 {
+
+        font-size:
+            14px;
+    }
+
+
+    .working-step p {
+
+        font-size:
+            9px;
+    }
+
+
+    .timeline-line {
+
+        left:
+            30px;
+    }
+
+
+    .flight-axis {
+
+        width:
+            290px;
+    }
+
+
+    .throttle-meter {
+
+        right:
+            -5px;
+
+        bottom:
+            8px;
+
+        width:
+            120px;
+    }
+
+
+    .control-row {
+
+        grid-template-columns:
+            29px 42px 1fr;
+
+        padding:
+            13px;
+    }
+
+
+    .control-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+
+
+    .sensor-system {
+
+        width:
+            360px;
+    }
+
+
+    .sensor-item {
+
+        width:
+            80px;
+
+        padding:
+            7px;
+    }
+
+
+    .sensor-item i {
+
+        font-size:
+            12px;
+    }
+
+
+    .sensor-item strong {
+
+        font-size:
+            7px;
+    }
+
+
+    .sensor-item small {
+
+        font-size:
+            5px;
+    }
+
+
+    .sensor-core {
+
+        width:
+            105px;
+
+        height:
+            105px;
+    }
+
+
+    .sensor-core i {
+
+        font-size:
+            22px;
+    }
+
+
+    .sensor-right {
+
+        right:
+            0;
+    }
+
+
+    .sensor-left {
+
+        left:
+            0;
+    }
+
+
+    .programming-use-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ai-drone-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ai-drone-network {
+
+        width:
+            290px;
+    }
+
+
+    .robotics-formula {
+
+        justify-content:
+            center;
+    }
+
+
+    .school-drone-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .school-drone-visual {
+
+        margin-top:
+            30px;
+    }
+
+
+    .school-hud {
+
+        width:
+            280px;
+    }
+
+
+    .college-drone-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .institution-drone-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .adaptation-drone-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .beginner-drone-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .beginner-altitude {
+
+        width:
+            200px;
+
+        height:
+            250px;
+    }
+
+
+    .aitra-drone-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .aitra-flight-map {
+
+        width:
+            270px;
+    }
+
+
+    .why-drone-list {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .drone-enroll-content h2 {
+
+        font-size:
+            37px;
+    }
+
+
+    .drone-enroll-features {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .drone-enroll-partner {
+
+        width:
+            100%;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .drone-enroll-card {
+
+        padding:
+            31px 19px 24px;
+
+        border-radius:
+            21px;
+    }
+
+
+    .enroll-accent {
+
+        left:
+            20px;
+
+        right:
+            20px;
+    }
+
+
+    .build-drone-actions,
+    .final-drone-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .build-drone-primary,
+    .build-drone-outline,
+    .final-drone-primary,
+    .final-drone-outline {
+
+        width:
+            100%;
+    }
+
+
+    .drone-faq-wrapper summary {
+
+        padding:
+            16px;
+    }
+
+
+    .drone-faq-wrapper details>div {
+
+        padding:
+            0 16px 17px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 480
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-heading h2 {
+
+        font-size:
+            32px;
+    }
+
+
+    .section-heading p {
+
+        font-size:
+            12px;
+    }
+
+
+    .drone-hero-content h1 {
+
+        font-size:
+            34px;
+    }
+
+
+    .drone-hero-content h2 {
+
+        font-size:
+            15px;
+    }
+
+
+    .drone-hero-visual {
+
+        min-height:
+            285px;
+    }
+
+
+    .drone-flight-interface {
+
+        width:
+            285px;
+    }
+
+
+    .hero-drone {
+
+        transform:
+            scale(.62);
+    }
+
+
+    .gps-card {
+
+        left:
+            -3px;
+    }
+
+
+    .altitude-card {
+
+        right:
+            -3px;
+    }
+
+
+    .signal-card {
+
+        left:
+            -3px;
+    }
+
+
+    .speed-indicator {
+
+        right:
+            -4px;
+
+        bottom:
+            12%;
+    }
+
+
+    .definition-flow-visual {
+
+        width:
+            235px;
+    }
+
+
+    .definition-node {
+
+        width:
+            48px;
+
+        height:
+            48px;
+    }
+
+
+    .definition-node:nth-child(3) {
+
+        width:
+            73px;
+
+        height:
+            73px;
+    }
+
+
+    .flight-axis {
+
+        width:
+            245px;
+    }
+
+
+    .throttle-meter {
+
+        right:
+            -12px;
+
+        width:
+            105px;
+    }
+
+
+    .sensor-system {
+
+        width:
+            300px;
+    }
+
+
+    .sensor-item {
+
+        width:
+            69px;
+    }
+
+
+    .sensor-core {
+
+        width:
+            89px;
+
+        height:
+            89px;
+    }
+
+
+    .sensor-core i {
+
+        font-size:
+            18px;
+    }
+
+
+    .sensor-core strong {
+
+        font-size:
+            10px;
+    }
+
+
+    .sensor-core span {
+
+        font-size:
+            5px;
+    }
+
+
+    .ai-drone-network {
+
+        width:
+            245px;
+    }
+
+
+    .ai-network-node {
+
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+
+
+    .ai-network-core {
+
+        width:
+            83px;
+
+        height:
+            83px;
+    }
+
+
+    .ai-network-core i {
+
+        font-size:
+            21px;
+    }
+
+
+    .air-robot-visual {
+
+        width:
+            260px;
+    }
+
+
+    .school-hud {
+
+        width:
+            240px;
+    }
+
+
+    .beginner-altitude {
+
+        width:
+            180px;
+
+        height:
+            220px;
+    }
+
+
+    .beginner-altitude strong {
+
+        font-size:
+            52px;
+    }
+
+
+    .aitra-flight-map {
+
+        width:
+            230px;
+    }
+
+
+    .drone-enroll-content h2 {
+
+        font-size:
+            32px;
+    }
+
+
+    .enroll-heading h3 {
+
+        font-size:
+            23px;
+    }
+
+
+    .final-drone-content h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .final-drone-content h3 {
+
+        font-size:
+            18px;
+    }
+
+
+    .final-drone-content>p {
+
+        font-size:
+            12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE 380
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+
+        width:
+            calc(100% - 22px);
+    }
+
+
+    .drone-hero-content h1 {
+
+        font-size:
+            31px;
+    }
+
+
+    .drone-hero-content h2 {
+
+        font-size:
+            14px;
+    }
+
+
+    .drone-flight-interface {
+
+        width:
+            255px;
+    }
+
+
+    .hero-drone {
+
+        transform:
+            scale(.53);
+    }
+
+
+    .hud-card {
+
+        transform:
+            scale(.85);
+    }
+
+
+    .speed-indicator {
+
+        transform:
+            scale(.82);
+    }
+
+
+    .sensor-system {
+
+        width:
+            270px;
+    }
+
+
+    .sensor-item {
+
+        width:
+            61px;
+
+        padding:
+            5px;
+    }
+
+
+    .sensor-item strong {
+
+        font-size:
+            6px;
+    }
+
+
+    .sensor-item small {
+
+        display:
+            none;
+    }
+
+
+    .beginner-altitude {
+
+        width:
+            165px;
+
+        height:
+            205px;
+    }
+
+
+    .beginner-altitude strong {
+
+        font-size:
+            46px;
+    }
+
+
+    .drone-enroll-card {
+
+        padding:
+            26px 12px 19px;
+    }
+
+
+    .enroll-accent {
+
+        left:
+            14px;
+
+        right:
+            14px;
+    }
+
+
+    .final-drone-content h2 {
+
+        font-size:
+            31px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.drone-page a:focus-visible,
+.drone-page button:focus-visible,
+.drone-page summary:focus-visible,
+.drone-page input:focus-visible,
+.drone-page select:focus-visible,
+.drone-page textarea:focus-visible {
+
+    outline:
+        3px solid rgba(48, 133, 235, .35);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .drone-page *,
+    .drone-page *::before,
+    .drone-page *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+    }
+
+}
+
+/* =========================================================
+   ENHANCED MOTION GRAPHICS + AOS VISUAL SYSTEM
+   Added as an override layer so the original design remains intact.
+========================================================= */
+
+.drone-page {
+    --motion-blue: #3ea7ff;
+    --motion-cyan: #67e8ff;
+    --motion-violet: #7c6cff;
+    --glass-bg: rgba(255, 255, 255, .055);
+    --glass-border: rgba(145, 210, 255, .16);
+}
+
+/* AOS initial/fallback state */
+[data-aos] {
+    will-change: transform, opacity;
+}
+
+/* Hero depth */
+.drone-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(67, 163, 255, .07), transparent 38%),
+        linear-gradient(115deg, transparent 0 48%, rgba(103, 232, 255, .025) 50%, transparent 52%);
+    animation: heroDepthPulse 7s ease-in-out infinite;
+}
+
+@keyframes heroDepthPulse {
+
+    0%,
+    100% {
+        opacity: .55;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.035);
+    }
+}
+
+.hero-motion-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.motion-orb {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--motion-cyan);
+    box-shadow: 0 0 12px rgba(103, 232, 255, .9), 0 0 35px rgba(62, 167, 255, .45);
+    opacity: .7;
+}
+
+.orb-one {
+    left: 16%;
+    top: 22%;
+    animation: orbFloatOne 8s ease-in-out infinite;
+}
+
+.orb-two {
+    left: 71%;
+    top: 18%;
+    animation: orbFloatTwo 10s ease-in-out infinite;
+}
+
+.orb-three {
+    left: 86%;
+    top: 68%;
+    animation: orbFloatThree 7s ease-in-out infinite;
+}
+
+@keyframes orbFloatOne {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(.7);
+        opacity: .25;
+    }
+
+    50% {
+        transform: translate3d(90px, 55px, 0) scale(1.35);
+        opacity: .9;
+    }
+}
+
+@keyframes orbFloatTwo {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: .3;
+    }
+
+    50% {
+        transform: translate3d(-75px, 100px, 0) scale(1.5);
+        opacity: .85;
+    }
+}
+
+@keyframes orbFloatThree {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-100px, -55px, 0) scale(.65);
+    }
+}
+
+.motion-beam {
+    position: absolute;
+    width: 42vw;
+    max-width: 650px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(103, 232, 255, .5), transparent);
+    filter: drop-shadow(0 0 7px rgba(103, 232, 255, .35));
+    opacity: .55;
+}
+
+.beam-one {
+    left: -10%;
+    top: 28%;
+    transform: rotate(19deg);
+    animation: beamSweep 8s linear infinite;
+}
+
+.beam-two {
+    right: -12%;
+    bottom: 23%;
+    transform: rotate(-23deg);
+    animation: beamSweepReverse 10s linear infinite;
+}
+
+@keyframes beamSweep {
+    0% {
+        transform: translateX(-25%) rotate(19deg);
+        opacity: 0;
+    }
+
+    30%,
+    70% {
+        opacity: .65;
+    }
+
+    100% {
+        transform: translateX(45%) rotate(19deg);
+        opacity: 0;
+    }
+}
+
+@keyframes beamSweepReverse {
+    0% {
+        transform: translateX(25%) rotate(-23deg);
+        opacity: 0;
+    }
+
+    30%,
+    70% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateX(-45%) rotate(-23deg);
+        opacity: 0;
+    }
+}
+
+.motion-ring {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(103, 232, 255, .08);
+    border-radius: 50%;
+    left: 68%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.ring-one {
+    animation: motionRing 20s linear infinite;
+}
+
+.ring-two {
+    width: 620px;
+    height: 620px;
+    opacity: .5;
+    animation: motionRingReverse 28s linear infinite;
+}
+
+@keyframes motionRing {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes motionRingReverse {
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+.motion-cross {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    opacity: .55;
+}
+
+.motion-cross::before,
+.motion-cross::after {
+    content: "";
+    position: absolute;
+    background: rgba(103, 232, 255, .5);
+}
+
+.motion-cross::before {
+    width: 18px;
+    height: 1px;
+    top: 8px;
+    left: 0;
+}
+
+.motion-cross::after {
+    width: 1px;
+    height: 18px;
+    left: 8px;
+    top: 0;
+}
+
+.cross-one {
+    left: 42%;
+    top: 20%;
+    animation: crossPulse 3s ease-in-out infinite;
+}
+
+.cross-two {
+    left: 83%;
+    top: 35%;
+    animation: crossPulse 4s ease-in-out .8s infinite;
+}
+
+@keyframes crossPulse {
+
+    0%,
+    100% {
+        opacity: .15;
+        transform: scale(.7);
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(1.2);
+    }
+}
+
+.motion-data {
+    position: absolute;
+    padding: 5px 8px;
+    border: 1px solid rgba(103, 232, 255, .13);
+    border-radius: 5px;
+    background: rgba(2, 14, 40, .34);
+    color: rgba(166, 224, 255, .58);
+    font: 700 8px/1.1 monospace;
+    letter-spacing: .14em;
+    backdrop-filter: blur(6px);
+}
+
+.data-one {
+    left: 8%;
+    bottom: 18%;
+    animation: dataBlink 3.5s infinite;
+}
+
+.data-two {
+    right: 7%;
+    top: 22%;
+    animation: dataBlink 4s .5s infinite;
+}
+
+.data-three {
+    right: 13%;
+    bottom: 15%;
+    animation: dataBlink 4.8s 1s infinite;
+}
+
+@keyframes dataBlink {
+
+    0%,
+    100% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .8;
+    }
+}
+
+/* Glass upgrade for existing HUD cards */
+.hud-card,
+.speed-indicator,
+.definition-system-card,
+.definition-flow-card,
+.component-card,
+.control-row,
+.drone-enroll-card {
+    backdrop-filter: blur(16px) saturate(125%);
+}
+
+.component-card,
+.working-step,
+.control-row,
+.why-drone-grid article {
+    transform: translateZ(0);
+    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .45s ease, border-color .45s ease;
+}
+
+.component-card:hover,
+.why-drone-grid article:hover {
+    transform: translateY(-10px) rotateX(1deg);
+    box-shadow: 0 28px 65px rgba(3, 40, 95, .16), 0 0 0 1px rgba(62, 167, 255, .08);
+}
+
+.component-card::before,
+.why-drone-grid article::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, .16) 50%, transparent 75%);
+    transform: translateX(-120%);
+    transition: transform .8s ease;
+}
+
+.component-card:hover::before,
+.why-drone-grid article:hover::before {
+    transform: translateX(120%);
+}
+
+/* Animated section dividers */
+.section-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(420px, 45vw);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(25, 110, 233, .22), transparent);
+}
+
+/* Timeline motion */
+.timeline-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(180deg, transparent, rgba(103, 232, 255, .9), transparent);
+    animation: timelineTravel 3.2s linear infinite;
+}
+
+@keyframes timelineTravel {
+    from {
+        transform: translateY(-120%);
+    }
+
+    to {
+        transform: translateY(330%);
+    }
+}
+
+/* Flight axis enhancement */
+.flight-axis::after {
+    content: "";
+    position: absolute;
+    inset: 12%;
+    border: 1px dashed rgba(103, 232, 255, .15);
+    border-radius: 50%;
+    animation: axisOrbit 12s linear infinite;
+}
+
+@keyframes axisOrbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Section heading entrance polish */
+.section-heading h2 span {
+    background: linear-gradient(90deg, #196ee9, #58b7ff, #196ee9);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: headingGradient 5s linear infinite;
+}
+
+@keyframes headingGradient {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@media (max-width: 900px) {
+    .motion-ring {
+        left: 72%;
+        width: 300px;
+        height: 300px;
+    }
+
+    .ring-two {
+        width: 440px;
+        height: 440px;
+    }
+
+    .motion-data {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .motion-beam {
+        width: 80vw;
+    }
+
+    .motion-ring {
+        left: 75%;
+        width: 230px;
+        height: 230px;
+    }
+
+    .ring-two {
+        width: 330px;
+        height: 330px;
+    }
+
+    .hero-motion-layer {
+        opacity: .65;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-motion-layer,
+    .motion-orb,
+    .motion-beam,
+    .motion-ring,
+    .motion-cross,
+    .motion-data,
+    .section-heading h2 span,
+    .timeline-line::after,
+    .flight-axis::after {
+        animation: none !important;
+    }
+}

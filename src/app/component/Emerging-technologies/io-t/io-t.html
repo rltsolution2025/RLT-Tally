@@ -1,0 +1,4403 @@
+<!-- =========================================================
+     RLT EDZARO - IoT PAGE
+     Internet of Things
+     Angular 21 Standalone Component
+========================================================= -->
+
+<section class="iot-page">
+
+
+    <!-- =====================================================
+         01. HERO
+    ====================================================== -->
+
+    <section class="iot-hero-v2">
+        <div class="hero-noise"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-radial hero-radial-1"></div>
+        <div class="hero-radial hero-radial-2"></div>
+        <div class="container">
+            <div class="hero-v2-layout">
+                <div class="hero-copy">
+                    <div class="status-pill"><span class="status-dot"></span><i class="fa-solid fa-wifi"></i> INTERNET
+                        OF THINGS <span class="status-live">LIVE</span></div>
+                    <h1>Connect the <span>Physical</span><strong>Digital World.</strong></h1>
+                    <p class="hero-lead">Learn how sensors, devices, connectivity, data and automation work together to
+                        create intelligent connected systems.</p>
+                    <div class="hero-partner-v2">
+                        <div class="partner-mark"><i class="fa-solid fa-link"></i></div>
+                        <div><small>IN ASSOCIATION WITH</small><strong>AITRA – Robotics and AI Research Lab</strong>
+                        </div>
+                    </div>
+                    <div class="hero-actions-v2">
+                        <a routerLink="." fragment="enroll" class="btn btn-primary">Enroll for Course <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a [routerLink]="['/contact']" class="btn btn-ghost">Contact for More Information <i
+                                class="fa-regular fa-message"></i></a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div><span class="metric-icon"><i
+                                    class="fa-solid fa-radar"></i></span><strong>SENSE</strong><small>Capture</small>
+                        </div>
+                        <div><span class="metric-icon"><i
+                                    class="fa-solid fa-wifi"></i></span><strong>CONNECT</strong><small>Communicate</small>
+                        </div>
+                        <div><span class="metric-icon"><i
+                                    class="fa-solid fa-chart-line"></i></span><strong>ANALYSE</strong><small>Understand</small>
+                        </div>
+                        <div><span class="metric-icon"><i
+                                    class="fa-solid fa-gears"></i></span><strong>ACT</strong><small>Automate</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-network-wrap">
+                    <div class="network-frame">
+                        <div class="frame-corner corner-tl"></div>
+                        <div class="frame-corner corner-tr"></div>
+                        <div class="frame-corner corner-bl"></div>
+                        <div class="frame-corner corner-br"></div>
+                        <div class="network-grid-plane"></div>
+                        <div class="network-orbit orbit-x"></div>
+                        <div class="network-orbit orbit-y"></div>
+                        <div class="network-orbit orbit-z"></div>
+                        <div class="network-core">
+                            <div class="core-wave wave-1"></div>
+                            <div class="core-wave wave-2"></div>
+                            <div class="core-wave wave-3"></div>
+                            <div class="core-chip"><i
+                                    class="fa-solid fa-microchip"></i><span>IoT</span><small>CORE</small></div>
+                        </div>
+                        <div class="device-node node-temp">
+                            <div class="node-box"><i
+                                    class="fa-solid fa-temperature-half"></i><strong>01</strong><small>SENSOR</small>
+                            </div>
+                        </div>
+                        <div class="device-node node-mobile">
+                            <div class="node-box"><i
+                                    class="fa-solid fa-mobile-screen"></i><strong>02</strong><small>DEVICE</small></div>
+                        </div>
+                        <div class="device-node node-cloud">
+                            <div class="node-box"><i
+                                    class="fa-solid fa-cloud"></i><strong>03</strong><small>CLOUD</small></div>
+                        </div>
+                        <div class="device-node node-data">
+                            <div class="node-box"><i
+                                    class="fa-solid fa-database"></i><strong>04</strong><small>DATA</small></div>
+                        </div>
+                        <div class="device-node node-action">
+                            <div class="node-box"><i
+                                    class="fa-solid fa-gears"></i><strong>05</strong><small>ACTION</small></div>
+                        </div>
+                        <span class="data-packet packet-1"></span><span class="data-packet packet-2"></span><span
+                            class="data-packet packet-3"></span><span class="data-packet packet-4"></span><span
+                            class="data-packet packet-5"></span><span class="data-packet packet-6"></span>
+                        <div class="network-status"><span></span> DEVICE NETWORK ONLINE <i
+                                class="fa-solid fa-signal"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-process-strip"><span>SENSOR</span><i
+                    class="fa-solid fa-chevron-right"></i><span>CONNECT</span><i
+                    class="fa-solid fa-chevron-right"></i><span>PROCESS</span><i
+                    class="fa-solid fa-chevron-right"></i><span>ANALYSE</span><i
+                    class="fa-solid fa-chevron-right"></i><span>ACT</span></div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         02. WHAT IS IoT
+    ====================================================== -->
+
+    <section class="section-block iot-definition">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-wifi"></i>
+
+                    UNDERSTANDING IoT
+
+                </span>
+
+
+                <h2>
+
+                    What Is
+
+                    <span>
+                        IoT?
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    The Internet of Things refers to a network
+                    of physical devices that can collect,
+                    exchange and sometimes act on information
+                    using sensors, software and communication
+                    technologies.
+
+                </p>
+
+            </div>
+
+
+            <div class="definition-grid">
+
+
+                <!-- Main workflow -->
+
+                <div class="definition-main-card">
+
+                    <div class="definition-card-top">
+
+                        <div class="definition-main-icon">
+
+                            <i class="fa-solid fa-network-wired"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                CORE IoT WORKFLOW
+                            </span>
+
+                            <h3>
+                                From Physical World to Digital Action
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="iot-core-flow">
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-radar"></i>
+                            </div>
+
+                            <strong>
+                                Sensor
+                            </strong>
+
+                            <small>
+                                Capture
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <strong>
+                                Controller
+                            </strong>
+
+                            <small>
+                                Process
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+
+                            <strong>
+                                Connectivity
+                            </strong>
+
+                            <small>
+                                Communicate
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <strong>
+                                Data
+                            </strong>
+
+                            <small>
+                                Collect
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <strong>
+                                Application
+                            </strong>
+
+                            <small>
+                                Analyse
+                            </small>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div class="core-step">
+
+                            <div>
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+
+                            <strong>
+                                Action
+                            </strong>
+
+                            <small>
+                                Respond
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- Technology list -->
+
+                <div class="definition-tech-card">
+
+                    <span>
+                        TECHNOLOGY BUILDING BLOCKS
+                    </span>
+
+
+                    <div class="definition-tech-grid">
+
+
+                        <div>
+                            <i class="fa-solid fa-radar"></i>
+                            Sensors
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-bolt"></i>
+                            Electronics
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-microchip"></i>
+                            Microcontrollers
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-gears"></i>
+                            Embedded Systems
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            Programming
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-wifi"></i>
+                            Wireless Communication
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            Cloud Platforms
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-database"></i>
+                            Data Processing
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-gears"></i>
+                            Automation
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-brain"></i>
+                            Artificial Intelligence
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         03. WHY LEARN IoT
+    ====================================================== -->
+
+    <section class="section-block light-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    WHY LEARN IoT?
+
+                </span>
+
+
+                <h2>
+
+                    Understand How
+
+                    <span>
+                        Connected Systems Work
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    IoT is not simply about connecting a device
+                    to the internet. It is about understanding
+                    how physical information can be captured,
+                    communicated, processed and transformed
+                    into useful actions.
+
+                </p>
+
+            </div>
+
+
+            <div class="iot-benefit-grid">
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        01
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>
+                        Electronics
+                    </h3>
+
+                    <p>
+                        Understand sensors, modules, controllers
+                        and other electronic components.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        02
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Learn how software can collect sensor
+                        information and control connected devices.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        03
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <h3>
+                        Connectivity
+                    </h3>
+
+                    <p>
+                        Understand how devices communicate
+                        with other systems.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        04
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <h3>
+                        Data
+                    </h3>
+
+                    <p>
+                        Explore how information collected from
+                        physical environments can be stored
+                        and analysed.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        05
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <h3>
+                        Automation
+                    </h3>
+
+                    <p>
+                        Learn how systems can respond
+                        automatically to predefined conditions.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        06
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Design technology-based solutions
+                        for real-world situations.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-benefit-card">
+
+                    <span class="benefit-number">
+                        07
+                    </span>
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <h3>
+                        Innovation
+                    </h3>
+
+                    <p>
+                        Transform an idea into a working
+                        connected-device prototype.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         04. HOW IoT WORKS
+    ====================================================== -->
+
+    <section class="iot-process-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center dark-heading">
+
+                <span class="section-kicker light">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    HOW DOES IoT WORK?
+
+                </span>
+
+
+                <h2>
+
+                    From Physical World to
+
+                    <span>
+                        Digital Information
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    An IoT system typically follows a series
+                    of connected steps.
+
+                </p>
+
+            </div>
+
+
+            <div class="iot-process-grid">
+
+
+                <div class="process-card">
+
+                    <span>01</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-radar"></i>
+                    </div>
+
+                    <h3>
+                        Sense
+                    </h3>
+
+                    <p>
+                        Sensors collect information from
+                        the physical environment.
+                    </p>
+
+                    <div class="process-tags">
+
+                        <span>Temperature</span>
+                        <span>Humidity</span>
+                        <span>Light</span>
+                        <span>Motion</span>
+                        <span>Distance</span>
+                        <span>Pressure</span>
+                        <span>Sound</span>
+                        <span>Gas</span>
+                        <span>Location</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>02</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <h3>
+                        Process
+                    </h3>
+
+                    <p>
+                        A microcontroller or computing device
+                        receives the information and processes
+                        it according to programmed instructions.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>03</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <h3>
+                        Connect
+                    </h3>
+
+                    <p>
+                        The device communicates information
+                        using an appropriate connectivity method.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>04</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+
+                    <h3>
+                        Transmit
+                    </h3>
+
+                    <p>
+                        Collected information can be transferred
+                        to another device, application, server
+                        or cloud platform.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <span>05</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h3>
+                        Analyse
+                    </h3>
+
+                    <p>
+                        Data can be displayed, processed or
+                        analysed to identify useful information.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card featured-process">
+
+                    <span>06</span>
+
+                    <div class="process-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <h3>
+                        Act
+                    </h3>
+
+                    <p>
+                        The system can trigger an action based
+                        on programmed conditions or other
+                        decision logic.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="process-summary">
+
+                <span>
+                    SENSE
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <span>
+                    CONNECT
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <span>
+                    PROCESS
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <span>
+                    ANALYSE
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <span>
+                    ACT
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         05. WHAT DO YOU LEARN
+    ====================================================== -->
+
+    <section class="section-block learning-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    WHAT DO YOU LEARN IN IoT?
+
+                </span>
+
+
+                <h2>
+
+                    Explore the Building Blocks of
+
+                    <span>
+                        Connected Technology
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Depending on the course, workshop or
+                    project level, learners can explore
+                    different areas of IoT technology.
+
+                </p>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+
+                <div class="learning-card large-learning">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FOUNDATION
+                        </span>
+
+                        <h3>
+                            IoT Fundamentals
+                        </h3>
+
+                        <p>
+                            Understand the basic concepts behind
+                            connected devices and smart systems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-radar"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SENSING
+                        </span>
+
+                        <h3>
+                            Sensors
+                        </h3>
+
+                        <p>
+                            Learn how sensors collect information
+                            from the surrounding environment.
+                        </p>
+
+
+                        <div class="tag-list">
+
+                            <span>Temperature</span>
+                            <span>Humidity</span>
+                            <span>Light</span>
+                            <span>Motion</span>
+                            <span>Distance</span>
+                            <span>Air Quality</span>
+                            <span>Object Detection</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CONTROL
+                        </span>
+
+                        <h3>
+                            Microcontrollers
+                        </h3>
+
+                        <p>
+                            Explore how microcontrollers receive
+                            information from sensors and control
+                            connected components.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SOFTWARE
+                        </span>
+
+                        <h3>
+                            Programming
+                        </h3>
+
+                        <p>
+                            Explore programming concepts used to
+                            read sensors, control devices and
+                            create automated responses.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COMMUNICATION
+                        </span>
+
+                        <h3>
+                            Connectivity
+                        </h3>
+
+                        <p>
+                            Understand how IoT devices communicate
+                            using different communication methods.
+                        </p>
+
+
+                        <div class="tag-list">
+
+                            <span>Wi-Fi</span>
+                            <span>Bluetooth</span>
+                            <span>Cellular</span>
+                            <span>MQTT</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            DATA
+                        </span>
+
+                        <h3>
+                            Data & Dashboards
+                        </h3>
+
+                        <p>
+                            Explore how collected information can
+                            be displayed through applications,
+                            dashboards or monitoring interfaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card large-learning">
+
+                    <div class="learning-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AUTOMATION
+                        </span>
+
+                        <h3>
+                            Automation
+                        </h3>
+
+                        <p>
+                            Create systems that respond automatically
+                            when specific conditions are detected.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         06. IoT HARDWARE
+    ====================================================== -->
+
+    <section class="section-block hardware-section light-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    IoT HARDWARE
+
+                </span>
+
+
+                <h2>
+
+                    The Components Behind
+
+                    <span>
+                        Connected Devices
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    An IoT project can bring together several
+                    types of hardware that work together as
+                    one connected system.
+
+                </p>
+
+            </div>
+
+
+            <div class="hardware-layout">
+
+
+                <div class="hardware-grid">
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-radar"></i>
+                        </div>
+
+                        <h3>
+                            Sensors
+                        </h3>
+
+                        <p>
+                            Sensors provide information about
+                            the physical environment.
+                        </p>
+
+                    </article>
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+
+                        <h3>
+                            Microcontrollers
+                        </h3>
+
+                        <p>
+                            Process sensor inputs and control
+                            connected components.
+                        </p>
+
+                    </article>
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+
+                        <h3>
+                            Actuators
+                        </h3>
+
+                        <p>
+                            Allow the system to perform
+                            physical actions.
+                        </p>
+
+
+                        <div class="hardware-tags">
+
+                            <span>Motors</span>
+                            <span>Relays</span>
+                            <span>LEDs</span>
+                            <span>Buzzers</span>
+                            <span>Pumps</span>
+                            <span>Servos</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-tower-broadcast"></i>
+                        </div>
+
+                        <h3>
+                            Communication Modules
+                        </h3>
+
+                        <p>
+                            Communication technologies allow
+                            devices to exchange information.
+                        </p>
+
+                    </article>
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-battery-three-quarters"></i>
+                        </div>
+
+                        <h3>
+                            Power Systems
+                        </h3>
+
+                        <p>
+                            IoT devices require suitable power
+                            sources depending on their application
+                            and operating environment.
+                        </p>
+
+                    </article>
+
+
+                    <article class="hardware-card">
+
+                        <div class="hardware-icon">
+                            <i class="fa-solid fa-display"></i>
+                        </div>
+
+                        <h3>
+                            Displays & Interfaces
+                        </h3>
+
+                        <p>
+                            Present information through displays,
+                            mobile applications or web-based dashboards.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="hardware-side-panel">
+
+
+                    <div class="hardware-visual">
+
+                        <div class="hardware-core">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                        </div>
+
+
+                        <div class="hardware-signal signal-one">
+                            <i class="fa-solid fa-radar"></i>
+                        </div>
+
+                        <div class="hardware-signal signal-two">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+
+                        <div class="hardware-signal signal-three">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+
+                        <div class="hardware-signal signal-four">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+
+                    </div>
+
+
+                    <p>
+
+                        Understanding how these components interact
+                        helps learners move from individual electronic
+                        parts to a complete IoT system.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         07. IoT + AI
+    ====================================================== -->
+
+    <section class="integration-section">
+
+        <div class="integration-grid"></div>
+
+        <div class="container position-relative">
+
+            <div class="integration-layout">
+
+
+                <div class="integration-content">
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                        IoT + ARTIFICIAL INTELLIGENCE
+
+                    </span>
+
+
+                    <h2>
+
+                        From Connected Devices to
+
+                        <span>
+                            Intelligent Systems
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        IoT collects information from the physical
+                        world. Artificial Intelligence can help
+                        interpret that information and identify
+                        patterns, make predictions or support
+                        automated decisions.
+
+                    </p>
+
+
+                    <div class="integration-flow">
+
+
+                        <span>
+                            Sensors
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <span>
+                            IoT Device
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <span>
+                            Data
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <span>
+                            AI Model
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <span>
+                            Decision
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        <span>
+                            Action
+                        </span>
+
+                    </div>
+
+
+                    <div class="integration-benefits">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <strong>
+                                Predictive Monitoring
+                            </strong>
+
+                            <span>
+                                Identify patterns and potential changes.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-gears"></i>
+
+                            <strong>
+                                Intelligent Automation
+                            </strong>
+
+                            <span>
+                                Use AI-based decisions to trigger actions.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-camera"></i>
+
+                            <strong>
+                                Image-Based Systems
+                            </strong>
+
+                            <span>
+                                Combine cameras, computer vision and connected devices.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <strong>
+                                Smart Detection
+                            </strong>
+
+                            <span>
+                                Identify unusual or relevant conditions.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="integration-visual">
+
+
+                    <div class="integration-core">
+
+                        <div class="integration-core-ring"></div>
+
+                        <div class="integration-core-inner">
+
+                            <i class="fa-solid fa-wifi"></i>
+
+                            <strong>
+                                IoT
+                            </strong>
+
+                            <small>
+                                + AI
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="integration-node node-ai">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>AI</span>
+                    </div>
+
+                    <div class="integration-node node-data">
+                        <i class="fa-solid fa-database"></i>
+                        <span>Data</span>
+                    </div>
+
+                    <div class="integration-node node-device">
+                        <i class="fa-solid fa-microchip"></i>
+                        <span>Device</span>
+                    </div>
+
+                    <div class="integration-node node-action">
+                        <i class="fa-solid fa-gears"></i>
+                        <span>Action</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         08. IoT + ROBOTICS
+    ====================================================== -->
+
+    <section class="section-block robotics-connect-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    IoT + ROBOTICS
+
+                </span>
+
+
+                <h2>
+
+                    Connecting
+
+                    <span>
+                        Intelligent Machines
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    IoT and robotics can work together to create
+                    connected robotic systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="robotics-connect-layout">
+
+
+                <div class="robotics-connect-visual">
+
+                    <div class="connected-robot">
+
+                        <div class="connected-robot-head">
+
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <div class="connected-robot-body">
+
+                            <i class="fa-solid fa-wifi"></i>
+
+                        </div>
+
+                        <div class="connected-robot-leg"></div>
+                        <div class="connected-robot-leg"></div>
+
+                    </div>
+
+
+                    <div class="robot-connect-wave wave-a"></div>
+                    <div class="robot-connect-wave wave-b"></div>
+                    <div class="robot-connect-wave wave-c"></div>
+
+                </div>
+
+
+                <div class="robotics-connect-content">
+
+
+                    <p>
+
+                        A robot can collect information through
+                        sensors while IoT connectivity allows
+                        information to be transmitted to other
+                        devices or systems.
+
+                    </p>
+
+
+                    <div class="connection-capabilities">
+
+
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            Remote monitoring
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-robot"></i>
+                            Connected robotic systems
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-database"></i>
+                            Data collection
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-comments"></i>
+                            Device communication
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-gamepad"></i>
+                            Remote control
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Automated responses
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-chart-line"></i>
+                            Real-time monitoring
+                        </span>
+
+                    </div>
+
+
+                    <div class="connect-note">
+
+                        <i class="fa-solid fa-link"></i>
+
+                        <p>
+
+                            IoT and robotics help learners understand
+                            how physical machines can communicate
+                            with digital systems.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         09. PROJECTS
+    ====================================================== -->
+
+    <section class="section-block projects-section light-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    IoT PROJECTS
+
+                </span>
+
+
+                <h2>
+
+                    Learn by Building
+
+                    <span>
+                        Connected Solutions
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    The best way to understand IoT is to build
+                    and experiment with real systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+
+                    <h3>
+                        Smart Home System
+                    </h3>
+
+                    <p>
+                        Create a connected system that monitors
+                        and controls devices within a home environment.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-temperature-half"></i>
+                    </div>
+
+                    <h3>
+                        Smart Temperature Monitor
+                    </h3>
+
+                    <p>
+                        Use sensors to collect temperature
+                        information and display the data digitally.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <h3>
+                        Smart Plant Monitoring
+                    </h3>
+
+                    <p>
+                        Monitor environmental conditions such as
+                        soil moisture and provide information about
+                        plant requirements.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        04
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <h3>
+                        Smart Lighting System
+                    </h3>
+
+                    <p>
+                        Use sensors and programmed logic to
+                        control lighting automatically.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        05
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+
+                    <h3>
+                        IoT Weather Station
+                    </h3>
+
+                    <p>
+                        Collect environmental information such
+                        as temperature, humidity and atmospheric conditions.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card featured-project">
+
+                    <span class="project-number">
+                        06
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3>
+                        Smart Security System
+                    </h3>
+
+                    <p>
+                        Combine sensors and connectivity to
+                        detect movement or other predefined events.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        07
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>
+                        IoT Energy Monitoring
+                    </h3>
+
+                    <p>
+                        Explore how connected systems can
+                        collect information related to energy usage.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        08
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+
+                    <h3>
+                        Smart Agriculture System
+                    </h3>
+
+                    <p>
+                        Use sensors and connected devices
+                        to monitor agricultural conditions.
+                    </p>
+
+                </article>
+
+
+                <article class="iot-project-card">
+
+                    <span class="project-number">
+                        09
+                    </span>
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+
+                    <h3>
+                        Remote Device Monitoring
+                    </h3>
+
+                    <p>
+                        Build a system that allows information
+                        from a physical device to be monitored remotely.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         10. REAL WORLD APPLICATIONS
+    ====================================================== -->
+
+    <section class="section-block applications-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-industry"></i>
+
+                    REAL-WORLD APPLICATIONS
+
+                </span>
+
+
+                <h2>
+
+                    IoT Across
+
+                    <span>
+                        Industries
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    IoT technology is being explored across
+                    many industries.
+
+                </p>
+
+            </div>
+
+
+            <div class="applications-grid">
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+
+                    <h3>
+                        Smart Homes
+                    </h3>
+
+                    <p>
+                        Connected lights, appliances, security
+                        systems and environmental monitoring devices.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <h3>
+                        Agriculture
+                    </h3>
+
+                    <p>
+                        Monitoring of soil, temperature, humidity,
+                        irrigation and environmental conditions.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+
+                    <h3>
+                        Manufacturing
+                    </h3>
+
+                    <p>
+                        Connected machines can provide operational
+                        information and support monitoring and automation.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <h3>
+                        Healthcare
+                    </h3>
+
+                    <p>
+                        Connected devices can support monitoring
+                        and data collection in appropriate applications.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <h3>
+                        Transportation
+                    </h3>
+
+                    <p>
+                        Vehicle tracking, fleet monitoring and
+                        connected transportation systems.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>
+                        Energy
+                    </h3>
+
+                    <p>
+                        Connected systems can collect information
+                        about energy generation, distribution and consumption.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+
+                    <h3>
+                        Smart Cities
+                    </h3>
+
+                    <p>
+                        Connected infrastructure, environmental
+                        monitoring, traffic systems and public services.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+
+                    <h3>
+                        Retail
+                    </h3>
+
+                    <p>
+                        Connected devices can support inventory
+                        management, monitoring and customer-facing applications.
+                    </p>
+
+                </div>
+
+
+                <div class="application-card">
+
+                    <div class="application-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        IoT provides a practical platform for
+                        learning electronics, programming,
+                        networking and automation.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         11. IoT FOR STUDENTS
+    ====================================================== -->
+
+    <section class="students-section">
+
+        <div class="container">
+
+
+            <div class="students-layout">
+
+
+                <div class="students-content">
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        IoT FOR STUDENTS
+
+                    </span>
+
+
+                    <h2>
+
+                        Make Technology
+
+                        <span>
+                            Come Alive
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        IoT can introduce students to technology
+                        through projects that connect software
+                        with the physical world.
+
+                    </p>
+
+
+                    <p>
+
+                        Instead of learning programming only
+                        on a computer, students can write code
+                        that interacts with real physical components.
+
+                    </p>
+
+
+                    <div class="student-components">
+
+
+                        <span>
+                            <i class="fa-solid fa-radar"></i>
+                            Sensors
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Lights
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Motors
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-display"></i>
+                            Displays
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-volume-high"></i>
+                            Buzzers
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-toggle-on"></i>
+                            Switches
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-wifi"></i>
+                            Connected Devices
+                        </span>
+
+
+                    </div>
+
+
+                    <div class="stem-line">
+
+                        <span>
+                            SCIENCE
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            TECHNOLOGY
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            ENGINEERING
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            MATHEMATICS
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            PROGRAMMING
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="students-visual">
+
+
+                    <div class="student-device">
+
+                        <div class="device-screen">
+
+                            <div class="screen-wave"></div>
+                            <div class="screen-wave second-wave"></div>
+
+                            <span>
+                                DATA STREAM
+                            </span>
+
+                        </div>
+
+
+                        <div class="device-chip">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                        </div>
+
+
+                        <div class="device-light light-a"></div>
+                        <div class="device-light light-b"></div>
+                        <div class="device-light light-c"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         12. COLLEGE STUDENTS
+    ====================================================== -->
+
+    <section class="section-block college-section light-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    IoT FOR COLLEGE STUDENTS
+
+                </span>
+
+
+                <h2>
+
+                    Develop Practical
+
+                    <span>
+                        Technology Skills
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    IoT can provide exposure to multiple
+                    technical areas relevant to modern
+                    connected systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="college-skills-grid">
+
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    Embedded Programming
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    Microcontrollers
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-radar"></i>
+                    Sensors
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    Electronics
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    Communication Protocols
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-wifi"></i>
+                    Networking
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    Cloud Connectivity
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    Data Collection
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    Automation
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-brain"></i>
+                    AI-Enabled IoT
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Project Development
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         13. BEGINNERS
+    ====================================================== -->
+
+    <section class="beginner-section">
+
+        <div class="container">
+
+
+            <div class="beginner-card">
+
+
+                <div class="beginner-content">
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        IoT FOR BEGINNERS
+
+                    </span>
+
+
+                    <h2>
+
+                        You Can Start
+
+                        <span>
+                            Without Being an Expert
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        IoT may initially appear complex because
+                        it combines several technologies. However,
+                        learning can begin with simple concepts.
+
+                    </p>
+
+
+                    <p>
+
+                        The objective is not to learn everything
+                        at once. It is to build one working system,
+                        understand how it works and then move
+                        to the next level.
+
+                    </p>
+
+
+                    <div class="beginner-flow">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-radar"></i>
+
+                            <strong>
+                                Sensor
+                            </strong>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                            <strong>
+                                Controller
+                            </strong>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-code"></i>
+
+                            <strong>
+                                Program
+                            </strong>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <strong>
+                                Output
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="beginner-visual">
+
+                    <div class="beginner-circle">
+
+                        <span>
+                            START
+                        </span>
+
+                        <strong>
+                            SIMPLE
+                            <br>
+                            SYSTEM
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         14. WORKSHOPS
+    ====================================================== -->
+
+    <section class="section-block workshop-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    IoT WORKSHOPS FOR STUDENTS
+
+                </span>
+
+
+                <h2>
+
+                    Learn Connected Technology
+
+                    <span>
+                        Through Practical Activities
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    An IoT workshop can introduce students
+                    to the fundamentals of connected devices
+                    through demonstrations and hands-on activities.
+
+                </p>
+
+            </div>
+
+
+            <div class="workshop-layout">
+
+
+                <div class="workshop-list">
+
+
+                    <div>
+                        <span>01</span>
+                        Introduction to IoT
+                    </div>
+
+
+                    <div>
+                        <span>02</span>
+                        Understanding Sensors
+                    </div>
+
+
+                    <div>
+                        <span>03</span>
+                        Exploring Microcontrollers
+                    </div>
+
+
+                    <div>
+                        <span>04</span>
+                        Basic Programming
+                    </div>
+
+
+                    <div>
+                        <span>05</span>
+                        Connecting Electronic Components
+                    </div>
+
+
+                    <div>
+                        <span>06</span>
+                        Device Communication
+                    </div>
+
+
+                    <div>
+                        <span>07</span>
+                        Building a Simple IoT System
+                    </div>
+
+
+                    <div>
+                        <span>08</span>
+                        Data Collection
+                    </div>
+
+
+                    <div>
+                        <span>09</span>
+                        Automation Activities
+                    </div>
+
+
+                    <div>
+                        <span>10</span>
+                        Project Demonstration
+                    </div>
+
+
+                    <div>
+                        <span>11</span>
+                        Troubleshooting
+                    </div>
+
+
+                </div>
+
+
+                <div class="workshop-customization">
+
+
+                    <span>
+                        PROGRAM CAN BE ADAPTED TO
+                    </span>
+
+
+                    <h3>
+                        Your Learning Context
+                    </h3>
+
+
+                    <div class="adaptation-grid">
+
+
+                        <div>
+                            <i class="fa-solid fa-child"></i>
+                            Student Age
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Academic Level
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-book-open"></i>
+                            Previous Knowledge
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-clock"></i>
+                            Program Duration
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-bullseye"></i>
+                            Learning Objectives
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         15. SCHOOLS & COLLEGES
+    ====================================================== -->
+
+    <section class="institution-section">
+
+        <div class="container">
+
+
+            <div class="institution-layout">
+
+
+                <div class="institution-content">
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-school"></i>
+
+                        IoT PROGRAMS FOR SCHOOLS & COLLEGES
+
+                    </span>
+
+
+                    <h2>
+
+                        Bring Connected Technology
+
+                        <span>
+                            Into the Classroom
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        RLT Edzaro can support educational
+                        institutions interested in introducing
+                        students to IoT through workshops,
+                        technology programs and project-based learning.
+
+                    </p>
+
+
+                    <div class="institution-types">
+
+
+                        <span>
+                            <i class="fa-solid fa-school"></i>
+                            Schools
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-building-columns"></i>
+                            Colleges
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-university"></i>
+                            Universities
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-people-group"></i>
+                            STEM Clubs
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-microchip"></i>
+                            Technology Clubs
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Innovation Centres
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-code"></i>
+                            Coding Clubs
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Engineering Departments
+                        </span>
+
+
+                        <span>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            Technology Events
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="institution-program-card">
+
+
+                    <span>
+                        INSTITUTIONAL IoT PROGRAMS
+                    </span>
+
+
+                    <div class="institution-program-list">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <div>
+                                <strong>
+                                    IoT Awareness Workshops
+                                </strong>
+
+                                <small>
+                                    Introduce students to connected
+                                    devices and real-world applications.
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-flask"></i>
+
+                            <div>
+                                <strong>
+                                    Hands-On IoT Workshops
+                                </strong>
+
+                                <small>
+                                    Work with sensors, controllers
+                                    and connected systems.
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-diagram-project"></i>
+
+                            <div>
+                                <strong>
+                                    IoT Project Programs
+                                </strong>
+
+                                <small>
+                                    Develop practical connected-device projects.
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-puzzle-piece"></i>
+
+                            <div>
+                                <strong>
+                                    STEM Programs
+                                </strong>
+
+                                <small>
+                                    Combine IoT with science, electronics,
+                                    programming and engineering.
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-rocket"></i>
+
+                            <div>
+                                <strong>
+                                    Innovation Programs
+                                </strong>
+
+                                <small>
+                                    Explore IoT-based solutions
+                                    for practical problems.
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         16. IoT + STEM
+    ====================================================== -->
+
+    <section class="section-block stem-section light-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    IoT AND STEM EDUCATION
+
+                </span>
+
+
+                <h2>
+
+                    Connecting Science,
+
+                    <span>
+                        Technology & Engineering
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A single IoT project can involve multiple
+                    disciplines, making IoT a practical platform
+                    for interdisciplinary learning.
+
+                </p>
+
+            </div>
+
+
+            <div class="stem-grid">
+
+
+                <div class="stem-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    <h3>
+                        Science
+                    </h3>
+
+                    <p>
+                        Understand environmental conditions
+                        and physical measurements.
+                    </p>
+
+                </div>
+
+
+                <div class="stem-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <h3>
+                        Technology
+                    </h3>
+
+                    <p>
+                        Work with connected devices and
+                        digital systems.
+                    </p>
+
+                </div>
+
+
+                <div class="stem-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <i class="fa-solid fa-compass-drafting"></i>
+
+                    <h3>
+                        Engineering
+                    </h3>
+
+                    <p>
+                        Design and assemble a functioning system.
+                    </p>
+
+                </div>
+
+
+                <div class="stem-card">
+
+                    <span>
+                        04
+                    </span>
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Write instructions that control the device.
+                    </p>
+
+                </div>
+
+
+                <div class="stem-card">
+
+                    <span>
+                        05
+                    </span>
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <p>
+                        Work with measurements, values and data.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         17. SKILLS
+    ====================================================== -->
+
+    <section class="skills-dark-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center dark-heading">
+
+                <span class="section-kicker light">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    SKILLS YOU CAN DEVELOP THROUGH IoT
+
+                </span>
+
+
+                <h2>
+
+                    Build Skills Around
+
+                    <span>
+                        Connected Technology
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="skills-dark-grid">
+
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    <strong>Electronics</strong>
+                    <span>Understand sensors, circuits and electronic components.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <strong>Programming</strong>
+                    <span>Develop logical thinking and coding skills.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <strong>Embedded Systems</strong>
+                    <span>Understand how software operates alongside hardware.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <strong>Networking</strong>
+                    <span>Explore how devices communicate and exchange information.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <strong>Data Handling</strong>
+                    <span>Understand how information is collected and displayed.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <strong>Automation</strong>
+                    <span>Create systems that respond automatically to conditions.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <strong>System Design</strong>
+                    <span>Learn how different components work together.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <strong>Problem Solving</strong>
+                    <span>Identify technical issues and develop possible solutions.</span>
+                </div>
+
+
+                <div>
+                    <i class="fa-solid fa-rocket"></i>
+                    <strong>Project Development</strong>
+                    <span>Move from an idea to a functional prototype.</span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         18. DEVELOPMENT JOURNEY
+    ====================================================== -->
+
+    <section class="section-block development-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    FROM IDEA TO CONNECTED DEVICE
+
+                </span>
+
+
+                <h2>
+
+                    The IoT
+
+                    <span>
+                        Development Journey
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Move through a practical technology development
+                    process from problem identification to
+                    demonstrating a working IoT solution.
+
+                </p>
+
+            </div>
+
+
+            <div class="iot-development-flow">
+
+
+                <div class="development-item">
+
+                    <span>01</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>
+                        Identify
+                    </h3>
+
+                    <p>
+                        Find a problem that could benefit
+                        from monitoring, connectivity or automation.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>02</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+
+                    <h3>
+                        Plan
+                    </h3>
+
+                    <p>
+                        Decide what the system needs to
+                        measure, control or communicate.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>03</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <h3>
+                        Select
+                    </h3>
+
+                    <p>
+                        Choose appropriate sensors, controllers,
+                        communication technologies and components.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>04</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Connect the hardware and create
+                        the physical system.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>05</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>
+                        Program
+                    </h3>
+
+                    <p>
+                        Develop the software required to
+                        read information and control the system.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>06</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <h3>
+                        Connect
+                    </h3>
+
+                    <p>
+                        Enable communication between the
+                        device and the required network or application.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>07</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+
+                    <h3>
+                        Test
+                    </h3>
+
+                    <p>
+                        Check whether the system behaves
+                        as expected.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>08</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+
+                    <h3>
+                        Improve
+                    </h3>
+
+                    <p>
+                        Identify limitations and refine the design.
+                    </p>
+
+                </div>
+
+
+                <div class="development-line"></div>
+
+
+                <div class="development-item">
+
+                    <span>09</span>
+
+                    <div class="development-icon">
+                        <i class="fa-solid fa-display"></i>
+                    </div>
+
+                    <h3>
+                        Demonstrate
+                    </h3>
+
+                    <p>
+                        Present the working IoT solution and
+                        explain how it solves the identified problem.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         19. WHY RLT EDZARO
+    ====================================================== -->
+
+    <section class="why-iot-section">
+
+        <div class="container">
+
+
+            <div class="why-iot-layout">
+
+
+                <div class="why-iot-title">
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        WHY LEARN IoT WITH RLT EDZARO?
+
+                    </span>
+
+
+                    <h2>
+
+                        Learn Connected Technology
+
+                        <span>
+                            Through Practical Experience
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore IoT through activities,
+                        demonstrations and hands-on projects.
+
+                    </p>
+
+                </div>
+
+
+                <div class="why-iot-grid">
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                        <div>
+
+                            <h3>
+                                Practical Learning
+                            </h3>
+
+                            <p>
+                                Explore IoT through activities,
+                                demonstrations and hands-on projects.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-puzzle-piece"></i>
+
+                        <div>
+
+                            <h3>
+                                Technology Integration
+                            </h3>
+
+                            <p>
+                                Understand how electronics, programming,
+                                connectivity and automation work together.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                        <div>
+
+                            <h3>
+                                Emerging Technology Exposure
+                            </h3>
+
+                            <p>
+                                Explore IoT alongside AI, robotics,
+                                cloud technologies and smart systems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                        <div>
+
+                            <h3>
+                                Project-Based Experience
+                            </h3>
+
+                            <p>
+                                Apply concepts by building
+                                functional prototypes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <div>
+
+                            <h3>
+                                Suitable for Different Learners
+                            </h3>
+
+                            <p>
+                                Programs can be adapted for school
+                                students, college students, beginners
+                                and institutions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-iot-item">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <div>
+
+                            <h3>
+                                Innovation-Focused Learning
+                            </h3>
+
+                            <p>
+                                Encourage learners to think about
+                                how connected technology can solve
+                                practical problems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         20. RLT EDZARO × AITRA
+    ====================================================== -->
+
+    <section class="section-block association-iot-section">
+
+        <div class="container">
+
+
+            <div class="association-iot-card">
+
+
+                <div class="association-iot-content">
+
+                    <span class="section-kicker">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                        RLT EDZARO × AITRA
+
+                    </span>
+
+
+                    <h2>
+
+                        Explore Connected Technology
+
+                        <span>
+                            Through Practical Innovation
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        RLT Edzaro, in association with AITRA –
+                        Robotics and AI Research Lab, provides
+                        learners with opportunities to explore
+                        emerging technologies through practical
+                        learning and project-based experiences.
+
+                    </p>
+
+
+                    <div class="association-tech-grid">
+
+
+                        <div>
+                            <i class="fa-solid fa-robot"></i>
+                            <strong>IoT + Robotics</strong>
+                            <span>Connected machines and automated systems.</span>
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-brain"></i>
+                            <strong>IoT + AI</strong>
+                            <span>Intelligent analysis and decision-making.</span>
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-cloud"></i>
+                            <strong>IoT + Cloud</strong>
+                            <span>Connected data and remote monitoring.</span>
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-gears"></i>
+                            <strong>IoT + Automation</strong>
+                            <span>Systems that respond to real-world conditions.</span>
+                        </div>
+
+
+                        <div>
+                            <i class="fa-solid fa-microchip"></i>
+                            <strong>IoT + Embedded Systems</strong>
+                            <span>Hardware and software working together.</span>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="association-iot-visual">
+
+
+                    <div class="association-network">
+
+                        <div class="association-network-core">
+
+                            <i class="fa-solid fa-wifi"></i>
+
+                            <span>
+                                IoT
+                            </span>
+
+                        </div>
+
+
+                        <div class="association-network-node n-ai">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+
+                        <div class="association-network-node n-robot">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+
+                        <div class="association-network-node n-cloud">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+
+
+                        <div class="association-network-node n-auto">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         21. BUILD JOURNEY CTA
+    ====================================================== -->
+
+    <section class="iot-build-section">
+
+        <div class="iot-build-grid"></div>
+
+        <div class="container position-relative">
+
+
+            <div class="iot-build-content">
+
+
+                <span class="section-kicker light">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    BUILD YOUR IoT JOURNEY
+
+                </span>
+
+
+                <h2>
+
+                    Start With a Problem.
+
+                    <span>
+                        Build the Connected Solution.
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Whether you are searching for an IoT course,
+                    IoT training, IoT workshop, IoT projects for
+                    students, IoT classes for beginners or
+                    practical IoT programs for schools and colleges,
+                    RLT Edzaro provides a platform to explore
+                    connected technology through hands-on learning.
+
+                </p>
+
+
+                <div class="build-sequence">
+
+
+                    <span>
+                        Start With a Problem
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    <span>
+                        Connect the Technology
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    <span>
+                        Collect the Data
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    <span>
+                        Build the Solution
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    <span>
+                        Make It Smarter
+                    </span>
+
+
+                </div>
+
+
+                <div class="build-actions">
+
+
+                    <a [routerLink]="['/register']" class="build-primary-btn">
+
+                        Register for a Course
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a [routerLink]="['/contact']" class="build-outline-btn">
+
+                        Contact for More Information
+
+                        <i class="fa-regular fa-message"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         23. FAQ
+    ====================================================== -->
+
+    <section class="section-block faq-section">
+
+        <div class="container">
+
+
+            <div class="section-heading center">
+
+                <span class="section-kicker">
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                    FREQUENTLY ASKED QUESTIONS
+
+                </span>
+
+
+                <h2>
+
+                    IoT
+
+                    <span>
+                        FAQs
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="faq-wrapper">
+
+
+                <details class="faq-item" open>
+
+                    <summary>
+
+                        <span>
+                            What is IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        IoT, or the Internet of Things, is a
+                        technology concept where physical devices
+                        use sensors, software and communication
+                        technologies to collect and exchange information.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            What is an example of IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        A smart temperature monitoring system is
+                        a simple example. A sensor measures temperature,
+                        a controller processes the information and a
+                        connected system can display or respond to the data.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            Is IoT suitable for school students?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Yes. IoT can be introduced to school students
+                        through age-appropriate activities involving
+                        sensors, simple programming, electronics and
+                        connected devices.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            Do I need programming knowledge to learn IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Not necessarily. Beginners can start with
+                        basic programming concepts and gradually
+                        learn how software interacts with sensors
+                        and hardware.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            What can students learn through IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Students can explore sensors, electronics,
+                        microcontrollers, programming, connectivity,
+                        data collection, automation and project development.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            What is the difference between IoT and robotics?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        IoT primarily focuses on connecting devices
+                        and exchanging information, while robotics
+                        focuses on machines that can sense, process
+                        information and perform physical actions.
+                        The two technologies can also be combined.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            Can IoT be combined with Artificial Intelligence?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Yes. AI can analyse data collected by IoT
+                        devices and support prediction, detection,
+                        classification and automated decision-making.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            What projects can students build using IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Projects can include smart home systems,
+                        weather monitoring systems, smart agriculture
+                        solutions, security systems, environmental
+                        monitors, smart lighting and connected devices.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            Is IoT useful for engineering students?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Yes. IoT can provide practical exposure
+                        to electronics, embedded systems, programming,
+                        networking, sensors, automation and data-driven
+                        technologies.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            Can schools conduct IoT workshops?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        Yes. IoT workshops can be designed for
+                        schools and colleges based on student age,
+                        technical level, duration and learning objectives.
+
+                    </div>
+
+                </details>
+
+
+                <details class="faq-item">
+
+                    <summary>
+
+                        <span>
+                            What technologies are connected to IoT?
+                        </span>
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </summary>
+
+
+                    <div class="faq-answer">
+
+                        IoT can work alongside sensors, microcontrollers,
+                        embedded systems, networking, cloud platforms,
+                        Artificial Intelligence, robotics and automation.
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================================================
+         22. ENROLL
+    ====================================================== -->
+
+    <section class="iot-enroll-section" id="enroll">
+
+        <div class="iot-enroll-grid"></div>
+
+        <div class="iot-enroll-glow enroll-glow-one"></div>
+        <div class="iot-enroll-glow enroll-glow-two"></div>
+
+
+        <div class="container position-relative">
+
+
+            <div class="iot-enroll-layout">
+
+
+                <!-- LEFT -->
+
+                <div class="iot-enroll-content">
+
+
+                    <span class="section-kicker light">
+
+                        <i class="fa-solid fa-wifi"></i>
+
+                        START YOUR IoT JOURNEY
+
+                    </span>
+
+
+                    <h2>
+
+                        Connect Your Ideas.
+
+                        <span>
+                            Build Something Smart.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore sensors, programming, electronics,
+                        embedded systems, connectivity, data and
+                        automation through practical IoT learning.
+
+                    </p>
+
+
+                    <div class="enroll-feature-grid">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-radar"></i>
+
+                            <strong>
+                                Sensors
+                            </strong>
+
+                            <span>
+                                Capture information from the physical world.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                            <strong>
+                                Devices
+                            </strong>
+
+                            <span>
+                                Understand controllers and hardware.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-wifi"></i>
+
+                            <strong>
+                                Connectivity
+                            </strong>
+
+                            <span>
+                                Connect devices and systems.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-database"></i>
+
+                            <strong>
+                                Data
+                            </strong>
+
+                            <span>
+                                Collect and understand information.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="enroll-partner">
+
+                        <div>
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+
+                        <span>
+
+                            IN ASSOCIATION WITH
+
+                            <strong>
+                                AITRA – Robotics and AI Research Lab
+                            </strong>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT FORM -->
+
+                <div class="iot-enroll-card">
+
+
+                    <div class="enroll-accent"></div>
+
+
+                    <div class="enroll-heading">
+
+                        <span>
+                            IoT PROGRAM
+                        </span>
+
+
+                        <h3>
+                            Start Learning IoT
+                        </h3>
+
+
+                        <p>
+
+                            Submit your details and our team
+                            will help you explore the right
+                            IoT learning option.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="enroll-form">
+
+                        <app-enroll [courseName]="'IoT'">
+                        </app-enroll>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>

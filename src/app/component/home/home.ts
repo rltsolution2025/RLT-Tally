@@ -6,7 +6,7 @@ import { GoogleReviews } from '../../components/google-reviews/google-reviews';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, CommonModule, GoogleReviews],
+  imports: [RouterLink, CommonModule,],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

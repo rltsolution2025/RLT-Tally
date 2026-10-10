@@ -62,6 +62,12 @@ import { TallyVelloreComponent } from './component/city/tally-vellore/tally-vell
 import { TDLComponent } from './component/courses/tdl/tdl.component';
 import { InventoryManagementComponent } from './component/courses/inventory-management/inventory-management.component';
 import { GoogleReviews } from './components/google-reviews/google-reviews';
+import { Robotics } from './component/Emerging-technologies/robotics/robotics';
+import { IoT } from './component/Emerging-technologies/io-t/io-t';
+import { GenAI } from './component/Emerging-technologies/gen-ai/gen-ai';
+import { DroneTechnologies } from './component/Emerging-technologies/drone-technologies/drone-technologies';
+import { KidsProgram } from './component/kids-program/kids-program';
+
 
 
 export const routes: Routes = [
@@ -155,4 +161,14 @@ export const routes: Routes = [
   },
 
   { path: 'google-review', component: GoogleReviews },
+
+  //Emerging Technologies
+
+  { path: 'robitics-course', component: Robotics },
+  { path: 'internet-of-things-course', component: IoT },
+  { path: 'generative-ai-course', component: GenAI },
+  { path: 'drone-technology-course', component: DroneTechnologies },
+
+  // Kids Programs
+  { path: 'kids-programs', component: KidsProgram },
 ];

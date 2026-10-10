@@ -1,0 +1,8436 @@
+/* =========================================================
+   RLT EDZARO
+   GENERATIVE AI PAGE
+   PREMIUM AI / BLUE TECHNOLOGY DESIGN
+   ANGULAR 21
+========================================================= */
+
+
+/* =========================================================
+   DESIGN TOKENS
+========================================================= */
+
+:host {
+
+    display: block;
+
+    --ai-950: #020f2c;
+    --ai-925: #031433;
+    --ai-900: #05255a;
+    --ai-875: #082d69;
+    --ai-850: #093775;
+    --ai-800: #0b3f83;
+    --ai-750: #0d478f;
+    --ai-700: #0d47a1;
+    --ai-650: #1056be;
+    --ai-600: #125bd1;
+    --ai-550: #1464df;
+    --ai-500: #1769e8;
+    --ai-450: #287ced;
+    --ai-400: #3b8df2;
+    --ai-350: #55a3f7;
+    --ai-300: #70b6fa;
+    --ai-250: #94c9fc;
+    --ai-200: #bfdcff;
+    --ai-150: #d7e9fc;
+    --ai-100: #e8f2fd;
+    --ai-75: #eff6ff;
+    --ai-50: #f7fbff;
+
+    --ai-text: #0a254b;
+    --ai-text-secondary: #18385f;
+    --ai-muted: #65758e;
+
+    --ai-border: #dce9f8;
+
+    --ai-shadow-sm:
+        0 8px 25px rgba(7, 48, 107, 0.07);
+
+    --ai-shadow-md:
+        0 18px 50px rgba(7, 48, 107, 0.11);
+
+    --ai-shadow-lg:
+        0 30px 85px rgba(3, 31, 76, 0.18);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.genai-page {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    color:
+        var(--ai-text);
+
+    background:
+        #ffffff;
+}
+
+
+.genai-page a {
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.container {
+
+    width:
+        min(1260px, calc(100% - 40px));
+
+    margin:
+        0 auto;
+}
+
+
+.position-relative {
+    position: relative;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section-block {
+
+    position: relative;
+
+    padding:
+        105px 0;
+}
+
+
+.light-section {
+
+    background:
+
+        radial-gradient(circle at 8% 15%,
+            rgba(23, 105, 232, .055),
+            transparent 29%),
+
+        radial-gradient(circle at 92% 85%,
+            rgba(23, 105, 232, .045),
+            transparent 29%),
+
+        var(--ai-50);
+}
+
+
+.section-heading {
+
+    max-width:
+        820px;
+
+    margin-bottom:
+        54px;
+}
+
+
+.section-heading.center {
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+
+    text-align:
+        center;
+}
+
+
+.section-kicker {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--ai-600);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.section-kicker.light {
+
+    color:
+        #9dcbff;
+}
+
+
+.section-heading h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        clamp(35px, 4vw, 58px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.section-heading h2 span {
+
+    color:
+        var(--ai-600);
+}
+
+
+.section-heading p {
+
+    max-width:
+        740px;
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        16px;
+
+    line-height:
+        1.8;
+}
+
+
+.section-heading.center p {
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+}
+
+
+.dark-heading h2 {
+
+    color:
+        #ffffff;
+}
+
+
+.dark-heading p {
+
+    color:
+        #bdd4ef;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.genai-hero {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    min-height:
+        820px;
+
+    padding:
+        92px 0 38px;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 76% 26%,
+            rgba(66, 155, 255, .23),
+            transparent 28%),
+
+        radial-gradient(circle at 12% 82%,
+            rgba(22, 94, 211, .18),
+            transparent 30%),
+
+        linear-gradient(135deg,
+            #020e29 0%,
+            #05265b 48%,
+            #084a96 100%);
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.genai-grid {
+
+    position:
+        absolute;
+
+    z-index:
+        -5;
+
+    inset:
+        -100px;
+
+    opacity:
+        .14;
+
+    background-image:
+
+        linear-gradient(rgba(121, 191, 255, .08) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(121, 191, 255, .08) 1px,
+            transparent 1px);
+
+    background-size:
+        45px 45px;
+
+    transform:
+        perspective(700px) rotateX(58deg) scale(1.4);
+
+    transform-origin:
+        center bottom;
+
+    animation:
+        heroGridMove 18s linear infinite;
+}
+
+
+@keyframes heroGridMove {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            0 45px,
+            45px 0;
+    }
+}
+
+
+/* =========================================================
+   HERO GLOWS
+========================================================= */
+
+.genai-glow {
+
+    position:
+        absolute;
+
+    border-radius:
+        50%;
+
+    filter:
+        blur(80px);
+
+    pointer-events:
+        none;
+}
+
+
+.genai-glow-one {
+
+    width:
+        450px;
+
+    height:
+        450px;
+
+    right:
+        -100px;
+
+    top:
+        0;
+
+    background:
+        rgba(56, 153, 255, .17);
+
+    animation:
+        glowOne 8s ease-in-out infinite;
+}
+
+
+.genai-glow-two {
+
+    width:
+        310px;
+
+    height:
+        310px;
+
+    left:
+        -100px;
+
+    bottom:
+        -90px;
+
+    background:
+        rgba(34, 111, 227, .15);
+
+    animation:
+        glowTwo 9s ease-in-out infinite;
+}
+
+
+@keyframes glowOne {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-25px, 25px) scale(1.11);
+    }
+}
+
+
+@keyframes glowTwo {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform:
+            translate(28px, -20px) scale(1.13);
+    }
+}
+
+
+/* =========================================================
+   HERO ORBS
+========================================================= */
+
+.genai-orb {
+
+    position:
+        absolute;
+
+    border:
+        1px solid rgba(107, 185, 255, .09);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+}
+
+
+.genai-orb-one {
+
+    width:
+        470px;
+
+    height:
+        470px;
+
+    right:
+        1%;
+
+    top:
+        10%;
+
+    animation:
+        orbRotate 25s linear infinite;
+}
+
+
+.genai-orb-two {
+
+    width:
+        240px;
+
+    height:
+        240px;
+
+    left:
+        33%;
+
+    bottom:
+        -85px;
+
+    animation:
+        orbFloat 8s ease-in-out infinite;
+}
+
+
+@keyframes orbRotate {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-25px);
+    }
+}
+
+
+/* =========================================================
+   HERO LAYOUT
+========================================================= */
+
+.genai-hero-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.03fr) minmax(450px, .97fr);
+
+    align-items:
+        center;
+
+    gap:
+        60px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.genai-hero-content {
+
+    max-width:
+        730px;
+
+    animation:
+        contentEnter 1s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+
+@keyframes contentEnter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translate3d(-42px, 15px, 0);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translate3d(0, 0, 0);
+    }
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.genai-eyebrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid rgba(158, 211, 255, .18);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    color:
+        #97caff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .16em;
+
+    text-transform:
+        uppercase;
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.status-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #73b9ff;
+
+    box-shadow:
+        0 0 14px rgba(86, 173, 255, .95);
+
+    animation:
+        livePulse 1.7s ease-in-out infinite;
+}
+
+
+@keyframes livePulse {
+
+    0%,
+    100% {
+        transform:
+            scale(.8);
+
+        opacity:
+            .55;
+    }
+
+    50% {
+        transform:
+            scale(1.4);
+
+        opacity:
+            1;
+    }
+}
+
+
+/* =========================================================
+   HERO TYPOGRAPHY
+========================================================= */
+
+.genai-hero-content h1 {
+
+    margin:
+        22px 0 8px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(50px, 6vw, 81px);
+
+    line-height:
+        .96;
+
+    letter-spacing:
+        -.064em;
+
+    font-weight:
+        900;
+}
+
+
+.genai-hero-content h1 span {
+
+    color:
+        #79baff;
+}
+
+
+.genai-hero-content h2 {
+
+    max-width:
+        700px;
+
+    margin:
+        0 0 20px;
+
+    color:
+        #dcedff;
+
+    font-size:
+        clamp(20px, 2vw, 27px);
+
+    line-height:
+        1.35;
+
+    font-weight:
+        700;
+}
+
+
+.hero-main-text {
+
+    max-width:
+        660px;
+
+    margin:
+        0 0 8px;
+
+    color:
+        #dcecff;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.78;
+}
+
+
+.hero-secondary-text {
+
+    max-width:
+        660px;
+
+    margin:
+        0;
+
+    color:
+        #b7cfea;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.82;
+}
+
+
+/* =========================================================
+   PARTNER
+========================================================= */
+
+.genai-partner {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin:
+        27px 0;
+
+    padding:
+        12px 15px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(163, 211, 255, .14);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter:
+        blur(13px);
+}
+
+
+.partner-glow {
+
+    position:
+        absolute;
+
+    width:
+        80px;
+
+    height:
+        80px;
+
+    left:
+        -28px;
+
+    top:
+        -25px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(65, 154, 255, .12);
+
+    animation:
+        partnerGlow 3s ease-in-out infinite;
+}
+
+
+@keyframes partnerGlow {
+
+    0%,
+    100% {
+        transform:
+            scale(.8);
+
+        opacity:
+            .2;
+    }
+
+    50% {
+        transform:
+            scale(1.5);
+
+        opacity:
+            .7;
+    }
+}
+
+
+.partner-icon {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        12px;
+
+    color:
+        #82bdff;
+
+    background:
+        rgba(63, 144, 247, .11);
+
+    border:
+        1px solid rgba(126, 190, 255, .13);
+}
+
+
+.genai-partner>div:last-child {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.genai-partner small {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #88b6e8;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.genai-partner strong {
+
+    display:
+        block;
+
+    color:
+        #ffffff;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.genai-hero-actions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+}
+
+
+.genai-primary-btn,
+.genai-outline-btn {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+.genai-primary-btn {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0c5ed7,
+            #358cf5);
+
+    box-shadow:
+        0 15px 35px rgba(8, 75, 171, .27);
+}
+
+
+.genai-primary-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -90%;
+
+    left:
+        -45%;
+
+    width:
+        34%;
+
+    height:
+        280%;
+
+    transform:
+        rotate(24deg);
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .27),
+            transparent);
+
+    animation:
+        buttonSweep 4.5s ease-in-out infinite;
+}
+
+
+@keyframes buttonSweep {
+
+    0%,
+    70% {
+        left:
+            -50%;
+    }
+
+    30% {
+        left:
+            125%;
+    }
+}
+
+
+.genai-primary-btn:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 22px 43px rgba(8, 75, 171, .34);
+}
+
+
+.genai-outline-btn {
+
+    color:
+        #deedff;
+
+    border:
+        1px solid rgba(182, 220, 255, .27);
+
+    background:
+        rgba(255, 255, 255, .035);
+}
+
+
+.genai-outline-btn:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(182, 220, 255, .50);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   HERO MOTTO
+========================================================= */
+
+.genai-motto {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.genai-motto span {
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(160, 210, 255, .10);
+
+    border-radius:
+        999px;
+
+    color:
+        #a9c8e9;
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .09em;
+}
+
+
+.genai-motto i {
+
+    color:
+        #6db2ff;
+
+    font-size:
+        8px;
+}
+
+
+/* =========================================================
+   HERO AI COMMAND CENTER
+========================================================= */
+
+.genai-hero-visual {
+
+    min-height:
+        570px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    animation:
+        visualEnter 1.15s cubic-bezier(.2, .8, .2, 1) .12s both;
+}
+
+
+@keyframes visualEnter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translate3d(35px, 0, 0) scale(.94);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translate3d(0, 0, 0) scale(1);
+    }
+}
+
+
+.ai-command-center {
+
+    position:
+        relative;
+
+    width:
+        min(540px, 100%);
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+/* =========================================================
+   AI RINGS
+========================================================= */
+
+.ai-ring {
+
+    position:
+        absolute;
+
+    border:
+        1px solid rgba(108, 183, 252, .20);
+
+    border-radius:
+        50%;
+}
+
+
+.ai-ring-one {
+
+    width:
+        91%;
+
+    height:
+        91%;
+
+    animation:
+        aiRingSpin 25s linear infinite;
+}
+
+
+.ai-ring-two {
+
+    width:
+        71%;
+
+    height:
+        71%;
+
+    border-color:
+        rgba(96, 174, 248, .18);
+
+    animation:
+        aiRingReverse 18s linear infinite;
+}
+
+
+.ai-ring-three {
+
+    width:
+        53%;
+
+    height:
+        53%;
+
+    border-color:
+        rgba(85, 165, 240, .16);
+
+    animation:
+        aiRingSpin 11s linear infinite;
+}
+
+
+@keyframes aiRingSpin {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+@keyframes aiRingReverse {
+
+    from {
+        transform:
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            rotate(0);
+    }
+}
+
+
+/* =========================================================
+   ORBIT DOTS
+========================================================= */
+
+.ai-orbit-dot {
+
+    position:
+        absolute;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #70b5ff;
+
+    box-shadow:
+        0 0 17px rgba(76, 168, 255, .95);
+}
+
+
+.dot-one {
+
+    top:
+        10%;
+
+    left:
+        25%;
+
+    animation:
+        orbitDot1 4.2s ease-in-out infinite;
+}
+
+
+.dot-two {
+
+    top:
+        29%;
+
+    right:
+        8%;
+
+    animation:
+        orbitDot2 4.8s ease-in-out infinite;
+}
+
+
+.dot-three {
+
+    bottom:
+        15%;
+
+    right:
+        25%;
+
+    animation:
+        orbitDot3 5s ease-in-out infinite;
+}
+
+
+.dot-four {
+
+    bottom:
+        12%;
+
+    left:
+        18%;
+
+    animation:
+        orbitDot4 4.5s ease-in-out infinite;
+}
+
+
+@keyframes orbitDot1 {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .3;
+    }
+
+    50% {
+        transform:
+            translate(-8px, 12px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes orbitDot2 {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .3;
+    }
+
+    50% {
+        transform:
+            translate(-12px, -9px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes orbitDot3 {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .3;
+    }
+
+    50% {
+        transform:
+            translate(11px, -12px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes orbitDot4 {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .3;
+    }
+
+    50% {
+        transform:
+            translate(12px, 7px);
+
+        opacity:
+            1;
+    }
+}
+
+
+/* =========================================================
+   NEURAL LINES
+========================================================= */
+
+.neural-line {
+
+    position:
+        absolute;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(96, 179, 255, .45),
+            transparent);
+
+    transform-origin:
+        center;
+}
+
+
+.neural-line-one {
+
+    width:
+        200px;
+
+    top:
+        27%;
+
+    left:
+        14%;
+
+    transform:
+        rotate(26deg);
+}
+
+
+.neural-line-two {
+
+    width:
+        195px;
+
+    top:
+        27%;
+
+    right:
+        15%;
+
+    transform:
+        rotate(154deg);
+}
+
+
+.neural-line-three {
+
+    width:
+        175px;
+
+    bottom:
+        27%;
+
+    left:
+        15%;
+
+    transform:
+        rotate(-26deg);
+}
+
+
+.neural-line-four {
+
+    width:
+        175px;
+
+    bottom:
+        27%;
+
+    right:
+        16%;
+
+    transform:
+        rotate(206deg);
+}
+
+
+.neural-line-five {
+
+    width:
+        150px;
+
+    top:
+        16%;
+
+    left:
+        40%;
+
+    transform:
+        rotate(90deg);
+}
+
+
+.neural-line-six {
+
+    width:
+        150px;
+
+    bottom:
+        16%;
+
+    left:
+        40%;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   AI CORE
+========================================================= */
+
+.ai-core {
+
+    position:
+        relative;
+
+    width:
+        170px;
+
+    height:
+        170px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.ai-core-pulse {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border:
+        1px solid rgba(110, 186, 255, .30);
+
+    border-radius:
+        50%;
+
+    animation:
+        aiCorePulse 2.7s ease-out infinite;
+}
+
+
+@keyframes aiCorePulse {
+
+    0% {
+        transform:
+            scale(.72);
+
+        opacity:
+            .8;
+    }
+
+    100% {
+        transform:
+            scale(1.55);
+
+        opacity:
+            0;
+    }
+}
+
+
+.ai-core-inner {
+
+    position:
+        relative;
+
+    width:
+        120px;
+
+    height:
+        120px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(145, 205, 255, .31);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(49, 143, 247, .29),
+            rgba(4, 29, 67, .94));
+
+    box-shadow:
+        0 0 70px rgba(51, 148, 255, .16);
+}
+
+
+.ai-core-inner i {
+
+    color:
+        #84c2ff;
+
+    font-size:
+        29px;
+
+    animation:
+        aiBrainPulse 2s ease-in-out infinite;
+}
+
+
+.ai-core-inner strong {
+
+    margin-top:
+        5px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        19px;
+
+    line-height:
+        1;
+}
+
+
+.ai-core-inner span {
+
+    margin-top:
+        2px;
+
+    color:
+        #92c1ea;
+
+    font-size:
+        10px;
+
+    font-weight:
+        750;
+
+    letter-spacing:
+        .13em;
+}
+
+
+@keyframes aiBrainPulse {
+
+    0%,
+    100% {
+        transform:
+            scale(.9);
+    }
+
+    50% {
+        transform:
+            scale(1.14);
+    }
+}
+
+
+/* =========================================================
+   FLOATING AI CARDS
+========================================================= */
+
+.ai-floating-card {
+
+    position:
+        absolute;
+
+    z-index:
+        6;
+
+    min-width:
+        110px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        9px 10px;
+
+    border:
+        1px solid rgba(145, 202, 255, .16);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(3, 22, 52, .84);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .21);
+
+    backdrop-filter:
+        blur(13px);
+}
+
+
+.floating-card-icon {
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        9px;
+
+    color:
+        #7fbfff;
+
+    background:
+        rgba(73, 158, 255, .10);
+}
+
+
+.ai-floating-card small {
+
+    display:
+        block;
+
+    margin-bottom:
+        2px;
+
+    color:
+        #8cb8df;
+
+    font-size:
+        6px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.ai-floating-card strong {
+
+    display:
+        block;
+
+    color:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        .06em;
+}
+
+
+.prompt-card {
+
+    top:
+        12%;
+
+    left:
+        1%;
+
+    animation:
+        promptFloat 4.2s ease-in-out infinite;
+}
+
+
+.text-card {
+
+    top:
+        13%;
+
+    right:
+        -1%;
+
+    animation:
+        textFloat 4.8s ease-in-out infinite;
+}
+
+
+.image-card {
+
+    bottom:
+        17%;
+
+    left:
+        -1%;
+
+    animation:
+        imageFloat 5.1s ease-in-out infinite;
+}
+
+
+.code-card {
+
+    bottom:
+        15%;
+
+    right:
+        1%;
+
+    animation:
+        codeFloat 4.6s ease-in-out infinite;
+}
+
+
+@keyframes promptFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-5px, -10px);
+    }
+}
+
+
+@keyframes textFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(6px, 8px);
+    }
+}
+
+
+@keyframes imageFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-6px, 8px);
+    }
+}
+
+
+@keyframes codeFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(6px, -9px);
+    }
+}
+
+
+/* =========================================================
+   AI PARTICLES
+========================================================= */
+
+.ai-particle {
+
+    position:
+        absolute;
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        #6db4ff;
+
+    box-shadow:
+        0 0 14px rgba(72, 164, 255, .95);
+}
+
+
+.particle-one {
+    top:
+        20%;
+
+    left:
+        37%;
+
+    animation:
+        particleA 4s ease-in-out infinite;
+}
+
+
+.particle-two {
+    top:
+        38%;
+
+    right:
+        13%;
+
+    animation:
+        particleB 4.8s ease-in-out infinite;
+}
+
+
+.particle-three {
+    bottom:
+        28%;
+
+    left:
+        14%;
+
+    animation:
+        particleC 4.3s ease-in-out infinite;
+}
+
+
+.particle-four {
+    bottom:
+        20%;
+
+    right:
+        38%;
+
+    animation:
+        particleD 5s ease-in-out infinite;
+}
+
+
+.particle-five {
+    top:
+        30%;
+
+    left:
+        13%;
+
+    animation:
+        particleBlink 2s ease-in-out infinite;
+}
+
+
+.particle-six {
+    bottom:
+        31%;
+
+    right:
+        14%;
+
+    animation:
+        particleBlink 2.5s ease-in-out infinite;
+}
+
+
+@keyframes particleA {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-15px, 17px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleB {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-16px, -12px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleC {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(16px, -7px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleD {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+
+        opacity:
+            .25;
+    }
+
+    50% {
+        transform:
+            translate(-12px, -14px);
+
+        opacity:
+            1;
+    }
+}
+
+
+@keyframes particleBlink {
+
+    0%,
+    100% {
+        opacity:
+            .2;
+
+        transform:
+            scale(.7);
+    }
+
+    50% {
+        opacity:
+            1;
+
+        transform:
+            scale(1.45);
+    }
+}
+
+
+/* =========================================================
+   AI STATUS
+========================================================= */
+
+.ai-status {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        4%;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(133, 193, 255, .14);
+
+    border-radius:
+        999px;
+
+    color:
+        #a2c7e9;
+
+    background:
+        rgba(3, 23, 53, .74);
+
+    font-size:
+        6px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+.ai-status>span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        #73b9ff;
+
+    box-shadow:
+        0 0 13px rgba(84, 173, 255, .95);
+
+    animation:
+        statusFlash 1.5s ease-in-out infinite;
+}
+
+
+@keyframes statusFlash {
+
+    0%,
+    100% {
+        opacity:
+            .5;
+
+        transform:
+            scale(.75);
+    }
+
+    50% {
+        opacity:
+            1;
+
+        transform:
+            scale(1.3);
+    }
+}
+
+
+.ai-status i {
+
+    color:
+        #75b8ff;
+}
+
+
+/* =========================================================
+   HERO TECH BAR
+========================================================= */
+
+.genai-tech-bar {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        13px;
+
+    margin-top:
+        30px;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid rgba(155, 209, 255, .11);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.genai-tech-bar div {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        #a8c6e7;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+}
+
+
+.genai-tech-bar i {
+
+    color:
+        #72b5ff;
+}
+
+
+.genai-tech-bar>span {
+
+    width:
+        3px;
+
+    height:
+        3px;
+
+    border-radius:
+        50%;
+
+    background:
+        #4f82bb;
+}
+
+
+/* =========================================================
+   WHAT IS GENAI
+========================================================= */
+
+.gen-content-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap:
+        22px;
+}
+
+
+.gen-definition-card,
+.output-types-card {
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        24px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--ai-shadow-sm);
+}
+
+
+.gen-definition-card {
+
+    padding:
+        34px;
+}
+
+
+.definition-icon {
+
+    width:
+        53px;
+
+    height:
+        53px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        15px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.gen-definition-card h3 {
+
+    margin:
+        19px 0 9px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        27px;
+
+    font-weight:
+        850;
+}
+
+
+.gen-definition-card p {
+
+    max-width:
+        680px;
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.generation-flow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        29px;
+
+    overflow-x:
+        auto;
+}
+
+
+.generation-flow>div {
+
+    min-width:
+        67px;
+
+    text-align:
+        center;
+}
+
+
+.generation-flow>div i {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 7px;
+
+    border-radius:
+        13px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.generation-flow>div span {
+
+    color:
+        var(--ai-900);
+
+    font-size:
+        9px;
+
+    font-weight:
+        750;
+}
+
+
+.generation-flow>i {
+
+    color:
+        var(--ai-400);
+
+    font-size:
+        10px;
+}
+
+
+.output-types-card {
+
+    padding:
+        29px;
+}
+
+
+.output-types-card>span {
+
+    color:
+        var(--ai-500);
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.output-types-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        16px;
+}
+
+
+.output-types-grid div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        12px;
+
+    border-radius:
+        11px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        var(--ai-50);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+.output-types-grid i {
+
+    color:
+        var(--ai-600);
+}
+
+
+.genai-field-strip {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.genai-field-strip span {
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        999px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        var(--ai-50);
+
+    font-size:
+        8px;
+
+    font-weight:
+        750;
+}
+
+
+/* =========================================================
+   DARK PROCESS
+========================================================= */
+
+.process-dark-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    background:
+
+        radial-gradient(circle at 82% 18%,
+            rgba(57, 150, 255, .22),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #021538,
+            #082f70 56%,
+            #0a4da0);
+}
+
+
+.process-bg-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .07) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .07) 1px,
+            transparent 1px);
+
+    background-size:
+        45px 45px;
+}
+
+
+.ai-process-flow {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    overflow-x:
+        auto;
+
+    padding-bottom:
+        13px;
+
+    scrollbar-width:
+        thin;
+}
+
+
+.ai-process-step {
+
+    flex:
+        0 0 165px;
+
+    text-align:
+        center;
+}
+
+
+.ai-process-step>span {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    color:
+        #75b5ff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+}
+
+
+.ai-process-icon {
+
+    width:
+        66px;
+
+    height:
+        66px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 14px;
+
+    border:
+        1px solid rgba(146, 203, 255, .19);
+
+    border-radius:
+        50%;
+
+    color:
+        #81bdff;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .13);
+}
+
+
+.ai-process-step h3 {
+
+    margin:
+        0 0 7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+    font-weight:
+        850;
+}
+
+
+.ai-process-step p {
+
+    margin:
+        0;
+
+    color:
+        #a9c4e6;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+}
+
+
+.active-process .ai-process-icon {
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(120, 190, 255, .42);
+
+    background:
+        linear-gradient(145deg,
+            #0d55b3,
+            #217ef0);
+
+    box-shadow:
+        0 0 35px rgba(41, 136, 245, .20);
+}
+
+
+.process-connector {
+
+    flex:
+        1;
+
+    min-width:
+        25px;
+
+    height:
+        1px;
+
+    margin-top:
+        105px;
+
+    background:
+        rgba(126, 188, 247, .24);
+}
+
+
+.process-equation {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin-top:
+        28px;
+
+    padding:
+        13px 18px;
+
+    border:
+        1px solid rgba(161, 210, 255, .12);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, .035);
+}
+
+
+.process-equation span {
+
+    color:
+        #cce2f8;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+}
+
+
+.process-equation i {
+
+    color:
+        #70b5ff;
+
+    font-size:
+        8px;
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.learning-genai-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        16px;
+}
+
+
+.learning-genai-card {
+
+    position:
+        relative;
+
+    min-height:
+        250px;
+
+    padding:
+        27px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        20px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--ai-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.learning-genai-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--ai-shadow-md);
+}
+
+
+.learning-genai-card>span {
+
+    position:
+        absolute;
+
+    top:
+        14px;
+
+    right:
+        17px;
+
+    color:
+        #dce8f5;
+
+    font-size:
+        29px;
+
+    font-weight:
+        900;
+}
+
+
+.learn-icon {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        14px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.learning-genai-card h3 {
+
+    margin:
+        18px 0 9px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        19px;
+
+    font-weight:
+        850;
+}
+
+
+.learning-genai-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.featured-learning {
+
+    background:
+        linear-gradient(145deg,
+            #092c65,
+            #0b59c0);
+
+    border-color:
+        transparent;
+}
+
+
+.featured-learning>span {
+
+    color:
+        rgba(255, 255, 255, .16);
+}
+
+
+.featured-learning .learn-icon {
+
+    color:
+        #88c1ff;
+
+    background:
+        rgba(255, 255, 255, .08);
+}
+
+
+.featured-learning h3 {
+
+    color:
+        #ffffff;
+}
+
+
+.featured-learning p {
+
+    color:
+        #c4dbf5;
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.students-genai-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 22%,
+            rgba(62, 151, 255, .20),
+            transparent 27%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da1);
+}
+
+
+.students-genai-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(320px, .92fr);
+
+    align-items:
+        center;
+
+    gap:
+        65px;
+}
+
+
+.students-genai-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 57px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.students-genai-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.students-genai-content>p {
+
+    max-width:
+        660px;
+
+    margin:
+        0 0 12px;
+
+    color:
+        #bdd4ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.student-ai-activities {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+}
+
+
+.student-ai-activities span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(159, 210, 255, .12);
+
+    border-radius:
+        999px;
+
+    color:
+        #cce0f7;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.student-ai-activities i {
+
+    color:
+        #75b7ff;
+}
+
+
+.student-ai-note {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        10px;
+
+    margin-top:
+        24px;
+
+    padding:
+        17px;
+
+    border-left:
+        4px solid #3f91ef;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.student-ai-note i {
+
+    color:
+        #7abbff;
+}
+
+
+.student-ai-note p {
+
+    margin:
+        0;
+
+    color:
+        #b8d1eb;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   STUDENT AI INTERFACE
+========================================================= */
+
+.students-genai-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.ai-study-interface {
+
+    position:
+        relative;
+
+    width:
+        min(370px, 100%);
+
+    padding:
+        18px;
+
+    border:
+        1px solid rgba(151, 207, 255, .18);
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(18, 59, 111, .82),
+            rgba(5, 29, 66, .96));
+
+    box-shadow:
+        0 30px 75px rgba(0, 0, 0, .20);
+
+    animation:
+        interfaceFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes interfaceFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+}
+
+
+.interface-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    padding-bottom:
+        13px;
+
+    border-bottom:
+        1px solid rgba(146, 204, 255, .10);
+}
+
+
+.interface-top span {
+
+    flex:
+        1;
+
+    color:
+        #8ebae1;
+
+    font-size:
+        7px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .10em;
+}
+
+
+.interface-top i {
+
+    color:
+        #72b7ff;
+
+    font-size:
+        6px;
+}
+
+
+.interface-prompt,
+.interface-response {
+
+    margin-top:
+        13px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid rgba(143, 203, 255, .09);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, .035);
+}
+
+
+.interface-prompt>span,
+.interface-response>span {
+
+    color:
+        #73b7ff;
+
+    font-size:
+        7px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .10em;
+}
+
+
+.interface-prompt p {
+
+    margin:
+        9px 0 0;
+
+    color:
+        #d8eaff;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+}
+
+
+.response-line {
+
+    height:
+        5px;
+
+    margin-top:
+        8px;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(98, 174, 248, .17);
+
+    overflow:
+        hidden;
+}
+
+
+.response-line::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        35%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #63a9fa,
+            transparent);
+
+    animation:
+        responseScan 2.4s linear infinite;
+}
+
+
+.line-b {
+    width:
+        88%;
+}
+
+
+.line-c {
+    width:
+        72%;
+}
+
+
+.line-d {
+    width:
+        52%;
+}
+
+
+@keyframes responseScan {
+
+    from {
+        transform:
+            translateX(-120%);
+    }
+
+    to {
+        transform:
+            translateX(370%);
+    }
+}
+
+
+.interface-tools {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    margin-top:
+        13px;
+}
+
+
+.interface-tools span {
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #7bbcff;
+
+    background:
+        rgba(78, 158, 255, .08);
+}
+
+
+/* =========================================================
+   COLLEGE
+========================================================= */
+
+.college-genai-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        10px;
+}
+
+
+.college-genai-grid div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        12px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        750;
+}
+
+
+.college-genai-grid i {
+
+    color:
+        var(--ai-600);
+}
+
+
+/* =========================================================
+   BEGINNER
+========================================================= */
+
+.beginner-genai-section {
+
+    padding:
+        90px 0;
+
+    background:
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 56%,
+            #0a4da0);
+}
+
+
+.beginner-genai-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    align-items:
+        center;
+
+    gap:
+        60px;
+
+    padding:
+        52px;
+
+    border:
+        1px solid rgba(167, 214, 255, .15);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.beginner-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(36px, 4vw, 55px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.beginner-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.beginner-content>p {
+
+    max-width:
+        700px;
+
+    margin:
+        0 0 12px;
+
+    color:
+        #bed4ed;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.beginner-ai-journey {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        25px;
+}
+
+
+.beginner-ai-journey>div {
+
+    min-width:
+        70px;
+
+    padding:
+        10px 8px;
+
+    border:
+        1px solid rgba(151, 205, 255, .13);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    text-align:
+        center;
+}
+
+
+.beginner-ai-journey>div span {
+
+    display:
+        block;
+
+    color:
+        #76b7ff;
+
+    font-size:
+        7px;
+
+    font-weight:
+        900;
+}
+
+
+.beginner-ai-journey>div strong {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        8px;
+}
+
+
+.beginner-ai-journey>i {
+
+    color:
+        #69afff;
+
+    font-size:
+        8px;
+}
+
+
+.beginner-note {
+
+    margin-top:
+        23px !important;
+
+    color:
+        #a9c4e5 !important;
+}
+
+
+.beginner-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.beginner-ai-circle {
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px dashed rgba(130, 194, 255, .35);
+
+    border-radius:
+        50%;
+
+    animation:
+        beginnerScale 5s ease-in-out infinite;
+}
+
+
+@keyframes beginnerScale {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.05);
+    }
+}
+
+
+.beginner-ai-core {
+
+    width:
+        140px;
+
+    height:
+        140px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border:
+        1px solid rgba(140, 202, 255, .24);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(40, 132, 239, .28),
+            rgba(3, 27, 63, .95));
+
+    box-shadow:
+        0 0 60px rgba(48, 147, 255, .12);
+}
+
+
+.beginner-ai-core i {
+
+    color:
+        #81bdff;
+
+    font-size:
+        31px;
+}
+
+
+.beginner-ai-core strong {
+
+    margin-top:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+}
+
+
+.beginner-ai-core span {
+
+    color:
+        #9fc7eb;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        .12em;
+}
+
+
+/* =========================================================
+   EMERGING TECHNOLOGY
+========================================================= */
+
+.emerging-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        16px;
+}
+
+
+.emerging-grid article {
+
+    min-height:
+        285px;
+
+    padding:
+        27px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        20px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--ai-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.emerging-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--ai-shadow-md);
+}
+
+
+.emerging-grid article>div {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        14px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.emerging-grid article>span {
+
+    display:
+        block;
+
+    margin-top:
+        18px;
+
+    color:
+        var(--ai-500);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.emerging-grid article h3 {
+
+    margin:
+        6px 0 9px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+}
+
+
+.emerging-grid article p {
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.technology-convergence {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin-top:
+        30px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        18px;
+
+    background:
+        var(--ai-50);
+}
+
+
+.technology-convergence>span {
+
+    padding:
+        8px 10px;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+}
+
+
+.technology-convergence>i {
+
+    color:
+        var(--ai-400);
+
+    font-size:
+        9px;
+}
+
+
+.convergence-caption {
+
+    flex-basis:
+        100%;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--ai-muted);
+
+    text-align:
+        center;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.genai-project-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        16px;
+}
+
+
+.genai-project-card {
+
+    position:
+        relative;
+
+    min-height:
+        250px;
+
+    padding:
+        27px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        20px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--ai-shadow-sm);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.genai-project-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--ai-shadow-md);
+}
+
+
+.genai-project-card>span {
+
+    position:
+        absolute;
+
+    right:
+        16px;
+
+    top:
+        14px;
+
+    color:
+        #dde9f5;
+
+    font-size:
+        29px;
+
+    font-weight:
+        900;
+}
+
+
+.project-ai-icon {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        20px;
+
+    border-radius:
+        14px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.genai-project-card h3 {
+
+    margin:
+        0 0 9px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+}
+
+
+.genai-project-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.featured-project {
+
+    background:
+        linear-gradient(145deg,
+            #092b62,
+            #0b58bd);
+
+    border-color:
+        transparent;
+}
+
+
+.featured-project>span {
+
+    color:
+        rgba(255, 255, 255, .17);
+}
+
+
+.featured-project .project-ai-icon {
+
+    color:
+        #88c1ff;
+
+    background:
+        rgba(255, 255, 255, .08);
+}
+
+
+.featured-project h3 {
+
+    color:
+        #ffffff;
+}
+
+
+.featured-project p {
+
+    color:
+        #c6dcf7;
+}
+
+
+/* =========================================================
+   APPLICATIONS DARK
+========================================================= */
+
+.applications-genai-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        105px 0;
+
+    background:
+
+        radial-gradient(circle at 82% 17%,
+            rgba(58, 151, 255, .22),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082e69 55%,
+            #0a4da0);
+}
+
+
+.applications-genai-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        11px;
+}
+
+
+.applications-genai-grid>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    column-gap:
+        10px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid rgba(169, 211, 255, .12);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .043);
+}
+
+
+.applications-genai-grid i {
+
+    grid-row:
+        span 2;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        11px;
+
+    color:
+        #82bdff;
+
+    background:
+        rgba(78, 157, 255, .09);
+}
+
+
+.applications-genai-grid strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        11px;
+}
+
+
+.applications-genai-grid span {
+
+    margin-top:
+        3px;
+
+    color:
+        #a8c4e6;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   RESPONSIBLE AI
+========================================================= */
+
+.responsible-ai-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.12fr .88fr;
+
+    gap:
+        65px;
+
+    align-items:
+        center;
+}
+
+
+.responsible-ai-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        clamp(35px, 4vw, 55px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.responsible-ai-content h2 span {
+
+    color:
+        var(--ai-600);
+}
+
+
+.responsible-ai-content>p {
+
+    max-width:
+        690px;
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.responsible-ai-message {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    margin:
+        25px 0;
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid #cfe1f7;
+
+    border-radius:
+        12px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        var(--ai-50);
+
+    font-size:
+        10px;
+}
+
+
+.responsible-ai-message i {
+
+    color:
+        var(--ai-600);
+}
+
+
+.responsible-principles {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        9px;
+}
+
+
+.responsible-principles>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        35px 1fr;
+
+    gap:
+        9px;
+
+    padding:
+        13px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        13px;
+
+    background:
+        #ffffff;
+}
+
+
+.responsible-principles>div>i {
+
+    width:
+        35px;
+
+    height:
+        35px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+}
+
+
+.responsible-principles strong {
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        10px;
+}
+
+
+.responsible-principles span {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+.responsible-tagline {
+
+    margin-top:
+        22px;
+
+    color:
+        var(--ai-700);
+
+    font-size:
+        15px;
+
+    font-weight:
+        850;
+}
+
+
+/* Responsible visual */
+
+.responsible-ai-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.responsible-ai-circle {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    aspect-ratio:
+        1;
+
+    border:
+        1px dashed #b9d2ef;
+
+    border-radius:
+        50%;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.shield-orbit {
+
+    position:
+        absolute;
+
+    border:
+        1px solid #d5e4f6;
+
+    border-radius:
+        50%;
+}
+
+
+.orbit-a {
+    inset:
+        13%;
+}
+
+
+.orbit-b {
+    inset:
+        28%;
+}
+
+
+.responsible-core {
+
+    width:
+        125px;
+
+    height:
+        125px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border-radius:
+        50%;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(145deg,
+            #0d4faa,
+            #1f79ee);
+
+    box-shadow:
+        0 22px 50px rgba(9, 78, 171, .24);
+}
+
+
+.responsible-core i {
+
+    font-size:
+        28px;
+}
+
+
+.responsible-core strong {
+
+    margin-top:
+        5px;
+
+    font-size:
+        13px;
+}
+
+
+.responsible-core span {
+
+    margin-top:
+        2px;
+
+    color:
+        #c7e0fb;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .12em;
+}
+
+
+/* =========================================================
+   WORKSHOP
+========================================================= */
+
+.workshop-genai-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 20%,
+            rgba(57, 151, 255, .20),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.workshop-genai-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.08fr .92fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+}
+
+
+.workshop-genai-content h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(35px, 4vw, 56px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.workshop-genai-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.workshop-genai-content>p {
+
+    max-width:
+        660px;
+
+    margin:
+        0;
+
+    color:
+        #bdd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.workshop-genai-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        26px;
+}
+
+
+.workshop-genai-list span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid rgba(164, 211, 255, .11);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    color:
+        #cbe0f7;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.workshop-genai-list i {
+
+    color:
+        #79b8ff;
+}
+
+
+.workshop-audience {
+
+    margin-top:
+        20px;
+
+    padding:
+        16px;
+
+    border-left:
+        4px solid #3b91ee;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    color:
+        #aac6e7;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+}
+
+
+/* Terminal */
+
+.workshop-genai-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.workshop-terminal {
+
+    width:
+        min(390px, 100%);
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(143, 201, 255, .17);
+
+    border-radius:
+        20px;
+
+    background:
+        #041b3c;
+
+    box-shadow:
+        0 30px 75px rgba(0, 0, 0, .21);
+
+    animation:
+        terminalFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes terminalFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+}
+
+
+.terminal-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    padding:
+        13px;
+
+    border-bottom:
+        1px solid rgba(149, 205, 255, .09);
+
+    background:
+        #06254d;
+}
+
+
+.terminal-top>span {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #5d9fe8;
+}
+
+
+.terminal-top strong {
+
+    margin-left:
+        auto;
+
+    color:
+        #7daedb;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.terminal-body {
+
+    padding:
+        24px 20px;
+}
+
+
+.terminal-line {
+
+    margin-bottom:
+        15px;
+
+    color:
+        #c8ddf4;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        10px;
+}
+
+
+.terminal-line span {
+
+    margin-right:
+        8px;
+
+    color:
+        #62aaff;
+}
+
+
+.terminal-cursor {
+
+    width:
+        7px;
+
+    height:
+        14px;
+
+    margin-top:
+        4px;
+
+    background:
+        #67afff;
+
+    animation:
+        cursorBlink 1s steps(2) infinite;
+}
+
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity:
+            1;
+    }
+
+    51%,
+    100% {
+        opacity:
+            0;
+    }
+}
+
+
+/* =========================================================
+   PROJECT JOURNEY
+========================================================= */
+
+.ai-project-journey {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    overflow-x:
+        auto;
+
+    padding-bottom:
+        12px;
+
+    scrollbar-width:
+        thin;
+}
+
+
+.journey-ai-item {
+
+    flex:
+        0 0 140px;
+
+    text-align:
+        center;
+}
+
+
+.journey-ai-item>span {
+
+    display:
+        block;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--ai-350);
+
+    font-size:
+        9px;
+
+    font-weight:
+        900;
+}
+
+
+.journey-ai-item>div {
+
+    width:
+        64px;
+
+    height:
+        64px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin:
+        0 auto 13px;
+
+    border:
+        1px solid #ccdef3;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--ai-600);
+
+    background:
+        #ffffff;
+}
+
+
+.journey-ai-item h3 {
+
+    margin:
+        0 0 6px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        14px;
+
+    font-weight:
+        850;
+}
+
+
+.journey-ai-item p {
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.55;
+}
+
+
+.journey-ai-line {
+
+    flex:
+        1;
+
+    min-width:
+        23px;
+
+    height:
+        1px;
+
+    margin-top:
+        101px;
+
+    background:
+        #c9dcef;
+}
+
+
+.active-journey>div {
+
+    border-color:
+        transparent;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(145deg,
+            #0d4eaa,
+            #1e7bef);
+
+    box-shadow:
+        0 15px 30px rgba(14, 83, 178, .18);
+}
+
+
+/* =========================================================
+   WHY GENAI
+========================================================= */
+
+.why-genai-section {
+
+    padding:
+        105px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 84% 17%,
+            rgba(58, 151, 255, .21),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da1);
+}
+
+
+.why-genai-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        .80fr 1.20fr;
+
+    gap:
+        70px;
+
+    align-items:
+        start;
+}
+
+
+.why-genai-title {
+
+    position:
+        sticky;
+
+    top:
+        105px;
+}
+
+
+.why-genai-title h2 {
+
+    margin:
+        11px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(35px, 4vw, 55px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.why-genai-title h2 span {
+
+    color:
+        #79b9ff;
+}
+
+
+.why-genai-title p {
+
+    max-width:
+        470px;
+
+    margin:
+        0;
+
+    color:
+        #bdd4ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.why-genai-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        11px;
+}
+
+
+.why-genai-grid>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    gap:
+        11px;
+
+    padding:
+        19px;
+
+    border:
+        1px solid rgba(168, 211, 255, .12);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, .043);
+}
+
+
+.why-genai-grid>div>i {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        11px;
+
+    color:
+        #82bdff;
+
+    background:
+        rgba(81, 161, 255, .10);
+}
+
+
+.why-genai-grid strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+}
+
+
+.why-genai-grid span {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #a8c5e6;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   ASSOCIATION
+========================================================= */
+
+.genai-association-section {
+
+    background:
+        var(--ai-50);
+}
+
+
+.genai-association-card {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.12fr .88fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+
+    padding:
+        55px;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        30px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        var(--ai-shadow-md);
+}
+
+
+.genai-association-content h2 {
+
+    margin:
+        11px 0 17px;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        clamp(34px, 4vw, 52px);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.045em;
+
+    font-weight:
+        900;
+}
+
+
+.genai-association-content h2 span {
+
+    color:
+        var(--ai-600);
+}
+
+
+.genai-association-content p {
+
+    max-width:
+        700px;
+
+    margin:
+        0;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+}
+
+
+.genai-association-tags {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        24px;
+}
+
+
+.genai-association-tags span {
+
+    padding:
+        8px 10px;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--ai-800);
+
+    background:
+        var(--ai-100);
+
+    font-size:
+        8px;
+
+    font-weight:
+        750;
+}
+
+
+/* Association visual */
+
+.genai-association-visual {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+}
+
+
+.association-ai-network {
+
+    position:
+        relative;
+
+    width:
+        330px;
+
+    aspect-ratio:
+        1;
+
+    border:
+        1px dashed #b9d2ef;
+
+    border-radius:
+        50%;
+}
+
+
+.association-ai-network::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        18%;
+
+    border:
+        1px solid #d5e3f5;
+
+    border-radius:
+        50%;
+}
+
+
+.association-ai-core {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        95px;
+
+    height:
+        95px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    color:
+        #ffffff;
+
+    border-radius:
+        50%;
+
+    background:
+        linear-gradient(145deg,
+            #0d4fae,
+            #1f7cef);
+
+    box-shadow:
+        0 20px 45px rgba(11, 81, 181, .24);
+}
+
+
+.association-ai-core i {
+
+    font-size:
+        28px;
+}
+
+
+.association-ai-node {
+
+    position:
+        absolute;
+
+    width:
+        47px;
+
+    height:
+        47px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--ai-600);
+
+    background:
+        var(--ai-100);
+
+    box-shadow:
+        0 8px 19px rgba(6, 64, 135, .07);
+
+    animation:
+        assocNodeFloat 4s ease-in-out infinite;
+}
+
+
+.node-a {
+
+    top:
+        1%;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.node-b {
+
+    right:
+        2%;
+
+    top:
+        34%;
+
+    animation-delay:
+        -.8s;
+}
+
+
+.node-c {
+
+    right:
+        15%;
+
+    bottom:
+        8%;
+
+    animation-delay:
+        -1.6s;
+}
+
+
+.node-d {
+
+    left:
+        15%;
+
+    bottom:
+        8%;
+
+    animation-delay:
+        -2.3s;
+}
+
+
+@keyframes assocNodeFloat {
+
+    0%,
+    100% {
+        margin-top:
+            0;
+    }
+
+    50% {
+        margin-top:
+            -7px;
+    }
+}
+
+
+/* =========================================================
+   START SECTION
+========================================================= */
+
+.start-genai-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        95px 0;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 78% 20%,
+            rgba(62, 153, 255, .21),
+            transparent 28%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.start-genai-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .07) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .07) 1px,
+            transparent 1px);
+
+    background-size:
+        45px 45px;
+}
+
+
+.start-genai-content {
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+}
+
+
+.start-genai-content h2 {
+
+    margin:
+        12px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(40px, 5vw, 67px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -.05em;
+
+    font-weight:
+        900;
+}
+
+
+.start-genai-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.start-genai-content>p {
+
+    max-width:
+        790px;
+
+    margin:
+        0 auto;
+
+    color:
+        #bfd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+}
+
+
+.start-genai-actions {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin-top:
+        27px;
+}
+
+
+.start-primary-btn,
+.start-outline-btn {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.start-primary-btn {
+
+    color:
+        #082b60;
+
+    background:
+        #ffffff;
+}
+
+
+.start-primary-btn:hover {
+
+    color:
+        #082b60;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.start-outline-btn {
+
+    color:
+        #dcecff;
+
+    border:
+        1px solid rgba(184, 221, 255, .24);
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.start-outline-btn:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   ENROLL
+========================================================= */
+
+.genai-enroll-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        110px 0;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 76% 18%,
+            rgba(61, 152, 255, .24),
+            transparent 29%),
+
+        radial-gradient(circle at 7% 84%,
+            rgba(25, 101, 226, .17),
+            transparent 29%),
+
+        linear-gradient(135deg,
+            #031333,
+            #06285f 47%,
+            #0a4fa8);
+}
+
+
+.genai-enroll-bg {
+
+    position:
+        absolute;
+
+    inset:
+        -100px;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .075) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .075) 1px,
+            transparent 1px);
+
+    background-size:
+        44px 44px;
+
+    transform:
+        perspective(800px) rotateX(58deg) scale(1.35);
+
+    transform-origin:
+        center bottom;
+
+    animation:
+        enrollGridMove 20s linear infinite;
+}
+
+
+@keyframes enrollGridMove {
+
+    from {
+        background-position:
+            0 0,
+            0 0;
+    }
+
+    to {
+        background-position:
+            0 44px,
+            44px 0;
+    }
+}
+
+
+.genai-enroll-glow {
+
+    position:
+        absolute;
+
+    border-radius:
+        50%;
+
+    filter:
+        blur(80px);
+
+    pointer-events:
+        none;
+}
+
+
+.enroll-glow-one {
+
+    width:
+        350px;
+
+    height:
+        350px;
+
+    right:
+        -100px;
+
+    top:
+        -90px;
+
+    background:
+        rgba(60, 152, 255, .16);
+}
+
+
+.enroll-glow-two {
+
+    width:
+        260px;
+
+    height:
+        260px;
+
+    left:
+        -80px;
+
+    bottom:
+        -90px;
+
+    background:
+        rgba(34, 115, 237, .14);
+}
+
+
+.genai-enroll-layout {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(430px, .92fr);
+
+    align-items:
+        center;
+
+    gap:
+        70px;
+}
+
+
+.genai-enroll-content {
+
+    max-width:
+        730px;
+}
+
+
+.genai-enroll-content h2 {
+
+    margin:
+        12px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(42px, 5vw, 70px);
+
+    line-height:
+        1.02;
+
+    letter-spacing:
+        -.055em;
+
+    font-weight:
+        900;
+}
+
+
+.genai-enroll-content h2 span {
+
+    display:
+        block;
+
+    color:
+        #7abaff;
+}
+
+
+.genai-enroll-content>p {
+
+    max-width:
+        650px;
+
+    margin:
+        0;
+
+    color:
+        #bfd5ef;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+}
+
+
+.genai-enroll-features {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+
+    max-width:
+        650px;
+
+    margin-top:
+        28px;
+}
+
+
+.genai-enroll-features>div {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        40px 1fr;
+
+    column-gap:
+        10px;
+
+    padding:
+        15px;
+
+    border:
+        1px solid rgba(159, 209, 255, .12);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.genai-enroll-features i {
+
+    grid-row:
+        span 2;
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        #83bdff;
+
+    background:
+        rgba(76, 157, 255, .10);
+}
+
+
+.genai-enroll-features strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+}
+
+
+.genai-enroll-features span {
+
+    margin-top:
+        3px;
+
+    color:
+        #a9c5e7;
+
+    font-size:
+        8px;
+
+    line-height:
+        1.55;
+}
+
+
+.genai-enroll-partner {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        24px;
+
+    padding:
+        11px 14px;
+
+    border:
+        1px solid rgba(158, 209, 255, .13);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.genai-enroll-partner>div {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        11px;
+
+    color:
+        #80baff;
+
+    background:
+        rgba(62, 143, 246, .10);
+}
+
+
+.genai-enroll-partner>span {
+
+    color:
+        #8bb8e8;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .09em;
+}
+
+
+.genai-enroll-partner strong {
+
+    display:
+        block;
+
+    margin-top:
+        3px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        normal;
+}
+
+
+/* =========================================================
+   ENROLL FORM
+========================================================= */
+
+.genai-enroll-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        37px 34px 34px;
+
+    border:
+        1px solid rgba(185, 218, 255, .22);
+
+    border-radius:
+        28px;
+
+    background:
+        rgba(255, 255, 255, .97);
+
+    color:
+        var(--ai-text);
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, .25);
+
+    backdrop-filter:
+        blur(20px);
+}
+
+
+.genai-form-accent {
+
+    position:
+        absolute;
+
+    left:
+        34px;
+
+    right:
+        34px;
+
+    top:
+        0;
+
+    height:
+        4px;
+
+    border-radius:
+        0 0 20px 20px;
+
+    background:
+        linear-gradient(90deg,
+            #0b47a1,
+            #3186f1,
+            #74b9ff);
+}
+
+
+.genai-form-heading>span {
+
+    color:
+        var(--ai-500);
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .14em;
+}
+
+
+.genai-form-heading h3 {
+
+    margin:
+        8px 0 8px;
+
+    color:
+        #07275b;
+
+    font-size:
+        28px;
+
+    line-height:
+        1.12;
+
+    font-weight:
+        900;
+}
+
+
+.genai-form-heading p {
+
+    max-width:
+        460px;
+
+    margin:
+        0;
+
+    color:
+        #667994;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.genai-form-wrapper {
+
+    margin-top:
+        24px;
+}
+
+
+.genai-enroll-card input,
+.genai-enroll-card select,
+.genai-enroll-card textarea {
+
+    border-color:
+        #d7e3f1;
+
+    border-radius:
+        10px;
+
+    color:
+        #17345e;
+
+    background:
+        #ffffff;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.genai-enroll-card input:focus,
+.genai-enroll-card select:focus,
+.genai-enroll-card textarea:focus {
+
+    outline:
+        none;
+
+    border-color:
+        #3685ea;
+
+    box-shadow:
+        0 0 0 4px rgba(54, 133, 234, .09);
+}
+
+
+.genai-enroll-card button[type="submit"] {
+
+    border:
+        0;
+
+    border-radius:
+        11px;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #0d47a1,
+            #1769e8);
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 14px 32px rgba(13, 71, 161, .20);
+}
+
+
+.genai-enroll-card button[type="submit"]:hover {
+
+    box-shadow:
+        0 18px 38px rgba(13, 71, 161, .27);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.genai-faq-section {
+
+    background:
+        #ffffff;
+}
+
+
+.genai-faq-wrapper {
+
+    max-width:
+        920px;
+
+    margin:
+        0 auto;
+}
+
+
+.genai-faq-item {
+
+    margin-bottom:
+        10px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--ai-border);
+
+    border-radius:
+        16px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 5px 16px rgba(7, 54, 118, .03);
+}
+
+
+.genai-faq-item summary {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        19px 21px;
+
+    cursor:
+        pointer;
+
+    list-style:
+        none;
+
+    color:
+        var(--ai-950);
+
+    font-size:
+        13px;
+
+    font-weight:
+        750;
+}
+
+
+.genai-faq-item summary::-webkit-details-marker {
+    display:
+        none;
+}
+
+
+.genai-faq-item summary i {
+
+    flex:
+        0 0 auto;
+
+    color:
+        var(--ai-500);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.genai-faq-item[open] summary i {
+
+    transform:
+        rotate(45deg);
+}
+
+
+.genai-faq-item>div {
+
+    padding:
+        0 21px 20px;
+
+    color:
+        var(--ai-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-genai-section {
+
+    position:
+        relative;
+
+    isolation:
+        isolate;
+
+    overflow:
+        hidden;
+
+    padding:
+        110px 0;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+
+    background:
+
+        radial-gradient(circle at 76% 23%,
+            rgba(65, 157, 255, .22),
+            transparent 29%),
+
+        linear-gradient(135deg,
+            #031538,
+            #082f70 55%,
+            #0a4da0);
+}
+
+
+.final-genai-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .10;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .07) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .07) 1px,
+            transparent 1px);
+
+    background-size:
+        44px 44px;
+}
+
+
+.final-genai-content {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    max-width:
+        940px;
+
+    margin:
+        0 auto;
+}
+
+
+.final-genai-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid rgba(176, 216, 255, .15);
+
+    border-radius:
+        999px;
+
+    color:
+        #aad0ff;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+}
+
+
+.final-genai-content h2 {
+
+    margin:
+        20px 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(40px, 5vw, 68px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -.05em;
+
+    font-weight:
+        900;
+}
+
+
+.final-genai-content h2 span {
+
+    color:
+        #7abaff;
+}
+
+
+.final-genai-content h3 {
+
+    margin:
+        0 0 16px;
+
+    color:
+        #deedff;
+
+    font-size:
+        clamp(19px, 2vw, 25px);
+
+    font-weight:
+        750;
+}
+
+
+.final-genai-content>p {
+
+    max-width:
+        800px;
+
+    margin:
+        0 auto;
+
+    color:
+        #bfd5ef;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+}
+
+
+.final-genai-tags {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin:
+        27px 0;
+}
+
+
+.final-genai-tags span {
+
+    padding:
+        8px 11px;
+
+    border:
+        1px solid rgba(174, 215, 255, .14);
+
+    border-radius:
+        999px;
+
+    color:
+        #cbe1f7;
+
+    background:
+        rgba(255, 255, 255, .04);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+}
+
+
+.final-genai-actions {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+}
+
+
+.final-genai-primary,
+.final-genai-outline {
+
+    min-height:
+        53px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        0 22px;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+
+.final-genai-primary {
+
+    color:
+        #082b60;
+
+    background:
+        #ffffff;
+}
+
+
+.final-genai-primary:hover {
+
+    color:
+        #082b60;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.final-genai-outline {
+
+    color:
+        #deedff;
+
+    border:
+        1px solid rgba(183, 220, 255, .24);
+
+    background:
+        rgba(255, 255, 255, .04);
+}
+
+
+.final-genai-outline:hover {
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, .07);
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .genai-hero-layout {
+
+        gap:
+            35px;
+    }
+
+
+    .genai-hero-content h1 {
+
+        font-size:
+            clamp(46px, 5.5vw, 69px);
+    }
+
+
+    .ai-command-center {
+
+        width:
+            480px;
+    }
+
+
+    .learning-genai-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .emerging-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .college-genai-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+
+    .applications-genai-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .genai-hero-layout {
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(390px, .9fr);
+    }
+
+
+    .gen-content-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .genai-enroll-layout {
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(390px, .88fr);
+    }
+
+
+    .genai-project-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .responsible-principles {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .genai-hero {
+
+        min-height:
+            auto;
+
+        padding:
+            72px 0 35px;
+    }
+
+
+    .genai-hero-layout,
+    .students-genai-layout,
+    .beginner-genai-card,
+    .responsible-ai-layout,
+    .workshop-genai-layout,
+    .why-genai-layout,
+    .genai-association-card,
+    .genai-enroll-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .genai-hero-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .genai-hero-content h2,
+    .hero-main-text,
+    .hero-secondary-text {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+
+    .genai-partner {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+        text-align:
+            left;
+    }
+
+
+    .genai-hero-actions,
+    .genai-motto {
+
+        justify-content:
+            center;
+    }
+
+
+    .genai-hero-visual {
+
+        min-height:
+            500px;
+    }
+
+
+    .ai-command-center {
+
+        width:
+            500px;
+    }
+
+
+    .students-genai-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .student-ai-activities {
+
+        justify-content:
+            center;
+    }
+
+
+    .student-ai-note {
+
+        text-align:
+            left;
+    }
+
+
+    .responsible-ai-title {
+
+        text-align:
+            center;
+    }
+
+
+    .responsible-ai-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .responsible-ai-visual {
+
+        margin-top:
+            40px;
+    }
+
+
+    .workshop-genai-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+    }
+
+
+    .workshop-genai-visual {
+
+        margin-top:
+            25px;
+    }
+
+
+    .why-genai-title {
+
+        position:
+            static;
+
+        text-align:
+            center;
+    }
+
+
+    .why-genai-title p {
+
+        margin:
+            0 auto;
+    }
+
+
+    .genai-association-content {
+
+        text-align:
+            center;
+    }
+
+
+    .genai-association-tags {
+
+        justify-content:
+            center;
+    }
+
+
+    .genai-enroll-content {
+
+        max-width:
+            850px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    .genai-enroll-content>p {
+
+        margin:
+            0 auto;
+    }
+
+
+    .genai-enroll-features {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+        text-align:
+            left;
+    }
+
+
+    .genai-enroll-partner {
+
+        text-align:
+            left;
+    }
+
+
+    .genai-enroll-card {
+
+        width:
+            min(100%, 650px);
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .section-block,
+    .process-dark-section,
+    .students-genai-section,
+    .beginner-genai-section,
+    .applications-genai-section,
+    .workshop-genai-section,
+    .why-genai-section,
+    .genai-enroll-section {
+
+        padding:
+            78px 0;
+    }
+
+
+    .learning-genai-grid,
+    .genai-project-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .college-genai-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .applications-genai-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .responsible-principles {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .why-genai-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .genai-association-card {
+
+        padding:
+            40px 30px;
+    }
+
+
+    .workshop-genai-list {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .genai-hero {
+
+        padding:
+            58px 0 27px;
+    }
+
+
+    .genai-hero-content h1 {
+
+        font-size:
+            clamp(38px, 10.5vw, 53px);
+    }
+
+
+    .genai-hero-content h2 {
+
+        font-size:
+            17px;
+    }
+
+
+    .hero-main-text {
+
+        font-size:
+            14px;
+    }
+
+
+    .hero-secondary-text {
+
+        font-size:
+            11px;
+    }
+
+
+    .genai-partner {
+
+        width:
+            100%;
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .genai-partner strong {
+
+        font-size:
+            10px;
+    }
+
+
+    .genai-hero-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .genai-primary-btn,
+    .genai-outline-btn {
+
+        width:
+            100%;
+    }
+
+
+    .genai-hero-visual {
+
+        min-height:
+            340px;
+    }
+
+
+    .ai-command-center {
+
+        width:
+            350px;
+    }
+
+
+    .ai-core-inner {
+
+        width:
+            90px;
+
+        height:
+            90px;
+    }
+
+
+    .ai-core-inner i {
+
+        font-size:
+            22px;
+    }
+
+
+    .ai-core-inner strong {
+
+        font-size:
+            15px;
+    }
+
+
+    .ai-core {
+
+        width:
+            125px;
+
+        height:
+            125px;
+    }
+
+
+    .ai-floating-card {
+
+        min-width:
+            78px;
+
+        padding:
+            7px 8px;
+
+        gap:
+            6px;
+    }
+
+
+    .floating-card-icon {
+
+        width:
+            28px;
+
+        height:
+            28px;
+    }
+
+
+    .ai-floating-card small {
+
+        display:
+            none;
+    }
+
+
+    .ai-floating-card strong {
+
+        font-size:
+            7px;
+    }
+
+
+    .genai-tech-bar {
+
+        gap:
+            8px;
+    }
+
+
+    .genai-tech-bar>span {
+
+        display:
+            none;
+    }
+
+
+    .genai-tech-bar div {
+
+        font-size:
+            6px;
+    }
+
+
+    .gen-content-grid,
+    .learning-genai-grid,
+    .genai-project-grid,
+    .emerging-grid,
+    .college-genai-grid,
+    .applications-genai-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gen-definition-card,
+    .output-types-card,
+    .learning-genai-card,
+    .genai-project-card {
+
+        padding:
+            22px;
+    }
+
+
+    .generation-flow {
+
+        gap:
+            4px;
+    }
+
+
+    .process-equation {
+
+        border-radius:
+            18px;
+    }
+
+
+    .students-genai-content h2,
+    .responsible-ai-content h2,
+    .workshop-genai-content h2,
+    .why-genai-title h2 {
+
+        font-size:
+            35px;
+    }
+
+
+    .students-genai-visual {
+
+        margin-top:
+            22px;
+    }
+
+
+    .ai-study-interface {
+
+        width:
+            100%;
+    }
+
+
+    .beginner-genai-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .beginner-ai-journey {
+
+        gap:
+            6px;
+    }
+
+
+    .beginner-ai-journey>div {
+
+        min-width:
+            64px;
+    }
+
+
+    .beginner-visual {
+
+        margin-top:
+            20px;
+    }
+
+
+    .responsible-ai-circle {
+
+        width:
+            270px;
+    }
+
+
+    .workshop-genai-list {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .workshop-audience {
+
+        text-align:
+            left;
+    }
+
+
+    .genai-association-card {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .genai-association-content h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .association-ai-network {
+
+        width:
+            270px;
+    }
+
+
+    .start-genai-content h2 {
+
+        font-size:
+            38px;
+    }
+
+
+    .start-genai-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .start-primary-btn,
+    .start-outline-btn {
+
+        width:
+            100%;
+    }
+
+
+    .genai-enroll-content h2 {
+
+        font-size:
+            37px;
+    }
+
+
+    .genai-enroll-features {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .genai-enroll-partner {
+
+        width:
+            100%;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .genai-enroll-card {
+
+        padding:
+            32px 19px 24px;
+
+        border-radius:
+            21px;
+    }
+
+
+    .genai-form-accent {
+
+        left:
+            20px;
+
+        right:
+            20px;
+    }
+
+
+    .final-genai-content h2 {
+
+        font-size:
+            39px;
+    }
+
+
+    .final-genai-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .final-genai-primary,
+    .final-genai-outline {
+
+        width:
+            100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-heading {
+
+        margin-bottom:
+            39px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            33px;
+    }
+
+
+    .section-heading p {
+
+        font-size:
+            13px;
+    }
+
+
+    .genai-hero-content h1 {
+
+        font-size:
+            34px;
+    }
+
+
+    .genai-hero-content h2 {
+
+        font-size:
+            15px;
+    }
+
+
+    .genai-hero-visual {
+
+        min-height:
+            290px;
+    }
+
+
+    .ai-command-center {
+
+        width:
+            290px;
+    }
+
+
+    .ai-floating-card {
+
+        min-width:
+            65px;
+
+        padding:
+            6px;
+    }
+
+
+    .floating-card-icon {
+
+        width:
+            24px;
+
+        height:
+            24px;
+
+        font-size:
+            9px;
+    }
+
+
+    .ai-floating-card strong {
+
+        font-size:
+            6px;
+    }
+
+
+    .ai-status {
+
+        font-size:
+            5px;
+    }
+
+
+    .genai-motto {
+
+        gap:
+            5px;
+    }
+
+
+    .genai-motto span {
+
+        padding:
+            6px 8px;
+
+        font-size:
+            6px;
+    }
+
+
+    .gen-definition-card,
+    .output-types-card,
+    .learning-genai-card,
+    .genai-project-card {
+
+        padding:
+            20px;
+    }
+
+
+    .learning-genai-card,
+    .genai-project-card {
+
+        min-height:
+            225px;
+    }
+
+
+    .students-genai-content h2,
+    .responsible-ai-content h2,
+    .workshop-genai-content h2,
+    .why-genai-title h2 {
+
+        font-size:
+            33px;
+    }
+
+
+    .student-ai-activities {
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .responsible-principles {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .responsible-ai-circle {
+
+        width:
+            235px;
+    }
+
+
+    .responsible-core {
+
+        width:
+            92px;
+
+        height:
+            92px;
+    }
+
+
+    .responsible-core i {
+
+        font-size:
+            21px;
+    }
+
+
+    .responsible-core strong {
+
+        font-size:
+            10px;
+    }
+
+
+    .beginner-ai-circle {
+
+        width:
+            215px;
+
+        height:
+            215px;
+    }
+
+
+    .beginner-ai-core {
+
+        width:
+            120px;
+
+        height:
+            120px;
+    }
+
+
+    .beginner-ai-core i {
+
+        font-size:
+            27px;
+    }
+
+
+    .technology-convergence {
+
+        border-radius:
+            17px;
+    }
+
+
+    .workshop-terminal {
+
+        border-radius:
+            16px;
+    }
+
+
+    .genai-enroll-content h2 {
+
+        font-size:
+            33px;
+    }
+
+
+    .genai-form-heading h3 {
+
+        font-size:
+            23px;
+    }
+
+
+    .final-genai-content h2 {
+
+        font-size:
+            34px;
+    }
+
+
+    .final-genai-content h3 {
+
+        font-size:
+            18px;
+    }
+
+
+    .final-genai-content>p {
+
+        font-size:
+            12px;
+    }
+
+
+    .genai-faq-item summary {
+
+        padding:
+            16px;
+    }
+
+
+    .genai-faq-item>div {
+
+        padding:
+            0 16px 17px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+
+        width:
+            calc(100% - 22px);
+    }
+
+
+    .genai-hero-content h1 {
+
+        font-size:
+            31px;
+    }
+
+
+    .genai-hero-content h2 {
+
+        font-size:
+            14px;
+    }
+
+
+    .hero-main-text {
+
+        font-size:
+            13px;
+    }
+
+
+    .hero-secondary-text {
+
+        font-size:
+            10px;
+    }
+
+
+    .genai-hero-visual {
+
+        min-height:
+            260px;
+    }
+
+
+    .ai-command-center {
+
+        width:
+            260px;
+    }
+
+
+    .ai-core {
+
+        width:
+            110px;
+
+        height:
+            110px;
+    }
+
+
+    .ai-core-inner {
+
+        width:
+            78px;
+
+        height:
+            78px;
+    }
+
+
+    .ai-core-inner i {
+
+        font-size:
+            18px;
+    }
+
+
+    .ai-core-inner strong {
+
+        font-size:
+            12px;
+    }
+
+
+    .ai-core-inner span {
+
+        font-size:
+            7px;
+    }
+
+
+    .ai-floating-card {
+
+        min-width:
+            55px;
+
+        padding:
+            5px;
+    }
+
+
+    .floating-card-icon {
+
+        width:
+            21px;
+
+        height:
+            21px;
+
+        font-size:
+            8px;
+    }
+
+
+    .ai-floating-card strong {
+
+        font-size:
+            5px;
+    }
+
+
+    .genai-enroll-content h2 {
+
+        font-size:
+            30px;
+    }
+
+
+    .genai-enroll-card {
+
+        padding:
+            27px 12px 19px;
+    }
+
+
+    .genai-form-accent {
+
+        left:
+            14px;
+
+        right:
+            14px;
+    }
+
+
+    .final-genai-content h2 {
+
+        font-size:
+            31px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.genai-page a:focus-visible,
+.genai-page button:focus-visible,
+.genai-page summary:focus-visible,
+.genai-page input:focus-visible,
+.genai-page select:focus-visible,
+.genai-page textarea:focus-visible {
+
+    outline:
+        3px solid rgba(48, 133, 235, .35);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .genai-page *,
+    .genai-page *::before,
+    .genai-page *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+    }
+
+}
