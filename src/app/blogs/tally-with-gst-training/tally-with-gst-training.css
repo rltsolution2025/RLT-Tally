@@ -1,0 +1,3905 @@
+/* =========================================================
+
+   RLT EDZARO | TALLYPRIME BLOG
+
+   Navy + Gold Responsive Editorial Design
+
+\========================================================= */
+
+
+
+:host {
+
+    display: block;
+
+    color: #172033;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    line-height: 1.65;
+
+}
+
+
+
+:host *,
+
+:host *::before,
+
+:host *::after {
+
+    box-sizing: border-box;
+
+}
+
+
+
+:host a {
+
+    color: inherit;
+
+}
+
+
+
+:host button {
+
+    font: inherit;
+
+}
+
+
+
+:host img {
+
+    max-width: 100%;
+
+}
+
+
+
+:host button:focus-visible,
+
+:host a:focus-visible {
+
+    outline: 3px solid #f5b841;
+
+    outline-offset: 3px;
+
+}
+
+
+
+/* =========================================================
+
+   CONTAINER
+
+\========================================================= */
+
+
+
+.entries-container {
+
+    width: min(1180px, calc(100% - 40px));
+
+    margin-inline: auto;
+
+}
+
+
+
+/* =========================================================
+
+   HERO SECTION
+
+\========================================================= */
+
+
+
+.entries-hero {
+
+    position: relative;
+
+    isolation: isolate;
+
+    overflow: hidden;
+
+    padding: 48px 0 78px;
+
+    color: #ffffff;
+
+    background:
+
+        radial-gradient(circle at 86% 16%,
+
+            rgba(245, 184, 65, 0.16),
+
+            transparent 28%),
+
+        linear-gradient(125deg, #09121f 0%, #182b43 100%);
+
+}
+
+
+
+.entries-hero::before,
+
+.entries-hero::after {
+
+    position: absolute;
+
+    z-index: -1;
+
+    content: "";
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+
+.entries-hero::before {
+
+    width: 520px;
+
+    height: 520px;
+
+    right: -220px;
+
+    top: -290px;
+
+}
+
+
+
+.entries-hero::after {
+
+    width: 300px;
+
+    height: 300px;
+
+    left: -180px;
+
+    bottom: -220px;
+
+}
+
+
+
+.article-breadcrumb {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 34px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 12px;
+
+}
+
+
+
+.article-breadcrumb a {
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+
+.article-breadcrumb a:hover {
+
+    color: #f5b841;
+
+}
+
+
+
+.article-breadcrumb i {
+
+    color: #f5b841;
+
+    font-size: 9px;
+
+}
+
+
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    color: #f5b841;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.hero-badge i {
+
+    font-size: 15px;
+
+}
+
+
+
+.entries-hero h1 {
+
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(36px, 5vw, 62px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.8px;
+
+}
+
+
+
+.hero-description {
+
+    max-width: 760px;
+
+    margin: 24px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: clamp(15px, 1.6vw, 18px);
+
+    line-height: 1.85;
+
+}
+
+
+
+.hero-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px 25px;
+
+    margin-top: 28px;
+
+}
+
+
+
+.hero-meta span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.64);
+
+    font-size: 12px;
+
+}
+
+
+
+.hero-meta i {
+
+    color: #f5b841;
+
+}
+
+
+
+.hero-keywords {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+}
+
+
+
+.hero-keywords span {
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(245, 184, 65, 0.25);
+
+    border-radius: 30px;
+
+    color: #f7d995;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+
+   ARTICLE LAYOUT
+
+\========================================================= */
+
+
+
+.entries-page {
+
+    padding: 66px 0 90px;
+
+    background: #f6f7f9;
+
+}
+
+
+
+.article-layout {
+
+    display: grid;
+
+    grid-template-columns: 270px minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 34px;
+
+}
+
+
+
+.article-sidebar {
+
+    position: sticky;
+
+    top: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    min-width: 0;
+
+}
+
+
+
+.toc-card,
+
+.sidebar-cta {
+
+    padding: 24px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow: 0 12px 34px rgba(20, 30, 50, 0.045);
+
+}
+
+
+
+/* =========================================================
+
+   TABLE OF CONTENTS
+
+\========================================================= */
+
+
+
+.toc-label {
+
+    color: #bd8310;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+}
+
+
+
+.toc-card h2 {
+
+    margin: 5px 0 18px;
+
+    color: #172033;
+
+    font-size: 23px;
+
+    line-height: 1.25;
+
+}
+
+
+
+.toc-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.toc-links button {
+
+    width: 100%;
+
+    padding: 11px 0;
+
+    border: 0;
+
+    border-bottom: 1px solid #eef0f3;
+
+    background: transparent;
+
+    color: #657084;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+
+        color 0.2s ease,
+
+        padding 0.2s ease;
+
+}
+
+
+
+.toc-links button:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+
+.toc-links button:hover {
+
+    padding-left: 5px;
+
+    color: #a97108;
+
+}
+
+
+
+.toc-help {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 17px;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: #fff8e8;
+
+}
+
+
+
+.toc-help i {
+
+    margin-top: 3px;
+
+    color: #bd8310;
+
+}
+
+
+
+.toc-help p {
+
+    margin: 0;
+
+    color: #74613c;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+}
+
+
+
+/* =========================================================
+
+   SIDEBAR CALL TO ACTION
+
+\========================================================= */
+
+
+
+.sidebar-cta {
+
+    border: 0;
+
+    color: #ffffff;
+
+    background: linear-gradient(145deg, #101827, #1c2d46);
+
+}
+
+
+
+.sidebar-cta-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 43px;
+
+    height: 43px;
+
+    margin-bottom: 14px;
+
+    border-radius: 11px;
+
+    color: #f5b841;
+
+    background: rgba(245, 184, 65, 0.13);
+
+}
+
+
+
+.sidebar-cta h3 {
+
+    margin: 0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+}
+
+
+
+.sidebar-cta p {
+
+    margin: 0 0 17px;
+
+    color: rgba(255, 255, 255, 0.67);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+.sidebar-cta a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 13px;
+
+    border-radius: 7px;
+
+    color: #111827;
+
+    background: #f5b841;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition:
+
+        background 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.sidebar-cta a:hover {
+
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================================
+
+   MAIN ARTICLE CONTENT
+
+\========================================================= */
+
+
+
+.article-content {
+
+    min-width: 0;
+
+    padding: clamp(24px, 4vw, 48px);
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 15px 45px rgba(20, 30, 50, 0.045);
+
+}
+
+
+
+.article-section {
+
+    margin: 0 0 54px;
+
+    scroll-margin-top: 100px;
+
+}
+
+
+
+.article-section:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+.section-eyebrow {
+
+    margin-bottom: 9px;
+
+    color: #bd8310;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+
+.article-section h2 {
+
+    margin: 0 0 17px;
+
+    color: #111827;
+
+    font-size: clamp(25px, 3vw, 32px);
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.25;
+
+}
+
+
+
+.article-section h3 {
+
+    color: #202938;
+
+}
+
+
+
+.article-section h4 {
+
+    color: #273449;
+
+}
+
+
+
+.article-section p {
+
+    margin: 0 0 17px;
+
+    color: #626d7d;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+
+.article-section ul,
+
+.article-section ol {
+
+    padding-left: 22px;
+
+    color: #626d7d;
+
+}
+
+
+
+.article-section li {
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.article-section strong {
+
+    color: #303b4c;
+
+}
+
+
+
+.article-section a:not(.primary-cta):not(.secondary-cta) {
+
+    color: #a97108;
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 3px;
+
+}
+
+
+
+/* =========================================================
+
+   ANSWER / HIGHLIGHT BOX
+
+\========================================================= */
+
+
+
+.answer-box {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin: 25px 0;
+
+    padding: 22px;
+
+    border: 1px solid #ead9aa;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #fffaf0, #fffdf8);
+
+}
+
+
+
+.answer-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 43px;
+
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    border-radius: 10px;
+
+    color: #bd8310;
+
+    background: #fff1c9;
+
+}
+
+
+
+.answer-box h3 {
+
+    margin: 1px 0 7px;
+
+    font-size: 16px;
+
+}
+
+
+
+.answer-box p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+
+   VOUCHER GRID
+
+\========================================================= */
+
+
+
+.voucher-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin: 24px 0;
+
+}
+
+
+
+.voucher-card {
+
+    min-width: 0;
+
+    padding: 18px 14px;
+
+    border: 1px solid #e6e9ed;
+
+    border-radius: 12px;
+
+    background: #fafbfc;
+
+    transition:
+
+        transform 0.22s ease,
+
+        border-color 0.22s ease,
+
+        background 0.22s ease;
+
+}
+
+
+
+.voucher-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #efd58e;
+
+    background: #fffaf0;
+
+}
+
+
+
+.voucher-card>i {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-bottom: 12px;
+
+    border-radius: 9px;
+
+    color: #b77c09;
+
+    background: #fff1c9;
+
+}
+
+
+
+.voucher-card h3 {
+
+    margin: 0 0 6px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+}
+
+
+
+.voucher-card p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+
+}
+
+
+
+/* =========================================================
+
+   ARTICLE NOTES
+
+\========================================================= */
+
+
+
+.article-note {
+
+    padding: 17px 19px;
+
+    border-left: 4px solid #f5b841;
+
+    border-radius: 8px;
+
+    background: #fffaf0;
+
+    font-size: 12px !important;
+
+}
+
+
+
+.article-note strong {
+
+    color: #303b4c;
+
+}
+
+
+
+.entries-category-note {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin: 23px 0;
+
+    padding: 16px 18px;
+
+    border: 1px solid #e8d7a9;
+
+    border-radius: 11px;
+
+    color: #665735;
+
+    background: #fffaf0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+.entries-category-note i {
+
+    margin-top: 3px;
+
+    color: #bd8310;
+
+}
+
+
+
+/* =========================================================
+
+   ACCOUNTING ENTRY CARDS
+
+\========================================================= */
+
+
+
+.entry-card {
+
+    overflow: hidden;
+
+    margin-top: 17px;
+
+    border: 1px solid #e3e7ec;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    transition:
+
+        border-color 0.2s ease,
+
+        box-shadow 0.2s ease;
+
+    scroll-margin-top: 100px;
+
+}
+
+
+
+.entry-card:hover {
+
+    border-color: #ead39a;
+
+    box-shadow: 0 8px 24px rgba(20, 30, 50, 0.055);
+
+}
+
+
+
+.entry-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 19px 22px;
+
+    border-bottom: 1px solid #edf0f3;
+
+    background: #fafbfc;
+
+}
+
+
+
+.entry-number {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    border-radius: 11px;
+
+    color: #9e6d0b;
+
+    background: #fff0c4;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+
+.entry-heading {
+
+    min-width: 0;
+
+}
+
+
+
+.entry-category {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #a97108;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.entry-heading h3 {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+}
+
+
+
+.entry-card-body {
+
+    padding: 22px;
+
+}
+
+
+
+.entry-card-body>p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+.entry-card-body h4 {
+
+    margin: 20px 0 9px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+
+.entry-card-body h4:first-child {
+
+    margin-top: 0;
+
+}
+
+
+
+.entry-card-body ul,
+
+.entry-card-body ol {
+
+    margin: 10px 0 18px;
+
+    padding-left: 22px;
+
+}
+
+
+
+.entry-card-body li {
+
+    margin-bottom: 7px;
+
+    color: #626d7d;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+
+.entry-description {
+
+    margin-bottom: 18px;
+
+    color: #626d7d;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.entry-card .entry-card-body p {
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+
+   ENTRY CARD LABELS / PILLS
+
+\========================================================= */
+
+
+
+.voucher-detail {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 14px 0;
+
+}
+
+
+
+.voucher-pill {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border: 1px solid #e8d7a9;
+
+    border-radius: 30px;
+
+    color: #8c620e;
+
+    background: #fffaf0;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+
+.voucher-pill i {
+
+    font-size: 10px;
+
+}
+
+
+
+/* =========================================================
+
+   TRANSACTION EXAMPLE
+
+\========================================================= */
+
+
+
+.transaction-box {
+
+    margin: 17px 0;
+
+    padding: 17px;
+
+    border: 1px solid #e6e9ed;
+
+    border-radius: 10px;
+
+    background: #fafbfc;
+
+}
+
+
+
+.transaction-box h4 {
+
+    margin: 0 0 9px;
+
+    color: #172033;
+
+    font-size: 13px;
+
+}
+
+
+
+.transaction-box p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   JOURNAL ENTRY BOX
+
+\========================================================= */
+
+
+
+.journal-box {
+
+    overflow: hidden;
+
+    margin: 18px 0;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+}
+
+
+
+.journal-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid #e5e8ed;
+
+    color: #ffffff;
+
+    background: #17263b;
+
+}
+
+
+
+.journal-heading h4 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+}
+
+
+
+.journal-heading span {
+
+    color: #f5b841;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+
+.journal-lines {
+
+    padding: 7px 16px;
+
+}
+
+
+
+.journal-line {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) auto;
+
+    align-items: start;
+
+    gap: 16px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #eef0f3;
+
+}
+
+
+
+.journal-line:last-child {
+
+    border-bottom: 0;
+
+}
+
+
+
+.journal-line code {
+
+    overflow-wrap: anywhere;
+
+    color: #344154;
+
+    background: transparent;
+
+    font-family: Consolas, "Courier New", monospace;
+
+    font-size: 12px;
+
+    white-space: normal;
+
+}
+
+
+
+.journal-line .journal-amount {
+
+    color: #172033;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+
+.journal-line.credit code {
+
+    padding-left: 20px;
+
+}
+
+
+
+.journal-line.credit code::before {
+
+    content: "To ";
+
+    color: #a97108;
+
+    font-weight: 800;
+
+}
+
+
+
+.journal-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border-top: 1px solid #dfe5ed;
+
+    color: #172033;
+
+    background: #f6f7f9;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+
+/* =========================================================
+
+   LEARNING NOTE / WARNING
+
+\========================================================= */
+
+
+
+.learning-note {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin: 18px 0;
+
+    padding: 15px 17px;
+
+    border: 1px solid #dbe8f6;
+
+    border-radius: 10px;
+
+    color: #435b77;
+
+    background: #f3f8ff;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.learning-note>i {
+
+    margin-top: 3px;
+
+    color: #4477b5;
+
+}
+
+
+
+.learning-note p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+}
+
+
+
+.gst-warning {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin: 18px 0;
+
+    padding: 15px 17px;
+
+    border: 1px solid #f0d5c8;
+
+    border-radius: 10px;
+
+    color: #87503c;
+
+    background: #fff6f1;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.gst-warning>i {
+
+    margin-top: 3px;
+
+    color: #c66c40;
+
+}
+
+
+
+.gst-warning p {
+
+    margin: 0;
+
+    color: #87503c;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   REFERENCE TABLE
+
+\========================================================= */
+
+
+
+.reference-table-wrapper {
+
+    overflow-x: auto;
+
+    margin: 23px 0;
+
+    border: 1px solid #e2e6ec;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
+
+.reference-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: left;
+
+    font-size: 12px;
+
+}
+
+
+
+.reference-table th {
+
+    padding: 14px 16px;
+
+    color: #ffffff;
+
+    background: #17263b;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+
+.reference-table td {
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid #edf0f3;
+
+    color: #626d7d;
+
+    vertical-align: top;
+
+    line-height: 1.7;
+
+}
+
+
+
+.reference-table tbody tr:last-child td {
+
+    border-bottom: 0;
+
+}
+
+
+
+.reference-table tbody tr:nth-child(even) {
+
+    background: #fafbfc;
+
+}
+
+
+
+.reference-table tbody tr:hover {
+
+    background: #fffaf0;
+
+}
+
+
+
+.reference-table td strong {
+
+    color: #172033;
+
+}
+
+
+
+/* =========================================================
+
+   PRACTICE ROADMAP
+
+\========================================================= */
+
+
+
+.practice-roadmap {
+
+    display: grid;
+
+    gap: 14px;
+
+    margin: 24px 0;
+
+}
+
+
+
+.practice-step {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    transition:
+
+        border-color 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.practice-step:hover {
+
+    transform: translateX(3px);
+
+    border-color: #efd58e;
+
+}
+
+
+
+.practice-step-number {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    border-radius: 10px;
+
+    color: #9e6d0b;
+
+    background: #fff0c4;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+
+.practice-step h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 14px;
+
+}
+
+
+
+.practice-step p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   LEDGER LIST
+
+\========================================================= */
+
+
+
+.ledger-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+
+.ledger-list li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 13px;
+
+    border: 1px solid #e7eaee;
+
+    border-radius: 9px;
+
+    color: #626d7d;
+
+    background: #fafbfc;
+
+    font-size: 12px;
+
+}
+
+
+
+.ledger-list li i {
+
+    margin-top: 4px;
+
+    color: #bd8310;
+
+}
+
+
+
+/* =========================================================
+
+   REPORT GRID
+
+\========================================================= */
+
+
+
+.report-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 13px;
+
+    margin: 22px 0;
+
+}
+
+
+
+.report-card {
+
+    padding: 18px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    transition:
+
+        transform 0.2s ease,
+
+        border-color 0.2s ease;
+
+}
+
+
+
+.report-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #efd58e;
+
+}
+
+
+
+.report-card i {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    color: #a97108;
+
+    background: #fff1c9;
+
+}
+
+
+
+.report-card h3 {
+
+    margin: 0 0 6px;
+
+    font-size: 13px;
+
+}
+
+
+
+.report-card p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================================
+
+   COMMON MISTAKES
+
+\========================================================= */
+
+
+
+.mistake-list {
+
+    display: grid;
+
+    gap: 12px;
+
+    margin: 22px 0;
+
+}
+
+
+
+.mistake-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border: 1px solid #f0e0d7;
+
+    border-radius: 10px;
+
+    background: #fffaf7;
+
+}
+
+
+
+.mistake-item>i {
+
+    margin-top: 4px;
+
+    color: #c66c40;
+
+}
+
+
+
+.mistake-item h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 13px;
+
+}
+
+
+
+.mistake-item p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =========================================================
+
+   SKILLS GRID
+
+\========================================================= */
+
+
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin: 22px 0;
+
+}
+
+
+
+.skill-card {
+
+    padding: 17px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 11px;
+
+    background: #fafbfc;
+
+    transition:
+
+        transform 0.2s ease,
+
+        border-color 0.2s ease;
+
+}
+
+
+
+.skill-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #efd58e;
+
+}
+
+
+
+.skill-card i {
+
+    margin-bottom: 10px;
+
+    color: #b77c09;
+
+    font-size: 19px;
+
+}
+
+
+
+.skill-card h3 {
+
+    margin: 0 0 6px;
+
+    font-size: 13px;
+
+}
+
+
+
+.skill-card p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+}
+
+
+
+/* =========================================================
+
+   LOCAL TRAINING CARD
+
+\========================================================= */
+
+
+
+.local-training-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin: 28px 0;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    background:
+
+        radial-gradient(circle at 90% 10%,
+
+            rgba(245, 184, 65, 0.15),
+
+            transparent 35%),
+
+        linear-gradient(135deg, #101827, #203651);
+
+}
+
+
+
+.local-training-copy {
+
+    min-width: 0;
+
+}
+
+
+
+.local-training-copy .section-eyebrow {
+
+    color: #f5b841;
+
+}
+
+
+
+.local-training-copy h3 {
+
+    margin: 0 0 11px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.3;
+
+}
+
+
+
+.local-training-copy p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.local-training-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    flex: 0 0 auto;
+
+    gap: 10px;
+
+}
+
+
+
+/* =========================================================
+
+   BUTTONS
+
+\========================================================= */
+
+
+
+.primary-cta,
+
+.secondary-cta {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 44px;
+
+    padding: 12px 18px;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition:
+
+        background 0.2s ease,
+
+        color 0.2s ease,
+
+        border-color 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.primary-cta {
+
+    color: #111827;
+
+    background: #f5b841;
+
+}
+
+
+
+.primary-cta:hover {
+
+    transform: translateY(-2px);
+
+    background: #ffffff;
+
+}
+
+
+
+.secondary-cta {
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+    color: #ffffff;
+
+    background: transparent;
+
+}
+
+
+
+.secondary-cta:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #f5b841;
+
+    color: #f5b841;
+
+}
+
+
+
+/* =========================================================
+
+   FINAL THOUGHTS
+
+\========================================================= */
+
+
+
+.final-thoughts {
+
+    margin: 28px 0;
+
+    padding: 25px;
+
+    border: 1px solid #ead9aa;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #fffaf0, #ffffff);
+
+}
+
+
+
+.final-thoughts h3 {
+
+    margin: 0 0 10px;
+
+    color: #172033;
+
+    font-size: 19px;
+
+}
+
+
+
+.final-thoughts p {
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.final-thoughts p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+/* =========================================================
+
+   BACK TO TOP
+
+\========================================================= */
+
+
+
+.back-to-top {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 20px;
+
+    padding: 11px 15px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 8px;
+
+    color: #344154;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+
+        color 0.2s ease,
+
+        border-color 0.2s ease,
+
+        background 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.back-to-top:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #efd58e;
+
+    color: #9e6d0b;
+
+    background: #fffaf0;
+
+}
+
+
+
+/* =========================================================
+
+   FAQ SECTION
+
+\========================================================= */
+
+
+
+.faq-list {
+
+    display: grid;
+
+    gap: 12px;
+
+    margin: 22px 0;
+
+}
+
+
+
+.faq-item {
+
+    overflow: hidden;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+}
+
+
+
+.faq-item h3 {
+
+    margin: 0;
+
+    padding: 17px 19px;
+
+    color: #172033;
+
+    background: #fafbfc;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+
+.faq-item p {
+
+    margin: 0;
+
+    padding: 16px 19px;
+
+    font-size: 13px;
+
+}
+
+
+
+.faq-item a {
+
+    color: #a97108;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================================
+
+   RELATED ARTICLES
+
+\========================================================= */
+
+
+
+.related-articles {
+
+    margin-top: 35px;
+
+    padding-top: 28px;
+
+    border-top: 1px solid #e5e8ed;
+
+}
+
+
+
+.related-articles h2 {
+
+    margin: 0 0 17px;
+
+    color: #172033;
+
+    font-size: 22px;
+
+}
+
+
+
+.related-articles>p {
+
+    font-size: 13px;
+
+}
+
+
+
+.related-links {
+
+    display: grid;
+
+    gap: 10px;
+
+    margin: 17px 0;
+
+}
+
+
+
+.related-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e5e8ed;
+
+    border-radius: 9px;
+
+    color: #344154;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+
+        border-color 0.2s ease,
+
+        background 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.related-links a i {
+
+    flex: 0 0 auto;
+
+    color: #bd8310;
+
+}
+
+
+
+.related-links a:hover {
+
+    transform: translateX(2px);
+
+    border-color: #efd58e;
+
+    background: #fffaf0;
+
+}
+
+
+
+/* =========================================================
+
+   ALL BLOGS BUTTON
+
+\========================================================= */
+
+
+
+.all-blogs-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 22px;
+
+    padding: 12px 17px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    background: #111827;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+
+        background 0.2s ease,
+
+        color 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+
+.all-blogs-button:hover {
+
+    transform: translateY(-2px);
+
+    color: #111827;
+
+    background: #f5b841;
+
+}
+
+
+
+/* =========================================================
+
+   OPTIONAL SHARED CONTENT UTILITIES
+
+\========================================================= */
+
+
+
+.text-gold {
+
+    color: #bd8310;
+
+}
+
+
+
+.text-muted {
+
+    color: #626d7d;
+
+}
+
+
+
+.bg-light {
+
+    background: #f6f7f9;
+
+}
+
+
+
+.gold-divider {
+
+    width: 58px;
+
+    height: 3px;
+
+    margin: 18px 0;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #f5b841;
+
+}
+
+
+
+.article-content blockquote {
+
+    margin: 22px 0;
+
+    padding: 17px 20px;
+
+    border-left: 4px solid #f5b841;
+
+    border-radius: 0 9px 9px 0;
+
+    color: #526074;
+
+    background: #fffaf0;
+
+    font-size: 14px;
+
+}
+
+
+
+.article-content code {
+
+    overflow-wrap: anywhere;
+
+}
+
+
+
+.article-content pre {
+
+    overflow-x: auto;
+
+    max-width: 100%;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    color: #f5f7fa;
+
+    background: #17263b;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.article-content table {
+
+    max-width: 100%;
+
+}
+
+
+
+.article-content iframe,
+
+.article-content video {
+
+    max-width: 100%;
+
+}
+
+
+
+/* =========================================================
+
+   TABLET RESPONSIVE
+
+\========================================================= */
+
+
+
+@media (max-width: 1020px) {
+
+    .article-layout {
+
+        grid-template-columns: 230px minmax(0, 1fr);
+
+        gap: 22px;
+
+    }
+
+
+
+    .toc-card,
+
+    .sidebar-cta {
+
+        padding: 19px;
+
+    }
+
+
+
+    .voucher-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .report-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .skills-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .local-training-card {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   MOBILE RESPONSIVE
+
+\========================================================= */
+
+
+
+@media (max-width: 760px) {
+
+    .entries-container {
+
+        width: min(calc(100% - 30px), 680px);
+
+    }
+
+
+
+    .entries-hero {
+
+        padding: 35px 0 55px;
+
+    }
+
+
+
+    .article-breadcrumb {
+
+        margin-bottom: 25px;
+
+    }
+
+
+
+    .entries-hero h1 {
+
+        letter-spacing: -1px;
+
+    }
+
+
+
+    .entries-page {
+
+        padding: 35px 0 55px;
+
+    }
+
+
+
+    .article-layout {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+    }
+
+
+
+    .article-sidebar {
+
+        position: static;
+
+        width: 100%;
+
+    }
+
+
+
+    .toc-card {
+
+        padding: 20px;
+
+    }
+
+
+
+    .toc-links {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 16px;
+
+    }
+
+
+
+    .sidebar-cta {
+
+        display: none;
+
+    }
+
+
+
+    .article-content {
+
+        width: 100%;
+
+        padding: 24px 19px;
+
+        border-radius: 15px;
+
+    }
+
+
+
+    .article-section {
+
+        margin-bottom: 42px;
+
+    }
+
+
+
+    .voucher-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .local-training-card {
+
+        padding: 20px;
+
+    }
+
+
+
+    .local-training-copy h3 {
+
+        font-size: 20px;
+
+    }
+
+
+
+    .entry-card-header {
+
+        padding: 17px;
+
+    }
+
+
+
+    .entry-card-body {
+
+        padding: 18px;
+
+    }
+
+
+
+    .journal-lines {
+
+        padding-inline: 13px;
+
+    }
+
+
+
+    .reference-table {
+
+        min-width: 540px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   SMALL MOBILE
+
+\========================================================= */
+
+
+
+@media (max-width: 480px) {
+
+    .entries-container {
+
+        width: calc(100% - 24px);
+
+    }
+
+
+
+    .entries-hero {
+
+        padding: 30px 0 43px;
+
+    }
+
+
+
+    .entries-hero h1 {
+
+        font-size: clamp(30px, 9vw, 39px);
+
+        letter-spacing: -0.8px;
+
+    }
+
+
+
+    .hero-description {
+
+        margin-top: 18px;
+
+        font-size: 14px;
+
+    }
+
+
+
+    .hero-meta {
+
+        gap: 10px 15px;
+
+    }
+
+
+
+    .hero-meta span {
+
+        font-size: 10px;
+
+    }
+
+
+
+    .hero-keywords {
+
+        gap: 7px;
+
+    }
+
+
+
+    .hero-keywords span {
+
+        padding: 6px 9px;
+
+        font-size: 10px;
+
+    }
+
+
+
+    .toc-links {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .article-content {
+
+        padding: 21px 15px;
+
+    }
+
+
+
+    .article-section h2 {
+
+        font-size: 24px;
+
+    }
+
+
+
+    .article-section p {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .answer-box {
+
+        gap: 11px;
+
+        padding: 16px;
+
+    }
+
+
+
+    .answer-icon {
+
+        width: 35px;
+
+        height: 35px;
+
+        flex-basis: 35px;
+
+    }
+
+
+
+    .voucher-grid,
+
+    .ledger-list,
+
+    .report-grid,
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .entry-card-header {
+
+        align-items: flex-start;
+
+        gap: 11px;
+
+        padding: 15px;
+
+    }
+
+
+
+    .entry-number {
+
+        width: 36px;
+
+        height: 36px;
+
+        flex-basis: 36px;
+
+    }
+
+
+
+    .entry-heading h3 {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .entry-card-body {
+
+        padding: 15px;
+
+    }
+
+
+
+    .journal-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+
+    .journal-line {
+
+        gap: 10px;
+
+    }
+
+
+
+    .journal-line code {
+
+        font-size: 11px;
+
+    }
+
+
+
+    .journal-line .journal-amount {
+
+        font-size: 11px;
+
+    }
+
+
+
+    .reference-table th,
+
+    .reference-table td {
+
+        padding: 11px 12px;
+
+    }
+
+
+
+    .local-training-card {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding: 20px;
+
+    }
+
+
+
+    .local-training-copy h3 {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .local-training-actions {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+
+    .primary-cta,
+
+    .secondary-cta {
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-right: 0;
+
+    }
+
+
+
+    .final-thoughts {
+
+        padding: 21px;
+
+    }
+
+
+
+    .related-articles h2 {
+
+        font-size: 20px;
+
+    }
+
+
+
+    .practice-step {
+
+        gap: 11px;
+
+        padding: 14px;
+
+    }
+
+
+
+    .practice-step-number {
+
+        width: 33px;
+
+        height: 33px;
+
+        flex-basis: 33px;
+
+    }
+
+
+
+    .back-to-top {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   REDUCED MOTION ACCESSIBILITY
+
+\========================================================= */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+    :host *,
+
+    :host *::before,
+
+    :host *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
+
+/* =========================================================
+   HTML COMPATIBILITY FIXES
+   These selectors match the companion TallyPrime article HTML.
+========================================================= */
+
+.entries-blog {
+    display: block;
+    min-width: 0;
+    color: #172033;
+    background: #ffffff;
+}
+
+/* The HTML uses anchor links in the table of contents, not buttons. */
+.toc-links a,
+.toc-links button {
+    display: block;
+    width: 100%;
+    padding: 11px 0;
+    border: 0;
+    border-bottom: 1px solid #eef0f3;
+    color: #657084;
+    background: transparent;
+    text-align: left;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: color 0.2s ease, padding 0.2s ease;
+}
+
+.toc-links a:last-child,
+.toc-links button:last-child {
+    border-bottom: 0;
+}
+
+.toc-links a:hover,
+.toc-links button:hover {
+    padding-left: 5px;
+    color: #a97108;
+}
+
+/* Transaction labels and credit lines used in the HTML. */
+.entry-label {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #a97108;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.journal-line.credit-line code {
+    padding-left: 20px;
+}
+
+.journal-line.credit-line code::first-letter {
+    color: inherit;
+}
+
+/* Step class names used by the supplied HTML. */
+.step-number {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 10px;
+    color: #9e6d0b;
+    background: #fff0c4;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.step-content {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.step-content h3 {
+    margin: 0 0 5px;
+    color: #202938;
+    font-size: 14px;
+}
+
+.step-content p {
+    margin: 0;
+    color: #626d7d;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* The supplied HTML uses spans inside ledger-list. */
+.ledger-list>span {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #e7eaee;
+    border-radius: 9px;
+    color: #626d7d;
+    background: #fafbfc;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.ledger-list>span i {
+    flex: 0 0 auto;
+    margin-top: 4px;
+    color: #bd8310;
+}
+
+.subsection-heading {
+    margin: 25px 0 13px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+/* GST report items are simple icon-and-label tiles in the HTML. */
+.report-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.report-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid #e5e8ed;
+    border-radius: 11px;
+    color: #344154;
+    background: #fafbfc;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.7;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.report-item:hover {
+    transform: translateY(-2px);
+    border-color: #efd58e;
+    background: #fffaf0;
+}
+
+.report-item>i {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 9px;
+    color: #a97108;
+    background: #fff1c9;
+}
+
+/* Skills are icon-and-label tiles in the supplied HTML. */
+.skill-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #e5e8ed;
+    border-radius: 10px;
+    color: #626d7d;
+    background: #fafbfc;
+    font-size: 12px;
+    line-height: 1.7;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.skill-item:hover {
+    border-color: #efd58e;
+    background: #fffaf0;
+}
+
+.skill-item>i {
+    flex: 0 0 auto;
+    margin-top: 3px;
+    color: #bd8310;
+}
+
+/* Common mistakes: match .mistake-card and .mistake-icon. */
+.mistake-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 17px;
+    border: 1px solid #f0e0d7;
+    border-radius: 11px;
+    background: #fffaf7;
+}
+
+.mistake-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 9px;
+    color: #c66c40;
+    background: #ffede4;
+}
+
+.mistake-card h3 {
+    margin: 0 0 5px;
+    color: #273449;
+    font-size: 13px;
+}
+
+.mistake-card p {
+    margin: 0;
+    color: #626d7d;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* FAQ uses native details/summary elements. */
+.faq-item {
+    overflow: hidden;
+    border: 1px solid #e5e8ed;
+    border-radius: 11px;
+    background: #ffffff;
+}
+
+.faq-item>summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 19px;
+    color: #172033;
+    background: #fafbfc;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.6;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item>summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item>summary::marker {
+    content: "";
+}
+
+.faq-item>summary i {
+    flex: 0 0 auto;
+    color: #bd8310;
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open]>summary i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 16px 19px;
+    border-top: 1px solid #edf0f3;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #626d7d;
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* RLT Edzaro CTA card uses these exact HTML classes. */
+.local-training-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    align-items: start;
+    gap: 17px;
+    margin: 28px 0;
+    padding: 28px;
+    border: 1px solid #243750;
+    border-radius: 16px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(245, 184, 65, 0.15), transparent 35%),
+        linear-gradient(135deg, #101827, #203651);
+}
+
+.local-training-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    color: #f5b841;
+    background: rgba(245, 184, 65, 0.13);
+    font-size: 20px;
+}
+
+.local-training-copy {
+    min-width: 0;
+}
+
+.local-label {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #f5b841;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.local-training-copy h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.35;
+}
+
+.local-training-copy p {
+    margin: 0 0 16px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.branch-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 20px;
+}
+
+.branch-pills span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(245, 184, 65, 0.25);
+    border-radius: 30px;
+    color: #f7d995;
+    background: rgba(255, 255, 255, 0.045);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Quick-reference table labels and footnote. */
+.reference-table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 23px 0;
+    border: 1px solid #e2e6ec;
+    border-radius: 12px;
+    background: #ffffff;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-voucher {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #e8d7a9;
+    border-radius: 30px;
+    color: #8c620e;
+    background: #fffaf0;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.table-footnote {
+    margin: 12px 0 0;
+    color: #747f8f;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* Use a flexible grid for list-style skill and ledger content. */
+.skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ledger-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Keep the article readable on narrow screens. */
+@media (max-width: 760px) {
+    .local-training-card {
+        grid-template-columns: 1fr;
+        padding: 21px;
+    }
+
+    .local-training-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .local-training-copy h3 {
+        font-size: 20px;
+    }
+
+    .report-grid,
+    .skills-grid,
+    .ledger-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+
+    .report-grid,
+    .skills-grid,
+    .ledger-list {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item>summary {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .faq-answer {
+        padding: 14px 15px;
+    }
+
+    .mistake-card {
+        padding: 14px;
+    }
+
+    .branch-pills span {
+        font-size: 9px;
+    }
+}

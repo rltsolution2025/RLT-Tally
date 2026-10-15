@@ -38,6 +38,7 @@ import { UiUxDesignerComponent } from './IT-industries/ui-ux-designer/ui-ux-desi
 import { CCNAComponent } from './IT-industries/ccna/ccna.component';
 import { PowerBIComponent } from './IT-industries/power-bi/power-bi.component';
 import { BlogsComponent } from './blogs/blogs/blogs.component';
+import { TallyWithGstTraining } from './blogs/tally-with-gst-training/tally-with-gst-training';
 import { TallyprimeVsExcelComponent } from './blogs/tallyprime-vs-excel/tallyprime-vs-excel.component';
 import { TallyAccountantSalaryInIndiaComponent } from './blogs/tally-accountant-salary-in-india/tally-accountant-salary-in-india.component';
 import { JobsAfterLearningTallyComponent } from './blogs/jobs-after-learning-tally/jobs-after-learning-tally.component';
@@ -67,8 +68,10 @@ import { IoT } from './component/Emerging-technologies/io-t/io-t';
 import { GenAI } from './component/Emerging-technologies/gen-ai/gen-ai';
 import { DroneTechnologies } from './component/Emerging-technologies/drone-technologies/drone-technologies';
 import { KidsProgram } from './component/kids-program/kids-program';
-
-
+import { TallyprimeForEveryBeginners } from './blogs/tallyprime-for-every-beginners/tallyprime-for-every-beginners';
+import { TallyprimeVoucherTypesExplainedWithExamples } from './blogs/tallyprime-voucher-types-explained-with-examples/tallyprime-voucher-types-explained-with-examples';
+import { TallyprimePracticalTestQuestionsAccountantJobs } from './blogs/tallyprime-practical-test-questions-accountant-jobs/tallyprime-practical-test-questions-accountant-jobs';
+import { TallyprimePayrollManageEmployeeSalaries } from './blogs/tallyprime-payroll-manage-employee-salaries/tallyprime-payroll-manage-employee-salaries';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -161,6 +164,11 @@ export const routes: Routes = [
   },
 
   { path: 'google-review', component: GoogleReviews },
+  { path: 'tally-with-gst-training-what-will-you-learn', component: TallyWithGstTraining },
+  { path: 'tallyprime-accounting-entries-beginners-should-practice', component: TallyprimeForEveryBeginners },
+  { path: 'tallyprime-voucher-types-explained-with-examples', component: TallyprimeVoucherTypesExplainedWithExamples },
+  { path: 'tallyprime-practical-test-questions-accountant-jobs', component: TallyprimePracticalTestQuestionsAccountantJobs },
+  { path: 'tallyprime-payroll-manage-employee-salaries', component: TallyprimePayrollManageEmployeeSalaries },
 
   //Emerging Technologies
 
@@ -170,5 +178,5 @@ export const routes: Routes = [
   { path: 'drone-technology-course', component: DroneTechnologies },
 
   // Kids Programs
-  { path: 'kids-programs', component: KidsProgram },
+  { path: 'future-tech-programs-for-kids', component: KidsProgram },
 ];

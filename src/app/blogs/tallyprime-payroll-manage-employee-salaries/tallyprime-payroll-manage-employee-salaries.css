@@ -1,0 +1,810 @@
+/* =========================================================
+   RLT Edzaro | TallyPrime Payroll Blog
+   Complete responsive Angular component stylesheet
+   Related articles are plain text links, not image cards.
+   ========================================================= */
+
+:host {
+    display: block;
+    color: #182235;
+    background: #ffffff;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+:host *,
+:host *::before,
+:host *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE VARIABLES AND CONTAINER
+   ========================================================= */
+
+.payroll-blog-page {
+    --payroll-navy: #102342;
+    --payroll-blue: #17365f;
+    --payroll-blue-light: #214a75;
+    --payroll-gold: #e8b84b;
+    --payroll-gold-dark: #a8750b;
+    --payroll-text: #182235;
+    --payroll-muted: #64748b;
+    --payroll-line: #e4e9f0;
+    --payroll-surface: #f7f9fc;
+    --payroll-soft-gold: #fffaf0;
+
+    width: 100%;
+    padding: 26px 0 76px;
+    overflow-wrap: anywhere;
+}
+
+.article-shell {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 28px;
+    color: var(--payroll-muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+.breadcrumbs a,
+.article-end-links a {
+    color: var(--payroll-blue);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.article-end-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.breadcrumbs [aria-current="page"] {
+    color: #667085;
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.article-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    align-items: center;
+    gap: clamp(28px, 5vw, 62px);
+    padding: clamp(28px, 5vw, 58px);
+    overflow: hidden;
+    border-radius: 24px;
+    color: #ffffff;
+    background: linear-gradient(130deg,
+            #0d1e38 0%,
+            #173a65 72%,
+            #214a75 100%);
+    isolation: isolate;
+}
+
+.article-hero::after {
+    position: absolute;
+    z-index: -1;
+    right: -125px;
+    bottom: -180px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--payroll-gold);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.article-hero h1 {
+    max-width: 720px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.12;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 22px 0 20px;
+    color: #e1e9f4;
+    font-size: 1.04rem;
+    line-height: 1.75;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+    color: #c7d4e5;
+    font-size: 0.85rem;
+}
+
+.hero-image-wrap {
+    min-width: 0;
+    margin: 0;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-image-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   MAIN ARTICLE LAYOUT
+   ========================================================= */
+
+.article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 285px;
+    align-items: start;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.article-content {
+    min-width: 0;
+    color: var(--payroll-text);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.article-content p {
+    margin: 0 0 18px;
+}
+
+.article-content h2 {
+    margin: 44px 0 16px;
+    color: var(--payroll-navy);
+    font-size: clamp(1.55rem, 2.4vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    scroll-margin-top: 24px;
+}
+
+.article-content h3 {
+    margin: 28px 0 10px;
+    color: var(--payroll-blue);
+    font-size: 1.18rem;
+    font-weight: 750;
+    line-height: 1.4;
+    scroll-margin-top: 24px;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 0 0 22px;
+    padding-left: 1.45rem;
+}
+
+.article-content li {
+    margin: 0 0 7px;
+    padding-left: 4px;
+}
+
+.article-content li::marker {
+    color: #c38b17;
+    font-weight: 700;
+}
+
+.article-content strong {
+    color: #152945;
+    font-weight: 750;
+}
+
+.article-content section {
+    scroll-margin-top: 24px;
+}
+
+/* =========================================================
+   QUICK ANSWER SUMMARY
+   ========================================================= */
+
+.answer-summary {
+    margin: 0 0 28px;
+    padding: 22px 24px;
+    border: 1px solid #f0d891;
+    border-left: 5px solid var(--payroll-gold);
+    border-radius: 12px;
+    background: var(--payroll-soft-gold);
+}
+
+.answer-summary h2 {
+    margin: 0 0 8px;
+    color: var(--payroll-navy);
+    font-size: 1.22rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.answer-summary p {
+    margin: 0;
+}
+
+/* =========================================================
+   NOTES
+   ========================================================= */
+
+.note {
+    margin: 22px 0;
+    padding: 16px 18px;
+    border: 1px solid var(--payroll-line);
+    border-radius: 10px;
+    background: var(--payroll-surface);
+    color: #46556a;
+}
+
+.note strong {
+    color: var(--payroll-navy);
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.table-wrap {
+    width: 100%;
+    margin: 22px 0 26px;
+    overflow-x: auto;
+    border: 1px solid var(--payroll-line);
+    border-radius: 12px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.article-content table {
+    width: 100%;
+    min-width: 440px;
+    border-collapse: collapse;
+    background: #ffffff;
+    line-height: 1.5;
+}
+
+.article-content caption {
+    padding: 13px 16px;
+    color: var(--payroll-navy);
+    background: #f7f9fc;
+    font-size: 0.88rem;
+    font-weight: 750;
+    text-align: left;
+}
+
+.article-content th,
+.article-content td {
+    padding: 12px 15px;
+    border-top: 1px solid var(--payroll-line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.article-content thead th {
+    border-top: 0;
+    background: var(--payroll-navy);
+    color: #ffffff;
+    font-weight: 750;
+}
+
+.article-content tbody th {
+    font-weight: 650;
+}
+
+.article-content tbody tr:nth-child(even) {
+    background: #fbfcfe;
+}
+
+.article-content .total-row {
+    background: #f3f6fb;
+}
+
+.article-content .net-row {
+    background: #fff5d8;
+}
+
+/* =========================================================
+   SALARY FORMULA AND JOURNAL ENTRY
+   ========================================================= */
+
+.formula,
+.journal-entry {
+    margin: 18px 0 24px;
+    padding: 17px 20px;
+    border: 1px solid #e0e7f1;
+    border-radius: 10px;
+    background: #f3f6fb;
+    color: var(--payroll-navy);
+}
+
+.journal-entry p {
+    margin: 0 0 4px;
+}
+
+.journal-entry p:first-child {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   RLT EDZARO TRAINING CTA
+   ========================================================= */
+
+.course-cta {
+    margin: 28px 0 14px;
+    padding: clamp(24px, 4vw, 36px);
+    border-radius: 16px;
+    background: linear-gradient(130deg, #102342, #1c426e);
+    color: #ffffff;
+}
+
+.course-cta h3 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 1.45rem;
+    line-height: 1.35;
+}
+
+.course-cta p {
+    color: #e3eaf3;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    padding: 12px 17px;
+    border-radius: 8px;
+    background: var(--payroll-gold);
+    color: #17263c;
+    font-weight: 800;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-link:hover {
+    transform: translateY(-1px);
+    background: #f3c960;
+}
+
+/* =========================================================
+   FAQ SECTION
+   ========================================================= */
+
+.faq-section {
+    margin-top: 48px;
+}
+
+.faq-item {
+    padding: 17px 0 8px;
+    border-bottom: 1px solid var(--payroll-line);
+}
+
+.faq-item h3 {
+    margin: 0 0 8px;
+    color: var(--payroll-blue);
+    font-size: 1.06rem;
+    line-height: 1.5;
+}
+
+.faq-item p {
+    margin-bottom: 10px;
+}
+
+.faq-item a {
+    color: #1a568c;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* =========================================================
+   ARTICLE SIDEBAR
+   ========================================================= */
+
+.article-sidebar {
+    position: sticky;
+    top: 24px;
+    display: grid;
+    gap: 20px;
+    min-width: 0;
+}
+
+.sidebar-card {
+    padding: 22px;
+    border: 1px solid var(--payroll-line);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(16, 35, 66, 0.04);
+}
+
+.sidebar-card h2 {
+    margin: 0 0 13px;
+    color: var(--payroll-navy);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+/* Table of contents */
+
+.toc-card nav {
+    display: grid;
+    gap: 2px;
+}
+
+.toc-card button {
+    width: 100%;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: #4b5b70;
+    font: inherit;
+    font-size: 0.91rem;
+    line-height: 1.45;
+    text-align: left;
+    cursor: pointer;
+}
+
+.toc-card button:hover {
+    color: var(--payroll-gold-dark);
+}
+
+/* Sidebar related article text links */
+
+.related-sidebar h2 {
+    margin-bottom: 13px;
+}
+
+.sidebar-related-link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 0;
+    border-top: 1px solid var(--payroll-line);
+    color: #35455c;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.sidebar-related-link:first-of-type {
+    border-top: 0;
+    padding-top: 2px;
+}
+
+.sidebar-related-link span:first-child {
+    flex: 1;
+}
+
+.sidebar-related-link span:last-child {
+    flex: 0 0 auto;
+    color: var(--payroll-gold-dark);
+}
+
+.sidebar-related-link:hover {
+    color: var(--payroll-gold-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* =========================================================
+   BOTTOM RELATED ARTICLES
+   Plain text links only — no image cards
+   ========================================================= */
+
+.related-articles-section {
+    margin-top: 76px;
+    padding-top: 38px;
+    border-top: 1px solid var(--payroll-line);
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 0 22px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 6px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    color: var(--payroll-navy);
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.section-heading>p:last-child {
+    margin: 0;
+    color: var(--payroll-muted);
+}
+
+.related-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 34px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--payroll-line);
+    list-style: none;
+}
+
+.related-links li {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--payroll-line);
+}
+
+.related-links a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 9px;
+    width: 100%;
+    padding: 15px 0;
+    color: var(--payroll-blue);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.55;
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+
+.related-links a::before {
+    flex: 0 0 auto;
+    color: var(--payroll-gold-dark);
+    content: "↗";
+    font-size: 0.92rem;
+}
+
+.related-links a:hover {
+    color: var(--payroll-gold-dark);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+/* =========================================================
+   ARTICLE FOOTER LINKS
+   ========================================================= */
+
+.article-end-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 42px;
+    padding-top: 22px;
+    border-top: 1px solid var(--payroll-line);
+    font-weight: 700;
+}
+
+.article-end-links button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--payroll-blue);
+    font: inherit;
+    cursor: pointer;
+}
+
+.article-end-links button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* =========================================================
+   ACCESSIBILITY: KEYBOARD FOCUS
+   ========================================================= */
+
+.payroll-blog-page a:focus-visible,
+.payroll-blog-page button:focus-visible {
+    outline: 3px solid #d49b25;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* =========================================================
+   TABLET RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 950px) {
+    .article-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .article-sidebar {
+        position: static;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        order: -1;
+    }
+
+    .toc-card nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 16px;
+    }
+
+    .related-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .payroll-blog-page {
+        padding: 18px 0 48px;
+    }
+
+    .article-shell {
+        width: min(100% - 28px, 1160px);
+    }
+
+    .breadcrumbs {
+        gap: 7px;
+        margin-bottom: 18px;
+        font-size: 0.78rem;
+    }
+
+    .article-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 25px 22px;
+        border-radius: 18px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(1.9rem, 8vw, 2.6rem);
+    }
+
+    .hero-description {
+        margin: 16px 0;
+        font-size: 0.98rem;
+    }
+
+    .article-meta {
+        font-size: 0.8rem;
+    }
+
+    .article-layout {
+        margin-top: 30px;
+    }
+
+    .article-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sidebar-card {
+        padding: 18px;
+    }
+
+    .toc-card nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+    }
+
+    .article-content {
+        font-size: 0.97rem;
+    }
+
+    .article-content h2 {
+        margin-top: 36px;
+    }
+
+    .answer-summary {
+        padding: 18px;
+    }
+
+    .table-wrap {
+        border-radius: 9px;
+    }
+
+    .article-content table {
+        min-width: 400px;
+    }
+
+    .course-cta {
+        padding: 24px 20px;
+    }
+
+    .related-articles-section {
+        margin-top: 52px;
+        padding-top: 28px;
+    }
+
+    .related-links {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .related-links a {
+        padding: 14px 0;
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+    .article-shell {
+        width: calc(100% - 24px);
+    }
+
+    .article-hero {
+        padding: 22px 17px;
+    }
+
+    .toc-card nav {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-meta {
+        gap: 6px 8px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .payroll-blog-page *,
+    .payroll-blog-page *::before,
+    .payroll-blog-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

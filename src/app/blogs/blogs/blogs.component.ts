@@ -180,6 +180,46 @@ export class BlogsComponent {
 
       url: '/is-tallyprime-easy-to-learn-for-beginners',
     },
+    {
+      title: 'TallyPrime Accounting Entries Every Beginner Should Practice',
+      description:
+        'Practise TallyPrime accounting entries with examples of purchases, sales, receipts, payments, GST, expenses, journal entries and voucher types for beginners.',
+      image: 'blogs-image/TallyPrime-Accounting-Entries.png',
+      category: 'Tally & Finance',
+      date: 'October 12, 2026',
+      readTime: '12 min read',
+      url: '/tallyprime-accounting-entries-beginners-should-practice',
+    },
+    {
+      title: 'Tally with GST Training: What Will You Learn?',
+      description:
+        'Learn what Tally with GST training covers, including accounting fundamentals, TallyPrime, ledger creation, voucher entries, GST invoicing, inventory management, banking and financial reports.',
+      image: 'blogs-image/Tally-with-GST-Training.png',
+      category: 'Tally & Finance',
+      date: 'October 12, 2026',
+      readTime: '12 min read',
+      url: '/tally-with-gst-training-what-will-you-learn/',
+    },
+    {
+      title: 'TallyPrime Voucher Types Explained With Examples',
+      description:
+        'Learn the major TallyPrime voucher types with practical accounting examples, including Contra, Payment, Receipt, Journal, Sales, Purchase, Debit Note, Credit Note, order vouchers, inventory vouchers, payroll and special-purpose vouchers. Understand common shortcut keys and how to choose the right voucher for everyday business transactions.',
+      image: 'blogs-image/TallyPrime-Voucher-Types.png',
+      category: 'Tally & Finance',
+      date: 'October 12, 2026',
+      readTime: '12 min read',
+      url: '/tallyprime-voucher-types-explained-with-examples/',
+    },
+    {
+      title: 'TallyPrime Practical Test Questions for Accountant Jobs: 25 Questions With Answers',
+      description:
+        'Prepare for accountant job interviews with 25 TallyPrime practical test questions and answers. Practise company creation, ledger management, accounting voucher entries, GST transactions, inventory management, bank reconciliation, Trial Balance, Profit and Loss Account, and Balance Sheet reports.',
+      image: 'blogs-image/TallyPrime-Practical-Test-Questions-Answers.png',
+      category: 'Tally & Finance',
+      date: 'October 12, 2026',
+      readTime: '15 min read',
+      url: '/tallyprime-practical-test-questions-accountant-jobs/',
+    },
   ];
 
   // =========================================================

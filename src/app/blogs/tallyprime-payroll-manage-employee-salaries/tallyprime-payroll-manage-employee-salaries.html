@@ -1,0 +1,584 @@
+<main class="payroll-blog-page">
+    <div class="article-shell">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a routerLink="/">Home</a><span aria-hidden="true">/</span>
+            <a routerLink="/blogs">Blogs</a><span aria-hidden="true">/</span>
+            <span aria-current="page">TallyPrime Payroll: How to Manage Employee Salaries</span>
+        </nav>
+        <header class="article-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">TALLY &amp; FINANCE</p>
+                <h1>TallyPrime Payroll: How to Manage Employee Salaries</h1>
+                <p class="hero-description">Learn how to configure payroll, create employee records, set salary
+                    components, record attendance, calculate net salary, generate payslips, and review payroll reports
+                    in TallyPrime.</p>
+                <div class="article-meta"><span>By RLT Edzaro</span><span aria-hidden="true">•</span><span>October 12,
+                        2026</span><span aria-hidden="true">•</span><span>12–15 min read</span></div>
+            </div>
+            <figure class="hero-image-wrap">
+                <img src="blogs-image/TallyPrime-Payroll-How-to-Manage-Employee-Salaries.png"
+                    alt="TallyPrime Payroll guide for managing employee salaries, attendance, deductions, and payslips"
+                    width="1200" height="675" fetchpriority="high" />
+            </figure>
+        </header>
+        <div class="article-layout">
+            <article class="article-content">
+                <div class="answer-summary" aria-label="Quick answer">
+                    <h2>Quick answer: How do you manage salaries in TallyPrime?</h2>
+                    <p>Enable payroll in company features, create employee groups and employee records, configure pay
+                        heads and salary structures, record attendance, process payroll, verify deductions, record
+                        salary payments, and generate payslips and payroll reports. Menu names and features can vary by
+                        TallyPrime version and setup.</p>
+                </div>
+                <p>Managing employee salaries is an important responsibility for every business. Companies need to
+                    calculate salaries accurately, track attendance, manage deductions, maintain payroll records, and
+                    prepare payslips every month. Performing these tasks manually can take time and increase the chances
+                    of calculation errors.</p>
+                <p><strong>TallyPrime Payroll</strong> helps businesses organise employee salary details, record
+                    attendance, calculate earnings and deductions, and generate payroll reports from one system.</p>
+                <p>In this guide, you will learn how to manage employee salaries in TallyPrime, configure payroll
+                    settings, create employee records, calculate salaries, and generate payslips with practical
+                    examples.</p>
+                <section id="what-is-payroll">
+                    <h2>What Is Payroll in TallyPrime?</h2>
+                    <p>Payroll is the process of calculating and managing employee compensation. It includes basic
+                        salary, allowances, overtime, incentives, deductions, and net salary payable.</p>
+                    <p>TallyPrime provides payroll features that help businesses maintain employee information,
+                        configure salary structures, record attendance, process salary payments, and generate
+                        payroll-related reports.</p>
+                    <p>Businesses can use payroll management to:</p>
+                    <ul>
+                        <li>Maintain employee records and salary details.</li>
+                        <li>Create salary structures for different employees.</li>
+                        <li>Record attendance and employee leave.</li>
+                        <li>Calculate earnings and deductions.</li>
+                        <li>Process monthly salary payments.</li>
+                        <li>Generate payslips and payroll reports.</li>
+                        <li>Maintain payroll accounting records.</li>
+                    </ul>
+                    <p><strong>Example:</strong> If a company has 25 employees, the accounts team can use TallyPrime to
+                        organise their salary details and process payroll systematically instead of calculating every
+                        employee's salary separately.</p>
+                </section>
+                <section id="importance">
+                    <h2>Why Is Payroll Management Important?</h2>
+                    <p>An effective payroll process helps businesses pay employees accurately and maintain proper
+                        financial records.</p>
+                    <h3>1. Accurate salary calculations</h3>
+                    <p>Salary components can be configured in advance to reduce repetitive calculations and manual
+                        errors.</p>
+                    <h3>2. Better attendance management</h3>
+                    <p>Employee attendance and applicable leave or unpaid absence can be recorded to support salary
+                        calculations.</p>
+                    <h3>3. Organised salary records</h3>
+                    <p>Employee-wise payroll information makes it easier to review salary details and maintain
+                        accounting records.</p>
+                    <h3>4. Simplified payslip preparation</h3>
+                    <p>Payslips can be generated to show salary earnings, deductions, and net pay.</p>
+                    <h3>5. Improved payroll reporting</h3>
+                    <p>Payroll reports help businesses review employee costs and salary-related information.</p>
+                    <h3>6. Support for statutory payroll accounting</h3>
+                    <p>Where applicable, businesses can configure and account for statutory deductions such as provident
+                        fund (PF), employee state insurance (ESI), and professional tax according to the relevant rules
+                        and their payroll setup.</p>
+                    <aside class="note"><strong>Note:</strong> Payroll features, statutory configurations, and report
+                        availability can vary depending on the TallyPrime version and configuration. Verify applicable
+                        statutory rates, thresholds, and filing requirements before processing payroll.</aside>
+                </section>
+                <section id="enable-payroll">
+                    <h2>How to Enable Payroll in TallyPrime</h2>
+                    <p>Before managing employee salaries, you need to enable payroll in your company.</p>
+                    <ol>
+                        <li>Open TallyPrime and select the company for which you want to manage payroll.</li>
+                        <li>Open the company configuration or <strong>F11 (Features)</strong> screen.</li>
+                        <li>Locate the payroll-related feature.</li>
+                        <li>Enable <strong>Maintain Payroll</strong>, or the corresponding payroll option available in
+                            your version.</li>
+                        <li>Save the configuration.</li>
+                    </ol>
+                    <p>Once payroll is enabled, you can configure employee information, salary components, attendance,
+                        and payroll transactions.</p>
+                    <p><strong>Tip:</strong> Menu names and configuration options may differ slightly between TallyPrime
+                        versions. Refer to the options displayed in your installed version.</p>
+                </section>
+                <section id="manage-salaries">
+                    <h2>Step-by-Step Guide to Managing Employee Salaries in TallyPrime</h2>
+                    <h3>Step 1: Create Employee Groups</h3>
+                    <p>Employee groups help businesses organise employees by department, role, or other relevant
+                        categories. For example, a company may create Administration, Accounts, Sales, Human Resources,
+                        and Production groups.</p>
+                    <ol>
+                        <li>Open the employee group creation screen under the payroll-related masters.</li>
+                        <li>Enter the employee group name.</li>
+                        <li>Select the appropriate parent group, if required.</li>
+                        <li>Save the details.</li>
+                    </ol>
+                    <p>Grouping employees makes it easier to organise employee records and review payroll information.
+                    </p>
+                    <h3>Step 2: Create Employee Records</h3>
+                    <p>After creating employee groups, add individual employee records. A typical employee record may
+                        include the employee name, employee ID or code, date of joining, department or employee group,
+                        designation, contact details, and applicable payroll and salary information.</p>
+                    <ol>
+                        <li>Open the employee creation screen under payroll masters.</li>
+                        <li>Enter the employee's name and other required details.</li>
+                        <li>Assign the employee to the appropriate group.</li>
+                        <li>Enter the relevant employment information.</li>
+                        <li>Save the employee record.</li>
+                    </ol>
+                    <p><strong>Practical example:</strong> An employee named Arun works in the Accounts department and
+                        receives a monthly salary. Creating an employee record allows the company to maintain Arun's
+                        details and associate the appropriate salary structure with him.</p>
+                    <h3>Step 3: Create Salary Components or Pay Heads</h3>
+                    <p>A salary structure consists of different earnings and deductions. In TallyPrime, these components
+                        can be configured using pay heads.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <caption>Common salary components in a payroll setup</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Salary component</th>
+                                    <th scope="col">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic Salary</td>
+                                    <td>Main component of employee earnings</td>
+                                </tr>
+                                <tr>
+                                    <td>House Rent Allowance (HRA)</td>
+                                    <td>Applicable housing allowance</td>
+                                </tr>
+                                <tr>
+                                    <td>Conveyance Allowance</td>
+                                    <td>Applicable travel or conveyance allowance</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Allowances</td>
+                                    <td>Additional earnings defined by the employer</td>
+                                </tr>
+                                <tr>
+                                    <td>Overtime</td>
+                                    <td>Eligible overtime earnings</td>
+                                </tr>
+                                <tr>
+                                    <td>Provident Fund (PF)</td>
+                                    <td>Applicable retirement-benefit contribution</td>
+                                </tr>
+                                <tr>
+                                    <td>Employee State Insurance (ESI)</td>
+                                    <td>Applicable employee insurance contribution</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional Tax</td>
+                                    <td>Applicable state-level tax deduction</td>
+                                </tr>
+                                <tr>
+                                    <td>Income Tax / TDS</td>
+                                    <td>Applicable tax deduction, where relevant</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>To configure a pay head:</p>
+                    <ol>
+                        <li>Open the pay head creation screen.</li>
+                        <li>Enter the component name.</li>
+                        <li>Select the appropriate pay head type, such as earnings or deductions.</li>
+                        <li>Configure the calculation method and accounting allocation as applicable.</li>
+                        <li>Save the pay head.</li>
+                    </ol>
+                    <p>The configuration should reflect the company's actual salary policy and applicable statutory
+                        requirements. Not every employee will have the same salary components, so configure each
+                        component according to the employee's salary structure and applicable rules.</p>
+                    <h3>Step 4: Define the Employee Salary Structure</h3>
+                    <p>Once employee records and pay heads are available, configure each employee's salary details.
+                        Depending on the configuration, these can include basic salary, allowances, other earnings,
+                        applicable deductions, salary calculation frequency, and the effective date of the salary
+                        structure.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <caption>Illustrative monthly salary structure</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Component</th>
+                                    <th scope="col">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic Salary</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>HRA</td>
+                                    <td>₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Allowances</td>
+                                    <td>₹2,000</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <th scope="row">Gross Salary</th>
+                                    <td><strong>₹22,000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The gross salary in this example is ₹22,000 per month, before deductions. Assign the relevant
+                        salary components and values through the salary details or salary structure configuration
+                        available in your version. If an employee receives a salary revision, update the applicable
+                        details with the correct effective date.</p>
+                    <h3>Step 5: Record Employee Attendance</h3>
+                    <p>Attendance can affect salary calculations, especially when employees receive payment based on
+                        attendance, payable days, or eligible overtime. For example, an employee may have 26 total
+                        working days, 24 days worked, and 2 days of unpaid leave.</p>
+                    <ol>
+                        <li>Configure the appropriate attendance or production-related types, if required.</li>
+                        <li>Open the relevant attendance voucher screen.</li>
+                        <li>Select the attendance date or period.</li>
+                        <li>Enter employee attendance details.</li>
+                        <li>Record the applicable attendance units, such as days or hours.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <p>The available attendance options and calculation methods depend on payroll configuration. Confirm
+                        how paid leave, unpaid leave, holidays, overtime, and partial attendance are treated under
+                        company policy.</p>
+                    <h3>Step 6: Process Monthly Payroll</h3>
+                    <p>After setting up employee details, salary components, and attendance, process payroll for the
+                        relevant period.</p>
+                    <ol>
+                        <li>Select the correct company and payroll period.</li>
+                        <li>Review employee salary structures.</li>
+                        <li>Check attendance and payable days.</li>
+                        <li>Verify eligible earnings and deductions.</li>
+                        <li>Open the payroll voucher or payroll processing screen.</li>
+                        <li>Select the applicable employees and salary components.</li>
+                        <li>Review the calculated amounts.</li>
+                        <li>Save the payroll transaction.</li>
+                    </ol>
+                    <p>The exact steps depend on the version and payroll configuration. Before saving, verify the
+                        employee list, salary period, attendance details, and deductions.</p>
+                    <h3>Step 7: Calculate Net Salary</h3>
+                    <p>Net salary is the amount payable to an employee after deducting applicable amounts from gross
+                        salary.</p>
+                    <div class="formula"><strong>Net Salary = Gross Earnings − Total Deductions</strong></div>
+                    <div class="table-wrap">
+                        <table>
+                            <caption>Illustrative net salary calculation</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Particulars</th>
+                                    <th scope="col">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic Salary</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>HRA</td>
+                                    <td>₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Other Allowances</td>
+                                    <td>₹2,000</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <th scope="row">Gross Salary</th>
+                                    <td>₹22,000</td>
+                                </tr>
+                                <tr>
+                                    <td>PF Deduction</td>
+                                    <td>₹1,800</td>
+                                </tr>
+                                <tr>
+                                    <td>Professional Tax</td>
+                                    <td>₹200</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <th scope="row">Total Deductions</th>
+                                    <td>₹2,000</td>
+                                </tr>
+                                <tr class="net-row">
+                                    <th scope="row">Net Salary Payable</th>
+                                    <td><strong>₹20,000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>These figures are for learning purposes only. Actual PF, professional tax, and other deductions
+                        depend on the employee's circumstances, applicable law, and the company's payroll configuration.
+                        Review calculated salary and deductions before finalising payroll.</p>
+                    <h3>Step 8: Record Salary Payments</h3>
+                    <p>After calculating payroll, record payments made to employees. Salary payments may be made through
+                        bank transfer, cheque, or other permitted payment methods.</p>
+                    <ol>
+                        <li>Review the final payroll amount.</li>
+                        <li>Open the appropriate payment voucher.</li>
+                        <li>Select the relevant bank or cash ledger.</li>
+                        <li>Select the appropriate salary or payroll ledger, according to the accounting setup.</li>
+                        <li>Enter the payment amount and date.</li>
+                        <li>Provide the required reference or narration.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <p>The accounting entries depend on whether payroll has already been accrued or posted through
+                        payroll vouchers. For example, when salaries are first accrued, the entry may be:</p>
+                    <div class="journal-entry">
+                        <p><strong>Illustrative salary accrual entry</strong></p>
+                        <p>Salary Expense A/c Dr. ₹22,000</p>
+                        <p>To Salary Payable A/c ₹22,000</p>
+                    </div>
+                    <p>When net salary of ₹20,000 is paid and ₹2,000 is withheld for applicable deductions, the payment
+                        and liability entries must reflect the actual accounting treatment. Record withheld amounts in
+                        the appropriate deduction or statutory liability accounts, not as additional salary paid to the
+                        employee.</p>
+                    <h3>Step 9: Generate Employee Payslips</h3>
+                    <p>A payslip provides an employee with a summary of salary earnings and deductions for a particular
+                        period. It typically includes employee name and identification details, salary period, basic
+                        salary, allowances, gross earnings, deductions, and net salary payable.</p>
+                    <ol>
+                        <li>Open the payroll reports or payslip section.</li>
+                        <li>Select the relevant employee and salary period.</li>
+                        <li>Review the displayed salary details.</li>
+                        <li>Choose the available printing or export option.</li>
+                        <li>Generate the payslip for distribution.</li>
+                    </ol>
+                    <p>Report names and output options may differ by version and configuration. Check payslips for
+                        accuracy before sharing them with employees.</p>
+                    <h3>Step 10: Review Payroll Reports</h3>
+                    <p>Depending on the configuration, useful reports may include employee-wise salary details, payroll
+                        statements, attendance reports, pay head summaries, payroll register, payslips, and
+                        salary-related accounting reports.</p>
+                    <p>Regularly reviewing reports can help identify missing attendance entries, incorrect salary
+                        components, unusual deductions, and discrepancies between payroll and payment records.</p>
+                </section>
+                <section id="common-mistakes">
+                    <h2>Common Payroll Mistakes to Avoid in TallyPrime</h2>
+                    <p>Incorrect configuration or incomplete data can affect salary calculations. Avoid these common
+                        mistakes:</p>
+                    <ol>
+                        <li><strong>Incorrect employee details:</strong> Check employee names, joining dates, groups,
+                            and salary assignments.</li>
+                        <li><strong>Incorrect pay head configuration:</strong> Verify earnings and deductions use
+                            appropriate types and calculation methods.</li>
+                        <li><strong>Missing attendance entries:</strong> Ensure attendance and leave details are
+                            complete.</li>
+                        <li><strong>Incorrect deduction settings:</strong> Check applicability and calculation of PF,
+                            ESI, professional tax, and other deductions.</li>
+                        <li><strong>Duplicate salary payments:</strong> Review payment vouchers and bank records.</li>
+                        <li><strong>Skipping payroll reports:</strong> Reconcile salary expenses, net payments, and
+                            outstanding deduction liabilities.</li>
+                        <li><strong>Ignoring salary revisions:</strong> Reflect approved revisions from the correct
+                            effective date.</li>
+                    </ol>
+                </section>
+                <section id="payroll-vs-manual">
+                    <h2>TallyPrime Payroll vs Manual Salary Management</h2>
+                    <div class="table-wrap">
+                        <table>
+                            <caption>Comparison of manual payroll and TallyPrime Payroll</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Feature</th>
+                                    <th scope="col">Manual method</th>
+                                    <th scope="col">TallyPrime Payroll</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Employee records</th>
+                                    <td>Maintained separately</td>
+                                    <td>Organised employee masters</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Salary components</th>
+                                    <td>Manual calculations or separate sheets</td>
+                                    <td>Configurable pay heads and salary details</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Attendance</th>
+                                    <td>Tracked separately</td>
+                                    <td>Can be integrated into configured workflows</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Salary calculations</th>
+                                    <td>Repeated manual calculations</td>
+                                    <td>Configured payroll calculations</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Payslips</th>
+                                    <td>Prepared separately</td>
+                                    <td>Available through payroll reporting options</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Payroll accounting</th>
+                                    <td>Recorded manually</td>
+                                    <td>Supported through payroll and accounting vouchers</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Reports</th>
+                                    <td>Compiled from separate records</td>
+                                    <td>Payroll reports based on configuration</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>TallyPrime can make payroll more organised, but accurate results still depend on correct data
+                        entry, configuration, and review.</p>
+                </section>
+                <section id="who-should-learn">
+                    <h2>Who Should Learn TallyPrime Payroll?</h2>
+                    <p>Learning TallyPrime Payroll can be useful for accounting students, commerce graduates, aspiring
+                        accountants, accounts assistants, payroll executives, HR and payroll professionals,
+                        small-business owners, and entrepreneurs who manage employee salaries.</p>
+                    <p>Practical payroll knowledge helps learners understand how employee records, salary structures,
+                        attendance, deductions, payslips, and accounting entries work together in a business
+                        environment.</p>
+                </section>
+                <section id="learn-with-rlt">
+                    <h2>Learn TallyPrime Payroll with Practical Training at RLT Edzaro</h2>
+                    <p>Understanding payroll concepts is important, but practising them in accounting software can help
+                        you apply that knowledge in real workplace situations.</p>
+                    <p>At <strong>RLT Edzaro</strong>, learners can explore Tally training that covers practical
+                        accounting concepts and relevant software workflows.</p>
+                    <p>A structured Tally training program can help you build skills in company creation and ledger
+                        management, accounting vouchers and transactions, GST-related accounting workflows, inventory
+                        management, payroll and employee salary management, and financial reports with practical
+                        accounting exercises.</p>
+                    <div class="course-cta">
+                        <h3>Ready to learn TallyPrime?</h3>
+                        <p>Explore Tally training at RLT Edzaro in Chennai and enquire about the course, training
+                            schedule, and available batches.</p><a class="cta-link"
+                            routerLink="/tally-training-institute-in-chennai">Explore Tally Training in Chennai <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </section>
+                <section id="faqs" class="faq-section">
+                    <h2>Frequently Asked Questions (FAQs)</h2>
+                    <div class="faq-item">
+                        <h3>1. What is payroll in TallyPrime?</h3>
+                        <p>Payroll in TallyPrime is a set of features used to maintain employee records, configure
+                            salary components, record attendance, process salaries, and generate payroll-related
+                            reports.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>2. How do I enable payroll in TallyPrime?</h3>
+                        <p>Open the company configuration or F11 Features screen, locate the payroll option, and enable
+                            Maintain Payroll or the corresponding setting available in your version.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>3. Can TallyPrime calculate employee salaries automatically?</h3>
+                        <p>TallyPrime can calculate salaries using configured salary structures, pay heads, attendance
+                            information, and applicable calculation methods. Accurate results depend on correct
+                            configuration and employee data.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>4. Can I manage employee attendance in TallyPrime?</h3>
+                        <p>Yes. TallyPrime supports attendance-related workflows that can be used with payroll when the
+                            relevant features and attendance types are configured.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>5. Can I generate payslips in TallyPrime?</h3>
+                        <p>Yes. Payroll reporting options can be used to generate employee payslips for a selected
+                            period, subject to the version and payroll configuration.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>6. Can TallyPrime handle PF and ESI deductions?</h3>
+                        <p>TallyPrime payroll can support statutory payroll configurations, including applicable PF and
+                            ESI calculations. Availability and requirements depend on version, setup, employee
+                            eligibility, and applicable regulations.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>7. What is the difference between gross salary and net salary?</h3>
+                        <p>Gross salary is the total salary earnings before deductions. Net salary is the amount payable
+                            after deducting applicable amounts from gross earnings.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>8. Is TallyPrime Payroll useful for freshers?</h3>
+                        <p>Yes. Learning payroll can help freshers understand employee salary structures,
+                            attendance-based calculations, deductions, payslips, and payroll accounting.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>9. Can I manage monthly salary payments in TallyPrime?</h3>
+                        <p>Yes. Payroll can be processed for the relevant period, and salary payments can be recorded
+                            using the appropriate accounting vouchers and ledgers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>10. Where can I learn TallyPrime Payroll in Chennai?</h3>
+                        <p>You can explore Tally training options at RLT Edzaro in Chennai. Visit <a
+                                routerLink="/tally-training-institute-in-chennai">Tally Training Institute in
+                                Chennai</a> for course information and enquiries.</p>
+                    </div>
+                </section>
+                <section id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>TallyPrime Payroll helps businesses organise employee information, configure salary structures,
+                        record attendance, calculate salaries, generate payslips, and maintain payroll accounting
+                        records.</p>
+                    <p>By following a structured payroll process and checking salary calculations before payment,
+                        businesses can improve the accuracy and consistency of payroll operations. For students and
+                        aspiring accounting professionals, learning TallyPrime Payroll provides practical exposure to an
+                        important business accounting function.</p>
+                    <p><strong>Want to improve your accounting skills? Explore Tally training at RLT Edzaro and start
+                            building practical knowledge of TallyPrime.</strong></p>
+                </section>
+                <div class="article-end-links"><a routerLink="/blogs">← Back to all blogs</a><button type="button"
+                        (click)="scrollToTop()">Back to top ↑</button></div>
+            </article>
+            <aside class="article-sidebar" aria-label="Article navigation and related content">
+                <div class="sidebar-card toc-card">
+                    <h2>In this article</h2>
+                    <nav aria-label="Table of contents">
+                        <button type="button" (click)="scrollToSection('what-is-payroll')">What is
+                            payroll?</button><button type="button" (click)="scrollToSection('importance')">Why payroll
+                            matters</button><button type="button" (click)="scrollToSection('enable-payroll')">Enable
+                            payroll</button><button type="button" (click)="scrollToSection('manage-salaries')">Manage
+                            salaries step by step</button><button type="button"
+                            (click)="scrollToSection('common-mistakes')">Common mistakes</button><button type="button"
+                            (click)="scrollToSection('payroll-vs-manual')">Payroll vs manual method</button><button
+                            type="button" (click)="scrollToSection('learn-with-rlt')">Learn with RLT
+                            Edzaro</button><button type="button" (click)="scrollToSection('faqs')">FAQs</button>
+                    </nav>
+                </div>
+                <div class="sidebar-card related-sidebar">
+                    <h2>Related articles</h2>
+                    <a class="sidebar-related-link"
+                        routerLink="/tallyprime-practical-test-questions-accountant-jobs/"><span>TallyPrime Practical
+                            Test Questions for Accountant Jobs</span><span aria-hidden="true">↗</span></a>
+                    <a class="sidebar-related-link"
+                        routerLink="/tallyprime-voucher-types-explained-with-examples/"><span>TallyPrime Voucher Types
+                            Explained With Examples</span><span aria-hidden="true">↗</span></a>
+                    <a class="sidebar-related-link" routerLink="/tally-training-institute-in-chennai"><span>Tally
+                            Training Institute in Chennai</span><span aria-hidden="true">↗</span></a>
+                </div>
+            </aside>
+        </div>
+        <section class="related-articles-section" aria-labelledby="related-articles-heading">
+            <div class="section-heading">
+                <p class="eyebrow">KEEP LEARNING</p>
+                <h2 id="related-articles-heading">Related Articles</h2>
+                <p>Explore more practical accounting and TallyPrime guides from RLT Edzaro.</p>
+            </div>
+            <ul class="related-links">
+                <li>
+                    <a routerLink="/tallyprime-practical-test-questions-accountant-jobs/">
+                        TallyPrime Practical Test Questions for Accountant Jobs
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/tallyprime-voucher-types-explained-with-examples/">
+                        TallyPrime Voucher Types Explained With Examples
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/tally-training-institute-in-chennai">
+                        Tally Training Institute in Chennai
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>

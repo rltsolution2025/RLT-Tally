@@ -1,0 +1,929 @@
+<article class="voucher-blog">
+    <header class="hero">
+        <div class="container">
+            <p class="eyebrow">TALLYPRIME · ACCOUNTING GUIDE</p>
+            <h1>TallyPrime Voucher Types Explained With Examples</h1>
+            <p class="hero-intro">Understand accounting, order, inventory, payroll and special-purpose voucher types
+                with practical examples, common shortcut keys and guidance on choosing the right voucher.</p>
+            <div class="meta"><span>Tally &amp; Finance</span><span>12 min read</span><span>October 12, 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container layout">
+        <aside class="sidebar">
+            <div class="toc-card">
+                <h2>In this article</h2>
+                <nav class="toc-links" aria-label="Table of contents">
+                    <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                    <a href="#what-is-voucher" (click)="scrollToSection($event, 'what-is-voucher')">What Is a
+                        Voucher?</a>
+                    <a href="#categories" (click)="scrollToSection($event, 'categories')">Voucher Categories</a>
+                    <a href="#accounting-vouchers" (click)="scrollToSection($event, 'accounting-vouchers')">Accounting
+                        Vouchers</a>
+                    <a href="#order-vouchers" (click)="scrollToSection($event, 'order-vouchers')">Order Vouchers</a>
+                    <a href="#inventory-vouchers" (click)="scrollToSection($event, 'inventory-vouchers')">Inventory
+                        Vouchers</a>
+                    <a href="#payroll-vouchers" (click)="scrollToSection($event, 'payroll-vouchers')">Payroll &amp;
+                        Attendance</a>
+                    <a href="#special-vouchers" (click)="scrollToSection($event, 'special-vouchers')">Special-Purpose
+                        Vouchers</a>
+                    <a href="#comparison" (click)="scrollToSection($event, 'comparison')">Quick Comparison</a>
+                    <a href="#choose-voucher" (click)="scrollToSection($event, 'choose-voucher')">Choose the Right
+                        Voucher</a>
+                    <a href="#mistakes" (click)="scrollToSection($event, 'mistakes')">Common Mistakes</a>
+                    <a href="#practice" (click)="scrollToSection($event, 'practice')">Practice Transactions</a>
+                    <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                    <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                        Articles</a>
+                    <a href="#rlt-edzaro" (click)="scrollToSection($event, 'rlt-edzaro')">Learn at RLT Edzaro</a>
+                </nav>
+            </div>
+            <div class="sidebar-cta">
+                <span class="small-label">BUILD PRACTICAL SKILLS</span>
+                <h3>Learn TallyPrime step by step</h3>
+                <p>Practise accounting entries, GST transactions and financial reports.</p>
+                <a class="button" href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                    rel="noopener">Explore Tally Training</a>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="introduction" class="article-section">
+                <p class="kicker">START HERE</p>
+                <h2>Introduction</h2>
+                <p>Recording business transactions accurately is one of the most important responsibilities of an
+                    accountant. Whether a business receives money from a customer, pays office rent, purchases goods,
+                    sells products or transfers money between bank accounts, every transaction must be recorded using
+                    the appropriate accounting method.</p>
+                <p>In TallyPrime, <strong>vouchers are used to record and manage business transactions</strong>.
+                    Different voucher types are available for accounting entries, sales, purchases, banking, inventory
+                    movements, orders and other business activities.</p>
+                <p>This guide explains major TallyPrime voucher types with practical examples, commonly used shortcut
+                    keys and situations in which each voucher is used.</p>
+            </section>
+
+            <section id="what-is-voucher" class="article-section">
+                <h2>What Is a Voucher in TallyPrime?</h2>
+                <p>A voucher in TallyPrime is a record used to enter and maintain details of a business transaction. It
+                    can capture the transaction date, ledger accounts, amount, inventory details where applicable and
+                    narration.</p>
+                <div class="callout"><strong>Example</strong>
+                    <p>If a business pays ₹10,000 as office rent through its bank account, the accountant can record it
+                        using a Payment Voucher. A customer payment can be recorded using a Receipt Voucher, while goods
+                        sold to a customer are generally recorded using a Sales Voucher.</p>
+                </div>
+                <p><strong>In simple terms:</strong> a voucher records a business transaction in the appropriate format
+                    so accounting records and relevant reports can be updated.</p>
+            </section>
+
+            <section id="categories" class="article-section">
+                <h2>How Many Types of Vouchers Are There in TallyPrime?</h2>
+                <p>The number of voucher types available can depend on enabled features, configuration and TallyPrime
+                    version. The main categories include:</p>
+                <div class="category-grid">
+                    <div class="category-card"><span>01</span>
+                        <h3>Accounting vouchers</h3>
+                        <p>Payments, receipts, sales, purchases and adjustments.</p>
+                    </div>
+                    <div class="category-card"><span>02</span>
+                        <h3>Order vouchers</h3>
+                        <p>Customer orders and orders placed with suppliers.</p>
+                    </div>
+                    <div class="category-card"><span>03</span>
+                        <h3>Inventory vouchers</h3>
+                        <p>Goods received, dispatched, transferred or counted.</p>
+                    </div>
+                    <div class="category-card"><span>04</span>
+                        <h3>Payroll &amp; attendance</h3>
+                        <p>Payroll and attendance information when configured.</p>
+                    </div>
+                    <div class="category-card"><span>05</span>
+                        <h3>Special-purpose vouchers</h3>
+                        <p>Temporary records and reversing adjustments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="accounting-vouchers" class="article-section">
+                <p class="kicker">CATEGORY 1</p>
+                <h2>Accounting Voucher Types in TallyPrime</h2>
+                <p>Accounting vouchers record financial transactions such as payments, receipts, sales, purchases and
+                    adjustments.</p>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">01</span>
+                        <div>
+                            <h3>Contra Voucher</h3><span class="shortcut">Common shortcut: F4</span>
+                        </div>
+                    </div>
+                    <p>Used for movement of funds between cash and bank accounts or between bank accounts belonging to
+                        the same business.</p>
+                    <h4>Example: Depositing ₹20,000 cash into a bank</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bank Account</td>
+                                    <td>₹20,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Cash Account</td>
+                                    <td>—</td>
+                                    <td>₹20,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> cash deposits, cash withdrawals from bank and transfers
+                        between company bank accounts.</p>
+                    <p class="note">Paying office rent through the bank is generally a Payment Voucher transaction, not
+                        a Contra Voucher.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">02</span>
+                        <div>
+                            <h3>Payment Voucher</h3><span class="shortcut">Common shortcut: F5</span>
+                        </div>
+                    </div>
+                    <p>Records money paid by the business through cash, bank transfer, cheque or another payment method.
+                    </p>
+                    <h4>Example: Paying ₹15,000 office rent through bank</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Office Rent</td>
+                                    <td>₹15,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank Account</td>
+                                    <td>—</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> rent, salaries, electricity bills, supplier payments and
+                        office expenses.</p>
+                    <p class="note">The entry may vary when tax deductions, outstanding liabilities or other adjustments
+                        apply.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">03</span>
+                        <div>
+                            <h3>Receipt Voucher</h3><span class="shortcut">Common shortcut: F6</span>
+                        </div>
+                    </div>
+                    <p>Records money received by the business, such as customer payments, capital contributions or other
+                        receipts.</p>
+                    <h4>Example: ABC Traders pays ₹25,000 against an outstanding invoice</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bank Account</td>
+                                    <td>₹25,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>ABC Traders</td>
+                                    <td>—</td>
+                                    <td>₹25,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> customer receipts, interest income, capital
+                        contributions and other money received.</p>
+                    <p class="note">Allocate the receipt against the relevant outstanding bill when bill-wise tracking
+                        is enabled and applicable.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">04</span>
+                        <div>
+                            <h3>Journal Voucher</h3><span class="shortcut">Common shortcut: F7</span>
+                        </div>
+                    </div>
+                    <p>Records accounting adjustments that do not fit more appropriately into a specialized voucher
+                        type. Common uses include depreciation, accruals and provisions.</p>
+                    <h4>Example: Recording ₹5,000 depreciation</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Depreciation Expense</td>
+                                    <td>₹5,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Accumulated Depreciation</td>
+                                    <td>—</td>
+                                    <td>₹5,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> depreciation, accrued expenses, provisions and suitable
+                        adjustments.</p>
+                    <p class="note">Use a specialized voucher when one is available and appropriate; do not use Journal
+                        for every transaction.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">05</span>
+                        <div>
+                            <h3>Sales Voucher</h3><span class="shortcut">Common shortcut: F8</span>
+                        </div>
+                    </div>
+                    <p>Records sales of goods or services, including cash sales, credit sales and applicable GST
+                        transactions.</p>
+                    <h4>Example: Credit sale of ₹10,000 plus illustrative 18% intra-state GST</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Customer</td>
+                                    <td>₹11,800</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Sales Account</td>
+                                    <td>—</td>
+                                    <td>₹10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Output CGST</td>
+                                    <td>—</td>
+                                    <td>₹900</td>
+                                </tr>
+                                <tr>
+                                    <td>Output SGST</td>
+                                    <td>—</td>
+                                    <td>₹900</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> product or service sales, sales invoices and applicable
+                        GST.</p>
+                    <p class="note">Tax treatment depends on supply type, place of supply, registration status and
+                        applicable GST rules.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">06</span>
+                        <div>
+                            <h3>Purchase Voucher</h3><span class="shortcut">Common shortcut: F9</span>
+                        </div>
+                    </div>
+                    <p>Records goods or services purchased by the business, including cash purchases, credit purchases
+                        and applicable GST.</p>
+                    <h4>Example: Credit purchase of ₹8,000 plus illustrative 18% intra-state GST</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Purchase Account</td>
+                                    <td>₹8,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Input CGST</td>
+                                    <td>₹720</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Input SGST</td>
+                                    <td>₹720</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier</td>
+                                    <td>—</td>
+                                    <td>₹9,440</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> goods for resale, raw materials, business purchases and
+                        applicable GST.</p>
+                    <p class="note">Input tax credit should be recorded and claimed only when the legal conditions are
+                        satisfied.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">07</span>
+                        <div>
+                            <h3>Credit Note Voucher</h3><span class="shortcut">Common shortcut: Alt+F6*</span>
+                        </div>
+                    </div>
+                    <p>Commonly records a reduction in the amount receivable from a customer, such as sales returns or
+                        eligible price reductions.</p>
+                    <h4>Example: Customer returns ₹2,000 of goods plus illustrative 18% GST</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sales Returns</td>
+                                    <td>₹2,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Output CGST</td>
+                                    <td>₹180</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Output SGST</td>
+                                    <td>₹180</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer</td>
+                                    <td>—</td>
+                                    <td>₹2,360</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> sales returns and qualifying reductions in receivables.
+                    </p>
+                    <p class="note">*Shortcut availability depends on voucher-entry context/configuration. Tax
+                        adjustments must follow GST rules.</p>
+                </article>
+
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">08</span>
+                        <div>
+                            <h3>Debit Note Voucher</h3><span class="shortcut">Common shortcut: Alt+F5*</span>
+                        </div>
+                    </div>
+                    <p>Commonly records purchase returns or qualifying adjustments that reduce the amount payable to a
+                        supplier.</p>
+                    <h4>Example: Return ₹1,000 of goods plus illustrative 18% GST</h4>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Supplier</td>
+                                    <td>₹1,180</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Purchase Returns</td>
+                                    <td>—</td>
+                                    <td>₹1,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Input CGST</td>
+                                    <td>—</td>
+                                    <td>₹90</td>
+                                </tr>
+                                <tr>
+                                    <td>Input SGST</td>
+                                    <td>—</td>
+                                    <td>₹90</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="use"><strong>Use it for:</strong> purchase returns and qualifying supplier-balance
+                        adjustments.</p>
+                    <p class="note">*Shortcut availability can vary. Treatment depends on the original transaction, ITC
+                        claimed and tax rules.</p>
+                </article>
+            </section>
+
+            <section id="order-vouchers" class="article-section">
+                <p class="kicker">CATEGORY 2</p>
+                <h2>Order Voucher Types in TallyPrime</h2>
+                <p>Order vouchers track orders before or during invoicing. An order does not necessarily mean that goods
+                    have been delivered or a sale completed.</p>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">09</span>
+                        <div>
+                            <h3>Sales Order Voucher</h3><span class="shortcut">Customer order</span>
+                        </div>
+                    </div>
+                    <p>Records an order received from a customer. <strong>Example:</strong> ABC Traders orders 100 units
+                        at ₹500 each, totalling ₹50,000 before taxes. Use it to track pending quantities and fulfilment
+                        before completing the sale.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">10</span>
+                        <div>
+                            <h3>Purchase Order Voucher</h3><span class="shortcut">Supplier order</span>
+                        </div>
+                    </div>
+                    <p>Records an order placed with a supplier. <strong>Example:</strong> Your business orders 200 units
+                        at ₹150 each, totalling ₹30,000 before taxes. Use it to monitor the goods ordered and compare
+                        them with quantities received.</p>
+                </article>
+            </section>
+
+            <section id="inventory-vouchers" class="article-section">
+                <p class="kicker">CATEGORY 3</p>
+                <h2>Inventory Voucher Types in TallyPrime</h2>
+                <p>Inventory vouchers help record the receipt, delivery, movement and adjustment of stock.</p>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">11</span>
+                        <div>
+                            <h3>Receipt Note Voucher</h3><span class="shortcut">Goods received</span>
+                        </div>
+                    </div>
+                    <p>Records goods received from a supplier, generally before or separately from the purchase invoice.
+                        <strong>Example:</strong> If 100 units were ordered but only 80 arrive, record the received
+                        quantity and track the remaining 20.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">12</span>
+                        <div>
+                            <h3>Delivery Note Voucher</h3><span class="shortcut">Goods dispatched</span>
+                        </div>
+                    </div>
+                    <p>Records delivery or dispatch of goods to a customer. <strong>Example:</strong> If a customer
+                        orders 50 units and 30 are dispatched first, record the 30 units delivered.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">13</span>
+                        <div>
+                            <h3>Stock Journal Voucher</h3><span class="shortcut">Common shortcut: Alt+F7</span>
+                        </div>
+                    </div>
+                    <p>Records stock transfers, consumption, production-related movements and supported inventory
+                        adjustments. <strong>Example:</strong> Transfer 20 units from Warehouse A to Warehouse B.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">14</span>
+                        <div>
+                            <h3>Physical Stock Voucher</h3><span class="shortcut">Common shortcut: Ctrl+F7*</span>
+                        </div>
+                    </div>
+                    <p>Records physically counted stock to reconcile actual quantities with stock records.
+                        <strong>Example:</strong> If the system shows 100 units but a physical count finds 96, record
+                        the verified quantity and investigate the difference.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">15</span>
+                        <div>
+                            <h3>Rejections In Voucher</h3><span class="shortcut">Customer rejection</span>
+                        </div>
+                    </div>
+                    <p>Records goods rejected by a customer and returned to the business in an inventory workflow.
+                        <strong>Example:</strong> Record five damaged products returned by a customer.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">16</span>
+                        <div>
+                            <h3>Rejections Out Voucher</h3><span class="shortcut">Supplier rejection</span>
+                        </div>
+                    </div>
+                    <p>Records goods rejected by the business and returned to a supplier. <strong>Example:</strong>
+                        Record 10 defective units returned to the supplier.</p>
+                </article>
+                <p class="note">Inventory voucher names and workflows depend on enabled inventory features and
+                    TallyPrime configuration.</p>
+            </section>
+
+            <section id="payroll-vouchers" class="article-section">
+                <p class="kicker">CATEGORY 4</p>
+                <h2>Payroll and Attendance Voucher Types</h2>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">17</span>
+                        <div>
+                            <h3>Payroll Voucher</h3><span class="shortcut">Payroll workflow</span>
+                        </div>
+                    </div>
+                    <p>Records payroll transactions when payroll features are enabled. <strong>Example:</strong> A
+                        business processes monthly salaries, including applicable salary expenses, deductions and
+                        payable amounts.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">18</span>
+                        <div>
+                            <h3>Attendance Voucher</h3><span class="shortcut">Attendance details</span>
+                        </div>
+                    </div>
+                    <p>Records employee attendance or related information when configured. <strong>Example:</strong>
+                        Record attendance and paid leave for a payroll period.</p>
+                </article>
+            </section>
+
+            <section id="special-vouchers" class="article-section">
+                <p class="kicker">CATEGORY 5</p>
+                <h2>Special-Purpose Voucher Types</h2>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">19</span>
+                        <div>
+                            <h3>Memorandum Voucher</h3><span class="shortcut">Temporary record</span>
+                        </div>
+                    </div>
+                    <p>Records a provisional transaction without immediately affecting regular books like an ordinary
+                        posted voucher. <strong>Example:</strong> Record a provisional expense while waiting for final
+                        confirmation, then regularize it later.</p>
+                </article>
+                <article class="voucher-card">
+                    <div class="card-head"><span class="number">20</span>
+                        <div>
+                            <h3>Reversing Journal Voucher</h3><span class="shortcut">Temporary adjustment</span>
+                        </div>
+                    </div>
+                    <p>Supports accounting adjustments intended to reverse on a specified date or through a configured
+                        workflow. <strong>Example:</strong> Record a period-end adjustment for reporting and reverse it
+                        in the next period.</p>
+                </article>
+                <p class="note">Specialized vouchers may need to be enabled. Confirm availability in your installed
+                    TallyPrime release.</p>
+            </section>
+
+            <section id="comparison" class="article-section">
+                <h2>Quick Comparison of TallyPrime Voucher Types</h2>
+                <div class="table-wrap">
+                    <table class="comparison">
+                        <thead>
+                            <tr>
+                                <th>Voucher Type</th>
+                                <th>Main Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Contra</td>
+                                <td>Transfer funds between cash and bank accounts</td>
+                                <td>Deposit cash into bank</td>
+                            </tr>
+                            <tr>
+                                <td>Payment</td>
+                                <td>Record money paid</td>
+                                <td>Pay office rent</td>
+                            </tr>
+                            <tr>
+                                <td>Receipt</td>
+                                <td>Record money received</td>
+                                <td>Customer payment</td>
+                            </tr>
+                            <tr>
+                                <td>Journal</td>
+                                <td>Record adjustments</td>
+                                <td>Depreciation</td>
+                            </tr>
+                            <tr>
+                                <td>Sales</td>
+                                <td>Record goods or services sold</td>
+                                <td>Sales invoice</td>
+                            </tr>
+                            <tr>
+                                <td>Purchase</td>
+                                <td>Record purchases</td>
+                                <td>Supplier purchase</td>
+                            </tr>
+                            <tr>
+                                <td>Credit Note</td>
+                                <td>Qualifying reductions in receivables</td>
+                                <td>Sales return</td>
+                            </tr>
+                            <tr>
+                                <td>Debit Note</td>
+                                <td>Purchase returns or supplier adjustments</td>
+                                <td>Return defective goods</td>
+                            </tr>
+                            <tr>
+                                <td>Sales Order</td>
+                                <td>Record customer orders</td>
+                                <td>Order 100 units</td>
+                            </tr>
+                            <tr>
+                                <td>Purchase Order</td>
+                                <td>Record supplier orders</td>
+                                <td>Order from supplier</td>
+                            </tr>
+                            <tr>
+                                <td>Receipt Note</td>
+                                <td>Record goods received</td>
+                                <td>Receive 80 units</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery Note</td>
+                                <td>Record goods dispatched</td>
+                                <td>Deliver 30 units</td>
+                            </tr>
+                            <tr>
+                                <td>Stock Journal</td>
+                                <td>Record stock transfers/movements</td>
+                                <td>Warehouse transfer</td>
+                            </tr>
+                            <tr>
+                                <td>Physical Stock</td>
+                                <td>Record physical stock quantities</td>
+                                <td>Stock count</td>
+                            </tr>
+                            <tr>
+                                <td>Rejections In</td>
+                                <td>Record customer-rejected goods</td>
+                                <td>Return damaged goods</td>
+                            </tr>
+                            <tr>
+                                <td>Rejections Out</td>
+                                <td>Record supplier-rejected goods</td>
+                                <td>Return defective stock</td>
+                            </tr>
+                            <tr>
+                                <td>Payroll</td>
+                                <td>Record payroll transactions</td>
+                                <td>Monthly salaries</td>
+                            </tr>
+                            <tr>
+                                <td>Attendance</td>
+                                <td>Record attendance</td>
+                                <td>Employee attendance</td>
+                            </tr>
+                            <tr>
+                                <td>Memorandum</td>
+                                <td>Temporary transaction record</td>
+                                <td>Provisional expense</td>
+                            </tr>
+                            <tr>
+                                <td>Reversing Journal</td>
+                                <td>Temporary reversing adjustment</td>
+                                <td>Period-end adjustment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="note">This is a practical overview, not an exhaustive list of every voucher type or
+                    configuration available in TallyPrime.</p>
+            </section>
+
+            <section id="choose-voucher" class="article-section">
+                <h2>How to Select the Correct Voucher in TallyPrime</h2>
+                <p>Choose the voucher based on what actually happened in the business.</p>
+                <div class="rules">
+                    <div><span>Money paid</span><strong>Payment Voucher</strong></div>
+                    <div><span>Money received</span><strong>Receipt Voucher</strong></div>
+                    <div><span>Cash-bank transfer</span><strong>Contra Voucher</strong></div>
+                    <div><span>Goods or services sold</span><strong>Sales Voucher</strong></div>
+                    <div><span>Goods or services purchased</span><strong>Purchase Voucher</strong></div>
+                    <div><span>Accounting adjustment</span><strong>Journal Voucher, where appropriate</strong></div>
+                    <div><span>Customer order</span><strong>Sales Order Voucher</strong></div>
+                    <div><span>Supplier order</span><strong>Purchase Order Voucher</strong></div>
+                    <div><span>Internal stock transfer</span><strong>Stock Journal Voucher</strong></div>
+                    <div><span>Physical stock count</span><strong>Physical Stock Voucher</strong></div>
+                </div>
+                <div class="callout"><strong>Before saving a voucher:</strong>
+                    <p>Verify the date, ledger accounts, amounts, inventory quantities, applicable taxes and supporting
+                        documents. For returned or rejected goods, choose the workflow that matches the original
+                        transaction.</p>
+                </div>
+            </section>
+
+            <section id="mistakes" class="article-section">
+                <h2>Common Mistakes to Avoid When Using TallyPrime Vouchers</h2>
+                <div class="mistakes">
+                    <div><span>01</span>
+                        <section>
+                            <h3>Using the wrong voucher type</h3>
+                            <p>Paying office rent should generally use a Payment Voucher rather than a Contra Voucher.
+                            </p>
+                        </section>
+                    </div>
+                    <div><span>02</span>
+                        <section>
+                            <h3>Confusing orders with invoices</h3>
+                            <p>A Sales Order records a customer order. A Sales Voucher records the actual sales
+                                transaction.</p>
+                        </section>
+                    </div>
+                    <div><span>03</span>
+                        <section>
+                            <h3>Recording incorrect GST details</h3>
+                            <p>GST treatment depends on the transaction, applicable rules and input tax credit
+                                eligibility.</p>
+                        </section>
+                    </div>
+                    <div><span>04</span>
+                        <section>
+                            <h3>Ignoring inventory quantities</h3>
+                            <p>Check quantities, units and inventory ledgers when maintaining stock.</p>
+                        </section>
+                    </div>
+                    <div><span>05</span>
+                        <section>
+                            <h3>Saving without checking details</h3>
+                            <p>Verify ledger accounts, amount, date, narration and tax information before accepting a
+                                voucher.</p>
+                        </section>
+                    </div>
+                    <div><span>06</span>
+                        <section>
+                            <h3>Using Journal Vouchers for everything</h3>
+                            <p>Use specialized vouchers when they accurately represent the transaction and support the
+                                workflow.</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section id="practice" class="article-section">
+                <h2>How to Practise Voucher Entries in TallyPrime</h2>
+                <p>Practise these transactions in a sample company:</p>
+                <ol class="practice-list">
+                    <li>Deposit cash into the bank using a Contra Voucher.</li>
+                    <li>Pay office rent using a Payment Voucher.</li>
+                    <li>Receive money from a customer using a Receipt Voucher.</li>
+                    <li>Record depreciation using a Journal Voucher.</li>
+                    <li>Record a cash or credit sale using a Sales Voucher.</li>
+                    <li>Record a supplier purchase using a Purchase Voucher.</li>
+                    <li>Record an eligible sales return using a Credit Note.</li>
+                    <li>Record an eligible purchase return using a Debit Note.</li>
+                    <li>Create a Sales Order and record delivery and invoice using the appropriate workflow.</li>
+                    <li>Transfer stock between warehouses using a Stock Journal.</li>
+                    <li>Record a physical stock count.</li>
+                    <li>Review resulting ledgers and financial reports.</li>
+                </ol>
+                <p>Practice helps you understand how voucher types connect to accounting concepts and real business
+                    operations.</p>
+            </section>
+
+            <section id="faqs" class="article-section">
+                <h2>Frequently Asked Questions About TallyPrime Voucher Types</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>1. What are the main voucher types in TallyPrime?</summary>
+                        <p>The main accounting types include Contra, Payment, Receipt, Journal, Sales, Purchase, Debit
+                            Note and Credit Note. TallyPrime also supports order, inventory, payroll and special-purpose
+                            vouchers.</p>
+                    </details>
+                    <details>
+                        <summary>2. What is the shortcut key for Payment Voucher?</summary>
+                        <p>F5 is the commonly used shortcut for Payment Voucher in the standard voucher-entry workflow.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>3. What is the shortcut key for Receipt Voucher?</summary>
+                        <p>F6 is the commonly used shortcut for Receipt Voucher.</p>
+                    </details>
+                    <details>
+                        <summary>4. What is the shortcut key for Sales Voucher?</summary>
+                        <p>F8 is the commonly used shortcut for Sales Voucher.</p>
+                    </details>
+                    <details>
+                        <summary>5. What is the shortcut key for Purchase Voucher?</summary>
+                        <p>F9 is the commonly used shortcut for Purchase Voucher.</p>
+                    </details>
+                    <details>
+                        <summary>6. What is the difference between Payment and Contra Vouchers?</summary>
+                        <p>A Payment Voucher records money paid for expenses, suppliers and other payments. A Contra
+                            Voucher records fund movements between cash and bank accounts or between the business's bank
+                            accounts.</p>
+                    </details>
+                    <details>
+                        <summary>7. What is the difference between Sales and Sales Order Vouchers?</summary>
+                        <p>A Sales Order records a customer order. A Sales Voucher records the actual sales transaction.
+                            An order does not automatically mean goods have been delivered or invoiced.</p>
+                    </details>
+                    <details>
+                        <summary>8. What is the difference between Debit Note and Credit Note?</summary>
+                        <p>A Credit Note commonly records qualifying reductions in amounts receivable from customers. A
+                            Debit Note commonly records qualifying purchase returns or supplier adjustments. Treatment
+                            depends on the original transaction and applicable rules.</p>
+                    </details>
+                    <details>
+                        <summary>9. Which voucher transfers stock between warehouses?</summary>
+                        <p>A Stock Journal Voucher is commonly used for internal stock transfers when the inventory
+                            workflow is configured.</p>
+                    </details>
+                    <details>
+                        <summary>10. Can beginners learn TallyPrime voucher entries?</summary>
+                        <p>Yes. Start with accounting fundamentals, then practise payments, receipts, sales, purchases
+                            and journal adjustments.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section id="conclusion" class="article-section">
+                <h2>Conclusion</h2>
+                <p>Understanding TallyPrime voucher types is an essential step toward learning computerized accounting.
+                    Each voucher has a specific purpose, from daily payments and receipts to sales, purchases, inventory
+                    movements, payroll and accounting adjustments.</p>
+                <p>Practise realistic business transactions and review ledger balances and financial reports. This helps
+                    you understand not only which voucher to select but why a transaction is recorded that way.</p>
+            </section>
+
+            <section id="related-articles" class="article-section related-section" aria-labelledby="related-heading">
+                <p class="kicker">KEEP LEARNING</p>
+                <h2 id="related-heading">Related Tally &amp; Accounting Articles</h2>
+                <p class="related-intro">Explore these guides to strengthen your accounting basics and get more
+                    practical experience with TallyPrime.</p>
+                <div class="related-grid">
+                    <a class="related-card" href="/tallyprime-accounting-entries-every-beginner-should-practice/">
+                        <span class="related-tag">PRACTICAL GUIDE</span>
+                        <span class="related-icon" aria-hidden="true">↗</span>
+                        <h3>TallyPrime Accounting Entries Every Beginner Should Practice</h3>
+                        <p>Practise common purchase, sales, receipt, payment, GST and journal entries with examples.</p>
+                        <span class="related-link">Read article <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="related-card" href="/tally-with-gst-training/">
+                        <span class="related-tag">GST &amp; ACCOUNTING</span>
+                        <span class="related-icon" aria-hidden="true">₹</span>
+                        <h3>Tally With GST Training</h3>
+                        <p>Understand how accounting workflows and GST transactions fit together in practical training.
+                        </p>
+                        <span class="related-link">Read article <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="related-card" href="/tallyprime-vs-excel-which-is-better-for-accounting/">
+                        <span class="related-tag">COMPARISON</span>
+                        <span class="related-icon" aria-hidden="true">▦</span>
+                        <h3>TallyPrime vs Excel: Which Is Better for Accounting?</h3>
+                        <p>Compare accounting software and spreadsheets, and learn when each tool is useful.</p>
+                        <span class="related-link">Read article <span aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="related-card" href="/is-tallyprime-easy-to-learn-for-beginners/">
+                        <span class="related-tag">BEGINNER GUIDE</span>
+                        <span class="related-icon" aria-hidden="true">✓</span>
+                        <h3>Is TallyPrime Easy to Learn for Beginners?</h3>
+                        <p>Discover a beginner-friendly way to learn accounting basics and build confidence through
+                            practice.</p>
+                        <span class="related-link">Read article <span aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="rlt-edzaro" class="training-cta">
+                <p class="kicker">TAKE THE NEXT STEP</p>
+                <h2>Learn TallyPrime With RLT Edzaro</h2>
+                <p>RLT Edzaro offers Tally training for learners who want to build knowledge of accounting, voucher
+                    entries, GST-related transactions and financial reporting.</p>
+                <p>If you are looking for Tally training in Chennai, explore the Tally training program at RLT Edzaro.
+                </p><a class="button" href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                    rel="noopener">Explore Tally Training ↗</a>
+            </section>
+
+            <footer class="article-footer"><span>Category: Tally &amp; Finance</span><button type="button"
+                    class="back-top" (click)="scrollToTop()">Back to top ↑</button></footer>
+        </main>
+    </div>
+</article>
