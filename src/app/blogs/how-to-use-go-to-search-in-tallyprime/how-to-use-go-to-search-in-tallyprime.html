@@ -1,0 +1,655 @@
+<!-- =========================================================
+  RLT EDZARO | HOW TO USE GO TO AND SEARCH IN TALLYPRIME
+  Angular standalone component template
+========================================================= -->
+<div class="goto-blog-page">
+    <!-- HERO -->
+    <section class="article-hero" aria-labelledby="article-title">
+        <div class="container">
+            <div class="article-hero-content">
+                <button type="button" class="back-to-blog" (click)="goToBlogs()">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Back to Blog
+                </button>
+
+                <div class="article-category">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    Tally &amp; Finance
+                </div>
+
+                <h1 id="article-title">How to Use <span>Go To and Search</span> in TallyPrime</h1>
+                <p class="article-intro">
+                    Learn how to use Go To and search features in TallyPrime to find reports, vouchers, ledgers,
+                    and accounting information faster. Follow practical examples and tips for everyday accounting work.
+                </p>
+
+                <div class="article-meta" aria-label="Article information">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 8–10 min read</span>
+                    <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Beginner guide</span>
+                    <span><i class="fa-solid fa-keyboard" aria-hidden="true"></i> Alt + G navigation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="article-section">
+        <div class="container article-layout">
+            <article class="article-content">
+                <!-- QUICK ANSWER -->
+                <section class="quick-answer" id="quick-answer">
+                    <div class="quick-answer-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Quick Answer
+                    </div>
+                    <h2>How do you use Go To in TallyPrime?</h2>
+                    <p>
+                        Open the relevant company in TallyPrime and press <strong>Alt + G</strong> to open Go To.
+                        Review the available destinations or enter a relevant search term, select the report or feature
+                        you need,
+                        and check the reporting period and filters before reviewing the result.
+                    </p>
+                    <div class="quick-answer-footer">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        The available destinations and search behaviour depend on your TallyPrime release, company
+                        configuration and current context.
+                    </div>
+                </section>
+
+                <!-- INTRODUCTION -->
+                <section class="article-block" id="introduction">
+                    <div class="section-number">01 / GETTING STARTED</div>
+                    <h2>How to Use Go To and Search Features in TallyPrime</h2>
+                    <p>
+                        As businesses grow, their accounting data becomes more detailed. An accountant may need to find
+                        a sales register,
+                        open a ledger, review a balance sheet, locate a voucher, or access a specific accounting report.
+                    </p>
+                    <p>
+                        Navigating through multiple menus for every task can slow down daily work. TallyPrime provides
+                        navigation features,
+                        including Go To, that help users access supported reports and functions more efficiently.
+                    </p>
+                    <p>
+                        Understanding these features is especially useful for accounting students, billing executives,
+                        and professionals
+                        who work with multiple vouchers and reports. This guide explains how to use Go To, find reports
+                        and features,
+                        work with accounting information, and avoid common navigation mistakes.
+                    </p>
+                    <div class="quote-box">
+                        <span class="quote-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                        <strong>Use a clear report or feature name, select the correct destination, and verify the
+                            period before relying on the result.</strong>
+                    </div>
+                </section>
+
+                <!-- WHAT IS GO TO -->
+                <section class="article-block" id="what-is-go-to">
+                    <div class="section-number">02 / UNDERSTAND THE FEATURE</div>
+                    <h2>What Is Go To in TallyPrime?</h2>
+                    <p>
+                        Go To is a navigation feature that helps users access supported reports, vouchers, and features
+                        from a central location.
+                        Instead of navigating through several menu levels, you can open Go To and search for or select
+                        the required destination.
+                    </p>
+                    <div class="shortcut-highlight">
+                        <div class="shortcut-key">Alt <span>+</span> G</div>
+                        <div>
+                            <strong>Common Go To shortcut</strong>
+                            <p>Use this shortcut to open Go To and access supported destinations in TallyPrime.</p>
+                        </div>
+                    </div>
+                    <p>
+                        The options available depend on your TallyPrime release, active company, and current context.
+                        A result may not appear in every screen or configuration.
+                    </p>
+                </section>
+
+                <!-- OPEN GO TO -->
+                <section class="article-block" id="open-go-to">
+                    <div class="section-number">03 / STEP-BY-STEP</div>
+                    <h2>How to Open Go To in TallyPrime</h2>
+                    <p>Follow these steps to use Go To:</p>
+                    <div class="steps-list">
+                        <div class="step-summary"><span>01</span>
+                            <div><strong>Open TallyPrime</strong>
+                                <p>Start the application and wait for the main screen to load.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>02</span>
+                            <div><strong>Select the relevant company</strong>
+                                <p>Confirm that you are working with the correct company data.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>03</span>
+                            <div><strong>Open Go To</strong>
+                                <p>Press <strong>Alt + G</strong> on your keyboard.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>04</span>
+                            <div><strong>Search or review destinations</strong>
+                                <p>Enter a relevant term or browse the available options.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>05</span>
+                            <div><strong>Select the right destination</strong>
+                                <p>Choose the required report, voucher, or feature from the results.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>06</span>
+                            <div><strong>Review the information</strong>
+                                <p>Check the period, company and filters before interpreting the result.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-callout">
+                        <span class="callout-label">Example</span>
+                        <p>If you want to review a Balance Sheet, use Go To and look for the report in the available
+                            destinations.</p>
+                    </div>
+                </section>
+
+                <!-- ACCESS DESTINATIONS -->
+                <section class="article-block" id="go-to-destinations">
+                    <div class="section-number">04 / WHAT YOU CAN ACCESS</div>
+                    <h2>What Can You Access Through Go To?</h2>
+                    <p>Depending on your version and configuration, Go To can help you navigate to supported accounting
+                        destinations.</p>
+                    <div class="destination-grid">
+                        <div class="destination-card">
+                            <span class="destination-icon"><i class="fa-solid fa-chart-column"
+                                    aria-hidden="true"></i></span>
+                            <h3>Financial Reports</h3>
+                            <p>Navigate to supported reports such as the Balance Sheet, Profit and Loss Account, Trial
+                                Balance, and cash reports.</p>
+                            <div class="destination-tags"><span>Balance Sheet</span><span>Profit &amp;
+                                    Loss</span><span>Trial Balance</span></div>
+                        </div>
+                        <div class="destination-card">
+                            <span class="destination-icon"><i class="fa-solid fa-file-invoice"
+                                    aria-hidden="true"></i></span>
+                            <h3>Accounting Registers</h3>
+                            <p>Reach supported sales, purchase, payment and receipt registers or summaries to review
+                                recorded transactions.</p>
+                            <div class="destination-tags">
+                                <span>Sales</span><span>Purchase</span><span>Payment</span><span>Receipt</span></div>
+                        </div>
+                        <div class="destination-card">
+                            <span class="destination-icon"><i class="fa-solid fa-book-open"
+                                    aria-hidden="true"></i></span>
+                            <h3>Ledgers and Vouchers</h3>
+                            <p>Access supported ledger or voucher-related destinations. The available options depend on
+                                the current screen and release.</p>
+                            <div class="destination-tags"><span>Ledgers</span><span>Vouchers</span></div>
+                        </div>
+                        <div class="destination-card">
+                            <span class="destination-icon"><i class="fa-solid fa-boxes-stacked"
+                                    aria-hidden="true"></i></span>
+                            <h3>Inventory and GST</h3>
+                            <p>Where supported and configured, navigate to inventory reports and GST-related reports
+                                using the available options.</p>
+                            <div class="destination-tags"><span>Inventory</span><span>GST</span><span>Reports</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-tip">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <span>Always verify relevant report filters and company configuration before relying on a report
+                            for reconciliation or filing.</span>
+                    </div>
+                </section>
+
+                <!-- TRIAL BALANCE EXAMPLE -->
+                <section class="article-block" id="trial-balance-example">
+                    <div class="section-number">05 / PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Finding the Trial Balance</h2>
+                    <p>Suppose an accountant wants to review the company's account balances at the end of a month.</p>
+                    <div class="workflow-card">
+                        <div class="workflow-header"><span class="workflow-icon"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i></span>
+                            <div><span class="workflow-label">WORKFLOW EXAMPLE 01</span>
+                                <h3>Open and review the Trial Balance</h3>
+                            </div>
+                        </div>
+                        <ol class="workflow-steps">
+                            <li><span>1</span>
+                                <div><strong>Open the company</strong>
+                                    <p>Make sure the correct company is active.</p>
+                                </div>
+                            </li>
+                            <li><span>2</span>
+                                <div><strong>Press Alt + G</strong>
+                                    <p>Open the Go To navigation feature.</p>
+                                </div>
+                            </li>
+                            <li><span>3</span>
+                                <div><strong>Find Trial Balance</strong>
+                                    <p>Search for or select Trial Balance from the available destinations.</p>
+                                </div>
+                            </li>
+                            <li><span>4</span>
+                                <div><strong>Set the reporting period</strong>
+                                    <p>Choose the appropriate month-end date or period, if required.</p>
+                                </div>
+                            </li>
+                            <li><span>5</span>
+                                <div><strong>Review the balances</strong>
+                                    <p>Investigate discrepancies using the appropriate ledger details.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="warning-note"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>The Trial Balance helps review ledger balances and whether total debits equal total credits.
+                            A balanced Trial Balance does not guarantee every transaction has been recorded correctly.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SALES EXAMPLE -->
+                <section class="article-block" id="sales-example">
+                    <div class="section-number">06 / PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Finding Sales Information</h2>
+                    <p>Suppose a billing executive wants to review sales transactions for October.</p>
+                    <div class="workflow-card">
+                        <div class="workflow-header"><span class="workflow-icon"><i class="fa-solid fa-chart-line"
+                                    aria-hidden="true"></i></span>
+                            <div><span class="workflow-label">WORKFLOW EXAMPLE 02</span>
+                                <h3>Find and review a sales report</h3>
+                            </div>
+                        </div>
+                        <ol class="workflow-steps">
+                            <li><span>1</span>
+                                <div><strong>Open Go To</strong>
+                                    <p>Press <strong>Alt + G</strong>.</p>
+                                </div>
+                            </li>
+                            <li><span>2</span>
+                                <div><strong>Search for a sales report</strong>
+                                    <p>Enter the relevant report or register name.</p>
+                                </div>
+                            </li>
+                            <li><span>3</span>
+                                <div><strong>Select the available report</strong>
+                                    <p>Check that the destination matches the report you need.</p>
+                                </div>
+                            </li>
+                            <li><span>4</span>
+                                <div><strong>Set the October period</strong>
+                                    <p>Choose the required start and end dates.</p>
+                                </div>
+                            </li>
+                            <li><span>5</span>
+                                <div><strong>Review transactions</strong>
+                                    <p>Use supported drill-down options to investigate an invoice when needed.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <p>This can help users review sales without repeatedly navigating through menus.</p>
+                </section>
+
+                <!-- SEARCH FEATURES -->
+                <section class="article-block" id="use-search">
+                    <div class="section-number">07 / SEARCH WORKFLOW</div>
+                    <h2>How to Use Search Features in TallyPrime</h2>
+                    <p>TallyPrime's search and navigation options can help you find supported destinations more quickly.
+                        The precise search behaviour depends on where you are working and the version installed.</p>
+                    <div class="timeline">
+                        <div class="timeline-item"><span class="timeline-number">01</span>
+                            <div class="timeline-content"><span class="timeline-label">Step 01</span>
+                                <h3>Identify what you need</h3>
+                                <p>Decide whether you need a report, voucher, ledger, stock item, or another feature. A
+                                    specific search term usually makes navigation easier.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item"><span class="timeline-number">02</span>
+                            <div class="timeline-content"><span class="timeline-label">Step 02</span>
+                                <h3>Open the relevant navigation or selection screen</h3>
+                                <p>Use Go To for supported destinations. If you are selecting a ledger, stock item or
+                                    other master inside a voucher, use the relevant selection field and its available
+                                    search options.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item"><span class="timeline-number">03</span>
+                            <div class="timeline-content"><span class="timeline-label">Step 03</span>
+                                <h3>Enter a relevant search term</h3>
+                                <p>Try the name of the report or feature you need.</p>
+                                <div class="search-term-list"><span>Trial Balance</span><span>Sales
+                                        Register</span><span>Balance Sheet</span><span>Purchase Register</span></div>
+                            </div>
+                        </div>
+                        <div class="timeline-item"><span class="timeline-number">04</span>
+                            <div class="timeline-content"><span class="timeline-label">Step 04</span>
+                                <h3>Select the correct result</h3>
+                                <p>Check the destination before opening it. Similar names or multiple reporting options
+                                    may appear depending on the company and version.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item"><span class="timeline-number">05</span>
+                            <div class="timeline-content"><span class="timeline-label">Step 05</span>
+                                <h3>Apply filters and review the result</h3>
+                                <p>Confirm the reporting period, company and other relevant filters when a report opens.
+                                    This is especially important when comparing sales, purchases, or GST records.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- COMPARISON -->
+                <section class="article-block" id="goto-vs-menus">
+                    <div class="section-number">08 / QUICK COMPARISON</div>
+                    <h2>Go To vs Menu Navigation in TallyPrime</h2>
+                    <div class="table-responsive">
+                        <table class="article-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Go To</th>
+                                    <th>Traditional menu navigation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Main purpose</td>
+                                    <td>Quickly access supported destinations</td>
+                                    <td>Browse menus and categories</td>
+                                </tr>
+                                <tr>
+                                    <td>Typical method</td>
+                                    <td>Alt + G</td>
+                                    <td>Navigate through the available menu structure</td>
+                                </tr>
+                                <tr>
+                                    <td>Best suited for</td>
+                                    <td>Users who know what they want to open</td>
+                                    <td>Users exploring features or learning menu locations</td>
+                                </tr>
+                                <tr>
+                                    <td>Efficiency</td>
+                                    <td>Can reduce repeated navigation</td>
+                                    <td>May require more steps</td>
+                                </tr>
+                                <tr>
+                                    <td>Learning value</td>
+                                    <td>Helps build fast workflows</td>
+                                    <td>Helps beginners understand the software structure</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="quote-box"><span class="quote-icon"><i class="fa-solid fa-lightbulb"
+                                aria-hidden="true"></i></span><strong>Both approaches are useful. Learn the menu
+                            structure and Go To so you can choose the best method for the task.</strong></div>
+                </section>
+
+                <!-- TIPS -->
+                <section class="article-block" id="tips">
+                    <div class="section-number">09 / WORK SMARTER</div>
+                    <h2>Tips for Using Go To and Search Efficiently</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card"><span>01</span>
+                            <p>Learn the names of the reports you use most often.</p>
+                        </div>
+                        <div class="tip-card"><span>02</span>
+                            <p>Use Alt + G to access supported destinations quickly.</p>
+                        </div>
+                        <div class="tip-card"><span>03</span>
+                            <p>Search with clear report or feature names.</p>
+                        </div>
+                        <div class="tip-card"><span>04</span>
+                            <p>Check the reporting period before comparing figures.</p>
+                        </div>
+                        <div class="tip-card"><span>05</span>
+                            <p>Use relevant drill-down options to investigate transactions.</p>
+                        </div>
+                        <div class="tip-card"><span>06</span>
+                            <p>Verify the active company before reviewing financial information.</p>
+                        </div>
+                        <div class="tip-card"><span>07</span>
+                            <p>Learn the traditional menu path as a backup.</p>
+                        </div>
+                        <div class="tip-card"><span>08</span>
+                            <p>Do not assume every feature or record is searchable in the same field.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TROUBLESHOOTING -->
+                <section class="article-block" id="common-problems">
+                    <div class="section-number">10 / TROUBLESHOOTING</div>
+                    <h2>Common Problems and Solutions</h2>
+                    <div class="problem-list">
+                        <div class="problem-card">
+                            <div class="problem-number">01</div>
+                            <div>
+                                <h3>The required report does not appear</h3>
+                                <p>The report may have a different name, may not be available in the current context, or
+                                    may depend on the software version or configuration.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Search with a relevant term,
+                                    review the available destinations, or use the menu structure to locate the report.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-number">02</div>
+                            <div>
+                                <h3>The report shows unexpected figures</h3>
+                                <p>The wrong period, company, or filter may be selected.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Check the reporting period and
+                                    relevant report options before analysing the figures.</div>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-number">03</div>
+                            <div>
+                                <h3>A voucher is difficult to find</h3>
+                                <p>You may be looking in the wrong report or transaction period.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Start from the appropriate
+                                    register, select the correct period, and use supported drill-down or search options.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-number">04</div>
+                            <div>
+                                <h3>Go To does not open the expected destination</h3>
+                                <p>The current screen, active field, or software version may affect how the shortcut
+                                    works.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Return to an appropriate
+                                    navigation screen and follow the shortcut hints displayed in TallyPrime.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ -->
+                <section class="article-block faq-section" id="faqs">
+                    <div class="section-number">11 / FREQUENTLY ASKED QUESTIONS</div>
+                    <h2>Frequently Asked Questions About Go To and Search in TallyPrime</h2>
+                    <div class="faq-list">
+                        <details class="faq-item" *ngFor="let faq of faqs; let i = index">
+                            <summary>{{ i + 1 }}. {{ faq.question }}</summary>
+                            <p>{{ faq.answer }}</p>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- CONCLUSION -->
+                <section class="article-block final-thoughts" id="conclusion">
+                    <div class="section-number">12 / FINAL THOUGHTS</div>
+                    <h2>Use Go To and Search to Navigate TallyPrime More Efficiently</h2>
+                    <p>
+                        Go To and the available search features in TallyPrime can simplify navigation and help
+                        accounting professionals
+                        reach reports and functions more efficiently.
+                    </p>
+                    <p>
+                        Learn to open Go To with Alt + G, search for supported destinations, select the correct report,
+                        and verify the
+                        reporting period before reviewing the results. With regular practice, these features can make
+                        daily accounting
+                        work more organised and productive.
+                    </p>
+                    <div class="skill-combination"><span>Alt + G</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Find Destinations</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Verify Reports</span></div>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="article-block related-articles-section" id="related-articles">
+                    <div class="section-number">13 / KEEP LEARNING</div>
+                    <h2>Related Articles to Build Your TallyPrime Skills</h2>
+                    <p>Continue learning with these practical guides to accounting entries, voucher types, shortcut keys
+                        and reports.</p>
+                    <div class="related-articles-grid">
+                        <a class="related-article-card" routerLink="/tallyprime-shortcut-keys"><span
+                                class="related-article-icon"><i class="fa-solid fa-keyboard"
+                                    aria-hidden="true"></i></span><span class="related-article-category">SHORTCUT
+                                REFERENCE</span>
+                            <h3>50 TallyPrime Shortcut Keys Every Accountant Should Know</h3>
+                            <p>Review commonly used navigation, voucher-entry and reporting shortcuts.</p><span
+                                class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/tallyprime-sales-purchase-shortcut-keys"><span
+                                class="related-article-icon"><i class="fa-solid fa-file-invoice-dollar"
+                                    aria-hidden="true"></i></span><span class="related-article-category">SALES &amp;
+                                PURCHASE</span>
+                            <h3>TallyPrime Shortcuts for Sales and Purchase Entries</h3>
+                            <p>Learn useful keyboard shortcuts for billing and invoice workflows.</p><span
+                                class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card"
+                            routerLink="/tallyprime-voucher-types-explained-with-examples"><span
+                                class="related-article-icon"><i class="fa-solid fa-receipt"
+                                    aria-hidden="true"></i></span><span class="related-article-category">VOUCHER
+                                GUIDE</span>
+                            <h3>TallyPrime Voucher Types Explained With Examples</h3>
+                            <p>Understand Payment, Receipt, Contra, Journal, Sales and Purchase vouchers.</p><span
+                                class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/how-to-create-ledgers-in-tallyprime"><span
+                                class="related-article-icon"><i class="fa-solid fa-book-open"
+                                    aria-hidden="true"></i></span><span class="related-article-category">LEDGER
+                                GUIDE</span>
+                            <h3>How to Create Ledgers in TallyPrime</h3>
+                            <p>Learn ledger groups and practical examples for everyday accounting.</p><span
+                                class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="training-cta" id="rlt-edzaro-training">
+                    <div class="training-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="training-cta-content">
+                        <span>Learn with RLT Edzaro</span>
+                        <h2>Build Your Practical TallyPrime Skills</h2>
+                        <p>Develop your understanding of accounting navigation, voucher entry, GST-related transactions
+                            and financial reporting through guided practice.</p>
+                        <a class="training-button" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                            target="_blank" rel="noopener noreferrer">Explore Tally Training <i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+
+                <div class="article-footnote"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Learning note:</strong> The availability and behaviour of Go To destinations and search
+                        functions can depend on your TallyPrime release, active company, configuration and current
+                        screen. Verify report periods and filters before using figures for reconciliation or filing.</p>
+                </div>
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation and related information">
+                <div class="sidebar-card">
+                    <div class="sidebar-heading">
+                        <div class="sidebar-heading-icon"><i class="fa-solid fa-list-ul" aria-hidden="true"></i></div>
+                        <div><span>IN THIS ARTICLE</span>
+                            <h3>Contents</h3>
+                        </div>
+                    </div>
+                    <nav class="article-toc" aria-label="Table of contents">
+                        <a href="#introduction"
+                            (click)="scrollToSection($event, 'introduction')"><span>01</span><strong>Introduction</strong></a>
+                        <a href="#what-is-go-to"
+                            (click)="scrollToSection($event, 'what-is-go-to')"><span>02</span><strong>What Is Go
+                                To?</strong></a>
+                        <a href="#open-go-to"
+                            (click)="scrollToSection($event, 'open-go-to')"><span>03</span><strong>Open Go
+                                To</strong></a>
+                        <a href="#go-to-destinations"
+                            (click)="scrollToSection($event, 'go-to-destinations')"><span>04</span><strong>Available
+                                Destinations</strong></a>
+                        <a href="#trial-balance-example"
+                            (click)="scrollToSection($event, 'trial-balance-example')"><span>05</span><strong>Trial
+                                Balance Example</strong></a>
+                        <a href="#sales-example"
+                            (click)="scrollToSection($event, 'sales-example')"><span>06</span><strong>Sales
+                                Example</strong></a>
+                        <a href="#use-search" (click)="scrollToSection($event, 'use-search')"><span>07</span><strong>Use
+                                Search</strong></a>
+                        <a href="#goto-vs-menus"
+                            (click)="scrollToSection($event, 'goto-vs-menus')"><span>08</span><strong>Go To vs
+                                Menus</strong></a>
+                        <a href="#tips" (click)="scrollToSection($event, 'tips')"><span>09</span><strong>Efficiency
+                                Tips</strong></a>
+                        <a href="#common-problems"
+                            (click)="scrollToSection($event, 'common-problems')"><span>10</span><strong>Common
+                                Problems</strong></a>
+                        <a href="#faqs"
+                            (click)="scrollToSection($event, 'faqs')"><span>11</span><strong>FAQs</strong></a>
+                        <a href="#conclusion"
+                            (click)="scrollToSection($event, 'conclusion')"><span>12</span><strong>Conclusion</strong></a>
+                        <a href="#related-articles"
+                            (click)="scrollToSection($event, 'related-articles')"><span>13</span><strong>Related
+                                Articles</strong></a>
+                    </nav>
+                </div>
+
+                <div class="sidebar-card article-info-card">
+                    <span class="sidebar-label">ARTICLE DETAILS</span>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-regular fa-clock"
+                                aria-hidden="true"></i></span>
+                        <div><small>Reading time</small><strong>8–10 minutes</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-user-graduate"
+                                aria-hidden="true"></i></span>
+                        <div><small>Level</small><strong>Beginner-friendly</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-keyboard"
+                                aria-hidden="true"></i></span>
+                        <div><small>Key shortcut</small><strong>Alt + G</strong></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card sidebar-course">
+                    <div class="sidebar-course-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+                    <span class="course-label">PRACTICAL LEARNING</span>
+                    <h3>Build Your Accounting Software Skills</h3>
+                    <p>Practise accounting workflows, voucher entry, navigation and financial reports.</p>
+                    <div class="course-points">
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Navigation</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Vouchers</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Reports</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> GST basics</div>
+                    </div>
+                    <a class="sidebar-button" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                        target="_blank" rel="noopener noreferrer">Explore Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+
+                <div class="sidebar-card related-topics"><span class="sidebar-label">RELATED TOPICS</span>
+                    <div class="topic-tags"><span>TallyPrime</span><span>Go
+                            To</span><span>Search</span><span>Reports</span><span>Accounting</span></div>
+                </div>
+                <button type="button" class="sidebar-back" (click)="goToBlogs()"><i class="fa-solid fa-arrow-left"
+                        aria-hidden="true"></i> Back to all blogs</button>
+            </aside>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,481 @@
+<!-- =========================================================
+  RLT EDZARO | TALLYPRIME SALES & PURCHASE SHORTCUT KEYS
+  Angular standalone component template
+========================================================= -->
+<div class="sales-purchase-blog-page">
+    <!-- HERO -->
+    <section class="article-hero" aria-labelledby="article-title">
+        <div class="container">
+            <div class="article-hero-content">
+                <button type="button" class="back-to-blog" (click)="goToBlogs()">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Back to Blog
+                </button>
+
+                <div class="article-category">
+                    <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+                    Tally &amp; Finance
+                </div>
+
+                <h1 id="article-title">TallyPrime Keyboard Shortcuts for <span>Sales and Purchase Entries</span></h1>
+                <p class="article-intro">
+                    Learn useful TallyPrime shortcuts for sales and purchase vouchers, invoice dates, customer and
+                    supplier ledgers,
+                    GST checks and practical billing workflows.
+                </p>
+
+                <div class="article-meta" aria-label="Article information">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 10–12 min read</span>
+                    <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Beginner guide</span>
+                    <span><i class="fa-solid fa-keyboard" aria-hidden="true"></i> Sales &amp; purchase workflow</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="article-section">
+        <div class="container article-layout">
+            <article class="article-content">
+                <!-- QUICK ANSWER -->
+                <section class="quick-answer" id="quick-answer">
+                    <div class="quick-answer-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Quick Answer
+                    </div>
+                    <h2>Which shortcuts are useful for sales and purchase entries?</h2>
+                    <p>
+                        <strong>F8</strong> is commonly used to select the Sales voucher and <strong>F9</strong> to
+                        select the Purchase voucher.
+                        <strong>F2</strong> changes the date in supported screens, <strong>Alt+C</strong> can create a
+                        master from supported fields,
+                        and <strong>Alt+G</strong> opens Go To for supported reports and features.
+                    </p>
+                    <div class="quick-answer-footer">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        Shortcut availability depends on the active screen, configuration and TallyPrime release. Verify
+                        the shortcut hints shown in your installation.
+                    </div>
+                </section>
+
+                <!-- INTRODUCTION -->
+                <section class="article-block" id="introduction">
+                    <div class="section-number">01 / GETTING STARTED</div>
+                    <h2>TallyPrime Keyboard Shortcuts for Sales and Purchase Entries</h2>
+                    <p>
+                        Sales and purchase entries are among the most common activities performed by accountants and
+                        billing executives.
+                        Businesses use sales vouchers to record goods or services sold and purchase vouchers to record
+                        goods or services purchased.
+                    </p>
+                    <p>
+                        Entering these transactions efficiently is important for maintaining accurate accounts, managing
+                        inventory and preparing GST records.
+                        TallyPrime provides keyboard shortcuts that help users access vouchers, change dates, create
+                        masters and complete billing tasks with less menu navigation.
+                    </p>
+                    <p>
+                        This guide explains useful keyboard shortcuts for sales and purchase entries with practical
+                        examples for beginners and accounting professionals.
+                        Keep it handy as a quick reference while working in TallyPrime.
+                    </p>
+                    <div class="quote-box">
+                        <span class="quote-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                        <strong>Shortcuts can reduce navigation time, but the customer or supplier, invoice details,
+                            ledger selection and tax information still need to be checked carefully.</strong>
+                    </div>
+                </section>
+
+                <!-- WHAT ARE SALES AND PURCHASE ENTRIES -->
+                <section class="article-block" id="what-are-entries">
+                    <div class="section-number">02 / UNDERSTAND THE BASICS</div>
+                    <h2>What Are Sales and Purchase Entries in TallyPrime?</h2>
+                    <p>A sales entry records a transaction in which a business sells goods or services to a customer. A
+                        purchase entry records a transaction in which a business purchases goods or services from a
+                        supplier.</p>
+
+                    <div class="concept-grid">
+                        <div class="concept-card">
+                            <span class="concept-icon"><i class="fa-solid fa-file-invoice-dollar"
+                                    aria-hidden="true"></i></span>
+                            <strong>Sales entry</strong>
+                            <p>Records goods or services sold to a customer, with invoice and applicable tax details.
+                            </p>
+                        </div>
+                        <div class="concept-card">
+                            <span class="concept-icon"><i class="fa-solid fa-cart-shopping"
+                                    aria-hidden="true"></i></span>
+                            <strong>Purchase entry</strong>
+                            <p>Records goods or services purchased from a supplier and the supplier invoice details.</p>
+                        </div>
+                    </div>
+
+                    <p>Depending on the business, sales and purchase entries may involve:</p>
+                    <div class="check-grid">
+                        <div *ngFor="let detail of entryDetails"><i class="fa-solid fa-check"
+                                aria-hidden="true"></i><span>{{ detail }}</span></div>
+                    </div>
+                </section>
+
+                <!-- SHORTCUT TABLE -->
+                <section class="article-block" id="important-shortcuts">
+                    <div class="section-number">03 / QUICK REFERENCE</div>
+                    <h2>Important Shortcut Keys for Sales and Purchase Entries</h2>
+                    <p>These are commonly used shortcuts in relevant TallyPrime workflows. The exact behaviour can
+                        depend on the active screen and software release.</p>
+                    <div class="table-responsive">
+                        <table class="article-table shortcut-table">
+                            <thead>
+                                <tr>
+                                    <th>Shortcut Key</th>
+                                    <th>Function</th>
+                                    <th>When It Helps</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of shortcuts">
+                                    <td><kbd>{{ item.key }}</kbd></td>
+                                    <td><strong>{{ item.function }}</strong></td>
+                                    <td>{{ item.use }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="step-tip"><i class="fa-regular fa-lightbulb"
+                            aria-hidden="true"></i><span><strong>Practical tip:</strong> Learn the Go To function to
+                            access supported reports and features without repeatedly navigating through menus.</span>
+                    </div>
+                    <div class="warning-note"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>Shortcut names and behaviour can differ by screen, configured voucher types and TallyPrime
+                            version. Check the shortcut hints in your installed release before relying on them.</p>
+                    </div>
+                </section>
+
+                <!-- SALES ENTRY -->
+                <section class="article-block" id="sales-entry">
+                    <div class="section-number">04 / SALES WORKFLOW</div>
+                    <h2>How to Record a Sales Entry Using Shortcuts</h2>
+                    <p><strong>Example:</strong> ABC Traders sells goods worth ₹10,000 before GST to a customer.</p>
+
+                    <div class="workflow-card">
+                        <div class="workflow-header"><span class="workflow-icon"><i class="fa-solid fa-file-invoice"
+                                    aria-hidden="true"></i></span>
+                            <div><span class="workflow-kicker">SALES VOUCHER</span>
+                                <h3>Record a customer sales invoice</h3>
+                            </div><kbd>F8</kbd>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item" *ngFor="let step of salesSteps; let i = index">
+                                <span class="timeline-number">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+                                        <div class="timeline-content">
+                                            <h4>{{ step.title }} <kbd *ngIf="step.shortcut">{{ step.shortcut }}</kbd>
+                                            </h4>
+                                            <p>{{ step.description }}</p>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-callout">
+                        <span class="callout-label">GST calculation reminder</span>
+                        <p>For an illustrative intra-state sale of ₹10,000 at 18% GST, the GST calculation is based on
+                            the applicable classification and rules. Confirm the actual rate, place of supply and tax
+                            treatment before saving the invoice.</p>
+                    </div>
+                </section>
+
+                <!-- PURCHASE ENTRY -->
+                <section class="article-block" id="purchase-entry">
+                    <div class="section-number">05 / PURCHASE WORKFLOW</div>
+                    <h2>How to Record a Purchase Entry Using Shortcuts</h2>
+                    <p><strong>Example:</strong> ABC Traders purchases goods worth ₹20,000 before GST from a supplier.
+                    </p>
+
+                    <div class="workflow-card">
+                        <div class="workflow-header"><span class="workflow-icon"><i class="fa-solid fa-cart-shopping"
+                                    aria-hidden="true"></i></span>
+                            <div><span class="workflow-kicker">PURCHASE VOUCHER</span>
+                                <h3>Record a supplier purchase invoice</h3>
+                            </div><kbd>F9</kbd>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item" *ngFor="let step of purchaseSteps; let i = index">
+                                <span class="timeline-number">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+                                        <div class="timeline-content">
+                                            <h4>{{ step.title }} <kbd *ngIf="step.shortcut">{{ step.shortcut }}</kbd>
+                                            </h4>
+                                            <p>{{ step.description }}</p>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-callout">
+                        <span class="callout-label">GST and input tax credit</span>
+                        <p>For an illustrative intra-state purchase of ₹20,000 at 18% GST, check the actual tax
+                            classification and whether input tax credit is eligible for the transaction. The example is
+                            for calculation practice and is not a substitute for transaction-specific review.</p>
+                    </div>
+                </section>
+
+                <!-- COMPARISON -->
+                <section class="article-block" id="sales-vs-purchase">
+                    <div class="section-number">06 / COMPARE THE WORKFLOWS</div>
+                    <h2>Sales vs Purchase Entries: Key Differences</h2>
+                    <p>The exact accounting treatment depends on whether the transaction is a cash sale, credit sale,
+                        cash purchase, credit purchase, service transaction or another type of supply.</p>
+                    <div class="table-responsive">
+                        <table class="article-table comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Detail</th>
+                                    <th>Sales Entry</th>
+                                    <th>Purchase Entry</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Business activity</strong></td>
+                                    <td>Goods or services are sold</td>
+                                    <td>Goods or services are purchased</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Party selected</strong></td>
+                                    <td>Customer ledger</td>
+                                    <td>Supplier ledger</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Common voucher</strong></td>
+                                    <td>Sales Voucher</td>
+                                    <td>Purchase Voucher</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Invoice reference</strong></td>
+                                    <td>Sales invoice details</td>
+                                    <td>Supplier invoice details</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>GST review</strong></td>
+                                    <td>Check applicable tax on sales</td>
+                                    <td>Check applicable tax and input tax credit eligibility</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inventory</strong></td>
+                                    <td>Stock details may be required for goods</td>
+                                    <td>Stock details may be required for goods received</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- TIPS -->
+                <section class="article-block" id="faster-entries">
+                    <div class="section-number">07 / WORK MORE EFFICIENTLY</div>
+                    <h2>Tips for Faster Sales and Purchase Entries</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card" *ngFor="let tip of efficiencyTips; let i = index">
+                            <span class="tip-number">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+                                    <div>
+                                        <h3>{{ tip.title }}</h3>
+                                        <p>{{ tip.description }}</p>
+                                    </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ERRORS -->
+                <section class="article-block" id="common-errors">
+                    <div class="section-number">08 / QUALITY CHECK</div>
+                    <h2>Common Errors in Sales and Purchase Entries</h2>
+                    <div class="error-list">
+                        <div class="error-item" *ngFor="let error of commonErrors">
+                            <span class="error-icon"><i class="fa-solid fa-circle-exclamation"
+                                    aria-hidden="true"></i></span>
+                            <p>{{ error }}</p>
+                        </div>
+                    </div>
+                    <div class="step-tip"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i><span>To resolve
+                            errors, compare the voucher against the original invoice and review the relevant ledger and
+                            GST settings.</span></div>
+                </section>
+
+                <!-- FAQ -->
+                <section class="article-block faq-section" id="faqs">
+                    <div class="section-number">09 / FREQUENTLY ASKED QUESTIONS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item" *ngFor="let faq of faqs; let i = index">
+                            <summary>{{ i + 1 }}. {{ faq.question }}</summary>
+                            <p>{{ faq.answer }}</p>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- CONCLUSION -->
+                <section class="article-block final-thoughts" id="conclusion">
+                    <div class="section-number">10 / FINAL THOUGHTS</div>
+                    <h2>Build Accurate Sales and Purchase Entry Habits</h2>
+                    <p>TallyPrime keyboard shortcuts help accounting professionals record sales and purchase entries
+                        more efficiently. Learning F8 for Sales, F9 for Purchase, F2 for supported date changes, Alt+C
+                        for supported master creation and Alt+G for navigation provides a useful foundation.</p>
+                    <p>Practise the complete workflow, including customer and supplier selection, tax verification and
+                        voucher review, to develop accurate and efficient accounting habits.</p>
+                    <div class="skill-combination"><span>Shortcuts</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Invoice Accuracy</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Accounting Practice</span></div>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="article-block related-articles-section" id="related-articles">
+                    <div class="section-number">11 / KEEP LEARNING</div>
+                    <h2>Related Articles to Improve Your TallyPrime Skills</h2>
+                    <p>Continue learning with these practical TallyPrime and accounting guides.</p>
+                    <div class="related-articles-grid">
+                        <a class="related-article-card" routerLink="/tallyprime-shortcut-keys">
+                            <span class="related-article-icon"><i class="fa-solid fa-keyboard"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">SHORTCUTS</span>
+                            <h3>50 TallyPrime Shortcut Keys Every Accountant Should Know</h3>
+                            <p>Review useful navigation, voucher-entry and reporting shortcuts.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/tallyprime-voucher-types-explained-with-examples">
+                            <span class="related-article-icon"><i class="fa-solid fa-receipt"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">VOUCHER GUIDE</span>
+                            <h3>TallyPrime Voucher Types Explained With Examples</h3>
+                            <p>Understand voucher purposes and common accounting scenarios.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/how-to-create-ledgers-in-tallyprime">
+                            <span class="related-article-icon"><i class="fa-solid fa-book-open"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">LEDGER GUIDE</span>
+                            <h3>How to Create Ledgers in TallyPrime With Real Examples</h3>
+                            <p>Learn customer, supplier, sales, purchase and expense ledgers.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card"
+                            routerLink="/tallyprime-accounting-entries-beginners-should-practice">
+                            <span class="related-article-icon"><i class="fa-solid fa-calculator"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">PRACTICE</span>
+                            <h3>TallyPrime Accounting Entries Beginners Should Practise</h3>
+                            <p>Practise daily business transactions and review their ledger impact.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="training-cta" id="rlt-edzaro-training">
+                    <div class="training-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="training-cta-content">
+                        <span>Learn with RLT Edzaro</span>
+                        <h2>Build Your Practical TallyPrime Skills</h2>
+                        <p>Develop your accounting skills through guided exercises covering vouchers, customer and
+                            supplier entries, GST-related transactions and reporting.</p>
+                        <a class="training-button" href="https://rltedzaro.com/tally-training-institute-in-chennai">
+                            Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="article-footnote">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Learning note:</strong> Shortcut behaviour may depend on the active screen, configuration
+                        and TallyPrime release. Verify shortcut hints and confirm the accounting and GST details against
+                        the actual transaction before saving.</p>
+                </div>
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation and related information">
+                <div class="sidebar-card">
+                    <div class="sidebar-heading">
+                        <div class="sidebar-heading-icon"><i class="fa-solid fa-list-ul" aria-hidden="true"></i></div>
+                        <div><span>IN THIS ARTICLE</span>
+                            <h3>Contents</h3>
+                        </div>
+                    </div>
+                    <nav class="article-toc" aria-label="Table of contents">
+                        <a href="#introduction"
+                            (click)="scrollToSection($event, 'introduction')"><span>01</span><strong>Introduction</strong></a>
+                        <a href="#what-are-entries"
+                            (click)="scrollToSection($event, 'what-are-entries')"><span>02</span><strong>Sales &amp;
+                                Purchase Entries</strong></a>
+                        <a href="#important-shortcuts"
+                            (click)="scrollToSection($event, 'important-shortcuts')"><span>03</span><strong>Important
+                                Shortcuts</strong></a>
+                        <a href="#sales-entry"
+                            (click)="scrollToSection($event, 'sales-entry')"><span>04</span><strong>Sales
+                                Workflow</strong></a>
+                        <a href="#purchase-entry"
+                            (click)="scrollToSection($event, 'purchase-entry')"><span>05</span><strong>Purchase
+                                Workflow</strong></a>
+                        <a href="#sales-vs-purchase"
+                            (click)="scrollToSection($event, 'sales-vs-purchase')"><span>06</span><strong>Key
+                                Differences</strong></a>
+                        <a href="#faster-entries"
+                            (click)="scrollToSection($event, 'faster-entries')"><span>07</span><strong>Tips for Faster
+                                Entries</strong></a>
+                        <a href="#common-errors"
+                            (click)="scrollToSection($event, 'common-errors')"><span>08</span><strong>Common
+                                Errors</strong></a>
+                        <a href="#faqs"
+                            (click)="scrollToSection($event, 'faqs')"><span>09</span><strong>FAQs</strong></a>
+                        <a href="#conclusion"
+                            (click)="scrollToSection($event, 'conclusion')"><span>10</span><strong>Conclusion</strong></a>
+                        <a href="#related-articles"
+                            (click)="scrollToSection($event, 'related-articles')"><span>11</span><strong>Related
+                                Articles</strong></a>
+                    </nav>
+                </div>
+
+                <div class="sidebar-card article-info-card">
+                    <span class="sidebar-label">ARTICLE DETAILS</span>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-regular fa-clock"
+                                aria-hidden="true"></i></span>
+                        <div><small>Reading time</small><strong>10–12 minutes</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-user-graduate"
+                                aria-hidden="true"></i></span>
+                        <div><small>Level</small><strong>Beginner-friendly</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-file-invoice"
+                                aria-hidden="true"></i></span>
+                        <div><small>Focus</small><strong>Sales and purchases</strong></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card sidebar-course">
+                    <div class="sidebar-course-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <span class="course-label">RLT EDZARO</span>
+                    <h3>Learn TallyPrime Through Practice</h3>
+                    <p>Build practical knowledge of accounting entries, billing workflows and GST-related transactions.
+                    </p>
+                    <div class="course-points">
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Sales entries</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Purchase entries</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> GST checks</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Reports</div>
+                    </div>
+                    <a class="sidebar-button" href="https://rltedzaro.com/tally-training-institute-in-chennai">Explore
+                        Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="sidebar-card related-topics">
+                    <span class="sidebar-label">RELATED TOPICS</span>
+                    <div class="topic-tags">
+                        <span>TallyPrime</span><span>Sales</span><span>Purchases</span><span>GST</span><span>Shortcuts</span>
+                    </div>
+                </div>
+                <button type="button" class="sidebar-back" (click)="goToBlogs()"><i class="fa-solid fa-arrow-left"
+                        aria-hidden="true"></i> Back to all blogs</button>
+            </aside>
+        </div>
+    </section>
+</div>

@@ -69,9 +69,17 @@ import { GenAI } from './component/Emerging-technologies/gen-ai/gen-ai';
 import { DroneTechnologies } from './component/Emerging-technologies/drone-technologies/drone-technologies';
 import { KidsProgram } from './component/kids-program/kids-program';
 import { TallyprimeForEveryBeginners } from './blogs/tallyprime-for-every-beginners/tallyprime-for-every-beginners';
-import { TallyprimeVoucherTypesExplainedWithExamples } from './blogs/tallyprime-voucher-types-explained-with-examples/tallyprime-voucher-types-explained-with-examples';
 import { TallyprimePracticalTestQuestionsAccountantJobs } from './blogs/tallyprime-practical-test-questions-accountant-jobs/tallyprime-practical-test-questions-accountant-jobs';
 import { TallyprimePayrollManageEmployeeSalaries } from './blogs/tallyprime-payroll-manage-employee-salaries/tallyprime-payroll-manage-employee-salaries';
+import { TallyLandingPage } from './landing-page/tally-landing-page/tally-landing-page';
+import { HowToCreateCompanyInTallyprime } from './blogs/how-to-create-company-in-tallyprime/how-to-create-company-in-tallyprime';
+import { HowToCreateLedgersInTallyprime } from './blogs/how-to-create-ledgers-in-tallyprime/how-to-create-ledgers-in-tallyprime';
+import { TallyprimeVoucherTypesExplainedWithExamples } from './blogs/tallyprime-voucher-types-explained-with-examples/tallyprime-voucher-types-explained-with-examples';
+import { TallyprimeShortcutKeys } from './blogs/tallyprime-shortcut-keys/tallyprime-shortcut-keys';
+import { TallyprimeSalesPurchaseShortcutKeys } from './blogs/tallyprime-sales-purchase-shortcut-keys/tallyprime-sales-purchase-shortcut-keys';
+import { HowToUseGoToSearchInTallyprime } from './blogs/how-to-use-go-to-search-in-tallyprime/how-to-use-go-to-search-in-tallyprime';
+import { HowToCreateMastersInTallyprime } from './blogs/how-to-create-masters-in-tallyprime/how-to-create-masters-in-tallyprime';
+import { TallyprimeTipsToReduceManualAccountingWork } from './blogs/tallyprime-tips-to-reduce-manual-accounting-work/tallyprime-tips-to-reduce-manual-accounting-work';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -114,7 +122,10 @@ export const routes: Routes = [
   { path: 'tally-training-institute-in-t-nagar', component: TallyTNagarComponent },
   { path: 'tally-course-in-chengalpattu', component: TallyCourseInChengalpattuComponent },
   { path: 'tally-course-in-tambaram', component: TallyCourseInTambaramComponent },
-
+  { path: 'how-to-create-company-in-tallyprime', component: HowToCreateCompanyInTallyprime },
+  { path: 'how-to-create-ledgers-in-tallyprime', component: HowToCreateLedgersInTallyprime },
+  { path: 'how-to-create-masters-in-tallyprime', component: HowToCreateMastersInTallyprime },
+  { path: 'tallyprime-tips-to-reduce-manual-accounting-work', component: TallyprimeTipsToReduceManualAccountingWork },
   //District
   { path: 'tally-course-in-madurai', component: TallyMaduraiComponent },
   { path: 'tally-course-in-trichy', component: TallyTrichyComponent },
@@ -169,7 +180,10 @@ export const routes: Routes = [
   { path: 'tallyprime-voucher-types-explained-with-examples', component: TallyprimeVoucherTypesExplainedWithExamples },
   { path: 'tallyprime-practical-test-questions-accountant-jobs', component: TallyprimePracticalTestQuestionsAccountantJobs },
   { path: 'tallyprime-payroll-manage-employee-salaries', component: TallyprimePayrollManageEmployeeSalaries },
-
+  { path: 'tallyprime-shortcut-keys', component: TallyprimeShortcutKeys },
+  { path: 'tallyprime-sales-purchase-shortcut-keys', component: TallyprimeSalesPurchaseShortcutKeys },
+  { path: 'how-to-use-go-to-search-in-tallyprime', component: HowToUseGoToSearchInTallyprime },
+  { path: 'how-to-create-masters-in-tallyprime', component: HowToCreateMastersInTallyprime },
   //Emerging Technologies
 
   { path: 'robitics-course', component: Robotics },
@@ -179,4 +193,7 @@ export const routes: Routes = [
 
   // Kids Programs
   { path: 'future-tech-programs-for-kids', component: KidsProgram },
+
+  //landing pages
+  { path: 'tally-landing-page', component: TallyLandingPage },
 ];

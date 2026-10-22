@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [],
   selector: 'app-tallyprime-voucher-types-explained-with-examples',
   styleUrl: './tallyprime-voucher-types-explained-with-examples.css',
   templateUrl: './tallyprime-voucher-types-explained-with-examples.html',
 })
 export class TallyprimeVoucherTypesExplainedWithExamples {
+
   scrollToSection(event: Event, sectionId: string): void {
     event.preventDefault();
 

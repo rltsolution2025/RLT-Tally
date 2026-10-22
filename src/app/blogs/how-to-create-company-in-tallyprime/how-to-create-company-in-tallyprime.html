@@ -1,0 +1,890 @@
+<!-- =========================================================
+     RLT EDZARO | HOW TO CREATE A COMPANY IN TALLYPRIME
+     Angular standalone article template
+     ========================================================= -->
+
+<!-- HERO -->
+<section class="article-hero" aria-labelledby="article-title">
+
+
+
+
+
+
+    <div class="container">
+        <div class="article-hero-content">
+            <button type="button" class="back-to-blog" (click)="goToBlogs()">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                Back to Blog
+            </button>
+
+            <div class="article-category">
+                <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                Tally &amp; Finance
+            </div>
+
+            <h1 id="article-title">
+                How to Create a Company in <span>TallyPrime</span>
+            </h1>
+
+            <p class="article-intro">
+                Follow this step-by-step guide to enter company details, choose the financial year,
+                set the books beginning date, configure GST where applicable and prepare your company
+                for accounting transactions.
+            </p>
+
+            <div class="article-meta" aria-label="Article information">
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 9–11 min read</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Beginner guide</span>
+                <span><i class="fa-solid fa-list-check" aria-hidden="true"></i> 10 steps</span>
+            </div>
+
+
+        </div>
+
+        <!-- CSS-ILLUSTRATED ACCOUNTING WINDOW -->
+
+    </div>
+
+</section>
+
+<!-- ARTICLE BODY -->
+<section class="article-section">
+    <div class="container article-layout">
+
+        <article class="article-content">
+
+            <!-- QUICK ANSWER -->
+            <section class="quick-answer" id="quick-answer">
+                <div class="quick-answer-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Quick Answer</div>
+                <h2>How do you create a company in TallyPrime?</h2>
+                <p>
+                    Open TallyPrime, select <strong>Create Company</strong>, enter the business details,
+                    set the financial year and books beginning date, configure GST if applicable, review
+                    the settings and save the company. After creation, set up the required ledgers, groups,
+                    stock items and other accounting features before recording transactions.
+                </p>
+                <div class="quick-answer-footer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Check dates
+                    and statutory details carefully before saving.</div>
+            </section>
+
+            <!-- INTRODUCTION -->
+            <section class="article-block" id="introduction">
+                <div class="section-number">01 / GETTING STARTED</div>
+                <h2>How to Create a Company in TallyPrime?</h2>
+                <p>
+                    Company creation is one of the first practical tasks when starting with TallyPrime.
+                    A company is the accounting data environment where you maintain an organisation’s
+                    business and financial records.
+                </p>
+                <p>
+                    In this guide, you will learn how to create a company in TallyPrime step by step,
+                    what information to keep ready, how to set the financial year and books beginning date,
+                    how to configure GST if it applies, and what to do after the company has been created.
+                </p>
+                <div class="quote-box">
+                    <span class="quote-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                    <strong>Before you begin, keep your company name, business address, accounting start date and
+                        applicable GST details ready.</strong>
+                </div>
+            </section>
+
+            <!-- OVERVIEW TABLE -->
+            <section class="article-block" id="creation-overview">
+                <div class="section-number">02 / PROCESS OVERVIEW</div>
+                <h2>TallyPrime Company Creation at a Glance</h2>
+                <p>Use this overview as a checklist while creating your company.</p>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Step</th>
+                                <th>What You Need to Do</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="table-step">01</span></td>
+                                <td>Open TallyPrime</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">02</span></td>
+                                <td>Select <strong>Create Company</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">03</span></td>
+                                <td>Enter company details</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">04</span></td>
+                                <td>Enter the business address</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">05</span></td>
+                                <td>Select country and state</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">06</span></td>
+                                <td>Enter contact details</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">07</span></td>
+                                <td>Set the financial year</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">08</span></td>
+                                <td>Set Books Beginning From</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">09</span></td>
+                                <td>Configure GST if applicable</td>
+                            </tr>
+                            <tr>
+                                <td><span class="table-step">10</span></td>
+                                <td>Review and save the company</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    The process is straightforward, but the financial year, books beginning date and GST
+                    configuration need attention because they influence the way accounting records are maintained.
+                </p>
+            </section>
+
+            <!-- WHAT IS A COMPANY -->
+            <section class="article-block" id="what-is-company">
+                <div class="section-number">03 / UNDERSTAND THE BASICS</div>
+                <h2>What Is a Company in TallyPrime?</h2>
+                <p>
+                    A company in TallyPrime is the accounting data environment in which you maintain the
+                    financial and business records of an organisation. Each company has its own details,
+                    configuration and accounting data.
+                </p>
+                <div class="practice-grid">
+                    <div class="practice-item"><span><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i></span><strong>Ledgers &amp;
+                            groups</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-file-invoice"
+                                aria-hidden="true"></i></span><strong>Sales &amp;
+                            purchases</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-money-bill-transfer"
+                                aria-hidden="true"></i></span><strong>Payments &amp;
+                            receipts</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i></span><strong>Inventory</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-file-invoice-dollar"
+                                aria-hidden="true"></i></span><strong>GST
+                            transactions</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-chart-column"
+                                aria-hidden="true"></i></span><strong>Financial
+                            reports</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-building-columns"
+                                aria-hidden="true"></i></span><strong>Banking
+                            information</strong></div>
+                    <div class="practice-item"><span><i class="fa-solid fa-users"
+                                aria-hidden="true"></i></span><strong>Customers &amp;
+                            suppliers</strong></div>
+                </div>
+                <p>
+                    For example, if you maintain the accounts of <strong>ABC Traders</strong>, you can create
+                    an ABC Traders company in TallyPrime and record its transactions within that company.
+                </p>
+            </section>
+
+            <!-- INFORMATION TO PREPARE -->
+            <section class="article-block" id="information-needed">
+                <div class="section-number">04 / BEFORE YOU START</div>
+                <h2>What Information Do You Need Before Creating a Company?</h2>
+                <p>Keep the following information ready before you open the company creation screen.</p>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Information</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Company Name</td>
+                                <td>ABC Traders</td>
+                            </tr>
+                            <tr>
+                                <td>Mailing Name</td>
+                                <td>ABC Traders</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>Chennai, Tamil Nadu</td>
+                            </tr>
+                            <tr>
+                                <td>Country</td>
+                                <td>India</td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td>Tamil Nadu</td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td>Business phone number</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Business email</td>
+                            </tr>
+                            <tr>
+                                <td>Financial Year</td>
+                                <td>1 April 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Books Beginning From</td>
+                                <td>1 April 2026</td>
+                            </tr>
+                            <tr>
+                                <td>GST Registration</td>
+                                <td>Yes / No, as applicable</td>
+                            </tr>
+                            <tr>
+                                <td>GSTIN</td>
+                                <td>Enter the actual GSTIN if applicable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>Keep business and GST details accurate</h3>
+                        <p>If the company is registered under GST, keep the correct registration details available. Use
+                            your actual GSTIN rather than the illustrative masked value sometimes shown in sample
+                            materials.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEN-STEP PROCESS -->
+            <section class="article-block" id="step-by-step">
+                <div class="section-number">05 / STEP-BY-STEP GUIDE</div>
+                <h2>How to Create a Company in TallyPrime</h2>
+                <p>Follow these steps in order. The exact labels or screen arrangement may vary by TallyPrime version
+                    and configuration.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item" id="step-1">
+                        <span class="timeline-number">01</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 01</span>
+                            <h3>Open TallyPrime</h3>
+                            <p>Start TallyPrime on your computer. If no company is open, look for the option to create
+                                or select a company. Choose <strong>Create Company</strong>. If another company is
+                                already open, access the company-related options and select the option to create a new
+                                company.</p>
+                            <div class="step-tip"><i class="fa-regular fa-lightbulb"
+                                    aria-hidden="true"></i><span><strong>Screenshot
+                                        suggestion:</strong> Add your own TallyPrime screen capture showing the Create
+                                    Company option.</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-2">
+                        <span class="timeline-number">02</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 02</span>
+                            <h3>Enter the Company Name</h3>
+                            <p>Enter the business name carefully because it can appear on accounting reports and
+                                business documents. If the mailing name is different, enter the appropriate mailing name
+                                too.</p>
+                            <div class="example-pair">
+                                <div><span>Company Name</span><strong>ABC Traders Private Limited</strong></div>
+                                <div><span>Mailing Name</span><strong>ABC Traders Pvt. Ltd.</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-3">
+                        <span class="timeline-number">03</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 03</span>
+                            <h3>Enter the Business Address</h3>
+                            <p>Enter the appropriate registered or business address according to your company’s
+                                requirements. The address may appear on reports and documents generated through
+                                TallyPrime.</p>
+                            <div class="example-address"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <div><span>Example address</span><strong>25, Anna Salai, Chennai, Tamil Nadu –
+                                        600002</strong></div>
+                            </div>
+                            <div class="step-tip"><i class="fa-regular fa-lightbulb"
+                                    aria-hidden="true"></i><span><strong>Screenshot
+                                        suggestion:</strong> Use a TallyPrime screen capture with the address fields
+                                    highlighted.</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-4">
+                        <span class="timeline-number">04</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 04</span>
+                            <h3>Select Country and State</h3>
+                            <p>Select the country in which the business operates, then choose the relevant state. For an
+                                example business in Chennai, the selections would be:</p>
+                            <div class="example-pair">
+                                <div><span>Country</span><strong>India</strong></div>
+                                <div><span>State</span><strong>Tamil Nadu</strong></div>
+                            </div>
+                            <p>Choosing the correct state is important when setting up GST and other statutory details.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-5">
+                        <span class="timeline-number">05</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 05</span>
+                            <h3>Enter Contact Details</h3>
+                            <p>Enter the company’s current contact information. Depending on the fields available and
+                                the business requirements, this may include:</p>
+                            <ul>
+                                <li>Phone number</li>
+                                <li>Mobile number</li>
+                                <li>Email address</li>
+                                <li>Website</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-6">
+                        <span class="timeline-number">06</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 06</span>
+                            <h3>Set the Financial Year Beginning From</h3>
+                            <p>The <strong>Financial Year Beginning From</strong> date identifies the start of the
+                                company’s financial year. For businesses following the Indian financial year, it
+                                generally begins on 1 April.</p>
+                            <div class="date-example"><i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                <div><span>Example financial year start</span><strong>1 April 2026</strong></div>
+                            </div>
+                            <p>Choose the date that matches the company’s accounting period so that the financial
+                                records and reports align with the intended year.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-7">
+                        <span class="timeline-number">07</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 07</span>
+                            <h3>Set Books Beginning From</h3>
+                            <p>The <strong>Books Beginning From</strong> field specifies the date from which you want to
+                                start maintaining the books in TallyPrime. This date does not always have to match the
+                                financial year beginning date.</p>
+                            <div class="date-comparison">
+                                <div><span>Financial year begins</span><strong>1 April 2026</strong></div>
+                                <div class="date-divider"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div><span>Books begin</span><strong>1 June 2026</strong></div>
+                            </div>
+                            <p>The example above shows different dates. Select the books beginning date according to
+                                when you intend to start maintaining the company’s records in TallyPrime.</p>
+                            <div class="info-card compact-info">
+                                <div class="info-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>Remember the difference</h3>
+                                    <p><strong>Financial Year Beginning From</strong> = the beginning of the financial
+                                        year. <strong>Books Beginning From</strong> = the date from which you maintain
+                                        the books in TallyPrime.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-8">
+                        <span class="timeline-number">08</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 08</span>
+                            <h3>Configure GST in TallyPrime</h3>
+                            <p>If the business is registered under GST, configure the settings according to its
+                                registration and applicable requirements. Depending on the business and configuration,
+                                you may need to enter:</p>
+                            <ul>
+                                <li>GST registration status</li>
+                                <li>Registration type</li>
+                                <li>GSTIN/UIN</li>
+                                <li>State</li>
+                                <li>Applicable GST settings</li>
+                            </ul>
+                            <div class="gst-example"><span>Illustrative example</span>
+                                <div><span>GST Registration</span><strong>Regular, if applicable</strong></div>
+                                <div><span>GSTIN</span><strong>Enter the business GSTIN</strong></div>
+                            </div>
+                            <p>Verify the GST details before saving. Incorrect details can affect tax calculations,
+                                transaction recording and GST-related reports.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-9">
+                        <span class="timeline-number">09</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 09</span>
+                            <h3>Configure Other Company Features</h3>
+                            <p>Enable features according to the business’s needs. You do not necessarily need to
+                                activate every feature during company creation.</p>
+                            <ul>
+                                <li>Accounting</li>
+                                <li>Inventory</li>
+                                <li>GST</li>
+                                <li>Payroll</li>
+                                <li>Banking</li>
+                                <li>Cost centres</li>
+                                <li>Budgets</li>
+                                <li>Security</li>
+                                <li>Multiple currencies</li>
+                            </ul>
+                            <p>A small service business may mainly require accounting and GST, while a trading or
+                                manufacturing business may also need inventory management.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="step-10">
+                        <span class="timeline-number">10</span>
+                        <div class="timeline-content">
+                            <span class="timeline-label">Step 10</span>
+                            <h3>Review and Save the Company</h3>
+                            <p>Before accepting the configuration, review the information you entered:</p>
+                            <ul>
+                                <li>Company name</li>
+                                <li>Address and state</li>
+                                <li>Contact details</li>
+                                <li>Financial year</li>
+                                <li>Books beginning date</li>
+                                <li>GST details</li>
+                                <li>Enabled features</li>
+                            </ul>
+                            <p>When the information is correct, accept the configuration to create the company. You can
+                                then continue with the accounting setup.</p>
+                            <div class="step-complete"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <div><strong>Company created</strong><span>Next, prepare the ledgers, groups, inventory
+                                        items and other required records.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRACTICAL EXAMPLE -->
+            <section class="article-block" id="practical-example">
+                <div class="section-number">06 / WORKED EXAMPLE</div>
+                <h2>Practical Example: Creating a Company in TallyPrime</h2>
+                <p>Suppose you want to create a company for a business called <strong>Ravi Enterprises</strong>. Its
+                    basic setup could look like this:</p>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Company Name</td>
+                                <td>Ravi Enterprises</td>
+                            </tr>
+                            <tr>
+                                <td>Country</td>
+                                <td>India</td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td>Tamil Nadu</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>Chennai, Tamil Nadu</td>
+                            </tr>
+                            <tr>
+                                <td>Financial Year Beginning From</td>
+                                <td>1 April 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Books Beginning From</td>
+                                <td>1 April 2026</td>
+                            </tr>
+                            <tr>
+                                <td>GST Registration</td>
+                                <td>Yes, if applicable</td>
+                            </tr>
+                            <tr>
+                                <td>GSTIN</td>
+                                <td>Business GSTIN, if applicable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>After saving the company, you can create the groups, ledgers, stock items and other configurations
+                    that the business requires.</p>
+            </section>
+
+            <!-- AFTER COMPANY CREATION -->
+            <section class="article-block" id="after-creation">
+                <div class="section-number">07 / NEXT STEPS</div>
+                <h2>What to Do After Creating a Company in TallyPrime?</h2>
+                <p>Company creation is only the first step. Build the accounting structure before recording
+                    transactions.</p>
+
+                <div class="after-creation-list">
+                    <div class="after-creation-item"><span class="after-icon"><i class="fa-solid fa-folder-tree"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <h3>1. Create Groups</h3>
+                            <p>Groups classify and organise ledgers. Examples include Sundry Debtors, Sundry Creditors,
+                                Bank Accounts, Cash-in-Hand, Sales Accounts, Purchase Accounts, Direct Expenses and
+                                Indirect Expenses.</p>
+                        </div>
+                    </div>
+                    <div class="after-creation-item"><span class="after-icon"><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <h3>2. Create Ledgers</h3>
+                            <p>Ledgers record specific accounts and transaction categories. Common examples include
+                                Cash, Bank, Sales, Purchase, Rent, Salary, Electricity, customer accounts and supplier
+                                accounts.</p>
+                        </div>
+                    </div>
+                    <div class="after-creation-item"><span class="after-icon"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <h3>3. Create Stock Items</h3>
+                            <p>Product-based businesses may need Stock Groups, Stock Categories, Units of Measurement,
+                                Stock Items and Godowns to manage inventory.</p>
+                        </div>
+                    </div>
+                    <div class="after-creation-item"><span class="after-icon"><i class="fa-solid fa-file-invoice-dollar"
+                                aria-hidden="true"></i></span>
+                        <div>
+                            <h3>4. Configure GST</h3>
+                            <p>If GST applies, check the GST-related ledgers, tax details and inventory configurations
+                                before recording sales and purchase transactions.</p>
+                        </div>
+                    </div>
+                    <div class="after-creation-item"><span class="after-icon"><i
+                                class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i></span>
+                        <div>
+                            <h3>5. Start Recording Transactions</h3>
+                            <p>Begin practising voucher types such as Payment, Receipt, Contra, Sales, Purchase,
+                                Journal, Debit Note and Credit Note.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DATE DIFFERENCE -->
+            <section class="article-block" id="financial-year-vs-books">
+                <div class="section-number">08 / IMPORTANT SETTINGS</div>
+                <h2>Financial Year vs Books Beginning From in TallyPrime</h2>
+                <p>These settings are related but describe two different dates.</p>
+                <div class="comparison-box">
+                    <div class="comparison-item"><span class="comparison-icon"><i class="fa-regular fa-calendar"
+                                aria-hidden="true"></i></span>
+                        <h3>Financial Year Beginning From</h3>
+                        <p>The date on which the company’s financial year begins.</p>
+                        <div class="comparison-value"><span>Example</span><strong>1 April 2026</strong></div>
+                    </div>
+                    <div class="comparison-item"><span class="comparison-icon"><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i></span>
+                        <h3>Books Beginning From</h3>
+                        <p>The date from which you want to maintain accounting books in TallyPrime.</p>
+                        <div class="comparison-value"><span>Example</span><strong>1 July 2026</strong></div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>Example</h3>
+                        <p>If the financial year starts on 1 April 2026 but you intend to begin maintaining the books
+                            from 1 July 2026, the two settings may reflect those different dates. Choose them based on
+                            your business’s accounting requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MULTIPLE COMPANIES -->
+            <section class="article-block" id="multiple-companies">
+                <div class="section-number">09 / COMPANY MANAGEMENT</div>
+                <h2>Can You Create Multiple Companies in TallyPrime?</h2>
+                <p>Yes. TallyPrime can be used to maintain data for multiple companies. For example, an accountant who
+                    manages more than one business may maintain separate company data for:</p>
+                <div class="company-chip-list"><span><i class="fa-solid fa-building" aria-hidden="true"></i> ABC
+                        Traders</span><span><i class="fa-solid fa-building" aria-hidden="true"></i> XYZ
+                        Enterprises</span><span><i class="fa-solid fa-building" aria-hidden="true"></i> Ravi
+                        Services</span></div>
+                <p>Each company can have its own accounting data and configuration. This can be useful for accountants,
+                    consultants and businesses managing multiple entities.</p>
+            </section>
+
+            <!-- ALTER DETAILS -->
+            <section class="article-block" id="alter-company-details">
+                <div class="section-number">10 / COMPANY MANAGEMENT</div>
+                <h2>Can You Alter Company Details After Creating a Company?</h2>
+                <p>Yes. Company information and various configuration settings can be altered after the company has been
+                    created. Depending on what needs to be changed, you may update:</p>
+                <ul class="blue-check-list">
+                    <li>Address</li>
+                    <li>Contact details</li>
+                    <li>GST-related information</li>
+                    <li>Company configuration</li>
+                    <li>Security settings</li>
+                    <li>Other company details</li>
+                </ul>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></div>
+                    <div>
+                        <h3>Make important changes carefully</h3>
+                        <p>Changes to accounting or statutory settings may affect transactions and reports. Review their
+                            consequences before altering important information.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMMON MISTAKES -->
+            <section class="article-block" id="common-mistakes">
+                <div class="section-number">11 / CHECK BEFORE SAVING</div>
+                <h2>Common Mistakes When Creating a Company in TallyPrime</h2>
+                <div class="mistake-list">
+                    <div><span>01</span>
+                        <div>
+                            <h3>Entering the Wrong Company Name</h3>
+                            <p>Check the spelling and business name before saving.</p>
+                        </div>
+                    </div>
+                    <div><span>02</span>
+                        <div>
+                            <h3>Selecting the Wrong State</h3>
+                            <p>The state selection can affect GST-related configuration.</p>
+                        </div>
+                    </div>
+                    <div><span>03</span>
+                        <div>
+                            <h3>Entering an Incorrect Financial Year</h3>
+                            <p>Make sure the date matches the accounting period you are setting up.</p>
+                        </div>
+                    </div>
+                    <div><span>04</span>
+                        <div>
+                            <h3>Confusing the Books Beginning Date</h3>
+                            <p>The books beginning date can differ from the financial year start date.</p>
+                        </div>
+                    </div>
+                    <div><span>05</span>
+                        <div>
+                            <h3>Entering an Incorrect GSTIN</h3>
+                            <p>If GST applies, verify the business registration details before saving.</p>
+                        </div>
+                    </div>
+                    <div><span>06</span>
+                        <div>
+                            <h3>Enabling Unnecessary Features</h3>
+                            <p>Configure the features that fit the business requirements.</p>
+                        </div>
+                    </div>
+                    <div><span>07</span>
+                        <div>
+                            <h3>Skipping the Final Review</h3>
+                            <p>Review key company details and settings before accepting the configuration.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRACTICAL LEARNING CTA -->
+            <section class="training-cta" id="practical-training">
+                <div class="training-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                <div class="training-cta-content">
+                    <span class="training-eyebrow">RLT EDZARO</span>
+                    <h2>Learn TallyPrime Through Practical Training</h2>
+                    <p>Go beyond company creation and learn accounting fundamentals, ledgers, GST, transactions,
+                        inventory and accounting reports through structured Tally training.</p>
+                    <a routerLink="/tally-prime" class="training-button">Explore TallyPrime Course <i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </section>
+
+            <!-- FAQ: keep questions and answers aligned with the TypeScript FAQ schema -->
+            <section class="article-block faq-section" id="faq">
+                <div class="section-number">12 / COMMON QUESTIONS</div>
+                <h2>Frequently Asked Questions About Creating a Company in TallyPrime</h2>
+
+                <details class="faq-item">
+                    <summary>How do I create a company in TallyPrime?<span aria-hidden="true"><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </summary>
+                    <p>Open TallyPrime, select Create Company, enter the business details, set the financial year and
+                        books beginning date, configure GST if applicable, review the information and save the company.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is the first step in creating a company in TallyPrime?<span><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+                    <p>Open TallyPrime and select Create Company. If another company is open, use the company-related
+                        options to start creating a new company.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I create a company without GST in TallyPrime?<span><i class="fa-solid fa-plus"
+                                aria-hidden="true"></i></span></summary>
+                    <p>Yes. GST configuration depends on the business registration status and applicable requirements.
+                        Configure GST when it applies to the business.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What date should I enter as the financial year in TallyPrime?<span><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+                    <p>For businesses following the Indian financial year, the financial year generally begins on 1
+                        April. Use the date that matches the company accounting period.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is Books Beginning From in TallyPrime?<span aria-hidden="true"><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </summary>
+                    <p>Books Beginning From is the date from which you want to start maintaining the company accounting
+                        books in TallyPrime.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can the financial year and books beginning date be different?<span><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span></summary>
+                    <p>Yes. They can differ depending on when the business wants to begin maintaining its books in
+                        TallyPrime and its accounting requirements.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I create multiple companies in TallyPrime?<span aria-hidden="true"><i
+                                class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </summary>
+                    <p>Yes. TallyPrime can maintain data for multiple companies, with separate accounting data and
+                        configuration for each company.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I change company details after creating a company?<span><i class="fa-solid fa-plus"
+                                aria-hidden="true"></i></span></summary>
+                    <p>Various company details and settings can be altered after creation. Change important accounting
+                        and statutory settings carefully because they may affect transactions and reports.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What should I do after creating a company in TallyPrime?<span><i class="fa-solid fa-plus"
+                                aria-hidden="true"></i></span></summary>
+                    <p>Create the necessary groups, ledgers and stock items, configure GST if applicable, and then begin
+                        recording business transactions.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is TallyPrime company creation difficult for beginners?<span><i class="fa-solid fa-plus"
+                                aria-hidden="true"></i></span></summary>
+                    <p>The basic process is straightforward. Understanding the purpose of each setting and practising
+                        with business examples helps beginners use TallyPrime more effectively.</p>
+                </details>
+            </section>
+
+            <!-- RELATED ARTICLES / INTERNAL LINKS -->
+            <section class="related-articles" id="related-topics">
+                <div class="section-number">CONTINUE LEARNING</div>
+                <h2>Related TallyPrime Topics</h2>
+                <p class="related-intro">After creating a company, continue learning how to manage transactions, GST and
+                    inventory in TallyPrime.</p>
+                <div class="related-grid">
+                    <a routerLink="/tally-prime" class="related-card"><span class="related-icon"><i
+                                class="fa-solid fa-calculator" aria-hidden="true"></i></span><span
+                            class="related-copy"><strong>TallyPrime
+                                Course</strong><small>Explore TallyPrime training and accounting
+                                workflows.</small></span><i class="fa-solid fa-arrow-right related-arrow"
+                            aria-hidden="true"></i></a>
+                    <a routerLink="/gst-simulation" class="related-card"><span class="related-icon"><i
+                                class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i></span><span
+                            class="related-copy"><strong>GST Simulation</strong><small>Explore GST-related learning and
+                                transaction practice.</small></span><i class="fa-solid fa-arrow-right related-arrow"
+                            aria-hidden="true"></i></a>
+                    <a routerLink="/complete-guide-to-inventory-management" class="related-card"><span
+                            class="related-icon"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i></span><span class="related-copy"><strong>Inventory
+                                Management</strong><small>Understand stock records
+                                and inventory workflows.</small></span><i class="fa-solid fa-arrow-right related-arrow"
+                            aria-hidden="true"></i></a>
+                    <a routerLink="/blogs" class="related-card"><span class="related-icon"><i
+                                class="fa-solid fa-book-open" aria-hidden="true"></i></span><span
+                            class="related-copy"><strong>More Tally
+                                Articles</strong><small>Browse the RLT Edzaro blog for practical
+                                guides.</small></span><i class="fa-solid fa-arrow-right related-arrow"
+                            aria-hidden="true"></i></a>
+                </div>
+            </section>
+
+            <!-- CONCLUSION -->
+            <section class="article-block final-thoughts" id="conclusion">
+                <div class="section-number">13 / SUMMARY</div>
+                <h2>Conclusion</h2>
+                <p>Creating a company in TallyPrime is the starting point for maintaining accounting records in the
+                    software. The main process is:</p>
+                <div class="process-flow" aria-label="Company creation steps"><span>Open TallyPrime</span><i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>Create Company</span><i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>Enter Details</span><i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>Set Dates &amp; GST</span><i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i><span>Review &amp; Save</span></div>
+                <p>After creating the company, continue with groups, ledgers, stock items, GST configuration where
+                    applicable and accounting transactions. Understanding the purpose of each setting is just as
+                    important as knowing the steps. Regular practice with realistic business examples can help you build
+                    confidence in TallyPrime.</p>
+            </section>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar" aria-label="Article navigation and enquiry">
+            <div class="sidebar-card">
+                <div class="sidebar-heading">
+                    <span class="sidebar-heading-icon"><i class="fa-solid fa-list" aria-hidden="true"></i></span>
+                    <div><span>ARTICLE GUIDE</span>
+                        <h3>In This Article</h3>
+                    </div>
+                </div>
+                <nav class="article-nav" aria-label="On this page">
+                    <button type="button" (click)="scrollToSection('quick-answer')">Quick Answer</button>
+                    <button type="button" (click)="scrollToSection('introduction')">Introduction</button>
+                    <button type="button" (click)="scrollToSection('creation-overview')">Creation at a Glance</button>
+                    <button type="button" (click)="scrollToSection('what-is-company')">What Is a Company?</button>
+                    <button type="button" (click)="scrollToSection('information-needed')">Information to
+                        Prepare</button>
+                    <button type="button" (click)="scrollToSection('step-by-step')">10-Step Guide</button>
+                    <button type="button" (click)="scrollToSection('practical-example')">Practical Example</button>
+                    <button type="button" (click)="scrollToSection('after-creation')">After Creation</button>
+                    <button type="button" (click)="scrollToSection('financial-year-vs-books')">Financial Year vs
+                        Books</button>
+                    <button type="button" (click)="scrollToSection('multiple-companies')">Multiple Companies</button>
+                    <button type="button" (click)="scrollToSection('alter-company-details')">Alter Company
+                        Details</button>
+                    <button type="button" (click)="scrollToSection('common-mistakes')">Common Mistakes</button>
+                    <button type="button" (click)="scrollToSection('faq')">FAQs</button>
+                    <button type="button" (click)="scrollToSection('conclusion')">Conclusion</button>
+                </nav>
+            </div>
+
+            <div class="sidebar-card sidebar-cta">
+                <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                <span class="sidebar-cta-kicker">RLT EDZARO</span>
+                <h3>Learn TallyPrime practically</h3>
+                <p>Continue beyond company setup with accounting, GST and transaction practice.</p>
+                <a routerLink="/tally-prime" class="sidebar-cta-button">Explore Course <i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="sidebar-card">
+                <span class="checklist-eyebrow"><i class="fa-solid fa-list-check" aria-hidden="true"></i> QUICK
+                    CHECKLIST</span>
+                <h3>Before you save</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Company name</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Country and state</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Financial year</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Books beginning date</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> GST details, if applicable</li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+</section>

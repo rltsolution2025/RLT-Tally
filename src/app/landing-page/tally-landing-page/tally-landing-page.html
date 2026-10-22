@@ -1,0 +1,416 @@
+<!-- =========================================================
+     RLT EDZARO — TALLY COURSES CATALOGUE LANDING PAGE
+     Angular 21 standalone template
+     ========================================================= -->
+<main class="tally-catalogue">
+
+    <!-- HERO -->
+    <section class="tc-hero" aria-labelledby="tc-page-title">
+        <div class="tc-hero-grid" aria-hidden="true"></div>
+        <div class="tc-hero-glow tc-glow-left" aria-hidden="true"></div>
+        <div class="tc-hero-glow tc-glow-right" aria-hidden="true"></div>
+        <div class="tc-hero-noise" aria-hidden="true"></div>
+
+        <div class="tc-container tc-hero-layout">
+            <div class="tc-hero-copy">
+                <nav class="tc-breadcrumbs" aria-label="Breadcrumb">
+                    <a routerLink="/">Home</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">Tally Courses</span>
+                </nav>
+
+                <span class="tc-eyebrow">
+                    <span class="tc-eyebrow-dot"></span>
+                    ACCOUNTING · GST · BUSINESS SOFTWARE
+                </span>
+
+                <h1 id="tc-page-title">
+                    Find Your Tally Course.
+                    <span>Build Practical Skills.</span>
+                </h1>
+
+                <p class="tc-hero-description">
+                    Explore Tally Essential, TallyPrime, professional accounting, GST,
+                    payroll, inventory and more. Compare learning paths and choose a
+                    course that fits your goals at RLT Edzaro.
+                </p>
+
+                <div class="tc-hero-actions">
+                    <a class="tc-btn tc-btn-primary" href="#tally-courses">
+                        Explore All Courses
+                        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                    </a>
+                    <button class="tc-btn tc-btn-outline" type="button" (click)="openEnquiry()">
+                        Enquire Now
+                        <i class="fa-regular fa-message" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="tc-hero-points" aria-label="Course topics">
+                    <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> Accounting fundamentals</span>
+                    <span><i class="fa-solid fa-file-invoice" aria-hidden="true"></i> GST &amp; taxation</span>
+                    <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical software skills</span>
+                </div>
+
+                <a href="#tally-courses" class="tc-scroll-cue">
+                    <span class="tc-scroll-mouse" aria-hidden="true"><i></i></span>
+                    <span>Scroll to explore</span>
+                </a>
+            </div>
+
+            <!-- CSS-built 3D accounting dashboard -->
+            <div class="tc-hero-art" aria-label="Illustrated accounting dashboard showing accounting, GST and reports">
+                <div class="tc-art-orbit tc-art-orbit-one" aria-hidden="true"></div>
+                <div class="tc-art-orbit tc-art-orbit-two" aria-hidden="true"></div>
+                <div class="tc-art-orbit tc-art-orbit-three" aria-hidden="true"></div>
+                <span class="tc-art-spark tc-spark-one" aria-hidden="true">✦</span>
+                <span class="tc-art-spark tc-spark-two" aria-hidden="true">✧</span>
+                <span class="tc-art-spark tc-spark-three" aria-hidden="true">✦</span>
+
+                <div class="tc-floating-icon tc-float-invoice" aria-hidden="true"><i
+                        class="fa-solid fa-file-invoice"></i></div>
+                <div class="tc-floating-icon tc-float-calculator" aria-hidden="true"><i
+                        class="fa-solid fa-calculator"></i></div>
+                <div class="tc-floating-icon tc-float-chart" aria-hidden="true"><i class="fa-solid fa-chart-column"></i>
+                </div>
+                <div class="tc-floating-icon tc-float-gst" aria-hidden="true"><span>GST</span></div>
+
+                <div class="tc-dashboard-wrap">
+                    <div class="tc-dashboard">
+                        <div class="tc-dashboard-top">
+                            <div class="tc-dashboard-brand">
+                                <span class="tc-dashboard-logo"><i class="fa-solid fa-chart-pie"
+                                        aria-hidden="true"></i></span>
+                                <span><strong>BUSINESS OVERVIEW</strong><small>Accounting dashboard</small></span>
+                            </div>
+                            <span class="tc-dashboard-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        </div>
+
+                        <div class="tc-dashboard-welcome">
+                            <span>YOUR LEARNING JOURNEY</span>
+                            <strong>Accounting made organised.</strong>
+                        </div>
+
+                        <div class="tc-dashboard-metrics">
+                            <div class="tc-metric">
+                                <span>Accounting</span><strong><i class="fa-solid fa-calculator"
+                                        aria-hidden="true"></i></strong>
+                                <div class="tc-mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i>
+                                </div>
+                            </div>
+                            <div class="tc-metric">
+                                <span>GST</span><strong><i class="fa-solid fa-file-invoice-dollar"
+                                        aria-hidden="true"></i></strong>
+                                <div class="tc-mini-bars tc-bars-two" aria-hidden="true">
+                                    <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                            </div>
+                            <div class="tc-metric">
+                                <span>Reports</span><strong><i class="fa-solid fa-chart-pie"
+                                        aria-hidden="true"></i></strong>
+                                <div class="tc-mini-bars tc-bars-three" aria-hidden="true">
+                                    <i></i><i></i><i></i><i></i><i></i><i></i></div>
+                            </div>
+                        </div>
+
+                        <div class="tc-dashboard-bottom">
+                            <div class="tc-dashboard-list">
+                                <span class="tc-list-heading">LEARNING AREAS</span>
+                                <div><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Accounting entries
+                                </div>
+                                <div><i class="fa-solid fa-circle-check" aria-hidden="true"></i> GST transactions</div>
+                                <div><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Inventory &amp; payroll
+                                </div>
+                            </div>
+                            <div class="tc-dashboard-ring" aria-hidden="true">
+                                <div><strong>LEARN</strong><small>BY DOING</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tc-art-caption"><span></span> ACCOUNTING · GST · REPORTING</div>
+            </div>
+        </div>
+        <div class="tc-hero-bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- COURSE CATALOGUE -->
+    <section class="tc-section tc-catalogue-section" id="tally-courses" aria-labelledby="tc-catalogue-title">
+        <div class="tc-container">
+            <header class="tc-section-heading tc-reveal">
+                <span class="tc-section-kicker">EXPLORE OUR COURSE CATALOGUE</span>
+                <h2 id="tc-catalogue-title">Find the right <span>Tally course</span> for you</h2>
+                <p>Browse our course list, filter by learning area or search for a topic you want to develop.</p>
+            </header>
+
+            <!-- Search and filter controls -->
+            <div class="tc-course-tools tc-reveal">
+                <label class="tc-search-box">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input type="search" [value]="searchTerm" (input)="onSearchChange($event)"
+                        placeholder="Search Tally, GST, payroll, inventory..." aria-label="Search Tally courses">
+                    @if (searchTerm) {
+                    <button type="button" class="tc-clear-search" aria-label="Clear search" (click)="clearSearch()">
+                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                    </button>
+                    }
+                </label>
+
+                <span class="tc-results-count" aria-live="polite">
+                    <strong>{{ filteredCourses.length }}</strong> {{ filteredCourses.length === 1 ? 'course' : 'courses'
+                    }}
+                </span>
+            </div>
+
+            <div class="tc-filter-row" aria-label="Filter courses by category">
+                @for (category of categories; track category) {
+                <button type="button" class="tc-filter-chip" [class.is-active]="activeCategory === category"
+                    [attr.aria-pressed]="activeCategory === category" (click)="setCategory(category)">{{ category
+                    }}</button>
+                }
+            </div>
+
+            <div class="tc-course-grid">
+                @for (course of filteredCourses; track course.slug; let i = $index) {
+                <article class="tc-course-card tc-reveal" [style.--card-index]="i" (pointermove)="tiltCard($event)"
+                    (pointerleave)="resetCardTilt($event)">
+                    <div class="tc-course-visual" [ngClass]="course.visualClass">
+                        <span class="tc-course-number">{{ (i + 1).toString().padStart(2, '0') }}</span>
+                        <div class="tc-course-illustration" aria-hidden="true">
+                            <i [class]="course.icon"></i>
+                            <span class="tc-illustration-orbit"></span>
+                            <span class="tc-illustration-core"></span>
+                        </div>
+                        <span class="tc-course-visual-label">{{ course.visualLabel }}</span>
+                        <span class="tc-visual-grid" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="tc-course-body">
+                        <div class="tc-course-meta-line">
+                            <span class="tc-course-category">{{ course.category }}</span>
+                            @if (course.featured) {
+                            <span class="tc-featured-tag"><i class="fa-solid fa-star" aria-hidden="true"></i>
+                                Featured</span>
+                            }
+                        </div>
+
+                        <h3>{{ course.title }}</h3>
+                        <p class="tc-course-description">{{ course.description }}</p>
+
+                        <div class="tc-course-topics">
+                            @for (topic of course.topics; track topic) {
+                            <span>{{ topic }}</span>
+                            }
+                        </div>
+
+                        <div class="tc-course-footer">
+                            <a class="tc-course-link" [routerLink]="['/', course.slug]">
+                                View Course <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                            <button type="button" class="tc-course-enquire"
+                                [attr.aria-label]="'Enquire about ' + course.title" (click)="openEnquiry(course)">
+                                <i class="fa-regular fa-message" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                } @empty {
+                <div class="tc-no-results">
+                    <span><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+                    <h3>No matching courses found</h3>
+                    <p>Try another search term or reset the category filter.</p>
+                    <button type="button" class="tc-btn tc-btn-primary" (click)="resetFilters()">Show All
+                        Courses</button>
+                </div>
+                }
+            </div>
+
+            <p class="tc-catalogue-note tc-reveal">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                Course content, fees, eligibility and batch availability can be confirmed with RLT Edzaro before
+                enrollment.
+            </p>
+        </div>
+    </section>
+
+    <!-- LEARNING BENEFITS -->
+    <section class="tc-section tc-benefits-section">
+        <div class="tc-container">
+            <header class="tc-section-heading tc-reveal">
+                <span class="tc-section-kicker">LEARN WITH A CLEAR DIRECTION</span>
+                <h2>Build your <span>accounting foundation</span></h2>
+                <p>Explore the practical workflows that connect accounting software with everyday business operations.
+                </p>
+            </header>
+
+            <div class="tc-benefits-grid">
+                <article class="tc-benefit-card tc-reveal">
+                    <span class="tc-benefit-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span>
+                    <h3>Understand Accounting</h3>
+                    <p>Explore ledgers, accounting groups, vouchers and financial reports.</p>
+                </article>
+                <article class="tc-benefit-card tc-reveal">
+                    <span class="tc-benefit-icon"><i class="fa-solid fa-file-invoice-dollar"
+                            aria-hidden="true"></i></span>
+                    <h3>Explore GST Workflows</h3>
+                    <p>Understand GST-related entries, tax invoices and reporting workflows.</p>
+                </article>
+                <article class="tc-benefit-card tc-reveal">
+                    <span class="tc-benefit-icon"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i></span>
+                    <h3>Learn Business Operations</h3>
+                    <p>Explore inventory, payroll and the records businesses need to maintain.</p>
+                </article>
+                <article class="tc-benefit-card tc-reveal">
+                    <span class="tc-benefit-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+                    <h3>Read Financial Reports</h3>
+                    <p>Understand how recorded transactions connect with business reporting.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEARNING PATH -->
+    <section class="tc-section tc-path-section">
+        <div class="tc-container tc-path-layout">
+            <div class="tc-path-copy tc-reveal">
+                <span class="tc-section-kicker">CHOOSE YOUR LEARNING PATH</span>
+                <h2>Start where you are.<br><span>Build from there.</span></h2>
+                <p>The suitable course depends on your current knowledge and the area you want to focus on next.</p>
+                <button type="button" class="tc-btn tc-btn-primary" (click)="openEnquiry()">
+                    Get Course Guidance <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="tc-path-list">
+                @for (path of learningPaths; track path.number) {
+                <button type="button" class="tc-path-item tc-reveal" (click)="openEnquiry(path.course)">
+                    <span class="tc-path-number">{{ path.number }}</span>
+                    <span class="tc-path-copy-item">
+                        <strong>{{ path.title }}</strong>
+                        <small>{{ path.description }}</small>
+                    </span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="tc-section tc-faq-section">
+        <div class="tc-container tc-faq-layout">
+            <header class="tc-section-heading tc-reveal">
+                <span class="tc-section-kicker">FREQUENTLY ASKED QUESTIONS</span>
+                <h2>Questions about <span>Tally courses?</span></h2>
+                <p>Review these common questions before choosing your course.</p>
+            </header>
+
+            <div class="tc-faq-list tc-reveal">
+                @for (faq of faqs; track faq.question) {
+                <details class="tc-faq-item">
+                    <summary>
+                        {{ faq.question }}
+                        <span><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
+                    </summary>
+                    <p>{{ faq.answer }}</p>
+                </details>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="tc-final-cta">
+        <div class="tc-final-cta-pattern" aria-hidden="true"></div>
+        <div class="tc-container tc-final-cta-layout">
+            <div class="tc-final-cta-copy tc-reveal">
+                <span class="tc-section-kicker tc-light-kicker">TAKE YOUR NEXT STEP</span>
+                <h2>Ready to explore <span>Tally training?</span></h2>
+                <p>Tell us what you want to learn and get guidance on the Tally course that suits your goals.</p>
+            </div>
+            <div class="tc-final-cta-actions tc-reveal">
+                <button type="button" class="tc-btn tc-btn-white" (click)="openEnquiry()">
+                    Enquire About Courses <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </button>
+                <a class="tc-contact-link" href="tel:+918925500513">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i> 89255 00513
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENQUIRY POPUP MODAL -->
+    @if (isModalOpen) {
+    <div class="tc-modal-backdrop" (click)="closeEnquiry()" role="presentation">
+        <section class="tc-enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="tc-modal-title"
+            (click)="$event.stopPropagation()">
+            <button type="button" class="tc-modal-close" (click)="closeEnquiry()" aria-label="Close enquiry form">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+
+            <div class="tc-modal-heading">
+                <span class="tc-modal-icon"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+                <span class="tc-section-kicker">RLT EDZARO COURSE ENQUIRY</span>
+                <h2 id="tc-modal-title">Find your <span>Tally course</span></h2>
+                <p>Share your details and prepare an enquiry message for our team.</p>
+            </div>
+
+            <form class="tc-enquiry-form" #enquiryForm="ngForm" (ngSubmit)="submitEnquiry(enquiryForm)">
+                <div class="tc-form-grid">
+                    <label class="tc-field">
+                        <span>Full name <b>*</b></span>
+                        <input type="text" name="name" [(ngModel)]="enquiry.name" required minlength="2" maxlength="80"
+                            placeholder="Enter your name" autocomplete="name">
+                    </label>
+
+                    <label class="tc-field">
+                        <span>Mobile number <b>*</b></span>
+                        <input type="tel" name="phone" [(ngModel)]="enquiry.phone" required minlength="8" maxlength="18"
+                            pattern="[+0-9() -]{8,18}" placeholder="Enter mobile number" autocomplete="tel">
+                    </label>
+
+                    <label class="tc-field tc-field-full">
+                        <span>Email address <small>(optional)</small></span>
+                        <input type="email" name="email" [(ngModel)]="enquiry.email" email maxlength="120"
+                            placeholder="you@example.com" autocomplete="email">
+                    </label>
+
+                    <label class="tc-field tc-field-full">
+                        <span>Course of interest <b>*</b></span>
+                        <select name="course" [(ngModel)]="enquiry.course" required>
+                            <option value="">Choose a course</option>
+                            @for (course of courses; track course.slug) {
+                            <option [value]="course.title">{{ course.title }}</option>
+                            }
+                            <option value="Course guidance / not sure yet">Help me choose a course</option>
+                        </select>
+                    </label>
+
+                    <label class="tc-field tc-field-full">
+                        <span>What would you like to learn? <small>(optional)</small></span>
+                        <textarea name="message" [(ngModel)]="enquiry.message" rows="3" maxlength="500"
+                            placeholder="Tell us about your learning goals..."></textarea>
+                    </label>
+                </div>
+
+                @if (submissionNote) {
+                <div class="tc-submit-note" role="status">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <span>{{ submissionNote }}</span>
+                </div>
+                }
+
+                <button class="tc-btn tc-btn-primary tc-submit-btn" type="submit" [disabled]="enquiryForm.invalid">
+                    Prepare WhatsApp Enquiry
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </button>
+
+                <p class="tc-privacy-note">
+                    This opens WhatsApp with a prepared message. Review it and press Send to submit your enquiry.
+                </p>
+            </form>
+        </section>
+    </div>
+    }
+
+</main>

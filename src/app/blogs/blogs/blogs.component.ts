@@ -220,6 +220,87 @@ export class BlogsComponent {
       readTime: '15 min read',
       url: '/tallyprime-practical-test-questions-accountant-jobs/',
     },
+    {
+      title: 'TallyPrime Payroll: How to Manage Employee Salaries',
+      description:
+        'Learn how to manage employee salaries in TallyPrime with this step-by-step guide. Understand payroll setup, employee records, salary components, pay heads, attendance management, salary calculations, PF and ESI deductions, payslip generation, and payroll reports.',
+      image: 'blogs-image/TallyPrime-Payroll-How-to-Manage-Employee-Salaries.png',
+      category: 'Tally & Finance',
+      date: 'October 12, 2026',
+      readTime: '15 min read',
+      url: '/tallyprime-payroll-manage-employee-salaries/',
+    },
+    {
+      title: 'How to Create a Company in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to create a company in TallyPrime step by step. Understand company details, business address, country and state selection, financial year, books beginning date, GST setup, and what to do after company creation.',
+      image: 'blogs-image/How-to-Create-Company-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026', // Update to the actual publication date if different
+      readTime: '10 min read',
+      url: '/how-to-create-company-in-tallyprime/',
+    },
+    {
+      title: 'How to Create Ledgers in TallyPrime With Real Examples',
+      description:
+        'Learn how to create ledgers in TallyPrime step by step with real accounting examples. Understand ledger groups, customer ledgers, supplier ledgers, expenses, sales, purchases, and GST.',
+      image:
+        'blogs-image/How-to-Create-Ledgers-in-TallyPrime-With-Real-Examples.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026',
+      readTime: '15 min read',
+      url: '/how-to-create-ledgers-in-tallyprime/',
+    },
+    {
+      title: '50 TallyPrime Shortcut Keys Every Accountant Should Know',
+      description:
+        'Discover 50 useful TallyPrime shortcut keys for accounting, voucher entry, report navigation, company management, and daily data entry. Learn commonly used function keys, keyboard combinations, practical examples, and tips to improve your accounting workflow.',
+      image: 'blogs-image/TallyPrime-Shortcut-Keys.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026',
+      readTime: '10 min read',
+      url: '/tallyprime-shortcut-keys/',
+    },
+    {
+      title: 'TallyPrime Keyboard Shortcuts for Sales and Purchase Entries',
+      description:
+        'Learn TallyPrime keyboard shortcuts for sales and purchase entries, GST invoices, customer and supplier ledgers, and practical billing workflows. Discover how to use F8 for Sales, F9 for Purchase, F2 for date changes, and Alt + C to create masters in supported fields.',
+      image: 'blogs-image/TallyPrime-Sales-Purchase-Shortcut-Keys.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026',
+      readTime: '8 min read',
+      url: '/tallyprime-sales-purchase-shortcut-keys/',
+    },
+    {
+      title: 'How to Use Go To and Search Features in TallyPrime',
+      description:
+        'Learn how to use Go To and search features in TallyPrime to find financial reports, vouchers, ledgers, sales registers, and accounting information faster. Discover how to use Alt + G, navigate reports, apply date filters, and improve your daily accounting workflow.',
+      image: 'blogs-image/How-to-Use-Go-To-and-Search-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026',
+      readTime: '8 min read',
+      url: '/how-to-use-go-to-search-in-tallyprime/',
+    },
+    {
+      title: 'How to Create Masters Quickly in TallyPrime',
+      description:
+        'Learn how to create ledgers, stock items, groups, stock groups, units, customers, and suppliers in TallyPrime. Follow step-by-step instructions for creating masters, using Alt + C for supported on-the-fly creation, configuring GST details, avoiding duplicate records, and maintaining accurate accounting data.',
+      image: 'blogs-image/How-to-Create-Masters-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 21, 2026',
+      readTime: '12 min read',
+      url: '/how-to-create-masters-in-tallyprime/',
+    },
+    {
+      title: 'TallyPrime Tips to Reduce Manual Accounting Work: 12 Practical Ways to Save Time',
+      description:
+        'Discover 12 practical TallyPrime tips to reduce manual accounting work, speed up voucher entry, configure GST calculations, reconcile bank statements, manage inventory, generate financial reports, import data, and improve accounting accuracy.',
+      image: 'blogs-image/TallyPrime-Tips-to-Reduce-Manual-Accounting-Work.png',
+      category: 'Tally & Finance',
+      date: 'October 22, 2026',
+      readTime: '12 min read',
+      url: '/tallyprime-tips-to-reduce-manual-accounting-work/',
+    },
   ];
 
   // =========================================================

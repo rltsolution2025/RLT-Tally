@@ -1,0 +1,1127 @@
+<!-- =========================================================
+  RLT EDZARO | HOW TO CREATE LEDGERS IN TALLYPRIME
+  Angular component template
+========================================================= -->
+<div class="ledger-blog-page">
+    <!-- HERO -->
+    <section class="article-hero" aria-labelledby="article-title">
+        <div class="container">
+            <div class="article-hero-content">
+                <button type="button" class="back-to-blog" (click)="goToBlogs()">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    Back to Blog
+                </button>
+
+                <div class="article-category">
+                    <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                    Tally &amp; Finance
+                </div>
+
+                <h1 id="article-title">How to Create Ledgers in <span>TallyPrime</span> With Real Examples</h1>
+                <p class="article-intro">
+                    Learn ledger creation step by step with practical examples for customers, suppliers, sales,
+                    purchases,
+                    expenses, bank accounts, capital and GST. Understand ledger groups and choose the right account for
+                    everyday business transactions.
+                </p>
+
+                <div class="article-meta" aria-label="Article information">
+                    <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12–15 min read</span>
+                    <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Beginner guide</span>
+                    <span><i class="fa-solid fa-list-check" aria-hidden="true"></i> 10 real examples</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="article-section">
+        <div class="container article-layout">
+            <article class="article-content">
+                <!-- QUICK ANSWER -->
+                <section class="quick-answer" id="quick-answer">
+                    <div class="quick-answer-label"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Quick Answer
+                    </div>
+                    <h2>How do you create a ledger in TallyPrime?</h2>
+                    <p>
+                        Open the relevant company in TallyPrime, press <strong>Alt+G</strong>, search for <strong>Create
+                            Master</strong>,
+                        and select <strong>Ledger</strong>. Enter a meaningful ledger name, select the correct group,
+                        fill in any required
+                        details, review the configuration and press <strong>Ctrl+A</strong> to save in the standard
+                        creation screen.
+                    </p>
+                    <div class="quick-answer-footer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        Choose the ledger group based on the account's actual accounting purpose.</div>
+                </section>
+
+                <!-- INTRODUCTION -->
+                <section class="article-block" id="introduction">
+                    <div class="section-number">01 / GETTING STARTED</div>
+                    <h2>How to Create Ledgers in TallyPrime</h2>
+                    <p>
+                        Creating ledgers is one of the most important steps when learning accounting in TallyPrime.
+                        Before recording
+                        sales, purchases, payments, receipts or expenses, you need to know which ledger accounts are
+                        required and how
+                        to create them correctly.
+                    </p>
+                    <p>
+                        A business may need separate ledgers for customers, suppliers, sales, purchases, rent, salaries,
+                        bank accounts
+                        and capital. Each ledger helps record transactions under the appropriate account and makes it
+                        easier to review
+                        financial reports.
+                    </p>
+                    <p>
+                        This guide is designed for beginners, accounting students, business owners and aspiring
+                        accountants. It explains
+                        the ledger creation process, ledger groups, common mistakes and ten practical examples.
+                    </p>
+                    <div class="quote-box">
+                        <span class="quote-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                        <strong>Before creating a ledger, decide what the account represents and which group correctly
+                            describes its purpose.</strong>
+                    </div>
+                </section>
+
+                <!-- LEDGER BASICS -->
+                <section class="article-block" id="what-is-ledger">
+                    <div class="section-number">02 / UNDERSTAND THE BASICS</div>
+                    <h2>What Is a Ledger in TallyPrime?</h2>
+                    <p>
+                        A ledger in TallyPrime is an account used to record and track financial transactions related to
+                        a particular
+                        item, person, income, expense, asset or liability.
+                    </p>
+                    <div class="concept-grid">
+                        <div class="concept-card"><span class="concept-icon"><i class="fa-solid fa-wallet"
+                                    aria-hidden="true"></i></span><strong>Cash and bank</strong>
+                            <p>Track cash balances, deposits, receipts and payments.</p>
+                        </div>
+                        <div class="concept-card"><span class="concept-icon"><i class="fa-solid fa-users"
+                                    aria-hidden="true"></i></span><strong>Customers and suppliers</strong>
+                            <p>Monitor receivables, payables and party balances.</p>
+                        </div>
+                        <div class="concept-card"><span class="concept-icon"><i class="fa-solid fa-chart-line"
+                                    aria-hidden="true"></i></span><strong>Income and expenses</strong>
+                            <p>Classify sales, purchases, rent, salary and other costs.</p>
+                        </div>
+                        <div class="concept-card"><span class="concept-icon"><i class="fa-solid fa-landmark"
+                                    aria-hidden="true"></i></span><strong>Assets and liabilities</strong>
+                            <p>Record capital, loans, fixed assets and other balances.</p>
+                        </div>
+                    </div>
+                    <p>
+                        When you record a transaction using these ledgers, TallyPrime updates the relevant accounting
+                        records and helps
+                        generate reports such as the Trial Balance, Profit and Loss Account and Balance Sheet.
+                    </p>
+                    <div class="example-callout">
+                        <span class="callout-label">Simple example</span>
+                        <p>If your business pays <strong>₹10,000 as office rent</strong>, the transaction generally uses
+                            the Office Rent
+                            ledger and the relevant Cash or Bank ledger.</p>
+                    </div>
+                </section>
+
+                <section class="article-block" id="ledger-groups">
+                    <div class="section-number">03 / LEDGER GROUPS</div>
+                    <h2>What Is a Ledger Group in TallyPrime?</h2>
+                    <p>
+                        A ledger group is a category used to classify ledger accounts according to their accounting
+                        purpose. TallyPrime
+                        provides predefined groups such as Sundry Debtors, Sundry Creditors, Sales Accounts, Purchase
+                        Accounts, Direct
+                        Expenses, Indirect Expenses, Capital Account and Bank Accounts.
+                    </p>
+                    <p>Selecting the correct group helps TallyPrime classify transactions properly in accounting
+                        reports.</p>
+                    <div class="table-responsive">
+                        <table class="article-table">
+                            <thead>
+                                <tr>
+                                    <th>Ledger</th>
+                                    <th>Ledger Group</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Office Rent</strong></td>
+                                    <td>Indirect Expenses</td>
+                                    <td>Records office rent costs.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ABC Traders</strong></td>
+                                    <td>Sundry Debtors</td>
+                                    <td>Tracks a customer balance when appropriate.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>XYZ Suppliers</strong></td>
+                                    <td>Sundry Creditors</td>
+                                    <td>Tracks amounts payable to a supplier.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sales Account</strong></td>
+                                    <td>Sales Accounts</td>
+                                    <td>Classifies sales transactions.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="comparison-box">
+                        <div class="comparison-item">
+                            <span class="comparison-label">LEDGER</span>
+                            <h3>Individual account</h3>
+                            <p>Represents a specific account used in transactions.</p>
+                            <div class="comparison-example"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                                Example: Office Rent</div>
+                        </div>
+                        <div class="comparison-item">
+                            <span class="comparison-label">LEDGER GROUP</span>
+                            <h3>Category of accounts</h3>
+                            <p>Classifies an account according to its accounting purpose.</p>
+                            <div class="comparison-example"><i class="fa-solid fa-folder-tree" aria-hidden="true"></i>
+                                Example: Indirect Expenses</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROCESS OVERVIEW -->
+                <section class="article-block" id="creation-overview">
+                    <div class="section-number">04 / PROCESS OVERVIEW</div>
+                    <h2>How to Create a Ledger in TallyPrime: Step-by-Step Guide</h2>
+                    <p>Follow these steps to create a new ledger in the selected company.</p>
+                    <div class="steps-list">
+                        <div class="step-summary"><span>01</span>
+                            <div><strong>Open TallyPrime</strong>
+                                <p>Select the company where the ledger is needed.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>02</span>
+                            <div><strong>Open Create Master</strong>
+                                <p>Use Alt+G and search for Create Master, or go through Gateway of Tally.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>03</span>
+                            <div><strong>Enter the ledger name</strong>
+                                <p>Use a clear name such as Office Rent or ABC Traders.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>04</span>
+                            <div><strong>Select Under Group</strong>
+                                <p>Choose the group that matches the account's purpose.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>05</span>
+                            <div><strong>Complete required fields</strong>
+                                <p>Enter contact, GST, bill-wise and opening balance details where applicable.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>06</span>
+                            <div><strong>Review and save</strong>
+                                <p>Check the details and press Ctrl+A in the standard creation screen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-block" id="step-by-step">
+                    <div class="section-number">05 / CREATE YOUR LEDGER</div>
+                    <h2>Detailed Ledger Creation Steps</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-number">01</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 01</span>
+                                <h3>Open TallyPrime</h3>
+                                <p>Launch TallyPrime and select the company in which you want to create the ledger. If
+                                    you have not created a company yet, create one first and enter the required company
+                                    details.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">02</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 02</span>
+                                <h3>Open the Ledger Creation Screen</h3>
+                                <div class="method-grid">
+                                    <div class="method-card"><span class="method-tag">METHOD 1</span>
+                                        <h4>Using Go To</h4>
+                                        <ol>
+                                            <li>Press <strong>Alt+G</strong>.</li>
+                                            <li>Search for <strong>Create Master</strong>.</li>
+                                            <li>Select <strong>Ledger</strong>.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="method-card"><span class="method-tag">METHOD 2</span>
+                                        <h4>From Gateway of Tally</h4>
+                                        <ol>
+                                            <li>Open the Gateway of Tally.</li>
+                                            <li>Select <strong>Create</strong>.</li>
+                                            <li>Choose <strong>Ledger</strong>.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <p>The ledger creation screen will open. Labels and navigation can vary slightly by
+                                    TallyPrime version.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">03</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 03</span>
+                                <h3>Enter the Ledger Name</h3>
+                                <p>Enter a clear and meaningful name so that users can identify the account easily.</p>
+                                <div class="tag-list"><span>Office Rent</span><span>ABC Traders</span><span>Sales
+                                        Account</span><span>Electricity Charges</span><span>XYZ Suppliers</span></div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">04</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 04</span>
+                                <h3>Select the Under Group</h3>
+                                <p>Choose the appropriate group based on the nature of the account and your business's
+                                    accounting requirements.</p>
+                                <div class="table-responsive">
+                                    <table class="article-table compact-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Ledger Name</th>
+                                                <th>Common Under Group</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Office Rent</td>
+                                                <td>Indirect Expenses</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sales Account</td>
+                                                <td>Sales Accounts</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Purchase Account</td>
+                                                <td>Purchase Accounts</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ABC Customer</td>
+                                                <td>Sundry Debtors</td>
+                                            </tr>
+                                            <tr>
+                                                <td>XYZ Supplier</td>
+                                                <td>Sundry Creditors</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Owner's Capital</td>
+                                                <td>Capital Account</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bank Account</td>
+                                                <td>Bank Accounts</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="step-tip"><i class="fa-regular fa-lightbulb"
+                                        aria-hidden="true"></i><span><strong>Important:</strong> The correct group
+                                        depends on what the account represents. Do not select a group only because its
+                                        name looks familiar.</span></div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">05</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 05</span>
+                                <h3>Enter the Required Details</h3>
+                                <p>Depending on the ledger group and transaction type, TallyPrime may ask for additional
+                                    information.</p>
+                                <ul class="check-list">
+                                    <li>Mailing name and address</li>
+                                    <li>Contact information</li>
+                                    <li>GST registration details</li>
+                                    <li>Opening balance</li>
+                                    <li>Credit period or bill-wise details</li>
+                                    <li>Tax-related settings</li>
+                                </ul>
+                                <p>Not every ledger requires all these details. Enter only the information relevant to
+                                    that account.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-number">06</span>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Step 06</span>
+                                <h3>Save the Ledger</h3>
+                                <p>Review the ledger name, group and other details. In the standard creation screen,
+                                    press <strong>Ctrl+A</strong> to accept and save the ledger.</p>
+                                <div class="success-note"><i class="fa-solid fa-circle-check"
+                                        aria-hidden="true"></i><span>Your ledger is ready to use in the relevant
+                                        accounting vouchers.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TEN EXAMPLES -->
+                <section class="article-block" id="real-examples">
+                    <div class="section-number">06 / PRACTICAL ACCOUNTING</div>
+                    <h2>10 Real Examples of Creating Ledgers in TallyPrime</h2>
+                    <p>Use these examples to understand how typical business accounts are created. The accounting
+                        entries are simplified illustrations; adapt them to the actual transaction, tax treatment and
+                        accounting policy.</p>
+
+                    <section class="example-card" id="example-rent">
+                        <div class="example-heading"><span class="example-number">01</span>
+                            <div><span class="example-kicker">EXPENSE LEDGER</span>
+                                <h3>Creating an Office Rent Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A company pays ₹15,000 per month as office rent.</p>
+                        <div class="table-responsive">
+                            <table class="article-table compact-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Details</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Office Rent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Under</td>
+                                        <td>Indirect Expenses</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Inventory values affected</td>
+                                        <td>No</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ol class="action-list">
+                            <li>Open the Ledger Creation screen.</li>
+                            <li>Enter <strong>Office Rent</strong> as the name.</li>
+                            <li>Select <strong>Indirect Expenses</strong>.</li>
+                            <li>Review and save the ledger.</li>
+                        </ol>
+                        <div class="entry-box"><span class="entry-title">Illustrative accounting entry</span>
+                            <div class="entry-row"><span>Debit: Office Rent</span><strong>₹15,000</strong></div>
+                            <div class="entry-row"><span>Credit: Bank</span><strong>₹15,000</strong></div>
+                        </div>
+                        <p class="example-note">The exact treatment may depend on the transaction and any applicable tax
+                            requirements.</p>
+                    </section>
+
+                    <section class="example-card" id="example-sales">
+                        <div class="example-heading"><span class="example-number">02</span>
+                            <div><span class="example-kicker">INCOME LEDGER</span>
+                                <h3>Creating a Sales Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A business sells products and wants to record sales
+                            separately.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>Sales
+                                    Account</strong></span><span><small>Under</small><strong>Sales
+                                    Accounts</strong></span></div>
+                        <ol class="action-list">
+                            <li>Open Ledger Creation.</li>
+                            <li>Enter <strong>Sales Account</strong>.</li>
+                            <li>Select <strong>Sales Accounts</strong>.</li>
+                            <li>Configure applicable GST details if required, then save.</li>
+                        </ol>
+                        <div class="entry-box"><span class="entry-title">Illustrative credit sale · ₹20,000 before
+                                applicable GST</span>
+                            <div class="entry-row"><span>Debit: Customer</span><strong>Invoice total</strong></div>
+                            <div class="entry-row"><span>Credit: Sales Account</span><strong>₹20,000</strong></div>
+                            <div class="entry-row"><span>Credit: Applicable GST ledgers</span><strong>Where
+                                    relevant</strong></div>
+                        </div>
+                        <p class="example-note">The voucher should reflect the actual transaction and its tax treatment.
+                        </p>
+                    </section>
+
+                    <section class="example-card" id="example-purchases">
+                        <div class="example-heading"><span class="example-number">03</span>
+                            <div><span class="example-kicker">PURCHASE LEDGER</span>
+                                <h3>Creating a Purchase Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A business buys goods from suppliers for resale.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>Purchase
+                                    Account</strong></span><span><small>Under</small><strong>Purchase
+                                    Accounts</strong></span></div>
+                        <ol class="action-list">
+                            <li>Open Ledger Creation.</li>
+                            <li>Enter <strong>Purchase Account</strong>.</li>
+                            <li>Select <strong>Purchase Accounts</strong>.</li>
+                            <li>Configure relevant tax settings if required and save.</li>
+                        </ol>
+                        <div class="entry-box"><span class="entry-title">Illustrative credit purchase · ₹12,000 before
+                                applicable GST</span>
+                            <div class="entry-row"><span>Debit: Purchase Account</span><strong>₹12,000</strong></div>
+                            <div class="entry-row"><span>Debit: Eligible input GST</span><strong>Where
+                                    applicable</strong></div>
+                            <div class="entry-row"><span>Credit: Supplier</span><strong>Total payable</strong></div>
+                        </div>
+                        <p class="example-note">GST treatment depends on the supply, input tax credit eligibility and
+                            applicable rules.</p>
+                    </section>
+
+                    <section class="example-card" id="example-customer">
+                        <div class="example-heading"><span class="example-number">04</span>
+                            <div><span class="example-kicker">CUSTOMER LEDGER</span>
+                                <h3>Creating a Customer Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> Your business sells goods to ABC Traders on credit and
+                            needs to track its outstanding balance.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>ABC
+                                    Traders</strong></span><span><small>Under</small><strong>Sundry
+                                    Debtors</strong></span><span><small>Bill-wise tracking</small><strong>Configure as
+                                    required</strong></span></div>
+                        <ol class="action-list">
+                            <li>Open Ledger Creation and enter <strong>ABC Traders</strong>.</li>
+                            <li>Select <strong>Sundry Debtors</strong>.</li>
+                            <li>Enter contact and GST details where applicable.</li>
+                            <li>Configure bill-wise tracking if required, then save.</li>
+                        </ol>
+                        <div class="benefit-strip"><strong>Why this is useful</strong><span>Track credit sales,
+                                receipts, outstanding invoices and customer balances.</span></div>
+                        <p>If ABC Traders purchases goods worth ₹25,000 on credit, record the transaction against the
+                            customer ledger along with the relevant sales and tax ledgers.</p>
+                    </section>
+
+                    <section class="example-card" id="example-supplier">
+                        <div class="example-heading"><span class="example-number">05</span>
+                            <div><span class="example-kicker">SUPPLIER LEDGER</span>
+                                <h3>Creating a Supplier Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> Your company purchases raw materials from XYZ Suppliers
+                            on credit.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>XYZ
+                                    Suppliers</strong></span><span><small>Under</small><strong>Sundry
+                                    Creditors</strong></span><span><small>Bill-wise tracking</small><strong>Configure as
+                                    required</strong></span></div>
+                        <ol class="action-list">
+                            <li>Open Ledger Creation and enter <strong>XYZ Suppliers</strong>.</li>
+                            <li>Select <strong>Sundry Creditors</strong>.</li>
+                            <li>Enter relevant supplier details.</li>
+                            <li>Configure bill-wise tracking if required and save.</li>
+                        </ol>
+                        <div class="benefit-strip"><strong>Why this is useful</strong><span>Monitor credit purchases,
+                                payments made, pending supplier bills and outstanding liabilities.</span></div>
+                    </section>
+
+                    <section class="example-card" id="example-salary">
+                        <div class="example-heading"><span class="example-number">06</span>
+                            <div><span class="example-kicker">EXPENSE LEDGER</span>
+                                <h3>Creating a Salary Expense Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A company pays ₹80,000 in employee salaries every month.
+                        </p>
+                        <div class="field-pills"><span><small>Name</small><strong>Salary
+                                    Expense</strong></span><span><small>Under</small><strong>Indirect
+                                    Expenses</strong></span></div>
+                        <ol class="action-list">
+                            <li>Open Ledger Creation.</li>
+                            <li>Enter <strong>Salary Expense</strong>.</li>
+                            <li>Select <strong>Indirect Expenses</strong> and save.</li>
+                        </ol>
+                        <div class="entry-box"><span class="entry-title">Illustrative salary payment, with no additional
+                                payroll adjustments</span>
+                            <div class="entry-row"><span>Debit: Salary Expense</span><strong>₹80,000</strong></div>
+                            <div class="entry-row"><span>Credit: Bank</span><strong>₹80,000</strong></div>
+                        </div>
+                        <p class="example-note">If salary payable, deductions or payroll liabilities are recorded
+                            separately, the accounting entry must reflect those items.</p>
+                    </section>
+
+                    <section class="example-card" id="example-electricity">
+                        <div class="example-heading"><span class="example-number">07</span>
+                            <div><span class="example-kicker">UTILITY EXPENSE</span>
+                                <h3>Creating an Electricity Charges Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> Your company receives an electricity bill for ₹5,000.
+                        </p>
+                        <div class="field-pills"><span><small>Name</small><strong>Electricity
+                                    Charges</strong></span><span><small>Under</small><strong>Indirect
+                                    Expenses</strong></span></div>
+                        <ol class="action-list">
+                            <li>Create the <strong>Electricity Charges</strong> ledger.</li>
+                            <li>Select <strong>Indirect Expenses</strong>.</li>
+                            <li>Save, then select the relevant expense ledger when entering the bill.</li>
+                        </ol>
+                        <p>When recording the bill, use the relevant supplier or payable ledger depending on whether the
+                            bill is paid immediately or remains outstanding. This account helps track electricity costs
+                            separately from other operating expenses.</p>
+                    </section>
+
+                    <section class="example-card" id="example-capital">
+                        <div class="example-heading"><span class="example-number">08</span>
+                            <div><span class="example-kicker">CAPITAL LEDGER</span>
+                                <h3>Creating an Owner's Capital Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> The owner invests ₹2,00,000 into the business.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>Owner's
+                                    Capital</strong></span><span><small>Under</small><strong>Capital
+                                    Account</strong></span></div>
+                        <p>Create the ledger under <strong>Capital Account</strong>.</p>
+                        <div class="entry-box"><span class="entry-title">Illustrative cash capital introduction</span>
+                            <div class="entry-row"><span>Debit: Cash</span><strong>₹2,00,000</strong></div>
+                            <div class="entry-row"><span>Credit: Owner's Capital</span><strong>₹2,00,000</strong></div>
+                        </div>
+                        <p>This records the owner's investment in the business.</p>
+                    </section>
+
+                    <section class="example-card" id="example-bank">
+                        <div class="example-heading"><span class="example-number">09</span>
+                            <div><span class="example-kicker">BANK LEDGER</span>
+                                <h3>Creating a Bank Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A company maintains a current account with its bank.</p>
+                        <div class="field-pills"><span><small>Name</small><strong>HDFC Bank Current
+                                    Account</strong></span><span><small>Under</small><strong>Bank
+                                    Accounts</strong></span></div>
+                        <p>Create a bank ledger under <strong>Bank Accounts</strong>, entering the required details and
+                            opening balance if applicable.</p>
+                        <div class="benefit-strip"><strong>Use the bank ledger to record</strong><span>Customer
+                                receipts, supplier payments, bank charges, transfers and other bank transactions.</span>
+                        </div>
+                        <div class="step-tip"><i class="fa-regular fa-lightbulb"
+                                aria-hidden="true"></i><span><strong>Check first:</strong> If the company already has a
+                                bank ledger, verify it before creating a duplicate.</span></div>
+                    </section>
+
+                    <section class="example-card" id="example-gst">
+                        <div class="example-heading"><span class="example-number">10</span>
+                            <div><span class="example-kicker">TAX LEDGER</span>
+                                <h3>Creating a GST Ledger</h3>
+                            </div>
+                        </div>
+                        <p><strong>Business situation:</strong> A business needs to account for GST on applicable
+                            taxable transactions.</p>
+                        <p>GST ledger configuration depends on the transaction type, registration, tax rate and
+                            accounting requirements. A business may need separate ledgers for CGST, SGST and IGST under
+                            the appropriate <strong>Duties &amp; Taxes</strong> group, with the relevant GST tax type
+                            selected.</p>
+                        <div class="table-responsive">
+                            <table class="article-table compact-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Example</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>CGST</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Under</td>
+                                        <td>Duties &amp; Taxes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type of duty/tax</td>
+                                        <td>GST</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax type</td>
+                                        <td>Central Tax</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Use the corresponding State Tax and Integrated Tax configuration for SGST and IGST when
+                            applicable.</p>
+                        <div class="warning-note"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <p><strong>Important:</strong> Creating a GST ledger alone does not complete GST setup.
+                                Company GST settings, party details, item or service classifications, applicable rates
+                                and voucher configuration must also be correct.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- GROUP SELECTION -->
+                <section class="article-block" id="choose-group">
+                    <div class="section-number">07 / GROUP SELECTION REFERENCE</div>
+                    <h2>Which Ledger Group Should You Select in TallyPrime?</h2>
+                    <p>The correct group is important because it affects how accounts are classified in financial
+                        reports. Use this as a beginner's reference and consider the nature of the transaction and your
+                        accounting policy.</p>
+                    <div class="table-responsive">
+                        <table class="article-table">
+                            <thead>
+                                <tr>
+                                    <th>Ledger</th>
+                                    <th>Common Group</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cash</td>
+                                    <td>Cash-in-Hand</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank account</td>
+                                    <td>Bank Accounts</td>
+                                </tr>
+                                <tr>
+                                    <td>Owner's capital</td>
+                                    <td>Capital Account</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer account</td>
+                                    <td>Sundry Debtors</td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier account</td>
+                                    <td>Sundry Creditors</td>
+                                </tr>
+                                <tr>
+                                    <td>Sales</td>
+                                    <td>Sales Accounts</td>
+                                </tr>
+                                <tr>
+                                    <td>Purchases</td>
+                                    <td>Purchase Accounts</td>
+                                </tr>
+                                <tr>
+                                    <td>Office rent</td>
+                                    <td>Indirect Expenses</td>
+                                </tr>
+                                <tr>
+                                    <td>Salary expense</td>
+                                    <td>Indirect Expenses</td>
+                                </tr>
+                                <tr>
+                                    <td>Electricity expense</td>
+                                    <td>Indirect Expenses</td>
+                                </tr>
+                                <tr>
+                                    <td>Freight inward related to purchases</td>
+                                    <td>Direct Expenses, depending on accounting policy</td>
+                                </tr>
+                                <tr>
+                                    <td>Interest received</td>
+                                    <td>Indirect Incomes</td>
+                                </tr>
+                                <tr>
+                                    <td>GST tax ledger</td>
+                                    <td>Duties &amp; Taxes</td>
+                                </tr>
+                                <tr>
+                                    <td>Furniture</td>
+                                    <td>Fixed Assets</td>
+                                </tr>
+                                <tr>
+                                    <td>Loan payable</td>
+                                    <td>Appropriate Loans (Liability) group</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="step-tip"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i><span>Some ledgers,
+                            such as Cash, are commonly available by default and may not need to be created again.
+                            Confirm the existing Chart of Accounts before creating duplicates.</span></div>
+                </section>
+
+                <!-- ALTER LEDGER -->
+                <section class="article-block" id="alter-ledger">
+                    <div class="section-number">08 / EDIT EXISTING ACCOUNTS</div>
+                    <h2>How to Alter or Edit a Ledger in TallyPrime</h2>
+                    <p>You may need to update a ledger's name, group or other details as your business requirements
+                        change.</p>
+                    <div class="steps-list compact-steps">
+                        <div class="step-summary"><span>01</span>
+                            <div><strong>Open the relevant company</strong>
+                                <p>Confirm you are working in the correct company data.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>02</span>
+                            <div><strong>Open ledger alteration</strong>
+                                <p>Use Chart of Accounts or the relevant ledger alteration option.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>03</span>
+                            <div><strong>Locate the ledger</strong>
+                                <p>Select the ledger you want to change and open its details.</p>
+                            </div>
+                        </div>
+                        <div class="step-summary"><span>04</span>
+                            <div><strong>Modify and save</strong>
+                                <p>Make the required changes, verify the details and accept them.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning-note"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>Before changing a ledger's group, understand the impact on historical reports and accounting
+                            classifications, especially when the ledger already has transactions.</p>
+                    </div>
+                </section>
+
+                <!-- COMMON MISTAKES -->
+                <section class="article-block" id="common-mistakes">
+                    <div class="section-number">09 / AVOID COMMON ERRORS</div>
+                    <h2>Common Ledger Creation Mistakes to Avoid</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-diagram-project"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>1. Selecting the wrong group</h3>
+                                <p>For example, creating Office Rent under Sales Accounts instead of Indirect Expenses
+                                    can lead to incorrect account classification.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-copy"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>2. Creating duplicate ledgers</h3>
+                                <p>Check whether a customer, supplier or bank ledger already exists before creating
+                                    another one.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>3. Entering incorrect opening balances</h3>
+                                <p>Use verified accounting records. Incorrect balances can affect the Trial Balance and
+                                    other reports.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-receipt"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>4. Ignoring GST configuration</h3>
+                                <p>For GST-related ledgers and parties, review the applicable tax settings and
+                                    registration details.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-font"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>5. Using unclear ledger names</h3>
+                                <p>Names such as Expense 1 or Customer 2 can be confusing. Use meaningful account names.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><span class="mistake-icon"><i class="fa-solid fa-list-check"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>6. Forgetting bill-wise tracking</h3>
+                                <p>Businesses that need invoice-level receivable and payable tracking should configure
+                                    the relevant options appropriately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PRACTICE -->
+                <section class="article-block" id="practice-ledgers">
+                    <div class="section-number">10 / PRACTISE WHAT YOU LEARNED</div>
+                    <h2>How to Practise Ledger Creation in TallyPrime</h2>
+                    <p>The best way to learn ledger creation is through practical exercises. Create a sample company and
+                        practise making the following ledgers.</p>
+                    <div class="practice-checklist">
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Owner's Capital</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Bank Account</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Sales Account</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Purchase Account</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Office Rent</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Salary Expense</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> ABC Traders as a
+                            customer</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> XYZ Suppliers as a
+                            supplier</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Electricity Charges</label>
+                        <label><i class="fa-regular fa-square-check" aria-hidden="true"></i> Applicable GST
+                            ledgers</label>
+                    </div>
+                    <p>Next, record sample transactions for capital introduced, credit sales, credit purchases, rent
+                        payments, salary payments and customer receipts. Review the Day Book, ledgers, Trial Balance and
+                        relevant financial reports to verify the results.</p>
+                    <div class="quote-box"><span class="quote-icon"><i class="fa-solid fa-graduation-cap"
+                                aria-hidden="true"></i></span><strong>Practise the full workflow: create the ledger,
+                            record a voucher, then review the effect in the relevant reports.</strong></div>
+                </section>
+
+                <!-- FAQ -->
+                <section class="article-block faq-section" id="faqs">
+                    <div class="section-number">11 / FREQUENTLY ASKED QUESTIONS</div>
+                    <h2>Frequently Asked Questions About Ledger Creation in TallyPrime</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I create a ledger in TallyPrime?</summary>
+                            <p>Open TallyPrime, select the company, press Alt+G, search for Create Master and select
+                                Ledger. Enter the ledger name, choose the appropriate group, fill in required details
+                                and press Ctrl+A to save in the standard creation screen.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. What is the shortcut key to create a ledger in TallyPrime?</summary>
+                            <p>You can use Alt+G to access Create Master and then select Ledger. While entering a
+                                voucher, Alt+C can also create a new master in supported contexts.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. What is the difference between a ledger and a group in TallyPrime?</summary>
+                            <p>A ledger is an individual account used to record transactions, while a group classifies
+                                that ledger according to its accounting purpose. For example, Office Rent is a ledger
+                                and Indirect Expenses is its group.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Under which group should I create a customer ledger?</summary>
+                            <p>A customer ledger is generally created under Sundry Debtors when the business sells goods
+                                or services to that customer on credit.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Under which group should I create a supplier ledger?</summary>
+                            <p>A supplier ledger is generally created under Sundry Creditors when the business purchases
+                                goods or services from the supplier on credit.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Under which group should I create a salary ledger?</summary>
+                            <p>A Salary Expense ledger is generally created under Indirect Expenses for routine employee
+                                salary costs, subject to the business's accounting structure.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can I create multiple ledgers in TallyPrime?</summary>
+                            <p>Yes. TallyPrime supports creating ledgers individually and through multi-ledger creation
+                                options where available. This is useful when setting up several customer, supplier,
+                                expense or other accounts.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Do I need to create a separate ledger for every customer?</summary>
+                            <p>Separate customer ledgers are generally useful for tracking individual balances, credit
+                                sales, receipts and outstanding invoices. The exact structure depends on the business's
+                                accounting requirements.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>9. Can I change a ledger group after creating a ledger?</summary>
+                            <p>A ledger's group can generally be altered. Check the accounting implications before
+                                changing classifications, especially for ledgers with existing transactions.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>10. Is ledger creation important for learning TallyPrime?</summary>
+                            <p>Yes. Ledger creation is a fundamental skill because vouchers, accounting reports and
+                                transaction tracking depend on correctly configured accounts.</p>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- CONCLUSION -->
+                <section class="article-block final-thoughts" id="conclusion">
+                    <div class="section-number">12 / FINAL THOUGHTS</div>
+                    <h2>Start Creating Ledgers in TallyPrime With Confidence</h2>
+                    <p>Creating ledgers correctly is an essential step in learning TallyPrime. Customer and supplier
+                        accounts, sales, purchases, expenses, bank accounts, capital and GST ledgers all play a role in
+                        maintaining organised accounting records.</p>
+                    <p>Start with the basic creation process, learn how to select the correct group and practise with
+                        realistic business transactions. As you become more comfortable, move on to voucher entry, bank
+                        reconciliation, GST accounting and financial reporting.</p>
+                    <div class="skill-combination"><span>Ledger Creation</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Voucher Entry</span><i class="fa-solid fa-plus"
+                            aria-hidden="true"></i><span>Financial Reports</span></div>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="article-block related-articles-section" id="related-articles">
+                    <div class="section-number">13 / KEEP LEARNING</div>
+                    <h2>Related Articles to Build Your TallyPrime Skills</h2>
+                    <p>Continue learning with these practical guides on accounting entries, vouchers, payroll and career
+                        preparation.</p>
+                    <div class="related-articles-grid">
+                        <a class="related-article-card"
+                            routerLink="/tallyprime-accounting-entries-beginners-should-practice">
+                            <span class="related-article-icon"><i class="fa-solid fa-book-open"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">ACCOUNTING PRACTICE</span>
+                            <h3>TallyPrime Accounting Entries Beginners Should Practise</h3>
+                            <p>Practise everyday accounting transactions and learn how entries flow through ledgers.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/tallyprime-voucher-types-explained-with-examples">
+                            <span class="related-article-icon"><i class="fa-solid fa-receipt"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">VOUCHER GUIDE</span>
+                            <h3>TallyPrime Voucher Types Explained With Examples</h3>
+                            <p>Understand which voucher to use for payments, receipts, sales, purchases and transfers.
+                            </p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card"
+                            routerLink="/tallyprime-practical-test-questions-accountant-jobs">
+                            <span class="related-article-icon"><i class="fa-solid fa-clipboard-check"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">JOB PREPARATION</span>
+                            <h3>TallyPrime Practical Test Questions for Accountant Jobs</h3>
+                            <p>Prepare for practical accounting assessments with commonly tested tasks and reports.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/tallyprime-payroll-manage-employee-salaries">
+                            <span class="related-article-icon"><i class="fa-solid fa-money-check-dollar"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">PAYROLL</span>
+                            <h3>TallyPrime Payroll: How to Manage Employee Salaries</h3>
+                            <p>Explore payroll records, employee salaries and related accounting workflows.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/tallyprime-vs-excel-for-accounting">
+                            <span class="related-article-icon"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">SOFTWARE COMPARISON</span>
+                            <h3>TallyPrime vs Excel for Accounting</h3>
+                            <p>Compare spreadsheet workflows with dedicated accounting software for business records.
+                            </p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="related-article-card" routerLink="/jobs-after-learning-tally">
+                            <span class="related-article-icon"><i class="fa-solid fa-briefcase"
+                                    aria-hidden="true"></i></span>
+                            <span class="related-article-category">CAREER GUIDANCE</span>
+                            <h3>Jobs After Learning Tally</h3>
+                            <p>Discover potential roles where accounting software knowledge can be useful.</p>
+                            <span class="related-article-link">Read article <i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="training-cta" id="rlt-edzaro-training">
+                    <div class="training-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="training-cta-content">
+                        <span>Learn with RLT Edzaro</span>
+                        <h2>Build Your TallyPrime Accounting Skills</h2>
+                        <p>Explore Tally Essential to build your foundation in TallyPrime, ledger creation, voucher
+                            entry, GST-related accounting and financial reports.</p>
+                        <a class="training-button" routerLink="/tally-essential">Explore Tally Essential <i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+
+                <div class="article-footnote"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p><strong>Learning note:</strong> The ledger groups and accounting entries in this guide are
+                        practical examples, not a substitute for advice on a specific business's accounting or tax
+                        treatment. Validate ledger configuration against the transaction and applicable requirements.
+                    </p>
+                </div>
+            </article>
+
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation and related information">
+                <div class="sidebar-card">
+                    <div class="sidebar-heading">
+                        <div class="sidebar-heading-icon"><i class="fa-solid fa-list-ul" aria-hidden="true"></i></div>
+                        <div><span>IN THIS ARTICLE</span>
+                            <h3>Contents</h3>
+                        </div>
+                    </div>
+                    <nav class="article-toc" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">
+                            <span>01</span><strong>Introduction</strong>
+                        </a>
+
+                        <a href="#what-is-ledger" (click)="scrollToSection($event, 'what-is-ledger')">
+                            <span>02</span><strong>What Is a Ledger?</strong>
+                        </a>
+
+                        <a href="#ledger-groups" (click)="scrollToSection($event, 'ledger-groups')">
+                            <span>03</span><strong>Ledger Groups</strong>
+                        </a>
+
+                        <a href="#creation-overview" (click)="scrollToSection($event, 'creation-overview')">
+                            <span>04</span><strong>Quick Steps</strong>
+                        </a>
+
+                        <a href="#step-by-step" (click)="scrollToSection($event, 'step-by-step')">
+                            <span>05</span><strong>Detailed Process</strong>
+                        </a>
+
+                        <a href="#real-examples" (click)="scrollToSection($event, 'real-examples')">
+                            <span>06</span><strong>10 Real Examples</strong>
+                        </a>
+
+                        <a href="#choose-group" (click)="scrollToSection($event, 'choose-group')">
+                            <span>07</span><strong>Choosing a Group</strong>
+                        </a>
+
+                        <a href="#alter-ledger" (click)="scrollToSection($event, 'alter-ledger')">
+                            <span>08</span><strong>Edit a Ledger</strong>
+                        </a>
+
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">
+                            <span>09</span><strong>Common Mistakes</strong>
+                        </a>
+
+                        <a href="#practice-ledgers" (click)="scrollToSection($event, 'practice-ledgers')">
+                            <span>10</span><strong>Practice Guide</strong>
+                        </a>
+
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">
+                            <span>11</span><strong>FAQs</strong>
+                        </a>
+
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">
+                            <span>12</span><strong>Conclusion</strong>
+                        </a>
+
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">
+                            <span>13</span><strong>Related Articles</strong>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="sidebar-card article-info-card">
+                    <span class="sidebar-label">ARTICLE DETAILS</span>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-regular fa-clock"
+                                aria-hidden="true"></i></span>
+                        <div><small>Reading time</small><strong>12–15 minutes</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-user-graduate"
+                                aria-hidden="true"></i></span>
+                        <div><small>Level</small><strong>Beginner-friendly</strong></div>
+                    </div>
+                    <div class="article-info-item"><span class="info-icon"><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i></span>
+                        <div><small>Examples</small><strong>10 accounting scenarios</strong></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card sidebar-course">
+                    <div class="sidebar-course-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+                    <span class="course-label">TALLY ESSENTIAL</span>
+                    <h3>Build Skills With Tally Essential</h3>
+                    <p>Explore essential accounting and TallyPrime skills through structured learning and practical
+                        examples.</p>
+                    <div class="course-points">
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Ledger creation</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Voucher entry</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> GST basics</div>
+                        <div><i class="fa-solid fa-check" aria-hidden="true"></i> Reports</div>
+                    </div>
+                    <a class="sidebar-button" routerLink="/tally-essential">Explore Tally Essential <i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="sidebar-card related-topics">
+                    <span class="sidebar-label">RELATED TOPICS</span>
+                    <div class="topic-tags"><span>TallyPrime</span><span>Accounting</span><span>Ledger
+                            Groups</span><span>GST</span><span>Voucher Entry</span></div>
+                </div>
+                <button type="button" class="sidebar-back" (click)="goToBlogs()"><i class="fa-solid fa-arrow-left"
+                        aria-hidden="true"></i> Back to all blogs</button>
+            </aside>
+        </div>
+    </section>
+</div>
