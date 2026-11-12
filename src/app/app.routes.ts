@@ -80,6 +80,17 @@ import { TallyprimeSalesPurchaseShortcutKeys } from './blogs/tallyprime-sales-pu
 import { HowToUseGoToSearchInTallyprime } from './blogs/how-to-use-go-to-search-in-tallyprime/how-to-use-go-to-search-in-tallyprime';
 import { HowToCreateMastersInTallyprime } from './blogs/how-to-create-masters-in-tallyprime/how-to-create-masters-in-tallyprime';
 import { TallyprimeTipsToReduceManualAccountingWork } from './blogs/tallyprime-tips-to-reduce-manual-accounting-work/tallyprime-tips-to-reduce-manual-accounting-work';
+import { HowToCustomizeReportsInTallyprime } from './blogs/how-to-customize-reports-in-tallyprime/how-to-customize-reports-in-tallyprime';
+import { HowToUseFiltersInTallyprimeReports } from './blogs/how-to-use-filters-in-tallyprime-reports/how-to-use-filters-in-tallyprime-reports';
+import { HowToExportTallyprimeReportsToExcelAndPdf } from './blogs/how-to-export-tallyprime-reports-to-excel-and-pdf/how-to-export-tallyprime-reports-to-excel-and-pdf';
+import { HowToCreateProformaInvoiceInTallyprime } from './blogs/how-to-create-proforma-invoice-in-tallyprime/how-to-create-proforma-invoice-in-tallyprime';
+import { HowToDeleteACompanyInTallyprime } from './blogs/how-to-delete-a-company-in-tallyprime/how-to-delete-a-company-in-tallyprime';
+import { HowToDeleteUnusedLedgerInTallyprime } from './blogs/how-to-delete-unused-ledger-in-tallyprime/how-to-delete-unused-ledger-in-tallyprime';
+import { HowToMakeCreditNoteInTallyprime } from './blogs/how-to-make-credit-note-in-tallyprime/how-to-make-credit-note-in-tallyprime';
+import { GenerateTrialBalanceInTallyprime } from './blogs/generate-trial-balance-in-tallyprime/generate-trial-balance-in-tallyprime';
+import { PaidInternshipsComponent } from './landing-page/paid-internships/paid-internships';
+import { OurCourses } from './component/our-courses/our-courses';
+
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -126,6 +137,11 @@ export const routes: Routes = [
   { path: 'how-to-create-ledgers-in-tallyprime', component: HowToCreateLedgersInTallyprime },
   { path: 'how-to-create-masters-in-tallyprime', component: HowToCreateMastersInTallyprime },
   { path: 'tallyprime-tips-to-reduce-manual-accounting-work', component: TallyprimeTipsToReduceManualAccountingWork },
+  { path: 'how-to-customize-reports-in-tallyprime', component: HowToCustomizeReportsInTallyprime },
+  { path: 'how-to-use-filters-in-tallyprime-reports', component: HowToUseFiltersInTallyprimeReports },
+  { path: 'how-to-export-tallyprime-reports-to-excel-and-pdf', component: HowToExportTallyprimeReportsToExcelAndPdf },
+  { path: 'how-to-create-proforma-invoice-in-tallyprime', component: HowToCreateProformaInvoiceInTallyprime },
+
   //District
   { path: 'tally-course-in-madurai', component: TallyMaduraiComponent },
   { path: 'tally-course-in-trichy', component: TallyTrichyComponent },
@@ -184,8 +200,13 @@ export const routes: Routes = [
   { path: 'tallyprime-sales-purchase-shortcut-keys', component: TallyprimeSalesPurchaseShortcutKeys },
   { path: 'how-to-use-go-to-search-in-tallyprime', component: HowToUseGoToSearchInTallyprime },
   { path: 'how-to-create-masters-in-tallyprime', component: HowToCreateMastersInTallyprime },
+  { path: 'how-to-create-proforma-invoice-in-tallyprime', component: HowToCreateProformaInvoiceInTallyprime },
+  { path: 'how-to-delete-a-company-in-tallyprime', component: HowToDeleteACompanyInTallyprime },
+  { path: 'how-to-delete-unused-ledger-in-tallyprime', component: HowToDeleteUnusedLedgerInTallyprime },
+  { path: 'how-to-make-credit-note-in-tallyprime', component: HowToMakeCreditNoteInTallyprime },
+  { path: 'generate-trial-balance-in-tallyprime', component: GenerateTrialBalanceInTallyprime },
+  
   //Emerging Technologies
-
   { path: 'robitics-course', component: Robotics },
   { path: 'internet-of-things-course', component: IoT },
   { path: 'generative-ai-course', component: GenAI },
@@ -196,4 +217,8 @@ export const routes: Routes = [
 
   //landing pages
   { path: 'tally-landing-page', component: TallyLandingPage },
+
+  //Interships
+  { path: 'internship-for-college-students-in-chennai', component: PaidInternshipsComponent },
+  { path: 'courses', component: OurCourses }
 ];

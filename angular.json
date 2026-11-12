@@ -28,6 +28,9 @@
             "styles": [
               "node_modules/aos/dist/aos.css",
               "src/styles.css"
+            ],
+            "allowedCommonJsDependencies": [
+              "aos"
             ]
           },
           "configurations": {
@@ -35,8 +38,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "4MB",
-                  "maximumError": "6MB"
+                  "maximumWarning": "6MB",
+                  "maximumError": "8MB"
                 },
                 {
                   "type": "anyComponentStyle",

@@ -1,0 +1,540 @@
+<article class="article-page ledger-delete-page" id="top">
+    <header class="article-hero">
+        <div class="container hero-inner">
+            <p class="eyebrow">RLT EDZARO <span aria-hidden="true">·</span> TALLYPRIME GUIDE</p>
+            <h1>How to Delete Unused Ledger in <span>TallyPrime</span></h1>
+            <p class="hero-summary">Learn how to delete one unused ledger or clean up multiple unused ledgers safely,
+                using the right shortcuts and checks.</p>
+            <div class="hero-meta"><span>Practical Accounting Guide</span><span>Beginner Friendly</span><span>Ledger
+                    Management</span></div>
+        </div>
+    </header>
+
+    <div class="container article-layout">
+        <main class="article-content">
+            <section class="quick-answer" aria-label="Quick answer">
+                <span class="quick-answer-label">QUICK ANSWER</span>
+                <h2>Which shortcut deletes an unused ledger?</h2>
+                <p>Open the eligible ledger in the Ledger Alteration screen and press <kbd>Alt</kbd> + <kbd>D</kbd>. To
+                    find multiple unused ledgers, open <strong>Chart of Accounts → Ledgers</strong>, press
+                    <kbd>Ctrl</kbd> + <kbd>J</kbd>, select <strong>Show Unused</strong>, and review the list before
+                    deleting.</p>
+                <div class="quick-answer-footer"><span aria-hidden="true">ⓘ</span><span>Do not delete a ledger only
+                        because it has no recent transactions. Check its opening balance, history, dependencies, and
+                        business purpose first.</span></div>
+            </section>
+
+            <section class="article-block" id="introduction">
+                <p class="section-kicker">01 · Getting started</p>
+                <h2>Introduction</h2>
+                <p>While working with TallyPrime, businesses often create ledgers for customers, suppliers, expenses,
+                    sales, purchases, and other accounting activities. Sometimes, a ledger is created by mistake,
+                    becomes unnecessary, or is duplicated during data entry.</p>
+                <p>Keeping unnecessary ledger masters can make accounting records difficult to manage. Learning how to
+                    delete an unused ledger in TallyPrime helps accountants maintain an organised Chart of Accounts and
+                    simplify ledger selection during voucher entry.</p>
+                <p>TallyPrime allows users to delete eligible unused ledgers individually or identify multiple unused
+                    ledgers and delete them in one go. This guide covers both methods, the <kbd>Alt</kbd> + <kbd>D</kbd>
+                    shortcut, and common deletion problems.</p>
+            </section>
+
+            <section class="article-block" id="what-is-unused-ledger">
+                <p class="section-kicker">02 · The basics</p>
+                <h2>What Is an Unused Ledger in TallyPrime?</h2>
+                <p>An unused ledger is a ledger master that has not been used in recorded transactions and is no longer
+                    required by the business.</p>
+                <p>For example, an accountant may create a ledger named <strong>ABC Traders - Test</strong> while
+                    practising in TallyPrime. If it was created by mistake and has never been used in a voucher, it may
+                    be eligible for deletion.</p>
+                <div class="concept-grid">
+                    <article class="concept-card"><span class="concept-icon">01</span>
+                        <h3>Duplicate masters</h3>
+                        <p>Customer or supplier ledgers created more than once and never used.</p>
+                    </article>
+                    <article class="concept-card"><span class="concept-icon">02</span>
+                        <h3>Test ledgers</h3>
+                        <p>Practice entries or test masters created during training.</p>
+                    </article>
+                    <article class="concept-card"><span class="concept-icon">03</span>
+                        <h3>Incorrect names</h3>
+                        <p>Expense or sales ledgers created with the wrong name and never used.</p>
+                    </article>
+                    <article class="concept-card"><span class="concept-icon">04</span>
+                        <h3>Unneeded masters</h3>
+                        <p>Masters that have no valid business purpose and are eligible for deletion.</p>
+                    </article>
+                </div>
+                <aside class="warning-note"><span aria-hidden="true">⚠</span>
+                    <p><strong>Important:</strong> A ledger should not be deleted simply because it has no recent
+                        transactions. Check its opening balance, dependencies, and business purpose before removing it.
+                    </p>
+                </aside>
+            </section>
+
+            <section class="article-block" id="why-delete">
+                <p class="section-kicker">03 · Benefits</p>
+                <h2>Why Should You Delete Unused Ledgers?</h2>
+                <p>Removing unnecessary ledger masters can help you maintain cleaner accounting records. Benefits
+                    include:</p>
+                <ul class="check-list">
+                    <li>Easier ledger selection during sales and purchase entries.</li>
+                    <li>Fewer duplicate or confusing ledger names.</li>
+                    <li>Better organisation of accounting masters.</li>
+                    <li>Reduced risk of selecting an incorrect ledger.</li>
+                    <li>Simpler maintenance of the Chart of Accounts.</li>
+                </ul>
+                <p>Deletion is appropriate only when a ledger is genuinely unnecessary and TallyPrime permits it. If the
+                    ledger contains useful historical data, changing its details or retaining it may be a better choice.
+                </p>
+            </section>
+
+            <section class="article-block" id="delete-single">
+                <p class="section-kicker">04 · Step-by-step</p>
+                <h2>How to Delete a Single Unused Ledger in TallyPrime</h2>
+                <p>Follow these steps to delete one unused ledger. Make sure you are working in the correct company
+                    before starting.</p>
+                <div class="timeline">
+                    <article class="timeline-item"><span class="timeline-number">01</span>
+                        <div class="timeline-content"><span class="timeline-label">Open the company</span>
+                            <h3>Open TallyPrime</h3>
+                            <p>Launch TallyPrime and select the company in which you want to delete the ledger. Confirm
+                                the company name before making changes.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item"><span class="timeline-number">02</span>
+                        <div class="timeline-content"><span class="timeline-label">Navigate to master</span>
+                            <h3>Open the Ledger Alteration screen</h3>
+                            <p>Use <kbd>Alt</kbd> + <kbd>G</kbd> → <strong>Alter Master</strong> →
+                                <strong>Ledger</strong>. Alternatively, navigate through the available Gateway of Tally
+                                menus.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item"><span class="timeline-number">03</span>
+                        <div class="timeline-content"><span class="timeline-label">Select the ledger</span>
+                            <h3>Choose the ledger you want to remove</h3>
+                            <p>Select the ledger from the list. For example, choose <strong>ABC Traders - Test</strong>
+                                if it was created by mistake and is no longer required.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item"><span class="timeline-number">04</span>
+                        <div class="timeline-content"><span class="timeline-label">Verify before action</span>
+                            <h3>Check the ledger details</h3>
+                            <ul>
+                                <li>Ledger name and group</li>
+                                <li>Opening balance, if any</li>
+                                <li>Whether it has been used in transactions</li>
+                                <li>Whether another master or configuration refers to it</li>
+                            </ul>
+                            <p>If it contains important information or is used elsewhere, stop and review the
+                                implications first.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item"><span class="timeline-number">05</span>
+                        <div class="timeline-content"><span class="timeline-label">Delete</span>
+                            <h3>Press Alt + D</h3>
+                            <p>On the Ledger Alteration screen, press <kbd>Alt</kbd> + <kbd>D</kbd> to initiate
+                                deletion. TallyPrime allows deletion only when the ledger satisfies the applicable
+                                conditions.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item"><span class="timeline-number">06</span>
+                        <div class="timeline-content"><span class="timeline-label">Confirm carefully</span>
+                            <h3>Confirm the deletion</h3>
+                            <p>If a confirmation prompt appears, verify the selected ledger again. Confirm only when you
+                                are certain it is no longer required. The ledger will no longer be available as an
+                                active master for new transactions.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="step-tip"><strong>Shortcut to remember:</strong> <kbd>Alt</kbd> + <kbd>D</kbd> initiates
+                    deletion from the alteration screen for an eligible ledger.</div>
+            </section>
+
+            <section class="article-block" id="delete-multiple">
+                <p class="section-kicker">05 · Bulk cleanup</p>
+                <h2>How to Delete Multiple Unused Ledgers in TallyPrime</h2>
+                <p>If a company contains many unused ledger masters, you can display unused ledgers through the Chart of
+                    Accounts and review them as a group.</p>
+                <div class="steps-list">
+                    <div class="step-summary"><span>01</span>
+                        <div><strong>Open Chart of Accounts</strong>
+                            <p>Press <kbd>Alt</kbd> + <kbd>G</kbd>, open <strong>Chart of Accounts</strong>, select
+                                <strong>Ledgers</strong> under Accounting Masters, and press Enter.</p>
+                        </div>
+                    </div>
+                    <div class="step-summary"><span>02</span>
+                        <div><strong>Open Exception Reports</strong>
+                            <p>In the Ledgers report, press <kbd>Ctrl</kbd> + <kbd>J</kbd> to open Exception Reports.
+                                Select <strong>Show Unused</strong> and press Enter.</p>
+                        </div>
+                    </div>
+                    <div class="step-summary"><span>03</span>
+                        <div><strong>Review the unused-ledger list</strong>
+                            <p>Inspect every ledger. The list is a starting point for review, not an instruction to
+                                delete every ledger displayed.</p>
+                        </div>
+                    </div>
+                    <div class="step-summary"><span>04</span>
+                        <div><strong>Select only eligible ledgers</strong>
+                            <p>Use the <kbd>Spacebar</kbd> to select each ledger that has been checked and confirmed as
+                                unnecessary.</p>
+                        </div>
+                    </div>
+                    <div class="step-summary"><span>05</span>
+                        <div><strong>Press Alt + D</strong>
+                            <p>After selecting the required ledgers, press <kbd>Alt</kbd> + <kbd>D</kbd> to initiate
+                                deletion.</p>
+                        </div>
+                    </div>
+                    <div class="step-summary"><span>06</span>
+                        <div><strong>Confirm the deletion</strong>
+                            <p>Review the confirmation and press <kbd>Y</kbd> to accept deletion when prompted, if the
+                                selected ledgers are correct.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Ledger name</th>
+                                <th>Suggested action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ABC Traders - Test</td>
+                                <td>Delete if no longer required and eligible.</td>
+                            </tr>
+                            <tr>
+                                <td>Old Supplier - Duplicate</td>
+                                <td>Verify the correct supplier ledger before deleting.</td>
+                            </tr>
+                            <tr>
+                                <td>Office Expense</td>
+                                <td>Retain if required for future accounting.</td>
+                            </tr>
+                            <tr>
+                                <td>XYZ Customer - Practice</td>
+                                <td>Delete if it is only a test master and is eligible.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <aside class="notice"><strong>Version note:</strong> The screen layout may vary by TallyPrime release.
+                    If options differ, follow the shortcut hints and prompts shown in your installation.</aside>
+            </section>
+
+            <section class="article-block" id="shortcut-table">
+                <h2>Useful Shortcuts for Deleting Unused Ledgers</h2>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Shortcut or navigation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Open Go To</td>
+                                <td><kbd>Alt</kbd> + <kbd>G</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>Open Exception Reports for ledgers</td>
+                                <td><kbd>Ctrl</kbd> + <kbd>J</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>Select a ledger in the unused list</td>
+                                <td><kbd>Spacebar</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>Delete selected eligible ledger(s)</td>
+                                <td><kbd>Alt</kbd> + <kbd>D</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>Confirm deletion when prompted</td>
+                                <td><kbd>Y</kbd>, if shown by the prompt</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="article-block" id="single-vs-multiple">
+                <h2>Difference Between Deleting One Ledger and Multiple Ledgers</h2>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Particulars</th>
+                                <th>Single ledger deletion</th>
+                                <th>Multiple ledger deletion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Navigation</td>
+                                <td>Alter Master → Ledger</td>
+                                <td>Chart of Accounts → Ledgers</td>
+                            </tr>
+                            <tr>
+                                <td>Main purpose</td>
+                                <td>Delete one specific ledger</td>
+                                <td>Identify and remove several unused ledgers</td>
+                            </tr>
+                            <tr>
+                                <td>Shortcut</td>
+                                <td><kbd>Alt</kbd> + <kbd>D</kbd></td>
+                                <td><kbd>Ctrl</kbd> + <kbd>J</kbd> to find unused; Spacebar to select; <kbd>Alt</kbd> +
+                                    <kbd>D</kbd> to delete</td>
+                            </tr>
+                            <tr>
+                                <td>Best suited for</td>
+                                <td>One incorrect or duplicate master</td>
+                                <td>Cleaning up multiple unnecessary masters</td>
+                            </tr>
+                            <tr>
+                                <td>Verification</td>
+                                <td>Check the selected ledger</td>
+                                <td>Review every selected ledger before deletion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Both methods require careful verification before confirming deletion.</p>
+            </section>
+
+            <section class="article-block" id="deletion-problems">
+                <p class="section-kicker">06 · Troubleshooting</p>
+                <h2>Why Am I Unable to Delete a Ledger in TallyPrime?</h2>
+                <p>TallyPrime may prevent deletion when a ledger is being used or is required by another part of the
+                    system.</p>
+                <div class="mistake-list">
+                    <article class="mistake-item"><span class="mistake-icon">01</span>
+                        <div>
+                            <h3>The ledger is used in a voucher</h3>
+                            <p><strong>Why it happens:</strong> The ledger appears in a recorded transaction.
+                                <strong>What to do:</strong> Review the relevant vouchers and determine the correct
+                                accounting correction. Do not delete valid historical transactions just to remove a
+                                ledger.</p>
+                        </div>
+                    </article>
+                    <article class="mistake-item"><span class="mistake-icon">02</span>
+                        <div>
+                            <h3>The ledger has an opening balance</h3>
+                            <p><strong>Why it happens:</strong> The ledger may contain a balance even if no vouchers
+                                were recorded during the current period. <strong>What to do:</strong> Investigate
+                                whether it represents a genuine asset, liability, or other account before taking action.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="mistake-item"><span class="mistake-icon">03</span>
+                        <div>
+                            <h3>The ledger is referenced elsewhere</h3>
+                            <p><strong>Why it happens:</strong> Another master or configuration may depend on it.
+                                <strong>What to do:</strong> Identify the dependency and update it appropriately before
+                                attempting deletion.</p>
+                        </div>
+                    </article>
+                    <article class="mistake-item"><span class="mistake-icon">04</span>
+                        <div>
+                            <h3>The ledger is a predefined master</h3>
+                            <p><strong>Why it happens:</strong> Certain predefined ledgers, such as Cash and Profit
+                                &amp; Loss A/c, cannot be deleted. <strong>What to do:</strong> Retain the required
+                                master and change its configuration only where permitted.</p>
+                        </div>
+                    </article>
+                    <article class="mistake-item"><span class="mistake-icon">05</span>
+                        <div>
+                            <h3>The wrong ledger was selected</h3>
+                            <p><strong>Why it happens:</strong> Similar ledger names can be confusing. <strong>What to
+                                    do:</strong> Verify the exact ledger name and group before using <kbd>Alt</kbd> +
+                                <kbd>D</kbd>.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="article-block" id="delete-or-alter">
+                <h2>Should You Delete or Alter an Unused Ledger?</h2>
+                <p>Deletion is not always the best solution. Choose the action that fits the reason for the change.</p>
+                <div class="table-responsive">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>Situation</th>
+                                <th>Recommended action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ledger created by mistake and never used</td>
+                                <td>Delete if eligible.</td>
+                            </tr>
+                            <tr>
+                                <td>Duplicate ledger with no transactions</td>
+                                <td>Verify the correct master, then delete the duplicate if eligible.</td>
+                            </tr>
+                            <tr>
+                                <td>Ledger name contains a spelling mistake</td>
+                                <td>Alter the ledger name.</td>
+                            </tr>
+                            <tr>
+                                <td>Ledger has historical transactions</td>
+                                <td>Usually retain it and review the appropriate correction.</td>
+                            </tr>
+                            <tr>
+                                <td>Ledger has an opening balance</td>
+                                <td>Investigate the balance before taking action.</td>
+                            </tr>
+                            <tr>
+                                <td>Ledger is no longer used but has valid historical records</td>
+                                <td>Consider retaining it for reporting and audit purposes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="example-callout"><span class="callout-label">EXAMPLE</span>
+                    <p>If you created a ledger named <strong>Office Expence</strong> and it has never been used, you may
+                        be able to rename it to <strong>Office Expense</strong> instead of deleting and recreating it.
+                        This preserves the existing master and avoids unnecessary duplication.</p>
+                </div>
+            </section>
+
+            <section class="article-block" id="clean-chart">
+                <h2>How to Maintain a Clean Chart of Accounts in TallyPrime</h2>
+                <div class="practice-checklist">
+                    <div><span>✓</span>Search for an existing ledger before creating a new one.</div>
+                    <div><span>✓</span>Use consistent naming conventions for customers, suppliers, and expenses.</div>
+                    <div><span>✓</span>Review duplicate masters periodically.</div>
+                    <div><span>✓</span>Check opening balances and dependencies before deletion.</div>
+                    <div><span>✓</span>Retain ledgers needed for historical accounting records.</div>
+                    <div><span>✓</span>Correct spelling or classification using the appropriate alteration workflow.
+                    </div>
+                    <div><span>✓</span>Maintain suitable backups and follow approval procedures.</div>
+                    <div><span>✓</span>If Edit Log is enabled, review the available audit trail for master changes.
+                    </div>
+                </div>
+                <p>A clean Chart of Accounts improves day-to-day accounting without compromising the accuracy of
+                    historical records.</p>
+            </section>
+
+            <section class="article-block" id="faqs">
+                <p class="section-kicker">07 · Frequently asked questions</p>
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>1. What is the shortcut key to delete a ledger in TallyPrime?</summary>
+                        <p>Press <kbd>Alt</kbd> + <kbd>D</kbd> in the Ledger Alteration screen to initiate deletion of
+                            an eligible ledger.</p>
+                    </details>
+                    <details>
+                        <summary>2. How do I find unused ledgers in TallyPrime?</summary>
+                        <p>Open Chart of Accounts, select Ledgers, press <kbd>Ctrl</kbd> + <kbd>J</kbd>, choose Show
+                            Unused, and press Enter.</p>
+                    </details>
+                    <details>
+                        <summary>3. Can I delete multiple unused ledgers at once?</summary>
+                        <p>Yes. In Chart of Accounts, display unused ledgers, select the required masters using the
+                            Spacebar, press <kbd>Alt</kbd> + <kbd>D</kbd>, and confirm the deletion.</p>
+                    </details>
+                    <details>
+                        <summary>4. Why is TallyPrime not allowing me to delete a ledger?</summary>
+                        <p>The ledger may have been used in vouchers, contain relevant balances, be referenced by
+                            another master or configuration, or be a predefined ledger that cannot be deleted.</p>
+                    </details>
+                    <details>
+                        <summary>5. Can I delete a ledger that has transactions?</summary>
+                        <p>You generally cannot delete a ledger while it is used in recorded vouchers. Review the
+                            related transactions and use the appropriate accounting correction rather than removing
+                            valid historical records.</p>
+                    </details>
+                    <details>
+                        <summary>6. Can I delete a ledger with an opening balance?</summary>
+                        <p>Check the opening balance and business purpose first. An opening balance can represent a
+                            genuine accounting amount, so do not ignore it when deciding whether a ledger is
+                            unnecessary.</p>
+                    </details>
+                    <details>
+                        <summary>7. Is deleting a ledger the same as altering it?</summary>
+                        <p>No. Deleting removes an eligible master from active use, while altering changes details such
+                            as its name or other supported fields.</p>
+                    </details>
+                    <details>
+                        <summary>8. Can I delete unused stock items using a similar method?</summary>
+                        <p>TallyPrime also provides ways to identify and manage unused inventory masters through Chart
+                            of Accounts. The available options depend on the type of master selected.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="article-block final-thoughts" id="conclusion">
+                <p class="section-kicker">08 · Key takeaway</p>
+                <h2>Conclusion</h2>
+                <p>Deleting unused ledgers in TallyPrime can help maintain an organised Chart of Accounts and reduce
+                    unnecessary master records. For a single ledger, open <strong>Alter Master → Ledger</strong>, select
+                    the required master, and press <kbd>Alt</kbd> + <kbd>D</kbd> if it is eligible for deletion.</p>
+                <p>To review multiple unused ledgers, open <strong>Chart of Accounts → Ledgers → Ctrl + J → Show
+                        Unused</strong>, select only the appropriate ledgers, and use the deletion option.</p>
+                <p>Always verify opening balances, transaction history, and dependencies before deleting a ledger.
+                    Accurate master management is an important part of maintaining reliable accounting records.</p>
+                <div class="cta-panel">
+                    <p class="eyebrow">BUILD PRACTICAL ACCOUNTING SKILLS</p>
+                    <h3>Learn TallyPrime with RLT Edzaro</h3>
+                    <p>Explore practical training in ledgers, vouchers, GST entries, billing, and accounting reports.
+                    </p><a class="cta-link" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                        target="_blank" rel="noopener noreferrer">Explore Tally Training <span
+                            aria-hidden="true">↗</span></a>
+                </div>
+            </section>
+        </main>
+
+        <aside class="article-sidebar" aria-label="Article navigation">
+            <div class="sidebar-card sidebar-toc">
+                <p class="sidebar-heading">IN THIS ARTICLE</p>
+                <nav class="article-toc">
+                    <a href="#introduction"
+                        (click)="scrollToSection($event, 'introduction')"><span>01</span>Introduction</a>
+                    <a href="#what-is-unused-ledger"
+                        (click)="scrollToSection($event, 'what-is-unused-ledger')"><span>02</span>What Is an Unused
+                        Ledger?</a>
+                    <a href="#why-delete" (click)="scrollToSection($event, 'why-delete')"><span>03</span>Why Delete?</a>
+                    <a href="#delete-single" (click)="scrollToSection($event, 'delete-single')"><span>04</span>Delete
+                        One Ledger</a>
+                    <a href="#delete-multiple"
+                        (click)="scrollToSection($event, 'delete-multiple')"><span>05</span>Delete Multiple Ledgers</a>
+                    <a href="#shortcut-table" (click)="scrollToSection($event, 'shortcut-table')"><span>06</span>Useful
+                        Shortcuts</a>
+                    <a href="#single-vs-multiple"
+                        (click)="scrollToSection($event, 'single-vs-multiple')"><span>07</span>Single vs Multiple</a>
+                    <a href="#deletion-problems"
+                        (click)="scrollToSection($event, 'deletion-problems')"><span>08</span>Deletion Problems</a>
+                    <a href="#delete-or-alter"
+                        (click)="scrollToSection($event, 'delete-or-alter')"><span>09</span>Delete or Alter?</a>
+                    <a href="#clean-chart" (click)="scrollToSection($event, 'clean-chart')"><span>10</span>Clean Chart
+                        of Accounts</a>
+                    <a href="#faqs" (click)="scrollToSection($event, 'faqs')"><span>11</span>FAQs</a>
+                    <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')"><span>12</span>Conclusion</a>
+                </nav>
+            </div>
+            <div class="sidebar-card sidebar-checklist">
+                <p class="sidebar-heading">BEFORE DELETING</p>
+                <ul>
+                    <li>Verify the exact ledger</li>
+                    <li>Check transaction history</li>
+                    <li>Review opening balance</li>
+                    <li>Check master dependencies</li>
+                    <li>Retain a suitable backup</li>
+                </ul>
+            </div>
+            <div class="sidebar-card sidebar-help">
+                <h3>Want to learn TallyPrime?</h3>
+                <p>Build practical accounting skills with RLT Edzaro.</p><a
+                    href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                    rel="noopener noreferrer">Explore training ↗</a>
+            </div>
+        </aside>
+    </div>
+    <a class="back-to-top" href="#top" (click)="scrollToTop($event)" aria-label="Back to top">↑</a>
+</article>

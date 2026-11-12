@@ -301,6 +301,86 @@ export class BlogsComponent {
       readTime: '12 min read',
       url: '/tallyprime-tips-to-reduce-manual-accounting-work/',
     },
+    {
+      title: 'How to Customize Reports in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to customize reports in TallyPrime by changing reporting periods, applying available filters, adjusting report views, reviewing ledger balances, drilling down into vouchers, and exporting reports for business analysis.',
+      image: 'blogs-image/How-to-Customize-Reports-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 22, 2026',
+      readTime: '10 min read',
+      url: '/how-to-customize-reports-in-tallyprime/',
+    },
+    {
+      title: 'How to Use Filters in TallyPrime Reports: Step-by-Step Guide',
+      description:
+        'Learn how to use filters in TallyPrime reports to find transactions, analyse accounting data, filter sales and purchase reports, review ledger balances, investigate vouchers, and improve reporting accuracy with practical examples.',
+      image: 'blogs-image/How-to-Use-Filters-in-TallyPrime-Reports.png',
+      category: 'Tally & Finance',
+      date: 'October 22, 2026',
+      readTime: '12 min read',
+      url: '/how-to-use-filters-in-tallyprime-reports/',
+    },
+    {
+      title: 'How to Export TallyPrime Reports to Excel and PDF: Step-by-Step Guide',
+      description:
+        'Learn how to export TallyPrime reports to Excel and PDF with step-by-step instructions. Discover how to export Balance Sheets, Profit and Loss Accounts, Trial Balances, Ledger Reports, Stock Summaries, and GST reports, with practical examples and troubleshooting tips.',
+      image: 'blogs-image/How-to-Export-TallyPrime-Reports-to-Excel-and-PDF.png',
+      category: 'Tally & Finance',
+      date: 'October 22, 2026',
+      readTime: '12 min read',
+      url: '/how-to-export-tallyprime-reports-to-excel-and-pdf/',
+    },
+    {
+      title: 'How to Create a Proforma Invoice in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to create, save, print, and share a proforma invoice in TallyPrime using optional sales vouchers. Follow step-by-step instructions to enter customer details, add products or services, include payment and delivery terms, and understand the difference between a proforma invoice and a regular sales invoice.',
+      image: 'blogs-image/How-to-Create-Proforma-Invoice-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 23, 2026',
+      readTime: '8 min read',
+      url: '/how-to-create-proforma-invoice-in-tallyprime/',
+    },
+    {
+      title: 'How to Delete a Company in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to delete a company in TallyPrime using Alt + D. Follow step-by-step instructions to back up company data, navigate the Company Alteration screen, understand the difference between deleting and shutting a company, and avoid common data-loss mistakes.',
+      image: 'blogs-image/How-to-Delete-a-Company-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 23, 2026',
+      readTime: '9 min read',
+      url: '/how-to-delete-a-company-in-tallyprime/',
+    },
+    {
+      title: 'How to Delete Unused Ledger in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to delete unused ledgers in TallyPrime, remove multiple unused ledgers, use Alt + D, find unused masters through Chart of Accounts, and resolve common ledger deletion errors. Follow step-by-step instructions to maintain an organised Chart of Accounts while protecting important accounting records.',
+      image: 'blogs-image/How-to-Delete-Unused-Ledger-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 23, 2026',
+      readTime: '9 min read',
+      url: '/how-to-delete-unused-ledger-in-tallyprime/',
+    },
+    {
+      title: 'How to Make a Credit Note in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to make a credit note in TallyPrime with step-by-step instructions. Understand credit note voucher activation, sales returns, customer ledger selection, original invoice details, GST calculations, accounting entries, and how to verify credit notes in accounting reports.',
+      image: 'blogs-image/How-to-Make-Credit-Note-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 23, 2026',
+      readTime: '10 min read',
+      url: '/how-to-make-credit-note-in-tallyprime/',
+    },
+    {
+      title: 'How to Generate a Trial Balance in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to generate a Trial Balance in TallyPrime with step-by-step instructions. Understand ledger-wise reports, reporting periods, opening balances, debit and credit totals, and how to troubleshoot Trial Balance differences.',
+      image: 'blogs-image/How-to-Generate-Trial-Balance-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'October 23, 2026',
+      readTime: '10 min read',
+      url: '/generate-trial-balance-in-tallyprime/',
+    },
   ];
 
   // =========================================================
