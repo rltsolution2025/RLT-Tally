@@ -1,0 +1,884 @@
+<article class="entries-blog">
+    <!-- HERO SECTION -->
+    <header class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Inventory Management</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                TALLYPRIME INVENTORY GUIDE
+            </div>
+
+            <h1>How to Track Stock Movement in TallyPrime: A Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to record stock receipts, sales, transfers, and adjustments in TallyPrime, then review
+                inventory reports to monitor stock movement and identify discrepancies.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Practical TallyPrime Guide</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Step-by-step tutorial</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Stock In &amp; Out</span>
+                <span>Inventory Vouchers</span>
+                <span>Stock Reports</span>
+                <span>Godown Transfers</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE CONTENT -->
+    <main class="entries-page">
+        <div class="entries-container">
+            <div class="article-layout">
+                <aside class="article-sidebar" aria-label="Article navigation">
+                    <nav class="toc-card" aria-label="Table of contents">
+                        <span class="toc-label">ON THIS PAGE</span>
+                        <h2>In This Guide</h2>
+                        <div class="toc-links">
+                            <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                            <a href="#what-is-stock-movement"
+                                (click)="scrollToSection($event, 'what-is-stock-movement')">What Is Stock Movement?</a>
+                            <a href="#importance" (click)="scrollToSection($event, 'importance')">Why It Is
+                                Important</a>
+                            <a href="#how-it-works" (click)="scrollToSection($event, 'how-it-works')">How It Works</a>
+                            <a href="#step-by-step" (click)="scrollToSection($event, 'step-by-step')">Step-by-Step
+                                Guide</a>
+                            <a href="#enable-inventory" (click)="scrollToSection($event, 'enable-inventory')">Enable
+                                Inventory</a>
+                            <a href="#stock-masters" (click)="scrollToSection($event, 'stock-masters')">Stock Groups
+                                &amp; Items</a>
+                            <a href="#godowns" (click)="scrollToSection($event, 'godowns')">Create Godowns</a>
+                            <a href="#stock-in" (click)="scrollToSection($event, 'stock-in')">Record Stock In</a>
+                            <a href="#stock-out" (click)="scrollToSection($event, 'stock-out')">Record Stock Out</a>
+                            <a href="#stock-transfer" (click)="scrollToSection($event, 'stock-transfer')">Transfer
+                                Stock</a>
+                            <a href="#stock-adjustments" (click)="scrollToSection($event, 'stock-adjustments')">Stock
+                                Adjustments</a>
+                            <a href="#movement-reports" (click)="scrollToSection($event, 'movement-reports')">Stock
+                                Movement Reports</a>
+                            <a href="#practical-example"
+                                (click)="scrollToSection($event, 'practical-example')">Practical Example</a>
+                            <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                                Problems</a>
+                            <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best
+                                Practices</a>
+                            <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                            <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        </div>
+                        <div class="toc-help">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>Use the section links to move directly to the inventory topic you need.</p>
+                        </div>
+                    </nav>
+
+                    <div class="sidebar-cta">
+                        <div class="sidebar-cta-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                        <h3>Build Practical TallyPrime Skills</h3>
+                        <p>Learn accounting, GST, inventory management, and day-to-day TallyPrime workflows.</p>
+                        <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                            rel="noopener">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </aside>
+
+                <article class="article-content">
+                    <section class="article-section" id="introduction">
+                        <div class="section-eyebrow">INTRODUCTION</div>
+                        <h2>How to Track Stock Movement in TallyPrime</h2>
+                        <p>Tracking stock movement is an important part of inventory management for businesses that
+                            purchase, store, sell, or transfer goods. It helps businesses understand how products move
+                            from suppliers to warehouses and customers while maintaining accurate inventory records.</p>
+                        <p>TallyPrime provides inventory management features that help businesses record stock receipts,
+                            sales, purchases, stock transfers, and adjustments. By using the appropriate inventory
+                            vouchers and stock reports, businesses can monitor stock availability, review item
+                            movements, and identify discrepancies.</p>
+                        <p>Whether you are an accounting student, inventory executive, business owner, or aspiring
+                            accountant, learning how to track stock movement in TallyPrime can help you develop
+                            practical inventory management skills.</p>
+                        <p>In this guide, you will learn how stock movement works, how to record inventory transactions,
+                            how to view stock movement reports, and how to avoid common inventory errors in TallyPrime.
+                        </p>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>What does stock movement tracking involve?</h3>
+                                <p>It involves recording goods received, goods issued, transfers between locations, and
+                                    stock adjustments, then checking inventory reports to understand the resulting
+                                    quantities.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="what-is-stock-movement">
+                        <div class="section-eyebrow">BASICS</div>
+                        <h2>What Is Stock Movement?</h2>
+                        <p>Stock movement refers to the movement of goods into, out of, or between storage locations
+                            within a business. It helps businesses understand how inventory changes over a specific
+                            period.</p>
+                        <div class="report-grid movement-type-grid">
+                            <div class="report-card">
+                                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                                <h3>Stock In</h3>
+                                <p>Goods received from suppliers or returned by customers.</p>
+                            </div>
+                            <div class="report-card">
+                                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                                <h3>Stock Out</h3>
+                                <p>Goods sold to customers, returned to suppliers, or issued for internal use.</p>
+                            </div>
+                            <div class="report-card">
+                                <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                                <h3>Stock Transfer</h3>
+                                <p>Goods moved between warehouses, godowns, or storage locations.</p>
+                            </div>
+                            <div class="report-card">
+                                <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                                <h3>Stock Adjustment</h3>
+                                <p>Corrections for shortages, excess stock, damage, or physical verification
+                                    differences.</p>
+                            </div>
+                        </div>
+                        <p>For example, a business purchases 100 units of a product, sells 40 units, and transfers 20
+                            units to another warehouse. Tracking these movements helps the business understand how much
+                            stock remains at each location.</p>
+                    </section>
+
+                    <section class="article-section" id="importance">
+                        <div class="section-eyebrow">BUSINESS BENEFITS</div>
+                        <h2>Why Is Tracking Stock Movement Important?</h2>
+                        <p>Businesses need accurate inventory information to make better purchasing, sales, and
+                            operational decisions. The key benefits of tracking stock movement in TallyPrime include:
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="fa-solid fa-box"
+                                    aria-hidden="true"></i><span><strong>Monitor stock availability:</strong> Check
+                                    available quantities and identify when products need replenishment.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-triangle-exclamation"
+                                    aria-hidden="true"></i><span><strong>Prevent stock shortages:</strong> Identify
+                                    products selling quickly and plan additional purchases.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-warehouse"
+                                    aria-hidden="true"></i><span><strong>Reduce excess inventory:</strong> Identify
+                                    slow-moving products and avoid unnecessary purchases.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-clipboard-check"
+                                    aria-hidden="true"></i><span><strong>Improve inventory accuracy:</strong> Record
+                                    receipts, sales, transfers, and adjustments consistently.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-magnifying-glass-chart"
+                                    aria-hidden="true"></i><span><strong>Identify discrepancies:</strong> Compare
+                                    physical and recorded stock to investigate differences.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-chart-line"
+                                    aria-hidden="true"></i><span><strong>Support better decisions:</strong> Use stock
+                                    information to plan purchases, storage, and product demand.</span></div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="how-it-works">
+                        <div class="section-eyebrow">WORKFLOW</div>
+                        <h2>How Does Stock Movement Work in TallyPrime?</h2>
+                        <p>TallyPrime uses inventory masters, stock items, inventory vouchers, and reports to help
+                            businesses maintain stock records.</p>
+                        <div class="practice-roadmap">
+                            <div class="practice-step"><span class="step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Create or configure stock items</h3>
+                                    <p>Set up the products that the business purchases, sells, manufactures, or tracks.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Set up units of measurement</h3>
+                                    <p>Choose suitable units so quantities are entered consistently.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Create godowns or locations</h3>
+                                    <p>Configure storage locations when the business needs location-wise stock tracking.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Record stock receipts and issues</h3>
+                                    <p>Enter purchases, sales, and other transactions that change stock quantities.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Record transfers and adjustments</h3>
+                                    <p>Maintain records for internal movements and verified stock differences.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">06</span>
+                                <div class="step-content">
+                                    <h3>Review inventory reports</h3>
+                                    <p>Check item, location, and summary reports to understand stock movement and
+                                        closing balances.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>The exact workflow depends on whether the business manages inventory alongside accounting,
+                            uses multiple locations, or tracks batches and other inventory details.</p>
+                    </section>
+
+                    <section class="article-section" id="step-by-step">
+                        <div class="section-eyebrow">STEP-BY-STEP TUTORIAL</div>
+                        <h2>Step-by-Step Guide to Track Stock Movement in TallyPrime</h2>
+                        <p>Follow these steps to record and monitor inventory movement.</p>
+                    </section>
+
+                    <section class="article-section" id="enable-inventory">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">01</span>
+                                <div class="entry-heading"><span class="entry-category">CONFIGURATION</span>
+                                    <h3>Step 1: Enable Inventory Features</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>First, make sure inventory management is configured for your company.</p>
+                                <ol>
+                                    <li>Open TallyPrime.</li>
+                                    <li>Select the required company.</li>
+                                    <li>Open the company features or inventory configuration.</li>
+                                    <li>Verify that the relevant inventory features are enabled.</li>
+                                    <li>Enable godown management if you need to track stock across multiple locations.
+                                    </li>
+                                    <li>Save the configuration.</li>
+                                </ol>
+                                <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                    <p>The available options and menu names may vary depending on your TallyPrime
+                                        release and company setup.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-masters">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">02</span>
+                                <div class="entry-heading"><span class="entry-category">INVENTORY MASTERS</span>
+                                    <h3>Step 2: Create Stock Groups and Stock Items</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Stock groups help organise products into categories, while stock items represent
+                                    individual products.</p>
+                                <h4>Example stock groups</h4>
+                                <ul class="ledger-list">
+                                    <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Mobile Phones</li>
+                                    <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Laptops</li>
+                                    <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Accessories</li>
+                                </ul>
+                                <h4>Example stock items</h4>
+                                <ul>
+                                    <li>Samsung Galaxy Phone</li>
+                                    <li>HP Laptop</li>
+                                    <li>Wireless Keyboard</li>
+                                </ul>
+                                <h4>To create a stock item</h4>
+                                <ol>
+                                    <li>Open the inventory master creation screen.</li>
+                                    <li>Select <strong>Stock Item</strong>.</li>
+                                    <li>Enter the item name.</li>
+                                    <li>Select the appropriate stock group.</li>
+                                    <li>Choose the unit of measurement.</li>
+                                    <li>Enter opening stock details if applicable.</li>
+                                    <li>Save the item.</li>
+                                </ol>
+                                <p>Use consistent item names and units to make inventory reports easier to understand.
+                                </p>
+                                <div class="article-note">Related guide: <a
+                                        routerLink="/create-stock-items-in-tallyprime">How to Create Stock Items in
+                                        TallyPrime</a> explains stock item setup in more detail. You can also read <a
+                                        routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime">How to
+                                        Create Stock Groups and Categories in TallyPrime</a>.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="godowns">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">03</span>
+                                <div class="entry-heading"><span class="entry-category">LOCATION SETUP</span>
+                                    <h3>Step 3: Create Godowns or Stock Locations</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>If your business stores inventory in different warehouses, godowns, or branches,
+                                    configure the relevant locations in TallyPrime.</p>
+                                <div class="report-grid">
+                                    <div class="report-card"><i class="fa-solid fa-warehouse" aria-hidden="true"></i>
+                                        <h3>Main Warehouse</h3>
+                                        <p>Central storage location.</p>
+                                    </div>
+                                    <div class="report-card"><i class="fa-solid fa-store" aria-hidden="true"></i>
+                                        <h3>Chennai Branch</h3>
+                                        <p>Branch-level stock location.</p>
+                                    </div>
+                                    <div class="report-card"><i class="fa-solid fa-boxes-stacked"
+                                            aria-hidden="true"></i>
+                                        <h3>Tambaram Warehouse</h3>
+                                        <p>Additional storage location.</p>
+                                    </div>
+                                </div>
+                                <p>When recording eligible inventory transactions, select the appropriate source and
+                                    destination locations. This allows the business to monitor stock balances by
+                                    location instead of viewing only the overall inventory quantity.</p>
+                                <p>If your business operates from a single storage location, separate godown tracking
+                                    may not be necessary.</p>
+                                <div class="article-note">Related guide: <a
+                                        routerLink="/how-to-manage-multiple-godowns-in-tallyprime">How to Manage
+                                        Multiple Godowns in TallyPrime</a>.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-in">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">04</span>
+                                <div class="entry-heading"><span class="entry-category">GOODS RECEIVED</span>
+                                    <h3>Step 4: Record Stock Received from Suppliers</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>When goods arrive from a supplier, record the purchase and inventory details using
+                                    the appropriate voucher workflow.</p>
+                                <p>For example, a business purchases 100 units of a product at ₹500 per unit.</p>
+                                <div class="transaction-box">
+                                    <h4>Purchase example</h4>
+                                    <div class="reference-table-wrapper">
+                                        <table class="reference-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Particulars</th>
+                                                    <th>Quantity</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Product A</td>
+                                                    <td>100 units</td>
+                                                    <td>₹50,000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <h4>In TallyPrime</h4>
+                                <ol>
+                                    <li>Open the appropriate purchase voucher.</li>
+                                    <li>Select the supplier ledger.</li>
+                                    <li>Enter the purchase details.</li>
+                                    <li>Select the stock item.</li>
+                                    <li>Enter the quantity and rate.</li>
+                                    <li>Select the relevant godown if applicable.</li>
+                                    <li>Verify the transaction and save it.</li>
+                                </ol>
+                                <p>The recorded inventory increases by the quantity received, subject to the transaction
+                                    details and voucher configuration.</p>
+                                <div class="article-note">For voucher-entry basics, see <a
+                                        routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime
+                                        Voucher Types Explained</a>.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-out">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">05</span>
+                                <div class="entry-heading"><span class="entry-category">GOODS ISSUED</span>
+                                    <h3>Step 5: Record Stock Sold to Customers</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>When goods are sold, record the transaction using the appropriate sales voucher.
+                                    Suppose the business sells 40 units of Product A.</p>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Particulars</th>
+                                                <th>Quantity</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Opening stock</td>
+                                                <td>100 units</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Stock sold</td>
+                                                <td>40 units</td>
+                                            </tr>
+                                            <tr class="total-row">
+                                                <td><strong>Remaining stock</strong></td>
+                                                <td><strong>60 units</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h4>In TallyPrime</h4>
+                                <ol>
+                                    <li>Open the Sales voucher.</li>
+                                    <li>Select the customer ledger.</li>
+                                    <li>Enter the sales details.</li>
+                                    <li>Select the stock item.</li>
+                                    <li>Enter the quantity sold.</li>
+                                    <li>Verify the rate and other details.</li>
+                                    <li>Save the voucher.</li>
+                                </ol>
+                                <p>The recorded stock balance decreases according to the quantity issued.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-transfer">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">06</span>
+                                <div class="entry-heading"><span class="entry-category">INTERNAL MOVEMENT</span>
+                                    <h3>Step 6: Record Stock Transfers Between Godowns</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Businesses with multiple storage locations may need to transfer goods between
+                                    warehouses. For example, a business transfers 20 units of Product A from its main
+                                    warehouse to its Tambaram warehouse.</p>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Location</th>
+                                                <th>Before</th>
+                                                <th>Transfer</th>
+                                                <th>After</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Main Warehouse</td>
+                                                <td>60</td>
+                                                <td>-20</td>
+                                                <td>40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tambaram Warehouse</td>
+                                                <td>10</td>
+                                                <td>+20</td>
+                                                <td>30</td>
+                                            </tr>
+                                            <tr class="total-row">
+                                                <td><strong>Total stock</strong></td>
+                                                <td><strong>70</strong></td>
+                                                <td><strong>0 net change</strong></td>
+                                                <td><strong>70</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h4>Steps to record a transfer</h4>
+                                <ol>
+                                    <li>Open the appropriate stock journal or inventory transfer voucher.</li>
+                                    <li>Select the stock item.</li>
+                                    <li>Enter the quantity being transferred.</li>
+                                    <li>Select the source godown.</li>
+                                    <li>Select the destination godown.</li>
+                                    <li>Verify the quantities and save the voucher.</li>
+                                </ol>
+                                <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                    <p>The available workflow may differ depending on the inventory configuration. A
+                                        correctly recorded internal transfer changes the quantity at each location but
+                                        does not change the business's total quantity of that item.</p>
+                                </div>
+                                <p><strong>Best practice:</strong> Record transfers promptly and retain supporting
+                                    documents such as stock transfer notes or internal movement records when required by
+                                    your business process.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-adjustments">
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">07</span>
+                                <div class="entry-heading"><span class="entry-category">STOCK CORRECTION</span>
+                                    <h3>Step 7: Record Stock Adjustments</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Physical stock verification may reveal differences between the actual quantity and
+                                    the quantity recorded in TallyPrime.</p>
+                                <div class="transaction-box">
+                                    <h4>Example: Physical stock shortage</h4>
+                                    <div class="reference-table-wrapper">
+                                        <table class="reference-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock record</th>
+                                                    <th>Quantity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Recorded stock</td>
+                                                    <td>50 units</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Physical stock</td>
+                                                    <td>48 units</td>
+                                                </tr>
+                                                <tr class="total-row">
+                                                    <td><strong>Difference</strong></td>
+                                                    <td><strong>2 units shortage</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <p>A stock adjustment may be required to account for the two-unit shortage after the
+                                    reason is investigated.</p>
+                                <p>Use the appropriate inventory voucher or stock reconciliation workflow to record the
+                                    adjustment. Maintain supporting documentation for shortages, damage, or other
+                                    differences.</p>
+                                <div class="gst-warning"><i class="fa-solid fa-triangle-exclamation"
+                                        aria-hidden="true"></i>
+                                    <p>Do not use stock adjustments as a substitute for recording ordinary purchases,
+                                        sales, or transfers correctly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="movement-reports">
+                        <div class="section-eyebrow">REPORTING</div>
+                        <h2>How to View Stock Movement Reports in TallyPrime</h2>
+                        <p>After recording inventory transactions, review the relevant reports to understand how stock
+                            has changed over time. Depending on your TallyPrime version and configuration, the following
+                            reports may be useful.</p>
+                        <div class="report-grid">
+                            <div class="report-card"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                                <h3>1. Stock Summary</h3>
+                                <p>Review opening stock, inward and outward quantities, closing stock, and inventory
+                                    values where applicable.</p>
+                            </div>
+                            <div class="report-card"><i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                                <h3>2. Stock Item Report</h3>
+                                <p>Review transactions and balances for an individual product to identify receipts,
+                                    sales, transfers, or adjustments.</p>
+                            </div>
+                            <div class="report-card"><i class="fa-solid fa-warehouse" aria-hidden="true"></i>
+                                <h3>3. Godown Summary</h3>
+                                <p>When godown tracking is enabled, review stock balances by location.</p>
+                            </div>
+                            <div class="report-card"><i class="fa-solid fa-book" aria-hidden="true"></i>
+                                <h3>4. Day Book</h3>
+                                <p>Review purchase vouchers, sales vouchers, stock journals, and other inventory
+                                    transactions chronologically.</p>
+                            </div>
+                            <div class="report-card"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                                <h3>5. Movement Analysis</h3>
+                                <p>Where available, analyse inward and outward quantities over a selected period using
+                                    report filters.</p>
+                            </div>
+                        </div>
+                        <div class="article-note"><strong>Tip:</strong> Report names, columns, and navigation can vary
+                            by release and configuration. If a specific report is unavailable, use the stock item, Stock
+                            Summary, godown, or voucher reports that provide the information you need.</div>
+                    </section>
+
+                    <section class="article-section" id="practical-example">
+                        <div class="section-eyebrow">PRACTICAL EXAMPLE</div>
+                        <h2>Practical Example: Tracking Stock Movement in TallyPrime</h2>
+                        <p>Let us understand stock movement using a simple example. ABC Traders starts the month with 50
+                            units of Product A.</p>
+                        <p>During the month, the business purchases 100 units, sells 70 units, transfers 20 units to
+                            another godown, and records no other stock movements.</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Stock Transaction</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Opening stock</td>
+                                        <td>50 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Purchases</td>
+                                        <td>+100 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sales</td>
+                                        <td>-70 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Internal transfer</td>
+                                        <td>0 net change</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>Closing stock</strong></td>
+                                        <td><strong>80 units</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="journal-box">
+                            <div class="journal-heading">
+                                <h4>Closing Stock Calculation</h4><span>ILLUSTRATIVE</span>
+                            </div>
+                            <div class="journal-lines">
+                                <div class="journal-line"><code>Opening Stock</code><span class="journal-amount">50
+                                        units</span></div>
+                                <div class="journal-line"><code>Add: Stock In</code><span class="journal-amount">+100
+                                        units</span></div>
+                                <div class="journal-line"><code>Less: Stock Out</code><span class="journal-amount">−70
+                                        units</span></div>
+                            </div>
+                            <div class="journal-total"><span>Closing Stock = 50 + 100 − 70</span><span>80 units</span>
+                            </div>
+                        </div>
+                        <p>The internal transfer does not affect total inventory, but it changes the stock available at
+                            each location. This example shows how accurate voucher entry and inventory reporting help
+                            businesses track stock movement throughout the month.</p>
+                    </section>
+
+                    <section class="article-section" id="common-problems">
+                        <div class="section-eyebrow">TROUBLESHOOTING</div>
+                        <h2>Common Stock Movement Problems in TallyPrime and Their Solutions</h2>
+                        <div class="mistake-list">
+                            <div class="mistake-item"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                                <div>
+                                    <h3>1. Stock Balance Is Incorrect</h3>
+                                    <p><strong>Possible causes:</strong> Purchases or sales were not recorded, the wrong
+                                        stock item was selected, opening stock was entered incorrectly, or an adjustment
+                                        or transfer was recorded incorrectly.</p>
+                                    <p><strong>Solution:</strong> Review the stock item report, relevant vouchers,
+                                        opening balances, and inventory adjustments.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <div>
+                                    <h3>2. Stock Is Missing from a Godown Report</h3>
+                                    <p><strong>Possible causes:</strong> The wrong godown was selected, godown tracking
+                                        was not configured correctly, or a transfer voucher was not recorded or was
+                                        entered incorrectly.</p>
+                                    <p><strong>Solution:</strong> Review the godown configuration and verify the source
+                                        and destination locations in the relevant vouchers.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-item"><i class="fa-solid fa-arrow-trend-down" aria-hidden="true"></i>
+                                <div>
+                                    <h3>3. Stock Quantity Is Negative</h3>
+                                    <p><strong>Possible causes:</strong> Goods were sold before the corresponding
+                                        receipt was recorded, a purchase or stock receipt was missed, or the transaction
+                                        date or stock item is incorrect.</p>
+                                    <p><strong>Solution:</strong> Review the transaction sequence and correct missing or
+                                        inaccurate vouchers. Do not add stock through an unsupported adjustment simply
+                                        to hide the discrepancy.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-item"><i class="fa-solid fa-scale-unbalanced" aria-hidden="true"></i>
+                                <div>
+                                    <h3>4. Stock Summary Does Not Match Physical Stock</h3>
+                                    <p><strong>Possible causes:</strong> Damage or loss was not recorded, physical stock
+                                        counting was inaccurate, or transactions were duplicated or omitted.</p>
+                                    <p><strong>Solution:</strong> Conduct a physical stock check, identify the reason
+                                        for the difference, and record a supported adjustment with appropriate
+                                        documentation.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-item"><i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                                <div>
+                                    <h3>5. Stock Transfer Does Not Update Location Balances Correctly</h3>
+                                    <p><strong>Possible causes:</strong> The wrong source or destination godown was
+                                        selected, the transfer quantity is incorrect, or the voucher was not saved
+                                        correctly.</p>
+                                    <p><strong>Solution:</strong> Review the stock transfer voucher and check the
+                                        inventory reports for both locations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="best-practices">
+                        <div class="section-eyebrow">INVENTORY CONTROL</div>
+                        <h2>Best Practices for Tracking Stock Movement in TallyPrime</h2>
+                        <p>Follow these practices to improve inventory accuracy:</p>
+                        <ul class="best-practice-list">
+                            <li>Record purchases and sales promptly.</li>
+                            <li>Use consistent stock item names and units.</li>
+                            <li>Maintain separate godowns when location-level tracking is required.</li>
+                            <li>Record internal transfers using the appropriate inventory workflow.</li>
+                            <li>Investigate physical stock differences before making adjustments.</li>
+                            <li>Review Stock Summary and stock item reports regularly.</li>
+                            <li>Verify transaction dates and quantities before saving vouchers.</li>
+                            <li>Maintain supporting records for damaged, missing, or returned goods.</li>
+                            <li>Reconcile recorded inventory with physical stock periodically.</li>
+                            <li>Train staff to follow a consistent inventory recording process.</li>
+                        </ul>
+                        <p>These practices help businesses maintain reliable inventory records and reduce avoidable
+                            stock discrepancies.</p>
+                    </section>
+
+                    <section class="article-section" id="faqs">
+                        <div class="section-eyebrow">COMMON QUESTIONS</div>
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="faq-list">
+                            <details class="faq-item">
+                                <summary>1. How do I track stock movement in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Create stock items, configure inventory settings, record purchases and sales,
+                                        enter stock transfers and adjustments, and review reports such as Stock Summary
+                                        and stock item reports.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>2. Which report is used to check stock movement in TallyPrime?<i
+                                        class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock Summary helps you review overall inventory balances. For detailed
+                                        item-level movements, use the relevant stock item or inventory transaction
+                                        reports available in your TallyPrime version.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>3. How do I track stock in multiple godowns in TallyPrime?<i
+                                        class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Enable and configure godown management, create the required locations, and select
+                                        the correct godown when recording stock receipts, issues, and transfers. Review
+                                        the relevant godown reports to compare balances.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>4. How is closing stock calculated?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Closing stock is generally calculated as opening stock plus stock received minus
+                                        stock issued, adjusted for other relevant inventory movements.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>5. How do I record stock transfers in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Use the appropriate stock journal or inventory transfer workflow, select the
+                                        stock item, enter the transfer quantity, and specify the source and destination
+                                        godowns.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>6. Can TallyPrime help identify stock discrepancies?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>TallyPrime maintains recorded inventory transactions and balances. By comparing
+                                        inventory reports with physical stock counts, businesses can investigate missing
+                                        entries, incorrect quantities, and other discrepancies.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>7. Is stock movement tracking useful for accounting students?<i
+                                        class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Yes. Learning stock movement helps accounting students understand inventory
+                                        vouchers, purchases, sales, stock transfers, inventory valuation, and practical
+                                        stock reconciliation.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>8. What is the difference between stock movement and Stock Summary?<i
+                                        class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock movement refers to the changes in inventory over a period. Stock Summary
+                                        provides an overview of stock balances and related quantities or values.
+                                        Detailed movement analysis may require opening the relevant stock item or
+                                        transaction reports.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="conclusion">
+                        <div class="section-eyebrow">FINAL THOUGHTS</div>
+                        <h2>Conclusion</h2>
+                        <p>Tracking stock movement in TallyPrime helps businesses monitor stock receipts, sales,
+                            transfers, adjustments, and closing balances. By recording inventory transactions correctly
+                            and reviewing the appropriate reports, businesses can improve inventory accuracy, reduce
+                            stock discrepancies, and make better purchasing decisions.</p>
+                        <p>For accounting students and aspiring inventory executives, practising stock movement in
+                            TallyPrime is an effective way to build practical inventory management skills.</p>
+                        <div class="final-thoughts">
+                            <h3>Want to learn TallyPrime and practical inventory management?</h3>
+                            <p>Explore Tally training at <strong>RLT Edzaro</strong> to develop your accounting, GST,
+                                and inventory management knowledge through structured learning and practical exercises.
+                            </p>
+                            <p>Build your confidence in TallyPrime and prepare for accounting and inventory-related job
+                                opportunities.</p>
+                        </div>
+                        <div class="local-training-card">
+                            <div class="local-training-icon"><i class="fa-solid fa-graduation-cap"
+                                    aria-hidden="true"></i></div>
+                            <div class="local-training-copy">
+                                <span class="local-label">RLT EDZARO TALLY TRAINING</span>
+                                <h3>Develop Practical TallyPrime Skills</h3>
+                                <p>Learn accounting, GST, inventory management, vouchers, and practical reporting
+                                    workflows.</p>
+                                <div class="branch-pills"><span><i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                        Practical Learning</span><span><i class="fa-solid fa-boxes-stacked"
+                                            aria-hidden="true"></i> Inventory Management</span></div>
+                                <div class="local-training-actions">
+                                    <a class="primary-cta"
+                                        href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                                        rel="noopener">Explore Tally Course <i class="fa-solid fa-arrow-right"
+                                            aria-hidden="true"></i></a>
+                                    <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                        rel="noopener">Visit RLT Edzaro <i
+                                            class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fa-solid fa-arrow-up"
+                                aria-hidden="true"></i> Back to Top</a>
+                    </section>
+
+                    <section class="related-articles" id="related-articles">
+                        <div class="section-eyebrow">KEEP LEARNING</div>
+                        <h2>Related Articles</h2>
+                        <p>Explore these TallyPrime tutorials to build your inventory and accounting knowledge.</p>
+                        <div class="related-links">
+                            <a routerLink="/create-stock-items-in-tallyprime"><span>How to Create Stock Items in
+                                    TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime"><span>How to Create
+                                    Stock Groups and Categories in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-manage-multiple-godowns-in-tallyprime"><span>How to Manage Multiple
+                                    Godowns in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span>TallyPrime Voucher
+                                    Types Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-check-day-book-in-tallyprime"><span>How to Check Day Book in
+                                    TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-view-ledger-reports-in-tallyprime"><span>How to View Ledger Reports
+                                    in TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                        <a class="all-blogs-button" routerLink="/blogs">Explore All Blogs <i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+</article>

@@ -1,0 +1,842 @@
+<div class="entries-blog">
+    <!-- HERO -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Stock Transfers Between Godowns</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                TallyPrime Inventory Guide
+            </div>
+
+            <h1>How to Record Stock Transfers Between Godowns in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to enable multiple godowns, create storage locations, record internal stock transfers using a
+                Stock Journal voucher, and verify location-wise inventory balances in TallyPrime.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> Practical TallyPrime Tutorial</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords">
+                <span>Stock Journal</span>
+                <span>Godown Management</span>
+                <span>Inventory Transfer</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="entries-page">
+        <div class="entries-container article-layout">
+            <aside class="article-sidebar" aria-label="Article navigation and course information">
+                <div class="toc-card">
+                    <span class="toc-label">ARTICLE GUIDE</span>
+                    <h2>Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-godown" (click)="scrollToSection($event, 'what-is-godown')">What Is a
+                            Godown?</a>
+                        <a href="#stock-transfer" (click)="scrollToSection($event, 'stock-transfer')">What Is Stock
+                            Transfer?</a>
+                        <a href="#why-transfer" (click)="scrollToSection($event, 'why-transfer')">Why Stock Transfer
+                            Matters</a>
+                        <a href="#prerequisites" (click)="scrollToSection($event, 'prerequisites')">Prerequisites</a>
+                        <a href="#enable-godowns" (click)="scrollToSection($event, 'enable-godowns')">Enable Multiple
+                            Godowns</a>
+                        <a href="#create-godowns" (click)="scrollToSection($event, 'create-godowns')">Create Godowns</a>
+                        <a href="#create-stock-items" (click)="scrollToSection($event, 'create-stock-items')">Create
+                            Stock Items</a>
+                        <a href="#stock-journal" (click)="scrollToSection($event, 'stock-journal')">Open Stock
+                            Journal</a>
+                        <a href="#transfer-details" (click)="scrollToSection($event, 'transfer-details')">Enter Transfer
+                            Details</a>
+                        <a href="#save-transfer" (click)="scrollToSection($event, 'save-transfer')">Save the Voucher</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#verify-reports" (click)="scrollToSection($event, 'verify-reports')">Verify Stock
+                            Reports</a>
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                            Mistakes</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents links to jump directly to the stock-transfer topic you need.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build accounting and inventory skills with practical TallyPrime training at RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <main class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">INTRODUCTION</div>
+                    <h2>How to Record Stock Transfers Between Godowns in TallyPrime</h2>
+                    <p>Businesses that maintain inventory in multiple warehouses, storage locations, or branches need an
+                        accurate way to track stock movement. When goods are moved from one godown to another, the
+                        business must update its inventory records to reflect the new location without incorrectly
+                        recording the movement as a sale or purchase.</p>
+                    <p>TallyPrime helps businesses manage inventory across multiple godowns by recording stock transfers
+                        and tracking stock quantities at different locations.</p>
+                    <p>Learning how to record stock transfers between godowns in TallyPrime is useful for accounting
+                        students, inventory executives, warehouse staff, and aspiring accountants who want to develop
+                        practical inventory management skills.</p>
+                    <p>In this guide, you will learn how to enable multiple godowns, create godown records, record stock
+                        transfers using a Stock Journal voucher, and verify the movement through inventory reports.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-right-left" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What does a stock transfer do?</h3>
+                            <p>A normal internal transfer moves inventory from one godown to another. It changes the
+                                stock available at each location while keeping the company's total quantity unchanged.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-godown">
+                    <div class="section-eyebrow">INVENTORY BASICS</div>
+                    <h2>What Is a Godown in TallyPrime?</h2>
+                    <p>A godown is a location where a business stores its goods or inventory. It can represent a
+                        warehouse, storage room, distribution centre, or another inventory location.</p>
+                    <p>For example, a business may maintain the following godowns:</p>
+                    <div class="ledger-list">
+                        <span><i class="fa-solid fa-warehouse" aria-hidden="true"></i>Main Warehouse</span>
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Chennai Warehouse</span>
+                        <span><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>Tambaram Storage Unit</span>
+                        <span><i class="fa-solid fa-store" aria-hidden="true"></i>Retail Store</span>
+                        <span><i class="fa-solid fa-industry" aria-hidden="true"></i>Finished Goods Warehouse</span>
+                    </div>
+                    <p>TallyPrime allows businesses to maintain stock records for different godowns so they can track
+                        where inventory is stored and how much stock is available at each location.</p>
+                </section>
+
+                <section class="article-section" id="stock-transfer">
+                    <div class="section-eyebrow">UNDERSTANDING THE PROCESS</div>
+                    <h2>What Is a Stock Transfer Between Godowns?</h2>
+                    <p>A stock transfer between godowns is the movement of inventory from one storage location to
+                        another within a business.</p>
+                    <p>For example, ABC Traders has 100 units of a product in its Main Warehouse. The business transfers
+                        20 units to its Chennai Warehouse.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Main Warehouse</th>
+                                    <th>Chennai Warehouse</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stock before transfer</td>
+                                    <td>100 units</td>
+                                    <td>0 units</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity transferred</td>
+                                    <td>-20 units</td>
+                                    <td>+20 units</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stock after transfer</strong></td>
+                                    <td><strong>80 units</strong></td>
+                                    <td><strong>20 units</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>The total inventory remains 100 units. Only the location of the stock changes.</p>
+                    </div>
+                    <div class="gst-warning">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p><strong>Important:</strong> An internal stock transfer between godowns within the same
+                            company generally does not represent a sale or purchase. Transfers involving different GST
+                            registrations, separate legal entities, or other special circumstances may have additional
+                            accounting and GST implications.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="why-transfer">
+                    <div class="section-eyebrow">BUSINESS BENEFITS</div>
+                    <h2>Why Is Stock Transfer Important in TallyPrime?</h2>
+                    <p>Recording stock transfers correctly helps businesses maintain accurate inventory records and
+                        improve warehouse management.</p>
+                    <div class="report-grid">
+                        <div class="report-card"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+                            <h3>Location-Wise Tracking</h3>
+                            <p>Track stock availability at individual godowns.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                            <h3>Fewer Discrepancies</h3>
+                            <p>Reduce differences between physical stock and system records.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i>
+                            <h3>Movement Monitoring</h3>
+                            <p>Monitor goods moved between storage locations.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            <h3>Inventory Planning</h3>
+                            <p>Support inventory planning and replenishment.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                            <h3>Shortage Identification</h3>
+                            <p>Identify stock shortages at individual warehouses.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+                            <h3>Better Reporting</h3>
+                            <p>Improve inventory reporting and reconciliation.</p>
+                        </div>
+                    </div>
+                    <p>For accounting students, learning stock transfers also builds practical knowledge of inventory
+                        vouchers and stock reporting in TallyPrime.</p>
+                </section>
+
+                <section class="article-section" id="prerequisites">
+                    <div class="section-eyebrow">BEFORE YOU BEGIN</div>
+                    <h2>Prerequisites Before Recording Stock Transfers</h2>
+                    <p>Before recording a stock transfer, check the following:</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Company is ready</h3>
+                                <p>A company is created and open in TallyPrime.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Inventory features are enabled</h3>
+                                <p>Inventory features are available for the company.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Stock items are created</h3>
+                                <p>The required products are available as stock item masters.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Multiple godowns are enabled</h3>
+                                <p>The company is configured to maintain more than one godown.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Locations are created</h3>
+                                <p>The source and destination godowns are available.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Existing stock is accurate</h3>
+                                <p>Opening stock and existing inventory quantities are entered correctly, where
+                                    applicable.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Completing these steps helps prevent errors during stock transfer entry. For help creating
+                        inventory masters, read <a routerLink="/create-stock-items-in-tallyprime">How to Create Stock
+                            Items in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="enable-godowns">
+                    <div class="section-eyebrow">STEP 1</div>
+                    <h2>Enable Multiple Godowns in TallyPrime</h2>
+                    <p>To transfer stock between different godowns, first enable the multiple-godown inventory feature.
+                    </p>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">COMPANY CONFIGURATION</span>
+                                <h3>Turn on multiple-godown management</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Open TallyPrime.</li>
+                                <li>Select the relevant company.</li>
+                                <li>Open <strong>Company Features</strong> or the inventory configuration options.</li>
+                                <li>Locate the inventory settings.</li>
+                                <li>Enable the option for maintaining multiple godowns, if it is not already enabled.
+                                </li>
+                                <li>Save the configuration.</li>
+                            </ol>
+                            <p class="article-note"><strong>Note:</strong> The exact menu labels may vary by TallyPrime
+                                release. Once this feature is enabled, you can create multiple storage locations and
+                                assign stock to them.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="create-godowns">
+                    <div class="section-eyebrow">STEP 2</div>
+                    <h2>Create Godowns in TallyPrime</h2>
+                    <p>Create the source and destination godowns before recording the transfer.</p>
+                    <p>For this example, we will create two godowns:</p>
+                    <div class="voucher-grid">
+                        <div class="voucher-card"><i class="fa-solid fa-warehouse" aria-hidden="true"></i>
+                            <h3>Main Warehouse</h3>
+                            <p>Source storage location</p>
+                        </div>
+                        <div class="voucher-card"><i class="fa-solid fa-building" aria-hidden="true"></i>
+                            <h3>Chennai Warehouse</h3>
+                            <p>Destination storage location</p>
+                        </div>
+                    </div>
+                    <ol>
+                        <li>Open the inventory master creation screen.</li>
+                        <li>Select <strong>Godown</strong> or the corresponding location master option.</li>
+                        <li>Enter the name of the first godown: <strong>Main Warehouse</strong>.</li>
+                        <li>Select the appropriate parent godown, if required.</li>
+                        <li>Save the godown.</li>
+                        <li>Repeat the process to create <strong>Chennai Warehouse</strong>.</li>
+                    </ol>
+                    <p>If you already maintain a godown hierarchy, select the appropriate parent location.</p>
+                    <h3 class="subsection-heading">Example of a Godown Structure</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Godown Name</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Main Warehouse</td>
+                                    <td>Central storage location</td>
+                                </tr>
+                                <tr>
+                                    <td>Chennai Warehouse</td>
+                                    <td>Regional stock storage</td>
+                                </tr>
+                                <tr>
+                                    <td>Retail Store</td>
+                                    <td>Stock maintained for retail sales</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>You can create godowns based on your business's actual inventory structure. For more details, see
+                        <a routerLink="/how-to-manage-multiple-godowns-in-tallyprime">How to Manage Multiple Godowns in
+                            TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="create-stock-items">
+                    <div class="section-eyebrow">STEP 3</div>
+                    <h2>Create Stock Items</h2>
+                    <p>If the product you want to transfer has not been created, add it as a stock item.</p>
+                    <div class="transaction-box">
+                        <h4>Example Stock Item</h4>
+                        <div class="voucher-detail">
+                            <span class="voucher-pill"><i class="fa-solid fa-box" aria-hidden="true"></i> Office
+                                Chair</span>
+                            <span class="voucher-pill"><i class="fa-solid fa-ruler" aria-hidden="true"></i> Unit:
+                                Nos</span>
+                            <span class="voucher-pill"><i class="fa-solid fa-cubes" aria-hidden="true"></i> Opening
+                                Quantity: 100</span>
+                        </div>
+                    </div>
+                    <ol>
+                        <li>Open the inventory master creation screen.</li>
+                        <li>Select <strong>Stock Item</strong>.</li>
+                        <li>Enter the stock item name.</li>
+                        <li>Select the appropriate stock group.</li>
+                        <li>Configure the unit of measurement.</li>
+                        <li>Enter the relevant inventory details.</li>
+                        <li>Save the stock item.</li>
+                    </ol>
+                    <p>If opening stock is already recorded, verify that the quantity is assigned to the correct godown.
+                        For accurate stock tracking, the same stock item should be used at both the source and
+                        destination locations.</p>
+                    <p>Related tutorial: <a routerLink="/create-stock-items-in-tallyprime">Create Stock Items in
+                            TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="stock-journal">
+                    <div class="section-eyebrow">STEP 4</div>
+                    <h2>Open the Stock Journal Voucher</h2>
+                    <p>TallyPrime commonly uses a <strong>Stock Journal</strong> voucher to record internal stock
+                        movements between godowns.</p>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">04</span>
+                            <div class="entry-heading"><span class="entry-category">VOUCHER ENTRY</span>
+                                <h3>Open Stock Journal</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Open the relevant company.</li>
+                                <li>Go to <strong>Vouchers</strong>.</li>
+                                <li>Select the <strong>Stock Journal</strong> voucher type.</li>
+                                <li>Choose the appropriate stock movement or godown transfer entry mode, depending on
+                                    your TallyPrime version.</li>
+                            </ol>
+                            <p class="article-note">Stock Journal is also used for certain other inventory adjustments
+                                and movements, so ensure that you are entering the transfer correctly.</p>
+                            <p>To understand the different voucher types, read <a
+                                    routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher
+                                    Types Explained</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="transfer-details">
+                    <div class="section-eyebrow">STEP 5</div>
+                    <h2>Enter the Source and Destination Godowns</h2>
+                    <p>Suppose ABC Traders wants to transfer 20 Office Chairs from Main Warehouse to Chennai Warehouse.
+                    </p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stock Item</td>
+                                    <td>Office Chair</td>
+                                </tr>
+                                <tr>
+                                    <td>Source Godown</td>
+                                    <td>Main Warehouse</td>
+                                </tr>
+                                <tr>
+                                    <td>Destination Godown</td>
+                                    <td>Chennai Warehouse</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>20 Nos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>In the Stock Journal voucher, enter the item and quantity being transferred out of the source
+                        location and the same item and quantity being received at the destination location.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading">
+                            <h4>Illustrative Stock Movement</h4><span>20 NOS</span>
+                        </div>
+                        <div class="journal-lines">
+                            <div class="journal-line"><code>Source: Main Warehouse</code><span
+                                    class="journal-amount">-20 Nos</span></div>
+                            <div class="journal-line credit"><code>Destination: Chennai Warehouse</code><span
+                                    class="journal-amount">+20 Nos</span></div>
+                        </div>
+                        <div class="journal-total"><span>Net change in total stock</span><strong>0 Nos</strong></div>
+                    </div>
+                    <p>Check that both sides use the correct stock item and unit of measurement. The precise field
+                        arrangement depends on the voucher mode and configuration in your TallyPrime release.</p>
+                </section>
+
+                <section class="article-section" id="save-transfer">
+                    <div class="section-eyebrow">STEP 6</div>
+                    <h2>Save the Stock Transfer Voucher</h2>
+                    <p>Before saving the voucher, verify the following:</p>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Correct stock
+                            item is selected.</div>
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Source godown
+                            is correct.</div>
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Destination
+                            godown is correct.</div>
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Transfer
+                            quantity is accurate.</div>
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Source godown
+                            has sufficient available stock.</div>
+                        <div class="skill-item"><i class="fa-solid fa-check-circle" aria-hidden="true"></i>Transfer-out
+                            and transfer-in quantities match.</div>
+                    </div>
+                    <p>Save the voucher once all details have been verified. The stock movement should now be reflected
+                        in the inventory records for the relevant godowns.</p>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <div class="section-eyebrow">PRACTICAL EXAMPLE</div>
+                    <h2>Transfer Stock Between Two Godowns</h2>
+                    <p>Let us understand the process with a practical example.</p>
+                    <p><strong>Scenario:</strong> ABC Traders has 100 Office Chairs in its Main Warehouse. It transfers
+                        20 chairs to its Chennai Warehouse.</p>
+                    <h3 class="subsection-heading">Stock Position Before Transfer</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Godown</th>
+                                    <th>Stock Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Main Warehouse</td>
+                                    <td>100 Nos</td>
+                                </tr>
+                                <tr>
+                                    <td>Chennai Warehouse</td>
+                                    <td>0 Nos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Stock</strong></td>
+                                    <td><strong>100 Nos</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="subsection-heading">Stock Transfer Entry</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Voucher Type</td>
+                                    <td>Stock Journal</td>
+                                </tr>
+                                <tr>
+                                    <td>Stock Item</td>
+                                    <td>Office Chair</td>
+                                </tr>
+                                <tr>
+                                    <td>Source Godown</td>
+                                    <td>Main Warehouse</td>
+                                </tr>
+                                <tr>
+                                    <td>Destination Godown</td>
+                                    <td>Chennai Warehouse</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity Transferred</td>
+                                    <td>20 Nos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="subsection-heading">Stock Position After Transfer</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Godown</th>
+                                    <th>Stock Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Main Warehouse</td>
+                                    <td>80 Nos</td>
+                                </tr>
+                                <tr>
+                                    <td>Chennai Warehouse</td>
+                                    <td>20 Nos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total Stock</strong></td>
+                                    <td><strong>100 Nos</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-equals" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Total inventory remains unchanged</h3>
+                            <p>The example shows how TallyPrime can help track inventory movement between locations
+                                while maintaining the overall stock quantity. It assumes there are no other stock
+                                movements, sales, purchases, or adjustments during the period.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="verify-reports">
+                    <div class="section-eyebrow">STEP 7</div>
+                    <h2>Verify Stock Transfers Using Inventory Reports</h2>
+                    <p>After recording the transfer, review the inventory reports to confirm that the quantities have
+                        been updated correctly.</p>
+                    <div class="report-grid">
+                        <div class="report-card"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                            <h3>Stock Summary</h3>
+                            <p>Review stock quantities and values for the company. Use the available godown-wise view or
+                                drill-down options to verify the movement.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-warehouse" aria-hidden="true"></i>
+                            <h3>Godown-Wise Stock</h3>
+                            <p>Review how much stock is available at individual locations.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
+                            <h3>Stock Journal Details</h3>
+                            <p>Open the saved voucher to verify the source, destination, stock item, and quantity.</p>
+                        </div>
+                    </div>
+                    <p>For the example above, the expected quantities are:</p>
+                    <ul>
+                        <li>Main Warehouse: <strong>80 Office Chairs.</strong></li>
+                        <li>Chennai Warehouse: <strong>20 Office Chairs.</strong></li>
+                    </ul>
+                    <p>If the report does not show the expected result, check whether the voucher was saved correctly
+                        and whether the reporting filters and dates are appropriate.</p>
+                    <p>Related guide: <a routerLink="/how-to-check-stock-summary-in-tallyprime">How to Check Stock
+                            Summary in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="common-mistakes">
+                    <div class="section-eyebrow">TROUBLESHOOTING</div>
+                    <h2>Common Mistakes to Avoid When Recording Stock Transfers</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>1. Forgetting to Enable Multiple Godowns</h3>
+                                <p>If the multiple-godown feature is disabled, the required location fields may not be
+                                    available. <strong>Solution:</strong> Review the inventory configuration before
+                                    creating godowns or entering transfers.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>2. Selecting the Wrong Godown</h3>
+                                <p>Selecting an incorrect source or destination can make stock appear in the wrong
+                                    location. <strong>Solution:</strong> Verify the godown names before saving each
+                                    voucher.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>3. Entering Different Quantities on Each Side</h3>
+                                <p>The quantity transferred out should match the quantity received for a straightforward
+                                    internal transfer without losses or separate adjustments. <strong>Solution:</strong>
+                                    Confirm that the transfer-out and transfer-in quantities match.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>4. Transferring More Stock Than Is Available</h3>
+                                <p>An incorrect source quantity may create stock discrepancies or negative stock,
+                                    depending on the settings and transaction sequence. <strong>Solution:</strong> Check
+                                    the available stock at the source godown before recording the transfer.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>5. Creating Duplicate Stock Items</h3>
+                                <p>Creating separate stock items for the same product at different godowns can make
+                                    inventory tracking unnecessarily complicated. <strong>Solution:</strong> Use the
+                                    appropriate common stock item across godowns unless the products genuinely require
+                                    separate item masters.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>6. Forgetting to Verify Inventory Reports</h3>
+                                <p>A saved voucher should still be checked to ensure that the inventory records reflect
+                                    the intended movement. <strong>Solution:</strong> Review the Stock Summary and
+                                    relevant godown-wise details after saving the voucher.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">INVENTORY CONTROL</div>
+                    <h2>Best Practices for Managing Godowns in TallyPrime</h2>
+                    <p>Follow these practices to maintain accurate inventory records:</p>
+                    <ul>
+                        <li>Use clear and consistent godown names.</li>
+                        <li>Maintain an organised hierarchy for warehouses and storage locations.</li>
+                        <li>Record transfers promptly.</li>
+                        <li>Check source stock before transferring inventory.</li>
+                        <li>Use accurate units of measurement.</li>
+                        <li>Verify quantities before saving Stock Journal vouchers.</li>
+                        <li>Review godown-wise stock reports regularly.</li>
+                        <li>Reconcile physical stock with system records.</li>
+                        <li>Maintain supporting documents for significant stock movements.</li>
+                        <li>Apply the appropriate GST and accounting treatment when transfers involve separate
+                            registrations or legal entities.</li>
+                    </ul>
+                    <p>These practices can help businesses improve inventory accuracy and reduce stock discrepancies.
+                    </p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">COMMON QUESTIONS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I transfer stock from one godown to another in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Enable multiple godowns, create the source and destination godowns, and open a Stock
+                                    Journal voucher. Enter the stock item, transfer-out quantity, source godown,
+                                    transfer-in quantity, and destination godown. Save the voucher and verify the
+                                    inventory reports.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Which voucher is used for stock transfer in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A Stock Journal voucher is commonly used to record stock transfers between godowns
+                                    within the same company.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can I transfer multiple stock items in one voucher?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes, a Stock Journal can support multiple stock item movements, depending on the
+                                    voucher configuration. Enter and verify the source and destination quantities for
+                                    each item.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Does stock transfer between godowns affect total stock?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A normal internal stock transfer changes the stock quantity at individual locations
+                                    but does not change the company's total inventory quantity.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Does stock transfer between godowns affect profit and loss?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A normal internal transfer at the same inventory valuation does not, by itself,
+                                    represent sales revenue or a purchase expense. Separate costs, losses, valuation
+                                    changes, or other adjustments may have accounting implications.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. How can I check godown-wise stock in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Review the Stock Summary and the relevant godown-wise inventory views or drill-down
+                                    reports available in your TallyPrime version.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can I transfer stock between different branches using a Stock Journal?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>It depends on how the branches are structured. Locations within the same company and
+                                    GST registration may be handled differently from branches maintained as separate GST
+                                    registrations or legal entities. Review the applicable accounting and GST
+                                    requirements before recording the transaction.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. What should I do if stock is not appearing in the destination godown?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the Stock Journal voucher and check the destination godown, stock item,
+                                    quantity, and voucher status. Then review the relevant inventory report filters and
+                                    confirm that the voucher was saved correctly.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>9. Is stock transfer the same as a sales entry?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>No. A normal internal stock transfer records inventory movement between locations. A
+                                    sales entry records a sale to a customer. Transfers involving separate registrations
+                                    or entities may require a different transaction and tax treatment.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">FINAL THOUGHTS</div>
+                    <h2>Conclusion</h2>
+                    <div class="final-thoughts">
+                        <p>Recording stock transfers between godowns in TallyPrime helps businesses maintain accurate
+                            location-wise inventory records and monitor stock availability across warehouses.</p>
+                        <p>The process involves enabling multiple godowns, creating the required godown and stock item
+                            masters, recording the movement through a Stock Journal voucher, and verifying the resulting
+                            inventory reports.</p>
+                        <p>For accounting students and aspiring inventory executives, practising these steps provides
+                            useful hands-on experience with inventory management and TallyPrime.</p>
+                    </div>
+
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO | PRACTICAL TALLY TRAINING</span>
+                            <h3>Want to develop practical TallyPrime and inventory accounting skills?</h3>
+                            <p>Explore Tally training at RLT Edzaro and build your knowledge of accounting, GST,
+                                inventory management, and business software.</p>
+                            <div class="branch-pills"><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Chennai</span><span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical
+                                    Learning</span></div>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                    target="_blank" rel="noopener">Explore Tally Training <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener">Visit RLT Edzaro</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-articles" id="related-articles">
+                    <div class="section-eyebrow">CONTINUE LEARNING</div>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime tutorials to build your inventory and accounting knowledge.</p>
+                    <div class="related-links">
+                        <a routerLink="/create-stock-items-in-tallyprime"><span>How to Create Stock Items in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-manage-multiple-godowns-in-tallyprime"><span>How to Manage Multiple
+                                Godowns in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime"><span>How to Create
+                                Stock Groups and Categories in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span>How to Track Stock Movement in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-check-stock-summary-in-tallyprime"><span>How to Check Stock Summary in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span>TallyPrime Voucher Types
+                                Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime"><span>How to Generate a Trial Balance in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+
+                <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fa-solid fa-arrow-up"
+                        aria-hidden="true"></i> Back to Top</a>
+                <a class="all-blogs-button" routerLink="/blogs"><i class="fa-solid fa-grid-2" aria-hidden="true"></i>
+                    Explore All Blogs</a>
+            </main>
+        </div>
+    </section>
+</div>

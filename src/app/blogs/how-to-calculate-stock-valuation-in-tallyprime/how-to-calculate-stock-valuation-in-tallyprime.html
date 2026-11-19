@@ -1,0 +1,902 @@
+<!-- =========================================================
+     RLT EDZARO | TALLYPRIME BLOG
+     Article: How to Calculate Stock Valuation in TallyPrime
+     ========================================================= -->
+
+<article class="entries-blog stock-valuation-article">
+
+    <!-- HERO -->
+    <header class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                <span>Stock Valuation in TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
+                TALLYPRIME INVENTORY MANAGEMENT
+            </div>
+
+            <h1>How to Calculate Stock Valuation in TallyPrime: Step-by-Step Guide</h1>
+
+            <p class="hero-description">
+                Learn how stock valuation works, compare FIFO and weighted-average methods,
+                configure stock items, and review closing stock values in TallyPrime with
+                practical examples.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="far fa-folder-open" aria-hidden="true"></i> Inventory &amp; Accounting</span>
+                <span><i class="far fa-clock" aria-hidden="true"></i> Practical TallyPrime Guide</span>
+                <span><i class="fas fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Stock Valuation</span>
+                <span>FIFO</span>
+                <span>Weighted Average</span>
+                <span>Closing Stock</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE BODY -->
+    <main class="entries-page">
+        <div class="entries-container">
+            <div class="article-layout">
+
+                <!-- LEFT SIDEBAR -->
+                <aside class="article-sidebar" aria-label="Article navigation">
+                    <div class="toc-card">
+                        <span class="toc-label">ON THIS PAGE</span>
+                        <h2>Table of Contents</h2>
+                        <nav class="toc-links" aria-label="Table of contents">
+                            <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                            <a href="#what-is-stock-valuation"
+                                (click)="scrollToSection($event, 'what-is-stock-valuation')">What Is Stock
+                                Valuation?</a>
+                            <a href="#why-stock-valuation-matters"
+                                (click)="scrollToSection($event, 'why-stock-valuation-matters')">Why It Is Important</a>
+                            <a href="#valuation-methods" (click)="scrollToSection($event, 'valuation-methods')">Stock
+                                Valuation Methods</a>
+                            <a href="#configure-valuation"
+                                (click)="scrollToSection($event, 'configure-valuation')">Configure in TallyPrime</a>
+                            <a href="#practical-example"
+                                (click)="scrollToSection($event, 'practical-example')">Practical Example</a>
+                            <a href="#view-valuation-reports"
+                                (click)="scrollToSection($event, 'view-valuation-reports')">View Valuation Reports</a>
+                            <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                                Problems</a>
+                            <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best
+                                Practices</a>
+                            <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                            <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                            <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                                Articles</a>
+                        </nav>
+                        <div class="toc-help">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <p>Use the contents links to jump directly to a stock valuation topic.</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-cta">
+                        <div class="sidebar-cta-icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
+                        <h3>Learn TallyPrime Practically</h3>
+                        <p>Build your accounting, GST, inventory and financial reporting skills with RLT Edzaro.</p>
+                        <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                            rel="noopener">Explore Tally Training <i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </aside>
+
+                <!-- MAIN ARTICLE -->
+                <div class="article-content">
+
+                    <section class="article-section" id="introduction">
+                        <div class="section-eyebrow">01 / INTRODUCTION</div>
+                        <h2>Introduction</h2>
+                        <p>Stock valuation is an important part of inventory management and accounting. Businesses need
+                            to know the value of the goods they purchase, store, and sell to maintain accurate inventory
+                            records and prepare financial statements.</p>
+                        <p>TallyPrime helps businesses manage stock items, record purchases and sales, track inventory
+                            movements, and calculate closing stock values using supported stock valuation methods.</p>
+                        <p>Understanding how to calculate stock valuation in TallyPrime is useful for business owners,
+                            accounting students, inventory managers, and aspiring accountants who want to develop
+                            practical accounting skills.</p>
+                        <p>In this guide, you will learn what stock valuation means, how different valuation methods
+                            work, how to configure stock items in TallyPrime, and how to check closing stock values with
+                            practical examples.</p>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fas fa-chart-column" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>What will you learn?</h3>
+                                <p>Understand FIFO, weighted-average costing, stock item configuration, purchase and
+                                    sales entries, and how to review inventory values using TallyPrime reports.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="what-is-stock-valuation">
+                        <div class="section-eyebrow">02 / BASICS</div>
+                        <h2>What Is Stock Valuation?</h2>
+                        <p>Stock valuation is the process of determining the monetary value of goods held by a business
+                            at a particular point in time.</p>
+                        <p>It includes calculating the value of inventory remaining after purchases, sales, and other
+                            stock movements have been recorded.</p>
+                        <div class="formula-card">
+                            <span class="formula-label">BASIC STOCK VALUATION FORMULA</span>
+                            <div class="formula-value">Stock Value = Quantity × Cost per Unit</div>
+                            <p>For example, if a business has 100 units of a product and the applicable valuation cost
+                                is ₹200 per unit:</p>
+                            <strong>100 × ₹200 = ₹20,000</strong>
+                        </div>
+                        <p>The actual valuation depends on the stock valuation method selected, the purchase costs,
+                            stock movements, and the applicable accounting policy.</p>
+                        <div class="learning-note">
+                            <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            <p>Stock valuation is not always the same as multiplying the current quantity by the latest
+                                purchase rate. The selected valuation method and transaction history determine the
+                                closing value.</p>
+                        </div>
+                        <p>Before configuring valuation methods, make sure the underlying inventory masters are set up
+                            correctly. See our guide on <a routerLink="/create-stock-items-in-tallyprime">creating stock
+                                items in TallyPrime</a>.</p>
+                    </section>
+
+                    <section class="article-section" id="why-stock-valuation-matters">
+                        <div class="section-eyebrow">03 / BUSINESS VALUE</div>
+                        <h2>Why Is Stock Valuation Important?</h2>
+                        <p>Accurate stock valuation helps businesses:</p>
+                        <div class="benefit-grid">
+                            <article class="benefit-card"><i class="fas fa-box-open" aria-hidden="true"></i>
+                                <h3>Closing Inventory</h3>
+                                <p>Determine the value of closing inventory.</p>
+                            </article>
+                            <article class="benefit-card"><i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                                <h3>Cost of Goods Sold</h3>
+                                <p>Calculate the cost of goods sold.</p>
+                            </article>
+                            <article class="benefit-card"><i class="fas fa-file-chart-column" aria-hidden="true"></i>
+                                <h3>Financial Statements</h3>
+                                <p>Prepare accurate financial statements.</p>
+                            </article>
+                            <article class="benefit-card"><i class="fas fa-chart-line" aria-hidden="true"></i>
+                                <h3>Profitability</h3>
+                                <p>Monitor inventory costs and profitability.</p>
+                            </article>
+                            <article class="benefit-card"><i class="fas fa-magnifying-glass-chart"
+                                    aria-hidden="true"></i>
+                                <h3>Stock Discrepancies</h3>
+                                <p>Identify stock discrepancies.</p>
+                            </article>
+                            <article class="benefit-card"><i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                                <h3>Purchase Planning</h3>
+                                <p>Support inventory planning and purchasing decisions.</p>
+                            </article>
+                        </div>
+                        <p>For accounting professionals, stock valuation is an important skill because inventory values
+                            can directly affect reported profit and the balance sheet.</p>
+                        <p>Once the inventory value is finalised, it can be reviewed alongside reports such as the <a
+                                routerLink="/generate-trial-balance-in-tallyprime">Trial Balance in TallyPrime</a>.</p>
+                    </section>
+
+                    <section class="article-section" id="valuation-methods">
+                        <div class="section-eyebrow">04 / VALUATION METHODS</div>
+                        <h2>What Are the Stock Valuation Methods in TallyPrime?</h2>
+                        <p>TallyPrime supports multiple stock valuation methods. The available methods and their
+                            suitability depend on the stock item, configuration, and accounting requirements.</p>
+
+                        <article class="entry-card" id="fifo-method">
+                            <div class="entry-card-header"><span class="entry-number">01</span>
+                                <div class="entry-heading"><span class="entry-category">VALUATION METHOD</span>
+                                    <h3>FIFO (First In, First Out)</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Under FIFO, the oldest inventory costs are generally assigned to goods sold first,
+                                    while the costs of more recently purchased inventory remain in closing stock.</p>
+                                <h4>Example</h4>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Purchase</th>
+                                                <th>Quantity</th>
+                                                <th>Cost per Unit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>First purchase</td>
+                                                <td>10 units</td>
+                                                <td>₹100</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Second purchase</td>
+                                                <td>10 units</td>
+                                                <td>₹120</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>If 10 units are sold, FIFO assigns the first purchase cost of ₹100 per unit to those
+                                    units, assuming no other stock movements or valuation adjustments.</p>
+                                <div class="calculation-box"><span>Remaining stock value</span><strong>10 × ₹120 =
+                                        ₹1,200</strong></div>
+                                <p>FIFO is commonly used when inventory costs need to reflect the sequence of purchase
+                                    layers.</p>
+                            </div>
+                        </article>
+
+                        <article class="entry-card" id="average-cost-method">
+                            <div class="entry-card-header"><span class="entry-number">02</span>
+                                <div class="entry-heading"><span class="entry-category">VALUATION METHOD</span>
+                                    <h3>Average Cost Method</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Under an average cost method, inventory is valued using an average of the relevant
+                                    costs.</p>
+                                <div class="formula-card compact"><span class="formula-label">WEIGHTED-AVERAGE
+                                        FORMULA</span>
+                                    <div class="formula-value">Weighted Average Cost per Unit = Total Cost of Goods
+                                        Available ÷ Total Units Available</div>
+                                </div>
+                                <h4>Example</h4>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Purchase</th>
+                                                <th>Quantity</th>
+                                                <th>Cost per Unit</th>
+                                                <th>Total Cost</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>First purchase</td>
+                                                <td>10</td>
+                                                <td>₹100</td>
+                                                <td>₹1,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Second purchase</td>
+                                                <td>10</td>
+                                                <td>₹120</td>
+                                                <td>₹1,200</td>
+                                            </tr>
+                                            <tr class="table-total">
+                                                <td>Total</td>
+                                                <td>20</td>
+                                                <td>—</td>
+                                                <td>₹2,200</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p><strong>Weighted-average cost per unit:</strong> ₹2,200 ÷ 20 = ₹110.</p>
+                                <p>If 10 units remain, their value would be:</p>
+                                <div class="calculation-box"><span>Remaining stock value</span><strong>10 × ₹110 =
+                                        ₹1,100</strong></div>
+                                <p>This example illustrates a weighted average across the two purchases. The exact
+                                    result in TallyPrime depends on the selected valuation method and the timing of
+                                    inventory transactions.</p>
+                            </div>
+                        </article>
+
+                        <article class="entry-card" id="lifo-method">
+                            <div class="entry-card-header"><span class="entry-number">03</span>
+                                <div class="entry-heading"><span class="entry-category">VALUATION METHOD</span>
+                                    <h3>LIFO (Last In, First Out)</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>LIFO assigns the most recent inventory costs to goods sold first.</p>
+                                <p>Using the earlier example, if 10 units are sold, the latest purchase cost of ₹120 per
+                                    unit would be assigned to those units under LIFO. The remaining 10 units would be
+                                    valued at ₹100 each.</p>
+                                <div class="calculation-box"><span>Remaining stock value</span><strong>10 × ₹100 =
+                                        ₹1,000</strong></div>
+                                <div class="gst-warning"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                                    <p><strong>Accounting note:</strong> LIFO is not permitted under IFRS and is
+                                        generally not accepted under Indian accounting standards applicable to inventory
+                                        valuation. Do not select a method simply because it appears in a theoretical
+                                        comparison; use a valuation method permitted by the applicable accounting
+                                        framework.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="entry-card" id="standard-cost-method">
+                            <div class="entry-card-header"><span class="entry-number">04</span>
+                                <div class="entry-heading"><span class="entry-category">VALUATION METHOD</span>
+                                    <h3>Standard Cost</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Under standard-cost valuation, inventory is valued using a predetermined standard
+                                    cost.</p>
+                                <p>For example, if the standard cost is ₹150 per unit and 100 units remain in stock, the
+                                    standard valuation would be:</p>
+                                <div class="calculation-box"><span>Illustrative standard valuation</span><strong>100 ×
+                                        ₹150 = ₹15,000</strong></div>
+                                <p>Standard cost requires a suitable costing system and review of differences between
+                                    standard and actual costs.</p>
+                            </div>
+                        </article>
+
+                        <article class="entry-card" id="other-valuation-methods">
+                            <div class="entry-card-header"><span class="entry-number">05</span>
+                                <div class="entry-heading"><span class="entry-category">VALUATION METHOD</span>
+                                    <h3>Actual Purchase Cost or Other Supported Methods</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Businesses may use other supported methods or configurations to value inventory
+                                    according to their accounting requirements.</p>
+                                <p>The appropriate method depends on the type of inventory, the applicable accounting
+                                    framework, and the features available in the TallyPrime version being used.</p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="article-section" id="configure-valuation">
+                        <div class="section-eyebrow">05 / TALLYPRIME SETUP</div>
+                        <h2>How to Configure Stock Valuation in TallyPrime</h2>
+                        <p>Before calculating stock valuation, make sure the company has been configured to maintain
+                            inventory. Follow these steps.</p>
+
+                        <div class="practice-roadmap">
+                            <article class="practice-step"><span class="step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Open Your Company</h3>
+                                    <ol>
+                                        <li>Open TallyPrime.</li>
+                                        <li>Select the company whose inventory you want to manage.</li>
+                                        <li>Confirm that inventory features are enabled.</li>
+                                        <li>Verify that the relevant stock groups, units, and stock items are available.
+                                        </li>
+                                    </ol>
+                                    <p>The exact menu names may vary by TallyPrime release.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Create or Open a Stock Item</h3>
+                                    <ol>
+                                        <li>Navigate to the inventory or stock item creation screen.</li>
+                                        <li>Select the option to create a stock item, or open an existing item.</li>
+                                        <li>Enter the stock item name and select the appropriate stock group.</li>
+                                        <li>Specify the unit of measurement, such as pieces, kilograms, or litres.</li>
+                                        <li>Enter any other required stock details.</li>
+                                    </ol>
+                                    <p>For example, create a stock item called <strong>Office Chair</strong> and select
+                                        <strong>Nos</strong> as its unit.</p>
+                                    <p>For detailed setup instructions, read <a
+                                            routerLink="/create-stock-items-in-tallyprime">How to Create Stock Items in
+                                            TallyPrime</a>.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Select the Valuation Method</h3>
+                                    <p>In the stock item configuration, locate the applicable costing or valuation
+                                        method field. Depending on the version and setup, you may be able to select a
+                                        supported method such as FIFO, average cost, or another appropriate method.</p>
+                                    <p>Choose the method that matches your accounting policy and inventory requirements.
+                                    </p>
+                                    <div class="learning-note"><i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                        <p>If you are learning TallyPrime, use a test company to compare valuation
+                                            results before changing the method in a live company. Changing valuation
+                                            settings can affect inventory values and reported financial figures.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Enter Opening Stock, If Applicable</h3>
+                                    <p>If the business already has inventory when its records are created, enter the
+                                        correct opening quantity and value where required.</p>
+                                    <div class="reference-table-wrapper">
+                                        <table class="reference-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Field</th>
+                                                    <th>Example Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Stock item</td>
+                                                    <td>Office Chair</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Opening quantity</td>
+                                                    <td>20 units</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Opening rate</td>
+                                                    <td>₹2,000 per unit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Opening stock value</td>
+                                                    <td><strong>₹40,000</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>Ensure that opening stock matches the supporting inventory records.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Record Purchase Transactions</h3>
+                                    <p>When new stock is purchased, record the transaction using the appropriate
+                                        purchase voucher. Enter the supplier, stock item, quantity, rate, and other
+                                        relevant details.</p>
+                                    <div class="transaction-box">
+                                        <h4>Purchase example</h4>
+                                        <div class="transaction-row"><span>Quantity purchased</span><strong>10
+                                                units</strong></div>
+                                        <div class="transaction-row"><span>Purchase rate</span><strong>₹2,200 per
+                                                unit</strong></div>
+                                        <div class="transaction-row"><span>Purchase value before applicable
+                                                adjustments</span><strong>₹22,000</strong></div>
+                                    </div>
+                                    <p>The stock records will reflect the purchase according to the voucher details and
+                                        inventory configuration. See <a
+                                            routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime
+                                            Voucher Types Explained</a> for related voucher workflows.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">06</span>
+                                <div class="step-content">
+                                    <h3>Record Sales Transactions</h3>
+                                    <p>When stock is sold, record the sale using the appropriate sales voucher. Enter
+                                        the customer, stock item, quantity, rate, and other relevant details.</p>
+                                    <div class="transaction-box">
+                                        <h4>Sales example</h4>
+                                        <div class="transaction-row"><span>Quantity sold</span><strong>5 units</strong>
+                                        </div>
+                                        <div class="transaction-row"><span>Selling rate</span><strong>₹3,000 per
+                                                unit</strong></div>
+                                        <div class="transaction-row"><span>Sales value before applicable
+                                                taxes</span><strong>₹15,000</strong></div>
+                                    </div>
+                                    <p>The inventory balance will be updated based on the recorded transaction.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="practical-example">
+                        <div class="section-eyebrow">06 / PRACTICAL CALCULATION</div>
+                        <h2>How to Calculate Stock Valuation in TallyPrime: Practical Example</h2>
+                        <p>Let us consider a business that buys and sells office chairs. Assume that all transactions
+                            relate to the same stock item, with no opening stock, returns, additional inventory costs,
+                            or other adjustments.</p>
+                        <h3 class="subsection-heading">Inventory Transactions</h3>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction</th>
+                                        <th>Quantity</th>
+                                        <th>Rate</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Purchase 1</td>
+                                        <td>10 units</td>
+                                        <td>₹2,000</td>
+                                        <td>₹20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Purchase 2</td>
+                                        <td>10 units</td>
+                                        <td>₹2,200</td>
+                                        <td>₹22,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sale</td>
+                                        <td>5 units</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="metric-grid">
+                            <div class="metric-card"><span>Total quantity purchased</span><strong>20 units</strong>
+                            </div>
+                            <div class="metric-card"><span>Total purchase cost</span><strong>₹42,000</strong></div>
+                            <div class="metric-card"><span>Closing quantity</span><strong>15 units</strong></div>
+                        </div>
+
+                        <article class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number"><i class="fas fa-layer-group"
+                                        aria-hidden="true"></i></span>
+                                <div class="entry-heading"><span class="entry-category">CALCULATION 01</span>
+                                    <h3>Stock Valuation Using FIFO</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Under FIFO, the oldest purchase costs are assigned to the units sold first.</p>
+                                <h4>Cost of 5 units sold</h4>
+                                <div class="calculation-box"><span>5 × ₹2,000</span><strong>₹10,000</strong></div>
+                                <h4>Remaining stock</h4>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Remaining purchase layer</th>
+                                                <th>Calculation</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>First purchase</td>
+                                                <td>5 units × ₹2,000</td>
+                                                <td>₹10,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Second purchase</td>
+                                                <td>10 units × ₹2,200</td>
+                                                <td>₹22,000</td>
+                                            </tr>
+                                            <tr class="table-total">
+                                                <td colspan="2">Closing stock value</td>
+                                                <td><strong>₹32,000</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number"><i class="fas fa-scale-balanced"
+                                        aria-hidden="true"></i></span>
+                                <div class="entry-heading"><span class="entry-category">CALCULATION 02</span>
+                                    <h3>Stock Valuation Using Weighted Average</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <h4>Weighted-average cost per unit</h4>
+                                <div class="calculation-box"><span>₹42,000 ÷ 20 units</span><strong>₹2,100 per
+                                        unit</strong></div>
+                                <h4>Closing stock value</h4>
+                                <div class="calculation-box"><span>15 × ₹2,100</span><strong>₹31,500</strong></div>
+                            </div>
+                        </article>
+
+                        <h3 class="subsection-heading">Comparison of Results</h3>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Valuation Method</th>
+                                        <th>Closing Quantity</th>
+                                        <th>Closing Stock Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>FIFO</td>
+                                        <td>15 units</td>
+                                        <td><strong>₹32,000</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weighted average</td>
+                                        <td>15 units</td>
+                                        <td><strong>₹31,500</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The difference arises because the methods assign different costs to the units sold and the
+                            inventory remaining.</p>
+                        <div class="article-note"><strong>Calculation note:</strong> This is a simplified illustration.
+                            Actual TallyPrime results may differ depending on the precise method selected, transaction
+                            dates, purchase cost treatment, and other inventory adjustments.</div>
+                    </section>
+
+                    <section class="article-section" id="view-valuation-reports">
+                        <div class="section-eyebrow">07 / REPORTING</div>
+                        <h2>How to View Stock Valuation Reports in TallyPrime</h2>
+                        <p>After recording purchases and sales, review the inventory reports to check closing stock
+                            values.</p>
+                        <div class="practice-roadmap">
+                            <article class="practice-step"><span class="step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Open the Inventory Reports</h3>
+                                    <p>Open the relevant inventory reports from the reports or display menus in
+                                        TallyPrime. Depending on the release, you may find reports such as Stock Summary
+                                        and other inventory-related reports.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Select the Reporting Period</h3>
+                                    <p>Choose the appropriate date or period for which you want to review stock
+                                        valuation. For example, select the final date of the financial year to review
+                                        the closing stock position for that date.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Review the Stock Summary</h3>
+                                    <p>Check the stock item name, opening quantity, inward quantity, outward quantity,
+                                        closing quantity, and relevant rate and stock value fields, where displayed. The
+                                        report should reflect the transactions recorded for the selected period.</p>
+                                    <p>Read our guide on <a routerLink="/how-to-check-stock-summary-in-tallyprime">How
+                                            to Check Stock Summary in TallyPrime</a>.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Drill Down into Individual Items</h3>
+                                    <p>If you notice an unexpected stock value, open the relevant stock item or report
+                                        details to review its underlying inventory transactions. Check purchase rates,
+                                        quantities, sales entries, returns, and valuation settings.</p>
+                                </div>
+                            </article>
+                            <article class="practice-step"><span class="step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Reconcile Inventory Records</h3>
+                                    <p>Compare the stock records with supporting purchase invoices, sales records,
+                                        physical stock counts, and other relevant documents. Investigate differences
+                                        before finalising accounts or preparing financial statements.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <p>For related accounting balances, you can also review the <a
+                                routerLink="/generate-trial-balance-in-tallyprime">Trial Balance report in
+                                TallyPrime</a>.</p>
+                    </section>
+
+                    <section class="article-section" id="common-problems">
+                        <div class="section-eyebrow">08 / TROUBLESHOOTING</div>
+                        <h2>Common Stock Valuation Problems in TallyPrime</h2>
+                        <div class="mistake-list">
+                            <article class="mistake-card">
+                                <div class="mistake-icon"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>1. Closing Stock Value Is Incorrect</h3>
+                                    <p><strong>Possible causes:</strong> Incorrect purchase rates, missing purchase or
+                                        sales vouchers, incorrect opening stock values, wrong valuation method, or
+                                        unrecorded stock adjustments.</p>
+                                    <p><strong>Solution:</strong> Review the stock item configuration and underlying
+                                        transactions. Compare the reported quantity and value with supporting inventory
+                                        records.</p>
+                                </div>
+                            </article>
+                            <article class="mistake-card">
+                                <div class="mistake-icon"><i class="fas fa-boxes-stacked" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>2. Stock Quantity Does Not Match Physical Inventory</h3>
+                                    <p><strong>Possible causes:</strong> Unrecorded purchases or sales, incorrect
+                                        quantities, missing transfers or adjustments, or incorrect units of measurement.
+                                    </p>
+                                    <p><strong>Solution:</strong> Conduct a stock reconciliation and record valid
+                                        corrections through the appropriate inventory workflow.</p>
+                                </div>
+                            </article>
+                            <article class="mistake-card">
+                                <div class="mistake-icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>3. Average Cost Is Different from the Expected Amount</h3>
+                                    <p><strong>Possible causes:</strong> The selected valuation method differs from the
+                                        manual calculation, purchase costs or transaction dates differ, or other
+                                        inventory movements affect the valuation.</p>
+                                    <p><strong>Solution:</strong> Confirm the selected valuation method and calculate
+                                        the value using the same transactions and assumptions as the software.</p>
+                                </div>
+                            </article>
+                            <article class="mistake-card">
+                                <div class="mistake-icon"><i class="fas fa-arrows-rotate" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>4. Stock Value Changes After Modifying the Valuation Method</h3>
+                                    <p><strong>Possible cause:</strong> Different valuation methods can assign different
+                                        costs to the inventory sold and the inventory remaining.</p>
+                                    <p><strong>Solution:</strong> Review the accounting implications before changing the
+                                        method in a live company. Follow the applicable accounting policy and obtain
+                                        professional advice if the change affects reported financial statements.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="best-practices">
+                        <div class="section-eyebrow">09 / ACCOUNTING PRACTICES</div>
+                        <h2>Best Practices for Accurate Stock Valuation</h2>
+                        <p>To maintain reliable inventory values in TallyPrime:</p>
+                        <ul class="check-list">
+                            <li>Choose a valuation method appropriate to the business and applicable accounting
+                                standards.</li>
+                            <li>Record purchases and sales promptly.</li>
+                            <li>Maintain accurate stock item descriptions and units.</li>
+                            <li>Verify opening stock values.</li>
+                            <li>Review inventory reports regularly.</li>
+                            <li>Reconcile physical stock with accounting records.</li>
+                            <li>Investigate negative stock and unexpected valuation changes.</li>
+                            <li>Maintain supporting purchase and sales documents.</li>
+                            <li>Review the treatment of freight and other costs where relevant.</li>
+                            <li>Avoid changing valuation settings without understanding the accounting impact.</li>
+                        </ul>
+                        <p>Following these practices helps improve inventory accuracy and supports reliable financial
+                            reporting.</p>
+                        <div class="local-training-card">
+                            <div class="local-training-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <div class="local-training-copy">
+                                <span class="local-label">RLT EDZARO · TALLY TRAINING</span>
+                                <h3>Build Practical TallyPrime and Inventory Accounting Skills</h3>
+                                <p>Learn accounting, GST, inventory management, voucher entries, and financial reporting
+                                    through structured learning and practical exercises.</p>
+                                <div class="branch-pills"><span><i class="fas fa-book-open" aria-hidden="true"></i>
+                                        Practical Accounting</span><span><i class="fas fa-boxes-stacked"
+                                            aria-hidden="true"></i> Inventory Management</span></div>
+                                <div class="local-training-actions"><a class="primary-cta"
+                                        href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                                        rel="noopener">Explore Tally Training <i class="fas fa-arrow-right"
+                                            aria-hidden="true"></i></a><a class="secondary-cta"
+                                        href="https://rltedzaro.com/" target="_blank" rel="noopener">Visit RLT
+                                        Edzaro</a></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="faqs">
+                        <div class="section-eyebrow">10 / FAQs</div>
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="faq-list">
+                            <details class="faq-item">
+                                <summary>1. How do I calculate stock valuation in TallyPrime?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Configure the stock item and its appropriate valuation method, record opening
+                                        stock and inventory transactions, and review the relevant inventory reports. The
+                                        closing stock value depends on the quantities, costs, and selected valuation
+                                        method.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>2. Which stock valuation methods are available in TallyPrime?<i
+                                        class="fas fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>TallyPrime supports multiple inventory valuation methods. Availability depends on
+                                        the version and configuration. Check the valuation options in your installation
+                                        and select a method suitable for the applicable accounting requirements.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>3. What is FIFO in TallyPrime?<i class="fas fa-plus" aria-hidden="true"></i>
+                                </summary>
+                                <div class="faq-answer">
+                                    <p>FIFO stands for First In, First Out. It generally assigns the oldest inventory
+                                        costs to goods sold first, leaving more recent purchase costs in closing
+                                        inventory.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>4. What is the weighted-average stock valuation method?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Weighted-average valuation calculates an average cost using the relevant
+                                        quantities and costs. Closing stock is then valued using that average cost,
+                                        subject to the selected method's calculation rules.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>5. How can I check closing stock value in TallyPrime?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Open the relevant inventory reports, such as Stock Summary, and select the
+                                        required reporting date. Review the closing quantities and values, then drill
+                                        down into stock item details if necessary.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>6. Why is stock valuation important in accounting?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock valuation helps determine closing inventory and the cost of goods sold.
+                                        These values affect the calculation of profit and the presentation of inventory
+                                        in financial statements.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>7. Does stock valuation affect profit?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Yes. Under the applicable inventory accounting rules, the valuation of closing
+                                        stock affects the cost of goods sold and reported profit. Accurate valuation is
+                                        therefore important for reliable financial statements.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>8. Can I change the stock valuation method in TallyPrime?<i class="fas fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>The available configuration options depend on the software version and stock item
+                                        setup. Before changing the method in a live company, assess the effect on
+                                        inventory values, accounting records, and financial reporting.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="conclusion">
+                        <div class="section-eyebrow">11 / CONCLUSION</div>
+                        <h2>Conclusion</h2>
+                        <p>Stock valuation is an important part of inventory management and financial accounting.
+                            TallyPrime helps businesses record inventory transactions and review closing stock values
+                            using supported valuation methods.</p>
+                        <p>By understanding FIFO, weighted-average costing, stock item configuration, purchase and sales
+                            vouchers, and inventory reports, accounting students can develop practical skills that are
+                            useful in real-world accounting work.</p>
+                        <p>For accurate results, always use the valuation method appropriate to the business and its
+                            applicable accounting requirements. Practise with sample transactions in TallyPrime to
+                            understand how different methods affect closing stock values.</p>
+                        <div class="final-thoughts">
+                            <h3>Want to learn TallyPrime and practical inventory accounting?</h3>
+                            <p>RLT Edzaro offers Tally training to help learners build their understanding of
+                                accounting, GST, and inventory management workflows.</p>
+                            <p>Explore the course here: <a
+                                    href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                                    rel="noopener">RLT Edzaro Tally Training Institute in Chennai</a>.</p>
+                            <p>Build your practical accounting skills and improve your confidence in using TallyPrime.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- RELATED ARTICLES -->
+                    <section class="related-articles" id="related-articles">
+                        <span class="section-eyebrow">KEEP LEARNING</span>
+                        <h2>Related Articles</h2>
+                        <p>Explore these TallyPrime tutorials to strengthen your inventory and accounting knowledge.</p>
+                        <div class="related-links">
+                            <a routerLink="/create-stock-items-in-tallyprime"><span><i class="fas fa-box"
+                                        aria-hidden="true"></i> How to Create Stock Items in TallyPrime</span><i
+                                    class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-check-stock-summary-in-tallyprime"><span><i
+                                        class="fas fa-clipboard-list" aria-hidden="true"></i> How to Check Stock Summary
+                                    in TallyPrime</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span><i
+                                        class="fas fa-arrows-left-right" aria-hidden="true"></i> How to Track Stock
+                                    Movement in TallyPrime</span><i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-manage-batch-wise-inventory-in-tallyprime"><span><i
+                                        class="fas fa-boxes-stacked" aria-hidden="true"></i> How to Manage Batch-Wise
+                                    Inventory in TallyPrime</span><i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/generate-trial-balance-in-tallyprime"><span><i class="fas fa-scale-balanced"
+                                        aria-hidden="true"></i> How to Generate a Trial Balance in TallyPrime</span><i
+                                    class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span><i
+                                        class="fas fa-file-invoice" aria-hidden="true"></i> TallyPrime Voucher Types
+                                    Explained</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                        <a class="all-blogs-button" routerLink="/blogs">Explore All Blogs <i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </section>
+
+                    <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fas fa-arrow-up"
+                            aria-hidden="true"></i> Back to Top</a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</article>

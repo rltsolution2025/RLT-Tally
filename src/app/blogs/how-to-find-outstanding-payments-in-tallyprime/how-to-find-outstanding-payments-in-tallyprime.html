@@ -1,0 +1,693 @@
+<article class="article-page outstanding-article">
+    <!-- Hero -->
+    <header class="article-hero" id="top">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="hero-eyebrow">TALLYPRIME · PRACTICAL ACCOUNTING GUIDE</span>
+                <h1>How to Find Outstanding Payments in TallyPrime: Step-by-Step Guide</h1>
+                <p class="hero-description">
+                    Learn how to check pending customer invoices, view supplier dues, analyse overdue bills,
+                    and maintain accurate outstanding payment records in TallyPrime.
+                </p>
+                <div class="hero-meta">
+                    <span><span class="meta-dot"></span> Beginner-friendly guide</span>
+                    <span><span class="meta-dot"></span> Receivables and payables</span>
+                </div>
+                <a class="hero-button" href="#how-to-find" (click)="scrollToSection($event, 'how-to-find')">
+                    Explore the steps <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="hero-visual" aria-label="Outstanding payments overview">
+                <div class="visual-topline">
+                    <span class="visual-label">PAYMENT OVERVIEW</span>
+                    <span class="visual-status"><span></span> ACCOUNTING</span>
+                </div>
+                <div class="visual-balance">
+                    <span>Outstanding balances</span>
+                    <strong>Receivables <b>+</b> Payables</strong>
+                </div>
+                <div class="visual-columns">
+                    <div class="visual-column receivable-column">
+                        <span class="column-icon">R</span>
+                        <span class="column-label">Receivables</span>
+                        <strong>To collect</strong>
+                        <small>Customer dues</small>
+                    </div>
+                    <div class="visual-column payable-column">
+                        <span class="column-icon">P</span>
+                        <span class="column-label">Payables</span>
+                        <strong>To pay</strong>
+                        <small>Supplier dues</small>
+                    </div>
+                </div>
+                <div class="visual-footer"><span></span> Review bills · Check due dates · Follow up</div>
+                <div class="visual-decoration decoration-one"></div>
+                <div class="visual-decoration decoration-two"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main article and table of contents -->
+    <div class="container article-layout">
+        <main class="article-content">
+            <div class="article-intro-note">
+                <span class="note-mark" aria-hidden="true">i</span>
+                <p>
+                    TallyPrime's outstanding reports help you review pending customer and supplier balances.
+                    Menu names and navigation may vary slightly depending on your installed release.
+                </p>
+            </div>
+
+            <section class="article-section" id="introduction">
+                <span class="section-kicker">START HERE</span>
+                <h2>Introduction</h2>
+                <p>
+                    Tracking outstanding payments is an important part of accounting and financial management.
+                    Businesses need to know how much money customers still owe them and how much they need to pay
+                    suppliers. Without proper tracking, businesses may face delayed collections, cash flow problems,
+                    and difficulties managing daily expenses.
+                </p>
+                <p>
+                    TallyPrime helps businesses monitor outstanding receivables and payables through its outstanding
+                    reports. These reports allow users to review pending invoices, check due dates, identify overdue
+                    balances, and understand the status of customer and supplier payments.
+                </p>
+                <p>
+                    In this guide, you will learn how to check customer outstanding payments, view supplier dues,
+                    understand ageing reports, and use practical examples to manage pending payments in TallyPrime.
+                </p>
+            </section>
+
+            <section class="article-section" id="what-are-outstanding-payments">
+                <span class="section-kicker">KEY CONCEPTS</span>
+                <h2>What Are Outstanding Payments in TallyPrime?</h2>
+                <p>Outstanding payments are amounts that have not yet been settled by the relevant party. In accounting,
+                    outstanding balances generally fall into two categories.</p>
+                <div class="definition-grid">
+                    <article class="definition-card">
+                        <div class="definition-icon receivable-icon">R</div>
+                        <h3>1. Outstanding Receivables</h3>
+                        <p>These are amounts that customers owe your business for goods or services supplied on credit.
+                        </p>
+                        <div class="example-strip">
+                            <span>Example</span>
+                            <strong>₹25,000</strong>
+                            <small>Customer invoice not yet paid</small>
+                        </div>
+                    </article>
+                    <article class="definition-card">
+                        <div class="definition-icon payable-icon">P</div>
+                        <h3>2. Outstanding Payables</h3>
+                        <p>These are amounts your business owes suppliers or vendors for goods or services purchased on
+                            credit.</p>
+                        <div class="example-strip">
+                            <span>Example</span>
+                            <strong>₹15,000</strong>
+                            <small>Supplier invoice not yet paid</small>
+                        </div>
+                    </article>
+                </div>
+                <p>TallyPrime helps users track both categories through its receivables and payables reports.</p>
+                <p class="related-inline">
+                    Read next: <a routerLink="/track-receivables-and-payables-in-tallyprime">How to Track Receivables
+                        and Payables in TallyPrime</a> for a closer look at bill-wise balances.
+                </p>
+            </section>
+
+            <section class="article-section" id="why-tracking-matters">
+                <span class="section-kicker">BUSINESS BENEFITS</span>
+                <h2>Why Is Tracking Outstanding Payments Important?</h2>
+                <p>Regularly reviewing outstanding payments helps businesses maintain better financial control.</p>
+                <div class="benefit-grid">
+                    <div class="benefit-card"><span class="benefit-number">01</span>
+                        <div>
+                            <h3>Improved cash flow</h3>
+                            <p>Identify money that customers still need to pay.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card"><span class="benefit-number">02</span>
+                        <div>
+                            <h3>Better payment planning</h3>
+                            <p>Understand upcoming supplier obligations.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card"><span class="benefit-number">03</span>
+                        <div>
+                            <h3>Faster collections</h3>
+                            <p>Identify overdue customer invoices and follow up promptly.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card"><span class="benefit-number">04</span>
+                        <div>
+                            <h3>Reduced accounting errors</h3>
+                            <p>Compare outstanding balances against individual invoices.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card"><span class="benefit-number">05</span>
+                        <div>
+                            <h3>Financial visibility</h3>
+                            <p>Understand pending receivables and payables.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card"><span class="benefit-number">06</span>
+                        <div>
+                            <h3>Better business decisions</h3>
+                            <p>Use accurate payment information when planning purchases and expenses.</p>
+                        </div>
+                    </div>
+                </div>
+                <p>For accountants, knowing how to generate and interpret outstanding reports is an essential practical
+                    accounting skill.</p>
+            </section>
+
+            <section class="article-section" id="how-to-find">
+                <span class="section-kicker">STEP-BY-STEP PROCESS</span>
+                <h2>How to Find Outstanding Payments in TallyPrime</h2>
+                <p>Follow these steps to check outstanding payments using TallyPrime. Menu names and navigation can vary
+                    slightly depending on your software release.</p>
+
+                <div class="step-list">
+                    <article class="step-card">
+                        <div class="step-marker">01</div>
+                        <div class="step-body">
+                            <h3>Open Your Company in TallyPrime</h3>
+                            <ol>
+                                <li>Launch TallyPrime.</li>
+                                <li>Select the company whose outstanding payments you want to check.</li>
+                                <li>Verify that the correct company and financial period are selected.</li>
+                            </ol>
+                            <div class="step-tip"><strong>Check before proceeding:</strong> Make sure the relevant
+                                sales, purchase, receipt, and payment transactions have been recorded accurately.</div>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-marker">02</div>
+                        <div class="step-body">
+                            <h3>Open the Outstanding Reports</h3>
+                            <p>Navigate to the <strong>Outstandings</strong> reports in TallyPrime. Depending on your
+                                release, you can access the relevant report through the main reports or display menus.
+                                You can also use TallyPrime's search or Go To functionality to locate an outstanding
+                                report.</p>
+                            <div class="report-options">
+                                <div><span class="report-symbol receivable-icon">R</span>
+                                    <div><strong>Receivables</strong><small>Amounts customers owe your business</small>
+                                    </div>
+                                </div>
+                                <div><span class="report-symbol payable-icon">P</span>
+                                    <div><strong>Payables</strong><small>Amounts your business owes suppliers</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-marker">03</div>
+                        <div class="step-body">
+                            <h3>View Outstanding Receivables</h3>
+                            <p>Select the receivables report to view customer balances. The report can help you
+                                identify:</p>
+                            <ul class="check-list">
+                                <li>Customer names</li>
+                                <li>Outstanding balances</li>
+                                <li>Pending bill references</li>
+                                <li>Due dates, where maintained</li>
+                                <li>Amounts pending against individual invoices</li>
+                            </ul>
+                            <p>For example, if a customer has three unpaid invoices, the report can help you review the
+                                pending balances and investigate which invoices remain unsettled.</p>
+                            <p class="muted-paragraph">Select a customer or report line to drill down into the
+                                underlying details, where supported.</p>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-marker">04</div>
+                        <div class="step-body">
+                            <h3>View Outstanding Payables</h3>
+                            <p>Open the payables report to review supplier balances. This report helps you identify the
+                                amounts your business still owes vendors.</p>
+                            <ul class="check-list">
+                                <li>Review pending supplier invoices.</li>
+                                <li>Check the balances due to individual suppliers.</li>
+                                <li>Identify invoices approaching their due dates.</li>
+                                <li>Plan upcoming payments.</li>
+                                <li>Investigate differences between supplier statements and accounting records.</li>
+                            </ul>
+                            <p>Regularly reviewing payables helps businesses avoid missed due dates and maintain better
+                                supplier relationships.</p>
+                        </div>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-marker">05</div>
+                        <div class="step-body">
+                            <h3>Check Individual Outstanding Bills</h3>
+                            <p>To understand exactly why a balance is pending, open the relevant customer or supplier
+                                details. Review the bill-wise information, including:</p>
+                            <ul class="check-list two-column-list">
+                                <li>Original invoice amount</li>
+                                <li>Amount received or paid</li>
+                                <li>Remaining balance</li>
+                                <li>Invoice reference</li>
+                                <li>Due date, if configured</li>
+                                <li>Relevant receipt or payment entries</li>
+                            </ul>
+                            <div class="calculation-card">
+                                <span class="calculation-label">PARTIAL PAYMENT EXAMPLE</span>
+                                <div class="calculation-line"><span>Original invoice</span><strong>₹20,000</strong>
+                                </div>
+                                <div class="calculation-line"><span>Amount received</span><strong>₹12,000</strong></div>
+                                <div class="calculation-line calculation-total"><span>Remaining
+                                        outstanding</span><strong>₹8,000</strong></div>
+                            </div>
+                            <p>This example assumes the receipt has been correctly allocated and there are no other
+                                adjustments. A detailed review helps you identify whether an invoice is unpaid,
+                                partially settled, or incorrectly allocated.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="article-section" id="check-overdue-payments">
+                <span class="section-kicker">AGEING ANALYSIS</span>
+                <h2>How to Check Overdue Payments in TallyPrime</h2>
+                <p>An outstanding invoice is not necessarily overdue. It becomes overdue when its due date has passed
+                    and the balance remains unpaid.</p>
+                <p>TallyPrime provides outstanding and ageing-report capabilities that can help businesses analyse
+                    pending amounts by their age or due status, depending on the configuration.</p>
+                <div class="numbered-process">
+                    <div><span>1</span>Open the relevant receivables or payables report.</div>
+                    <div><span>2</span>Locate the available ageing or bill-wise analysis options.</div>
+                    <div><span>3</span>Set the required ageing basis or period, where available.</div>
+                    <div><span>4</span>Review the outstanding amounts against the relevant ageing categories.</div>
+                    <div><span>5</span>Identify invoices requiring collection or payment follow-up.</div>
+                </div>
+
+                <h3 class="subheading">Example of an Outstanding Ageing Report</h3>
+                <p>Suppose a business has the following pending customer invoices:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Outstanding Amount</th>
+                                <th>Days Past Due</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ABC Traders</td>
+                                <td>₹10,000</td>
+                                <td>10 days</td>
+                            </tr>
+                            <tr>
+                                <td>XYZ Enterprises</td>
+                                <td>₹25,000</td>
+                                <td>35 days</td>
+                            </tr>
+                            <tr>
+                                <td>Kumar Stores</td>
+                                <td>₹8,000</td>
+                                <td>65 days</td>
+                            </tr>
+                            <tr class="table-total">
+                                <td>Total</td>
+                                <td>₹43,000</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="insight-list">
+                    <div><span class="insight-dot dot-low"></span>
+                        <p><strong>ABC Traders:</strong> May need a routine payment reminder.</p>
+                    </div>
+                    <div><span class="insight-dot dot-medium"></span>
+                        <p><strong>XYZ Enterprises:</strong> May need a more direct follow-up.</p>
+                    </div>
+                    <div><span class="insight-dot dot-high"></span>
+                        <p><strong>Kumar Stores:</strong> May require urgent review under the company's collection
+                            policy.</p>
+                    </div>
+                </div>
+                <p class="table-note">The days shown are examples, not actual TallyPrime report results.</p>
+            </section>
+
+            <section class="article-section" id="bill-wise-details">
+                <span class="section-kicker">ACCURATE REPORTING</span>
+                <h2>How to Record Bill-Wise Details for Accurate Outstanding Reports</h2>
+                <p>To obtain useful outstanding reports, businesses should maintain accurate bill-wise references when
+                    recording transactions.</p>
+                <div class="compact-steps">
+                    <article><span>01</span>
+                        <div>
+                            <h3>Enable the Relevant Bill-Wise Feature</h3>
+                            <p>Review the accounting features and ledger settings to confirm that bill-wise tracking is
+                                enabled where required. The exact configuration depends on your TallyPrime version and
+                                accounting setup.</p>
+                        </div>
+                    </article>
+                    <article><span>02</span>
+                        <div>
+                            <h3>Configure Customer and Supplier Ledgers</h3>
+                            <p>Open the relevant customer or supplier ledger and verify the applicable bill-wise
+                                tracking settings. Use the correct ledger group and maintain the necessary details for
+                                credit transactions.</p>
+                        </div>
+                    </article>
+                    <article><span>03</span>
+                        <div>
+                            <h3>Enter Bill References in Transactions</h3>
+                            <p>When recording credit sales or purchases, enter the appropriate bill reference or
+                                allocation details when prompted. Use a consistent reference system so that each invoice
+                                can be tracked accurately.</p>
+                        </div>
+                    </article>
+                    <article><span>04</span>
+                        <div>
+                            <h3>Allocate Receipts and Payments Correctly</h3>
+                            <p>When recording a customer receipt or supplier payment, allocate the amount against the
+                                appropriate outstanding bill. For example, allocate a ₹5,000 customer receipt to the
+                                correct invoice.</p>
+                        </div>
+                    </article>
+                    <article><span>05</span>
+                        <div>
+                            <h3>Verify the Outstanding Report</h3>
+                            <p>After saving the transactions, reopen the outstanding report and confirm that the
+                                balances reflect the recorded receipts, payments, and adjustments.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="article-callout"><strong>Remember:</strong> Correct bill references and allocations help
+                    make outstanding reports more reliable.</div>
+                <p class="related-inline">Related guide: <a
+                        routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                        Explained</a>, including receipt and payment vouchers.</p>
+            </section>
+
+            <section class="article-section" id="practical-example">
+                <span class="section-kicker">PRACTICAL ACCOUNTING</span>
+                <h2>Practical Example: Finding Outstanding Customer Payments</h2>
+                <p>Let us consider a simple business scenario. ABC Enterprises sells goods to a customer on credit.</p>
+                <div class="example-summary-grid">
+                    <div><span>Original sales invoice</span><strong>₹30,000</strong></div>
+                    <div><span>Payment received</span><strong>₹18,000</strong></div>
+                    <div class="example-outstanding"><span>Remaining outstanding</span><strong>₹12,000</strong></div>
+                </div>
+                <div class="formula-box">
+                    <span>OUTSTANDING AMOUNT FORMULA</span>
+                    <strong>Original invoice amount − Payments received</strong>
+                    <p>₹30,000 − ₹18,000 = <b>₹12,000</b></p>
+                </div>
+                <p>The accountant can open the receivables report in TallyPrime, locate the customer, and inspect the
+                    invoice-level details to verify the ₹12,000 balance.</p>
+                <p>If the report does not show the expected amount, the accountant should check whether the receipt was
+                    recorded correctly and allocated against the correct bill.</p>
+            </section>
+
+            <section class="article-section" id="reduce-outstanding">
+                <span class="section-kicker">FOLLOW-UP PROCESS</span>
+                <h2>How to Reduce Outstanding Payments Using TallyPrime</h2>
+                <p>TallyPrime helps businesses identify pending amounts, but collecting payments also requires a
+                    consistent follow-up process.</p>
+                <div class="action-list">
+                    <article><span>01</span>
+                        <div>
+                            <h3>Review Outstanding Reports Regularly</h3>
+                            <p>Check receivables and payables daily or weekly, depending on the volume of transactions.
+                            </p>
+                        </div>
+                    </article>
+                    <article><span>02</span>
+                        <div>
+                            <h3>Prioritise Overdue Invoices</h3>
+                            <p>Focus first on invoices that are significantly overdue or have high outstanding balances.
+                            </p>
+                        </div>
+                    </article>
+                    <article><span>03</span>
+                        <div>
+                            <h3>Send Payment Reminders</h3>
+                            <p>Use the customer contact details maintained by your business to follow up on pending
+                                invoices. Keep reminders professional and include the invoice reference and outstanding
+                                amount.</p>
+                        </div>
+                    </article>
+                    <article><span>04</span>
+                        <div>
+                            <h3>Reconcile Receipts and Payments</h3>
+                            <p>Confirm that all receipts and payments have been entered and allocated correctly.</p>
+                        </div>
+                    </article>
+                    <article><span>05</span>
+                        <div>
+                            <h3>Review Customer Credit Terms</h3>
+                            <p>Use outstanding information to assess whether customers are paying according to agreed
+                                credit terms.</p>
+                        </div>
+                    </article>
+                    <article><span>06</span>
+                        <div>
+                            <h3>Maintain Accurate Invoice Records</h3>
+                            <p>Correct invoice dates, references, and due-date information make outstanding reports
+                                easier to interpret.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="article-section" id="common-problems">
+                <span class="section-kicker">TROUBLESHOOTING</span>
+                <h2>Common Problems When Checking Outstanding Payments in TallyPrime</h2>
+                <div class="problem-list">
+                    <article class="problem-card">
+                        <h3><span>01</span> Outstanding Report Shows an Incorrect Balance</h3>
+                        <div class="problem-columns">
+                            <div><strong>Possible reasons</strong>
+                                <ul>
+                                    <li>A receipt or payment has not been recorded.</li>
+                                    <li>A receipt or payment has been allocated to the wrong bill.</li>
+                                    <li>A credit note, debit note, or other adjustment is missing.</li>
+                                    <li>Bill-wise tracking is not configured as expected.</li>
+                                </ul>
+                            </div>
+                            <div class="solution"><strong>Solution</strong>
+                                <p>Review the original voucher, bill allocation, and related adjustment entries.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="problem-card">
+                        <h3><span>02</span> Customer Invoice Is Not Appearing in the Outstanding Report</h3>
+                        <div class="problem-columns">
+                            <div><strong>Possible reasons</strong>
+                                <ul>
+                                    <li>The invoice was recorded under an incorrect ledger.</li>
+                                    <li>The invoice has been fully settled.</li>
+                                    <li>Bill references were not entered as expected.</li>
+                                    <li>The selected company, period, or report filters exclude the transaction.</li>
+                                </ul>
+                            </div>
+                            <div class="solution"><strong>Solution</strong>
+                                <p>Verify the sales voucher, customer ledger, bill-wise details, and report settings.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="problem-card">
+                        <h3><span>03</span> Due Dates Are Missing</h3>
+                        <div class="problem-columns">
+                            <div><strong>Possible reasons</strong>
+                                <ul>
+                                    <li>Payment terms were not configured.</li>
+                                    <li>The relevant due-date information was not maintained.</li>
+                                    <li>Bill-wise settings differ from the expected setup.</li>
+                                </ul>
+                            </div>
+                            <div class="solution"><strong>Solution</strong>
+                                <p>Review the ledger, voucher, and bill-wise configuration. Update the information
+                                    according to the actual invoice and agreed payment terms.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="problem-card">
+                        <h3><span>04</span> Supplier Outstanding Does Not Match the Supplier Statement</h3>
+                        <div class="problem-columns">
+                            <div><strong>Possible reasons</strong>
+                                <ul>
+                                    <li>A supplier invoice or payment is missing.</li>
+                                    <li>A payment has been allocated to another bill.</li>
+                                    <li>A credit note or debit note has not been recorded.</li>
+                                    <li>The supplier statement covers a different period.</li>
+                                </ul>
+                            </div>
+                            <div class="solution"><strong>Solution</strong>
+                                <p>Compare invoice-level details, payment vouchers, adjustment entries, and the supplier
+                                    statement.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="related-inline">For bank-related differences, read <a
+                        routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">How to Perform Bank
+                        Reconciliation in TallyPrime</a>.</p>
+            </section>
+
+            <section class="article-section faq-section" id="faqs">
+                <span class="section-kicker">QUICK ANSWERS</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>1. How do I check outstanding payments in TallyPrime?</summary>
+                        <p>Open the relevant company, navigate to the Outstandings reports, and select Receivables or
+                            Payables. Review the customer or supplier balances and drill down into individual bills to
+                            investigate pending amounts.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>2. What is the difference between outstanding receivables and payables?</summary>
+                        <p>Receivables are amounts customers owe your business. Payables are amounts your business owes
+                            suppliers or vendors.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>3. Can I see customer-wise outstanding payments in TallyPrime?</summary>
+                        <p>Yes. The receivables report can help you review customer balances and, where configured,
+                            drill down into individual outstanding bills.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>4. How can I check overdue bills in TallyPrime?</summary>
+                        <p>Use the relevant outstanding and ageing-report options to analyse pending bills. Ensure that
+                            bill-wise tracking and due-date details are maintained correctly.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>5. Why is an invoice still showing as outstanding after receiving payment?</summary>
+                        <p>The receipt may not have been recorded, or it may not have been allocated to the correct
+                            bill. Review the receipt voucher and its bill-wise allocation.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>6. Can TallyPrime show outstanding supplier payments?</summary>
+                        <p>Yes. The payables report helps businesses review supplier balances and pending bills so they
+                            can plan payments and monitor due dates.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>7. Why is bill-wise tracking important in TallyPrime?</summary>
+                        <p>Bill-wise tracking connects outstanding balances to individual invoices. It helps accountants
+                            identify partial payments, pending invoices, and due dates more accurately.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>8. Is learning outstanding reports important for accounting jobs?</summary>
+                        <p>Yes. Understanding receivables, payables, bill-wise allocations, and ageing reports is useful
+                            for accounting, accounts executive, billing, and finance support roles.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="article-section conclusion-section" id="conclusion">
+                <span class="section-kicker">KEY TAKEAWAY</span>
+                <h2>Conclusion</h2>
+                <p>Learning how to find outstanding payments in TallyPrime helps businesses track customer receivables,
+                    manage supplier payables, and maintain better control over cash flow.</p>
+                <p>By using the outstanding reports, reviewing individual bills, maintaining accurate bill-wise
+                    references, and checking ageing information, accountants can identify pending balances and take
+                    appropriate follow-up action.</p>
+                <p>For accounting students and aspiring accountants, practising these reports is an important step
+                    towards developing practical TallyPrime and accounting skills.</p>
+            </section>
+
+            <!-- Related articles -->
+            <section class="related-articles" id="related-articles">
+                <div class="related-heading">
+                    <div><span class="section-kicker">KEEP LEARNING</span>
+                        <h2>Related Articles</h2>
+                    </div>
+                    <p>Explore more practical TallyPrime guides from RLT Edzaro.</p>
+                </div>
+                <div class="related-grid">
+                    <a class="related-card" routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">
+                        <span class="related-category">BANKING</span>
+                        <h3>How to Perform Bank Reconciliation in TallyPrime</h3><span class="related-arrow">Read
+                            article <b>↗</b></span>
+                    </a>
+                    <a class="related-card" routerLink="/generate-trial-balance-in-tallyprime">
+                        <span class="related-category">ACCOUNTING REPORTS</span>
+                        <h3>How to Generate a Trial Balance in TallyPrime</h3><span class="related-arrow">Read article
+                            <b>↗</b></span>
+                    </a>
+                    <a class="related-card" routerLink="/tallyprime-voucher-types-explained-with-examples">
+                        <span class="related-category">VOUCHERS</span>
+                        <h3>TallyPrime Voucher Types Explained with Examples</h3><span class="related-arrow">Read
+                            article <b>↗</b></span>
+                    </a>
+                    <a class="related-card" routerLink="/tallyprime-gst-invoice-format">
+                        <span class="related-category">GST INVOICING</span>
+                        <h3>TallyPrime GST Invoice Format: Complete Guide</h3><span class="related-arrow">Read article
+                            <b>↗</b></span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Training CTA -->
+            <section class="article-cta" id="training-cta">
+                <div class="cta-content">
+                    <span class="cta-eyebrow">BUILD PRACTICAL ACCOUNTING SKILLS</span>
+                    <h2>Want to improve your practical accounting skills?</h2>
+                    <p>Explore Tally training at <strong>RLT Edzaro</strong> to build your knowledge of accounting, GST,
+                        invoicing, and TallyPrime reporting.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer" class="cta-button">Explore Tally Training <span
+                            aria-hidden="true">↗</span></a>
+                    <small>Learn practical accounting workflows and build confidence for real-world accounting
+                        tasks.</small>
+                </div>
+                <div class="cta-mark" aria-hidden="true"><span>RLT</span><strong>EDZARO</strong><i></i></div>
+            </section>
+
+            <div class="article-footer-nav"><a href="#top" (click)="scrollToSection($event, 'top')">↑ Back to
+                    top</a><span>RLT Edzaro · TallyPrime Learning Guide</span></div>
+        </main>
+
+        <!-- Sidebar table of contents -->
+        <aside class="article-sidebar">
+            <div class="sidebar-sticky">
+                <div class="toc-card">
+                    <div class="toc-heading"><span class="toc-icon">☷</span>
+                        <div><strong>In this article</strong><small>Jump to a section</small></div>
+                    </div>
+                    <nav aria-label="Table of contents" class="toc-links">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-are-outstanding-payments"
+                            (click)="scrollToSection($event, 'what-are-outstanding-payments')">What Are Outstanding
+                            Payments?</a>
+                        <a href="#why-tracking-matters" (click)="scrollToSection($event, 'why-tracking-matters')">Why
+                            Tracking Matters</a>
+                        <a href="#how-to-find" (click)="scrollToSection($event, 'how-to-find')">How to Find Outstanding
+                            Payments</a>
+                        <a href="#check-overdue-payments"
+                            (click)="scrollToSection($event, 'check-overdue-payments')">Check Overdue Payments</a>
+                        <a href="#bill-wise-details" (click)="scrollToSection($event, 'bill-wise-details')">Record
+                            Bill-Wise Details</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#reduce-outstanding" (click)="scrollToSection($event, 'reduce-outstanding')">Reduce
+                            Outstanding Payments</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                </div>
+                <div class="sidebar-help-card">
+                    <span class="help-label">LEARN WITH RLT EDZARO</span>
+                    <h3>Build job-ready TallyPrime skills</h3>
+                    <p>Explore practical training in accounting, GST, and TallyPrime.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer">Explore courses <span>↗</span></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</article>

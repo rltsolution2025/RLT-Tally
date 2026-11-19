@@ -1,0 +1,669 @@
+<div class="bank-reconciliation-practical-blog" id="top">
+    <header class="brp-hero">
+        <div class="brp-hero-inner">
+            <nav class="brp-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a><span aria-hidden="true">›</span>
+                <a routerLink="/blogs">Blogs</a><span aria-hidden="true">›</span>
+                <span aria-current="page">TallyPrime Bank Reconciliation</span>
+            </nav>
+            <p class="hero-eyebrow">TALLYPRIME ACCOUNTING · PRACTICAL GUIDE</p>
+            <h1>TallyPrime Bank Reconciliation: Step-by-Step Practical Example</h1>
+            <p class="hero-description">Learn how to compare bank ledger entries with a bank statement, identify
+                unreconciled transactions, record missing bank charges, and prepare a practical Bank Reconciliation
+                Statement.</p>
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> 12 min read</span>
+                <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> TallyPrime tutorials</span>
+                <span><i class="fa-solid fa-calculator" aria-hidden="true"></i> Practical accounting example</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="brp-container">
+        <div class="brp-article-layout">
+            <aside class="brp-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <p class="toc-heading">IN THIS ARTICLE</p>
+                    <nav class="toc-links">
+                        <a href="#intro" (click)="scrollToSection($event, 'intro')">Introduction</a>
+                        <a href="#bank-reconciliation-meaning"
+                            (click)="scrollToSection($event, 'bank-reconciliation-meaning')">What Is Bank
+                            Reconciliation?</a>
+                        <a href="#importance" (click)="scrollToSection($event, 'importance')">Why It Is Important</a>
+                        <a href="#reconciliation-tallyprime"
+                            (click)="scrollToSection($event, 'reconciliation-tallyprime')">Bank Reconciliation in
+                            TallyPrime</a>
+                        <a href="#preparation" (click)="scrollToSection($event, 'preparation')">Before You Start</a>
+                        <a href="#reconciliation-steps"
+                            (click)="scrollToSection($event, 'reconciliation-steps')">Step-by-Step Process</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#common-errors" (click)="scrollToSection($event, 'common-errors')">Common Errors</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    </nav>
+                </div>
+                <div class="sidebar-cta">
+                    <span class="cta-kicker">LEARN PRACTICALLY</span>
+                    <h3>Build your TallyPrime accounting skills</h3>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank" rel="noopener"
+                        class="sidebar-cta-link">Explore Tally Training <span aria-hidden="true">→</span></a>
+                </div>
+            </aside>
+
+            <main class="brp-article-content">
+                <div class="article-topline">
+                    <span class="article-category">BANKING & RECONCILIATION</span>
+                    <span class="article-reading-time">Practical walkthrough · October 2026 example</span>
+                </div>
+
+                <section class="article-section" id="intro">
+                    <h2>Introduction</h2>
+                    <p>Bank reconciliation is an essential accounting task that helps businesses verify whether their
+                        bank transactions match the records maintained in their accounting software. Even when a
+                        business records every receipt and payment correctly, differences can occur because of bank
+                        charges, cheque clearance delays, interest credits, or transactions that have not yet been
+                        entered into the books.</p>
+                    <p>TallyPrime provides a Bank Reconciliation feature that helps accountants compare transactions
+                        recorded in the company's bank ledger with entries appearing in the bank statement.</p>
+                    <p>Learning how to perform bank reconciliation in TallyPrime is useful for accounting students,
+                        business owners, accountants, and anyone preparing for a job that involves practical accounting.
+                    </p>
+                    <p>In this guide, you will learn what bank reconciliation is, how to reconcile bank transactions in
+                        TallyPrime, and how to solve a practical example step by step.</p>
+                    <div class="answer-box">
+                        <span class="answer-label">WHAT YOU WILL LEARN</span>
+                        <p>How to review bank ledger entries, enter the actual bank date, investigate unreconciled
+                            transactions, record missing bank charges, and explain the remaining difference using a Bank
+                            Reconciliation Statement (BRS).</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="bank-reconciliation-meaning">
+                    <h2>What Is Bank Reconciliation?</h2>
+                    <p>Bank reconciliation is the process of comparing the bank balance recorded in a company's books
+                        with the balance shown in its bank statement and identifying the reasons for any differences.
+                    </p>
+                    <p>The comparison is generally performed using the company's bank ledger and the statement provided
+                        by the bank.</p>
+                    <p>For example, a business may record a cheque payment on 10 October, but the cheque may be cleared
+                        by the bank only on 13 October. Until the cheque is cleared, the balance shown in the company's
+                        books may differ from the bank statement.</p>
+                    <p>Bank reconciliation helps accountants identify these timing differences and correct missing or
+                        inaccurate accounting entries.</p>
+                </section>
+
+                <section class="article-section" id="importance">
+                    <h2>Why Is Bank Reconciliation Important?</h2>
+                    <p>Bank reconciliation helps businesses:</p>
+                    <ul class="check-list">
+                        <li>Identify missing bank transactions.</li>
+                        <li>Detect duplicate or incorrect accounting entries.</li>
+                        <li>Verify cheque payments and deposits.</li>
+                        <li>Record bank charges and interest correctly.</li>
+                        <li>Identify unauthorised or unexpected transactions.</li>
+                        <li>Maintain accurate cash and bank balances.</li>
+                        <li>Prepare reliable financial reports.</li>
+                    </ul>
+                    <p>Regular reconciliation also helps businesses detect discrepancies before they become more
+                        difficult to investigate.</p>
+                    <p>For a related overview of transaction matching, read <a
+                            routerLink="/match-bank-transactions-with-tallyprime-entries">How to Match Bank Transactions
+                            With TallyPrime Entries</a>.</p>
+                </section>
+
+                <section class="article-section" id="reconciliation-tallyprime">
+                    <h2>What Is Bank Reconciliation in TallyPrime?</h2>
+                    <p>Bank reconciliation in TallyPrime is the process of matching entries in the company's bank ledger
+                        with the corresponding transactions in the bank statement.</p>
+                    <p>TallyPrime allows users to review bank transactions and enter the relevant bank dates for
+                        transactions that have been cleared or credited by the bank.</p>
+                    <p>The Bank Reconciliation feature can help identify:</p>
+                    <ul>
+                        <li>Transactions recorded in the books but not yet reflected in the bank statement.</li>
+                        <li>Deposits that have not yet been credited.</li>
+                        <li>Cheques that have not yet been cleared.</li>
+                        <li>Differences caused by bank charges or interest.</li>
+                        <li>Transactions that require investigation or additional accounting entries.</li>
+                    </ul>
+                    <div class="warning-box"><strong>Important:</strong> Bank reconciliation does not automatically mean
+                        that every difference should be corrected through a journal entry. First identify whether the
+                        difference is a normal timing issue or an error that requires an accounting adjustment.</div>
+                    <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime" class="inline-related-link">Read
+                        the detailed guide: How to Perform Bank Reconciliation in TallyPrime <span
+                            aria-hidden="true">→</span></a>
+                </section>
+
+                <section class="article-section" id="preparation">
+                    <h2>What Do You Need Before Starting Bank Reconciliation?</h2>
+                    <p>Before beginning the process in TallyPrime, keep the following information ready:</p>
+                    <ol class="numbered-list">
+                        <li>Your company data in TallyPrime.</li>
+                        <li>The relevant bank ledger.</li>
+                        <li>The bank statement for the reconciliation period.</li>
+                        <li>The accounting entries for receipts, payments, deposits, and withdrawals.</li>
+                        <li>Details of bank charges, interest, or other bank-initiated transactions.</li>
+                        <li>The opening bank balance and previous reconciliation details, if applicable.</li>
+                    </ol>
+                    <p>Make sure the bank statement covers the period you want to reconcile.</p>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h3>Correct bank ledger</h3>
+                                <p>Choose the ledger that represents the bank account covered by the statement. If the
+                                    business has multiple accounts, reconcile them separately.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></div>
+                            <div>
+                                <h3>Complete bank statement</h3>
+                                <p>Use the statement for the same reconciliation period and retain the transaction
+                                    references needed to verify receipts and payments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="reconciliation-steps">
+                    <h2>How to Perform Bank Reconciliation in TallyPrime: Step-by-Step Guide</h2>
+                    <p>Follow these steps to reconcile bank transactions in TallyPrime. Menu names may vary slightly
+                        depending on the release and configuration.</p>
+
+                    <div class="steps-list">
+                        <div class="step-card"><span class="step-index">01</span>
+                            <div>
+                                <h3>Open Your Company in TallyPrime</h3>
+                                <p>Launch TallyPrime and select the company whose bank transactions you want to
+                                    reconcile. Verify that you have selected the correct company and financial period.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">02</span>
+                            <div>
+                                <h3>Open the Bank Ledger</h3>
+                                <p>Navigate to the relevant bank account ledger or the Bank Reconciliation report. In
+                                    many TallyPrime releases, you can access the report through the banking or
+                                    reconciliation options, or by opening the bank ledger and selecting the
+                                    reconciliation feature. Select the bank account you want to reconcile, such as HDFC
+                                    Bank, SBI, or another business bank account.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">03</span>
+                            <div>
+                                <h3>Open the Bank Reconciliation Report</h3>
+                                <p>Open the Bank Reconciliation screen for the selected bank ledger. Depending on your
+                                    configuration, the report may display the accounting date, voucher number,
+                                    transaction details, debit or credit amount, bank date, and reconciliation status.
+                                    Review the report before making changes.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">04</span>
+                            <div>
+                                <h3>Compare Transactions with the Bank Statement</h3>
+                                <p>Take the bank statement and compare it with the entries shown in TallyPrime. Check
+                                    the transaction date, amount, payment or receipt reference, cheque number, UTR or
+                                    other available reference, and whether the transaction appears in the statement.</p>
+                                <p>For example, if a cheque payment of ₹5,000 appears in TallyPrime but has not yet been
+                                    cleared by the bank, it should not be treated as a completed bank transaction for
+                                    reconciliation purposes.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">05</span>
+                            <div>
+                                <h3>Enter the Bank Date</h3>
+                                <p>For a transaction that appears in both the books and the bank statement, enter the
+                                    corresponding bank date in the reconciliation screen. The bank date is the date on
+                                    which the transaction was cleared, credited, or otherwise reflected by the bank.</p>
+                                <p>Example: accounting entry date 10 October 2026, bank clearance date 13 October 2026,
+                                    payment amount ₹5,000. If the transaction appears in the statement on 13 October,
+                                    enter that date in the relevant bank reconciliation field.</p>
+                                <p>Use the actual date shown in the bank statement rather than assuming the bank
+                                    processed the transaction on the accounting entry date.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">06</span>
+                            <div>
+                                <h3>Identify Unreconciled Transactions</h3>
+                                <p>Review transactions that still do not match. Common reasons include cheques issued
+                                    but not presented, cheques deposited but not credited, bank charges or interest not
+                                    entered, incorrect amounts or dates, duplicate entries, and missing receipts or
+                                    payments.</p>
+                                <p>Investigate each difference before deciding whether to enter a bank date or record an
+                                    accounting adjustment.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">07</span>
+                            <div>
+                                <h3>Record Missing Bank Transactions</h3>
+                                <p>If the bank statement contains a transaction that is not recorded in TallyPrime,
+                                    create the appropriate accounting voucher. For example, if the bank deducts ₹250 as
+                                    bank charges, enter the expense using the appropriate bank account and bank charges
+                                    ledger.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">08</span>
+                            <div>
+                                <h3>Verify the Reconciled Balance</h3>
+                                <p>Once you have matched the relevant transactions and recorded necessary missing
+                                    entries, review the reconciliation report again. Check that cleared transactions
+                                    have correct bank dates, outstanding items remain identifiable, bank charges and
+                                    interest are recorded correctly, no transactions have been reconciled twice, and any
+                                    remaining difference is explained.</p>
+                                <p>Save changes using the options available in your TallyPrime version.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-box">The bank date should reflect the actual date shown in the bank statement. Do
+                        not change dates simply to make the balances appear equal.</div>
+                    <p>For more detail about the underlying entries, see <a
+                            routerLink="/how-to-record-bank-transactions-in-tallyprime">How to Record Bank Transactions
+                            in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <h2>TallyPrime Bank Reconciliation: Practical Example</h2>
+                    <p>Let us understand bank reconciliation using a simple business example. ABC Traders maintains a
+                        bank account and records the following transactions in TallyPrime during October 2026.</p>
+
+                    <div class="example-card">
+                        <span class="example-label">STEP 1 · TRANSACTIONS IN TALLYPRIME</span>
+                        <h3>Transactions recorded in the books</h3>
+                        <div class="table-wrap">
+                            <table class="reference-table compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Transaction</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 October</td>
+                                        <td>Opening bank balance</td>
+                                        <td>₹50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 October</td>
+                                        <td>Customer payment received</td>
+                                        <td>₹20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8 October</td>
+                                        <td>Supplier payment by cheque</td>
+                                        <td>₹10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 October</td>
+                                        <td>Office expenses paid</td>
+                                        <td>₹5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12 October</td>
+                                        <td>Customer cheque deposited</td>
+                                        <td>₹8,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The closing balance according to the books is:</p>
+                        <div class="calculation-card"><span>₹50,000 + ₹20,000 − ₹10,000 − ₹5,000 +
+                                ₹8,000</span><strong>₹63,000</strong></div>
+                    </div>
+
+                    <div class="example-card">
+                        <span class="example-label">STEP 2 · BANK STATEMENT</span>
+                        <h3>Transactions appearing in the bank statement</h3>
+                        <p>Suppose the bank statement shows the following transactions by the end of the period.</p>
+                        <div class="table-wrap">
+                            <table class="reference-table compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Opening bank balance</td>
+                                        <td>₹50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customer payment credited</td>
+                                        <td>₹20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supplier cheque cleared</td>
+                                        <td>−₹10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Office expenses paid</td>
+                                        <td>−₹5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank charges</td>
+                                        <td>−₹250</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Closing bank statement balance</td>
+                                        <td>₹54,750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The customer cheque of ₹8,000 has not yet been credited by the bank, and bank charges of ₹250
+                            have not yet been recorded in TallyPrime.</p>
+                    </div>
+
+                    <div class="example-card">
+                        <span class="example-label">STEP 3 · IDENTIFY THE DIFFERENCES</span>
+                        <h3>Two differences need investigation</h3>
+                        <div class="problem-list">
+                            <div class="problem-card">
+                                <h3>Difference 1: Customer cheque deposited but not credited</h3>
+                                <p>The business has recorded the ₹8,000 deposit in TallyPrime, but it does not yet
+                                    appear in the bank statement. This is a timing difference. Keep the deposit
+                                    identifiable as awaiting credit until the bank processes it.</p>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Difference 2: Bank charges of ₹250</h3>
+                                <p>The bank has deducted ₹250, but the business has not recorded the expense in
+                                    TallyPrime. This is a missing accounting entry that should be recorded.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <span class="example-label">STEP 4 · RECORD BANK CHARGES</span>
+                        <h3>Enter the missing bank charge</h3>
+                        <div class="table-wrap">
+                            <table class="reference-table compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bank Charges A/c</td>
+                                        <td>₹250</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank A/c</td>
+                                        <td>—</td>
+                                        <td>₹250</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Total</td>
+                                        <td>₹250</td>
+                                        <td>₹250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The adjusted bank balance according to the books becomes:</p>
+                        <div class="calculation-card"><span>₹63,000 − ₹250</span><strong>₹62,750</strong></div>
+                    </div>
+
+                    <div class="example-card">
+                        <span class="example-label">STEP 5 · BANK RECONCILIATION STATEMENT</span>
+                        <h3>Compare the adjusted book balance with the statement</h3>
+                        <div class="table-wrap">
+                            <table class="reference-table compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Adjusted balance according to books</td>
+                                        <td>₹62,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Less: Deposit not yet credited by the bank</td>
+                                        <td>₹8,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Balance according to bank statement</td>
+                                        <td>₹54,750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="answer-box"><span class="answer-label">RECONCILIATION RESULT</span>
+                            <p>The balances agree after considering the outstanding deposit. The missing bank charge has
+                                been recorded in the books, while the ₹8,000 deposit remains a timing difference until
+                                the bank credits it.</p>
+                        </div>
+                    </div>
+
+                    <p>This example demonstrates the basic principle of bank reconciliation: record missing transactions
+                        in the books and identify valid timing differences rather than treating every difference as an
+                        error.</p>
+                </section>
+
+                <section class="article-section" id="common-errors">
+                    <h2>Common Bank Reconciliation Errors in TallyPrime</h2>
+                    <div class="problem-list">
+                        <div class="problem-card">
+                            <h3>1. Incorrect Bank Date</h3>
+                            <p>Entering the accounting date instead of the actual bank transaction date can cause
+                                reconciliation errors.</p>
+                            <p><strong>Solution:</strong> Check the transaction date in the bank statement and enter the
+                                correct bank date.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>2. Missing Bank Charges</h3>
+                            <p>Banks may deduct service charges, cheque return charges, or other fees that are not
+                                immediately recorded in the books.</p>
+                            <p><strong>Solution:</strong> Record the appropriate expense and bank entry, then reconcile
+                                the transaction.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>3. Duplicate Transactions</h3>
+                            <p>A transaction may have been entered twice in the accounting records.</p>
+                            <p><strong>Solution:</strong> Compare the voucher number, amount, date, and transaction
+                                reference with the bank statement before correcting the duplicate.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>4. Cheques Not Yet Cleared</h3>
+                            <p>A cheque payment may appear in TallyPrime but not in the bank statement because the
+                                recipient has not presented it or the bank has not cleared it.</p>
+                            <p><strong>Solution:</strong> Keep the cheque identifiable as outstanding and reconcile it
+                                when it appears in the bank statement.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>5. Deposits Not Yet Credited</h3>
+                            <p>A cheque or deposit recorded in the books may take time to appear in the bank statement.
+                            </p>
+                            <p><strong>Solution:</strong> Check the deposit details and bank processing status.
+                                Reconcile the entry when the bank credits it.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>6. Incorrect Amounts</h3>
+                            <p>A mismatch may occur because of an incorrect voucher amount or a bank transaction
+                                recorded with the wrong value.</p>
+                            <p><strong>Solution:</strong> Compare the original supporting document and bank statement,
+                                then correct the accounting record where necessary.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <h2>Best Practices for Bank Reconciliation</h2>
+                    <p>Follow these practices to improve accounting accuracy:</p>
+                    <ul class="check-list">
+                        <li>Reconcile bank accounts regularly, preferably every month or more frequently where needed.
+                        </li>
+                        <li>Download or obtain the correct bank statement for the period.</li>
+                        <li>Use transaction references to match receipts and payments.</li>
+                        <li>Record bank charges and interest promptly.</li>
+                        <li>Investigate old outstanding cheques and deposits.</li>
+                        <li>Avoid changing bank dates simply to eliminate a difference.</li>
+                        <li>Maintain supporting documents for adjustments.</li>
+                        <li>Review reconciled and unreconciled transactions before closing the period.</li>
+                        <li>Keep a record of unresolved discrepancies and follow up with the bank where necessary.</li>
+                    </ul>
+                    <p>Regular reconciliation helps businesses maintain reliable financial records and detect problems
+                        early.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What is bank reconciliation in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Bank reconciliation in TallyPrime is the process of comparing transactions recorded
+                                    in a company's bank ledger with the transactions shown in the bank statement and
+                                    identifying the reasons for any differences.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. How do I open Bank Reconciliation in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant company, navigate to the bank ledger or available banking reports,
+                                    and select the Bank Reconciliation option. The exact navigation may vary depending
+                                    on the TallyPrime release.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. What is a bank date in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>A bank date is the date on which a transaction is reflected or cleared by the bank,
+                                    as shown in the bank statement. It may differ from the date on which the transaction
+                                    was recorded in the company's books.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Why does my TallyPrime bank balance differ from my bank statement?</summary>
+                            <div class="faq-answer">
+                                <p>Differences may arise from outstanding cheques, deposits awaiting credit, bank
+                                    charges, interest, missing entries, duplicate transactions, or incorrect amounts and
+                                    dates.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. How do I record bank charges in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Create or select the appropriate bank charges expense ledger and record a payment or
+                                    accounting voucher that debits bank charges and credits the bank account. Then
+                                    reconcile the entry against the bank statement.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Do I need to reconcile my bank account every month?</summary>
+                            <div class="faq-answer">
+                                <p>Monthly reconciliation is a common practice because it helps businesses identify
+                                    discrepancies and prepare accurate financial reports. Businesses with frequent
+                                    transactions may benefit from more frequent reconciliation.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. What is the difference between bank reconciliation and a bank reconciliation
+                                statement?</summary>
+                            <div class="faq-answer">
+                                <p>Bank reconciliation is the process of comparing bank records with accounting records.
+                                    A bank reconciliation statement (BRS) summarises the differences between the two
+                                    balances and explains the adjustments or timing differences that cause them.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Can beginners learn bank reconciliation using TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. Beginners can practise matching bank transactions, entering bank dates,
+                                    recording bank charges, identifying outstanding cheques, and preparing
+                                    reconciliation statements using a sample company.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>Bank reconciliation is an important practical accounting skill that helps businesses verify their
+                        bank balances and maintain accurate financial records.</p>
+                    <p>Using TallyPrime, accountants can compare bank statement transactions with entries in the bank
+                        ledger, enter the correct bank dates, identify unreconciled transactions, and record missing
+                        bank charges or interest.</p>
+                    <p>The practical example in this guide demonstrates how to identify outstanding deposits and missing
+                        bank charges, adjust the book balance, and explain the remaining difference.</p>
+                    <p>For accounting students and aspiring accountants, practising bank reconciliation in TallyPrime is
+                        a valuable step towards developing real-world accounting skills.</p>
+                    <div class="training-cta">
+                        <span class="cta-kicker">RLT EDZARO · TALLY TRAINING</span>
+                        <h3>Want to learn practical accounting and TallyPrime?</h3>
+                        <p>RLT Edzaro offers Tally training for learners who want to strengthen their understanding of
+                            accounting, GST, and business software.</p>
+                        <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                            target="_blank" rel="noopener">Explore Tally Training <span aria-hidden="true">→</span></a>
+                        <p class="cta-website">Build your accounting confidence with practical exercises and structured
+                            TallyPrime training.</p>
+                    </div>
+                </section>
+
+                <section class="related-articles-section" aria-labelledby="related-articles-title">
+                    <div class="related-heading">
+                        <span class="section-kicker">KEEP LEARNING</span>
+                        <h2 id="related-articles-title">Related Articles</h2>
+                        <p>Explore these TallyPrime tutorials to strengthen your understanding of banking, vouchers, and
+                            financial reports.</p>
+                    </div>
+                    <div class="related-articles-grid">
+                        <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime"
+                            class="related-article-card"><span class="related-number">01 · BANKING</span>
+                            <h3>How to Perform Bank Reconciliation in TallyPrime</h3><span class="related-read">Read
+                                article <span aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/match-bank-transactions-with-tallyprime-entries"
+                            class="related-article-card"><span class="related-number">02 · TRANSACTION MATCHING</span>
+                            <h3>How to Match Bank Transactions With TallyPrime Entries</h3><span
+                                class="related-read">Read article <span aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/how-to-check-bank-book-in-tallyprime" class="related-article-card"><span
+                                class="related-number">03 · BANK BOOK</span>
+                            <h3>How to Check Bank Book in TallyPrime</h3><span class="related-read">Read article <span
+                                    aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/how-to-record-bank-transactions-in-tallyprime"
+                            class="related-article-card"><span class="related-number">04 · BANK ENTRIES</span>
+                            <h3>How to Record Bank Transactions in TallyPrime</h3><span class="related-read">Read
+                                article <span aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/how-connected-banking-works-in-tallyprime" class="related-article-card"><span
+                                class="related-number">05 · CONNECTED BANKING</span>
+                            <h3>How Connected Banking Works in TallyPrime</h3><span class="related-read">Read article
+                                <span aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"
+                            class="related-article-card"><span class="related-number">06 · ACCOUNTING</span>
+                            <h3>TallyPrime Voucher Types Explained</h3><span class="related-read">Read article <span
+                                    aria-hidden="true">→</span></span>
+                        </a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime" class="related-article-card"><span
+                                class="related-number">07 · FINANCIAL REPORTS</span>
+                            <h3>How to Generate a Trial Balance in TallyPrime</h3><span class="related-read">Read
+                                article <span aria-hidden="true">→</span></span>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="article-footer-actions">
+                    <a routerLink="/blogs" class="all-blogs-button"><span aria-hidden="true">←</span> All Articles</a>
+                    <button type="button" class="back-to-top" (click)="scrollToTop($event)">Back to Top <span
+                            aria-hidden="true">↑</span></button>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

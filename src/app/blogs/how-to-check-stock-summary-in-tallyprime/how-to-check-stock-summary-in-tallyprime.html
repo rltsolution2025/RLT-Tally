@@ -1,0 +1,715 @@
+<div class="entries-blog">
+    <!-- HERO -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                TallyPrime Inventory Guide
+            </div>
+
+            <h1>How to Check Stock Summary in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to open Stock Summary, review stock quantities and values, understand inventory columns,
+                check individual items, and troubleshoot common stock report issues in TallyPrime.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-book-open" aria-hidden="true"></i> Practical TallyPrime Tutorial</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Stock Summary</span>
+                <span>Inventory Reports</span>
+                <span>Stock Valuation</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <main class="entries-page">
+        <div class="entries-container article-layout">
+            <!-- SIDEBAR / TOC -->
+            <aside class="article-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <span class="toc-label">IN THIS ARTICLE</span>
+                    <h2>Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-stock-summary" (click)="scrollToSection($event, 'what-is-stock-summary')">What
+                            Is Stock Summary?</a>
+                        <a href="#why-stock-summary-matters"
+                            (click)="scrollToSection($event, 'why-stock-summary-matters')">Why It Is Important</a>
+                        <a href="#how-to-check-stock-summary"
+                            (click)="scrollToSection($event, 'how-to-check-stock-summary')">How to Check Stock
+                            Summary</a>
+                        <a href="#understanding-columns"
+                            (click)="scrollToSection($event, 'understanding-columns')">Understanding the Columns</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#check-stock-value" (click)="scrollToSection($event, 'check-stock-value')">Check Stock
+                            Value</a>
+                        <a href="#stock-item-details" (click)="scrollToSection($event, 'stock-item-details')">Stock Item
+                            Details</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents links to jump directly to the section you need.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build practical knowledge of accounting, GST, inventory and business reports with RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE -->
+            <article class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">01 · INTRODUCTION</div>
+                    <h2>How to Check Stock Summary in TallyPrime</h2>
+                    <p>Managing inventory is an important part of running a business. Companies need to know how much
+                        stock is available, which products are selling, and how much money is invested in inventory.
+                        Without accurate stock records, businesses may face stock shortages, excess inventory, and
+                        accounting discrepancies.</p>
+                    <p>TallyPrime makes inventory management easier by providing a <strong>Stock Summary report</strong>
+                        that displays stock quantities and values based on the inventory transactions recorded in the
+                        company.</p>
+                    <p>Whether you are an accounting student, business owner, inventory executive, or aspiring
+                        accountant, learning how to check Stock Summary in TallyPrime is a useful practical skill.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Quick answer</h3>
+                            <p>Open your company in TallyPrime, locate <strong>Stock Summary</strong> from the Gateway
+                                of Tally or the Go To search, and review the stock groups, item quantities and values
+                                for the selected period.</p>
+                        </div>
+                    </div>
+                    <p>In this guide, you will learn how to open the Stock Summary report, understand its columns, view
+                        stock details, change the reporting period, troubleshoot common errors, and use inventory
+                        reports more effectively.</p>
+                </section>
+
+                <section class="article-section" id="what-is-stock-summary">
+                    <div class="section-eyebrow">02 · REPORT BASICS</div>
+                    <h2>What Is Stock Summary in TallyPrime?</h2>
+                    <p>Stock Summary in TallyPrime is an inventory report that helps users understand the quantity and
+                        value of stock available in their business.</p>
+                    <p>The report is calculated from the inventory records and transactions entered in TallyPrime,
+                        including purchases, sales, stock transfers, and other relevant inventory movements.</p>
+                    <p>Depending on the company's configuration and the report view, the Stock Summary can display:</p>
+                    <div class="report-grid">
+                        <div class="report-item"><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>Opening
+                                stock quantity and value</span></div>
+                        <div class="report-item"><i class="fa-solid fa-arrow-down-wide-short"
+                                aria-hidden="true"></i><span>Stock received during the period</span></div>
+                        <div class="report-item"><i class="fa-solid fa-arrow-up-wide-short"
+                                aria-hidden="true"></i><span>Stock issued or sold</span></div>
+                        <div class="report-item"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i><span>Closing stock quantity and value</span></div>
+                        <div class="report-item"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Stock
+                                groups and individual items</span></div>
+                        <div class="report-item"><i class="fa-solid fa-calculator" aria-hidden="true"></i><span>Values
+                                based on the configured valuation method</span></div>
+                    </div>
+                    <p>The Stock Summary helps businesses monitor inventory levels and review the value of goods held in
+                        stock.</p>
+                </section>
+
+                <section class="article-section" id="why-stock-summary-matters">
+                    <div class="section-eyebrow">03 · BUSINESS BENEFITS</div>
+                    <h2>Why Is Stock Summary Important in TallyPrime?</h2>
+                    <p>Stock Summary is useful for businesses that maintain inventory, including retail stores,
+                        wholesalers, distributors, manufacturers, and trading companies.</p>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i><span><strong>Check available stock:</strong> Review the recorded
+                                quantity of goods without manually calculating every purchase and sale.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-indian-rupee-sign"
+                                aria-hidden="true"></i><span><strong>Monitor inventory value:</strong> Understand the
+                                recorded value based on the configured stock valuation method.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-triangle-exclamation"
+                                aria-hidden="true"></i><span><strong>Identify low or excess stock:</strong> Find items
+                                that may need replenishment or are accumulating in excess.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-cart-shopping"
+                                aria-hidden="true"></i><span><strong>Support purchase planning:</strong> Decide which
+                                products to reorder and which purchases can be postponed.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-clipboard-check"
+                                aria-hidden="true"></i><span><strong>Improve accounting accuracy:</strong> Compare
+                                inventory reports with purchase, sales and physical stock records.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-chart-line"
+                                aria-hidden="true"></i><span><strong>Support business decisions:</strong> Plan
+                                purchases, manage working capital and improve stock control.</span></div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="how-to-check-stock-summary">
+                    <div class="section-eyebrow">04 · STEP-BY-STEP GUIDE</div>
+                    <h2>How to Check Stock Summary in TallyPrime</h2>
+                    <p>Follow these steps to view the Stock Summary report in TallyPrime.</p>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 1</span>
+                                <h3>Open TallyPrime</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Launch TallyPrime on your computer.</li>
+                                <li>Select the company whose inventory information you want to review.</li>
+                                <li>Make sure the correct company is open before proceeding.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">02</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 2</span>
+                                <h3>Open the Stock Summary Report</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>From the Gateway of Tally, navigate to <strong>Stock Summary</strong>.</p>
+                            <div class="transaction-box">
+                                <h4>Where to find the report</h4>
+                                <p><strong>Gateway of Tally → Stock Summary</strong></p>
+                                <p>In many TallyPrime releases, Stock Summary is available as an option on the Gateway
+                                    of Tally. You can also use the built-in search or Go To feature to locate it.</p>
+                            </div>
+                            <p>Select Stock Summary to open the inventory report.</p>
+                            <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                <p>Menu labels and navigation can vary by TallyPrime version and screen configuration.
+                                    Use the built-in search if the report is not shown in the same place.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">03</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 3</span>
+                                <h3>Review the Stock Summary</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Once the report opens, review the available stock groups, stock items, quantities, and
+                                values.</p>
+                            <p>Depending on your configuration and report view, you may see columns for opening balance,
+                                inward movement, outward movement, and closing balance.</p>
+                            <p>Use the report to understand how much stock has been recorded and what its current value
+                                is.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">04</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 4</span>
+                                <h3>View Individual Stock Items</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>If the report displays stock groups, select a group to drill down into its items.</p>
+                            <p>For example, a business might maintain the following stock groups:</p>
+                            <ul class="ledger-list">
+                                <li><i class="fa-solid fa-laptop" aria-hidden="true"></i>Electronics</li>
+                                <li><i class="fa-solid fa-file-lines" aria-hidden="true"></i>Office Supplies</li>
+                                <li><i class="fa-solid fa-keyboard" aria-hidden="true"></i>Accessories</li>
+                            </ul>
+                            <p>Select the relevant group to view the stock items recorded under it. You can then select
+                                an individual item to access more detailed inventory information, where supported.</p>
+                            <p>Learn more: <a routerLink="/create-stock-items-in-tallyprime">how to create stock items
+                                    in TallyPrime</a> and <a
+                                    routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime">organise stock
+                                    groups and categories</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">05</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 5</span>
+                                <h3>Change the Reporting Period</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>To review inventory movements for a particular period, change the report dates using the
+                                period settings available in TallyPrime.</p>
+                            <div class="practice-roadmap">
+                                <div class="practice-step"><span class="practice-step-number">1</span>
+                                    <div class="step-content">
+                                        <h3>Open period settings</h3>
+                                        <p>Use the date or period option available on the Stock Summary screen.</p>
+                                    </div>
+                                </div>
+                                <div class="practice-step"><span class="practice-step-number">2</span>
+                                    <div class="step-content">
+                                        <h3>Enter the required dates</h3>
+                                        <p>For example, select 1 October 2026 to 14 October 2026.</p>
+                                    </div>
+                                </div>
+                                <div class="practice-step"><span class="practice-step-number">3</span>
+                                    <div class="step-content">
+                                        <h3>Confirm the period</h3>
+                                        <p>Review the report for the selected date range.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gst-warning"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                                <p><strong>Important:</strong> The closing stock quantity is a balance as of the
+                                    report's ending date, while inward and outward movements relate to the selected
+                                    reporting period.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">06</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 6</span>
+                                <h3>Review Stock Quantity and Value</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Check the quantity and value columns to understand your inventory position. Pay attention
+                                to:</p>
+                            <ul>
+                                <li>Items with unexpectedly low quantities.</li>
+                                <li>Products showing negative stock.</li>
+                                <li>Items with unusually high stock values.</li>
+                                <li>Differences between expected and recorded inventory.</li>
+                                <li>Items that may require physical stock verification.</li>
+                            </ul>
+                            <p>Investigate discrepancies before making purchase or accounting decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">07</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 7</span>
+                                <h3>Export or Print the Report</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>If you need to share the information with your team, use the available export or printing
+                                options in TallyPrime.</p>
+                            <p>Depending on your version and configuration, you may be able to export the report to
+                                formats such as Excel or PDF.</p>
+                            <p>Before sharing the report, confirm that the company, reporting period, and inventory
+                                values are correct.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="understanding-columns">
+                    <div class="section-eyebrow">05 · REPORT INTERPRETATION</div>
+                    <h2>Understanding the Columns in Stock Summary</h2>
+                    <p>Understanding the report columns helps you interpret inventory information correctly.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Opening Stock</strong></td>
+                                    <td>Quantity or value available at the beginning of the selected period.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inward</strong></td>
+                                    <td>Stock received during the selected period.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Outward</strong></td>
+                                    <td>Stock issued, sold, or otherwise moved out during the selected period.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Closing Stock</strong></td>
+                                    <td>Quantity or value remaining at the end of the selected period.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The exact column labels and layout can vary depending on the report configuration and TallyPrime
+                        version.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading">
+                            <h4>Basic stock calculation</h4><span>INVENTORY FORMULA</span>
+                        </div>
+                        <div class="journal-lines">
+                            <div class="journal-line"><code>Opening stock</code><span class="journal-amount">+</span>
+                            </div>
+                            <div class="journal-line"><code>Inward stock</code><span class="journal-amount">−</span>
+                            </div>
+                            <div class="journal-line"><code>Outward stock</code><span class="journal-amount">=</span>
+                            </div>
+                        </div>
+                        <div class="journal-total"><span>Closing Stock</span><span>Opening + Inward − Outward</span>
+                        </div>
+                    </div>
+                    <p>This formula illustrates basic stock movement. Actual inventory reports may also reflect stock
+                        transfers, adjustments, manufacturing entries, units of measurement, and other inventory
+                        transactions.</p>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <div class="section-eyebrow">06 · PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Checking Stock Summary in TallyPrime</h2>
+                    <p>Let us understand Stock Summary with a simple example. Suppose ABC Traders maintains a stock item
+                        called <strong>Office Chairs</strong>.</p>
+                    <p>During the selected reporting period, the business records the following transactions:</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Opening stock</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Purchased during the period</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Sold during the period</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Closing stock</strong></td>
+                                    <td><strong>60</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Closing stock calculation</h3>
+                            <p><strong>50 + 30 − 20 = 60 chairs.</strong></p>
+                            <p>When the purchase and sales transactions are correctly recorded in TallyPrime, the Stock
+                                Summary should reflect the corresponding stock movement.</p>
+                        </div>
+                    </div>
+                    <h3 class="subsection-heading">How to Interpret the Result</h3>
+                    <p>The report indicates that 60 chairs remain in the recorded inventory at the end of the period.
+                        The business can use this information to:</p>
+                    <ul>
+                        <li>Check whether additional stock is required.</li>
+                        <li>Compare recorded stock with a physical stock count.</li>
+                        <li>Review sales and purchase activity.</li>
+                        <li>Estimate the value of remaining inventory.</li>
+                    </ul>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>This is a simplified example. Actual stock values depend on purchase costs, stock valuation
+                            settings, and the inventory transactions entered in TallyPrime.</p>
+                    </div>
+                    <p>For more detail on recording inventory movements, read <a
+                            routerLink="/how-to-track-stock-movement-in-tallyprime">how to track stock movement in
+                            TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="check-stock-value">
+                    <div class="section-eyebrow">07 · INVENTORY VALUATION</div>
+                    <h2>How to Check Stock Value in TallyPrime</h2>
+                    <p>Stock quantity tells you how many units are available, while stock value helps you understand the
+                        inventory's recorded monetary value.</p>
+                    <p>To review stock value:</p>
+                    <ol>
+                        <li>Open the relevant company.</li>
+                        <li>Navigate to Stock Summary.</li>
+                        <li>Select the required reporting period.</li>
+                        <li>Review the available closing stock value columns.</li>
+                        <li>Drill down into the relevant stock group or item if more detail is needed.</li>
+                        <li>Verify the stock valuation method and underlying transactions if the value appears
+                            incorrect.</li>
+                    </ol>
+                    <p>TallyPrime can calculate inventory values using supported valuation methods configured for the
+                        relevant stock items. For example, a business may use an applicable method such as
+                        <strong>FIFO</strong> or <strong>Average Cost</strong>, depending on its accounting and
+                        inventory requirements.</p>
+                    <p>The value displayed can differ depending on the valuation method, purchase costs, and transaction
+                        history.</p>
+                </section>
+
+                <section class="article-section" id="stock-item-details">
+                    <div class="section-eyebrow">08 · ITEM-LEVEL DETAILS</div>
+                    <h2>How to Check Stock Item Details in TallyPrime</h2>
+                    <p>If you need information about a specific product, drill down from Stock Summary into the relevant
+                        stock group or stock item.</p>
+                    <p>Depending on the available reports and configuration, you may be able to examine:</p>
+                    <ul class="ledger-list">
+                        <li><i class="fa-solid fa-cubes" aria-hidden="true"></i>Stock quantities</li>
+                        <li><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i>Purchase and sales
+                            movements</li>
+                        <li><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>Opening and closing balances
+                        </li>
+                        <li><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i>Inventory valuation details
+                        </li>
+                        <li><i class="fa-solid fa-file-invoice" aria-hidden="true"></i>Relevant transaction information
+                        </li>
+                    </ul>
+                    <p>You can also use other inventory reports available in TallyPrime to investigate individual stock
+                        movements. This is useful when a product's closing quantity or value does not match your
+                        expectations.</p>
+                    <p>Related guides: <a routerLink="/create-stock-items-in-tallyprime">create stock items</a> and <a
+                            routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime">create stock groups
+                            and categories</a> in TallyPrime.</p>
+                </section>
+
+                <section class="article-section" id="common-problems">
+                    <div class="section-eyebrow">09 · TROUBLESHOOTING</div>
+                    <h2>Common Problems When Checking Stock Summary in TallyPrime</h2>
+                    <p>Sometimes the Stock Summary report may display unexpected values or quantities. The following are
+                        common causes and troubleshooting steps.</p>
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>1. Stock Summary Shows Zero Quantity</h3>
+                                <p><strong>Possible reasons:</strong> No opening stock has been entered; purchase
+                                    transactions have not been recorded correctly; sales or other inventory movements
+                                    offset the available stock; or the wrong company or reporting period is selected.
+                                </p>
+                                <p><strong>Solution:</strong> Verify the stock item's opening balance, purchase
+                                    vouchers, sales vouchers, and report dates.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-triangle-exclamation"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h3>2. Stock Quantity Is Incorrect</h3>
+                                <p><strong>Possible reasons:</strong> Incorrect quantities were entered in vouchers;
+                                    inventory movements are missing; stock transfers or adjustments were recorded
+                                    incorrectly; or the wrong unit of measurement was selected.</p>
+                                <p><strong>Solution:</strong> Review the relevant stock item and inventory transactions.
+                                    Compare the recorded quantity with supporting purchase, sales, and physical stock
+                                    records.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>3. Stock Value Is Different from Expectations</h3>
+                                <p><strong>Possible reasons:</strong> The stock valuation method differs from your
+                                    expectations; purchase costs or additional costs were entered incorrectly; inventory
+                                    transactions are incomplete; or the reporting period is incorrect.</p>
+                                <p><strong>Solution:</strong> Review the item's valuation settings, purchase values,
+                                    inventory transactions, and selected reporting period.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-arrow-trend-down" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>4. Negative Stock Appears in the Report</h3>
+                                <p>Negative stock may occur when recorded sales or stock issues exceed the available
+                                    recorded quantity.</p>
+                                <p><strong>Solution:</strong> Check whether purchases were entered after sales, whether
+                                    opening stock is missing, and whether inventory vouchers contain errors. Correct the
+                                    underlying records rather than adjusting quantities without verification.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>5. Stock Summary Does Not Match Physical Stock</h3>
+                                <p>Physical stock may differ from recorded stock because of unrecorded sales, damaged
+                                    goods, missing purchase entries, stock transfers, or data-entry errors.</p>
+                                <p><strong>Solution:</strong> Conduct a physical stock count, identify the discrepancy,
+                                    and record the appropriate adjustment using the correct inventory process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">10 · GOOD ACCOUNTING PRACTICE</div>
+                    <h2>Best Practices for Managing Stock in TallyPrime</h2>
+                    <p>Follow these practices to maintain accurate inventory records:</p>
+                    <ul>
+                        <li>Enter purchase and sales transactions promptly.</li>
+                        <li>Maintain correct stock item names, groups, and units of measurement.</li>
+                        <li>Record opening stock accurately.</li>
+                        <li>Review Stock Summary regularly.</li>
+                        <li>Check negative stock and unusual inventory values.</li>
+                        <li>Reconcile recorded inventory with physical stock.</li>
+                        <li>Use a consistent and appropriate stock valuation method.</li>
+                        <li>Maintain supporting documents for inventory adjustments.</li>
+                        <li>Review inventory reports before making purchase decisions.</li>
+                    </ul>
+                    <p>Regular stock monitoring helps businesses reduce errors, improve inventory control, and maintain
+                        reliable accounting records.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">11 · FAQs</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I open Stock Summary in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open your company in TallyPrime and select Stock Summary from the Gateway of Tally.
+                                    You can also use the Go To or search feature to locate the report, depending on your
+                                    version.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. What is the shortcut to view Stock Summary in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>The exact navigation depends on your TallyPrime release and screen configuration. You
+                                    can use the built-in Go To or search feature to find Stock Summary instead of
+                                    relying on a fixed shortcut.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can I check the closing stock in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Open Stock Summary and select the relevant reporting period. Review the closing
+                                    balance columns to see the recorded stock quantity and value at the end of the
+                                    period.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. How do I check stock value in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open Stock Summary, review the closing stock value, and drill down into the relevant
+                                    stock group or item if you need more detail. The displayed value depends on the
+                                    stock valuation method and recorded transactions.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Why is Stock Summary important for accountants?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Stock Summary helps accountants review inventory quantities and values, verify stock
+                                    movements, investigate discrepancies, and support accurate accounting records.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Can I export Stock Summary from TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>TallyPrime provides report export and printing options. The available formats depend
+                                    on the software version and configuration.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Does Stock Summary update automatically in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Stock Summary reflects the inventory transactions recorded in the company. When
+                                    relevant transactions are entered or corrected, the report generally reflects the
+                                    updated inventory balances.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. What is the difference between Stock Summary and Stock Item reports?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Stock Summary provides an overall view of inventory groups, quantities, and values.
+                                    Stock item and related inventory reports help users examine individual products and
+                                    their recorded movements in greater detail.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">12 · CONCLUSION</div>
+                    <h2>Conclusion</h2>
+                    <p>Stock Summary in TallyPrime is an important inventory report for checking available stock,
+                        reviewing inventory values, and monitoring stock movements.</p>
+                    <p>By learning how to open Stock Summary, select a reporting period, review individual stock items,
+                        and investigate discrepancies, you can improve your understanding of practical inventory
+                        management.</p>
+                    <p>For accounting students and aspiring accountants, practising inventory reports in TallyPrime is a
+                        useful way to develop real-world accounting skills.</p>
+
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO · TALLY TRAINING</span>
+                            <h3>Want to learn TallyPrime and practical accounting?</h3>
+                            <p>RLT Edzaro offers Tally training designed to help learners develop their understanding of
+                                accounting, GST, inventory management, and practical software workflows.</p>
+                            <div class="branch-pills"><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Chennai</span><span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical
+                                    Learning</span></div>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                    target="_blank" rel="noopener">Explore Tally Training <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener">Visit RLT Edzaro</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-articles" id="related-articles">
+                    <div class="section-eyebrow">KEEP LEARNING</div>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime tutorials to learn more about inventory management and accounting
+                        workflows.</p>
+                    <div class="related-links">
+                        <a routerLink="/create-stock-items-in-tallyprime"><span>How to Create Stock Items in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime"><span>How to Create
+                                Stock Groups and Categories in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span>How to Track Stock Movement in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-manage-multiple-godowns-in-tallyprime"><span>How to Manage Multiple
+                                Godowns in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span>TallyPrime Voucher Types
+                                Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-check-day-book-in-tallyprime"><span>How to Check Day Book in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">Explore All Blogs <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </section>
+
+                <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fa-solid fa-arrow-up"
+                        aria-hidden="true"></i> Back to top</a>
+            </article>
+        </div>
+    </main>
+</div>

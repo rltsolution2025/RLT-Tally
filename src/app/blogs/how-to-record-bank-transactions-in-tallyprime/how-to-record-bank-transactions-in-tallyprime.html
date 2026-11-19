@@ -1,0 +1,1140 @@
+<article class="entries-blog" id="top">
+    <!-- HERO SECTION -->
+    <header class="entries-hero">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Bank Transactions in TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                <span>TallyPrime Accounting Guide</span>
+            </div>
+
+            <h1>How to Record Bank Transactions in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to record bank receipts, payments, cash and bank transfers, cheque transactions, bank charges,
+                interest, and bank reconciliation in TallyPrime with practical examples.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Accounting &amp; Banking</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical TallyPrime Guide</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Bank Transactions</span>
+                <span>TallyPrime</span>
+                <span>Receipt &amp; Payment</span>
+                <span>Bank Reconciliation</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="entries-page">
+        <div class="entries-container article-layout">
+            <!-- STICKY SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <span class="toc-label">ON THIS PAGE</span>
+                    <h2>Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-are-bank-transactions"
+                            (click)="scrollToSection($event, 'what-are-bank-transactions')">What Are Bank
+                            Transactions?</a>
+                        <a href="#transaction-types" (click)="scrollToSection($event, 'transaction-types')">Types of
+                            Bank Transactions</a>
+                        <a href="#create-bank-ledger" (click)="scrollToSection($event, 'create-bank-ledger')">Create a
+                            Bank Ledger</a>
+                        <a href="#record-receipts" (click)="scrollToSection($event, 'record-receipts')">Record Bank
+                            Receipts</a>
+                        <a href="#record-payments" (click)="scrollToSection($event, 'record-payments')">Record Bank
+                            Payments</a>
+                        <a href="#cash-bank-transfer" (click)="scrollToSection($event, 'cash-bank-transfer')">Cash and
+                            Bank Transfers</a>
+                        <a href="#bank-to-bank-transfer"
+                            (click)="scrollToSection($event, 'bank-to-bank-transfer')">Bank-to-Bank Transfers</a>
+                        <a href="#charges-interest" (click)="scrollToSection($event, 'charges-interest')">Charges and
+                            Interest</a>
+                        <a href="#cheque-transactions" (click)="scrollToSection($event, 'cheque-transactions')">Cheque
+                            Transactions</a>
+                        <a href="#bank-reconciliation" (click)="scrollToSection($event, 'bank-reconciliation')">Bank
+                            Reconciliation</a>
+                        <a href="#verify-reports" (click)="scrollToSection($event, 'verify-reports')">Verify
+                            Transactions</a>
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                            Mistakes</a>
+                        <a href="#practice-exercise" (click)="scrollToSection($event, 'practice-exercise')">Practical
+                            Exercise</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents menu to move directly to any bank accounting topic.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-laptop-file" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build practical accounting skills with guided TallyPrime training at RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer">Explore Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE -->
+            <main class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">01 / INTRODUCTION</div>
+                    <h2>Introduction</h2>
+                    <p>Recording bank transactions accurately is an essential part of accounting for every business.
+                        Companies receive customer payments, pay suppliers, transfer funds between accounts, and manage
+                        various banking activities daily. Maintaining accurate records helps businesses track their cash
+                        flow, monitor bank balances, and identify differences between accounting records and bank
+                        statements.</p>
+                    <p>TallyPrime makes it easier to record banking transactions using accounting vouchers such as
+                        Receipt, Payment, Contra, and Journal. It also provides banking features that help users manage
+                        cheque details, review bank balances, and perform bank reconciliation.</p>
+                    <p>Whether you are an accounting student, a business owner, or an aspiring accountant, learning how
+                        to record bank transactions in TallyPrime will help you develop practical accounting skills.</p>
+                    <p>In this guide, you will learn how to create a bank ledger, record receipts and payments, transfer
+                        funds, enter cheque transactions, and reconcile bank statements in TallyPrime.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What you will learn</h3>
+                            <p>How to choose the appropriate voucher, record common bank transactions, understand the
+                                related debit and credit entries, and verify the records through TallyPrime reports.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-are-bank-transactions">
+                    <div class="section-eyebrow">02 / BASICS</div>
+                    <h2>What Are Bank Transactions in TallyPrime?</h2>
+                    <p>Bank transactions are financial activities that involve money entering or leaving a business's
+                        bank account.</p>
+                    <p>Examples include:</p>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-solid fa-arrow-down-to-line" aria-hidden="true"></i>
+                            <h3>Customer Receipts</h3>
+                            <p>Receiving payments from customers.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                            <h3>Supplier Payments</h3>
+                            <p>Paying suppliers and vendors.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
+                            <h3>Cash Deposits</h3>
+                            <p>Depositing cash into a bank account.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                            <h3>Cash Withdrawals</h3>
+                            <p>Withdrawing cash from a bank.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                            <h3>Bank Transfers</h3>
+                            <p>Transferring money between bank accounts.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-receipt" aria-hidden="true"></i>
+                            <h3>Bank Adjustments</h3>
+                            <p>Recording bank charges and interest.</p>
+                        </div>
+                    </div>
+                    <p>Businesses may also make payments through cheques, NEFT, RTGS, or IMPS. In TallyPrime, these
+                        transactions are recorded using the appropriate accounting vouchers. Selecting the correct
+                        voucher helps maintain accurate ledgers and financial reports.</p>
+                </section>
+
+                <section class="article-section" id="transaction-types">
+                    <div class="section-eyebrow">03 / VOUCHER TYPES</div>
+                    <h2>Types of Bank Transactions in TallyPrime</h2>
+                    <p>Understanding the different voucher types is the first step towards recording bank transactions
+                        correctly. The following table explains the common vouchers and their uses.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Voucher Type</th>
+                                    <th>Purpose</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Receipt</strong></td>
+                                    <td>Records money received</td>
+                                    <td>Customer pays ₹10,000 into the bank</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Payment</strong></td>
+                                    <td>Records money paid</td>
+                                    <td>Business pays a supplier ₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contra</strong></td>
+                                    <td>Records cash and bank transfers</td>
+                                    <td>Cash deposited into a bank account</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Journal</strong></td>
+                                    <td>Records eligible accounting adjustments</td>
+                                    <td>Bank interest accrued but not yet received</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Purchase</strong></td>
+                                    <td>Records purchases that may be settled through a bank payment</td>
+                                    <td>Purchase of office equipment</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sales</strong></td>
+                                    <td>Records sales that may be settled through a bank receipt</td>
+                                    <td>Sale of goods to a customer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="learning-note">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p><strong>Important:</strong> The purchase and sales vouchers record the underlying
+                            transaction. The bank receipt or payment records the settlement when it occurs. Avoid
+                            recording the same income, expense, or liability twice. For a broader overview, read <a
+                                routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                                Explained with Examples</a>.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="create-bank-ledger">
+                    <div class="section-eyebrow">04 / BANK LEDGER</div>
+                    <h2>Step 1: Create a Bank Ledger in TallyPrime</h2>
+                    <p>Before recording bank transactions, ensure that the relevant bank ledger exists.</p>
+                    <p>Follow these steps:</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the Company</h3>
+                                <p>Open TallyPrime and select your company.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Open Ledger Creation</h3>
+                                <p>Navigate to the ledger creation screen.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Enter the Bank Ledger Name</h3>
+                                <p>Enter the bank account name, such as <strong>HDFC Bank Account</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Select the Group</h3>
+                                <p>Select <strong>Bank Accounts</strong> as the group.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Enter Bank Details</h3>
+                                <p>Enter the required bank details if prompted.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Save the Ledger</h3>
+                                <p>Save the ledger. Repeat this process for any additional bank accounts used by the
+                                    business.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Example: Common Ledgers</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Ledger Name</th>
+                                    <th>Under Group</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HDFC Bank Account</td>
+                                    <td>Bank Accounts</td>
+                                </tr>
+                                <tr>
+                                    <td>Cash</td>
+                                    <td>Cash-in-Hand</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer A</td>
+                                    <td>Sundry Debtors</td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier B</td>
+                                    <td>Sundry Creditors</td>
+                                </tr>
+                                <tr>
+                                    <td>Office Rent</td>
+                                    <td>Indirect Expenses</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank Charges</td>
+                                    <td>Indirect Expenses</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>The ledger names are illustrative. Use the actual account names and appropriate groups for
+                            your business.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="record-receipts">
+                    <div class="section-eyebrow">05 / RECEIPT VOUCHER</div>
+                    <h2>Step 2: Record Money Received into the Bank</h2>
+                    <p>When a business receives money from a customer directly into its bank account, a Receipt voucher
+                        is commonly used to record the settlement.</p>
+                    <h3>Practical Example</h3>
+                    <p>ABC Enterprises receives ₹15,000 from Customer A through a bank transfer.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Receipt Voucher</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>₹15,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customer A</td>
+                                        <td>—</td>
+                                        <td>₹15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹15,000</strong></td>
+                                        <td><strong>₹15,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The bank account is debited because the business's bank balance increases. Customer A is credited
+                        because the outstanding amount owed by the customer decreases.</p>
+                    <h3>Steps to Record the Receipt</h3>
+                    <ol>
+                        <li>Open <strong>Vouchers</strong> in TallyPrime.</li>
+                        <li>Select the <strong>Receipt</strong> voucher.</li>
+                        <li>Choose the appropriate bank account.</li>
+                        <li>Select Customer A as the account from which the money is received.</li>
+                        <li>Enter the amount of ₹15,000.</li>
+                        <li>Add the bank reference, transaction date, or other relevant details where supported.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <div class="learning-note"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>The exact screen layout depends on your voucher mode and TallyPrime configuration.</p>
+                    </div>
+                    <p><strong>When to use this entry:</strong> Use it when the customer payment is received and needs
+                        to be recorded in the bank ledger. If the sale was already recorded as a credit sale, the
+                        receipt settles the customer's outstanding balance instead of recording the sales income again.
+                        You can also read about <a routerLink="/track-receivables-and-payables-in-tallyprime">tracking
+                            receivables and payables in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="record-payments">
+                    <div class="section-eyebrow">06 / PAYMENT VOUCHER</div>
+                    <h2>Step 3: Record Money Paid from the Bank</h2>
+                    <p>A Payment voucher is commonly used when the business makes a payment from its bank account.</p>
+                    <h3>Practical Example</h3>
+                    <p>ABC Enterprises pays ₹8,000 for office rent through its bank account.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Payment Voucher</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Office Rent</td>
+                                        <td>₹8,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>—</td>
+                                        <td>₹8,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹8,000</strong></td>
+                                        <td><strong>₹8,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The rent expense is debited because the expense increases. The bank account is credited because
+                        the bank balance decreases.</p>
+                    <h3>Steps to Record the Payment</h3>
+                    <ol>
+                        <li>Open the <strong>Payment</strong> voucher.</li>
+                        <li>Select HDFC Bank Account.</li>
+                        <li>Choose the Office Rent ledger.</li>
+                        <li>Enter ₹8,000.</li>
+                        <li>Enter the payment method or bank reference details where applicable.</li>
+                        <li>Add a narration describing the transaction.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Example narration</h3>
+                            <p>Office rent paid through HDFC Bank for the month.</p>
+                        </div>
+                    </div>
+                    <p>If the rent was already recorded as an outstanding liability, select the relevant liability
+                        ledger instead of debiting the rent expense again.</p>
+                </section>
+
+                <section class="article-section" id="cash-bank-transfer">
+                    <div class="section-eyebrow">07 / CONTRA VOUCHER</div>
+                    <h2>Step 4: Transfer Money Between Cash and Bank</h2>
+                    <p>Businesses frequently deposit cash into bank accounts or withdraw cash for office expenses. The
+                        Contra voucher is commonly used for transfers between cash and bank accounts or between eligible
+                        bank accounts.</p>
+                    <h3>Example 1: Deposit Cash into the Bank</h3>
+                    <p>ABC Enterprises deposits ₹20,000 in cash into its bank account.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Cash Deposit</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>₹20,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cash</td>
+                                        <td>—</td>
+                                        <td>₹20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹20,000</strong></td>
+                                        <td><strong>₹20,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The bank balance increases, while the cash balance decreases.</p>
+                    <h3>Example 2: Withdraw Cash from the Bank</h3>
+                    <p>The business withdraws ₹5,000 from its bank account for office use.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Cash Withdrawal</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cash</td>
+                                        <td>₹5,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>—</td>
+                                        <td>₹5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹5,000</strong></td>
+                                        <td><strong>₹5,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h3>Steps to Record a Contra Entry</h3>
+                    <ol>
+                        <li>Open the Contra voucher in TallyPrime.</li>
+                        <li>Select the relevant cash and bank ledgers.</li>
+                        <li>Enter the amount transferred.</li>
+                        <li>Verify the debit and credit accounts.</li>
+                        <li>Add a narration if required.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>A transfer between the company's own accounts is not income or an expense. It simply changes
+                            where the business's funds are held.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="bank-to-bank-transfer">
+                    <div class="section-eyebrow">08 / BANK TRANSFER</div>
+                    <h2>Step 5: Record Bank-to-Bank Transfers</h2>
+                    <p>If a business transfers money from one bank account to another, a Contra voucher is generally
+                        used.</p>
+                    <h3>Practical Example</h3>
+                    <p>ABC Enterprises transfers ₹25,000 from HDFC Bank to ICICI Bank.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Bank-to-Bank Contra</span>
+                        </div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ICICI Bank Account</td>
+                                        <td>₹25,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>—</td>
+                                        <td>₹25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹25,000</strong></td>
+                                        <td><strong>₹25,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h3>Steps</h3>
+                    <ol>
+                        <li>Open the Contra voucher.</li>
+                        <li>Select ICICI Bank as the receiving account.</li>
+                        <li>Select HDFC Bank as the sending account.</li>
+                        <li>Enter ₹25,000.</li>
+                        <li>Include the transaction reference if required.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <p>Verify both bank statements to confirm that the transfer was completed and recorded correctly.
+                    </p>
+                </section>
+
+                <section class="article-section" id="charges-interest">
+                    <div class="section-eyebrow">09 / BANK CHARGES AND INTEREST</div>
+                    <h2>Steps 6 and 7: Record Bank Charges and Interest</h2>
+                    <h3>Step 6: Record Bank Charges</h3>
+                    <p>Banks may deduct charges for account maintenance, payment processing, cheque services, or other
+                        banking activities.</p>
+                    <h4>Practical Example</h4>
+                    <p>The bank deducts ₹350 as bank charges.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Bank Charges</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bank Charges</td>
+                                        <td>₹350</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>—</td>
+                                        <td>₹350</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹350</strong></td>
+                                        <td><strong>₹350</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h4>How to Record Bank Charges</h4>
+                    <ol>
+                        <li>Open the Payment voucher.</li>
+                        <li>Select HDFC Bank Account.</li>
+                        <li>Select the Bank Charges ledger.</li>
+                        <li>Enter ₹350.</li>
+                        <li>Add a narration.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <div class="gst-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>If GST is separately charged by the bank, account for it according to the bank document and
+                            the business's applicable GST and input tax credit eligibility.</p>
+                    </div>
+                    <h3>Step 7: Record Bank Interest Received</h3>
+                    <p>Businesses may receive interest credited to their bank accounts.</p>
+                    <h4>Practical Example</h4>
+                    <p>The bank credits ₹600 as interest income.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Bank Interest</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>₹600</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Interest Income</td>
+                                        <td>—</td>
+                                        <td>₹600</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹600</strong></td>
+                                        <td><strong>₹600</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h4>Steps</h4>
+                    <ol>
+                        <li>Open the Receipt voucher.</li>
+                        <li>Select HDFC Bank Account.</li>
+                        <li>Select the Interest Income ledger.</li>
+                        <li>Enter ₹600.</li>
+                        <li>Add a narration explaining the interest credit.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <p>If the interest has already been accrued through an earlier journal entry, record the receipt
+                        against the appropriate accrued-interest ledger instead of crediting income a second time.</p>
+                </section>
+
+                <section class="article-section" id="cheque-transactions">
+                    <div class="section-eyebrow">10 / CHEQUE ENTRIES</div>
+                    <h2>Step 8: Record Cheque Transactions</h2>
+                    <p>Businesses may receive or issue cheques for customer payments and supplier settlements.
+                        TallyPrime provides banking-related features to record cheque details and manage supported
+                        cheque workflows.</p>
+                    <h3>Example: Payment to a Supplier by Cheque</h3>
+                    <p>ABC Enterprises pays Supplier B ₹12,000 through a cheque.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><strong>Accounting Entry</strong><span>Supplier Cheque
+                                Payment</span></div>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Supplier B</td>
+                                        <td>₹12,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HDFC Bank Account</td>
+                                        <td>—</td>
+                                        <td>₹12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹12,000</strong></td>
+                                        <td><strong>₹12,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The supplier's outstanding liability decreases, and the bank balance is reduced according to the
+                        applicable accounting treatment and transaction status.</p>
+                    <h3>Steps</h3>
+                    <ol>
+                        <li>Open the appropriate Payment voucher.</li>
+                        <li>Select the bank account.</li>
+                        <li>Select Supplier B.</li>
+                        <li>Enter ₹12,000.</li>
+                        <li>Enter cheque details using the available banking options.</li>
+                        <li>Save the voucher.</li>
+                    </ol>
+                    <div class="learning-note"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>For cheques that have been issued but not yet cleared, use the appropriate cheque-management
+                            and reconciliation workflow in your TallyPrime configuration. Do not assume that the bank
+                            statement and book balance will change on the same date.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="bank-reconciliation">
+                    <div class="section-eyebrow">11 / RECONCILIATION</div>
+                    <h2>Step 9: Perform Bank Reconciliation in TallyPrime</h2>
+                    <p>Bank reconciliation is the process of comparing the transactions recorded in the company's books
+                        with those appearing in the bank statement.</p>
+                    <p>Differences can occur because of timing, bank charges, interest credits, unpresented cheques,
+                        deposits in transit, or missing entries.</p>
+                    <h3>Example</h3>
+                    <p>Suppose TallyPrime shows a bank balance of ₹50,000, but the bank statement shows ₹48,500. The
+                        difference is ₹1,500.</p>
+                    <div class="calculation-card">
+                        <span class="calculation-label">Difference to Investigate</span>
+                        <div class="calculation-equation"><span>₹50,000</span><i class="fa-solid fa-minus"
+                                aria-hidden="true"></i><span>₹48,500</span></div>
+                        <div class="calculation-result">₹1,500</div>
+                        <p>Compare the entries and supporting bank statement before posting an adjustment.</p>
+                    </div>
+                    <p>Before making an adjustment, investigate the reason. For example, an unrecorded bank charge of
+                        ₹1,500 could explain the difference, but the amount should be verified against the actual bank
+                        statement.</p>
+                    <h3>Steps to Reconcile the Bank</h3>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the Relevant Bank Ledger or Report</h3>
+                                <p>Open the relevant bank ledger or banking reports.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Access Bank Reconciliation</h3>
+                                <p>Access the Bank Reconciliation feature.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Select the Account and Period</h3>
+                                <p>Select the bank account and relevant period.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Compare Transactions</h3>
+                                <p>Compare the recorded transactions with the bank statement.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Enter or Confirm Bank Details</h3>
+                                <p>Enter or confirm bank dates and other reconciliation details as supported.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Investigate Unmatched Transactions</h3>
+                                <p>Identify unmatched transactions and investigate differences.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">07</span>
+                            <div class="step-content">
+                                <h3>Record Verified Missing Entries</h3>
+                                <p>Record missing transactions, such as bank charges, when verified.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">08</span>
+                            <div class="step-content">
+                                <h3>Review Reconciliation Status</h3>
+                                <p>Review the reconciliation status and retain the relevant bank statement for
+                                    reference.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gst-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>The exact menu path depends on the TallyPrime release and bank integration or
+                            statement-import configuration. Bank reconciliation does not mean changing balances simply
+                            to make them match. Identify and document the actual cause of every material difference.</p>
+                    </div>
+                    <p>For a more detailed walkthrough, continue with <a
+                            routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">How to Perform Bank
+                            Reconciliation in TallyPrime</a>. You can also learn about <a
+                            routerLink="/how-to-import-bank-statements-into-tallyprime">importing bank statements into
+                            TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="verify-reports">
+                    <div class="section-eyebrow">12 / REPORTS</div>
+                    <h2>Step 10: Verify Bank Transactions Through Reports</h2>
+                    <p>After recording transactions, review the relevant reports to confirm that the entries are
+                        correct.</p>
+                    <div class="report-grid">
+                        <div class="report-item"><i class="fa-solid fa-building-columns"
+                                aria-hidden="true"></i><span><strong>Bank Ledger</strong><br>Reviews bank-related debit
+                                and credit entries.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i><span><strong>Day Book</strong><br>Shows transactions recorded
+                                for a selected period.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-book" aria-hidden="true"></i><span><strong>Cash
+                                    and Bank Books</strong><br>Helps review cash and bank movements.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-check-double"
+                                aria-hidden="true"></i><span><strong>Bank Reconciliation</strong><br>Shows
+                                reconciliation information and outstanding differences.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-scale-balanced"
+                                aria-hidden="true"></i><span><strong>Trial Balance</strong><br>Helps verify ledger
+                                balances across the accounts.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-chart-line"
+                                aria-hidden="true"></i><span><strong>Profit and Loss Account</strong><br>Shows relevant
+                                income and expense balances.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-chart-pie"
+                                aria-hidden="true"></i><span><strong>Balance Sheet</strong><br>Shows bank balances and
+                                other financial positions.</span></div>
+                    </div>
+                    <p>Report availability and navigation can vary by TallyPrime version and configuration. To
+                        understand more about checking account balances, read <a
+                            routerLink="/generate-trial-balance-in-tallyprime">How to Generate a Trial Balance in
+                            TallyPrime</a> and <a routerLink="/how-to-view-ledger-reports-in-tallyprime">How to View
+                            Ledger Reports in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="common-mistakes">
+                    <div class="section-eyebrow">13 / ACCOUNTING CHECKLIST</div>
+                    <h2>Common Mistakes to Avoid When Recording Bank Transactions</h2>
+                    <div class="mistake-list">
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-triangle-exclamation"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h3>1. Selecting the Wrong Voucher</h3>
+                                <p>Using a Receipt, Payment, or Contra voucher incorrectly can affect account
+                                    classification and reporting.</p>
+                                <p><strong>Solution:</strong> Identify the purpose of the transaction before selecting
+                                    the voucher.</p>
+                            </div>
+                        </article>
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-receipt" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>2. Recording Customer Receipts as New Sales</h3>
+                                <p>If a credit sale has already been recorded, recording the customer payment as sales
+                                    income again can overstate revenue.</p>
+                                <p><strong>Solution:</strong> Record the receipt against the customer's outstanding
+                                    balance.</p>
+                            </div>
+                        </article>
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>3. Recording Supplier Payments as New Expenses</h3>
+                                <p>If a purchase or expense has already been recorded, paying the supplier should
+                                    generally settle the outstanding liability.</p>
+                                <p><strong>Solution:</strong> Select the supplier or relevant payable ledger when
+                                    recording the settlement.</p>
+                            </div>
+                        </article>
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>4. Ignoring Bank Charges and Interest</h3>
+                                <p>Unrecorded bank charges or interest can create differences between the books and bank
+                                    statement.</p>
+                                <p><strong>Solution:</strong> Review bank statements regularly and record verified
+                                    transactions.</p>
+                            </div>
+                        </article>
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>5. Skipping Bank Reconciliation</h3>
+                                <p>Without reconciliation, errors and missing entries may remain undetected.</p>
+                                <p><strong>Solution:</strong> Reconcile bank accounts regularly and investigate
+                                    unexplained differences.</p>
+                            </div>
+                        </article>
+                        <article class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>6. Entering Incorrect Transaction Dates</h3>
+                                <p>Incorrect dates can cause reporting and reconciliation problems.</p>
+                                <p><strong>Solution:</strong> Use the correct accounting date and bank transaction
+                                    details, following your business's accounting policy.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="article-section" id="practice-exercise">
+                    <div class="section-eyebrow">14 / PRACTICAL EXERCISE</div>
+                    <h2>Practical Exercise: Record Bank Transactions in TallyPrime</h2>
+                    <p>Use the following transactions to practise in a test company.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 October</td>
+                                    <td>Received payment from Customer A into the bank</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>2 October</td>
+                                    <td>Paid office rent through the bank</td>
+                                    <td>₹8,000</td>
+                                </tr>
+                                <tr>
+                                    <td>3 October</td>
+                                    <td>Deposited cash into the bank</td>
+                                    <td>₹20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>4 October</td>
+                                    <td>Paid Supplier B through the bank</td>
+                                    <td>₹12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>5 October</td>
+                                    <td>Bank charges deducted</td>
+                                    <td>₹350</td>
+                                </tr>
+                                <tr>
+                                    <td>6 October</td>
+                                    <td>Bank interest received</td>
+                                    <td>₹600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Questions for Practice</h3>
+                    <ol>
+                        <li>Which voucher should be used to record the customer receipt?</li>
+                        <li>Which voucher is generally used for the rent payment?</li>
+                        <li>Which voucher should be used to record the cash deposit?</li>
+                        <li>How should the supplier payment be recorded if the purchase was previously entered?</li>
+                        <li>How do bank charges affect the bank balance and expenses?</li>
+                        <li>How does interest received affect the bank balance and income?</li>
+                        <li>Which report can help you compare the book balance with the bank statement?</li>
+                    </ol>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Practice tip</h3>
+                            <p>Record each transaction, check the ledger balances, and then review the relevant reports.
+                                Use the bank statement to reconcile the entries.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">15 / FAQS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I record bank transactions in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Create or verify the bank ledger, select the appropriate Receipt, Payment, Contra, or
+                                    other relevant voucher, enter the transaction details, and save the entry. Review
+                                    the bank ledger and relevant reports afterwards.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Which voucher is used for bank receipts in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A Receipt voucher is commonly used to record money received into the bank, such as a
+                                    customer payment or bank interest. Select the appropriate ledger based on the nature
+                                    of the receipt.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Which voucher is used for bank payments?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A Payment voucher is commonly used for money paid from the bank, such as rent,
+                                    supplier settlements, or bank charges.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. What is a Contra voucher in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A Contra voucher is generally used to record transfers between cash and bank accounts
+                                    or between eligible bank accounts. Examples include cash deposits, cash withdrawals,
+                                    and transfers between the company's own bank accounts.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. How do I record bank charges in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Create or select the Bank Charges expense ledger, open a Payment voucher, select the
+                                    bank account and Bank Charges ledger, enter the amount, and save the voucher. Verify
+                                    any separately charged GST where applicable.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. How do I reconcile bank transactions in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant bank reconciliation feature, compare the book entries with the bank
+                                    statement, mark or enter the relevant reconciliation details, and investigate
+                                    unmatched transactions. Record missing entries only after verifying them.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can I record NEFT, RTGS, IMPS, and UPI transactions in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. These transactions can generally be recorded using the appropriate accounting
+                                    voucher and bank ledger. Include the relevant transaction reference and reconcile
+                                    the entry with the bank statement.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Why does my bank balance differ from the bank statement?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Differences may arise from unrecorded bank charges, interest, outstanding cheques,
+                                    deposits in transit, timing differences, or incorrect entries. Review the bank
+                                    statement and reconciliation report to identify the actual cause.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>9. Can beginners learn bank accounting in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Beginners can practise bank receipts, payments, cash transfers, bank charges,
+                                    interest entries, and reconciliation using a test company. Understanding the
+                                    accounting logic behind each entry is as important as learning the software steps.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">16 / CONCLUSION</div>
+                    <h2>Conclusion</h2>
+                    <p>Recording bank transactions in TallyPrime is an important accounting skill for managing business
+                        receipts, payments, transfers, and bank-related expenses. By using the correct vouchers,
+                        maintaining accurate bank ledgers, recording transaction references, and reconciling bank
+                        statements, businesses can improve the accuracy of their accounting records.</p>
+                    <p>For accounting students and aspiring accountants, practising these entries provides a foundation
+                        for understanding cash flow, ledger balances, financial reports, and day-to-day business
+                        accounting.</p>
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO • TALLY TRAINING</span>
+                            <h3>Want to improve your practical accounting skills?</h3>
+                            <p>Explore Tally training at RLT Edzaro and learn how accounting entries, banking
+                                transactions, GST, and financial reports work together in practical business scenarios.
+                            </p>
+                            <div class="branch-pills"><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Chennai</span><span><i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                                    Practical Accounting</span></div>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                    target="_blank" rel="noopener noreferrer">Explore the Course <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener noreferrer">Visit RLT Edzaro</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Build your confidence in TallyPrime through structured learning and hands-on accounting practice.
+                    </p>
+                </section>
+
+                <!-- INTERNAL LINKS / RELATED ARTICLES -->
+                <section class="related-articles" id="related-articles">
+                    <span class="section-eyebrow">CONTINUE LEARNING</span>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime tutorials to strengthen your knowledge of banking, vouchers, ledgers,
+                        and financial reports.</p>
+                    <div class="related-links">
+                        <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime"><span><strong>How to Perform
+                                    Bank Reconciliation in TallyPrime</strong><small>Follow the reconciliation process
+                                    and investigate mismatches</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span><strong>TallyPrime
+                                    Voucher Types Explained with Examples</strong><small>Understand Receipt, Payment,
+                                    Contra, Journal, and other vouchers</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/track-receivables-and-payables-in-tallyprime"><span><strong>How to Track
+                                    Receivables and Payables in TallyPrime</strong><small>Manage customer collections
+                                    and supplier settlements</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime"><span><strong>How to Generate a Trial
+                                    Balance in TallyPrime</strong><small>Review ledger balances and verify accounting
+                                    records</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-import-bank-statements-into-tallyprime"><span><strong>How to Import Bank
+                                    Statements into TallyPrime</strong><small>Learn about statement import and bank
+                                    transaction matching</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-view-ledger-reports-in-tallyprime"><span><strong>How to View Ledger
+                                    Reports in TallyPrime</strong><small>Review bank ledger entries and account
+                                    balances</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">Explore All Blogs <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </section>
+
+                <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fa-solid fa-arrow-up"
+                        aria-hidden="true"></i> Back to Top</a>
+            </main>
+        </div>
+    </div>
+</article>

@@ -23,7 +23,7 @@ import { Contact } from '../contact/contact';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnDestroy {
+export class Home implements AfterViewInit, OnDestroy {
 
   // =====================================================
   // CONTACT POPUP STATE
@@ -41,6 +41,15 @@ export class Home implements OnDestroy {
   partnershipSection?: ElementRef<HTMLElement>;
 
   private partnershipObserver: IntersectionObserver | null = null;
+
+  // =====================================================
+  // CERTIFICATE SECTION REFERENCES
+  // =====================================================
+
+  @ViewChild('certificateSection')
+  certificateSection?: ElementRef<HTMLElement>;
+
+  private certificateObserver: IntersectionObserver | null = null;
   // =====================================================
   // SMOOTH SCROLLING
   // =====================================================
@@ -185,11 +194,114 @@ export class Home implements OnDestroy {
   }
 
   // =====================================================
+  // CERTIFICATE SECTION SCROLL REVEAL ANIMATION
+  // =====================================================
+
+  ngAfterViewInit(): void {
+    const section = this.certificateSection?.nativeElement;
+
+    if (!section) {
+      return;
+    }
+
+    const revealItems = section.querySelectorAll<HTMLElement>(
+      '.certificate-reveal'
+    );
+
+    const reducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (
+      reducedMotion ||
+      typeof IntersectionObserver === 'undefined'
+    ) {
+      revealItems.forEach(item => {
+        item.classList.add('is-visible');
+      });
+
+      return;
+    }
+
+    section.classList.add('is-enhanced');
+
+    this.certificateObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    revealItems.forEach(item => {
+      this.certificateObserver?.observe(item);
+    });
+  }
+
+  // =====================================================
   // COMPONENT CLEANUP
   // =====================================================
 
   ngOnDestroy(): void {
     this.restoreBodyScroll();
+    this.certificateObserver?.disconnect();
+  }
+
+
+  // =====================================================
+  // FREQUENTLY ASKED QUESTIONS (FAQ) SECTION
+  // =====================================================
+
+  activeFaqIndex: number | null = 0;
+
+  faqItems = [
+    {
+      question: 'What courses are offered by RLT Edzaro?',
+      answer:
+        'RLT Edzaro offers professional training programmes in areas such as TallyPrime and accounting, software development, data analytics, digital marketing and emerging technologies. Contact our team for the latest course list and batch details.'
+    },
+    {
+      question: 'Are the courses suitable for beginners?',
+      answer:
+        'Yes. Many programmes are designed to introduce learners to the fundamentals before moving into practical exercises. Course prerequisites may vary, so please check the requirements for your chosen programme.'
+    },
+    {
+      question: 'Do students get practical training?',
+      answer:
+        'Our learning approach includes practical exercises, guided activities and project-based learning wherever applicable to the selected course.'
+    },
+    {
+      question: 'Is the Tally course conducted by an authorised partner?',
+      answer:
+        'RLT Edzaro is an authorised partner of Tally Education. The available Tally course levels and certificate details depend on the programme you enrol in.'
+    },
+    {
+      question: 'Will I receive a certificate after completing the course?',
+      answer:
+        'Certificate eligibility depends on the selected programme and its completion or assessment requirements. Our team can explain the applicable certificate details before you enrol.'
+    },
+    {
+      question: 'Are both online and classroom learning options available?',
+      answer:
+        'Learning mode may vary by course and batch. Contact RLT Edzaro to confirm the available online and classroom options for your preferred programme.'
+    },
+    {
+      question: 'How can I enquire about fees and the next batch?',
+      answer:
+        'Use the Enquire Now or Contact section on this page to share your details. Our team can provide the current course fee, schedule, duration and upcoming batch information.'
+    }
+  ];
+
+  toggleFaq(index: number): void {
+    this.activeFaqIndex =
+      this.activeFaqIndex === index ? null : index;
   }
 
   learningFeatures: {
@@ -1259,10 +1371,7 @@ export class Home implements OnDestroy {
       this.stopCareerRoadmapAutoplay();
 
     }
-
   }
-
-
 }
 
 

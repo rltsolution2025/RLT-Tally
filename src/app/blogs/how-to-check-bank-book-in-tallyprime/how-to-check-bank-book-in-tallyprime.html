@@ -1,0 +1,728 @@
+<article class="entries-blog" id="top">
+    <!-- HERO SECTION -->
+    <header class="entries-hero">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Bank Book in TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                <span>TallyPrime Accounting Guide</span>
+            </div>
+
+            <h1>How to Check Bank Book in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to open the Bank Book in TallyPrime, review bank transactions, filter entries by date, verify
+                balances, and compare the report with your bank statement.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Accounting &amp; Banking</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Step-by-Step Guide</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Bank Book</span>
+                <span>TallyPrime</span>
+                <span>Bank Transactions</span>
+                <span>Bank Reconciliation</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="entries-page">
+        <div class="entries-container article-layout">
+            <!-- STICKY SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <span class="toc-label">ON THIS PAGE</span>
+                    <h2>Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-bank-book" (click)="scrollToSection($event, 'what-is-bank-book')">What Is a
+                            Bank Book?</a>
+                        <a href="#importance" (click)="scrollToSection($event, 'importance')">Why Is It Important?</a>
+                        <a href="#check-bank-book" (click)="scrollToSection($event, 'check-bank-book')">How to Check
+                            Bank Book</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#specific-date" (click)="scrollToSection($event, 'specific-date')">Check a Specific
+                            Date</a>
+                        <a href="#monthly-bank-book" (click)="scrollToSection($event, 'monthly-bank-book')">Check a
+                            Monthly Report</a>
+                        <a href="#bank-book-vs-statement"
+                            (click)="scrollToSection($event, 'bank-book-vs-statement')">Bank Book vs Statement</a>
+                        <a href="#reconcile-bank-book" (click)="scrollToSection($event, 'reconcile-bank-book')">Bank
+                            Reconciliation</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents menu to jump directly to the Bank Book topic you need.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-laptop-file" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build practical accounting skills with guided TallyPrime training at RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer">Explore Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE -->
+            <main class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">01 / INTRODUCTION</div>
+                    <h2>Introduction</h2>
+                    <p>The Bank Book in TallyPrime is an important accounting report that helps businesses track
+                        transactions recorded through their bank accounts. It shows money deposited into the bank,
+                        payments made, transfers, and the resulting bank balance based on the entries recorded in the
+                        accounting books.</p>
+                    <p>For business owners, accountants, and accounting students, learning how to check the Bank Book in
+                        TallyPrime is an essential practical accounting skill. It helps users monitor cash flow, verify
+                        bank transactions, identify incorrect entries, and prepare for bank reconciliation.</p>
+                    <p>TallyPrime provides reports that allow users to review bank transactions for a selected period
+                        and examine individual voucher details.</p>
+                    <p>In this guide, you will learn how to open the Bank Book in TallyPrime, check bank transactions,
+                        filter entries by date, understand debit and credit amounts, and compare the Bank Book with a
+                        bank statement.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What you will learn</h3>
+                            <p>How to open the report, select a bank ledger, set a reporting period, inspect vouchers,
+                                understand the closing balance, and identify differences that may need reconciliation.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-bank-book">
+                    <div class="section-eyebrow">02 / BANK BOOK BASICS</div>
+                    <h2>What Is a Bank Book in TallyPrime?</h2>
+                    <p>A Bank Book is an accounting report that records transactions associated with a business's bank
+                        account. It is generated from the transactions entered in the accounting system.</p>
+                    <p>The Bank Book generally includes:</p>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-solid fa-wallet" aria-hidden="true"></i>
+                            <h3>Opening Balance</h3>
+                            <p>The bank balance at the beginning of the selected period.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-arrow-down-to-line" aria-hidden="true"></i>
+                            <h3>Money Received</h3>
+                            <p>Customer receipts and other amounts recorded as bank inflows.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-arrow-up-from-line" aria-hidden="true"></i>
+                            <h3>Payments Made</h3>
+                            <p>Supplier payments, expenses, and other bank outflows.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                            <h3>Bank Transfers</h3>
+                            <p>Transfers recorded between cash and bank or bank accounts.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-money-check" aria-hidden="true"></i>
+                            <h3>Cheque Transactions</h3>
+                            <p>Cheque-related transactions where the details are recorded.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                            <h3>Closing Balance</h3>
+                            <p>The balance calculated from the opening balance and recorded movements.</p>
+                        </div>
+                    </div>
+                    <p>For example, when a business receives a customer payment directly into its bank account, the
+                        receipt entry appears in the Bank Book. When the business pays a supplier through the bank, the
+                        payment entry is also reflected in the report.</p>
+                    <p>The Bank Book helps accountants understand how the recorded bank balance changes over a
+                        particular period.</p>
+                </section>
+
+                <section class="article-section" id="importance">
+                    <div class="section-eyebrow">03 / BUSINESS USE</div>
+                    <h2>Why Is the Bank Book Important?</h2>
+                    <p>Checking the Bank Book regularly helps businesses maintain accurate financial records. The key
+                        benefits include:</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Track Bank Transactions</h3>
+                                <p>Review receipts, payments, and transfers recorded in TallyPrime.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Monitor Bank Balances</h3>
+                                <p>Check the opening balance, transaction movements, and closing balance.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Identify Accounting Errors</h3>
+                                <p>Find duplicate entries, incorrect amounts, or transactions posted to the wrong
+                                    ledger.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Support Bank Reconciliation</h3>
+                                <p>Compare recorded transactions with the bank statement.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Improve Cash Flow Monitoring</h3>
+                                <p>Understand money coming into and going out of the business.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Prepare Accounting Reports</h3>
+                                <p>Use bank transaction records when reviewing business finances.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>Regular verification can help identify discrepancies before they affect financial reporting.
+                            You can also review the <a routerLink="/generate-trial-balance-in-tallyprime">Trial Balance
+                                in TallyPrime</a> when checking ledger balances across the accounts.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="check-bank-book">
+                    <div class="section-eyebrow">04 / STEP-BY-STEP PROCESS</div>
+                    <h2>How to Check Bank Book in TallyPrime: Step-by-Step Guide</h2>
+                    <p>Follow these steps to view the Bank Book in TallyPrime.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open TallyPrime</h3>
+                                <p>Launch TallyPrime on your computer. Select the company whose bank transactions you
+                                    want to review and make sure you have opened the correct company and financial data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Open the Bank Book Report</h3>
+                                <p>Open Gateway of Tally, navigate to Display More Reports or the relevant reports menu,
+                                    open Account Books, and select Cash/Bank Book or the relevant Bank Book report.
+                                    Choose the bank ledger you want to view.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Select the Bank Ledger</h3>
+                                <p>If your company maintains multiple bank accounts, select the relevant ledger, such as
+                                    HDFC Bank Account, SBI Current Account, or ICICI Bank Account. TallyPrime will
+                                    display the transactions recorded against that ledger.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Set the Required Date Range</h3>
+                                <p>Change the report period to the required dates. For example, select 1 October 2026 to
+                                    31 October 2026 to review the transactions recorded during that month.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Review the Bank Transactions</h3>
+                                <p>Review the date, voucher number, voucher type, particulars or ledger details, debit
+                                    amount, credit amount, and running or closing balance where displayed.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Open an Individual Voucher</h3>
+                                <p>Select the transaction and open its voucher. Verify the supplier or recipient,
+                                    amount, bank ledger, payment date, expense or liability ledger, narration, and
+                                    supporting details.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">07</span>
+                            <div class="step-content">
+                                <h3>Check the Closing Bank Balance</h3>
+                                <p>Review the closing balance calculated from the opening balance and transactions
+                                    recorded in the books for the selected period.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>The precise navigation may differ slightly between TallyPrime releases. You can also use the
+                            report search or Go To feature, where available, to locate the Bank Book. To understand
+                            voucher details further, see <a
+                                routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                                Explained</a>.</p>
+                    </div>
+                    <div class="gst-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>The closing balance in TallyPrime may differ from the bank statement because of uncleared
+                            cheques, deposits in transit, bank charges not yet recorded, or other timing and accounting
+                            differences. Review it alongside the bank statement.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <div class="section-eyebrow">05 / PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Understanding a Bank Book in TallyPrime</h2>
+                    <p>Suppose ABC Enterprises has the following transactions recorded in its bank ledger.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Money In</th>
+                                    <th>Money Out</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Opening bank balance</td>
+                                    <td>₹50,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer payment received</td>
+                                    <td>₹25,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier payment</td>
+                                    <td>—</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Electricity bill paid</td>
+                                    <td>—</td>
+                                    <td>₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer payment received</td>
+                                    <td>₹10,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total movement</strong></td>
+                                    <td><strong>₹35,000</strong></td>
+                                    <td><strong>₹20,000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="calculation-card">
+                        <span class="calculation-label">CLOSING BALANCE CALCULATION</span>
+                        <div class="calculation-equation">Closing balance = Opening balance + Money received − Money
+                            paid</div>
+                        <div class="calculation-equation"><strong>₹50,000 + ₹35,000 − ₹20,000 = ₹65,000</strong></div>
+                        <div class="calculation-result"><i class="fa-solid fa-circle-check"
+                                aria-hidden="true"></i><strong>Closing bank balance: ₹65,000</strong></div>
+                    </div>
+                    <p>Therefore, the closing bank balance in the books would be ₹65,000, assuming there are no other
+                        transactions or adjustments. This example demonstrates how receipts and payments affect the Bank
+                        Book balance.</p>
+                </section>
+
+                <section class="article-section" id="specific-date">
+                    <div class="section-eyebrow">06 / DATE FILTER</div>
+                    <h2>How to Check Bank Transactions for a Specific Date</h2>
+                    <p>Sometimes, accountants need to find a particular transaction rather than review an entire month's
+                        activity.</p>
+                    <p>To check transactions for a specific date:</p>
+                    <ol>
+                        <li>Open the relevant Bank Book.</li>
+                        <li>Set the report period to the required date or a short date range.</li>
+                        <li>Review the transactions displayed.</li>
+                        <li>Locate the required voucher number or transaction details.</li>
+                        <li>Open the voucher to verify the amount and accounting entry.</li>
+                    </ol>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Example</h3>
+                            <p>If you need to check a supplier payment recorded on 12 October 2026, select the relevant
+                                date range and locate the payment entry. This method is useful when answering accounting
+                                queries, checking payment status, or investigating differences in the bank balance.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="monthly-bank-book">
+                    <div class="section-eyebrow">07 / MONTHLY REVIEW</div>
+                    <h2>How to Check Bank Book for a Particular Month</h2>
+                    <p>To review a monthly Bank Book:</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the Bank Ledger Report</h3>
+                                <p>Navigate to the relevant Bank Book or bank ledger report.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Set the Monthly Period</h3>
+                                <p>Set the start date to the first day of the month and the end date to the last day of
+                                    the month.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Review Bank Movements</h3>
+                                <p>Review all receipts, payments, and transfers recorded during the period.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Verify the Balances</h3>
+                                <p>Check the opening and closing balances and compare transactions with the
+                                    corresponding bank statement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Monthly verification helps accountants identify missing entries and review bank activity before
+                        closing the accounts for the month. You can also review the <a
+                            routerLink="/how-to-check-day-book-in-tallyprime">Day Book in TallyPrime</a> to inspect
+                        transactions recorded across the selected period.</p>
+                </section>
+
+                <section class="article-section" id="bank-book-vs-statement">
+                    <div class="section-eyebrow">08 / REPORT COMPARISON</div>
+                    <h2>Difference Between Bank Book and Bank Statement</h2>
+                    <p>Although they contain related information, the Bank Book and the bank statement are not the same.
+                    </p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Bank Book</th>
+                                    <th>Bank Statement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maintained in the accounting system.</td>
+                                    <td>Provided by the bank.</td>
+                                </tr>
+                                <tr>
+                                    <td>Shows transactions recorded in TallyPrime.</td>
+                                    <td>Shows transactions processed or reported by the bank.</td>
+                                </tr>
+                                <tr>
+                                    <td>Reflects the accounting records.</td>
+                                    <td>Reflects the bank's records.</td>
+                                </tr>
+                                <tr>
+                                    <td>May include entries not yet reflected by the bank.</td>
+                                    <td>May include bank charges or credits not yet entered in TallyPrime.</td>
+                                </tr>
+                                <tr>
+                                    <td>Used to review accounting transactions.</td>
+                                    <td>Used to verify transactions and balances against the bank.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Both records are important for maintaining accurate financial information. When differences
+                        arise, compare them through <a routerLink="/bank-reconciliation-in-tallyprime">Bank
+                            Reconciliation in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="reconcile-bank-book">
+                    <div class="section-eyebrow">09 / BANK RECONCILIATION</div>
+                    <h2>How to Reconcile the Bank Book with a Bank Statement</h2>
+                    <p>Bank reconciliation is the process of comparing the transactions recorded in the Bank Book with
+                        those shown in the bank statement.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Obtain the Bank Statement</h3>
+                                <p>Download or obtain the bank statement for the period you want to reconcile.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Open the Bank Reconciliation Report</h3>
+                                <p>Open the relevant bank ledger and navigate to the Bank Reconciliation feature or
+                                    report available in your TallyPrime release.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Compare Transactions</h3>
+                                <p>Compare transaction dates, amounts, references, deposits, and payments between the
+                                    Bank Book and bank statement.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Identify Differences</h3>
+                                <p>Look for cheques issued but not presented, deposits not yet credited, bank charges
+                                    not entered in the books, interest credited by the bank, and duplicate or
+                                    incorrectly recorded entries.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Update Accounting Records</h3>
+                                <p>Record missing bank charges, interest, or other transactions where appropriate.
+                                    Correct accounting errors after verifying supporting documents.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Complete Reconciliation</h3>
+                                <p>Update the applicable reconciliation details and verify the resulting balances.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gst-warning"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>Do not alter entries merely to force the Bank Book balance to match the bank statement.
+                            Identify and resolve the underlying differences first.</p>
+                    </div>
+                    <p>For a detailed walkthrough, read <a routerLink="/bank-reconciliation-in-tallyprime">How to
+                            Perform Bank Reconciliation in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="common-problems">
+                    <div class="section-eyebrow">10 / TROUBLESHOOTING</div>
+                    <h2>Common Problems When Checking the Bank Book in TallyPrime</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-eye-slash" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>1. Bank Ledger Is Not Visible</h3>
+                                <p><strong>Possible reason:</strong> The ledger may not have been created under the
+                                    correct group or may not contain transactions for the selected period.</p>
+                                <p><strong>Solution:</strong> Verify the ledger configuration and company data. Confirm
+                                    that you have selected the correct bank ledger.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-file-circle-question"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h3>2. Transactions Are Missing</h3>
+                                <p><strong>Possible reasons:</strong> The wrong date range has been selected, the
+                                    transaction was entered under another ledger, the voucher has not been recorded or
+                                    saved, or report filters are hiding the entry.</p>
+                                <p><strong>Solution:</strong> Check the date range, ledger allocation, voucher details,
+                                    and report settings.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-scale-unbalanced" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>3. Bank Book Balance Does Not Match the Bank Statement</h3>
+                                <p><strong>Possible reasons:</strong> Outstanding cheques, deposits not yet credited,
+                                    unrecorded bank charges, missing interest entries, or incorrect or duplicate
+                                    accounting entries.</p>
+                                <p><strong>Solution:</strong> Perform bank reconciliation and investigate each
+                                    difference.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>4. Incorrect Transaction Amount Appears</h3>
+                                <p><strong>Possible reasons:</strong> An incorrect voucher amount was entered, the wrong
+                                    bank ledger was selected, or a duplicate or incorrect voucher was recorded.</p>
+                                <p><strong>Solution:</strong> Open the relevant voucher and verify the transaction
+                                    against the supporting document before making corrections.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>If you need to examine the source entries in more detail, the <a
+                            routerLink="/how-to-view-ledger-reports-in-tallyprime">Ledger Reports in TallyPrime</a> can
+                        help you review transactions posted to individual ledgers.</p>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">11 / ACCOUNTING PRACTICES</div>
+                    <h2>Best Practices for Maintaining an Accurate Bank Book</h2>
+                    <p>To maintain reliable bank records in TallyPrime:</p>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <h3>Record Promptly</h3>
+                            <p>Record receipts and payments without unnecessary delay.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                            <h3>Choose the Correct Ledger</h3>
+                            <p>Select the correct bank ledger for each transaction.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-receipt" aria-hidden="true"></i>
+                            <h3>Verify Amounts</h3>
+                            <p>Check amounts against supporting documents.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                            <h3>Review Regularly</h3>
+                            <p>Review bank transactions regularly.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                            <h3>Reconcile Statements</h3>
+                            <p>Reconcile the Bank Book with bank statements.</p>
+                        </div>
+                        <div class="skill-card"><i class="fa-solid fa-database" aria-hidden="true"></i>
+                            <h3>Back Up Accounting Data</h3>
+                            <p>Back up accounting data according to your organisation's procedures.</p>
+                        </div>
+                    </div>
+                    <p>Also investigate missing or duplicate entries and maintain proper voucher narration and
+                        references. Following these practices improves the reliability of accounting records and makes
+                        financial reporting easier.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">12 / COMMON QUESTIONS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I open the Bank Book in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open your company, navigate to the relevant account books or cash/bank reports, and
+                                    select the required bank ledger. The exact menu path may vary depending on your
+                                    TallyPrime release.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Can I check the Bank Book for a specific month?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Open the Bank Book and set the report period to the first and last dates of the
+                                    required month.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. How do I check the closing balance in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant Bank Book and review the closing balance for the selected period.
+                                    Verify that the opening balance and recorded receipts and payments are correct.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Why is my Bank Book balance different from my bank statement?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>The difference may result from outstanding cheques, deposits in transit, unrecorded
+                                    bank charges, interest entries, or accounting errors. Bank reconciliation helps
+                                    identify the cause.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Can I view individual bank transactions in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Select the relevant transaction in the Bank Book and open its voucher to review
+                                    the associated accounting details.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. What is the difference between a Bank Book and a Cash Book?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A Bank Book records transactions related to bank accounts, while a Cash Book records
+                                    transactions related to cash. Both help businesses monitor receipts, payments, and
+                                    balances.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Is learning the Bank Book important for accounting jobs?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Understanding the Bank Book helps accounting professionals review receipts and
+                                    payments, verify balances, investigate discrepancies, and perform bank
+                                    reconciliation.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">13 / CONCLUSION</div>
+                    <h2>Conclusion</h2>
+                    <p>The Bank Book in TallyPrime is an essential report for reviewing bank transactions and monitoring
+                        the balances recorded in a company's accounts. By learning how to open the report, select a bank
+                        ledger, set the required date range, inspect vouchers, and verify the closing balance, users can
+                        improve their practical accounting skills.</p>
+                    <p>Regular bank reconciliation also helps identify missing transactions, timing differences, and
+                        accounting errors before they affect financial reports.</p>
+                    <p>For accounting students and aspiring accountants, practising Bank Book reports in TallyPrime is a
+                        useful step towards understanding day-to-day accounting operations.</p>
+
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO / TALLY TRAINING</span>
+                            <h3>Want to Learn Practical Accounting and TallyPrime?</h3>
+                            <p>Explore Tally training at <strong>RLT Edzaro</strong> to develop your knowledge of
+                                accounting entries, banking transactions, GST, and practical TallyPrime workflows.</p>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                    target="_blank" rel="noopener noreferrer">Explore Tally Training <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener noreferrer">Visit RLT Edzaro <i
+                                        class="fa-solid fa-up-right-from-square" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-articles" id="related-articles">
+                    <div class="section-eyebrow">14 / KEEP LEARNING</div>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime guides to understand bank transactions, accounting reports, and
+                        reconciliation in more detail.</p>
+                    <div class="related-links">
+                        <a routerLink="/bank-reconciliation-in-tallyprime"><span><strong>How to Perform Bank
+                                    Reconciliation in TallyPrime</strong><small>Compare Bank Book entries with your bank
+                                    statement and investigate differences.</small></span><i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-record-bank-transactions-in-tallyprime"><span><strong>How to Record Bank
+                                    Transactions in TallyPrime</strong><small>Learn receipts, payments, transfers,
+                                    cheque entries, and bank-related vouchers.</small></span><i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-view-ledger-reports-in-tallyprime"><span><strong>How to View Ledger
+                                    Reports in TallyPrime</strong><small>Review individual ledger entries and balances
+                                    in your accounting records.</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-check-day-book-in-tallyprime"><span><strong>How to Check Day Book in
+                                    TallyPrime</strong><small>View the vouchers and transactions recorded for a selected
+                                    period.</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime"><span><strong>How to Generate Trial
+                                    Balance in TallyPrime</strong><small>Check ledger balances and review the debit and
+                                    credit totals.</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span><strong>TallyPrime
+                                    Voucher Types Explained with Examples</strong><small>Understand the purpose of
+                                    common accounting vouchers.</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/track-receivables-and-payables-in-tallyprime"><span><strong>How to Track
+                                    Receivables and Payables in TallyPrime</strong><small>Review customer dues, supplier
+                                    balances, and outstanding amounts.</small></span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">Explore All Articles <i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    <button class="back-to-top" type="button" (click)="scrollToTop($event)">Back to Top <i
+                            class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+                </section>
+            </main>
+        </div>
+    </div>
+</article>

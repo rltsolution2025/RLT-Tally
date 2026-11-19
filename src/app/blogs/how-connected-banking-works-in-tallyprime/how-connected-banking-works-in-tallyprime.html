@@ -1,0 +1,681 @@
+<section class="connected-banking-blog" id="top">
+    <header class="connected-hero">
+        <div class="connected-hero-inner">
+            <div class="connected-breadcrumb">
+                <a routerLink="/">Home</a>
+                <span>/</span>
+                <a routerLink="/blogs">Blogs</a>
+                <span>/</span>
+                <span>Connected Banking in TallyPrime</span>
+            </div>
+            <p class="hero-eyebrow">TALLYPRIME BANKING GUIDE</p>
+            <h1>How Connected Banking Works in TallyPrime: Complete Guide</h1>
+            <p class="hero-description">
+                Learn how to enable Connected Banking, connect supported bank accounts, retrieve balances and
+                statements, and use banking information in your accounting workflow.
+            </p>
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> TallyPrime &amp; Accounting</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical step-by-step guide</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="connected-container">
+        <div class="connected-article-layout">
+            <aside class="connected-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <p class="toc-heading">ON THIS PAGE</p>
+                    <nav class="toc-links">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-connected-banking"
+                            (click)="scrollToSection($event, 'what-is-connected-banking')">What Is Connected
+                            Banking?</a>
+                        <a href="#how-it-works" (click)="scrollToSection($event, 'how-it-works')">How It Works</a>
+                        <a href="#key-features" (click)="scrollToSection($event, 'key-features')">Key Features</a>
+                        <a href="#requirements" (click)="scrollToSection($event, 'requirements')">Requirements</a>
+                        <a href="#enable-connected-banking"
+                            (click)="scrollToSection($event, 'enable-connected-banking')">Enable Connected Banking</a>
+                        <a href="#connect-bank-account"
+                            (click)="scrollToSection($event, 'connect-bank-account')">Connect a Bank Account</a>
+                        <a href="#check-bank-balance" (click)="scrollToSection($event, 'check-bank-balance')">Check Bank
+                            Balance</a>
+                        <a href="#get-bank-statement" (click)="scrollToSection($event, 'get-bank-statement')">Get Bank
+                            Statement</a>
+                        <a href="#traditional-vs-connected"
+                            (click)="scrollToSection($event, 'traditional-vs-connected')">Connected vs Traditional
+                            Banking</a>
+                        <a href="#security" (click)="scrollToSection($event, 'security')">Security</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    </nav>
+                </div>
+                <div class="sidebar-cta">
+                    <span class="cta-kicker">BUILD PRACTICAL SKILLS</span>
+                    <h3>Learn TallyPrime with practical accounting exercises.</h3>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" class="sidebar-cta-link">Explore
+                        Tally Training <span aria-hidden="true">→</span></a>
+                </div>
+            </aside>
+
+            <article class="connected-article-content">
+                <div class="article-topline">
+                    <span class="article-category">TALLYPRIME BANKING</span>
+                    <span class="article-reading-time">Step-by-step learning guide</span>
+                </div>
+
+                <section class="article-section" id="introduction">
+                    <h2>Introduction</h2>
+                    <p>Managing business banking and accounting separately can take time. Accountants often need to log
+                        in to bank portals, check balances, download bank statements, record transactions in accounting
+                        software, and reconcile bank entries with company records.</p>
+                    <p>Connected Banking in TallyPrime helps simplify these activities by bringing supported banking
+                        services directly into the accounting software. Depending on the bank and available features,
+                        users can check bank balances, retrieve bank statements, reconcile transactions, and initiate
+                        online payments without switching between multiple applications for every task.</p>
+                    <p>For business owners, accountants, and accounting students, understanding how Connected Banking
+                        works in TallyPrime is useful for learning modern accounting workflows.</p>
+                    <p>In this guide, you will learn what Connected Banking is, how it works, how to connect a bank
+                        account, how to access bank balances and statements, and how it helps improve banking and
+                        accounting efficiency.</p>
+                    <div class="answer-box">
+                        <span class="answer-label">KEY IDEA</span>
+                        <p>Connected Banking makes supported bank information and services available within TallyPrime.
+                            It helps with access and workflow, but accountants must still review entries and complete
+                            reconciliation.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-connected-banking">
+                    <h2>What Is Connected Banking in TallyPrime?</h2>
+                    <p>Connected Banking is a TallyPrime feature that connects supported bank accounts to the accounting
+                        software through an authenticated banking connection.</p>
+                    <p>Once the connection is established, users can access supported banking information from within
+                        TallyPrime instead of separately opening their bank's website for every task.</p>
+                    <p>Depending on the bank and supported functionality, Connected Banking can help users:</p>
+                    <ul class="check-list">
+                        <li>Check current bank balances.</li>
+                        <li>Retrieve bank statements for selected periods.</li>
+                        <li>Compare bank information with accounting records.</li>
+                        <li>Reconcile bank transactions.</li>
+                        <li>Initiate online payments through supported banks and payment features.</li>
+                    </ul>
+                    <p>The feature brings banking information closer to everyday accounting activities, making it easier
+                        to monitor cash positions and manage transactions.</p>
+                    <p>For the basics of recording transactions before reconciliation, read <a
+                            routerLink="/how-to-record-bank-transactions-in-tallyprime">How to Record Bank Transactions
+                            in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="how-it-works">
+                    <h2>How Does Connected Banking Work in TallyPrime?</h2>
+                    <p>Connected Banking works by establishing an authorised connection between TallyPrime and a
+                        supported bank. The process involves authentication, connecting the bank account, retrieving
+                        banking information, and using that information in accounting workflows.</p>
+                    <div class="process-grid">
+                        <div class="process-card">
+                            <span class="process-number">01</span>
+                            <h3>Enable Connected Banking</h3>
+                            <p>The user signs in using Tally.NET credentials and completes the required verification. A
+                                valid mobile number linked to the Tally.NET ID is needed for OTP verification during
+                                setup.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-number">02</span>
+                            <h3>Connect the Bank Account</h3>
+                            <p>The user selects a supported bank and follows the bank's authentication process. After
+                                connection, relevant bank accounts can be linked to matching bank ledgers.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-number">03</span>
+                            <h3>Retrieve Banking Information</h3>
+                            <p>Once connected and authenticated, the user can request the available bank balance or a
+                                bank statement for a selected period.</p>
+                        </div>
+                        <div class="process-card">
+                            <span class="process-number">04</span>
+                            <h3>Use the Information in Accounting</h3>
+                            <p>The accountant compares retrieved information with transactions recorded in TallyPrime,
+                                identifies differences, and proceeds with reconciliation.</p>
+                        </div>
+                    </div>
+                    <div class="note-box">
+                        <strong>In simple terms:</strong> Connected Banking links supported bank services with
+                        TallyPrime so banking information can be accessed and used alongside accounting records. Online
+                        payment options may also be available for eligible bank connections.
+                    </div>
+                </section>
+
+                <section class="article-section" id="key-features">
+                    <h2>Key Features of Connected Banking in TallyPrime</h2>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>1. Check Bank Balance</h3>
+                                <p>Connected Banking allows users to retrieve available bank balance information from
+                                    within TallyPrime. This helps business owners and accountants understand their
+                                    current cash position before planning supplier payments or other business expenses.
+                                </p>
+                                <p>For example, an accountant can check the balances of connected bank accounts before
+                                    deciding which account to use for an upcoming payment.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>2. Get Bank Statements</h3>
+                                <p>Users can retrieve bank statements for a selected date range through a supported bank
+                                    connection. This reduces the need to download statements manually from a bank portal
+                                    before starting reconciliation.</p>
+                                <p>The retrieved statement can then be used to compare bank transactions with the
+                                    company's books.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>3. Simplify Bank Reconciliation</h3>
+                                <p>Connected Banking makes bank statement information available in TallyPrime, where
+                                    accountants can match entries, identify missing transactions, and investigate
+                                    differences.</p>
+                                <p>Retrieving a statement does not mean every transaction is automatically reconciled.
+                                    Accountants still need to review unmatched or incorrect entries and complete the
+                                    reconciliation process.</p>
+                                <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime"
+                                    class="inline-related-link">Read: How to Perform Bank Reconciliation in TallyPrime
+                                    <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>4. Access Banking and Accounting in One Place</h3>
+                                <p>Instead of repeatedly switching between banking and accounting applications, users
+                                    can access supported banking functions within TallyPrime. This can reduce repetitive
+                                    work and make daily accounting tasks more convenient.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>5. Make Online Payments Through Supported Banks</h3>
+                                <p>Connected Banking can support online payments through eligible bank connections.
+                                    Availability depends on the bank, account type, configuration, and supported payment
+                                    services. Online payments may require additional activation and bank authentication.
+                                </p>
+                                <p>TallyPrime documentation describes online payment support for eligible Axis Bank and
+                                    State Bank of India connections. Verify current availability for your own bank and
+                                    account before using this feature.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="requirements">
+                    <h2>Requirements for Using Connected Banking in TallyPrime</h2>
+                    <p>Before setting up Connected Banking, check the following requirements.</p>
+                    <div class="table-wrap">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Requirement</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TallyPrime version</td>
+                                    <td>Release 6.0 or later, subject to current feature requirements</td>
+                                </tr>
+                                <tr>
+                                    <td>Tally software subscription</td>
+                                    <td>Valid Tally Software Services (TSS), as required</td>
+                                </tr>
+                                <tr>
+                                    <td>Tally.NET ID</td>
+                                    <td>Registered email address associated with the licence</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile number</td>
+                                    <td>Valid 10-digit mobile number for verification</td>
+                                </tr>
+                                <tr>
+                                    <td>Internet connection</td>
+                                    <td>Stable internet access</td>
+                                </tr>
+                                <tr>
+                                    <td>Supported bank</td>
+                                    <td>A bank and account type eligible for the service</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank ledger</td>
+                                    <td>The relevant bank ledger should be created in TallyPrime</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank authentication</td>
+                                    <td>Required authorisation through the bank's process</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="warning-box">
+                        <strong>Version and eligibility note:</strong> Requirements can vary by feature, bank, account
+                        type, and software release. Check the current official documentation before setting up the
+                        connection.
+                    </div>
+                </section>
+
+                <section class="article-section" id="enable-connected-banking">
+                    <h2>How to Enable Connected Banking in TallyPrime</h2>
+                    <p>Follow these steps to enable the feature.</p>
+                    <div class="steps-list">
+                        <div class="step-card"><span class="step-index">01</span>
+                            <div>
+                                <h3>Open TallyPrime</h3>
+                                <p>Launch TallyPrime and open the company in which you want to manage banking
+                                    transactions.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">02</span>
+                            <div>
+                                <h3>Open Connected Banking</h3>
+                                <p>Navigate to <strong>Alt+Z (Exchange) → All Banking Options → Login &amp;
+                                        Logout</strong>. The exact menu presentation may differ slightly between
+                                    releases.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">03</span>
+                            <div>
+                                <h3>Enter Your Tally.NET Credentials</h3>
+                                <p>Enter the Tally.NET ID associated with your licence and provide the required
+                                    password.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">04</span>
+                            <div>
+                                <h3>Link Your Mobile Number</h3>
+                                <p>Enter a valid mobile number to link it to your Tally.NET ID, if it has not already
+                                    been linked.</p>
+                            </div>
+                        </div>
+                        <div class="step-card"><span class="step-index">05</span>
+                            <div>
+                                <h3>Complete OTP Verification</h3>
+                                <p>Read and accept the applicable terms and privacy information, then enter the OTP
+                                    received on your mobile number. After successful verification, you can proceed to
+                                    connect bank accounts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="connect-bank-account">
+                    <h2>How to Connect Your Bank Account to TallyPrime</h2>
+                    <p>After enabling Connected Banking, follow these steps to establish a bank connection.</p>
+                    <ol class="numbered-list">
+                        <li>Open <strong>Alt+Z (Exchange) → All Banking Options → Bank Connections</strong>.</li>
+                        <li>Log in to Connected Banking if required.</li>
+                        <li>Select <strong>F6 (New Connection)</strong>.</li>
+                        <li>Select the supported bank.</li>
+                        <li>Follow the on-screen instructions to connect to the bank.</li>
+                        <li>Complete the bank's authentication and authorisation process.</li>
+                        <li>Return to TallyPrime and refresh the connection status.</li>
+                        <li>Verify that the connection is shown as connected.</li>
+                        <li>Check the linked bank accounts and match them with the appropriate bank ledgers.</li>
+                    </ol>
+                    <p>The bank connection may require additional approval or authentication depending on the bank and
+                        user permissions.</p>
+                    <div class="warning-box"><strong>Security reminder:</strong> Never share your banking password, OTP,
+                        or other authentication credentials with unauthorised people.</div>
+                </section>
+
+                <section class="article-section" id="check-bank-balance">
+                    <h2>How to Check Your Bank Balance in TallyPrime</h2>
+                    <p>Once your bank account is connected, you can retrieve its balance directly from TallyPrime.</p>
+                    <h3>Step-by-step process</h3>
+                    <ol class="numbered-list">
+                        <li>Open TallyPrime and log in to Connected Banking.</li>
+                        <li>Press <strong>Alt+Z (Exchange)</strong> and select <strong>Get Balance</strong>.</li>
+                        <li>Select one or more connected bank accounts.</li>
+                        <li>Choose <strong>B (Get Balance)</strong>.</li>
+                        <li>Review the retrieved bank balance information.</li>
+                    </ol>
+                    <p>You can also configure the report to display the bank name and the ledger balance according to
+                        your books, making it easier to compare the two balances.</p>
+                    <div class="example-card">
+                        <span class="example-label">PRACTICAL EXAMPLE</span>
+                        <h3>Compare the bank balance with the book balance</h3>
+                        <div class="table-wrap">
+                            <table class="reference-table compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bank balance according to the bank</td>
+                                        <td>₹1,20,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank ledger balance in TallyPrime</td>
+                                        <td>₹1,15,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Difference to investigate</td>
+                                        <td>₹5,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The difference does not necessarily mean that an error has occurred. It could result from
+                            unrecorded bank charges, outstanding transactions, timing differences, or other unreconciled
+                            entries. Review the bank statement and accounting records to identify the reason.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="get-bank-statement">
+                    <h2>How to Get a Bank Statement Using Connected Banking</h2>
+                    <p>Connected Banking also lets you retrieve bank statements for a selected period.</p>
+                    <h3>Step-by-step process</h3>
+                    <ol class="numbered-list">
+                        <li>Open <strong>Alt+Z (Exchange) → All Banking Options → Get Statement</strong>.</li>
+                        <li>Select the relevant bank ledger.</li>
+                        <li>Set the statement period by entering the start and end dates.</li>
+                        <li>Choose <strong>S (Get Statement)</strong>.</li>
+                        <li>Wait for the statement request to complete.</li>
+                        <li>Select the statement that is ready to import and follow the on-screen instructions.</li>
+                    </ol>
+                    <p>Once the statement is available in TallyPrime, you can use it to reconcile bank transactions with
+                        your accounting records.</p>
+                    <div class="note-box"><strong>Example:</strong> A business wants to reconcile bank transactions for
+                        October 2026. The accountant retrieves the statement for 1 October to 12 October 2026 and
+                        compares it with TallyPrime records.</div>
+                    <p>The accountant can then identify:</p>
+                    <ul class="check-list">
+                        <li>Payments recorded in TallyPrime but not yet reflected in the bank statement.</li>
+                        <li>Bank charges that have not been entered in the books.</li>
+                        <li>Customer payments received directly into the bank.</li>
+                        <li>Duplicate or incorrectly recorded transactions.</li>
+                    </ul>
+                    <p>After investigating the differences, the accountant can record any missing transactions and
+                        complete the reconciliation.</p>
+                </section>
+
+                <section class="article-section" id="traditional-vs-connected">
+                    <h2>Connected Banking vs Traditional Banking and Accounting</h2>
+                    <div class="table-wrap">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Traditional workflow</th>
+                                    <th>With Connected Banking</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Check bank balance</td>
+                                    <td>Open the bank portal separately</td>
+                                    <td>Retrieve balance within TallyPrime</td>
+                                </tr>
+                                <tr>
+                                    <td>Get bank statement</td>
+                                    <td>Download statement manually</td>
+                                    <td>Request a statement through the supported connection</td>
+                                </tr>
+                                <tr>
+                                    <td>Reconcile transactions</td>
+                                    <td>Obtain statement, then compare entries</td>
+                                    <td>Use retrieved statement information in the reconciliation workflow</td>
+                                </tr>
+                                <tr>
+                                    <td>Manage banking information</td>
+                                    <td>Switch between banking and accounting applications</td>
+                                    <td>Access supported banking functions from TallyPrime</td>
+                                </tr>
+                                <tr>
+                                    <td>Make online payments</td>
+                                    <td>Use the bank's online banking service</td>
+                                    <td>Initiate payments in TallyPrime where supported</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Connected Banking can reduce repetitive steps, but it does not eliminate the need for accounting
+                        review, accurate ledger maintenance, or transaction reconciliation.</p>
+                    <p>For more on transaction review and matching, see <a
+                            routerLink="/match-bank-transactions-with-tallyprime-entries">How to Match Bank Transactions
+                            With TallyPrime Entries</a>.</p>
+                </section>
+
+                <section class="article-section" id="security">
+                    <h2>Is Connected Banking in TallyPrime Secure?</h2>
+                    <p>Security is an important consideration when connecting business bank accounts to accounting
+                        software.</p>
+                    <p>TallyPrime's Connected Banking uses authenticated access and secure communication mechanisms.
+                        Depending on the bank and the feature being used, additional verification and approval controls
+                        apply.</p>
+                    <p>For supported online payments, OTP verification and configurable transaction limits provide
+                        additional safeguards. Online payments can also be enabled or disabled for a bank connection,
+                        subject to the supported workflow.</p>
+                    <h3>Security practices for businesses</h3>
+                    <ul class="check-list">
+                        <li>Use authorised Tally.NET accounts.</li>
+                        <li>Give employees only the banking access they require.</li>
+                        <li>Keep passwords and OTPs confidential.</li>
+                        <li>Verify payment details before authorising transactions.</li>
+                        <li>Review bank connection permissions periodically.</li>
+                        <li>Disconnect bank accounts when access is no longer required.</li>
+                        <li>Keep TallyPrime and the relevant subscription up to date.</li>
+                    </ul>
+                    <div class="warning-box"><strong>Remember:</strong> Connected Banking does not remove the need for
+                        internal controls. Businesses should continue to follow their normal payment approval and
+                        accounting procedures.</div>
+                </section>
+
+                <section class="article-section" id="common-problems">
+                    <h2>Common Connected Banking Problems and Solutions</h2>
+                    <div class="problem-list">
+                        <div class="problem-card">
+                            <h3>1. Bank Connection Is Not Available</h3>
+                            <p><strong>Possible reason:</strong> The bank, account type, or feature may not be
+                                supported.</p>
+                            <p><strong>Solution:</strong> Verify eligibility using the latest official TallyPrime
+                                Connected Banking documentation and confirm that the bank ledger is correctly
+                                configured.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>2. Unable to Log In to Connected Banking</h3>
+                            <p><strong>Possible reasons:</strong> Incorrect Tally.NET credentials, an unlinked mobile
+                                number, an incorrect OTP, or an expired session.</p>
+                            <p><strong>Solution:</strong> Verify your login details, check the mobile number linked to
+                                your Tally.NET ID, and complete the required authentication process again.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>3. Bank Balance Is Not Updating</h3>
+                            <p><strong>Possible reasons:</strong> Internet connectivity issues, an inactive session, or
+                                a problem with the bank connection.</p>
+                            <p><strong>Solution:</strong> Check your internet connection, log in again if necessary,
+                                verify the bank connection, and retry the balance request.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>4. Unable to Retrieve a Bank Statement</h3>
+                            <p><strong>Possible reasons:</strong> The account is not connected, the statement period is
+                                incorrect, or the bank service is temporarily unavailable.</p>
+                            <p><strong>Solution:</strong> Confirm that the account is connected, check the selected
+                                dates, and retry the request. If the problem continues, consult the bank or Tally
+                                support.</p>
+                        </div>
+                        <div class="problem-card">
+                            <h3>5. Bank Balance and Ledger Balance Do Not Match</h3>
+                            <p><strong>Possible reasons:</strong> Missing transactions, bank charges, outstanding
+                                payments, or timing differences.</p>
+                            <p><strong>Solution:</strong> Compare the bank statement with the TallyPrime bank ledger,
+                                identify the difference, and record or reconcile the relevant transactions.</p>
+                        </div>
+                    </div>
+                    <p>You can also review the <a routerLink="/how-to-check-bank-book-in-tallyprime">Bank Book in
+                            TallyPrime</a> to inspect recorded transactions and ledger balances.</p>
+                </section>
+
+                <section class="article-section faq-section" id="faqs">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What is Connected Banking in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Connected Banking is a feature that allows users to access supported bank accounts
+                                    and banking services from within TallyPrime. It can provide bank balances,
+                                    statements, reconciliation support, and online payment functionality where
+                                    available.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Which TallyPrime version supports Connected Banking?</summary>
+                            <div class="faq-answer">
+                                <p>Connected Banking was introduced in TallyPrime Release 6.0. Check the current
+                                    official requirements for your particular bank and feature before enabling it.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can I check my bank balance in TallyPrime without opening my bank website?
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes. Once Connected Banking is enabled and your bank account is connected, you can
+                                    retrieve the available bank balance through the Get Balance option, subject to the
+                                    bank's supported services and a successful connection.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Can I download bank statements directly into TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>You can request bank statements through Connected Banking for supported bank accounts
+                                    and selected periods. The statement can then be used in the relevant accounting and
+                                    reconciliation workflow.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Does Connected Banking automatically reconcile every bank transaction?</summary>
+                            <div class="faq-answer">
+                                <p>No. Connected Banking makes bank information available within TallyPrime and helps
+                                    streamline reconciliation. Accountants must still review unmatched transactions,
+                                    investigate differences, and ensure the books are accurate.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Can I make payments directly from TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Yes, for supported bank connections and payment features. Availability depends on the
+                                    bank, account type, activation settings, and required authentication. Verify the
+                                    current supported payment options before using the feature.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Is a Tally.NET ID required for Connected Banking?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. A Tally.NET ID associated with the licence is required, along with the
+                                    applicable login and mobile verification process.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Is Connected Banking useful for small businesses?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. Small businesses can use it to check bank balances, access statements, and
+                                    simplify the reconciliation process. The practical benefits depend on their bank's
+                                    support and how frequently they process transactions.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>9. What is the difference between Connected Banking and bank reconciliation?
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Connected Banking provides access to supported banking information and services. Bank
+                                    reconciliation is the process of comparing bank transactions with the entries
+                                    recorded in the company's books. Connected Banking can make that process easier, but
+                                    reconciliation still requires appropriate review.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>Connected Banking in TallyPrime brings supported banking services closer to everyday accounting
+                        activities. It helps businesses retrieve bank balances and statements, streamline
+                        reconciliation, and access online payments where supported.</p>
+                    <p>By learning how to enable Connected Banking, connect bank accounts, retrieve statements, and
+                        compare banking information with accounting records, users can develop a better understanding of
+                        modern banking and accounting workflows.</p>
+                    <p>For accounting students and aspiring accountants, practising these features alongside ledger
+                        creation, payment vouchers, and bank reconciliation can strengthen practical TallyPrime skills.
+                    </p>
+                    <div class="training-cta">
+                        <span class="cta-kicker">RLT EDZARO · TALLY TRAINING</span>
+                        <h3>Want to learn TallyPrime and practical accounting?</h3>
+                        <p>RLT Edzaro provides Tally training designed to help learners develop practical knowledge of
+                            accounting software and related workflows.</p>
+                        <a href="https://rltedzaro.com/tally-training-institute-in-chennai" class="primary-cta">Explore
+                            Tally Training <span aria-hidden="true">→</span></a>
+                        <p class="cta-website">Build your accounting knowledge and prepare for practical accounting
+                            tasks with structured TallyPrime learning.</p>
+                    </div>
+                </section>
+
+                <section class="related-articles-section" id="related-articles">
+                    <div class="related-heading">
+                        <span class="section-kicker">CONTINUE LEARNING</span>
+                        <h2>Related Articles</h2>
+                        <p>Explore more TallyPrime guides to strengthen your banking and accounting knowledge.</p>
+                    </div>
+                    <div class="related-articles-grid">
+                        <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime"
+                            class="related-article-card"><span class="related-number">01</span>
+                            <h3>How to Perform Bank Reconciliation in TallyPrime</h3><span class="related-read">Read
+                                article <b aria-hidden="true">→</b></span>
+                        </a>
+                        <a routerLink="/match-bank-transactions-with-tallyprime-entries"
+                            class="related-article-card"><span class="related-number">02</span>
+                            <h3>How to Match Bank Transactions With TallyPrime Entries</h3><span
+                                class="related-read">Read article <b aria-hidden="true">→</b></span>
+                        </a>
+                        <a routerLink="/how-to-check-bank-book-in-tallyprime" class="related-article-card"><span
+                                class="related-number">03</span>
+                            <h3>How to Check Bank Book in TallyPrime</h3><span class="related-read">Read article <b
+                                    aria-hidden="true">→</b></span>
+                        </a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"
+                            class="related-article-card"><span class="related-number">04</span>
+                            <h3>TallyPrime Voucher Types Explained</h3><span class="related-read">Read article <b
+                                    aria-hidden="true">→</b></span>
+                        </a>
+                        <a routerLink="/how-to-record-bank-transactions-in-tallyprime"
+                            class="related-article-card"><span class="related-number">05</span>
+                            <h3>How to Record Bank Transactions in TallyPrime</h3><span class="related-read">Read
+                                article <b aria-hidden="true">→</b></span>
+                        </a>
+                        <a routerLink="/tallyprime-gst-invoice-format" class="related-article-card"><span
+                                class="related-number">06</span>
+                            <h3>TallyPrime GST Invoice Format: Complete Guide</h3><span class="related-read">Read
+                                article <b aria-hidden="true">→</b></span>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="article-footer-actions">
+                    <a routerLink="/blogs" class="all-blogs-button"><span aria-hidden="true">←</span> Explore All
+                        Blogs</a>
+                    <button type="button" class="back-to-top" (click)="scrollToTop($event)">Back to Top <span
+                            aria-hidden="true">↑</span></button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>

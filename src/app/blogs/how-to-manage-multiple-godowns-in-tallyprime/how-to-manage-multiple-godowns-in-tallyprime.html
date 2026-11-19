@@ -1,0 +1,765 @@
+<!--
+  RLT EDZARO | TALLYPRIME BLOG
+  Article: How to Manage Multiple Godowns in TallyPrime
+  Angular component template. Keep this file name aligned with the component metadata.
+-->
+
+<div class="entries-blog">
+    <!-- HERO SECTION -->
+    <header class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Inventory Management</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                TALLYPRIME INVENTORY GUIDE
+            </div>
+
+            <h1>How to Manage Multiple Godowns in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to enable godown management, create multiple storage locations,
+                allocate inventory, record stock transfers, and review location-wise stock
+                balances in TallyPrime.
+            </p>
+
+            <div class="hero-meta" aria-label="Article information">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Step-by-step tutorial</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Topics covered">
+                <span>Multiple Godowns</span>
+                <span>Stock Transfer</span>
+                <span>Godown-Wise Stock</span>
+                <span>Inventory Reports</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE AREA -->
+    <main class="entries-page">
+        <div class="entries-container">
+            <div class="article-layout">
+                <!-- SIDEBAR -->
+                <aside class="article-sidebar" aria-label="Article navigation and related help">
+                    <div class="toc-card">
+                        <span class="toc-label">ARTICLE CONTENTS</span>
+                        <h2>On this page</h2>
+                        <nav class="toc-links" aria-label="Table of contents">
+                            <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                            <a href="#what-is-godown" (click)="scrollToSection($event, 'what-is-godown')">What Is a
+                                Godown?</a>
+                            <a href="#why-multiple-godowns"
+                                (click)="scrollToSection($event, 'why-multiple-godowns')">Why Manage Multiple
+                                Godowns?</a>
+                            <a href="#enable-godowns" (click)="scrollToSection($event, 'enable-godowns')">Enable Godown
+                                Management</a>
+                            <a href="#create-multiple-godowns"
+                                (click)="scrollToSection($event, 'create-multiple-godowns')">Create Multiple Godowns</a>
+                            <a href="#allocate-stock" (click)="scrollToSection($event, 'allocate-stock')">Allocate
+                                Stock</a>
+                            <a href="#transfer-stock" (click)="scrollToSection($event, 'transfer-stock')">Transfer
+                                Stock</a>
+                            <a href="#check-godown-stock" (click)="scrollToSection($event, 'check-godown-stock')">Check
+                                Godown-Wise Stock</a>
+                            <a href="#opening-stock" (click)="scrollToSection($event, 'opening-stock')">Opening
+                                Stock</a>
+                            <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                                Problems</a>
+                            <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best
+                                Practices</a>
+                            <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                                Articles</a>
+                        </nav>
+                        <div class="toc-help">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            <p>Use the section links to move directly to the inventory task you want to learn.</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-cta">
+                        <div class="sidebar-cta-icon">
+                            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <h3>Build Practical TallyPrime Skills</h3>
+                        <p>Learn accounting, GST, inventory management, and business reporting through practical
+                            training.</p>
+                        <a routerLink="/tally-training-institute-in-chennai">
+                            Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- MAIN ARTICLE -->
+                <article class="article-content">
+                    <section class="article-section" id="introduction">
+                        <div class="section-eyebrow">01 / INTRODUCTION</div>
+                        <h2>Introduction</h2>
+                        <p>
+                            Managing inventory across multiple locations can become challenging as a business grows.
+                            A company may store goods in a main warehouse, a branch office, a retail outlet, or a
+                            separate storage facility. Without proper inventory tracking, businesses may struggle
+                            to identify where stock is available, which location needs replenishment, and how much
+                            inventory is held at each warehouse.
+                        </p>
+                        <p>
+                            TallyPrime helps businesses organise inventory by creating multiple godowns, recording
+                            stock movements, and reviewing stock balances for different storage locations.
+                        </p>
+                        <p>
+                            Whether you are an accounting student, inventory executive, storekeeper, or business
+                            owner, learning how to manage multiple godowns in TallyPrime can help you understand
+                            practical inventory management.
+                        </p>
+                        <p>
+                            In this guide, you will learn how to enable godown management, create multiple godowns,
+                            record stock transfers, check location-wise stock, and avoid common inventory errors.
+                        </p>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fa-solid fa-warehouse" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>What you will learn</h3>
+                                <p>Set up storage locations, allocate stock to the correct godown, record internal stock
+                                    movement, and verify each location's inventory balance.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="what-is-godown">
+                        <div class="section-eyebrow">02 / THE BASICS</div>
+                        <h2>What Is a Godown in TallyPrime?</h2>
+                        <p>
+                            A godown in TallyPrime is a location used to track where inventory is stored. It may
+                            represent a warehouse, store, branch stockroom, distribution centre, or another
+                            physical storage location.
+                        </p>
+                        <p>For example, a business may maintain the following godowns:</p>
+                        <div class="ledger-list">
+                            <span><i class="fa-solid fa-warehouse" aria-hidden="true"></i>Main Warehouse</span>
+                            <span><i class="fa-solid fa-shop" aria-hidden="true"></i>Chennai Branch</span>
+                            <span><i class="fa-solid fa-store" aria-hidden="true"></i>Tambaram Store</span>
+                            <span><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>Finished Goods
+                                Warehouse</span>
+                            <span><i class="fa-solid fa-industry" aria-hidden="true"></i>Raw Materials Store</span>
+                        </div>
+                        <p>
+                            By assigning stock to the appropriate godown, businesses can track inventory quantities
+                            at different locations instead of maintaining only one overall stock balance.
+                        </p>
+                        <div class="transaction-box">
+                            <h4>Simple example</h4>
+                            <p>If a company has 500 units of a product, with 300 units in its main warehouse and 200
+                                units in its Chennai branch, godown management helps the company identify the stock
+                                available at each location.</p>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="why-multiple-godowns">
+                        <div class="section-eyebrow">03 / BUSINESS BENEFITS</div>
+                        <h2>Why Is Multiple Godown Management Important?</h2>
+                        <p>Managing multiple godowns in TallyPrime can help businesses improve inventory visibility and
+                            control.</p>
+                        <div class="report-grid">
+                            <div class="report-item"><i class="fa-solid fa-location-dot"
+                                    aria-hidden="true"></i><span><strong>Location-Wise Stock
+                                        Tracking</strong><br>Identify how much stock is available at each warehouse or
+                                    storage location.</span></div>
+                            <div class="report-item"><i class="fa-solid fa-chart-line"
+                                    aria-hidden="true"></i><span><strong>Better Inventory Planning</strong><br>Identify
+                                    where stock is running low and where surplus inventory is available.</span></div>
+                            <div class="report-item"><i class="fa-solid fa-right-left"
+                                    aria-hidden="true"></i><span><strong>Accurate Stock Transfers</strong><br>Record the
+                                    movement of goods between godowns.</span></div>
+                            <div class="report-item"><i class="fa-solid fa-clipboard-check"
+                                    aria-hidden="true"></i><span><strong>Reduced Inventory Errors</strong><br>Reduce
+                                    confusion about stock availability and physical location.</span></div>
+                            <div class="report-item"><i class="fa-solid fa-chart-pie"
+                                    aria-hidden="true"></i><span><strong>Improved Business Reporting</strong><br>Review
+                                    stock balances and movements across storage locations.</span></div>
+                            <div class="report-item"><i class="fa-solid fa-building"
+                                    aria-hidden="true"></i><span><strong>Support for Business
+                                        Expansion</strong><br>Maintain organised inventory records as branches and
+                                    warehouses are added.</span></div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="enable-godowns">
+                        <div class="section-eyebrow">04 / CONFIGURATION</div>
+                        <h2>How to Enable Multiple Godowns in TallyPrime</h2>
+                        <p>Before creating multiple godowns, make sure the godown feature is enabled for your company.
+                        </p>
+                        <div class="practice-roadmap">
+                            <div class="practice-step"><span class="step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Open TallyPrime</h3>
+                                    <p>Launch TallyPrime.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Select the company</h3>
+                                    <p>Choose the company in which you want to manage inventory.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Open company or inventory settings</h3>
+                                    <p>Open the company features or inventory configuration settings.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Locate the godown option</h3>
+                                    <p>Find the option for maintaining multiple godowns or locations.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Enable and save</h3>
+                                    <p>Enable the relevant feature and save the configuration.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="learning-note">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            <p>The exact navigation and wording may vary depending on your TallyPrime release. Once the
+                                feature is enabled, you can create godowns and assign stock to the relevant locations.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="create-multiple-godowns">
+                        <div class="section-eyebrow">05 / GODOWN MASTERS</div>
+                        <h2>How to Create Multiple Godowns in TallyPrime</h2>
+                        <p>Let us understand the process using a practical example. Suppose ABC Traders stores products
+                            in three locations: Main Warehouse, Chennai Branch, and Tambaram Store.</p>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header">
+                                <span class="entry-number">01</span>
+                                <div class="entry-heading"><span class="entry-category">STEP ONE</span>
+                                    <h3>Open Godown Creation</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Navigate to the godown creation option in TallyPrime. In many TallyPrime
+                                    configurations, godowns can be created through the inventory master creation menu.
+                                    The precise menu path may vary by version.</p>
+                            </div>
+                        </div>
+                        <div class="entry-card">
+                            <div class="entry-card-header">
+                                <span class="entry-number">02</span>
+                                <div class="entry-heading"><span class="entry-category">STEP TWO</span>
+                                    <h3>Create the Main Warehouse</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Enter the godown name as <strong>Main Warehouse</strong>. Select the appropriate
+                                    parent godown. For a standalone location, this is generally the primary godown,
+                                    often named <strong>Primary</strong>. Save the godown master.</p>
+                            </div>
+                        </div>
+                        <div class="entry-card">
+                            <div class="entry-card-header">
+                                <span class="entry-number">03</span>
+                                <div class="entry-heading"><span class="entry-category">STEP THREE</span>
+                                    <h3>Create the Chennai Branch</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Create another godown named <strong>Chennai Branch</strong>. Select the appropriate
+                                    parent godown and save the record.</p>
+                            </div>
+                        </div>
+                        <div class="entry-card">
+                            <div class="entry-card-header">
+                                <span class="entry-number">04</span>
+                                <div class="entry-heading"><span class="entry-category">STEP FOUR</span>
+                                    <h3>Create the Tambaram Store</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Repeat the process and create a godown named <strong>Tambaram Store</strong>. You
+                                    should now have three locations available for inventory allocation.</p>
+                            </div>
+                        </div>
+                        <div class="entry-card">
+                            <div class="entry-card-header">
+                                <span class="entry-number">05</span>
+                                <div class="entry-heading"><span class="entry-category">STEP FIVE</span>
+                                    <h3>Create a Hierarchical Godown Structure if Needed</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>If a business has multiple warehouses with smaller storage areas, it may use a
+                                    parent-child structure.</p>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Parent Godown</th>
+                                                <th>Sub-Godown</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Main Warehouse</strong></td>
+                                                <td>Raw Materials</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Main Warehouse</strong></td>
+                                                <td>Finished Goods</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Main Warehouse</strong></td>
+                                                <td>Packing Materials</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Separate Location</strong></td>
+                                                <td>Chennai Branch</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Separate Location</strong></td>
+                                                <td>Tambaram Store</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>This structure can help organise inventory when the business needs to track both the
+                                    main storage location and its sub-locations. Use a hierarchy only when it matches
+                                    the business's actual storage and reporting requirements.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="allocate-stock">
+                        <div class="section-eyebrow">06 / STOCK ALLOCATION</div>
+                        <h2>How to Allocate Stock to Different Godowns</h2>
+                        <p>After creating the godowns, the next step is to record inventory against the correct
+                            location. For this example, ABC Traders has 500 units of Product A.</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Godown</th>
+                                        <th>Product A Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Main Warehouse</td>
+                                        <td>300 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chennai Branch</td>
+                                        <td>120 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tambaram Store</td>
+                                        <td>80 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total Stock</strong></td>
+                                        <td><strong>500 units</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="subsection-heading">Steps to Allocate Stock</h3>
+                        <ol>
+                            <li>Make sure Product A exists as a stock item.</li>
+                            <li>Open the appropriate inventory voucher.</li>
+                            <li>Select the stock item.</li>
+                            <li>Enter the relevant godown or location.</li>
+                            <li>Enter the quantity allocated to that godown.</li>
+                            <li>Repeat for other locations as required.</li>
+                            <li>Verify the total quantity and save the voucher.</li>
+                        </ol>
+                        <div class="gst-warning">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <p><strong>Important:</strong> Creating a godown does not automatically allocate inventory
+                                to it. You must record the stock quantities and movements using the appropriate voucher
+                                workflow. The exact voucher and allocation process depends on whether you are recording
+                                opening stock, a purchase, a sales transaction, or a stock transfer.</p>
+                        </div>
+                        <p>For help setting up the product master first, see <a
+                                routerLink="/create-stock-items-in-tallyprime">How to Create Stock Items in
+                                TallyPrime</a>.</p>
+                    </section>
+
+                    <section class="article-section" id="transfer-stock">
+                        <div class="section-eyebrow">07 / STOCK MOVEMENT</div>
+                        <h2>How to Transfer Stock Between Godowns in TallyPrime</h2>
+                        <p>Stock transfers are common when one warehouse supplies goods to another branch or storage
+                            location. TallyPrime supports inventory transfer workflows that can be used to record such
+                            movements.</p>
+                        <div class="transaction-box">
+                            <h4>Practical example</h4>
+                            <p>ABC Traders transfers 50 units of Product A from its Main Warehouse to the Chennai
+                                Branch.</p>
+                        </div>
+                        <h3 class="subsection-heading">Stock Before the Transfer</h3>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Godown</th>
+                                        <th>Stock Available</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Main Warehouse</td>
+                                        <td>300 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chennai Branch</td>
+                                        <td>120 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tambaram Store</td>
+                                        <td>80 units</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>500 units</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="subsection-heading">Stock After Transferring 50 Units</h3>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Godown</th>
+                                        <th>Stock Before</th>
+                                        <th>Transfer</th>
+                                        <th>Stock After</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Main Warehouse</td>
+                                        <td>300</td>
+                                        <td class="amount-negative">-50</td>
+                                        <td>250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chennai Branch</td>
+                                        <td>120</td>
+                                        <td class="amount-positive">+50</td>
+                                        <td>170</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tambaram Store</td>
+                                        <td>80</td>
+                                        <td>0</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>500</strong></td>
+                                        <td><strong>0</strong></td>
+                                        <td><strong>500</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fa-solid fa-equals" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>Total stock remains unchanged</h3>
+                                <p>The transfer changes the stock location, not the overall quantity. The total remains
+                                    500 units.</p>
+                            </div>
+                        </div>
+                        <h3 class="subsection-heading">Steps to Record a Stock Transfer</h3>
+                        <ol>
+                            <li>Open the appropriate inventory voucher in TallyPrime.</li>
+                            <li>Select the supported stock transfer or stock journal workflow.</li>
+                            <li>Select Product A.</li>
+                            <li>Choose Main Warehouse as the source godown.</li>
+                            <li>Enter the quantity as 50 units.</li>
+                            <li>Select Chennai Branch as the destination godown.</li>
+                            <li>Enter the corresponding receipt quantity.</li>
+                            <li>Verify that the transfer quantities match.</li>
+                            <li>Save the voucher.</li>
+                        </ol>
+                        <div class="learning-note">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>The available voucher options and fields depend on the TallyPrime configuration. Review
+                                the resulting godown balances to ensure the transfer was recorded correctly. Record
+                                transfers promptly and retain supporting documents such as stock transfer notes or
+                                internal movement records when required by your business process.</p>
+                        </div>
+                        <p>For more information about transaction entry, read <a
+                                routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                                Explained</a>.</p>
+                    </section>
+
+                    <section class="article-section" id="check-godown-stock">
+                        <div class="section-eyebrow">08 / INVENTORY REPORTING</div>
+                        <h2>How to Check Godown-Wise Stock in TallyPrime</h2>
+                        <p>After recording inventory transactions, review the stock reports to verify that each location
+                            has the correct quantity.</p>
+                        <div class="practice-roadmap">
+                            <div class="practice-step"><span class="step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Open Inventory Reports</h3>
+                                    <p>Navigate to the inventory reporting section in TallyPrime.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Select Stock Summary or Godown Report</h3>
+                                    <p>Depending on the available report options and configuration, review the Stock
+                                        Summary and the relevant godown-wise stock report.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Choose the Required Period</h3>
+                                    <p>Select the reporting period relevant to your inventory review.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Review Each Location</h3>
+                                    <p>Check the available quantities for the Main Warehouse, Chennai Branch, Tambaram
+                                        Store, and other configured godowns.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Investigate Differences</h3>
+                                    <p>Compare the system balances with physical stock records and investigate any
+                                        discrepancies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Godown-wise reports help businesses identify stock availability without manually combining
+                            records from multiple locations.</p>
+                        <p>You can also read <a
+                                routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime">How to Create
+                                Stock Groups and Categories in TallyPrime</a> to organise inventory masters for clearer
+                            stock reporting.</p>
+                    </section>
+
+                    <section class="article-section" id="opening-stock">
+                        <div class="section-eyebrow">09 / OPENING INVENTORY</div>
+                        <h2>How to Manage Opening Stock in Multiple Godowns</h2>
+                        <p>When starting to use godown management, a business may need to record its existing inventory.
+                            Suppose the physical stock on the starting date is:</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Main Warehouse</th>
+                                        <th>Chennai Branch</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Product A</td>
+                                        <td>200</td>
+                                        <td>100</td>
+                                        <td>300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product B</td>
+                                        <td>150</td>
+                                        <td>50</td>
+                                        <td>200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product C</td>
+                                        <td>80</td>
+                                        <td>20</td>
+                                        <td>100</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="subsection-heading">Steps to Record Opening Stock</h3>
+                        <ol>
+                            <li>Create the required godowns.</li>
+                            <li>Create or verify the stock item masters.</li>
+                            <li>Enter the opening quantities against the correct godowns using the supported
+                                opening-stock or inventory setup workflow.</li>
+                            <li>Enter the relevant valuation details where required.</li>
+                            <li>Compare the recorded balances with the physical stock count.</li>
+                            <li>Verify the resulting stock reports.</li>
+                        </ol>
+                        <div class="gst-warning">
+                            <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <p>If the company already has inventory records, plan the migration carefully to avoid
+                                duplicating opening quantities or changing existing stock values unintentionally.</p>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="common-problems">
+                        <div class="section-eyebrow">10 / TROUBLESHOOTING</div>
+                        <h2>Common Problems in Multiple Godown Management</h2>
+                        <div class="mistake-list">
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-warehouse" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>1. Godown Name Does Not Appear</h3>
+                                    <p><strong>Possible reasons:</strong> The godown was not saved, the multiple-godown
+                                        feature is not enabled, or the voucher or stock item configuration is
+                                        incomplete.</p>
+                                    <p><strong>Solution:</strong> Verify the company inventory settings and godown
+                                        masters.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-location-crosshairs"
+                                        aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>2. Stock Appears in the Wrong Godown</h3>
+                                    <p><strong>Possible reasons:</strong> The wrong location was selected in the
+                                        voucher, the stock transfer was recorded incorrectly, or the inventory
+                                        allocation was not checked before saving.</p>
+                                    <p><strong>Solution:</strong> Review the relevant voucher and correct the allocation
+                                        using the appropriate alteration or adjustment workflow.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>3. Total Stock Does Not Match</h3>
+                                    <p><strong>Possible reasons:</strong> A stock movement is missing, a transfer
+                                        quantity is incorrect, opening stock was entered more than once, or a purchase
+                                        or sales voucher contains incorrect quantities.</p>
+                                    <p><strong>Solution:</strong> Review the inventory vouchers, Stock Summary, and
+                                        godown-wise reports. Compare the records with physical stock.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>4. Stock Transfer Does Not Update Correctly</h3>
+                                    <p><strong>Possible reasons:</strong> The transfer was not saved, the source and
+                                        destination godowns were selected incorrectly, or the voucher configuration is
+                                        unsuitable for the transaction.</p>
+                                    <p><strong>Solution:</strong> Verify the transfer voucher and confirm that the
+                                        source quantity decreases while the destination quantity increases.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-sitemap" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>5. Too Many Godowns Make Reports Difficult to Manage</h3>
+                                    <p><strong>Possible reasons:</strong> Unnecessary duplicate godowns have been
+                                        created, naming conventions are inconsistent, or the hierarchy does not match
+                                        the business's actual storage structure.</p>
+                                    <p><strong>Solution:</strong> Use consistent names and a clear hierarchy. Create
+                                        separate godowns only when they serve a genuine tracking or reporting purpose.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="best-practices">
+                        <div class="section-eyebrow">11 / INVENTORY CONTROL</div>
+                        <h2>Best Practices for Managing Multiple Godowns</h2>
+                        <p>Follow these practices to improve inventory accuracy:</p>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="fa-solid fa-tag" aria-hidden="true"></i><span>Use clear
+                                    and consistent godown names.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-sitemap" aria-hidden="true"></i><span>Create a
+                                    godown hierarchy that matches your storage structure.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-clock" aria-hidden="true"></i><span>Record
+                                    every stock movement promptly.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i><span>Verify source and destination quantities during
+                                    transfers.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-clipboard-check"
+                                    aria-hidden="true"></i><span>Perform regular physical stock counts.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-chart-column"
+                                    aria-hidden="true"></i><span>Review godown-wise stock reports periodically.</span>
+                            </div>
+                            <div class="skill-item"><i class="fa-solid fa-user-shield"
+                                    aria-hidden="true"></i><span>Restrict inventory alterations to authorised users
+                                    where appropriate.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-file-lines"
+                                    aria-hidden="true"></i><span>Maintain supporting records for stock movements.</span>
+                            </div>
+                            <div class="skill-item"><i class="fa-solid fa-filter-circle-xmark"
+                                    aria-hidden="true"></i><span>Avoid creating duplicate or unnecessary godowns.</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TRAINING CTA -->
+                    <section class="local-training-card" aria-label="RLT Edzaro Tally training">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO | PRACTICAL TALLY TRAINING</span>
+                            <h3>Learn TallyPrime and Practical Inventory Management</h3>
+                            <p>Build your understanding of accounting, GST, inventory masters, stock movements, and
+                                financial reporting through structured Tally training.</p>
+                            <div class="branch-pills">
+                                <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical Learning</span>
+                                <span><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Inventory
+                                    Management</span>
+                            </div>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" routerLink="/tally-training-institute-in-chennai">Explore Tally
+                                    Course <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener">Visit RLT Edzaro <i class="fa-solid fa-arrow-up-right-from-square"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- RELATED ARTICLES -->
+                    <section class="related-articles" id="related-articles">
+                        <div class="section-eyebrow">KEEP LEARNING</div>
+                        <h2>Related TallyPrime Articles</h2>
+                        <p>Continue learning about inventory setup, stock management, and accounting workflows with
+                            these related guides.</p>
+                        <div class="related-links">
+                            <a routerLink="/create-stock-items-in-tallyprime"><span><i class="fa-solid fa-box"
+                                        aria-hidden="true"></i> How to Create Stock Items in TallyPrime</span><i
+                                    class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime"><span><i
+                                        class="fa-solid fa-layer-group" aria-hidden="true"></i> How to Create Stock
+                                    Groups and Categories in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span><i
+                                        class="fa-solid fa-file-invoice" aria-hidden="true"></i> TallyPrime Voucher
+                                    Types Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                            <a routerLink="/generate-trial-balance-in-tallyprime"><span><i
+                                        class="fa-solid fa-scale-balanced" aria-hidden="true"></i> How to Generate a
+                                    Trial Balance in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <a class="all-blogs-button" routerLink="/blogs">Explore All Blogs <i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </section>
+
+                    <a class="back-to-top" href="#top" (click)="scrollToTop($event)">
+                        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+</div>

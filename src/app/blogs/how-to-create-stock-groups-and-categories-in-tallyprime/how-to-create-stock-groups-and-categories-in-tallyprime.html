@@ -1,0 +1,970 @@
+<div class="entries-blog">
+    <!-- HERO -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Inventory Management</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                TALLYPRIME INVENTORY GUIDE
+            </div>
+
+            <h1>How to Create Stock Groups and Categories in TallyPrime: Step-by-Step Guide</h1>
+
+            <p class="hero-description">
+                Learn how to organise inventory using stock groups and stock categories in TallyPrime.
+                Follow practical examples and step-by-step instructions for setting up a structured inventory system.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> TallyPrime</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Step-by-step tutorial</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Stock Groups</span>
+                <span>Stock Categories</span>
+                <span>Inventory Masters</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE -->
+    <main class="entries-page">
+        <div class="entries-container article-layout">
+
+            <!-- SIDEBAR / TABLE OF CONTENTS -->
+            <aside class="article-sidebar">
+                <div class="toc-card">
+                    <span class="toc-label">IN THIS ARTICLE</span>
+                    <h2>Contents</h2>
+
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-stock-group" (click)="scrollToSection($event, 'what-is-stock-group')">What Is
+                            a Stock Group?</a>
+                        <a href="#stock-group-examples" (click)="scrollToSection($event, 'stock-group-examples')">Stock
+                            Group Examples</a>
+                        <a href="#stock-group-benefits"
+                            (click)="scrollToSection($event, 'stock-group-benefits')">Benefits of Stock Groups</a>
+                        <a href="#what-is-stock-category"
+                            (click)="scrollToSection($event, 'what-is-stock-category')">What Is a Stock Category?</a>
+                        <a href="#stock-category-examples"
+                            (click)="scrollToSection($event, 'stock-category-examples')">Stock Category Examples</a>
+                        <a href="#stock-category-benefits"
+                            (click)="scrollToSection($event, 'stock-category-benefits')">Benefits of Categories</a>
+                        <a href="#group-vs-category" (click)="scrollToSection($event, 'group-vs-category')">Group vs
+                            Category</a>
+                        <a href="#prerequisites" (click)="scrollToSection($event, 'prerequisites')">Prerequisites</a>
+                        <a href="#create-stock-group" (click)="scrollToSection($event, 'create-stock-group')">Create a
+                            Stock Group</a>
+                        <a href="#stock-group-practical-example"
+                            (click)="scrollToSection($event, 'stock-group-practical-example')">Stock Group Example</a>
+                        <a href="#create-stock-category"
+                            (click)="scrollToSection($event, 'create-stock-category')">Create a Stock Category</a>
+                        <a href="#groups-and-categories-example"
+                            (click)="scrollToSection($event, 'groups-and-categories-example')">Use Both Together</a>
+                        <a href="#create-stock-items" (click)="scrollToSection($event, 'create-stock-items')">Create
+                            Stock Items</a>
+                        <a href="#view-inventory-classification"
+                            (click)="scrollToSection($event, 'view-inventory-classification')">View Inventory
+                            Reports</a>
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                            Mistakes</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    </nav>
+
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents list to jump directly to the stock group or stock category steps.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon">
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    </div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build practical accounting and inventory management skills with RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank" rel="noopener">
+                        Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <article class="article-content">
+
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">01 / INTRODUCTION</div>
+                    <h2>Introduction</h2>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What will you learn?</h3>
+                            <p>You will learn how to create stock groups and stock categories in TallyPrime, understand
+                                their differences, and organise products for more useful inventory reporting.</p>
+                        </div>
+                    </div>
+                    <p>Managing inventory is an important part of accounting for businesses that purchase, sell, or
+                        store goods. When a company handles multiple products, organising them properly helps track
+                        stock quantities, values, and movements more efficiently.</p>
+                    <p>TallyPrime provides inventory management features that allow users to organise products using
+                        stock groups, stock categories, stock items, and stock units. Understanding the difference
+                        between these features helps businesses maintain accurate inventory records and generate useful
+                        stock reports.</p>
+                    <p>In this guide, you will learn how to create stock groups and stock categories in TallyPrime,
+                        understand their differences, and practise inventory management using real-world examples.</p>
+                    <p>Whether you are an accounting student, a beginner, or a business owner, this tutorial will help
+                        you understand how inventory classification works in TallyPrime.</p>
+                </section>
+
+                <section class="article-section" id="what-is-stock-group">
+                    <div class="section-eyebrow">02 / STOCK GROUPS</div>
+                    <h2>What Is a Stock Group in TallyPrime?</h2>
+                    <p>A stock group in TallyPrime is used to classify similar stock items based on their common
+                        characteristics, purpose, or product type.</p>
+                    <p>For example, a computer retailer may sell laptops, desktop computers, keyboards, and mice. The
+                        business can organise these products into groups such as Computers and Computer Accessories.</p>
+                    <p>Stock groups help users organise inventory, analyse stock reports, and manage products more
+                        systematically.</p>
+                </section>
+
+                <section class="article-section" id="stock-group-examples">
+                    <div class="section-eyebrow">03 / EXAMPLES</div>
+                    <h2>Examples of Stock Groups</h2>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Business Type</th>
+                                    <th>Stock Group</th>
+                                    <th>Example Stock Items</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Electronics</td>
+                                    <td><strong>Computers</strong></td>
+                                    <td>Laptops, desktops</td>
+                                </tr>
+                                <tr>
+                                    <td>Electronics</td>
+                                    <td><strong>Accessories</strong></td>
+                                    <td>Keyboards, mice</td>
+                                </tr>
+                                <tr>
+                                    <td>Clothing</td>
+                                    <td><strong>Men's Wear</strong></td>
+                                    <td>Shirts, trousers</td>
+                                </tr>
+                                <tr>
+                                    <td>Clothing</td>
+                                    <td><strong>Women's Wear</strong></td>
+                                    <td>Dresses, kurtas</td>
+                                </tr>
+                                <tr>
+                                    <td>Grocery</td>
+                                    <td><strong>Beverages</strong></td>
+                                    <td>Juice, soft drinks</td>
+                                </tr>
+                                <tr>
+                                    <td>Hardware</td>
+                                    <td><strong>Electrical Items</strong></td>
+                                    <td>Switches, wires</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="article-note"><strong>Note:</strong> These are illustrative classifications. Businesses
+                        can create stock groups according to their inventory requirements.</p>
+                </section>
+
+                <section class="article-section" id="stock-group-benefits">
+                    <div class="section-eyebrow">04 / BENEFITS</div>
+                    <h2>Benefits of Stock Groups in TallyPrime</h2>
+                    <div class="benefit-grid">
+                        <div class="benefit-card"><i class="fa-solid fa-folder-tree" aria-hidden="true"></i>
+                            <h3>Organised products</h3>
+                            <p>Organise similar products under meaningful classifications.</p>
+                        </div>
+                        <div class="benefit-card"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                            <h3>Inventory tracking</h3>
+                            <p>Simplify the review of stock quantities and movements.</p>
+                        </div>
+                        <div class="benefit-card"><i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                            <h3>Stock reporting</h3>
+                            <p>Review stock quantities and values by group.</p>
+                        </div>
+                        <div class="benefit-card"><i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                            <h3>Consistent records</h3>
+                            <p>Improve consistency in stock management.</p>
+                        </div>
+                        <div class="benefit-card"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                            <h3>Inventory analysis</h3>
+                            <p>Support inventory analysis and reporting.</p>
+                        </div>
+                        <div class="benefit-card"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            <h3>Scalable structure</h3>
+                            <p>Make it easier to manage a large number of stock items.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-stock-category">
+                    <div class="section-eyebrow">05 / STOCK CATEGORIES</div>
+                    <h2>What Is a Stock Category in TallyPrime?</h2>
+                    <p>A stock category in TallyPrime allows users to classify stock items based on a common
+                        characteristic that may cut across different stock groups.</p>
+                    <p>In simple terms, a stock group organises products by their type, while a stock category can
+                        classify products according to another shared attribute.</p>
+                    <p>For example, a clothing business might have stock groups for Men's Wear and Women's Wear. It
+                        could use stock categories to classify products by material, such as Cotton and Polyester, if
+                        that classification is useful for its reporting needs.</p>
+                    <p>This creates an additional way to analyse inventory without changing the primary product
+                        grouping.</p>
+                </section>
+
+                <section class="article-section" id="stock-category-examples">
+                    <div class="section-eyebrow">06 / EXAMPLES</div>
+                    <h2>Examples of Stock Categories</h2>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Stock Category</th>
+                                    <th>Example Stock Items</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Cotton</strong></td>
+                                    <td>Cotton shirts, cotton dresses</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Polyester</strong></td>
+                                    <td>Polyester shirts, polyester jackets</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Premium</strong></td>
+                                    <td>Premium laptops, premium accessories</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Standard</strong></td>
+                                    <td>Standard keyboards, standard mice</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="article-note"><strong>Note:</strong> These categories are examples of how a business might
+                        classify its products. The appropriate structure depends on the business's inventory and
+                        reporting requirements.</p>
+                </section>
+
+                <section class="article-section" id="stock-category-benefits">
+                    <div class="section-eyebrow">07 / BENEFITS</div>
+                    <h2>Benefits of Stock Categories</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Classify products across different
+                                stock groups.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Analyse inventory using an
+                                additional classification.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Compare stock items with shared
+                                characteristics.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Improve inventory reporting
+                                flexibility.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Support more detailed stock
+                                analysis.</span></li>
+                    </ul>
+                </section>
+
+                <section class="article-section" id="group-vs-category">
+                    <div class="section-eyebrow">08 / COMPARISON</div>
+                    <h2>Difference Between Stock Groups and Stock Categories in TallyPrime</h2>
+                    <p>Stock groups and stock categories serve different purposes in TallyPrime.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Stock Group</th>
+                                    <th>Stock Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Main purpose</strong></td>
+                                    <td>Organises similar stock items by type</td>
+                                    <td>Classifies items by a shared characteristic</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Classification</strong></td>
+                                    <td>Primary product grouping</td>
+                                    <td>Additional classification</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Example</strong></td>
+                                    <td>Laptops, Accessories</td>
+                                    <td>Premium, Standard</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Relationship</strong></td>
+                                    <td>Can contain multiple stock items</td>
+                                    <td>Can include items from different stock groups</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Best use</strong></td>
+                                    <td>Organising the product structure</td>
+                                    <td>Analysing products across groups</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Simple example</h3>
+                            <p>A laptop can belong to the Computers stock group and the Premium stock category. This
+                                allows the business to review it as a computer and also as a premium product.</p>
+                        </div>
+                    </div>
+                    <p>You do not necessarily need stock categories for every business. If a simple stock group
+                        structure meets your reporting needs, you can start with stock groups and add categories when
+                        necessary.</p>
+                </section>
+
+                <section class="article-section" id="prerequisites">
+                    <div class="section-eyebrow">09 / BEFORE YOU START</div>
+                    <h2>Prerequisites Before Creating Stock Groups and Categories</h2>
+                    <p>Before creating inventory classifications in TallyPrime, check the following:</p>
+                    <div class="checklist-card">
+                        <ol>
+                            <li>Your company is created and open in TallyPrime.</li>
+                            <li>Inventory features are enabled, if required by your configuration.</li>
+                            <li>You have identified the types of products your business handles.</li>
+                            <li>You have planned a meaningful stock group structure.</li>
+                            <li>You have decided whether an additional stock category is needed.</li>
+                            <li>You have identified the relevant units of measurement, such as Nos, Kg, or Litre.</li>
+                        </ol>
+                    </div>
+                    <p>Planning the structure in advance helps prevent duplicate groups and inconsistent product names.
+                    </p>
+                </section>
+
+                <section class="article-section" id="create-stock-group">
+                    <div class="section-eyebrow">10 / STEP-BY-STEP</div>
+                    <h2>How to Create a Stock Group in TallyPrime</h2>
+                    <p>Follow these steps to create a stock group.</p>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 1</span>
+                                <h3>Open Your Company</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Launch TallyPrime and select the company where you want to maintain inventory records.
+                            </p>
+                            <p>Make sure you are working in the correct company before creating stock groups.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">02</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 2</span>
+                                <h3>Open Stock Group Creation</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Navigate to the stock group creation screen. Depending on your TallyPrime release, you
+                                can generally access it through:</p>
+                            <div class="navigation-path"><span>Gateway of Tally</span><i
+                                    class="fa-solid fa-chevron-right" aria-hidden="true"></i><span>Create</span><i
+                                    class="fa-solid fa-chevron-right" aria-hidden="true"></i><strong>Stock
+                                    Group</strong></div>
+                            <p>In releases with a different menu layout, use the available Create or Masters navigation
+                                to locate Stock Group.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">03</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 3</span>
+                                <h3>Enter the Stock Group Name</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Enter a meaningful name for the stock group.</p>
+                            <div class="example-field"><span>STOCK GROUP NAME</span><strong>Electronics</strong></div>
+                            <p>Choose names that clearly describe the products belonging to the group.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">04</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 4</span>
+                                <h3>Select the Parent Group</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Choose the appropriate parent group.</p>
+                            <p>If you are creating a main group, select the option for a primary group where available.
+                                If you are creating a subgroup, select the relevant existing parent group.</p>
+                            <div class="hierarchy-box">
+                                <div class="hierarchy-root"><i class="fa-solid fa-folder" aria-hidden="true"></i>
+                                    Primary group: Electronics</div>
+                                <div class="hierarchy-children">
+                                    <div><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Computers</div>
+                                    <div><i class="fa-solid fa-folder-open" aria-hidden="true"></i> Accessories</div>
+                                </div>
+                            </div>
+                            <p>The parent-child structure helps organise inventory into levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">05</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 5</span>
+                                <h3>Configure Other Details</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Review the available fields and configure any applicable options.</p>
+                            <p>Depending on your requirements, you may be asked about whether quantities of stock items
+                                under the group should be added together for reporting purposes.</p>
+                            <p>Select the appropriate option based on your reporting needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">06</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 6</span>
+                                <h3>Save the Stock Group</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Review the information and save the master.</p>
+                            <p>Your stock group is now available for use when creating stock items.</p>
+                        </div>
+                    </div>
+
+                    <p class="article-note"><strong>Version note:</strong> Menu labels and navigation can vary by
+                        TallyPrime release. Check the available options in your installed version.</p>
+                </section>
+
+                <section class="article-section" id="stock-group-practical-example">
+                    <div class="section-eyebrow">11 / PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Creating Stock Groups for an Electronics Shop</h2>
+                    <p>Suppose you operate an electronics shop that sells laptops, desktop computers, keyboards, and
+                        mice. You can create the following structure:</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Parent Group</th>
+                                    <th>Stock Group</th>
+                                    <th>Stock Items</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primary</td>
+                                    <td><strong>Electronics</strong></td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>Electronics</td>
+                                    <td><strong>Computers</strong></td>
+                                    <td>Laptops, Desktops</td>
+                                </tr>
+                                <tr>
+                                    <td>Electronics</td>
+                                    <td><strong>Accessories</strong></td>
+                                    <td>Keyboards, Mice</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>This structure allows you to classify the products according to their type.</p>
+                    <p>When you create each stock item, assign it to the relevant stock group.</p>
+                    <div class="product-assignment-grid">
+                        <div class="product-assignment"><span>STOCK ITEM</span><strong>Dell Laptop</strong><i
+                                class="fa-solid fa-arrow-down" aria-hidden="true"></i><em>Computers</em></div>
+                        <div class="product-assignment"><span>STOCK ITEM</span><strong>Desktop Computer</strong><i
+                                class="fa-solid fa-arrow-down" aria-hidden="true"></i><em>Computers</em></div>
+                        <div class="product-assignment"><span>STOCK ITEM</span><strong>Wireless Keyboard</strong><i
+                                class="fa-solid fa-arrow-down" aria-hidden="true"></i><em>Accessories</em></div>
+                        <div class="product-assignment"><span>STOCK ITEM</span><strong>Optical Mouse</strong><i
+                                class="fa-solid fa-arrow-down" aria-hidden="true"></i><em>Accessories</em></div>
+                    </div>
+                    <p>This helps you maintain a more organised inventory system.</p>
+                </section>
+
+                <section class="article-section" id="create-stock-category">
+                    <div class="section-eyebrow">12 / STEP-BY-STEP</div>
+                    <h2>How to Create a Stock Category in TallyPrime</h2>
+                    <p>After creating your stock groups, you can create stock categories if you need an additional way
+                        to classify inventory.</p>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 1</span>
+                                <h3>Enable Stock Categories</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Check whether stock categories are enabled in your company's inventory configuration.</p>
+                            <p>Open the relevant inventory features or company configuration settings and enable stock
+                                categories if the option is available.</p>
+                            <p>The exact navigation may vary by TallyPrime release.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">02</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 2</span>
+                                <h3>Open Stock Category Creation</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Navigate to the stock category creation screen. In supported menu layouts, this can
+                                generally be accessed through:</p>
+                            <div class="navigation-path"><span>Gateway of Tally</span><i
+                                    class="fa-solid fa-chevron-right" aria-hidden="true"></i><span>Create</span><i
+                                    class="fa-solid fa-chevron-right" aria-hidden="true"></i><strong>Stock
+                                    Category</strong></div>
+                            <p>If you cannot see the option, review your inventory feature settings and the menu options
+                                available in your release.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">03</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 3</span>
+                                <h3>Enter the Category Name</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Enter a meaningful stock category name.</p>
+                            <div class="example-field"><span>STOCK CATEGORY NAME</span><strong>Premium Products</strong>
+                            </div>
+                            <p>You could also create categories such as Standard Products, Cotton, Polyester, or
+                                Imported Products, depending on your business requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">04</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 4</span>
+                                <h3>Select the Parent Category</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Choose the appropriate parent category.</p>
+                            <p>If the category is a main category, select the primary category option where available.
+                                If it belongs under another category, select the relevant parent.</p>
+                            <p>Keep the category structure simple and avoid unnecessary levels.</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">05</span>
+                            <div class="entry-heading"><span class="entry-category">STEP 5</span>
+                                <h3>Save the Stock Category</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Review the category details and save the master.</p>
+                            <p>You can now use the category while creating or modifying stock items, where supported by
+                                your configuration.</p>
+                        </div>
+                    </div>
+                    <p class="article-note"><strong>Remember:</strong> Stock categories are an additional
+                        classification. Use them when they provide a useful way to analyse your inventory.</p>
+                </section>
+
+                <section class="article-section" id="groups-and-categories-example">
+                    <div class="section-eyebrow">13 / COMBINED EXAMPLE</div>
+                    <h2>Practical Example: Using Stock Groups and Categories Together</h2>
+                    <p>Consider an electronics business that sells laptops and accessories. The business wants to
+                        classify products by product type and quality level.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Stock Item</th>
+                                    <th>Stock Group</th>
+                                    <th>Stock Category</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Premium Laptop</strong></td>
+                                    <td>Computers</td>
+                                    <td>Premium Products</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Standard Laptop</strong></td>
+                                    <td>Computers</td>
+                                    <td>Standard Products</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Premium Keyboard</strong></td>
+                                    <td>Accessories</td>
+                                    <td>Premium Products</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Standard Mouse</strong></td>
+                                    <td>Accessories</td>
+                                    <td>Standard Products</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>This structure allows the business to organise products by type and classify them by quality
+                        level.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>How the two classifications work</h3>
+                            <p>Stock groups provide the main organisational structure, while stock categories provide
+                                another dimension for inventory analysis.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="create-stock-items">
+                    <div class="section-eyebrow">14 / STOCK ITEM SETUP</div>
+                    <h2>How to Create Stock Items After Setting Up Groups and Categories</h2>
+                    <p>After creating stock groups and categories, the next step is to create stock items.</p>
+
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div>
+                                <h3>Open Stock Item Creation</h3>
+                                <p>Navigate to the stock item creation screen using the available Create or Masters
+                                    menu.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div>
+                                <h3>Enter the Stock Item Name</h3>
+                                <p>Enter the product name. Example: Premium Laptop.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div>
+                                <h3>Select the Stock Group</h3>
+                                <p>Select the relevant stock group. Example: Computers.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div>
+                                <h3>Select the Stock Category</h3>
+                                <p>If stock categories are enabled and applicable, select the relevant category.
+                                    Example: Premium Products.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div>
+                                <h3>Select the Unit of Measurement</h3>
+                                <p>Choose the appropriate unit for the stock item, such as Nos, Kg, Litre, or Metre.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div>
+                                <h3>Configure Other Inventory Details</h3>
+                                <p>Enter the relevant opening balance, quantity, rate, valuation settings, and GST or
+                                    other applicable details, as required.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">07</span>
+                            <div>
+                                <h3>Save the Stock Item</h3>
+                                <p>Review the item details and save the stock master. Repeat the process for the
+                                    remaining products.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>For a complete guide to creating inventory masters, read <a
+                            routerLink="/create-stock-items-in-tallyprime">How to Create Stock Items in TallyPrime</a>.
+                    </p>
+                    <p>When you start recording inventory movements, select the relevant voucher type. You can also read
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                            Explained</a> to understand the available transaction vouchers.</p>
+                </section>
+
+                <section class="article-section" id="view-inventory-classification">
+                    <div class="section-eyebrow">15 / INVENTORY REPORTS</div>
+                    <h2>How to View Stock Groups and Categories in TallyPrime</h2>
+                    <p>After setting up your inventory masters, review the relevant stock reports.</p>
+                    <p>Depending on your configuration and TallyPrime release, you may be able to review stock summary
+                        information, stock item details, group-wise balances, and category-wise information through the
+                        available inventory reports.</p>
+                    <div class="report-grid">
+                        <div class="report-item"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Stock
+                                quantities</span></div>
+                        <div class="report-item"><i class="fa-solid fa-indian-rupee-sign"
+                                aria-hidden="true"></i><span>Stock values</span></div>
+                        <div class="report-item"><i class="fa-solid fa-folder-tree"
+                                aria-hidden="true"></i><span>Group-wise balances</span></div>
+                        <div class="report-item"><i class="fa-solid fa-tags" aria-hidden="true"></i><span>Category-wise
+                                information</span></div>
+                    </div>
+                    <p>Use these reports to verify that:</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Stock items are assigned to the
+                                correct groups.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Categories are selected
+                                consistently.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Quantities and values are recorded
+                                correctly.</span></li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Inventory balances match the
+                                underlying transactions.</span></li>
+                    </ul>
+                    <p>If a group or category does not appear as expected, check the stock item master and the report
+                        configuration.</p>
+                    <p>For additional inventory analysis, see <a
+                            routerLink="/how-to-track-stock-ageing-in-tallyprime">How to Track Stock Ageing in
+                            TallyPrime</a>. Confirm this route is available in your Angular project before publishing.
+                    </p>
+                    <p>For broader accounting balances, you can also refer to <a
+                            routerLink="/generate-trial-balance-in-tallyprime">How to Generate a Trial Balance in
+                            TallyPrime</a>.</p>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>Creating a stock group or category does not itself record stock movement. The stock quantity
+                            and value depend on opening balances and inventory transactions recorded for the items.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="common-mistakes">
+                    <div class="section-eyebrow">16 / TROUBLESHOOTING</div>
+                    <h2>Common Mistakes to Avoid</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>1. Creating Duplicate Stock Groups</h3>
+                                <p>Creating groups with similar names can make reports confusing.</p>
+                                <p><strong>Solution:</strong> Plan the structure before creating masters and use
+                                    consistent naming conventions.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>2. Choosing the Wrong Parent Group</h3>
+                                <p>Assigning a subgroup to the wrong parent can affect how inventory is organised.</p>
+                                <p><strong>Solution:</strong> Review the hierarchy before saving the stock group.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>3. Confusing Stock Groups With Stock Categories</h3>
+                                <p>Both features classify inventory, but they serve different purposes.</p>
+                                <p><strong>Solution:</strong> Use stock groups for the main product structure and
+                                    categories for additional classification.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>4. Creating Too Many Categories</h3>
+                                <p>Unnecessary categories can make inventory management more complicated.</p>
+                                <p><strong>Solution:</strong> Create categories only when they provide a useful
+                                    reporting or analysis benefit.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>5. Assigning Stock Items Incorrectly</h3>
+                                <p>A stock item placed in the wrong group or category may appear incorrectly in reports.
+                                </p>
+                                <p><strong>Solution:</strong> Review the stock item master after creation and correct
+                                    any classification errors.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>6. Ignoring Units of Measurement</h3>
+                                <p>Incorrect units can create confusion when recording quantities.</p>
+                                <p><strong>Solution:</strong> Choose suitable units and apply them consistently to each
+                                    stock item.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">17 / FAQs</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What is a stock group in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A stock group is used to organise similar stock items according to their product type
+                                    or other common characteristics. For example, a business can create Computers and
+                                    Accessories stock groups.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. What is a stock category in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A stock category is used to classify stock items according to a shared characteristic
+                                    that may cross different stock groups. For example, Premium Products could include
+                                    items from both the Computers and Accessories groups.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. What is the difference between a stock group and a stock category?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A stock group provides the main organisation of inventory, while a stock category
+                                    provides an additional classification. A product can belong to a stock group and
+                                    also have a stock category.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Can I create multiple stock groups in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. You can create multiple stock groups and, where appropriate, organise them into
+                                    a parent-child hierarchy.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Is it compulsory to create stock categories in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>No. Stock categories are useful when a business needs an additional way to classify
+                                    and analyse inventory. A business may use stock groups alone if they meet its
+                                    requirements.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Can a stock item belong to different stock groups?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A stock item is assigned to a stock group in its master. Stock categories provide an
+                                    additional classification rather than replacing the stock item's primary group.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Why are stock groups important for inventory management?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Stock groups help organise products, simplify stock analysis, and make inventory
+                                    reports easier to review.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. How do I correct a stock group assigned to the wrong item?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant stock item master in alteration mode, select the correct stock
+                                    group, and save the changes. Review the related reports to confirm that the
+                                    classification is correct.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>9. Can beginners learn stock group and category management in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Beginners can practise creating groups, categories, stock items, and inventory
+                                    transactions in a test company to understand how TallyPrime manages inventory.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">18 / CONCLUSION</div>
+                    <h2>Conclusion</h2>
+                    <p>Creating stock groups and stock categories in TallyPrime helps businesses organise inventory and
+                        maintain structured stock records. Stock groups provide the main product classification, while
+                        stock categories offer an additional way to classify items across different groups.</p>
+                    <p>By learning how to create these masters, assign stock items, configure units, and review
+                        inventory reports, accounting students and business users can develop practical inventory
+                        management skills.</p>
+                    <p>For the best results, practise using a sample company and verify that each stock item is assigned
+                        to the correct group and category.</p>
+
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO · TALLY TRAINING</span>
+                            <h3>Want to learn TallyPrime and practical accounting?</h3>
+                            <p>RLT Edzaro offers Tally training to help learners build practical skills in accounting,
+                                GST, and inventory management.</p>
+                            <div class="branch-pills">
+                                <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical learning</span>
+                                <span><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i> Inventory
+                                    management</span>
+                            </div>
+                            <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                target="_blank" rel="noopener">
+                                Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Start strengthening your TallyPrime knowledge with practical exercises and structured learning.
+                    </p>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="related-articles" id="related-articles">
+                    <span class="section-eyebrow">KEEP LEARNING</span>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime tutorials to continue learning inventory management and accounting
+                        workflows.</p>
+                    <div class="related-links">
+                        <a routerLink="/create-stock-items-in-tallyprime">
+                            <span><strong>How to Create Stock Items in TallyPrime</strong><small>Learn to create stock
+                                    item masters and enter opening stock.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/how-to-track-stock-ageing-in-tallyprime">
+                            <span><strong>How to Track Stock Ageing in TallyPrime</strong><small>Understand inventory
+                                    ageing and stock movement analysis.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime">
+                            <span><strong>How to Generate a Trial Balance in TallyPrime</strong><small>Review account
+                                    balances and check accounting records.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples">
+                            <span><strong>TallyPrime Voucher Types Explained</strong><small>Understand the vouchers used
+                                    to record business transactions.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">
+                        Explore All Articles <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </section>
+
+                <a class="back-to-top" href="#top" (click)="scrollToTop($event)">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top
+                </a>
+            </article>
+        </div>
+    </main>
+</div>

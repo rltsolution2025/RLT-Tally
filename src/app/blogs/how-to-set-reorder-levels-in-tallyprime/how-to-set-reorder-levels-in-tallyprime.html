@@ -1,0 +1,698 @@
+<div class="entries-blog reorder-levels-article">
+    <!-- HERO SECTION -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Inventory Management</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                <span>TallyPrime Inventory Management</span>
+            </div>
+
+            <h1>How to Set Reorder Levels in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to configure stock reorder thresholds, review reorder status, calculate reorder points, and
+                plan inventory replenishment using practical examples.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical TallyPrime Guide</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Inventory Management</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Reorder Level</span>
+                <span>Stock Planning</span>
+                <span>Inventory Reports</span>
+                <span>Purchase Planning</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <main class="entries-page">
+        <div class="entries-container article-layout">
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <span class="toc-label">READING GUIDE</span>
+                    <h2>Table of Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-reorder-level" (click)="scrollToSection($event, 'what-is-reorder-level')">What
+                            Is a Reorder Level?</a>
+                        <a href="#importance" (click)="scrollToSection($event, 'importance')">Why Reorder Levels
+                            Matter</a>
+                        <a href="#reorder-vs-minimum" (click)="scrollToSection($event, 'reorder-vs-minimum')">Reorder vs
+                            Minimum Stock</a>
+                        <a href="#prerequisites" (click)="scrollToSection($event, 'prerequisites')">Prerequisites</a>
+                        <a href="#set-reorder-levels" (click)="scrollToSection($event, 'set-reorder-levels')">Set
+                            Reorder Levels</a>
+                        <a href="#reorder-example" (click)="scrollToSection($event, 'reorder-example')">Stock-Level
+                            Example</a>
+                        <a href="#reorder-status" (click)="scrollToSection($event, 'reorder-status')">View Reorder
+                            Status</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Reorder Point</a>
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                            Mistakes</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the table of contents to jump directly to a reorder-level topic.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <h3>Build Practical TallyPrime Skills</h3>
+                    <p>Learn accounting, GST, inventory management, and business reporting through structured training.
+                    </p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE -->
+            <article class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">INTRODUCTION</div>
+                    <h2>How to Set Reorder Levels in TallyPrime</h2>
+                    <p>Managing inventory efficiently is important for businesses that sell products, manufacture goods,
+                        or maintain stock for daily operations. If a business runs out of essential items, it may lose
+                        sales, delay customer orders, or interrupt production. Keeping too much stock, on the other
+                        hand, can increase storage costs and tie up working capital.</p>
+                    <p>TallyPrime helps businesses monitor inventory and identify when stock needs replenishment through
+                        features such as reorder levels and reorder status reports.</p>
+                    <p>In this guide, you will learn what reorder levels are, why they are important, how to configure
+                        them in TallyPrime, and how to use reorder reports to make better inventory decisions. This
+                        tutorial also includes practical examples to help accounting students and beginners understand
+                        inventory management.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What will you learn?</h3>
+                            <p>Understand reorder thresholds, configure stock-item settings, review reorder status, and
+                                calculate a reorder point using demand, supplier lead time, and safety stock.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-reorder-level">
+                    <div class="section-eyebrow">BASICS</div>
+                    <h2>What Is a Reorder Level in TallyPrime?</h2>
+                    <p>A reorder level is a predefined stock quantity or threshold that indicates when a business should
+                        consider ordering more inventory.</p>
+                    <p>When the available stock reaches the specified level, the business can review its inventory and
+                        plan a purchase to avoid running out of stock.</p>
+                    <p>For example, suppose a shop sells printer paper and usually needs at least 20 reams available to
+                        meet customer demand. The business can set a reorder level of 20 reams and review its stock
+                        position when the quantity reaches that threshold.</p>
+                    <p>TallyPrime's reorder-level feature helps businesses monitor stock levels and identify items that
+                        may require replenishment.</p>
+                    <div class="article-note"><strong>Important:</strong> A reorder level is a planning threshold, not
+                        necessarily the exact quantity that must be purchased. The required purchase quantity depends on
+                        current stock, pending orders, expected demand, supplier lead time, and the business's stocking
+                        policy.</div>
+                </section>
+
+                <section class="article-section" id="importance">
+                    <div class="section-eyebrow">BUSINESS BENEFITS</div>
+                    <h2>Why Are Reorder Levels Important in Inventory Management?</h2>
+                    <p>Setting reorder levels can help businesses improve stock control and avoid unnecessary inventory
+                        problems.</p>
+                    <div class="report-grid">
+                        <div class="report-card"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                            <h3>Prevent Stockouts</h3>
+                            <p>Identify items running low and plan purchases before stock becomes insufficient.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                            <h3>Reduce Excess Inventory</h3>
+                            <p>Use reorder levels alongside demand forecasts to avoid unnecessary purchases.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            <h3>Improve Purchase Planning</h3>
+                            <p>Prioritise products that require replenishment and plan purchase orders.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-gears" aria-hidden="true"></i>
+                            <h3>Maintain Continuity</h3>
+                            <p>Reduce the risk of operational delays caused by unavailable materials or products.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-wallet" aria-hidden="true"></i>
+                            <h3>Manage Working Capital</h3>
+                            <p>Balance product availability against the money tied up in stock.</p>
+                        </div>
+                        <div class="report-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            <h3>Support Decisions</h3>
+                            <p>Use inventory reports to identify which products need attention.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="reorder-vs-minimum">
+                    <div class="section-eyebrow">KEY DIFFERENCE</div>
+                    <h2>What Is the Difference Between Reorder Level and Minimum Stock Level?</h2>
+                    <p>Reorder level and minimum stock level are related inventory concepts, but they serve different
+                        purposes.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Reorder Level</th>
+                                    <th>Minimum Stock Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Meaning</strong></td>
+                                    <td>A threshold that triggers replenishment planning</td>
+                                    <td>A lower stock limit the business aims to avoid falling below</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Main purpose</strong></td>
+                                    <td>Helps determine when to order</td>
+                                    <td>Helps maintain a minimum stock buffer</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Depends on</strong></td>
+                                    <td>Demand, supplier lead time, and stock policy</td>
+                                    <td>Business risk, demand variability, and safety stock</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Example</strong></td>
+                                    <td>Place or review an order when stock reaches 50 units</td>
+                                    <td>Aim to keep at least 20 units available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The terms may be used differently by different businesses. A company should define its inventory
+                        policy clearly so that reorder thresholds and minimum stock requirements are not confused.</p>
+                </section>
+
+                <section class="article-section" id="prerequisites">
+                    <div class="section-eyebrow">BEFORE YOU BEGIN</div>
+                    <h2>Prerequisites Before Setting Reorder Levels in TallyPrime</h2>
+                    <p>Before configuring reorder levels, check the following:</p>
+                    <ul class="check-list">
+                        <li>Inventory features are enabled for the company.</li>
+                        <li>The relevant stock items have been created.</li>
+                        <li>Units of measurement are configured correctly.</li>
+                        <li>Opening stock and inventory transactions are recorded accurately.</li>
+                        <li>Purchase and sales entries are up to date.</li>
+                        <li>The business has estimated its stock requirements and supplier lead times.</li>
+                    </ul>
+                    <p>Correct stock-item configuration is essential because incorrect units or stock balances can
+                        affect reorder calculations and reports.</p>
+                    <p>Learn how to prepare inventory masters in our guide to <a
+                            routerLink="/create-stock-items-in-tallyprime">creating stock items in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="set-reorder-levels">
+                    <div class="section-eyebrow">STEP-BY-STEP TUTORIAL</div>
+                    <h2>How to Set Reorder Levels in TallyPrime</h2>
+                    <p>Follow these steps to configure reorder levels for stock items. Menu names may vary slightly
+                        depending on the TallyPrime release.</p>
+
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open Your Company in TallyPrime</h3>
+                                <p>Launch TallyPrime and select the company in which you want to manage inventory.
+                                    Verify that inventory features are enabled and that your stock items and
+                                    transactions are available.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Create or Select a Stock Item</h3>
+                                <p>Open the stock-item section and select an existing item or create a new one. For
+                                    example, use Printer Paper with Ream as its unit of measurement and Office Supplies
+                                    as its stock group. Verify the applicable inventory details.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Locate the Reorder-Level Settings</h3>
+                                <p>Open the relevant stock-item configuration or alteration screen and check whether
+                                    reorder-level details are available in your TallyPrime version. Use the in-product
+                                    search or help facility if the option is not immediately visible.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Enter the Reorder Level</h3>
+                                <p>Suppose the business wants to review replenishment whenever Printer Paper stock
+                                    reaches 20 reams. Enter the reorder threshold as 20 reams, using the appropriate
+                                    unit and configuration.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Save the Configuration</h3>
+                                <p>After entering the required information, save the stock-item configuration. Verify
+                                    that the reorder level has been recorded correctly and that the unit matches the
+                                    stock item.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Repeat for Other Stock Items</h3>
+                                <p>Configure appropriate reorder thresholds for other relevant products. Set
+                                    item-specific thresholds based on demand, supplier lead time, and your inventory
+                                    policy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>The exact stock-item settings and navigation may differ by TallyPrime release. Confirm the
+                            available reorder-level fields in your installed version before following version-specific
+                            screenshots.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="reorder-example">
+                    <div class="section-eyebrow">STOCK-LEVEL EXAMPLE</div>
+                    <h2>Example of Reorder Levels for Different Stock Items</h2>
+                    <p>Consider the following illustrative stock position for a stationery business:</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Stock Item</th>
+                                    <th>Current Stock</th>
+                                    <th>Reorder Level</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Printer Paper</strong></td>
+                                    <td>18 reams</td>
+                                    <td>20 reams</td>
+                                    <td><span class="status-pill status-warning">Below reorder level</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Blue Pens</strong></td>
+                                    <td>75 units</td>
+                                    <td>50 units</td>
+                                    <td><span class="status-pill status-good">Above reorder level</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>A4 Notebooks</strong></td>
+                                    <td>12 units</td>
+                                    <td>15 units</td>
+                                    <td><span class="status-pill status-warning">Below reorder level</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Toner Cartridges</strong></td>
+                                    <td>8 units</td>
+                                    <td>10 units</td>
+                                    <td><span class="status-pill status-warning">Below reorder level</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>These are illustrative quantities. Actual thresholds should reflect demand, replenishment time,
+                        and the business's inventory policy.</p>
+                </section>
+
+                <section class="article-section" id="reorder-status">
+                    <div class="section-eyebrow">INVENTORY REPORTING</div>
+                    <h2>How to View Reorder Status in TallyPrime</h2>
+                    <p>After configuring reorder levels and recording inventory transactions, review the available
+                        inventory reports to identify items that require replenishment.</p>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">REPORT NAVIGATION</span>
+                                <h3>Open the Inventory Reports</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>From the relevant company screen, navigate to the inventory reporting section.</p>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">02</span>
+                            <div class="entry-heading"><span class="entry-category">FIND THE REPORT</span>
+                                <h3>Find the Reorder Status Report</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Use the available report menu or in-product search to locate the reorder status report
+                                supported by your TallyPrime version. The report can help you review stock items against
+                                their reorder settings.</p>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">03</span>
+                            <div class="entry-heading"><span class="entry-category">CHECK STOCK POSITION</span>
+                                <h3>Review the Stock Position</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Check the reported stock quantities and identify items that have reached or fallen below
+                                their reorder thresholds. Compare available quantity with outstanding purchase orders
+                                and other relevant inventory commitments.</p>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">04</span>
+                            <div class="entry-heading"><span class="entry-category">PLAN PURCHASES</span>
+                                <h3>Plan Replenishment</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>For items requiring attention, estimate the purchase quantity based on expected demand,
+                                supplier lead time, existing orders, and available storage.</p>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header"><span class="entry-number">05</span>
+                            <div class="entry-heading"><span class="entry-category">RECORD THE TRANSACTION</span>
+                                <h3>Record the Purchase Transaction</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Once the purchase requirement has been confirmed, create the appropriate purchase order
+                                or purchase voucher using the workflow supported by your business and TallyPrime
+                                configuration.</p>
+                        </div>
+                    </div>
+                    <div class="article-note"><strong>Note:</strong> The exact report path and the information displayed
+                        can vary by release and configuration. Verify the available report options in your installed
+                        version. Configuring a reorder level should not be treated as automatic purchase-order creation.
+                    </div>
+                    <p>For related inventory monitoring, see <a
+                            routerLink="/how-to-check-stock-summary-in-tallyprime">how to check Stock Summary in
+                            TallyPrime</a> and <a routerLink="/how-to-track-stock-movement-in-tallyprime">how to track
+                            stock movement</a>.</p>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <div class="section-eyebrow">PRACTICAL CALCULATION</div>
+                    <h2>Practical Example: Reorder Levels in TallyPrime</h2>
+                    <p>Let's understand reorder-level planning through a practical example. ABC Stationery sells
+                        notebooks and wants to maintain sufficient inventory for its customers.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stock item</td>
+                                    <td>A4 Notebook</td>
+                                </tr>
+                                <tr>
+                                    <td>Average daily demand</td>
+                                    <td>5 units</td>
+                                </tr>
+                                <tr>
+                                    <td>Supplier lead time</td>
+                                    <td>4 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Safety stock</td>
+                                    <td>10 units</td>
+                                </tr>
+                                <tr>
+                                    <td>Current stock</td>
+                                    <td>25 units</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Step 1: Calculate the Reorder Point</h3>
+                    <p>A common inventory-planning formula is:</p>
+                    <div class="formula-card">
+                        <span class="formula-label">REORDER POINT FORMULA</span>
+                        <strong>Reorder point = Average daily demand × Supplier lead time + Safety stock</strong>
+                    </div>
+                    <div class="transaction-box">
+                        <h4>Using the example</h4>
+                        <p>Reorder point = 5 × 4 + 10</p>
+                        <p><strong>Reorder point = 30 units</strong></p>
+                    </div>
+                    <p>The business should therefore plan replenishment when its inventory position reaches
+                        approximately 30 units, subject to its stocking policy.</p>
+                    <h3>Step 2: Compare the Reorder Point with Current Stock</h3>
+                    <p>Current stock is 25 units, while the calculated reorder point is 30 units. Because the stock is
+                        below the planned reorder point, the business should review its replenishment requirement.</p>
+                    <h3>Step 3: Estimate the Purchase Quantity</h3>
+                    <p>Suppose the business wants to restore inventory to 60 units and has no outstanding purchase
+                        orders.</p>
+                    <div class="formula-card"><span class="formula-label">PURCHASE QUANTITY</span><strong>Estimated
+                            purchase quantity = Target stock − Current stock</strong>
+                        <p>60 − 25 = <b>35 units</b></p>
+                    </div>
+                    <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>This calculation is a simplified example. In practice, consider outstanding orders, committed
+                            sales, supplier lead time, minimum order quantities, and expected demand before placing the
+                            order.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="common-mistakes">
+                    <div class="section-eyebrow">TROUBLESHOOTING</div>
+                    <h2>Common Mistakes to Avoid When Setting Reorder Levels</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>1. Setting the Same Reorder Level for Every Item</h3>
+                                <p>Different products have different demand patterns and supplier lead times.
+                                    <strong>Solution:</strong> Use item-specific thresholds wherever appropriate.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>2. Ignoring Supplier Lead Time</h3>
+                                <p>Products with longer delivery times may need higher reorder points.
+                                    <strong>Solution:</strong> Consider replenishment time when defining each threshold.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>3. Using Incorrect Stock Units</h3>
+                                <p>Mixing boxes, pieces, and cartons can cause planning errors.
+                                    <strong>Solution:</strong> Verify the unit of measurement for each stock item.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>4. Failing to Update Stock Transactions</h3>
+                                <p>Missing or inaccurate purchase, sales, or adjustment entries can make reports
+                                    misleading. <strong>Solution:</strong> Keep inventory transactions up to date.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>5. Ignoring Outstanding Purchase Orders</h3>
+                                <p>Ordering without considering stock already on order may create excess inventory.
+                                    <strong>Solution:</strong> Review pending purchase quantities before placing another
+                                    order.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>6. Never Reviewing Reorder Levels</h3>
+                                <p>Demand, supplier prices, delivery times, and seasonal requirements can change.
+                                    <strong>Solution:</strong> Review reorder settings periodically.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                            <div>
+                                <h3>7. Confusing Reorder Level with Purchase Quantity</h3>
+                                <p>A reorder level indicates when replenishment should be considered.
+                                    <strong>Solution:</strong> Calculate the purchase quantity separately using current
+                                    stock and expected demand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">INVENTORY MANAGEMENT</div>
+                    <h2>Best Practices for Managing Inventory in TallyPrime</h2>
+                    <p>To make inventory planning more effective, follow these practices:</p>
+                    <ul class="check-list">
+                        <li>Set realistic reorder thresholds for important stock items.</li>
+                        <li>Use accurate opening stock and inventory transaction records.</li>
+                        <li>Review inventory reports regularly.</li>
+                        <li>Monitor fast-moving and slow-moving items separately.</li>
+                        <li>Consider supplier lead times and seasonal demand.</li>
+                        <li>Track outstanding purchase orders.</li>
+                        <li>Maintain consistent units of measurement.</li>
+                        <li>Review inventory settings when demand patterns change.</li>
+                        <li>Use appropriate purchase and stock reports to support decisions.</li>
+                    </ul>
+                    <p>These practices can help businesses maintain a better balance between stock availability and
+                        inventory costs.</p>
+                    <p>For more inventory guidance, read <a
+                            routerLink="/how-to-manage-multiple-godowns-in-tallyprime">how to manage multiple
+                            godowns</a> and <a routerLink="/how-to-manage-batch-wise-inventory-in-tallyprime">how to
+                            manage batch-wise inventory in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">COMMON QUESTIONS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What is a reorder level in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A reorder level is a predefined inventory threshold used to identify when a stock
+                                    item may need replenishment. It helps businesses plan purchases before inventory
+                                    becomes insufficient.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. How do I set reorder levels in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant stock-item configuration and locate the reorder-level settings
+                                    supported by your version. Enter the appropriate threshold, save the configuration,
+                                    and review the available reorder status report.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can TallyPrime help identify stock items that need reordering?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>TallyPrime provides inventory reporting features that can help businesses review
+                                    stock positions and replenishment requirements. The exact information available
+                                    depends on the version, configuration, and accuracy of recorded transactions.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. What is the difference between reorder level and reorder quantity?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Reorder level determines when a business should consider placing an order. Reorder
+                                    quantity is the amount purchased to replenish stock. The two values serve different
+                                    inventory-management purposes.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. How do I calculate a reorder point?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>A common formula is: Reorder point = Average daily demand × Supplier lead time +
+                                    Safety stock. For example, if daily demand is 5 units, supplier lead time is 4 days,
+                                    and safety stock is 10 units, the reorder point is 30 units.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Does setting a reorder level automatically place a purchase order?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Do not assume that configuring a reorder threshold automatically places an order.
+                                    Review the available TallyPrime features and your company's purchasing workflow,
+                                    then confirm and record the required purchase transaction.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can I set different reorder levels for different stock items?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Businesses should use appropriate thresholds for different products based on demand,
+                                    replenishment time, and stocking requirements. Configure the available stock-item
+                                    settings according to your TallyPrime version.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Why is inventory management important for accounting students?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Inventory management helps accounting students understand stock valuation, purchase
+                                    transactions, sales records, inventory reports, and working capital. These skills
+                                    are useful in accounting, inventory control, and operations-related roles.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">FINAL THOUGHTS</div>
+                    <h2>Conclusion</h2>
+                    <div class="final-thoughts">
+                        <p>Setting reorder levels in TallyPrime can help businesses identify stock items that need
+                            replenishment and plan purchases more effectively. By maintaining accurate stock-item
+                            details, setting suitable thresholds, reviewing inventory reports, and considering supplier
+                            lead times, businesses can improve inventory control.</p>
+                        <p>For accounting students and beginners, learning reorder-level planning is also a useful way
+                            to understand the connection between accounting software and day-to-day business operations.
+                        </p>
+                    </div>
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO | PRACTICAL TALLY TRAINING</span>
+                            <h3>Want to improve your practical TallyPrime skills?</h3>
+                            <p>Explore Tally training at RLT Edzaro and build your knowledge of accounting, inventory
+                                management, GST, and practical software workflows. Learn the accounting skills needed to
+                                work confidently with business transactions and inventory records.</p>
+                            <div class="branch-pills"><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Chennai</span><span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical
+                                    Learning</span></div>
+                            <div class="local-training-actions"><a class="primary-cta"
+                                    href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                                    rel="noopener">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                                        aria-hidden="true"></i></a><a class="secondary-cta" routerLink="/blogs">Explore
+                                    More Blogs</a></div>
+                        </div>
+                    </div>
+                    <p>Explore more practical tutorials in our <a routerLink="/blogs">TallyPrime learning section</a>.
+                    </p>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="related-articles" id="related-articles">
+                    <span class="section-eyebrow">KEEP LEARNING</span>
+                    <h2>Related Articles</h2>
+                    <p>Continue learning inventory management and accounting workflows with these related TallyPrime
+                        guides.</p>
+                    <div class="related-links">
+                        <a routerLink="/create-stock-items-in-tallyprime"><span>How to Create Stock Items in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-track-stock-ageing-in-tallyprime"><span>How to Track Stock Ageing in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime"><span>How to Generate a Trial Balance in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span>TallyPrime Voucher Types
+                                Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-check-stock-summary-in-tallyprime"><span>How to Check Stock Summary in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span>How to Track Stock Movement in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">View All Articles <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </section>
+
+                <a class="back-to-top" href="#top" (click)="scrollToTop($event)"><i class="fa-solid fa-arrow-up"
+                        aria-hidden="true"></i> Back to top</a>
+            </article>
+        </div>
+    </main>
+</div>

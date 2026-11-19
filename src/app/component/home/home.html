@@ -316,7 +316,17 @@
 </div>
 
 
+<!-- Contact Popup -->
+<div class="contact-modal-backdrop" *ngIf="showContactPopup" (click)="closeContactPopup()" role="presentation">
+  <section class="contact-modal-dialog" role="dialog" aria-modal="true" aria-label="Contact RLT Edzaro"
+    (click)="$event.stopPropagation()">
+    <button type="button" class="contact-modal-close" aria-label="Close contact form" (click)="closeContactPopup()">
+      &times;
+    </button>
 
+    <app-contact [modalMode]="true"></app-contact>
+  </section>
+</div>
 
 <!-- =========================================================
      RLT EDZARO - FULL WIDTH TALLY TRAINING SHOWCASE
@@ -1633,7 +1643,149 @@
 <!-- =====================================================
      END RLT EDZARO KNOWLEDGE HUB
 ====================================================== -->
+<!-- =========================================
+     RLT EDZARO | CERTIFICATE SHOWCASE
+========================================= -->
 
+<section class="certificate-section" #certificateSection>
+
+  <div class="certificate-bg-shape certificate-shape-one"></div>
+  <div class="certificate-bg-shape certificate-shape-two"></div>
+
+  <div class="certificate-container">
+
+    <!-- Section Heading -->
+    <div class="certificate-heading certificate-reveal">
+
+      <span class="certificate-eyebrow">
+        OUR CERTIFICATIONS
+      </span>
+
+      <h2>
+        Learning That Comes With
+        <span>Recognition</span>
+      </h2>
+
+      <p>
+        Gain practical knowledge and earn certificates that recognise
+        your learning journey with Tally Education and RLT Edzaro.
+      </p>
+
+    </div>
+
+
+    <!-- Certificate Cards -->
+    <div class="certificate-grid">
+
+      <!-- Tally Certificate -->
+      <article class="certificate-card certificate-reveal">
+
+        <div class="certificate-card-top">
+          <div class="certificate-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+
+          <span class="certificate-label">
+            TALLY EDUCATION
+          </span>
+        </div>
+
+        <div class="certificate-image-wrap">
+          <div class="certificate-image-glow"></div>
+
+          <img src="/Cert/tally-authorised-certificate.jpg" alt="Tally Education course certificate"
+            class="certificate-image" loading="lazy" />
+
+          <span class="certificate-image-caption">
+            Tally Education Certificate
+          </span>
+        </div>
+
+        <div class="certificate-card-content">
+
+          <h3>
+            Tally Education Certificate
+          </h3>
+
+          <p>
+            Validate your accounting and TallyPrime skills with
+            certification through Tally Education.
+          </p>
+
+          <div class="certificate-card-footer">
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              Authorised Tally Education Partner
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- RLT Edzaro Certificate -->
+      <article class="certificate-card certificate-reveal">
+
+        <div class="certificate-card-top">
+          <div class="certificate-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+
+          <span class="certificate-label">
+            RLT EDZARO
+          </span>
+        </div>
+
+        <div class="certificate-image-wrap">
+          <div class="certificate-image-glow"></div>
+
+          <img src="/cert2/SAMPLE_CERT.jpeg" alt="RLT Edzaro course completion certificate" class="certificate-image"
+            loading="lazy" />
+
+          <span class="certificate-image-caption">
+            RLT Edzaro Certificate
+          </span>
+        </div>
+
+        <div class="certificate-card-content">
+
+          <h3>
+            RLT Edzaro Certificate
+          </h3>
+
+          <p>
+            Receive recognition for completing your training
+            programme and developing practical skills.
+          </p>
+
+          <div class="certificate-card-footer">
+            <span>
+              <i class="fa-solid fa-circle-check"></i>
+              Course Completion Recognition
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Bottom Highlight -->
+    <div class="certificate-bottom-note certificate-reveal">
+      <span class="certificate-note-icon">
+        <i class="fa-solid fa-star"></i>
+      </span>
+
+      <p>
+        Learn with purpose. Build your skills. Get recognised.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
 <!-- =====================================================
      RLT EDZARO | CAREER PATHWAY ROADMAP
@@ -1941,6 +2093,105 @@
      END CAREER PATHWAY ROADMAP
 ====================================================== -->
 
+<!-- =========================================
+     RLT EDZARO | FAQ SECTION
+========================================= -->
+
+<section class="faq-section" id="faqs">
+
+  <div class="faq-container">
+
+    <!-- SECTION HEADER -->
+    <div class="faq-header">
+
+      <span class="faq-eyebrow">
+        HAVE QUESTIONS?
+      </span>
+
+      <h2>
+        Frequently Asked
+        <span>Questions</span>
+      </h2>
+
+      <p>
+        Find answers to common questions about our courses,
+        training approach, certificates and enrolment.
+      </p>
+
+    </div>
+
+    <!-- FAQ CONTENT -->
+    <div class="faq-content">
+
+      <div class="faq-list">
+
+        <div class="faq-item" *ngFor="let faq of faqItems; let i = index" [class.active]="activeFaqIndex === i"
+          [style.--faq-index]="i">
+
+          <!-- QUESTION -->
+          <button type="button" class="faq-question" (click)="toggleFaq(i)" [attr.aria-expanded]="activeFaqIndex === i"
+            [attr.aria-controls]="'faq-answer-' + i">
+
+            <span class="faq-number">
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </span>
+
+            <span class="faq-question-text">
+              {{ faq.question }}
+            </span>
+
+            <span class="faq-icon">
+              <span class="faq-icon-horizontal"></span>
+              <span class="faq-icon-vertical"></span>
+            </span>
+
+          </button>
+
+          <!-- ANSWER -->
+          <div class="faq-answer-wrapper" [id]="'faq-answer-' + i" [attr.aria-hidden]="activeFaqIndex !== i"
+            [class.open]="activeFaqIndex === i">
+
+            <div class="faq-answer">
+              <p>{{ faq.answer }}</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- BOTTOM CTA -->
+      <div class="faq-bottom">
+
+        <div class="faq-bottom-text">
+          <span class="faq-bottom-label">
+            STILL HAVE QUESTIONS?
+          </span>
+
+          <h3>
+            Let's help you choose the right course.
+          </h3>
+
+          <p>
+            Connect with our team for course details,
+            fees and upcoming batches.
+          </p>
+        </div>
+
+        <button type="button" class="faq-contact-btn" (click)="openContactPopup($event)">
+          Enquire Now
+          <span>↗</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 
 <section class="cta-contact-section" aria-labelledby="cta-contact-title">
@@ -2039,7 +2290,22 @@
   </div>
 
 </section>
+<!-- RLT EDZARO CONTACT POPUP -->
 
+<div class="contact-modal-backdrop" *ngIf="showContactPopup" (click)="closeContactPopup()" role="presentation">
+
+  <section class="contact-modal-dialog" role="dialog" aria-modal="true" aria-label="Contact RLT Edzaro"
+    (click)="$event.stopPropagation()">
+
+    <button type="button" class="contact-modal-close" aria-label="Close contact form" (click)="closeContactPopup()">
+      &times;
+    </button>
+
+    <app-contact [modalMode]="true"></app-contact>
+
+  </section>
+
+</div>
 
 
 

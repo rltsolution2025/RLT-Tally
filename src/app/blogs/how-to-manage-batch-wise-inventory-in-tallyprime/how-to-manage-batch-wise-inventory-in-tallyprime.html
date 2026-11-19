@@ -1,0 +1,833 @@
+<!--
+  RLT EDZARO | TALLYPRIME BLOG
+  Article: How to Manage Batch-Wise Inventory in TallyPrime
+  Angular template file: how-to-manage-batch-wise-inventory-in-tallyprime.html
+-->
+<main class="entries-blog">
+    <!-- HERO -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                Inventory Management
+            </div>
+
+            <h1>How to Manage Batch-Wise Inventory in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to enable batch tracking, record batch details during purchases and sales,
+                monitor expiry dates, and review batch-wise inventory reports in TallyPrime.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> TallyPrime Tutorials</span>
+                <span><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Inventory &amp; Stock</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical Guide</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Batch Tracking</span>
+                <span>Expiry Dates</span>
+                <span>Stock Management</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="entries-page">
+        <div class="entries-container article-layout">
+            <aside class="article-sidebar" aria-label="Article navigation">
+                <div class="toc-card">
+                    <span class="toc-label">IN THIS ARTICLE</span>
+                    <h2>Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-batch-inventory"
+                            (click)="scrollToSection($event, 'what-is-batch-inventory')">What Is Batch-Wise
+                            Inventory?</a>
+                        <a href="#batch-example" (click)="scrollToSection($event, 'batch-example')">Batch-Wise
+                            Example</a>
+                        <a href="#benefits" (click)="scrollToSection($event, 'benefits')">Why Batch Tracking Matters</a>
+                        <a href="#enable-batch-tracking"
+                            (click)="scrollToSection($event, 'enable-batch-tracking')">Enable Batch Tracking</a>
+                        <a href="#create-stock-item" (click)="scrollToSection($event, 'create-stock-item')">Create a
+                            Stock Item</a>
+                        <a href="#record-purchase" (click)="scrollToSection($event, 'record-purchase')">Record a
+                            Purchase</a>
+                        <a href="#record-sale" (click)="scrollToSection($event, 'record-sale')">Record a Sale</a>
+                        <a href="#expiry-tracking" (click)="scrollToSection($event, 'expiry-tracking')">Track Expiry
+                            Dates</a>
+                        <a href="#batch-reports" (click)="scrollToSection($event, 'batch-reports')">Batch-Wise
+                            Reports</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+                    <div class="toc-help">
+                        <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        <p>Use the contents links to move directly to any section of this TallyPrime guide.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build practical skills in accounting, GST, inventory, and financial reporting with RLT Edzaro.
+                    </p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer">
+                        Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </aside>
+
+            <article class="article-content">
+                <!-- INTRODUCTION -->
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">INTRODUCTION</div>
+                    <h2>How to Manage Batch-Wise Inventory in TallyPrime</h2>
+                    <p>Managing inventory accurately is essential for businesses that handle products from different
+                        manufacturing batches. Businesses dealing with medicines, food products, cosmetics, chemicals,
+                        and other goods often need to track batch numbers, manufacturing dates, and expiry dates to
+                        maintain proper stock records.</p>
+                    <p>TallyPrime provides batch-wise inventory management features that help businesses organise stock
+                        by batch, record purchases and sales, monitor stock availability, and track expiry dates when
+                        the relevant features are configured.</p>
+                    <p>Learning how to manage batch-wise inventory in TallyPrime is also valuable for accounting
+                        students and aspiring inventory executives who want to develop practical accounting and stock
+                        management skills.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>What this guide covers</h3>
+                            <p>Enable batch tracking, configure stock items, enter batch details during purchases and
+                                sales, monitor expiry information, and review batch-wise stock reports.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DEFINITION -->
+                <section class="article-section" id="what-is-batch-inventory">
+                    <div class="section-eyebrow">BATCH TRACKING BASICS</div>
+                    <h2>What Is Batch-Wise Inventory in TallyPrime?</h2>
+                    <p>Batch-wise inventory management is a method of tracking stock according to the batch or lot to
+                        which each product belongs.</p>
+                    <p>A batch is a group of products manufactured, purchased, or identified under a common batch
+                        number. Businesses can use batch information to distinguish between products with different
+                        manufacturing dates, expiry dates, or other identifying details.</p>
+                    <p>For example, a pharmaceutical distributor may have 100 medicine bottles from Batch A and another
+                        150 bottles from Batch B. Even though both batches contain the same product, their expiry dates
+                        may differ.</p>
+                    <p>Batch tracking helps the business identify how much stock is available in each batch and which
+                        products need attention because of approaching expiry dates.</p>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>Batch-wise tracking separates a product's inventory into identifiable lots. The details
+                            available in TallyPrime depend on the company features, stock item configuration, and
+                            voucher workflow.</p>
+                    </div>
+                </section>
+
+                <!-- BATCH EXAMPLE -->
+                <section class="article-section" id="batch-example">
+                    <div class="section-eyebrow">PRACTICAL EXAMPLE</div>
+                    <h2>Example of Batch-Wise Inventory</h2>
+                    <p>Consider a business that stocks a product called Vitamin C Tablets.</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Batch Number</th>
+                                    <th>Quantity</th>
+                                    <th>Expiry Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>VC101</strong></td>
+                                    <td>100 units</td>
+                                    <td>31 December 2026</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VC102</strong></td>
+                                    <td>150 units</td>
+                                    <td>31 March 2027</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>VC103</strong></td>
+                                    <td>200 units</td>
+                                    <td>30 June 2027</td>
+                                </tr>
+                                <tr class="table-total">
+                                    <td><strong>Total Stock</strong></td>
+                                    <td><strong>450 units</strong></td>
+                                    <td>—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>With batch-wise tracking, the business can maintain separate records for all three batches
+                        instead of treating the entire 450 units as one undifferentiated quantity.</p>
+                    <p class="table-footnote">The batch numbers and dates above are illustrative.</p>
+                </section>
+
+                <!-- BENEFITS -->
+                <section class="article-section" id="benefits">
+                    <div class="section-eyebrow">BUSINESS BENEFITS</div>
+                    <h2>Why Is Batch-Wise Inventory Management Important?</h2>
+                    <p>Batch-wise inventory management helps businesses maintain better control over products that
+                        require traceability.</p>
+                    <div class="report-grid">
+                        <div class="report-item"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i><span><strong>Better stock tracking</strong><br>Identify the
+                                quantity available in each batch.</span></div>
+                        <div class="report-item"><i class="fa-regular fa-calendar-check"
+                                aria-hidden="true"></i><span><strong>Expiry date monitoring</strong><br>Track expiry
+                                dates where information is maintained.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-rotate"
+                                aria-hidden="true"></i><span><strong>Improved stock rotation</strong><br>Identify
+                                earlier-expiring stock for appropriate dispatch.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-arrow-trend-down"
+                                aria-hidden="true"></i><span><strong>Reduced wastage</strong><br>Identify stock that
+                                needs attention before expiry.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-magnifying-glass"
+                                aria-hidden="true"></i><span><strong>Better traceability</strong><br>Locate products
+                                associated with a particular batch.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-chart-column"
+                                aria-hidden="true"></i><span><strong>Accurate inventory reports</strong><br>Review stock
+                                quantities across different batches.</span></div>
+                    </div>
+                    <p>Batch tracking is particularly useful for pharmaceutical distributors, food businesses, cosmetics
+                        suppliers, chemical traders, and manufacturers. It can also support better purchasing decisions
+                        by showing which batches and products remain in stock before new orders are placed.</p>
+                </section>
+
+                <!-- ENABLE BATCH -->
+                <section class="article-section" id="enable-batch-tracking">
+                    <div class="section-eyebrow">SETUP</div>
+                    <h2>How to Enable Batch-Wise Inventory in TallyPrime</h2>
+                    <p>Before entering batch details, enable the relevant inventory features in your company.</p>
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">01</span>
+                            <div class="entry-heading"><span class="entry-category">COMPANY SETUP</span>
+                                <h3>Open Your Company</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Launch TallyPrime.</li>
+                                <li>Select the company in which you want to manage inventory.</li>
+                                <li>Verify that the company has the appropriate inventory configuration.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">02</span>
+                            <div class="entry-heading"><span class="entry-category">FEATURE CONFIGURATION</span>
+                                <h3>Enable Batch-Wise Details</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Open the company features or inventory configuration screen.</li>
+                                <li>Locate the option for maintaining batch-wise details.</li>
+                                <li>Enable the batch-related feature.</li>
+                                <li>If you need to track product expiry dates, enable the applicable expiry-date
+                                    tracking option as well.</li>
+                                <li>Save the configuration.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">03</span>
+                            <div class="entry-heading"><span class="entry-category">VERIFY SETTINGS</span>
+                                <h3>Verify Inventory Settings</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Review the inventory configuration to ensure that batch tracking is available for the
+                                stock items you want to manage. If your business needs to track expiry dates, verify
+                                that the relevant option is enabled and that the stock item is configured appropriately.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="gst-warning">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p><strong>Important:</strong> Enabling batch tracking does not automatically create batch
+                            numbers for existing stock. You may need to enter or update batch information through the
+                            appropriate inventory workflow.</p>
+                    </div>
+                    <p class="article-note">The exact menu labels and navigation can vary depending on your TallyPrime
+                        release.</p>
+                </section>
+
+                <!-- CREATE STOCK ITEM -->
+                <section class="article-section" id="create-stock-item">
+                    <div class="section-eyebrow">INVENTORY MASTER</div>
+                    <h2>How to Create a Stock Item for Batch-Wise Inventory</h2>
+                    <p>After enabling batch tracking, create or update the relevant stock item. For example, suppose
+                        your business sells packaged food products.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open Stock Item Creation</h3>
+                                <p>Navigate to the stock item creation screen in TallyPrime.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Enter the Product Details</h3>
+                                <p>Enter the product name, appropriate stock group, relevant unit, and applicable GST
+                                    classification or tax information where required.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Enable Batch Tracking for the Stock Item</h3>
+                                <p>Locate the batch-related configuration for the stock item and enable batch-wise
+                                    details where applicable. Verify expiry-date configuration if required.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Save the Stock Item</h3>
+                                <p>Save the stock item and verify that batch details can be entered in the relevant
+                                    inventory vouchers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transaction-box">
+                        <h4>Illustrative stock item details</h4>
+                        <div class="voucher-detail">
+                            <span class="voucher-pill"><i class="fa-solid fa-box" aria-hidden="true"></i> Packaged Food
+                                Product</span>
+                            <span class="voucher-pill"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                                Nos. / Packets / Boxes</span>
+                            <span class="voucher-pill"><i class="fa-solid fa-tags" aria-hidden="true"></i> Applicable
+                                GST details</span>
+                        </div>
+                        <p>Use the correct unit and tax classification for the actual product. Refer to the <a
+                                routerLink="/create-stock-items-in-tallyprime">guide to creating stock items in
+                                TallyPrime</a> for more details about inventory master setup.</p>
+                    </div>
+                </section>
+
+                <!-- PURCHASE -->
+                <section class="article-section" id="record-purchase">
+                    <div class="section-eyebrow">STOCK INWARD</div>
+                    <h2>How to Record Batch-Wise Inventory During a Purchase</h2>
+                    <p>When a business purchases goods from a supplier, it can record the received quantity against the
+                        relevant batch number.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Purchase example</h3>
+                            <p>ABC Traders purchases 100 units of Packaged Food Product from a supplier at ₹50 per unit.
+                                The batch number is PF101, with a manufacturing date of 1 October 2026 and an expiry
+                                date of 31 March 2027.</p>
+                        </div>
+                    </div>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Particulars</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Product</td>
+                                    <td>Packaged Food Product</td>
+                                </tr>
+                                <tr>
+                                    <td>Quantity</td>
+                                    <td>100 units</td>
+                                </tr>
+                                <tr>
+                                    <td>Batch number</td>
+                                    <td>PF101</td>
+                                </tr>
+                                <tr>
+                                    <td>Manufacturing date</td>
+                                    <td>1 October 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Expiry date</td>
+                                    <td>31 March 2027</td>
+                                </tr>
+                                <tr>
+                                    <td>Purchase rate</td>
+                                    <td>₹50 per unit</td>
+                                </tr>
+                                <tr class="table-total">
+                                    <td><strong>Purchase value before applicable taxes</strong></td>
+                                    <td><strong>₹5,000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="subsection-heading">Steps to Record the Purchase</h3>
+                    <ol>
+                        <li>Open the relevant purchase voucher in TallyPrime.</li>
+                        <li>Select the supplier ledger.</li>
+                        <li>Enter the purchase details and select the stock item.</li>
+                        <li>Enter the quantity and rate.</li>
+                        <li>Open the relevant batch allocation or batch details section.</li>
+                        <li>Enter the batch number, such as PF101.</li>
+                        <li>Enter the expiry date if expiry tracking is enabled and required.</li>
+                        <li>Enter the manufacturing date if the workflow supports it and your business needs to maintain
+                            it.</li>
+                        <li>Verify the quantity and value, then save the voucher.</li>
+                    </ol>
+                    <p>After saving, verify that the purchased quantity is reflected against the correct batch. The
+                        exact fields available depend on your TallyPrime configuration and the inventory workflow being
+                        used.</p>
+                    <p>For more information about transaction entry, read <a
+                            routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                            Explained</a>.</p>
+                </section>
+
+                <!-- SALES -->
+                <section class="article-section" id="record-sale">
+                    <div class="section-eyebrow">STOCK OUTWARD</div>
+                    <h2>How to Record Batch-Wise Inventory During a Sales Transaction</h2>
+                    <p>When selling goods, select the appropriate batch so that the correct stock quantity is reduced.
+                    </p>
+                    <div class="transaction-box">
+                        <h4>Sales example: Batch PF101</h4>
+                        <p>ABC Traders has 100 units of Packaged Food Product in Batch PF101. A customer purchases 30
+                            units from that batch.</p>
+                        <div class="journal-box">
+                            <div class="journal-heading">
+                                <h4>Batch quantity calculation</h4><span>PF101</span>
+                            </div>
+                            <div class="journal-lines">
+                                <div class="journal-line"><code>Available quantity before sale</code><span
+                                        class="journal-amount">100 units</span></div>
+                                <div class="journal-line credit"><code>Quantity sold</code><span
+                                        class="journal-amount">30 units</span></div>
+                            </div>
+                            <div class="journal-total"><span>Remaining quantity</span><strong>70 units</strong></div>
+                        </div>
+                    </div>
+                    <h3 class="subsection-heading">Steps to Record the Sale</h3>
+                    <ol>
+                        <li>Open a sales voucher.</li>
+                        <li>Select the customer ledger.</li>
+                        <li>Select the stock item.</li>
+                        <li>Enter the quantity being sold.</li>
+                        <li>Select the appropriate batch in the batch allocation section.</li>
+                        <li>Verify the available quantity and applicable selling rate.</li>
+                        <li>Check the relevant tax details.</li>
+                        <li>Save the sales voucher.</li>
+                    </ol>
+                    <p>After the transaction, Batch PF101 should show a balance of 70 units, assuming no other stock
+                        movements have occurred.</p>
+                    <p>If the same product exists in multiple batches, select the correct batch according to your
+                        business's stock rotation policy and the product's expiry information.</p>
+                </section>
+
+                <!-- EXPIRY TRACKING -->
+                <section class="article-section" id="expiry-tracking">
+                    <div class="section-eyebrow">EXPIRY MANAGEMENT</div>
+                    <h2>How to Track Expiry Dates in TallyPrime</h2>
+                    <p>Expiry tracking is important for businesses that sell goods with a limited shelf life. Examples
+                        include medicines, dairy products, packaged foods, cosmetics, and selected chemicals.</p>
+                    <p>When expiry tracking is configured, batch details can help businesses identify products
+                        approaching their expiry dates.</p>
+                    <h3 class="subsection-heading">Steps to Manage Expiry Information</h3>
+                    <ol>
+                        <li>Enable the relevant batch and expiry-date features.</li>
+                        <li>Configure the applicable stock item.</li>
+                        <li>Enter batch details when recording stock receipts.</li>
+                        <li>Maintain the correct expiry information for each batch.</li>
+                        <li>Review available batch-wise inventory reports and expiry-related information supported by
+                            your TallyPrime version.</li>
+                        <li>Use the information to plan stock rotation, returns, or other appropriate actions.</li>
+                    </ol>
+                    <h3 class="subsection-heading">Example of Expiry Monitoring</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Batch</th>
+                                    <th>Quantity</th>
+                                    <th>Expiry Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Product A</td>
+                                    <td>A101</td>
+                                    <td>50 units</td>
+                                    <td>31 October 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Product A</td>
+                                    <td>A102</td>
+                                    <td>100 units</td>
+                                    <td>31 December 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Product A</td>
+                                    <td>A103</td>
+                                    <td>150 units</td>
+                                    <td>31 March 2027</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>In this example, Batch A101 expires first. The business can review its sales and stock rotation
+                        plans to reduce the risk of expired stock.</p>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <p><strong>Best practice:</strong> Use a first-expiry, first-out (FEFO) approach when
+                            appropriate. FEFO means prioritising stock with the earliest expiry date, subject to product
+                            quality, customer requirements, and applicable regulations.</p>
+                    </div>
+                    <div class="gst-warning">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>TallyPrime can help maintain batch information, but businesses should verify the reports and
+                            processes available in their version rather than assuming that every expiry alert or
+                            automatic FEFO function is enabled by default.</p>
+                    </div>
+                </section>
+
+                <!-- REPORTS -->
+                <section class="article-section" id="batch-reports">
+                    <div class="section-eyebrow">INVENTORY REPORTING</div>
+                    <h2>How to View Batch-Wise Stock Reports in TallyPrime</h2>
+                    <p>Stock reports help businesses understand how much inventory remains available. Depending on your
+                        configuration and TallyPrime release, use the relevant stock summary, detailed stock report, or
+                        batch-related report to review inventory.</p>
+                    <div class="report-grid">
+                        <div class="report-item"><i class="fa-solid fa-box" aria-hidden="true"></i><span><strong>Product
+                                    name</strong><br>Confirm the stock item being reviewed.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-barcode"
+                                aria-hidden="true"></i><span><strong>Batch number</strong><br>Identify the relevant
+                                stock lot.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-boxes-stacked"
+                                aria-hidden="true"></i><span><strong>Available quantity</strong><br>Review the quantity
+                                in each batch.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-arrow-right-arrow-left"
+                                aria-hidden="true"></i><span><strong>Stock movement</strong><br>Review movement during a
+                                selected period.</span></div>
+                        <div class="report-item"><i class="fa-regular fa-calendar"
+                                aria-hidden="true"></i><span><strong>Expiry information</strong><br>Check supported
+                                expiry details.</span></div>
+                        <div class="report-item"><i class="fa-solid fa-indian-rupee-sign"
+                                aria-hidden="true"></i><span><strong>Closing stock value</strong><br>Review the value
+                                where available.</span></div>
+                    </div>
+                    <h3 class="subsection-heading">Example: Batch-Wise Stock Summary</h3>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Batch</th>
+                                    <th>Opening Stock</th>
+                                    <th>Purchased</th>
+                                    <th>Sold</th>
+                                    <th>Closing Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Product A</td>
+                                    <td>A101</td>
+                                    <td>50</td>
+                                    <td>100</td>
+                                    <td>30</td>
+                                    <td><strong>120</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Product A</td>
+                                    <td>A102</td>
+                                    <td>0</td>
+                                    <td>150</td>
+                                    <td>40</td>
+                                    <td><strong>110</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Product B</td>
+                                    <td>B201</td>
+                                    <td>25</td>
+                                    <td>75</td>
+                                    <td>20</td>
+                                    <td><strong>80</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-calculator" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Closing stock calculation</h3>
+                            <p><strong>Closing Stock = Opening Stock + Purchases − Sales</strong><br>The table is
+                                illustrative and excludes other stock movements such as transfers, returns, and
+                                adjustments.</p>
+                        </div>
+                    </div>
+                    <p>Review the detailed stock or batch information available in TallyPrime to confirm that the
+                        figures match the recorded transactions. You can also read <a
+                            routerLink="/how-to-check-stock-summary-in-tallyprime">How to Check Stock Summary in
+                            TallyPrime</a> and <a routerLink="/how-to-track-stock-movement-in-tallyprime">How to Track
+                            Stock Movement in TallyPrime</a>.</p>
+                </section>
+
+                <!-- COMMON PROBLEMS -->
+                <section class="article-section" id="common-problems">
+                    <div class="section-eyebrow">TROUBLESHOOTING</div>
+                    <h2>Common Batch-Wise Inventory Problems and Solutions</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>1. Batch Details Are Not Appearing</h3>
+                                <p><strong>Possible reasons:</strong> Batch tracking is not enabled, the stock item is
+                                    not configured for batch-wise details, or the current voucher workflow does not
+                                    expose the required batch allocation.</p>
+                                <p><strong>Solution:</strong> Review the company inventory settings, stock item
+                                    configuration, and voucher entry mode.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-regular fa-calendar-xmark" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>2. Expiry Date Is Not Displayed</h3>
+                                <p><strong>Possible reasons:</strong> Expiry-date tracking is not enabled, the relevant
+                                    stock item or batch configuration is incomplete, or the selected report does not
+                                    display expiry information.</p>
+                                <p><strong>Solution:</strong> Verify the expiry-related settings and use a report or
+                                    batch view that supports the information you need.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>3. Incorrect Stock Quantity Appears</h3>
+                                <p><strong>Possible reasons:</strong> A purchase was entered against the wrong batch, a
+                                    sales voucher used an incorrect batch, a stock adjustment or return was recorded
+                                    incorrectly, or opening stock was entered incorrectly.</p>
+                                <p><strong>Solution:</strong> Review the relevant vouchers, batch allocations, and stock
+                                    reports. Correct discrepancies using the appropriate accounting and inventory
+                                    procedures.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>4. The Same Product Appears in Multiple Batches</h3>
+                                <p>This is expected when the product has been received in different batches.</p>
+                                <p><strong>Solution:</strong> Review the batch number, quantity, and expiry information
+                                    before selecting a batch for a sale or stock adjustment.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-triangle-exclamation"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h3>5. Expired Stock Is Still Available</h3>
+                                <p>Batch tracking does not automatically mean that expired stock is blocked from sale in
+                                    every configuration.</p>
+                                <p><strong>Solution:</strong> Review expiry information regularly and implement suitable
+                                    procedures to prevent expired or unsuitable goods from being dispatched.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BEST PRACTICES -->
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">INVENTORY CONTROL</div>
+                    <h2>Best Practices for Batch-Wise Inventory Management</h2>
+                    <p>Follow these practices to maintain accurate inventory records:</p>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fa-solid fa-barcode" aria-hidden="true"></i><span><strong>Use
+                                    consistent batch identification:</strong> Record the supplier's or manufacturer's
+                                batch number accurately.</span></div>
+                        <div class="skill-item"><i class="fa-regular fa-calendar-check"
+                                aria-hidden="true"></i><span><strong>Enter expiry information carefully:</strong> Verify
+                                dates when goods arrive.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-truck-ramp-box"
+                                aria-hidden="true"></i><span><strong>Record purchases promptly:</strong> Update stock as
+                                soon as receipts are processed.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-cart-shopping"
+                                aria-hidden="true"></i><span><strong>Select the correct batch during sales:</strong>
+                                Confirm quantity and expiry details before saving.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-chart-column"
+                                aria-hidden="true"></i><span><strong>Review stock reports regularly:</strong> Identify
+                                discrepancies and slow-moving batches.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span><strong>Use
+                                    suitable stock rotation:</strong> Consider FEFO for products with expiry
+                                dates.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-file-invoice"
+                                aria-hidden="true"></i><span><strong>Maintain supporting documents:</strong> Keep
+                                purchase invoices, delivery documents, and related records.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-clipboard-check"
+                                aria-hidden="true"></i><span><strong>Reconcile physical stock:</strong> Compare recorded
+                                quantities with actual inventory.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-receipt"
+                                aria-hidden="true"></i><span><strong>Review GST classifications:</strong> Maintain
+                                applicable tax details correctly for the stock item and transaction.</span></div>
+                        <div class="skill-item"><i class="fa-solid fa-users" aria-hidden="true"></i><span><strong>Train
+                                    inventory staff:</strong> Ensure users understand batch allocation and stock
+                                adjustments.</span></div>
+                    </div>
+                    <p>These practices can help businesses improve stock accuracy, traceability, and inventory control.
+                    </p>
+                </section>
+
+                <!-- FAQ -->
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">COMMON QUESTIONS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What is batch-wise inventory in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Batch-wise inventory in TallyPrime is a method of tracking stock by individual batch
+                                    or lot numbers. It helps businesses identify stock quantities associated with
+                                    specific batches and maintain relevant batch information.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. How do I enable batch-wise details in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the company inventory configuration, enable the applicable batch-wise details
+                                    feature, and save the settings. Configure the relevant stock items and verify that
+                                    batch information can be entered in the appropriate vouchers.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can TallyPrime track expiry dates?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>TallyPrime supports expiry-date tracking for appropriately configured batch-wise
+                                    inventory. The availability and presentation of expiry-related information depend on
+                                    the version and configuration.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Can I maintain multiple batches for the same stock item?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. A stock item can have multiple batches when batch-wise tracking is configured.
+                                    Each batch can maintain its own quantity and relevant batch information.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. How do I check batch-wise stock in TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Use the relevant stock summary, detailed stock report, or batch-related report
+                                    available in your TallyPrime version. Review the product, batch, quantity, and other
+                                    supported details.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Is batch-wise inventory useful for pharmaceutical businesses?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Batch tracking can help pharmaceutical businesses maintain batch identification,
+                                    stock quantities, and expiry information. Businesses must also follow the applicable
+                                    product-handling, storage, traceability, and regulatory requirements.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. What is the difference between batch-wise inventory and regular inventory?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Regular inventory tracking focuses on overall stock quantities for a product.
+                                    Batch-wise inventory separates stock into individual batches, making it easier to
+                                    track batch-specific quantities and expiry information.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Can batch-wise inventory reduce stock wastage?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Batch tracking can help businesses identify stock approaching expiry and improve
+                                    stock rotation. Actual wastage reduction depends on purchasing, sales, storage, and
+                                    inventory management practices.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- CONCLUSION -->
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">CONCLUSION</div>
+                    <h2>Build Better Inventory Control with Batch Tracking</h2>
+                    <p>Managing batch-wise inventory in TallyPrime helps businesses maintain better control over
+                        products received and sold in different batches. By enabling batch tracking, configuring stock
+                        items, recording batch details during purchases and sales, monitoring expiry information, and
+                        reviewing stock reports, businesses can improve inventory accuracy and traceability.</p>
+                    <p>For accounting students and aspiring inventory executives, practising batch-wise inventory
+                        management provides useful experience in stock accounting and inventory control.</p>
+                    <div class="final-thoughts">
+                        <h3>Want to learn TallyPrime and practical inventory management?</h3>
+                        <p>RLT Edzaro offers Tally training for learners who want to build practical accounting and
+                            software skills. Develop your understanding of accounting, GST, inventory management, and
+                            TallyPrime through structured learning and practical exercises.</p>
+                        <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                            target="_blank" rel="noopener noreferrer">Explore Tally Training <i
+                                class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                    <button type="button" class="back-to-top" (click)="scrollToTop()"><i class="fa-solid fa-arrow-up"
+                            aria-hidden="true"></i> Back to Top</button>
+                </section>
+
+                <!-- RELATED ARTICLES -->
+                <section class="related-articles" id="related-articles">
+                    <div class="section-eyebrow">KEEP LEARNING</div>
+                    <h2>Related TallyPrime Articles</h2>
+                    <p>Explore these tutorials to strengthen your understanding of stock management, inventory
+                        transactions, and accounting in TallyPrime.</p>
+                    <div class="related-links">
+                        <a routerLink="/create-stock-items-in-tallyprime"><span>How to Create Stock Items in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-create-stock-groups-and-categories-in-tallyprime"><span>How to Create
+                                Stock Groups and Categories in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span>How to Track Stock Movement in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-check-stock-summary-in-tallyprime"><span>How to Check Stock Summary in
+                                TallyPrime</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/how-to-manage-multiple-godowns-in-tallyprime"><span>How to Manage Multiple
+                                Godowns in TallyPrime</span><i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span>TallyPrime Voucher Types
+                                Explained</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a routerLink="/tallyprime-gst-invoice-format"><span>TallyPrime GST Invoice Format: Complete
+                                Guide</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">Explore All Articles <i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </section>
+            </article>
+        </div>
+    </section>
+</main>

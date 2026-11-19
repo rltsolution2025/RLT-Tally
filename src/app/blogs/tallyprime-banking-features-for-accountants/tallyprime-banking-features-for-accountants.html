@@ -1,0 +1,859 @@
+<div class="entries-blog" id="top">
+    <section class="entries-hero">
+        <div class="entries-container">
+            <div class="hero-breadcrumb">
+                <a routerLink="/">Home</a><span>/</span><a routerLink="/blogs">Blogs</a><span>/</span><span>TallyPrime
+                    Banking Features</span>
+            </div>
+            <span class="hero-eyebrow">TALLYPRIME ACCOUNTING GUIDE</span>
+            <h1>TallyPrime Banking Features Every Accountant Should Know</h1>
+            <p class="hero-description">Discover the banking features in TallyPrime that help accountants manage bank
+                reconciliation, statement imports, cheque details, payments, receipts, fund transfers, outstanding
+                balances, and financial reports.</p>
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open"></i> Banking &amp; Accounting</span>
+                <span><i class="fa-regular fa-clock"></i> Practical feature guide</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="entries-container article-main">
+        <div class="article-layout">
+            <aside class="article-sidebar">
+                <div class="toc-card">
+                    <div class="toc-heading"><span class="toc-icon"><i class="fa-solid fa-list-ul"></i></span>
+                        <h2>In This Article</h2>
+                    </div>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#banking-features" (click)="scrollToSection($event, 'banking-features')">Banking
+                            Features Overview</a>
+                        <a href="#bank-reconciliation" (click)="scrollToSection($event, 'bank-reconciliation')">Bank
+                            Reconciliation</a>
+                        <a href="#statement-import" (click)="scrollToSection($event, 'statement-import')">Bank Statement
+                            Import</a>
+                        <a href="#cheque-management" (click)="scrollToSection($event, 'cheque-management')">Cheque
+                            Management</a>
+                        <a href="#voucher-management" (click)="scrollToSection($event, 'voucher-management')">Payment
+                            &amp; Receipt Vouchers</a>
+                        <a href="#fund-transfers" (click)="scrollToSection($event, 'fund-transfers')">Bank-to-Bank
+                            Transfers</a>
+                        <a href="#payment-tracking" (click)="scrollToSection($event, 'payment-tracking')">Outstanding
+                            Payments</a>
+                        <a href="#banking-reports" (click)="scrollToSection($event, 'banking-reports')">Banking
+                            Reports</a>
+                        <a href="#transaction-matching"
+                            (click)="scrollToSection($event, 'transaction-matching')">Transaction Matching</a>
+                        <a href="#bank-ledgers" (click)="scrollToSection($event, 'bank-ledgers')">Bank Ledger
+                            Management</a>
+                        <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                            Mistakes</a>
+                        <a href="#practical-exercises"
+                            (click)="scrollToSection($event, 'practical-exercises')">Practical Exercises</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    </nav>
+                </div>
+                <div class="sidebar-cta">
+                    <span class="cta-small-label">BUILD PRACTICAL SKILLS</span>
+                    <h3>Learn TallyPrime with hands-on accounting practice.</h3>
+                    <p>Explore practical accounting training at RLT Edzaro.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" class="sidebar-cta-button"
+                        target="_blank" rel="noopener">Explore Tally Training <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </aside>
+
+            <article class="article-content">
+                <section class="article-section" id="introduction">
+                    <p class="section-kicker">GETTING STARTED</p>
+                    <h2>Introduction</h2>
+                    <p>Banking transactions are an essential part of everyday accounting. Businesses receive customer
+                        payments, pay suppliers, transfer funds, issue cheques, and monitor bank balances. Recording
+                        these transactions accurately is important for maintaining reliable financial records.</p>
+                    <p>TallyPrime provides several banking-related features that help accountants manage bank
+                        transactions, reconcile bank statements, track payments, and maintain accurate accounting
+                        records.</p>
+                    <p>Whether you are an accounting student, a fresher preparing for an accountant job, or a working
+                        professional, understanding TallyPrime banking features can improve your practical accounting
+                        skills.</p>
+                    <p>In this guide, you will learn about the most useful TallyPrime banking features, how they support
+                        daily accounting activities, and how accountants can use them in real-world business situations.
+                    </p>
+                    <div class="answer-box">
+                        <span class="answer-icon"><i class="fa-solid fa-building-columns"></i></span>
+                        <div>
+                            <h3>What are banking features in TallyPrime?</h3>
+                            <p>They are accounting and banking-related tools that help businesses record bank
+                                transactions, work with statement details, reconcile entries, manage cheque information,
+                                monitor outstanding balances, and review reports. Availability can depend on the
+                                TallyPrime release, bank, and configuration.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="banking-features">
+                    <p class="section-kicker">FEATURE OVERVIEW</p>
+                    <h2>What Are Banking Features in TallyPrime?</h2>
+                    <p>Banking features in TallyPrime help businesses record and manage transactions involving bank
+                        accounts. Depending on the configuration, supported bank, and software version, these features
+                        can help accountants work with bank statements, reconcile transactions, manage cheque details,
+                        and review payment records.</p>
+                    <p>Instead of relying entirely on manual registers and spreadsheets, accountants can use
+                        TallyPrime's accounting vouchers and banking reports to organise financial information and
+                        identify differences between accounting records and bank statements.</p>
+                    <p>These features are particularly useful for businesses that process regular customer receipts,
+                        supplier payments, salary payments, and bank transfers.</p>
+                    <div class="benefit-grid">
+                        <div class="benefit-card"><span class="benefit-number">01 / CONTROL</span>
+                            <h3>Transaction recording</h3>
+                            <p>Record bank receipts, payments, and transfers through appropriate vouchers.</p>
+                        </div>
+                        <div class="benefit-card"><span class="benefit-number">02 / ACCURACY</span>
+                            <h3>Reconciliation</h3>
+                            <p>Compare accounting records with statement transactions and investigate differences.</p>
+                        </div>
+                        <div class="benefit-card"><span class="benefit-number">03 / VISIBILITY</span>
+                            <h3>Payment tracking</h3>
+                            <p>Review customer collections, supplier dues, cheque details, and bank movements.</p>
+                        </div>
+                        <div class="benefit-card"><span class="benefit-number">04 / REVIEW</span>
+                            <h3>Accounting reports</h3>
+                            <p>Use bank ledgers and financial reports to understand recorded balances.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="bank-reconciliation">
+                    <p class="section-kicker">FEATURE 01</p>
+                    <h2>1. Bank Reconciliation in TallyPrime</h2>
+                    <div class="feature-visual" role="img"
+                        aria-label="Illustration of an accountant comparing a bank statement with accounting records">
+                        <span class="feature-visual-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                        <div><strong>Compare books with the bank statement</strong><span>Review matched entries, timing
+                                differences, and transactions that need investigation.</span></div>
+                        <span class="feature-visual-mark">BANK<br>RECON</span>
+                    </div>
+                    <p>Bank reconciliation is one of the most important banking activities for an accountant. It
+                        involves comparing the transactions recorded in the company's books with the transactions
+                        appearing in the bank statement. The purpose is to identify transactions that have not yet been
+                        reflected in both records, as well as errors or unexpected differences.</p>
+                    <h3>Why Is Bank Reconciliation Important?</h3>
+                    <ul class="check-list">
+                        <li>Identifies differences between bank records and company books.</li>
+                        <li>Helps detect missing or incorrectly recorded transactions.</li>
+                        <li>Makes it easier to track outstanding cheques and pending deposits.</li>
+                        <li>Supports accurate cash and bank balances.</li>
+                        <li>Helps identify unfamiliar or potentially unauthorised transactions.</li>
+                    </ul>
+                    <h3>How to Perform Bank Reconciliation in TallyPrime</h3>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the relevant company</h3>
+                                <p>Open the company whose bank transactions you want to reconcile.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">02</span>
+                            <div class="step-content">
+                                <h3>Select the bank ledger</h3>
+                                <p>Choose the correct bank ledger for the account being reconciled.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">03</span>
+                            <div class="step-content">
+                                <h3>Open Bank Reconciliation</h3>
+                                <p>Access the Bank Reconciliation feature or report available in your TallyPrime
+                                    configuration.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">04</span>
+                            <div class="step-content">
+                                <h3>Review recorded transactions</h3>
+                                <p>Check the bank entries displayed for the relevant period.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">05</span>
+                            <div class="step-content">
+                                <h3>Compare with the bank statement</h3>
+                                <p>Compare accounting entries with the corresponding statement transactions.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">06</span>
+                            <div class="step-content">
+                                <h3>Enter or import bank details</h3>
+                                <p>Use the supported workflow to enter or import the relevant bank dates and details.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">07</span>
+                            <div class="step-content">
+                                <h3>Investigate unreconciled entries</h3>
+                                <p>Review any transactions that do not match and identify the reason.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="step-number">08</span>
+                            <div class="step-content">
+                                <h3>Review the updated report</h3>
+                                <p>Save the reconciliation information and check the resulting report.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-box"><strong>Version note:</strong> The exact navigation and available
+                        statement-import options depend on your TallyPrime release and configuration.</div>
+                    <h3>Example: Payment Processing Date Difference</h3>
+                    <p>An accountant records a supplier payment on 10 October, but the bank statement reflects the
+                        payment on 12 October. The difference may simply be due to processing time. Bank reconciliation
+                        helps the accountant track this difference without incorrectly assuming that the records are
+                        identical.</p>
+                    <p>For a dedicated walkthrough, read <a
+                            routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">How to Perform Bank
+                            Reconciliation in TallyPrime</a>.</p>
+                </section>
+
+                <section class="article-section" id="statement-import">
+                    <p class="section-kicker">FEATURE 02</p>
+                    <h2>2. Bank Statement Import</h2>
+                    <p>Bank statement import can reduce manual data entry when the bank and statement format are
+                        supported. Rather than entering every bank transaction individually, accountants may be able to
+                        import statement data into TallyPrime and use it to support reconciliation and transaction
+                        processing.</p>
+                    <h3>Benefits of Bank Statement Import</h3>
+                    <ul class="check-list">
+                        <li>Reduces repetitive manual data entry.</li>
+                        <li>Helps compare bank transactions with recorded vouchers.</li>
+                        <li>Makes large volumes of transactions easier to review.</li>
+                        <li>Helps identify missing entries and unmatched transactions.</li>
+                        <li>Can improve the efficiency of routine accounting work.</li>
+                    </ul>
+                    <h3>How Accountants Use This Feature</h3>
+                    <p>The accountant obtains the bank statement in a supported format, opens the relevant banking or
+                        reconciliation workflow, and imports the statement according to the available options.</p>
+                    <p>After import, the accountant should verify transaction dates, amounts, descriptions, and matching
+                        results before accepting or recording any changes.</p>
+                    <div class="note-box"><strong>Important:</strong> Bank statement import and automatic matching
+                        capabilities vary by bank, statement format, product version, and configuration. Imported
+                        statement information should always be reviewed before finalising the accounting records.</div>
+                    <p>Related reading: <a routerLink="/match-bank-transactions-with-tallyprime-entries">How to Match
+                            Bank Transactions With TallyPrime Entries</a>.</p>
+                </section>
+
+                <section class="article-section" id="cheque-management">
+                    <p class="section-kicker">FEATURE 03</p>
+                    <h2>3. Cheque Management</h2>
+                    <p>Cheques are still used by some businesses to make payments to suppliers, contractors, and other
+                        parties. TallyPrime supports cheque-related accounting workflows that can help accountants
+                        maintain payment records and manage relevant cheque details.</p>
+                    <h3>What Can Accountants Track?</h3>
+                    <p>Depending on the available configuration, cheque-related details may include:</p>
+                    <ul class="check-list">
+                        <li>Cheque number and cheque date.</li>
+                        <li>Bank account used and payment amount.</li>
+                        <li>Payee details and related payment voucher.</li>
+                        <li>Outstanding or uncleared cheque status, where supported by the workflow.</li>
+                    </ul>
+                    <div class="calculation-card"><span class="calculation-label">PRACTICAL
+                            EXAMPLE</span><strong>₹25,000</strong>
+                        <p>ABC Enterprises issues a cheque for ₹25,000 to a supplier. The accountant records the
+                            supplier payment in TallyPrime and enters the relevant cheque details. When reviewing the
+                            bank statement, the accountant can check whether the payment has been reflected by the bank.
+                        </p>
+                    </div>
+                    <p>This helps the business maintain an organised record of cheque payments and identify outstanding
+                        items during reconciliation.</p>
+                </section>
+
+                <section class="article-section" id="voucher-management">
+                    <p class="section-kicker">FEATURE 04</p>
+                    <h2>4. Payment and Receipt Voucher Management</h2>
+                    <p>Payment and receipt vouchers are fundamental to banking-related accounting in TallyPrime. A
+                        payment voucher records money paid out, while a receipt voucher records money received.</p>
+                    <div class="benefit-grid">
+                        <div class="benefit-card"><span class="benefit-number">PAYMENT VOUCHER</span>
+                            <h3>Money paid out</h3>
+                            <p>Commonly used for supplier payments, office rent, utility bills, salary payments, other
+                                business expenses, and bank payments.</p>
+                        </div>
+                        <div class="benefit-card"><span class="benefit-number">RECEIPT VOUCHER</span>
+                            <h3>Money received</h3>
+                            <p>Commonly used for customer payments, collection of outstanding invoices, interest
+                                received, and other business receipts.</p>
+                        </div>
+                    </div>
+                    <h3>Example of a Supplier Payment</h3>
+                    <p>A business pays ₹15,000 to a supplier through its bank account.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><i class="fa-solid fa-file-invoice-dollar"></i> Supplier Payment
+                            Entry</div>
+                        <div class="table-responsive">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Supplier A/c</td>
+                                        <td>₹15,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank A/c</td>
+                                        <td>—</td>
+                                        <td>₹15,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>This entry reduces the amount payable to the supplier and decreases the bank balance recorded in
+                        the books.</p>
+                    <h3>Example of a Customer Receipt</h3>
+                    <p>A customer pays ₹20,000 against an outstanding invoice.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><i class="fa-solid fa-money-bill-transfer"></i> Customer Receipt
+                            Entry</div>
+                        <div class="table-responsive">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bank A/c</td>
+                                        <td>₹20,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customer A/c</td>
+                                        <td>—</td>
+                                        <td>₹20,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>This entry increases the bank balance in the books and reduces the customer's outstanding
+                        balance. Using the correct voucher type helps accountants maintain reliable records of business
+                        cash flows.</p>
+                    <p>Learn more in <a routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime
+                            Voucher Types Explained with Examples</a>.</p>
+                </section>
+
+                <section class="article-section" id="fund-transfers">
+                    <p class="section-kicker">FEATURE 05</p>
+                    <h2>5. Bank-to-Bank Fund Transfers</h2>
+                    <p>Businesses sometimes transfer funds between their own bank accounts. For example, a company may
+                        transfer ₹50,000 from its current account to another bank account maintained by the same
+                        company.</p>
+                    <p>TallyPrime provides a Contra voucher for recording eligible transactions involving transfers
+                        between cash and bank accounts or between bank accounts.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><i class="fa-solid fa-right-left"></i> Example: ₹50,000 Bank
+                            Transfer</div>
+                        <div class="table-responsive">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Receiving Bank A/c</td>
+                                        <td>₹50,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paying Bank A/c</td>
+                                        <td>—</td>
+                                        <td>₹50,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The transaction increases the receiving bank balance and decreases the paying bank balance. It
+                        does not represent sales income or a business expense.</p>
+                    <h3>Why Is This Feature Important?</h3>
+                    <ul class="check-list">
+                        <li>Maintains correct balances across bank accounts.</li>
+                        <li>Prevents internal fund transfers from being incorrectly classified as income or expenses.
+                        </li>
+                        <li>Supports accurate cash-flow reporting.</li>
+                        <li>Makes it easier to review the movement of funds between accounts.</li>
+                    </ul>
+                    <div class="note-box"><strong>Practical reminder:</strong> Always select the correct bank ledgers
+                        and record the transfer amount accurately.</div>
+                </section>
+
+                <section class="article-section" id="payment-tracking">
+                    <p class="section-kicker">FEATURE 06</p>
+                    <h2>6. Payment Tracking and Outstanding Balances</h2>
+                    <p>Accountants need to know which customer invoices remain unpaid and which supplier bills are due.
+                        TallyPrime's outstanding reports and bill-wise accounting features can help businesses monitor
+                        receivables and payables when the relevant configuration is enabled.</p>
+                    <div class="benefit-grid">
+                        <div class="benefit-card"><span class="benefit-number">CUSTOMER COLLECTIONS</span>
+                            <h3>Customer payment tracking</h3>
+                            <p>Review outstanding customer invoices, identify overdue balances, and record receipts
+                                against the appropriate bills.</p>
+                        </div>
+                        <div class="benefit-card"><span class="benefit-number">SUPPLIER SETTLEMENTS</span>
+                            <h3>Supplier payment tracking</h3>
+                            <p>Review outstanding supplier bills, monitor due dates, and record payments against the
+                                correct references.</p>
+                        </div>
+                    </div>
+                    <h3>Business Benefits</h3>
+                    <ul class="check-list">
+                        <li>Helps reduce missed payment deadlines.</li>
+                        <li>Improves follow-up on customer collections.</li>
+                        <li>Supports cash-flow planning and payment prioritisation.</li>
+                        <li>Makes outstanding balances easier to review.</li>
+                    </ul>
+                    <div class="note-box"><strong>Practical tip:</strong> Maintain correct bill references while
+                        recording receipts and payments. Incorrect allocations can make outstanding reports unreliable
+                        even when the total ledger balance appears correct.</div>
+                    <p>Read <a routerLink="/track-receivables-and-payables-in-tallyprime">How to Track Receivables and
+                            Payables in TallyPrime</a> for more detail.</p>
+                </section>
+
+                <section class="article-section" id="banking-reports">
+                    <p class="section-kicker">FEATURE 07</p>
+                    <h2>7. Banking Reports and Cash Flow Review</h2>
+                    <p>Banking-related accounting records become more useful when accountants regularly review financial
+                        reports. TallyPrime offers accounting and financial reports that can help users review bank
+                        balances, cash movements, outstanding amounts, and the effects of recorded transactions.</p>
+                    <h3>Reports Accountants Should Review</h3>
+                    <div class="table-responsive">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Report</th>
+                                    <th>What It Helps You Review</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Bank Ledger</strong></td>
+                                    <td>Transactions posted to a particular bank account.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bank Reconciliation Report</strong></td>
+                                    <td>Differences between book transactions and bank statement information.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cash and Bank Balances</strong></td>
+                                    <td>Available balances recorded in the company's books.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Outstanding Receivables</strong></td>
+                                    <td>Customer balances that have not yet been collected.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Outstanding Payables</strong></td>
+                                    <td>Amounts that remain payable to suppliers.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cash Flow Report</strong></td>
+                                    <td>Cash inflows and outflows over a selected period, subject to report
+                                        configuration and accounting data.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>These reports support day-to-day accounting, payment planning, and financial review. They should
+                        not be treated as a substitute for checking the actual bank balance or bank statement.</p>
+                </section>
+
+                <section class="article-section" id="transaction-matching">
+                    <p class="section-kicker">FEATURE 08 &amp; 09</p>
+                    <h2>8. Automated Bank Reconciliation and Transaction Matching</h2>
+                    <p>Where supported by the bank integration, statement format, and TallyPrime configuration,
+                        reconciliation tools can help match imported bank transactions with accounting records. This can
+                        be especially helpful when a business processes hundreds or thousands of transactions.</p>
+                    <h3>How Transaction Matching Helps</h3>
+                    <ul class="check-list">
+                        <li>Identifies possible matches between bank statement lines and accounting vouchers.</li>
+                        <li>Reduces repetitive manual comparisons.</li>
+                        <li>Highlights transactions requiring further review.</li>
+                        <li>Helps accountants focus on exceptions and unmatched entries.</li>
+                    </ul>
+                    <div class="note-box"><strong>Important:</strong> A suggested match should not automatically be
+                        assumed to be correct. Similar transaction amounts may relate to different customers, suppliers,
+                        or invoices. Verify the amount, date, reference, and transaction description before confirming a
+                        match.</div>
+                    <h2>9. Bank Payment and Collection Workflows</h2>
+                    <p>Businesses may use digital banking methods such as NEFT, RTGS, IMPS, or UPI to make payments and
+                        receive funds. TallyPrime can record the accounting impact of these transactions through the
+                        appropriate receipt and payment vouchers. Depending on the supported banking features and
+                        configuration, additional payment-related workflows may be available.</p>
+                    <h3>Example: NEFT Supplier Payment</h3>
+                    <p>A company transfers ₹40,000 to a supplier through NEFT.</p>
+                    <div class="journal-box">
+                        <div class="journal-heading"><i class="fa-solid fa-building-columns"></i> NEFT Supplier Payment
+                            Entry</div>
+                        <div class="table-responsive">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Supplier A/c</td>
+                                        <td>₹40,000</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank A/c</td>
+                                        <td>—</td>
+                                        <td>₹40,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>The accountant should record the payment reference and other relevant details where appropriate,
+                        then reconcile the transaction against the bank statement. The payment method itself does not
+                        change the basic accounting treatment of settling a supplier liability.</p>
+                </section>
+
+                <section class="article-section" id="bank-ledgers">
+                    <p class="section-kicker">FEATURE 10</p>
+                    <h2>10. Maintaining Accurate Bank Ledgers</h2>
+                    <p>A bank ledger records transactions associated with a particular bank account in the company's
+                        books. Businesses may maintain separate ledgers for different accounts, such as a current
+                        account, savings account used for business purposes, or another eligible bank account.</p>
+                    <h3>Good Practices for Bank Ledger Management</h3>
+                    <ul class="check-list">
+                        <li>Use clear and consistent ledger names.</li>
+                        <li>Select the correct bank account for each transaction.</li>
+                        <li>Record transactions using the appropriate voucher type.</li>
+                        <li>Enter transaction dates and references accurately.</li>
+                        <li>Review unusual or duplicate entries.</li>
+                        <li>Reconcile each bank account regularly.</li>
+                        <li>Investigate differences instead of making unsupported adjustments.</li>
+                    </ul>
+                    <p>Maintaining accurate bank ledgers helps businesses improve the reliability of their accounting
+                        records. You can also review <a routerLink="/how-to-record-bank-transactions-in-tallyprime">How
+                            to Record Bank Transactions in TallyPrime</a> and <a
+                            routerLink="/how-to-check-bank-book-in-tallyprime">How to Check Bank Book in TallyPrime</a>.
+                    </p>
+                </section>
+
+                <section class="article-section" id="common-mistakes">
+                    <p class="section-kicker">ACCOUNTING ACCURACY</p>
+                    <h2>Common Banking Mistakes Accountants Should Avoid</h2>
+                    <p>Even with accounting software, errors can occur if transactions are entered incorrectly or
+                        reports are not reviewed.</p>
+                    <div class="mistake-list">
+                        <div class="mistake-card"><span class="mistake-number">01</span>
+                            <div>
+                                <h3>Skipping Bank Reconciliation</h3>
+                                <p>Without regular reconciliation, missing transactions and incorrect entries may remain
+                                    undetected.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Reconcile bank accounts regularly
+                                    and investigate outstanding differences.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card"><span class="mistake-number">02</span>
+                            <div>
+                                <h3>Selecting the Wrong Bank Ledger</h3>
+                                <p>Recording a transaction in the wrong account can result in inaccurate bank balances.
+                                </p>
+                                <div class="solution-line"><strong>Solution:</strong> Verify the bank ledger before
+                                    saving the voucher.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card"><span class="mistake-number">03</span>
+                            <div>
+                                <h3>Using the Wrong Voucher Type</h3>
+                                <p>A bank transfer recorded as an expense or income can distort financial reports.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Use the appropriate payment,
+                                    receipt, or contra voucher based on the transaction.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card"><span class="mistake-number">04</span>
+                            <div>
+                                <h3>Ignoring Unmatched Transactions</h3>
+                                <p>Unmatched bank statement lines may represent missing entries, timing differences,
+                                    bank charges, or other issues.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Investigate each important
+                                    unmatched item and record a valid accounting adjustment only when supported by the
+                                    available information.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card"><span class="mistake-number">05</span>
+                            <div>
+                                <h3>Incorrect Bill Allocation</h3>
+                                <p>Recording a customer receipt without linking it to the correct outstanding invoice
+                                    can make collection reports inaccurate.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Review bill-wise references when
+                                    recording receipts and payments.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card"><span class="mistake-number">06</span>
+                            <div>
+                                <h3>Assuming an Imported Transaction Is Correct</h3>
+                                <p>Imported data may contain duplicate entries, incorrect dates, or descriptions that
+                                    are difficult to match.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Verify imported data and review
+                                    suggested matches before confirming them.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="practical-exercises">
+                    <p class="section-kicker">LEARN BY PRACTISING</p>
+                    <h2>Practical TallyPrime Banking Exercises for Accounting Students</h2>
+                    <p>Students can improve their practical accounting skills by completing these exercises in a test
+                        company.</p>
+                    <div class="exercise-grid">
+                        <div class="exercise-card"><span>01</span>
+                            <div>
+                                <h3>Supplier Payment</h3>
+                                <p>Record a bank payment of ₹12,000 to a supplier and verify the updated supplier
+                                    balance.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>02</span>
+                            <div>
+                                <h3>Customer Receipt</h3>
+                                <p>Record a customer receipt of ₹18,000 against an outstanding invoice and check the
+                                    remaining receivable.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>03</span>
+                            <div>
+                                <h3>Bank Transfer</h3>
+                                <p>Transfer ₹30,000 from one company bank account to another using the appropriate
+                                    contra voucher.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>04</span>
+                            <div>
+                                <h3>Bank Reconciliation</h3>
+                                <p>Compare the bank ledger with a sample bank statement and identify transactions that
+                                    appear on different dates or are missing from one record.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>05</span>
+                            <div>
+                                <h3>Bank Charges</h3>
+                                <p>Assume the bank charges ₹250 for a service. Record the charge using the appropriate
+                                    accounting entry after verifying that it appears in the bank statement.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>06</span>
+                            <div>
+                                <h3>Outstanding Payments</h3>
+                                <p>Review supplier outstanding reports and identify bills that require payment.</p>
+                            </div>
+                        </div>
+                        <div class="exercise-card"><span>07</span>
+                            <div>
+                                <h3>Reconciliation Review</h3>
+                                <p>Investigate an unmatched bank transaction and document the reason for the difference.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journal-box">
+                        <div class="journal-heading"><i class="fa-solid fa-book-open"></i> Illustrative Bank Charges
+                            Entry</div>
+                        <div class="table-responsive">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bank Charges A/c</td>
+                                        <td>₹250</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank A/c</td>
+                                        <td>—</td>
+                                        <td>₹250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>These exercises help students understand the connection between vouchers, bank ledgers,
+                        reconciliation, and financial reports.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <p class="section-kicker">COMMON QUESTIONS</p>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. What are the main banking features in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Important banking-related capabilities include bank reconciliation, supported bank
+                                    statement import, cheque-related workflows, payment and receipt vouchers, contra
+                                    vouchers, bank ledger reports, and outstanding reports.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. How do I perform bank reconciliation in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant bank ledger and access the Bank Reconciliation report or feature.
+                                    Compare the book transactions with the bank statement, enter or import the required
+                                    statement details using the supported workflow, and investigate unmatched
+                                    transactions.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can TallyPrime import bank statements?</summary>
+                            <div class="faq-answer">
+                                <p>TallyPrime supports bank statement import for supported banks and formats, subject to
+                                    the relevant version and configuration. Verify the supported statement format before
+                                    importing.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. What is the difference between a payment voucher and a receipt voucher?
+                            </summary>
+                            <div class="faq-answer">
+                                <p>A payment voucher records money paid out, while a receipt voucher records money
+                                    received. Both help maintain accurate records of business cash and bank
+                                    transactions.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. What is a Contra voucher in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>A Contra voucher is generally used for eligible transactions involving transfers
+                                    between cash and bank accounts or between bank accounts. It helps record internal
+                                    fund movements without treating them as sales income or business expenses.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Why is bank reconciliation important for accountants?</summary>
+                            <div class="faq-answer">
+                                <p>Bank reconciliation helps accountants identify missing transactions, timing
+                                    differences, incorrect entries, and unexpected bank statement items. It supports
+                                    accurate accounting and better financial control.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can beginners learn banking in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. Beginners can practise payment vouchers, receipt vouchers, contra entries, bank
+                                    ledger maintenance, and reconciliation using a properly configured practice company.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. Does TallyPrime replace internet banking?</summary>
+                            <div class="faq-answer">
+                                <p>No. TallyPrime is accounting software that helps record and manage financial
+                                    transactions. It does not replace the bank's own services, account controls, or
+                                    banking authorisation process.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <p class="section-kicker">FINAL THOUGHTS</p>
+                    <h2>Conclusion</h2>
+                    <p>TallyPrime banking features help accountants record payments and receipts, manage bank ledgers,
+                        reconcile bank statements, track outstanding amounts, and review financial reports.</p>
+                    <p>Learning these features is valuable for accounting students and aspiring professionals because
+                        banking transactions form a regular part of accounting work. Practical knowledge of payment
+                        vouchers, receipt vouchers, contra entries, and bank reconciliation can help learners handle
+                        everyday accounting responsibilities more confidently.</p>
+                    <p>The best way to learn is to practise different banking scenarios in TallyPrime, verify the
+                        resulting ledger balances, and reconcile the transactions against a sample bank statement.</p>
+                    <div class="local-training-card">
+                        <div class="training-content">
+                            <span class="cta-small-label">TAKE THE NEXT STEP</span>
+                            <h2>Want to learn practical TallyPrime and accounting skills?</h2>
+                            <p>RLT Edzaro offers Tally training for learners who want to strengthen their understanding
+                                of accounting, GST, and day-to-day business transactions. Build your accounting
+                                knowledge through structured learning and practical exercises.</p>
+                            <a href="https://rltedzaro.com/tally-training-institute-in-chennai" class="training-button"
+                                target="_blank" rel="noopener">Explore Tally Training <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="training-decoration"><i class="fa-solid fa-graduation-cap"></i><span>RLT
+                                EDZARO</span></div>
+                    </div>
+                </section>
+
+                <section class="related-articles" aria-labelledby="related-articles-title">
+                    <div class="related-heading">
+                        <h2 id="related-articles-title">Related Articles</h2><span class="related-heading-icon"><i
+                                class="fa-solid fa-book-open"></i></span>
+                    </div>
+                    <p class="related-intro">Explore these TallyPrime guides to strengthen your understanding of
+                        banking, vouchers, reconciliation, and accounting reports.</p>
+                    <div class="related-links">
+                        <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime" class="related-link"><span
+                                class="related-icon"><i class="fa-solid fa-scale-balanced"></i></span><span><strong>How
+                                    to Perform Bank Reconciliation in TallyPrime</strong><small>Follow the
+                                    reconciliation process and review outstanding differences.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                        <a routerLink="/how-to-record-bank-transactions-in-tallyprime" class="related-link"><span
+                                class="related-icon"><i
+                                    class="fa-solid fa-building-columns"></i></span><span><strong>How to Record Bank
+                                    Transactions in TallyPrime</strong><small>Record receipts, payments, transfers,
+                                    cheque entries, and bank charges.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                        <a routerLink="/how-to-check-bank-book-in-tallyprime" class="related-link"><span
+                                class="related-icon"><i class="fa-solid fa-book"></i></span><span><strong>How to Check
+                                    Bank Book in TallyPrime</strong><small>Review bank transactions, date ranges, and
+                                    closing balances.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                        <a routerLink="/match-bank-transactions-with-tallyprime-entries" class="related-link"><span
+                                class="related-icon"><i class="fa-solid fa-code-compare"></i></span><span><strong>How to
+                                    Match Bank Transactions With TallyPrime Entries</strong><small>Identify matched
+                                    transactions, unmatched entries, and discrepancies.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples" class="related-link"><span
+                                class="related-icon"><i class="fa-solid fa-receipt"></i></span><span><strong>TallyPrime
+                                    Voucher Types Explained</strong><small>Understand the purpose of payment, receipt,
+                                    contra, and other vouchers.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                        <a routerLink="/track-receivables-and-payables-in-tallyprime" class="related-link"><span
+                                class="related-icon"><i
+                                    class="fa-solid fa-money-bill-transfer"></i></span><span><strong>How to Track
+                                    Receivables and Payables in TallyPrime</strong><small>Monitor customer collections
+                                    and supplier outstanding balances.</small></span><i
+                                class="fa-solid fa-arrow-up-right-from-square related-arrow"></i></a>
+                    </div>
+                </section>
+
+                <div class="article-footer-actions">
+                    <a routerLink="/blogs" class="all-blogs-button"><i class="fa-solid fa-arrow-left"></i> Explore All
+                        Articles</a>
+                    <button type="button" class="back-to-top" (click)="scrollToTop($event)">Back to Top <i
+                            class="fa-solid fa-arrow-up"></i></button>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>

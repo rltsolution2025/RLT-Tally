@@ -1,0 +1,784 @@
+<div class="entries-blog" id="top">
+    <header class="entries-hero">
+        <div class="entries-container">
+            <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <span aria-hidden="true">/</span>
+                <a routerLink="/blogs">Blogs</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Receivables and Payments in TallyPrime</span>
+            </nav>
+
+            <span class="hero-eyebrow">TALLYPRIME ACCOUNTING GUIDE</span>
+            <h1>How to Track Receivables and Payments Through Banking Reports in TallyPrime</h1>
+            <p class="hero-description">
+                Learn how to monitor customer outstanding balances, review supplier payments,
+                check bank transactions, and reconcile accounting records with bank statements.
+            </p>
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Accounting &amp; Banking</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical TallyPrime Guide</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <div class="entries-container article-layout">
+            <aside class="article-sidebar" aria-label="Article navigation and course information">
+                <nav class="toc-card" aria-label="Table of contents">
+                    <div class="toc-heading">
+                        <span class="toc-icon"><i class="fa-solid fa-list" aria-hidden="true"></i></span>
+                        <h2>Table of Contents</h2>
+                    </div>
+                    <div class="toc-links">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#receivables-payments"
+                            (click)="scrollToSection($event, 'receivables-payments')">Receivables and Payments</a>
+                        <a href="#importance" (click)="scrollToSection($event, 'importance')">Why Tracking Matters</a>
+                        <a href="#reports" (click)="scrollToSection($event, 'reports')">Reports in TallyPrime</a>
+                        <a href="#track-receivables" (click)="scrollToSection($event, 'track-receivables')">Track
+                            Receivables</a>
+                        <a href="#track-bank-payments" (click)="scrollToSection($event, 'track-bank-payments')">Track
+                            Banking Transactions</a>
+                        <a href="#bank-reconciliation" (click)="scrollToSection($event, 'bank-reconciliation')">Bank
+                            Reconciliation</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#supplier-payments" (click)="scrollToSection($event, 'supplier-payments')">Track
+                            Supplier Payments</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    </div>
+                </nav>
+
+                <div class="sidebar-cta">
+                    <span class="cta-small-label">BUILD PRACTICAL SKILLS</span>
+                    <h3>Learn TallyPrime with practical accounting exercises</h3>
+                    <p>Explore accounting, GST, vouchers, banking reports, and reconciliation workflows.</p>
+                    <a class="sidebar-cta-button" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                        target="_blank" rel="noopener noreferrer">
+                        Explore Tally Training <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </aside>
+
+            <article class="article-content">
+                <section class="article-section" id="introduction">
+                    <span class="section-kicker">INTRODUCTION</span>
+                    <h2>How to Track Receivables and Payments Through Banking Reports in TallyPrime</h2>
+                    <p>
+                        Tracking receivables and payments is an important part of managing business finances.
+                        Businesses need to know how much money customers owe, which invoices are overdue,
+                        whether payments have been received, and whether bank transactions match their accounting
+                        records.
+                    </p>
+                    <p>
+                        TallyPrime helps businesses manage customer outstanding balances, record receipts and payments,
+                        review bank-related reports, and reconcile transactions. By regularly reviewing these reports,
+                        accountants can identify pending collections, monitor cash flow, and maintain accurate financial
+                        records.
+                    </p>
+                    <p>
+                        In this guide, you will learn how to track receivables and payments through banking and
+                        accounting
+                        reports in TallyPrime, understand the difference between outstanding invoices and bank
+                        transactions,
+                        and practise the process using real-world examples.
+                    </p>
+                    <div class="answer-box">
+                        <span class="answer-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                        <div>
+                            <h3>Key point</h3>
+                            <p>Use receivables and payables reports to monitor party balances, the Bank Book to review
+                                recorded bank activity, and Bank Reconciliation to compare your books with the bank
+                                statement.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="receivables-payments">
+                    <span class="section-kicker">ACCOUNTING BASICS</span>
+                    <h2>What Are Receivables and Payments in Accounting?</h2>
+                    <p>Before exploring TallyPrime reports, it is important to understand the two concepts.</p>
+                    <h3>What Are Receivables?</h3>
+                    <p>
+                        Receivables are amounts a business expects to collect from customers for goods or services
+                        supplied on credit.
+                        For example, if a business sells goods worth ₹25,000 to a customer on credit, the customer owes
+                        ₹25,000
+                        until the payment is received or the balance is otherwise settled.
+                    </p>
+                    <p>Receivables help businesses understand how much money is pending from customers.</p>
+                    <h3>What Are Payments?</h3>
+                    <p>
+                        Payments are amounts transferred or paid to settle business obligations. These may include
+                        payments to
+                        suppliers, employees, service providers, or other parties. Businesses also record receipts when
+                        they receive
+                        money from customers.
+                    </p>
+                    <p>
+                        In TallyPrime, receipt vouchers, payment vouchers, bank ledgers, and related reports help
+                        accountants
+                        monitor these transactions. Learn more about the available voucher categories in
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                            Explained</a>.
+                    </p>
+                    <div class="benefit-grid">
+                        <div class="benefit-card">
+                            <span class="benefit-number">01 / RECEIVABLES</span>
+                            <h3>Money expected from customers</h3>
+                            <p>Outstanding customer invoices and amounts due for credit sales.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">02 / PAYMENTS</span>
+                            <h3>Money paid to settle obligations</h3>
+                            <p>Supplier, employee, service-provider, and other business payments.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="importance">
+                    <span class="section-kicker">BUSINESS CONTROL</span>
+                    <h2>Why Is Tracking Receivables and Payments Important?</h2>
+                    <p>Regular monitoring of receivables and payments helps businesses maintain better financial
+                        control.</p>
+                    <div class="benefit-grid">
+                        <div class="benefit-card">
+                            <span class="benefit-number">01</span>
+                            <h3>Improved cash flow</h3>
+                            <p>Identify expected collections and plan upcoming expenses.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">02</span>
+                            <h3>Faster customer follow-ups</h3>
+                            <p>Find overdue invoices and contact customers on time.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">03</span>
+                            <h3>Accurate bank records</h3>
+                            <p>Compare recorded transactions with bank statements.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">04</span>
+                            <h3>Fewer accounting errors</h3>
+                            <p>Identify missing, duplicate, or incorrectly recorded transactions.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">05</span>
+                            <h3>Better supplier management</h3>
+                            <p>Monitor outstanding payments and payment due dates.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="benefit-number">06</span>
+                            <h3>Reliable financial reporting</h3>
+                            <p>Maintain dependable customer balances and banking records.</p>
+                        </div>
+                    </div>
+                    <p>For accounting students and aspiring accountants, learning these processes in TallyPrime is
+                        useful for developing practical accounting skills.</p>
+                </section>
+
+                <section class="article-section" id="reports">
+                    <span class="section-kicker">REPORT GUIDE</span>
+                    <h2>Which TallyPrime Reports Help Track Receivables and Payments?</h2>
+                    <p>TallyPrime provides different reports for monitoring outstanding balances and banking
+                        transactions. Each report serves a different purpose.</p>
+                    <div class="table-responsive">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Report</th>
+                                    <th>Main Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bills Receivable or Receivables reports</td>
+                                    <td>Track customer invoices and outstanding amounts.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bills Payable or Payables reports</td>
+                                    <td>Monitor outstanding supplier bills.</td>
+                                </tr>
+                                <tr>
+                                    <td>Day Book</td>
+                                    <td>Review recorded receipts, payments, sales, and other vouchers.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank Book</td>
+                                    <td>Review transactions recorded in a bank ledger.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cash or Bank Summary</td>
+                                    <td>Review relevant cash and bank balances.</td>
+                                </tr>
+                                <tr>
+                                    <td>Bank Reconciliation</td>
+                                    <td>Compare recorded bank transactions with the bank statement.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ledger Vouchers</td>
+                                    <td>Review the transaction history of a customer, supplier, or bank ledger.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="note-box">
+                        <strong>Important:</strong> Receivables reports tell you what customers owe according to your
+                        books.
+                        Banking reports show recorded bank activity. Bank reconciliation helps you compare those records
+                        with
+                        actual bank statement transactions. Report names and navigation may vary by TallyPrime release
+                        and configuration.
+                    </div>
+                </section>
+
+                <section class="article-section" id="track-receivables">
+                    <span class="section-kicker">CUSTOMER COLLECTIONS</span>
+                    <h2>How to Track Receivables in TallyPrime</h2>
+                    <p>Follow these steps to review outstanding customer balances and identify overdue invoices.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step">
+                            <span class="step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open Your Company in TallyPrime</h3>
+                                <p>Open TallyPrime and select the company whose receivables you want to review. Make
+                                    sure sales invoices and customer receipts have been recorded correctly.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">02</span>
+                            <div class="step-content">
+                                <h3>Open the Receivables Report</h3>
+                                <p>Navigate to the relevant outstanding statements or receivables report using the
+                                    available report menus. Depending on your version, you may find this under the
+                                    Statements of Accounts or outstanding reports area. Select the customer outstanding
+                                    or bills receivable view.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">03</span>
+                            <div class="step-content">
+                                <h3>Review Customer Outstanding Balances</h3>
+                                <p>The report can help you identify customer names, outstanding invoice references,
+                                    pending amounts, bill dates and due dates where configured, and ageing information
+                                    where available.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">04</span>
+                            <div class="step-content">
+                                <h3>Check Overdue Invoices</h3>
+                                <p>Use the available ageing or due-date options to identify invoices that have remained
+                                    unpaid beyond their expected payment dates. For example, if a customer was expected
+                                    to pay within 30 days but has not paid after 45 days, the invoice may require a
+                                    follow-up.</p>
+                                <div class="step-note">Contact the customer, confirm the payment status, and update your
+                                    records after the payment is received.</div>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">05</span>
+                            <div class="step-content">
+                                <h3>Record Customer Receipts</h3>
+                                <p>When a customer pays an outstanding invoice, record the receipt in TallyPrime:</p>
+                                <ol class="numbered-list check-list">
+                                    <li>Open the Receipt voucher.</li>
+                                    <li>Select the appropriate bank or cash ledger.</li>
+                                    <li>Select the customer ledger.</li>
+                                    <li>Enter the amount received.</li>
+                                    <li>Allocate the receipt against the correct outstanding bill reference, where
+                                        applicable.</li>
+                                    <li>Enter the payment details and save the voucher.</li>
+                                </ol>
+                                <p>The receipt should be allocated correctly so that the relevant outstanding invoice is
+                                    reduced or settled in the reports.</p>
+                                <p>For a broader walkthrough, see <a
+                                        routerLink="/how-to-record-bank-transactions-in-tallyprime">How to Record Bank
+                                        Transactions in TallyPrime</a>.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">06</span>
+                            <div class="step-content">
+                                <h3>Review the Updated Receivables Report</h3>
+                                <p>Return to the customer outstanding report and verify that the receipt has been
+                                    reflected correctly. If the customer has paid the full amount, the invoice should
+                                    normally no longer appear as outstanding. Partial payments may leave a remaining
+                                    balance.</p>
+                                <p>If the report does not reflect the expected result, review the receipt voucher,
+                                    customer ledger, and bill allocation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="track-bank-payments">
+                    <span class="section-kicker">BANKING REPORTS</span>
+                    <h2>How to Track Payments Through Banking Reports in TallyPrime</h2>
+                    <p>Banking reports help accountants review transactions recorded against bank accounts and
+                        understand the movement of funds.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step">
+                            <span class="step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the Bank Book</h3>
+                                <p>Open the relevant bank ledger report or Bank Book in TallyPrime. The Bank Book shows
+                                    transactions recorded against the selected bank account, such as receipts, supplier
+                                    payments, transfers, and other bank-related entries.</p>
+                                <p>Related guide: <a routerLink="/how-to-check-bank-book-in-tallyprime">How to Check
+                                        Bank Book in TallyPrime</a>.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">02</span>
+                            <div class="step-content">
+                                <h3>Select the Reporting Period</h3>
+                                <p>Choose the period you want to review, such as a specific week, month, or financial
+                                    year. Reviewing transactions for October, for example, can help you identify
+                                    customer receipts and supplier payments recorded during that month.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">03</span>
+                            <div class="step-content">
+                                <h3>Review Bank Transactions</h3>
+                                <p>Check the transaction date, voucher type, narration, reference details, and amount.
+                                    Look for customer receipts, supplier payments, bank transfers, bank charges,
+                                    interest credited or debited, and transactions that may have been entered
+                                    incorrectly.</p>
+                                <p>The information available depends on how the company records its banking
+                                    transactions.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">04</span>
+                            <div class="step-content">
+                                <h3>Open the Relevant Voucher</h3>
+                                <p>If you need more information about a particular transaction, open the corresponding
+                                    voucher or ledger entry. Verify the party name, amount, date, bank ledger, and
+                                    accounting classification.</p>
+                                <p>If an error is identified, correct the entry using the appropriate accounting process
+                                    and retain supporting documentation.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">05</span>
+                            <div class="step-content">
+                                <h3>Compare the Bank Book with the Bank Statement</h3>
+                                <p>Download or obtain the relevant bank statement and compare its transactions with
+                                    those recorded in TallyPrime. Check whether deposits, withdrawals, bank charges, and
+                                    other transactions appear in both records.</p>
+                                <div class="step-note">Any differences should be investigated rather than automatically
+                                    treated as errors.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="bank-reconciliation">
+                    <span class="section-kicker">RECONCILIATION</span>
+                    <h2>How to Perform Bank Reconciliation in TallyPrime</h2>
+                    <p>
+                        Bank reconciliation is the process of comparing transactions recorded in your books with those
+                        shown in your bank statement.
+                        It helps identify transactions that have not yet appeared in the bank account, bank charges that
+                        have not been recorded,
+                        incorrect entries, and other timing or recording differences.
+                    </p>
+                    <h3>Steps to Reconcile Bank Transactions</h3>
+                    <ol class="check-list numbered-list">
+                        <li>Open the relevant bank ledger or Bank Reconciliation report.</li>
+                        <li>Select the period you want to reconcile.</li>
+                        <li>Review the transactions listed in TallyPrime.</li>
+                        <li>Compare each transaction with the bank statement.</li>
+                        <li>Identify transactions that match.</li>
+                        <li>Enter or verify the relevant bank dates and reconciliation details using the available
+                            options.</li>
+                        <li>Investigate missing or mismatched transactions.</li>
+                        <li>Review the reconciled and unreconciled balances.</li>
+                    </ol>
+                    <p>The exact workflow may vary depending on your TallyPrime version, bank integration, and whether
+                        bank statements are imported.</p>
+                    <div class="answer-box">
+                        <span class="answer-icon"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>
+                        <div>
+                            <h3>Example: A one-day timing difference</h3>
+                            <p>A customer transfers ₹15,000 to your bank account on 10 October. The receipt is recorded
+                                in TallyPrime on 10 October, but the bank statement reflects the credit on 11 October.
+                                The difference may be a timing issue rather than an accounting error. Verify the
+                                transaction details and use the actual bank date as appropriate.</p>
+                        </div>
+                    </div>
+                    <p>For a more detailed walkthrough, read <a
+                            routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">How to Perform Bank
+                            Reconciliation in TallyPrime</a> and <a
+                            routerLink="/match-bank-transactions-with-tallyprime-entries">How to Match Bank Transactions
+                            With TallyPrime Entries</a>.</p>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <span class="section-kicker">PRACTICAL EXAMPLE</span>
+                    <h2>Practical Example: Tracking Receivables and Payments</h2>
+                    <p>Consider ABC Traders, which sells goods to three customers on credit.</p>
+                    <div class="table-responsive">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Invoice Amount</th>
+                                    <th>Amount Received</th>
+                                    <th>Outstanding</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Customer A</td>
+                                    <td>₹25,000</td>
+                                    <td>₹25,000</td>
+                                    <td>₹0</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer B</td>
+                                    <td>₹40,000</td>
+                                    <td>₹15,000</td>
+                                    <td>₹25,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer C</td>
+                                    <td>₹30,000</td>
+                                    <td>₹0</td>
+                                    <td>₹30,000</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td>Total</td>
+                                    <td>₹95,000</td>
+                                    <td>₹40,000</td>
+                                    <td>₹55,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>ABC Traders has recorded sales invoices totalling ₹95,000 and received ₹40,000 from customers.
+                        The remaining receivables are ₹55,000.</p>
+                    <div class="calculation-card">
+                        <span class="calculation-label">OUTSTANDING RECEIVABLES</span>
+                        <strong>₹55,000</strong>
+                        <p>Invoice total ₹95,000 − amount received ₹40,000 = outstanding customer balances of ₹55,000.
+                        </p>
+                    </div>
+                    <p>
+                        The accountant can use the receivables report to identify the outstanding invoices and the Bank
+                        Book to review
+                        the ₹40,000 in customer receipts recorded against the bank account. The accountant should then
+                        compare those
+                        receipts with the actual bank statement to confirm that the funds have been credited.
+                    </p>
+                    <p>This process provides a clearer picture of the company's pending collections and recorded bank
+                        activity.</p>
+                </section>
+
+                <section class="article-section" id="supplier-payments">
+                    <span class="section-kicker">SUPPLIER MANAGEMENT</span>
+                    <h2>How to Track Supplier Payments in TallyPrime</h2>
+                    <p>In addition to customer receivables, businesses need to monitor amounts payable to suppliers.</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step">
+                            <span class="step-number">01</span>
+                            <div class="step-content">
+                                <h3>Open the Payables Report</h3>
+                                <p>Navigate to the relevant outstanding bills or payables report. Review the supplier
+                                    names, outstanding invoices, due dates, and amounts payable.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">02</span>
+                            <div class="step-content">
+                                <h3>Identify Upcoming Payments</h3>
+                                <p>Check which supplier bills are due soon and which are overdue. This helps the
+                                    business plan payments based on available cash and contractual payment terms.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">03</span>
+                            <div class="step-content">
+                                <h3>Record Supplier Payments</h3>
+                                <p>When a payment is made, open the Payment voucher and select the appropriate bank
+                                    ledger and supplier ledger. Enter the payment amount and allocate it against the
+                                    correct outstanding bill reference, where applicable. Save the voucher and verify
+                                    that the supplier's outstanding balance has been updated correctly.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step">
+                            <span class="step-number">04</span>
+                            <div class="step-content">
+                                <h3>Verify the Bank Transaction</h3>
+                                <p>Review the Bank Book and compare the payment with the bank statement. If the payment
+                                    has not yet cleared, investigate whether the difference is due to timing or an
+                                    incorrect entry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="common-problems">
+                    <span class="section-kicker">TROUBLESHOOTING</span>
+                    <h2>Common Problems When Tracking Receivables and Payments</h2>
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <span class="mistake-number">01</span>
+                            <div>
+                                <h3>Customer Receipts Are Not Reducing Outstanding Balances</h3>
+                                <p><strong>Possible reasons:</strong> The receipt was allocated to the wrong customer,
+                                    was not allocated against the correct bill reference, or the voucher was recorded
+                                    incorrectly.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Open the receipt voucher, verify
+                                    the customer ledger and bill allocation, and correct the entry if necessary.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <span class="mistake-number">02</span>
+                            <div>
+                                <h3>Bank Book and Bank Statement Do Not Match</h3>
+                                <p><strong>Possible reasons:</strong> A transaction has not cleared, bank charges or
+                                    interest have not been recorded, a transaction is missing or duplicated, or the
+                                    recorded amount or date is incorrect.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Compare the records transaction by
+                                    transaction, identify the cause of the difference, and record legitimate missing
+                                    transactions.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <span class="mistake-number">03</span>
+                            <div>
+                                <h3>Overdue Invoices Are Not Easy to Identify</h3>
+                                <p><strong>Possible reasons:</strong> Due dates or credit periods are not configured
+                                    correctly, outstanding balances have not been allocated properly, or the wrong
+                                    reporting period has been selected.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Verify the invoice references,
+                                    due-date configuration, and report filters.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <span class="mistake-number">04</span>
+                            <div>
+                                <h3>Supplier Payments Remain Outstanding After Payment</h3>
+                                <p><strong>Possible reasons:</strong> The payment voucher has not been recorded, the
+                                    payment has not been allocated against the correct supplier bill, or the wrong
+                                    supplier ledger was selected.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Verify the payment voucher,
+                                    supplier ledger, and bill allocation.</div>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <span class="mistake-number">05</span>
+                            <div>
+                                <h3>Duplicate Receipts or Payments Appear</h3>
+                                <p><strong>Possible reasons:</strong> A transaction was entered manually and imported
+                                    again, the same payment was recorded in multiple vouchers, or an imported bank
+                                    transaction was not matched to an existing entry.</p>
+                                <div class="solution-line"><strong>Solution:</strong> Review the transaction history and
+                                    supporting bank records before correcting duplicate entries.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <span class="section-kicker">ACCOUNTING CHECKLIST</span>
+                    <h2>Best Practices for Managing Receivables and Payments</h2>
+                    <p>To maintain accurate accounting records in TallyPrime, follow these practices:</p>
+                    <ul class="check-list">
+                        <li>Record sales invoices promptly.</li>
+                        <li>Enter customer receipts and supplier payments accurately.</li>
+                        <li>Allocate receipts and payments against the correct outstanding bills.</li>
+                        <li>Review receivables and payables at regular intervals.</li>
+                        <li>Follow up on overdue invoices.</li>
+                        <li>Reconcile bank accounts regularly.</li>
+                        <li>Investigate unreconciled transactions.</li>
+                        <li>Maintain bank statements and payment confirmations.</li>
+                        <li>Review the Day Book and relevant ledgers for unusual entries.</li>
+                        <li>Back up company data according to your organisation's procedures.</li>
+                    </ul>
+                    <p>These practices help improve cash-flow visibility and reduce avoidable accounting discrepancies.
+                    </p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <span class="section-kicker">COMMON QUESTIONS</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How can I check customer outstanding payments in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant outstanding statements or receivables report and review the
+                                    customer balances and bill references. The available details depend on the company's
+                                    accounting configuration.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Which TallyPrime report is used to track bank transactions?</summary>
+                            <div class="faq-answer">
+                                <p>The Bank Book is commonly used to review transactions recorded against a bank ledger.
+                                    The Bank Reconciliation report helps compare recorded transactions with the bank
+                                    statement.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. What is the difference between receivables and bank balance?</summary>
+                            <div class="faq-answer">
+                                <p>Receivables represent amounts customers owe the business. The bank balance represents
+                                    the amount recorded in the bank account ledger, subject to reconciliation with the
+                                    actual bank statement.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. How do I record a customer payment in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Use a Receipt voucher, select the appropriate customer and bank or cash ledger, enter
+                                    the amount, and allocate the receipt against the correct outstanding bill where
+                                    applicable.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. How do I check overdue customer invoices in TallyPrime?</summary>
+                            <div class="faq-answer">
+                                <p>Review the receivables or outstanding bills report and use the available due-date or
+                                    ageing options. Ensure the credit period and bill references are configured
+                                    correctly.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. Why is bank reconciliation important?</summary>
+                            <div class="faq-answer">
+                                <p>Bank reconciliation helps identify timing differences, missing transactions, bank
+                                    charges, duplicate entries, and other discrepancies between the accounting records
+                                    and bank statement.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can TallyPrime help track supplier payments?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. Payables or outstanding bills reports help monitor supplier balances, while
+                                    Payment vouchers and the Bank Book help track recorded payments.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>8. How often should a business reconcile its bank account?</summary>
+                            <div class="faq-answer">
+                                <p>The frequency depends on the volume of transactions and the business's internal
+                                    controls. Many businesses reconcile bank accounts monthly, while businesses with
+                                    frequent transactions may benefit from more frequent reviews.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <span class="section-kicker">FINAL TAKEAWAY</span>
+                    <h2>Conclusion</h2>
+                    <p>
+                        Tracking receivables and payments through banking and accounting reports in TallyPrime helps
+                        businesses
+                        monitor customer collections, manage supplier obligations, review bank transactions, and
+                        identify discrepancies.
+                    </p>
+                    <p>
+                        The key is to use the appropriate report for each task: receivables reports for customer
+                        outstanding balances,
+                        payables reports for supplier obligations, the Bank Book for recorded bank activity, and Bank
+                        Reconciliation
+                        for comparing book entries with the bank statement.
+                    </p>
+                    <p>
+                        For accounting students and aspiring accountants, practising these workflows builds valuable
+                        skills in accounts
+                        receivable, accounts payable, banking, and reconciliation. You can also use a <a
+                            routerLink="/generate-trial-balance-in-tallyprime">Trial Balance report</a>
+                        to review ledger balances as part of broader accounting checks.
+                    </p>
+
+                    <div class="local-training-card">
+                        <div class="training-content">
+                            <span class="cta-small-label">TAKE THE NEXT STEP</span>
+                            <h2>Want to improve your practical accounting skills?</h2>
+                            <p>Explore Tally training at RLT Edzaro and develop your understanding of TallyPrime,
+                                accounting entries, GST, and banking reports.</p>
+                            <a class="training-button" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                target="_blank" rel="noopener noreferrer">
+                                Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="training-decoration" aria-hidden="true">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Learn. Practise. Grow.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-articles" aria-labelledby="related-articles-heading">
+                    <div class="related-heading">
+                        <h2 id="related-articles-heading">Related Articles</h2>
+                        <span class="related-heading-icon"><i class="fa-solid fa-book-open"
+                                aria-hidden="true"></i></span>
+                    </div>
+                    <p class="related-intro">Continue learning with these practical TallyPrime accounting guides.</p>
+                    <div class="related-links">
+                        <a class="related-link" routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">
+                            <span class="related-icon"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i></span>
+                            <span><strong>How to Perform Bank Reconciliation in TallyPrime</strong><small>Compare bank
+                                    records and accounting entries.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="related-link" routerLink="/how-to-check-bank-book-in-tallyprime">
+                            <span class="related-icon"><i class="fa-solid fa-book" aria-hidden="true"></i></span>
+                            <span><strong>How to Check Bank Book in TallyPrime</strong><small>Review bank transactions
+                                    and balances.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="related-link" routerLink="/how-to-record-bank-transactions-in-tallyprime">
+                            <span class="related-icon"><i class="fa-solid fa-building-columns"
+                                    aria-hidden="true"></i></span>
+                            <span><strong>How to Record Bank Transactions in TallyPrime</strong><small>Record receipts,
+                                    payments, and transfers.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="related-link" routerLink="/tallyprime-voucher-types-explained-with-examples">
+                            <span class="related-icon"><i class="fa-solid fa-receipt" aria-hidden="true"></i></span>
+                            <span><strong>TallyPrime Voucher Types Explained</strong><small>Understand the purpose of
+                                    common vouchers.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="related-link" routerLink="/match-bank-transactions-with-tallyprime-entries">
+                            <span class="related-icon"><i class="fa-solid fa-arrows-left-right"
+                                    aria-hidden="true"></i></span>
+                            <span><strong>How to Match Bank Transactions With TallyPrime
+                                    Entries</strong><small>Investigate unmatched bank transactions.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="related-link" routerLink="/generate-trial-balance-in-tallyprime">
+                            <span class="related-icon"><i class="fa-solid fa-chart-column"
+                                    aria-hidden="true"></i></span>
+                            <span><strong>How to Generate a Trial Balance in TallyPrime</strong><small>Review ledger
+                                    balances across accounts.</small></span>
+                            <i class="related-arrow fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="article-footer-actions">
+                    <a class="all-blogs-button" routerLink="/blogs"><i class="fa-solid fa-arrow-left"
+                            aria-hidden="true"></i> Explore All Blogs</a>
+                    <button class="back-to-top" type="button" (click)="scrollToTop($event)"><i
+                            class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top</button>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>

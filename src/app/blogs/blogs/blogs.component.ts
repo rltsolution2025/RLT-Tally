@@ -381,6 +381,300 @@ export class BlogsComponent {
       readTime: '10 min read',
       url: '/generate-trial-balance-in-tallyprime/',
     },
+
+    {
+      title: 'How to Read a Profit and Loss Statement in TallyPrime: Complete Guide',
+      description:
+        'Learn how to view and read a Profit and Loss Statement in TallyPrime. Understand sales revenue, direct and indirect expenses, gross profit, net profit, profit margins, and practical accounting examples. Discover how to compare financial reports and analyse business performance.',
+      image: 'blogs-image/How-to-Read-Profit-and-Loss-Statement-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-read-profit-and-loss-statement-in-tallyprime/',
+    },
+    {
+      title: 'How to View Balance Sheet in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to view a Balance Sheet in TallyPrime with step-by-step instructions. Understand assets, liabilities, capital, reporting dates, ledger balances, detailed reports, and how to export or print the Balance Sheet for financial analysis.',
+      image: 'blogs-image/How-to-View-Balance-Sheet-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-view-balance-sheet-in-tallyprime/',
+    },
+    {
+      title: 'How to Check Cash Flow in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to check cash flow in TallyPrime with step-by-step instructions. Understand cash inflows and outflows, analyse receipts and payments, calculate net cash movement, verify cash and bank balances, and use practical examples to understand business liquidity.',
+      image: 'blogs-image/How-to-Check-Cash-Flow-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-check-cash-flow-in-tallyprime/',
+    },
+
+    {
+      title: 'How to Track Receivables and Payables in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to track accounts receivable and payable in TallyPrime. Understand bill-wise tracking, customer outstanding balances, supplier payments, due dates, ageing reports, partial payments, and how to manage receivables and payables with practical examples.',
+      image: 'blogs-image/How-to-Track-Receivables-and-Payables-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/track-receivables-and-payables-in-tallyprime/',
+    },
+    {
+      title: 'How to Find Outstanding Payments in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to find outstanding payments in TallyPrime and track customer receivables and supplier payables. Understand outstanding bills, invoice-wise balances, due dates, ageing reports, partial payments, bill-wise allocation, and practical methods to manage pending payments.',
+      image: 'blogs-image/How-to-Find-Outstanding-Payments-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-find-outstanding-payments-in-tallyprime/',
+    },
+    {
+      title: 'How to Check Day Book in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to check the Day Book in TallyPrime with step-by-step instructions. Understand daily transactions, view sales and purchase vouchers, filter entries by date, verify ledger details, identify accounting mistakes, and review practical examples.',
+      image: 'blogs-image/How-to-Check-Day-Book-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '10 min read',
+      url: '/how-to-check-day-book-in-tallyprime/',
+    },
+    {
+      title: 'How to View Ledger Reports in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to view ledger reports in TallyPrime with step-by-step instructions. Understand debit and credit transactions, select ledgers, change reporting periods, review opening and closing balances, examine individual vouchers, and troubleshoot common ledger report errors.',
+      image: 'blogs-image/How-to-View-Ledger-Reports-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-view-ledger-reports-in-tallyprime/',
+    },
+    {
+      title: 'How to Track Expenses Using Cost Centres in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to track expenses using Cost Centres in TallyPrime. Understand how to enable Cost Centres, create cost centres and cost categories, allocate expenses to departments and projects, and generate reports for better expense analysis and financial management.',
+      image: 'blogs-image/How-to-Track-Expenses-Using-Cost-Centres-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '10 min read',
+      url: '/track-expenses-using-cost-centres-in-tallyprime/',
+    },
+
+    {
+      title: 'How to Use Ratio Analysis in TallyPrime for Business Reporting: Complete Guide',
+      description:
+        'Learn how to use ratio analysis in TallyPrime to evaluate business performance. Understand liquidity ratios, profitability ratios, solvency ratios, and efficiency ratios, including current ratio, quick ratio, gross profit ratio, net profit ratio, debt-to-equity ratio, inventory turnover, and practical financial analysis examples.',
+      image: 'blogs-image/How-to-Use-Ratio-Analysis-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '14 min read',
+      url: '/ratio-analysis-in-tallyprime-business-reporting/',
+    },
+    {
+      title: 'How to Create Stock Items in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to create stock items in TallyPrime with step-by-step instructions. Understand stock groups, units of measurement, opening stock quantities, stock valuation, inventory configuration, and how to manage stock items with practical examples.',
+      image: 'blogs-image/How-to-Create-Stock-Items-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/create-stock-items-in-tallyprime/',
+    },
+    {
+      title: 'How to Create Stock Groups and Categories in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to create stock groups and stock categories in TallyPrime. Understand their differences, organise inventory, create parent and child groups, assign categories to stock items, configure units of measurement, and improve inventory reporting with practical examples.',
+      image: 'blogs-image/How-to-Create-Stock-Groups-and-Categories-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-create-stock-groups-and-categories-in-tallyprime/',
+    },
+    {
+      title: 'How to Manage Multiple Godowns in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to manage multiple godowns in TallyPrime with step-by-step instructions. Understand how to enable godown management, create warehouses and storage locations, allocate stock, record stock transfers, manage opening stock, and generate godown-wise inventory reports.',
+      image: 'blogs-image/How-to-Manage-Multiple-Godowns-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '10 min read',
+      url: '/how-to-manage-multiple-godowns-in-tallyprime/',
+    },
+    //
+    {
+      title: 'How to Track Stock Movement in TallyPrime: A Step-by-Step Guide',
+      description:
+        'Learn how to track stock movement in TallyPrime with step-by-step instructions. Understand stock receipts, sales, stock transfers, inventory adjustments, godown-wise stock tracking, Stock Summary reports, and practical inventory management examples.',
+      image: 'blogs-image/How-to-Track-Stock-Movement-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 16, 2026',
+      readTime: '12 min read',
+      url: '/how-to-track-stock-movement-in-tallyprime/',
+    },
+    {
+      title: 'How to Check Stock Summary in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to check Stock Summary in TallyPrime, view opening and closing stock, monitor inventory quantities and values, understand stock reports, and troubleshoot common inventory errors.',
+      image: 'blogs-image/How-to-Check-Stock-Summary-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '9 min read',
+      url: '/how-to-check-stock-summary-in-tallyprime/',
+    },
+    {
+      title: 'How to Manage Batch-Wise Inventory in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to manage batch-wise inventory in TallyPrime, enable batch tracking, record stock purchases and sales, track expiry dates, and maintain accurate inventory records.',
+      image: 'blogs-image/How-to-Manage-Batch-Wise-Inventory-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '11 min read',
+      url: '/how-to-manage-batch-wise-inventory-in-tallyprime/',
+    },
+    {
+      title: 'How to Set Reorder Levels in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to set reorder levels in TallyPrime, configure stock items, track minimum inventory levels, calculate reorder points, and review inventory reports with practical examples.',
+      image: 'blogs-image/How-to-Set-Reorder-Levels-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '10 min read',
+      url: '/how-to-set-reorder-levels-in-tallyprime/',
+    },
+    {
+      title: 'How to Track Stock Ageing in TallyPrime: A Complete Guide',
+      description:
+        'Learn how to track stock ageing in TallyPrime, analyse slow-moving inventory, understand stock ageing reports, calculate inventory age, and improve stock management with practical examples.',
+      image: 'blogs-image/How-to-Track-Stock-Ageing-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '10 min read',
+      url: '/how-to-track-stock-ageing-in-tallyprime/',
+    },
+    {
+      title: 'How to Record Stock Transfers Between Godowns in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to record stock transfers between godowns in TallyPrime using Stock Journal vouchers, create godowns, transfer inventory between warehouses, and verify godown-wise stock reports.',
+      image: 'blogs-image/Stock-Transfer-Between-Godowns-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '10 min read',
+      url: '/stock-transfer-between-godowns-in-tallyprime/',
+    },
+    {
+      title: 'How to Calculate Stock Valuation in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to calculate stock valuation in TallyPrime using FIFO, weighted average, and other stock valuation methods. Understand inventory costing, configure stock items, and calculate closing stock values with practical examples.',
+      image: 'blogs-image/How-to-Calculate-Stock-Valuation-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '12 min read',
+      url: '/how-to-calculate-stock-valuation-in-tallyprime/',
+    },
+    {
+      title: 'How to Perform Bank Reconciliation in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to perform bank reconciliation in TallyPrime using manual and statement-based methods. Follow step-by-step instructions to import bank statements, match transactions, identify differences, and reconcile bank balances with practical examples.',
+      image: 'blogs-image/How-to-Perform-Bank-Reconciliation-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '12 min read',
+      url: '/bank-reconciliation-in-tallyprime/',
+    },
+    {
+      title: 'How to Import Bank Statements into TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to import bank statements into TallyPrime, configure bank ledgers, import supported statement files, match transactions, perform bank reconciliation, and fix common import errors.',
+      image: 'blogs-image/How-to-Import-Bank-Statements-into-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '11 min read',
+      url: '/how-to-import-bank-statements-in-tallyprime/',
+    },
+    {
+      title: 'Bank Reconciliation in TallyPrime: Common Errors and Solutions',
+      description:
+        'Learn how to perform bank reconciliation in TallyPrime, identify common reconciliation errors, fix unmatched transactions, correct bank charges and duplicate entries, and maintain accurate accounting records.',
+      image: 'blogs-image/Bank-Reconciliation-in-TallyPrime-Common-Errors-and-Solutions.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '11 min read',
+      url: '/bank-reconciliation-tallyprime-errors-solutions/',
+    },
+    {
+      title: 'How to Record Bank Transactions in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to record bank transactions in TallyPrime, including customer receipts, supplier payments, cash deposits, bank transfers, cheque entries, bank charges, interest income, and bank reconciliation with practical examples.',
+      image: 'blogs-image/How-to-Record-Bank-Transactions-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '12 min read',
+      url: '/how-to-record-bank-transactions-in-tallyprime/',
+    },
+    {
+      title: 'How to Check Bank Book in TallyPrime: Step-by-Step Guide',
+      description:
+        'Learn how to check the Bank Book in TallyPrime, view bank transactions, filter dates, verify opening and closing balances, inspect individual vouchers, and reconcile bank statements with practical examples.',
+      image: 'blogs-image/How-to-Check-Bank-Book-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '9 min read',
+      url: '/how-to-check-bank-book-in-tallyprime/',
+    },
+    {
+      title: 'How to Match Bank Transactions With TallyPrime Entries: Step-by-Step Guide',
+      description:
+        'Learn how to match bank transactions with TallyPrime entries, perform bank reconciliation, identify unmatched transactions, record missing bank charges, and resolve discrepancies with practical examples.',
+      image: 'blogs-image/How-to-Match-Bank-Transactions-With-TallyPrime-Entries.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '10 min read',
+      url: '/match-bank-transactions-with-tallyprime-entries/',
+    },
+    {
+      title: 'TallyPrime Banking Features Every Accountant Should Know',
+      description:
+        'Discover essential TallyPrime banking features, including bank reconciliation, bank statement import, cheque management, payment and receipt vouchers, fund transfers, outstanding tracking, and accounting reports.',
+      image: 'blogs-image/TallyPrime-Banking-Features-for-Accountants.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '12 min read',
+      url: '/tallyprime-banking-features-for-accountants/',
+    },
+    {
+      title: 'How to Track Receivables and Payments Through Banking Reports in TallyPrime',
+      description:
+        'Learn how to track customer receivables, monitor overdue invoices, manage supplier payments, review banking reports, and reconcile bank transactions in TallyPrime with practical examples.',
+      image: 'blogs-image/Track-Receivables-and-Payments-Through-Banking-Reports-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '11 min read',
+      url: '/track-receivables-and-payments-through-banking-reports/',
+    },
+    {
+      title: 'How Connected Banking Works in TallyPrime: Complete Guide',
+      description:
+        'Learn how Connected Banking works in TallyPrime, enable banking services, connect bank accounts, check live balances, retrieve bank statements, reconcile transactions, and understand online payment features.',
+      image: 'blogs-image/How-Connected-Banking-Works-in-TallyPrime.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '11 min read',
+      url: '/how-connected-banking-works-in-tallyprime/',
+    },
+    {
+      title: 'TallyPrime Bank Reconciliation: Step-by-Step Practical Example',
+      description:
+        'Learn bank reconciliation in TallyPrime with a practical example. Understand bank statement matching, unreconciled transactions, bank reconciliation statements (BRS), outstanding deposits, bank charges, and common errors.',
+      image: 'blogs-image/TallyPrime-Bank-Reconciliation-Practical-Example.png',
+      category: 'Tally & Finance',
+      date: 'November 18, 2026',
+      readTime: '10 min read',
+      url: '/tallyprime-bank-reconciliation-practical-example/',
+    },
   ];
 
   // =========================================================

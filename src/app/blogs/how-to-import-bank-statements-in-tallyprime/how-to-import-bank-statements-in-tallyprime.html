@@ -1,0 +1,1011 @@
+<section class="entries-blog">
+    <!-- HERO SECTION -->
+    <header class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Bank Statement Import</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                TALLYPRIME ACCOUNTING GUIDE
+            </div>
+
+            <h1>How to Import Bank Statements into TallyPrime: Step-by-Step Guide</h1>
+
+            <p class="hero-description">
+                Learn how to prepare a bank statement, configure your bank ledger, import supported statement files,
+                reconcile transactions, and troubleshoot common import problems in TallyPrime.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> Banking &amp; Reconciliation</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical Tutorial</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Bank Statement Import</span>
+                <span>Bank Ledger</span>
+                <span>Reconciliation</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE BODY -->
+    <main class="entries-page">
+        <div class="entries-container article-layout">
+            <!-- SIDEBAR -->
+            <aside class="article-sidebar">
+                <div class="toc-card">
+                    <span class="toc-label">ARTICLE GUIDE</span>
+                    <h2>Table of Contents</h2>
+                    <nav class="toc-links" aria-label="Table of contents">
+                        <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                        <a href="#what-is-import" (click)="scrollToSection($event, 'what-is-import')">What Is Bank
+                            Statement Import?</a>
+                        <a href="#why-import" (click)="scrollToSection($event, 'why-import')">Why Import Statements?</a>
+                        <a href="#requirements" (click)="scrollToSection($event, 'requirements')">What You Need Before
+                            Import</a>
+                        <a href="#import-process" (click)="scrollToSection($event, 'import-process')">Step-by-Step
+                            Import Guide</a>
+                        <a href="#open-company" (click)="scrollToSection($event, 'open-company')">Open Your Company</a>
+                        <a href="#check-ledger" (click)="scrollToSection($event, 'check-ledger')">Check the Bank
+                            Ledger</a>
+                        <a href="#download-statement" (click)="scrollToSection($event, 'download-statement')">Download
+                            the Statement</a>
+                        <a href="#select-method" (click)="scrollToSection($event, 'select-method')">Choose an Import
+                            Method</a>
+                        <a href="#select-file" (click)="scrollToSection($event, 'select-file')">Select the Statement
+                            File</a>
+                        <a href="#review-import" (click)="scrollToSection($event, 'review-import')">Review Imported
+                            Transactions</a>
+                        <a href="#match-transactions" (click)="scrollToSection($event, 'match-transactions')">Match
+                            Transactions</a>
+                        <a href="#missing-entries" (click)="scrollToSection($event, 'missing-entries')">Record Missing
+                            Entries</a>
+                        <a href="#complete-reconciliation"
+                            (click)="scrollToSection($event, 'complete-reconciliation')">Complete Reconciliation</a>
+                        <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                            Example</a>
+                        <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common
+                            Problems</a>
+                        <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                        <a href="#faqs" (click)="scrollToSection($event, 'faqs')">Frequently Asked Questions</a>
+                        <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                        <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                            Articles</a>
+                    </nav>
+
+                    <div class="toc-help">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>Import options and supported file formats can vary by bank and TallyPrime release. Verify the
+                            workflow in your installation.</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-cta">
+                    <div class="sidebar-cta-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                    <h3>Learn TallyPrime Practically</h3>
+                    <p>Build your accounting knowledge with practical training in banking, vouchers, GST, and
+                        reconciliation.</p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer">
+                        Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE -->
+            <article class="article-content">
+                <section class="article-section" id="introduction">
+                    <div class="section-eyebrow">INTRODUCTION</div>
+                    <h2>How to Import Bank Statements into TallyPrime</h2>
+                    <p>
+                        Managing bank transactions is an essential part of accounting. Businesses receive payments, make
+                        supplier payments,
+                        pay salaries, and handle other financial transactions through their bank accounts. Recording
+                        these transactions
+                        manually can take time and may lead to accounting errors.
+                    </p>
+                    <p>
+                        TallyPrime provides bank-related features that help businesses work with bank statements,
+                        identify transactions,
+                        and reconcile accounting records with bank records. Depending on the bank, file format, and
+                        TallyPrime version,
+                        users may be able to import bank statements and use the imported data for reconciliation or
+                        voucher creation.
+                    </p>
+                    <p>
+                        Learning how to import bank statements into TallyPrime is a useful practical skill for
+                        accounting students,
+                        accountants, business owners, and anyone preparing for accounting-related jobs.
+                    </p>
+                    <p>
+                        In this guide, you will learn how to prepare a bank statement, configure a bank ledger, import
+                        supported files,
+                        reconcile transactions, and troubleshoot common import problems.
+                    </p>
+
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Quick Answer</h3>
+                            <p>
+                                Verify your bank ledger, download a statement in a format supported by your TallyPrime
+                                import workflow,
+                                import and review the transactions, match them with existing book entries, record
+                                genuinely missing
+                                transactions, and check the final bank reconciliation report.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="what-is-import">
+                    <div class="section-eyebrow">BASICS</div>
+                    <h2>What Is Bank Statement Import in TallyPrime?</h2>
+                    <p>
+                        Bank statement import is the process of bringing transaction data from a bank statement into
+                        TallyPrime so
+                        that it can be used for accounting and bank reconciliation.
+                    </p>
+                    <p>A bank statement generally contains details such as:</p>
+                    <ul class="ledger-list">
+                        <li><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Transaction date</span>
+                        </li>
+                        <li><i class="fa-regular fa-calendar-check" aria-hidden="true"></i><span>Value date, where
+                                provided</span></li>
+                        <li><i class="fa-solid fa-align-left" aria-hidden="true"></i><span>Transaction
+                                description</span></li>
+                        <li><i class="fa-solid fa-arrow-up" aria-hidden="true"></i><span>Debit amount</span></li>
+                        <li><i class="fa-solid fa-arrow-down" aria-hidden="true"></i><span>Credit amount</span></li>
+                        <li><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span>Closing or running
+                                balance</span></li>
+                        <li><i class="fa-solid fa-hashtag" aria-hidden="true"></i><span>Bank reference number or
+                                transaction ID, where available</span></li>
+                    </ul>
+                    <p>
+                        When supported by the selected import workflow, TallyPrime can use this information to help
+                        match bank
+                        transactions with existing accounting entries or assist with creating vouchers for transactions
+                        that have
+                        not yet been recorded.
+                    </p>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>The available import options depend on your TallyPrime release, bank integration, and
+                            statement file format.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="why-import">
+                    <div class="section-eyebrow">BENEFITS</div>
+                    <h2>Why Import Bank Statements into TallyPrime?</h2>
+                    <p>Importing bank statements can make accounting and reconciliation more efficient.</p>
+
+                    <div class="report-grid">
+                        <div class="report-card">
+                            <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+                            <h3>Reduce Manual Data Entry</h3>
+                            <p>Importing supported bank data can reduce the need to enter transaction details
+                                individually.</p>
+                        </div>
+                        <div class="report-card">
+                            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                            <h3>Improve Reconciliation</h3>
+                            <p>Imported transactions can help identify differences between bank and book records.</p>
+                        </div>
+                        <div class="report-card">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <h3>Identify Missing Entries</h3>
+                            <p>Find bank charges, interest credits, direct debits, and other entries not yet recorded in
+                                the books.</p>
+                        </div>
+                        <div class="report-card">
+                            <i class="fa-solid fa-check-double" aria-hidden="true"></i>
+                            <h3>Improve Accounting Accuracy</h3>
+                            <p>Imported details can reduce some manual-entry errors, but dates, amounts, and ledger
+                                allocations still need verification.</p>
+                        </div>
+                        <div class="report-card">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            <h3>Save Month-End Time</h3>
+                            <p>Importing and reconciling transactions can help accountants complete monthly financial
+                                checks more efficiently.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="requirements">
+                    <div class="section-eyebrow">PREPARATION</div>
+                    <h2>What You Need Before Importing a Bank Statement</h2>
+                    <p>Before starting the import process, prepare the following:</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Requirement</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>TallyPrime company</strong></td>
+                                    <td>The company into which you want to import or reconcile transactions.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bank ledger</strong></td>
+                                    <td>Identifies the relevant bank account in your books.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bank statement file</strong></td>
+                                    <td>Contains the transaction information.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Supported file format</strong></td>
+                                    <td>Ensures TallyPrime can read the statement through the selected workflow.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bank account details</strong></td>
+                                    <td>Helps you select the correct bank ledger.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Accounting records</strong></td>
+                                    <td>Allows you to match imported transactions with existing entries.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Backup of company data</strong></td>
+                                    <td>Helps protect your records before major changes.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="gst-warning">
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                        <p>
+                            Bank statements may be available in Excel, CSV, PDF, or bank-specific downloads. <strong>Do
+                                not assume that
+                                every format can be imported directly.</strong> A PDF statement may require conversion
+                            or a supported
+                            data-extraction process. Always check the formats supported by your TallyPrime version and
+                            import option.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="import-process">
+                    <div class="section-eyebrow">STEP-BY-STEP TUTORIAL</div>
+                    <h2>Step-by-Step Guide to Import Bank Statements into TallyPrime</h2>
+                    <p>The exact steps depend on your TallyPrime version and the bank statement format. The following
+                        workflow explains the general process.</p>
+                    <div class="answer-box">
+                        <div class="answer-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Two Common Approaches</h3>
+                            <p><strong>Statement-based reconciliation:</strong> Import a supported bank statement and
+                                match bank transactions with entries recorded in TallyPrime.</p>
+                            <p><strong>Manual reconciliation:</strong> Compare transactions directly and enter the
+                                relevant bank dates manually.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="open-company">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">01</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 1</span>
+                                <h3>Open Your Company in TallyPrime</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <ol>
+                                <li>Launch TallyPrime.</li>
+                                <li>Select the company whose bank transactions you want to reconcile.</li>
+                                <li>Verify that you have opened the correct company.</li>
+                                <li>Take a backup before performing a large import or making significant changes to
+                                    accounting records.</li>
+                            </ol>
+                            <p>A backup is particularly useful when working with unfamiliar import settings or large
+                                statement files.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="check-ledger">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">02</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 2</span>
+                                <h3>Check the Bank Ledger</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Before importing the statement, verify that the relevant bank ledger exists.</p>
+                            <ol>
+                                <li>Open the ledger list or chart of accounts.</li>
+                                <li>Locate the bank account ledger.</li>
+                                <li>Confirm that it is grouped under <strong>Bank Accounts</strong>.</li>
+                                <li>Check the bank account name and other available details.</li>
+                                <li>Correct any ledger setup issues before continuing.</li>
+                            </ol>
+                            <div class="voucher-detail">
+                                <span class="voucher-pill"><i class="fa-solid fa-building-columns"
+                                        aria-hidden="true"></i> HDFC Bank Account</span>
+                                <span class="voucher-pill"><i class="fa-solid fa-building-columns"
+                                        aria-hidden="true"></i> SBI Current Account</span>
+                                <span class="voucher-pill"><i class="fa-solid fa-building-columns"
+                                        aria-hidden="true"></i> ICICI Bank Account</span>
+                            </div>
+                            <p>If the bank ledger does not exist, create it using the correct account details and
+                                opening balance, where applicable. The ledger should represent the same bank account as
+                                the statement you intend to import.</p>
+                            <p>For additional ledger guidance, see <a
+                                    routerLink="/how-to-create-ledgers-in-tallyprime">How to Create Ledgers in
+                                    TallyPrime</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="download-statement">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">03</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 3</span>
+                                <h3>Download the Bank Statement</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Log in to your bank's official website or mobile banking service and download the
+                                statement for the required period.</p>
+                            <p>For example, if you are reconciling October transactions, download the statement covering
+                                the relevant dates in October.</p>
+                            <p>When possible, choose a file format supported by your TallyPrime import workflow.</p>
+                            <h4>Before using the downloaded file, check that:</h4>
+                            <ul>
+                                <li>The statement covers the correct date range.</li>
+                                <li>The correct bank account has been selected.</li>
+                                <li>All pages or transactions are included.</li>
+                                <li>Debit and credit values are displayed correctly.</li>
+                                <li>The file has not been accidentally altered.</li>
+                            </ul>
+                            <div class="learning-note">
+                                <i class="fa-solid fa-file-shield" aria-hidden="true"></i>
+                                <p>Keep the original statement for verification and protect bank statements from
+                                    unauthorised access.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="select-method">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">04</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 4</span>
+                                <h3>Identify the Supported Import Method</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Open the relevant bank ledger or bank reconciliation area in TallyPrime and review the
+                                available bank statement import options.</p>
+                            <p>Depending on your release and configuration, the workflow may involve:</p>
+                            <div class="report-grid">
+                                <div class="report-item"><i class="fa-solid fa-file-import"
+                                        aria-hidden="true"></i><span>A bank statement import option</span></div>
+                                <div class="report-item"><i class="fa-solid fa-building-columns"
+                                        aria-hidden="true"></i><span>A supported bank-specific statement format</span>
+                                </div>
+                                <div class="report-item"><i class="fa-solid fa-table" aria-hidden="true"></i><span>An
+                                        import utility or template</span></div>
+                                <div class="report-item"><i class="fa-regular fa-file-excel"
+                                        aria-hidden="true"></i><span>A supported Excel or CSV-based process</span></div>
+                                <div class="report-item"><i class="fa-solid fa-link" aria-hidden="true"></i><span>A
+                                        compatible bank integration</span></div>
+                            </div>
+                            <p>Follow the instructions for the exact import option available in your installation.</p>
+                            <div class="gst-warning">
+                                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                                <p>The import process is not identical for every bank or TallyPrime version. Check the
+                                    relevant TallyHelp documentation if the expected import option is not visible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="select-file">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">05</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 5</span>
+                                <h3>Select the Bank Statement File</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>If your chosen workflow supports file-based import:</p>
+                            <ol>
+                                <li>Open the applicable import screen or utility.</li>
+                                <li>Select the bank ledger or bank account, where prompted.</li>
+                                <li>Browse to the downloaded statement file.</li>
+                                <li>Select the correct date range or import period, if required.</li>
+                                <li>Review any file-format or column-mapping options.</li>
+                                <li>Confirm that the date, description, debit, credit, and balance fields are mapped
+                                    correctly.</li>
+                            </ol>
+                            <p>For spreadsheet-based workflows, the required column names, order, date format, and
+                                amount format depend on the supported template or import utility.</p>
+                            <p><strong>Do not change the file structure unless the import instructions require
+                                    it.</strong></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="review-import">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">06</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 6</span>
+                                <h3>Review the Imported Transactions</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>After importing the statement, review the transactions before using them for
+                                reconciliation or voucher creation.</p>
+                            <ul>
+                                <li>Transaction dates.</li>
+                                <li>Narrations or descriptions.</li>
+                                <li>Debit and credit amounts.</li>
+                                <li>Bank reference numbers.</li>
+                                <li>Running balances, if available.</li>
+                                <li>Duplicate transactions.</li>
+                                <li>Missing or incorrectly formatted records.</li>
+                            </ul>
+                            <p>Compare a few transactions with the original bank statement to verify that the import has
+                                worked correctly.</p>
+                            <p>If the import screen reports errors, correct the source file or configuration and follow
+                                the supported process to import the affected transactions again.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="match-transactions">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">07</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 7</span>
+                                <h3>Match Transactions with Existing Accounting Entries</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Bank reconciliation involves comparing transactions in the bank statement with
+                                transactions already recorded in TallyPrime.</p>
+                            <div class="transaction-box">
+                                <h4>Example: Supplier Payment</h4>
+                                <p>Suppose your books show a supplier payment of <strong>₹15,000</strong>. The imported
+                                    bank statement contains a corresponding debit of ₹15,000.</p>
+                            </div>
+                            <p>Check whether the amount, date, bank reference, and other available details match. Use
+                                the reconciliation options provided by TallyPrime to mark or match the transaction as
+                                appropriate.</p>
+                            <p>Not every bank transaction will have an exact date match. Differences can arise because
+                                of cheque clearance, settlement delays, bank processing, or other timing differences.
+                            </p>
+                            <div class="gst-warning">
+                                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                                <p><strong>Do not mark a transaction as reconciled solely because its amount looks
+                                        similar.</strong> Confirm that it represents the same transaction.</p>
+                            </div>
+                            <p>For the full matching and reconciliation process, read <a
+                                    routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">How to Perform Bank
+                                    Reconciliation in TallyPrime</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="missing-entries">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">08</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 8</span>
+                                <h3>Record Transactions Missing from the Books</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>Some bank statement entries may not have corresponding accounting vouchers.</p>
+                            <ul>
+                                <li>Bank service charges.</li>
+                                <li>Interest credited by the bank.</li>
+                                <li>Loan instalments or interest debits.</li>
+                                <li>Direct debits.</li>
+                                <li>Customer receipts not yet recorded.</li>
+                                <li>Supplier payments not yet recorded.</li>
+                            </ul>
+                            <p>Investigate each unmatched transaction and create the appropriate accounting voucher when
+                                necessary.</p>
+                            <h4>Example: Recording Bank Charges of ₹250</h4>
+                            <div class="journal-box">
+                                <div class="journal-heading">
+                                    <h4>Illustrative Accounting Entry</h4>
+                                    <span>Bank Charges</span>
+                                </div>
+                                <div class="journal-lines">
+                                    <div class="journal-line">
+                                        <code>Bank Charges A/c (Debit)</code>
+                                        <span class="journal-amount">₹250</span>
+                                    </div>
+                                    <div class="journal-line credit">
+                                        <code>Bank A/c (Credit)</code>
+                                        <span class="journal-amount">₹250</span>
+                                    </div>
+                                </div>
+                                <div class="journal-total"><span>Total Debit = Total Credit</span><strong>₹250</strong>
+                                </div>
+                            </div>
+                            <p>This example assumes that the bank charge is an expense of the business and that no
+                                additional tax treatment is required in the entry shown. Use the appropriate voucher
+                                type and tax treatment for the actual transaction.</p>
+                            <p>For help with the different transaction vouchers, see <a
+                                    routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher
+                                    Types Explained</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="complete-reconciliation">
+                    <div class="entry-card">
+                        <div class="entry-card-header">
+                            <span class="entry-number">09</span>
+                            <div class="entry-heading">
+                                <span class="entry-category">STEP 9</span>
+                                <h3>Complete Bank Reconciliation</h3>
+                            </div>
+                        </div>
+                        <div class="entry-card-body">
+                            <p>After matching existing entries and recording legitimate missing transactions, review the
+                                bank reconciliation report.</p>
+                            <h4>Verify that:</h4>
+                            <ul>
+                                <li>Transactions have been matched correctly.</li>
+                                <li>Unmatched entries have been investigated.</li>
+                                <li>Timing differences are understood.</li>
+                                <li>The closing balance agrees with the statement after accounting for outstanding items
+                                    and other legitimate differences.</li>
+                                <li>No transaction has been duplicated during the import process.</li>
+                            </ul>
+                            <p>Save or confirm the reconciliation using the options available in your TallyPrime
+                                version.</p>
+                            <p>For additional guidance, review the official <a
+                                    href="https://help.tallysolutions.com/bank-reconciliation-tally/" target="_blank"
+                                    rel="noopener noreferrer">TallyHelp bank reconciliation guide</a>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="article-section" id="practical-example">
+                    <div class="section-eyebrow">PRACTICAL EXAMPLE</div>
+                    <h2>Practical Example: Importing a Bank Statement into TallyPrime</h2>
+                    <p>Consider ABC Enterprises, which wants to reconcile its bank transactions for a particular month.
+                    </p>
+                    <p>The company has the following entries in its bank statement:</p>
+                    <div class="reference-table-wrapper">
+                        <table class="reference-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction</th>
+                                    <th>Debit</th>
+                                    <th>Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>05 October</td>
+                                    <td>Supplier payment</td>
+                                    <td>₹15,000</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>08 October</td>
+                                    <td>Customer receipt</td>
+                                    <td>—</td>
+                                    <td>₹25,000</td>
+                                </tr>
+                                <tr>
+                                    <td>12 October</td>
+                                    <td>Bank charges</td>
+                                    <td>₹250</td>
+                                    <td>—</td>
+                                </tr>
+                                <tr>
+                                    <td>15 October</td>
+                                    <td>Interest received</td>
+                                    <td>—</td>
+                                    <td>₹500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The accountant imports the statement using a supported workflow and reviews the transactions.</p>
+
+                    <h3 class="subsection-heading">How the Accountant Handles Each Transaction</h3>
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>Supplier Payment</h3>
+                                <p>Check whether the ₹15,000 payment has already been recorded in the books and match it
+                                    with the bank transaction.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>Customer Receipt</h3>
+                                <p>Verify the ₹25,000 receipt against the relevant customer receipt or bank entry.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-receipt" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>Bank Charges</h3>
+                                <p>If the ₹250 charge has not been recorded, create the appropriate expense voucher.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-piggy-bank" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>Interest Received</h3>
+                                <p>If the ₹500 interest credit has not been recorded, create the appropriate income
+                                    entry.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-heading">Simplified Entry for Interest Received</h3>
+                    <div class="journal-box">
+                        <div class="journal-heading">
+                            <h4>Illustrative Accounting Entry</h4><span>Interest Income</span>
+                        </div>
+                        <div class="journal-lines">
+                            <div class="journal-line"><code>Bank A/c (Debit)</code><span
+                                    class="journal-amount">₹500</span></div>
+                            <div class="journal-line credit"><code>Interest Income A/c (Credit)</code><span
+                                    class="journal-amount">₹500</span></div>
+                        </div>
+                        <div class="journal-total"><span>Total Debit = Total Credit</span><strong>₹500</strong></div>
+                    </div>
+                    <p>After completing the accounting entries and matching the transactions, the accountant reviews the
+                        bank reconciliation report.</p>
+                    <div class="learning-note">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <p>This example demonstrates the accounting logic. The precise import and reconciliation steps
+                            depend on the supported workflow and TallyPrime version.</p>
+                    </div>
+                </section>
+
+                <section class="article-section" id="common-problems">
+                    <div class="section-eyebrow">TROUBLESHOOTING</div>
+                    <h2>Common Bank Statement Import Problems in TallyPrime</h2>
+
+                    <div class="mistake-list">
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-file-circle-xmark" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>1. Bank Statement File Is Not Supported</h3>
+                                <p><strong>Possible reason:</strong> The downloaded file format is not supported by the
+                                    selected import workflow.</p>
+                                <p><strong>Solution:</strong> Check the supported formats for your TallyPrime version.
+                                    If necessary, download the statement in another supported format or use an approved
+                                    conversion or import utility.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-calendar-xmark" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>2. Transaction Dates Are Incorrect</h3>
+                                <p><strong>Possible reason:</strong> The source file uses an unsupported date format or
+                                    the date columns have been mapped incorrectly.</p>
+                                <p><strong>Solution:</strong> Verify the required date format and correct the source
+                                    file or mapping settings before importing again.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-arrow-right-arrow-left"
+                                    aria-hidden="true"></i></div>
+                            <div>
+                                <h3>3. Debit and Credit Amounts Are Reversed</h3>
+                                <p><strong>Possible reason:</strong> The statement columns have been mapped incorrectly
+                                    or the source file uses an unexpected sign convention.</p>
+                                <p><strong>Solution:</strong> Compare imported values with the original statement and
+                                    correct the mapping or file structure.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-copy" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>4. Transactions Are Duplicated</h3>
+                                <p><strong>Possible reason:</strong> The same statement period has been imported more
+                                    than once, or transactions have been included in overlapping files.</p>
+                                <p><strong>Solution:</strong> Check the date range, references, and previously imported
+                                    transactions before attempting another import. Avoid deleting entries until their
+                                    purpose and status have been verified.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-link-slash" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>5. Transactions Are Not Matching</h3>
+                                <p><strong>Possible reason:</strong> Dates, amounts, references, or ledger allocations
+                                    do not match existing accounting entries.</p>
+                                <p><strong>Solution:</strong> Compare the statement with the books, investigate timing
+                                    differences, and record genuinely missing transactions.</p>
+                            </div>
+                        </div>
+                        <div class="mistake-card">
+                            <div class="mistake-icon"><i class="fa-solid fa-scale-unbalanced" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3>6. Bank Reconciliation Does Not Match</h3>
+                                <p><strong>Possible reason:</strong> Some transactions are missing, duplicated,
+                                    incorrectly recorded, or still outstanding.</p>
+                                <p><strong>Solution:</strong> Review the statement, imported data, bank ledger,
+                                    vouchers, and outstanding items until the difference is explained.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>For additional troubleshooting guidance, refer to <a
+                            href="https://help.tallysolutions.com/tally-prime/banking-utilities/faq-banking-tally/"
+                            target="_blank" rel="noopener noreferrer">TallyHelp: Banking and Reconciliation FAQs</a>.
+                    </p>
+                </section>
+
+                <section class="article-section" id="best-practices">
+                    <div class="section-eyebrow">ACCOUNTING TIPS</div>
+                    <h2>Best Practices for Bank Statement Import in TallyPrime</h2>
+                    <p>Follow these practices to improve accuracy:</p>
+                    <div class="practice-roadmap">
+                        <div class="practice-step"><span class="practice-step-number">01</span>
+                            <div class="step-content">
+                                <h3>Use Authorised Bank Channels</h3>
+                                <p>Download statements only from authorised bank channels.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">02</span>
+                            <div class="step-content">
+                                <h3>Back Up Company Data</h3>
+                                <p>Back up company data before large imports or unfamiliar changes.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">03</span>
+                            <div class="step-content">
+                                <h3>Use Supported Formats</h3>
+                                <p>Use a supported statement format and import workflow.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">04</span>
+                            <div class="step-content">
+                                <h3>Import the Intended Period</h3>
+                                <p>Import only the date range you need to reconcile.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">05</span>
+                            <div class="step-content">
+                                <h3>Review Totals and Balances</h3>
+                                <p>Review transaction totals and balances after importing.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">06</span>
+                            <div class="step-content">
+                                <h3>Check for Duplicates</h3>
+                                <p>Check for duplicate transactions before creating additional vouchers.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">07</span>
+                            <div class="step-content">
+                                <h3>Verify Every Match</h3>
+                                <p>Match transactions using dates, amounts, references, and supporting details.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">08</span>
+                            <div class="step-content">
+                                <h3>Record Missing Transactions Correctly</h3>
+                                <p>Use the correct accounting treatment for missing transactions.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">09</span>
+                            <div class="step-content">
+                                <h3>Reconcile Regularly</h3>
+                                <p>Reconcile bank accounts regularly rather than waiting until year-end.</p>
+                            </div>
+                        </div>
+                        <div class="practice-step"><span class="practice-step-number">10</span>
+                            <div class="step-content">
+                                <h3>Protect Financial Records</h3>
+                                <p>Protect bank statements and accounting records from unauthorised access.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>A consistent bank reconciliation process helps businesses maintain reliable accounting records
+                        and identify discrepancies early.</p>
+                </section>
+
+                <section class="article-section" id="faqs">
+                    <div class="section-eyebrow">FAQS</div>
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>1. How do I import bank statements into TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Open the relevant company, verify the bank ledger, download a statement in a
+                                    supported format, and use the bank statement import workflow available in your
+                                    TallyPrime version. Review the imported transactions and reconcile them with the
+                                    accounting records.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>2. Can I import an Excel bank statement into TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>This depends on your TallyPrime release and the import method. Some workflows support
+                                    particular spreadsheet formats or templates, while others require a supported
+                                    bank-specific format or import utility. Check the current documentation before
+                                    modifying the file.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>3. Can I import a PDF bank statement into TallyPrime?<i class="fa-solid fa-plus"
+                                    aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Direct PDF import is not available in every bank statement workflow. You may need to
+                                    obtain a supported statement format from the bank or convert the data into the
+                                    required structure using an appropriate method.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>4. Does importing a bank statement automatically create accounting vouchers?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Not necessarily. Depending on the workflow, imported data may be used for
+                                    reconciliation, voucher creation, or both. Review the available options and confirm
+                                    whether transactions have been posted to the books before creating additional
+                                    vouchers.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>5. Why is bank reconciliation important after importing a statement?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Reconciliation helps verify that bank transactions agree with accounting records. It
+                                    identifies missing entries, duplicate records, timing differences, and other
+                                    discrepancies that may need investigation.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>6. How often should a business reconcile its bank account?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Many businesses reconcile their bank accounts monthly. Businesses with frequent
+                                    transactions or tighter reporting requirements may benefit from more frequent
+                                    reconciliation.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>7. Can beginners learn bank reconciliation in TallyPrime?<i
+                                    class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                            <div class="faq-answer">
+                                <p>Yes. Beginners can practise bank ledger setup, statement review, transaction
+                                    matching, recording missing entries, and reconciliation using a sample company and
+                                    statement.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <section class="article-section" id="conclusion">
+                    <div class="section-eyebrow">CONCLUSION</div>
+                    <h2>Final Thoughts on Importing Bank Statements into TallyPrime</h2>
+                    <div class="final-thoughts">
+                        <h3>Build a Reliable Bank Reconciliation Process</h3>
+                        <p>
+                            Importing bank statements into TallyPrime can help accountants reduce manual work, identify
+                            missing transactions,
+                            and improve bank reconciliation. The process involves preparing the statement, verifying the
+                            bank ledger,
+                            selecting a supported import workflow, reviewing the imported data, matching transactions,
+                            and resolving differences.
+                        </p>
+                        <p>
+                            For accurate results, always verify imported figures against the original bank statement and
+                            ensure that missing
+                            transactions are recorded correctly. Because supported formats and navigation can vary by
+                            TallyPrime version and bank,
+                            follow the instructions for your specific setup.
+                        </p>
+                    </div>
+
+                    <div class="local-training-card">
+                        <div class="local-training-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="local-training-copy">
+                            <span class="local-label">RLT EDZARO • TALLY TRAINING</span>
+                            <h3>Want to Improve Your Practical Accounting Skills?</h3>
+                            <p>Explore Tally training at RLT Edzaro to learn accounting workflows, bank reconciliation,
+                                GST, and other practical TallyPrime skills.</p>
+                            <div class="branch-pills">
+                                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Chennai</span>
+                                <span><i class="fa-solid fa-laptop" aria-hidden="true"></i> Practical Learning</span>
+                            </div>
+                            <div class="local-training-actions">
+                                <a class="primary-cta" href="https://rltedzaro.com/tally-training-institute-in-chennai"
+                                    target="_blank" rel="noopener noreferrer">Explore Tally Training <i
+                                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                <a class="secondary-cta" href="https://rltedzaro.com/" target="_blank"
+                                    rel="noopener noreferrer">Visit RLT Edzaro</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="related-articles" id="related-articles">
+                    <div class="section-eyebrow">CONTINUE LEARNING</div>
+                    <h2>Related Articles</h2>
+                    <p>Explore these TallyPrime tutorials to strengthen your practical accounting and banking knowledge.
+                    </p>
+                    <div class="related-links">
+                        <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">
+                            <span><strong>How to Perform Bank Reconciliation in TallyPrime</strong><small>Learn
+                                    statement matching, manual reconciliation, and common bank
+                                    differences.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/tallyprime-voucher-types-explained-with-examples">
+                            <span><strong>TallyPrime Voucher Types Explained</strong><small>Understand payment, receipt,
+                                    contra, journal, and other voucher workflows.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/how-to-view-ledger-reports-in-tallyprime">
+                            <span><strong>How to View Ledger Reports in TallyPrime</strong><small>Review bank ledger
+                                    activity, debit and credit entries, and balances.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/generate-trial-balance-in-tallyprime">
+                            <span><strong>How to Generate a Trial Balance in TallyPrime</strong><small>Learn how to
+                                    review ledger balances and check accounting totals.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a routerLink="/track-receivables-and-payables-in-tallyprime">
+                            <span><strong>How to Track Receivables and Payables in TallyPrime</strong><small>Understand
+                                    customer collections, supplier dues, and payment tracking.</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <a class="all-blogs-button" routerLink="/blogs">Explore All Articles <i
+                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </section>
+
+                <a href="#top" class="back-to-top" (click)="scrollToTop($event)">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top
+                </a>
+            </article>
+        </div>
+    </main>
+</section>

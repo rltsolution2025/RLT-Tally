@@ -1,0 +1,871 @@
+<div class="entries-blog">
+    <!-- HERO -->
+    <section class="entries-hero" id="top">
+        <div class="entries-container">
+            <nav class="article-breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <a routerLink="/blogs">Blogs</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span>Stock Ageing in TallyPrime</span>
+            </nav>
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                Inventory Management Guide
+            </div>
+
+            <h1>How to Track Stock Ageing in TallyPrime: A Complete Guide</h1>
+            <p class="hero-description">
+                Learn how to analyse how long inventory has remained in stock, identify slow-moving products,
+                and use TallyPrime inventory records to make better purchasing and stock-control decisions.
+            </p>
+
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical TallyPrime Tutorial</span>
+                <span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Inventory &amp; Stock Reports</span>
+                <span><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Beginner Friendly</span>
+            </div>
+
+            <div class="hero-keywords" aria-label="Article topics">
+                <span>Stock Ageing</span>
+                <span>Slow-Moving Stock</span>
+                <span>Inventory Reports</span>
+                <span>TallyPrime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <section class="entries-page">
+        <div class="entries-container">
+            <div class="article-layout">
+                <aside class="article-sidebar" aria-label="Article navigation and training information">
+                    <nav class="toc-card" aria-label="Table of contents">
+                        <span class="toc-label">IN THIS ARTICLE</span>
+                        <h2>Contents</h2>
+                        <div class="toc-links">
+                            <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                            <a href="#stock-ageing" (click)="scrollToSection($event, 'stock-ageing')">What Is Stock
+                                Ageing?</a>
+                            <a href="#importance" (click)="scrollToSection($event, 'importance')">Why It Is
+                                Important</a>
+                            <a href="#ageing-report" (click)="scrollToSection($event, 'ageing-report')">Stock Ageing
+                                Report</a>
+                            <a href="#track-stock-ageing" (click)="scrollToSection($event, 'track-stock-ageing')">How to
+                                Track Stock Ageing</a>
+                            <a href="#practical-example"
+                                (click)="scrollToSection($event, 'practical-example')">Practical Example</a>
+                            <a href="#slow-moving-stock" (click)="scrollToSection($event, 'slow-moving-stock')">Slow
+                                &amp; Non-Moving Stock</a>
+                            <a href="#common-mistakes" (click)="scrollToSection($event, 'common-mistakes')">Common
+                                Mistakes</a>
+                            <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best
+                                Practices</a>
+                            <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                            <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                            <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                                Articles</a>
+                        </div>
+                        <div class="toc-help">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                            <p>Use the contents links to move directly to the topic you want to learn.</p>
+                        </div>
+                    </nav>
+
+                    <div class="sidebar-cta">
+                        <div class="sidebar-cta-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <h3>Learn TallyPrime Practically</h3>
+                        <p>Build practical skills in accounting, GST, inventory management, and business reporting.</p>
+                        <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                            rel="noopener noreferrer">
+                            Explore Tally Training <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </aside>
+
+                <article class="article-content">
+                    <section class="article-section" id="introduction">
+                        <div class="section-eyebrow">INTRODUCTION</div>
+                        <h2>How to Track Stock Ageing in TallyPrime</h2>
+                        <p>Managing inventory efficiently is essential for businesses that buy, sell, or store goods.
+                            Products that remain in a warehouse for too long can block working capital, increase storage
+                            costs, and create a risk of damage, expiry, or obsolescence.</p>
+                        <p>Stock ageing helps businesses understand how long inventory has remained unsold or in stock
+                            and identify products that may require attention. TallyPrime provides inventory reports that
+                            help businesses review stock quantities, values, and movement. Depending on the report and
+                            features available in your version, you can use inventory information to assess ageing and
+                            identify slow-moving stock.</p>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>What will you learn?</h3>
+                                <p>You will learn what stock ageing means, how to review stock information in
+                                    TallyPrime, how to analyse ageing using a practical example, and how to improve
+                                    inventory management.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="stock-ageing">
+                        <div class="section-eyebrow">BASIC CONCEPT</div>
+                        <h2>What Is Stock Ageing?</h2>
+                        <p>Stock ageing is the process of analysing inventory according to how long it has remained in
+                            stock or how much time has passed since it was received or purchased.</p>
+                        <p>A business may classify its inventory into the following age groups:</p>
+                        <div class="report-grid ageing-bucket-grid">
+                            <div class="report-item"><i class="fa-regular fa-clock"
+                                    aria-hidden="true"></i><span><strong>0–30 days</strong><br>Recently received
+                                    stock</span></div>
+                            <div class="report-item"><i class="fa-regular fa-calendar"
+                                    aria-hidden="true"></i><span><strong>31–60 days</strong><br>Stock held for several
+                                    weeks</span></div>
+                            <div class="report-item"><i class="fa-solid fa-calendar-days"
+                                    aria-hidden="true"></i><span><strong>61–90 days</strong><br>Inventory for closer
+                                    review</span></div>
+                            <div class="report-item"><i class="fa-solid fa-hourglass-end"
+                                    aria-hidden="true"></i><span><strong>More than 90 days</strong><br>Older inventory
+                                    requiring review</span></div>
+                        </div>
+                        <p>These categories help businesses identify recently received stock, inventory that has
+                            remained unsold for several weeks, and products that may be moving too slowly.</p>
+                        <p>Stock ageing is particularly useful for retailers, wholesalers, distributors, manufacturers,
+                            and businesses that manage large quantities of inventory.</p>
+                    </section>
+
+                    <section class="article-section" id="importance">
+                        <div class="section-eyebrow">BUSINESS BENEFITS</div>
+                        <h2>Why Is Stock Ageing Important?</h2>
+                        <p>Tracking stock ageing helps businesses:</p>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="fa-solid fa-magnifying-glass-chart"
+                                    aria-hidden="true"></i><span>Identify slow-moving and non-moving inventory.</span>
+                            </div>
+                            <div class="skill-item"><i class="fa-solid fa-warehouse" aria-hidden="true"></i><span>Reduce
+                                    unnecessary storage costs.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-calendar-xmark"
+                                    aria-hidden="true"></i><span>Avoid potential expiry or obsolescence losses.</span>
+                            </div>
+                            <div class="skill-item"><i class="fa-solid fa-cart-shopping"
+                                    aria-hidden="true"></i><span>Improve purchasing and replenishment decisions.</span>
+                            </div>
+                            <div class="skill-item"><i class="fa-solid fa-coins" aria-hidden="true"></i><span>Manage
+                                    working capital more effectively.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-tags" aria-hidden="true"></i><span>Plan
+                                    discounts or promotional offers for ageing products.</span></div>
+                            <div class="skill-item"><i class="fa-solid fa-clipboard-check"
+                                    aria-hidden="true"></i><span>Improve inventory control and reporting.</span></div>
+                        </div>
+                        <p>For accounting professionals, stock ageing analysis also helps connect inventory management
+                            with stock valuation, purchase planning, and business profitability.</p>
+                    </section>
+
+                    <section class="article-section" id="ageing-report">
+                        <div class="section-eyebrow">REPORT OVERVIEW</div>
+                        <h2>What Is a Stock Ageing Report?</h2>
+                        <p>A stock ageing report groups inventory according to its age, usually based on a defined date
+                            or period. Depending on the software and reporting method, stock age may be measured from
+                            the purchase date, goods-receipt date, batch date, or another relevant inventory date.</p>
+                        <p>A typical stock ageing report may include:</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Particulars</th>
+                                        <th>Meaning</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Stock item</strong></td>
+                                        <td>Name of the product</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Quantity available</strong></td>
+                                        <td>Current quantity in stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Stock value</strong></td>
+                                        <td>Value of the inventory</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ageing period</strong></td>
+                                        <td>Number of days or period for which stock has been held</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ageing category</strong></td>
+                                        <td>Group such as 0–30 or 31–60 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Slow-moving status</strong></td>
+                                        <td>Indicates inventory that may require review</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="gst-warning">
+                            <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                            <p><strong>Important:</strong> Current stock quantity alone does not reveal the age of each
+                                item. To calculate accurate stock ageing, the business needs suitable historical
+                                purchase, receipt, batch, or inventory movement information.</p>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="track-stock-ageing">
+                        <div class="section-eyebrow">STEP-BY-STEP TUTORIAL</div>
+                        <h2>How to Track Stock Ageing in TallyPrime</h2>
+                        <p>The exact navigation and availability of ageing-specific reports depend on your TallyPrime
+                            release, configuration, and inventory tracking method. Use the following workflow to review
+                            stock movement and prepare an ageing analysis.</p>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">01</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 1</span>
+                                    <h3>Enable Inventory Features</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>First, verify that inventory management is configured for your company.</p>
+                                <ol>
+                                    <li>Open TallyPrime.</li>
+                                    <li>Select the relevant company.</li>
+                                    <li>Review the company features and inventory settings.</li>
+                                    <li>Ensure that inventory features are enabled.</li>
+                                    <li>Verify that stock items, units of measurement, and stock groups are configured
+                                        correctly.</li>
+                                    <li>Save any required changes.</li>
+                                </ol>
+                                <p>If your business tracks batches, expiry dates, or additional inventory details,
+                                    verify that the corresponding features are configured appropriately. Learn more in
+                                    <a routerLink="/how-to-manage-batch-wise-inventory-in-tallyprime">How to Manage
+                                        Batch-Wise Inventory in TallyPrime</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">02</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 2</span>
+                                    <h3>Create Stock Items Correctly</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Accurate stock item records are important for reliable inventory reporting. For each
+                                    stock item, maintain relevant information such as:</p>
+                                <ul>
+                                    <li>Item name and description.</li>
+                                    <li>Stock group.</li>
+                                    <li>Unit of measurement.</li>
+                                    <li>Opening balance, where applicable.</li>
+                                    <li>Purchase and sales details.</li>
+                                    <li>Batch or expiry details, where relevant.</li>
+                                </ul>
+                                <p>Consistent item names and classifications make it easier to review inventory across
+                                    different reports. See the guide on <a
+                                        routerLink="/create-stock-items-in-tallyprime">How to Create Stock Items in
+                                        TallyPrime</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">03</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 3</span>
+                                    <h3>Record Purchase and Stock Receipt Transactions</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Stock ageing depends on reliable historical information. Record purchase transactions
+                                    and inventory receipts with the correct dates and item details.</p>
+                                <p>If goods are received on a different date from the supplier invoice, maintain the
+                                    appropriate supporting records and use a consistent ageing policy. Where applicable,
+                                    use batch details or other supported tracking information to distinguish inventory
+                                    received at different times.</p>
+                                <p>For more information about transaction entry, see <a
+                                        routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime
+                                        Voucher Types Explained</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">04</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 4</span>
+                                    <h3>Review Stock Summary</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Open the inventory reports in TallyPrime and review the <strong>Stock
+                                        Summary</strong> report. It helps you understand the available inventory
+                                    position, including quantities and values, depending on the report configuration.
+                                </p>
+                                <p>Use this report to identify:</p>
+                                <ul>
+                                    <li>Items with high stock quantities.</li>
+                                    <li>Products with large inventory values.</li>
+                                    <li>Stock groups holding significant working capital.</li>
+                                    <li>Items that may need further ageing analysis.</li>
+                                </ul>
+                                <div class="learning-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                                    <p><strong>Note:</strong> Stock Summary is an inventory-position report; it should
+                                        not automatically be treated as a report showing the age of every remaining
+                                        stock unit. Read <a routerLink="/how-to-check-stock-summary-in-tallyprime">How
+                                            to Check Stock Summary in TallyPrime</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">05</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 5</span>
+                                    <h3>Review Stock Movement and Related Reports</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Review the inventory reports available in your TallyPrime installation, such as stock
+                                    item details, stock movement, purchase records, and sales records.</p>
+                                <p>Use the available period and item filters to understand when inventory was purchased,
+                                    received, sold, or otherwise moved. This helps establish the historical information
+                                    required for ageing analysis.</p>
+                                <p>If your installation includes a suitable ageing-specific report or add-on, use the
+                                    report's documented calculation method and verify the results against your inventory
+                                    records. You can also refer to <a
+                                        routerLink="/how-to-track-stock-movement-in-tallyprime">How to Track Stock
+                                        Movement in TallyPrime</a>.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">06</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 6</span>
+                                    <h3>Calculate Stock Ageing Using Historical Records</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>If your available TallyPrime reports do not directly provide the ageing buckets you
+                                    need, you can prepare an ageing analysis from exported inventory records and
+                                    historical transactions.</p>
+                                <p>Consider a business reviewing stock as of <strong>30 September 2026</strong>.</p>
+                                <div class="reference-table-wrapper">
+                                    <table class="reference-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Stock Item</th>
+                                                <th>Receipt Date</th>
+                                                <th>Quantity Remaining</th>
+                                                <th>Age as of 30 Sep 2026</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Product A</td>
+                                                <td>15 Sep 2026</td>
+                                                <td>20</td>
+                                                <td>15 days</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Product B</td>
+                                                <td>10 Aug 2026</td>
+                                                <td>15</td>
+                                                <td>51 days</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Product C</td>
+                                                <td>1 Jul 2026</td>
+                                                <td>10</td>
+                                                <td>91 days</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p>The age is calculated as the number of elapsed calendar days between the relevant
+                                    receipt date and the report date.</p>
+                                <div class="transaction-box">
+                                    <h4>Ageing categories in this example</h4>
+                                    <div class="voucher-detail"><span class="voucher-pill"><i
+                                                class="fa-regular fa-clock" aria-hidden="true"></i> Product A: 0–30
+                                            days</span><span class="voucher-pill"><i class="fa-regular fa-calendar"
+                                                aria-hidden="true"></i> Product B: 31–60 days</span><span
+                                            class="voucher-pill"><i class="fa-solid fa-hourglass-end"
+                                                aria-hidden="true"></i> Product C: 91 days or more</span></div>
+                                </div>
+                                <p>These calculations assume the remaining quantities can be associated with the stated
+                                    receipt dates. If the same item was received in multiple batches, use the
+                                    appropriate batch or inventory allocation method rather than assigning the entire
+                                    current balance to a single purchase date.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">07</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 7</span>
+                                    <h3>Identify Slow-Moving Stock</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Once the inventory is grouped by age, review items that have remained in stock beyond
+                                    your preferred period. For example, a business may flag items that have been held
+                                    for more than 90 days for further review.</p>
+                                <p>However, ageing alone does not necessarily mean an item is slow-moving. Some products
+                                    are intentionally held for long periods or have seasonal demand. Compare stock age
+                                    with sales history, demand forecasts, expiry dates, and purchasing plans before
+                                    making decisions.</p>
+                            </div>
+                        </div>
+
+                        <div class="entry-card">
+                            <div class="entry-card-header"><span class="entry-number">08</span>
+                                <div class="entry-heading"><span class="entry-category">STEP 8</span>
+                                    <h3>Review and Update Inventory Decisions</h3>
+                                </div>
+                            </div>
+                            <div class="entry-card-body">
+                                <p>Use the ageing analysis to make practical inventory decisions. You may decide to:</p>
+                                <ul>
+                                    <li>Reduce or pause purchases of overstocked items.</li>
+                                    <li>Promote older but saleable products.</li>
+                                    <li>Transfer stock between locations, where appropriate.</li>
+                                    <li>Review expired, damaged, or obsolete goods.</li>
+                                    <li>Improve reorder levels.</li>
+                                    <li>Reconcile differences between physical stock and accounting records.</li>
+                                </ul>
+                                <p>Review the results regularly so that inventory decisions are based on current and
+                                    reliable information.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="practical-example">
+                        <div class="section-eyebrow">WORKED EXAMPLE</div>
+                        <h2>Practical Example: Stock Ageing Analysis</h2>
+                        <p>Suppose ABC Traders has the following inventory as of 30 September 2026.</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Value per Unit</th>
+                                        <th>Total Stock Value</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Product A</td>
+                                        <td>20</td>
+                                        <td>₹500</td>
+                                        <td>₹10,000</td>
+                                        <td>15 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product B</td>
+                                        <td>15</td>
+                                        <td>₹800</td>
+                                        <td>₹12,000</td>
+                                        <td>51 days</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product C</td>
+                                        <td>10</td>
+                                        <td>₹1,000</td>
+                                        <td>₹10,000</td>
+                                        <td>91 days</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>45</strong></td>
+                                        <td>—</td>
+                                        <td><strong>₹32,000</strong></td>
+                                        <td>—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>The business can classify its inventory as follows:</p>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ageing Category</th>
+                                        <th>Stock Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0–30 days</td>
+                                        <td>₹10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31–60 days</td>
+                                        <td>₹12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>61–90 days</td>
+                                        <td>₹0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>More than 90 days</td>
+                                        <td>₹10,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>Total</strong></td>
+                                        <td><strong>₹32,000</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="answer-box">
+                            <div class="answer-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>What should ABC Traders review?</h3>
+                                <p>₹10,000 of stock falls into the more-than-90-days category. The business should
+                                    investigate whether Product C is still selling regularly, whether demand has
+                                    declined, and whether the stock has expiry or obsolescence risks.</p>
+                            </div>
+                        </div>
+                        <p>This example is illustrative. In a real inventory system, stock value should be based on the
+                            company's applicable valuation method, and the ageing calculation should follow the actual
+                            inventory receipt and movement records.</p>
+                    </section>
+
+                    <section class="article-section" id="slow-moving-stock">
+                        <div class="section-eyebrow">INVENTORY ANALYSIS</div>
+                        <h2>How to Identify Slow-Moving and Non-Moving Stock</h2>
+                        <p>Stock ageing and stock movement analysis work best when used together.</p>
+                        <div class="report-grid">
+                            <div class="report-card"><i class="fa-solid fa-gauge" aria-hidden="true"></i>
+                                <h3>Slow-Moving Stock</h3>
+                                <p>Products that sell less frequently than expected or remain in inventory longer than
+                                    the business's target period. An item purchased regularly but sold only once in
+                                    several months may need a review of its reorder quantity.</p>
+                            </div>
+                            <div class="report-card"><i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                                <h3>Non-Moving Stock</h3>
+                                <p>Inventory that has not recorded movement for a defined period, according to the
+                                    business's chosen measurement method. Check demand, planned projects, and seasonal
+                                    patterns before treating it as obsolete.</p>
+                            </div>
+                        </div>
+                        <h3 class="subsection-heading">Ageing vs. Stock Movement</h3>
+                        <div class="reference-table-wrapper">
+                            <table class="reference-table">
+                                <thead>
+                                    <tr>
+                                        <th>Stock Ageing</th>
+                                        <th>Stock Movement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Measures how long stock has been held</td>
+                                        <td>Measures purchases, sales, receipts, and issues</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Helps identify older inventory</td>
+                                        <td>Helps identify sales and usage patterns</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supports expiry and obsolescence reviews</td>
+                                        <td>Supports demand and replenishment planning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Requires reliable inventory age information</td>
+                                        <td>Requires accurate transaction records</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Using both analyses provides a better understanding of inventory performance than relying on
+                            either one alone. See <a routerLink="/how-to-track-stock-movement-in-tallyprime">How to
+                                Track Stock Movement in TallyPrime</a> for a related tutorial.</p>
+                    </section>
+
+                    <section class="article-section" id="common-mistakes">
+                        <div class="section-eyebrow">TROUBLESHOOTING</div>
+                        <h2>Common Mistakes to Avoid When Tracking Stock Ageing</h2>
+                        <div class="mistake-list">
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>1. Using the Purchase Invoice Date for Every Situation</h3>
+                                    <p>The invoice date may differ from the actual goods-receipt date. Decide which date
+                                        is appropriate for your business's ageing policy and apply it consistently.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>2. Ignoring Multiple Receipts of the Same Item</h3>
+                                    <p>If an item was purchased on different dates, its remaining quantity may include
+                                        stock of different ages. A single item-level balance may not be enough to
+                                        calculate accurate ageing.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>3. Confusing Stock Ageing with Expiry Tracking</h3>
+                                    <p>Stock ageing measures time held in inventory. Expiry tracking identifies products
+                                        that are approaching or have passed an expiry date. These are related but
+                                        different analyses.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>4. Relying Only on Current Stock Quantity</h3>
+                                    <p>A stock balance tells you how much inventory is available, not necessarily how
+                                        old it is. Use historical records and appropriate inventory allocation methods.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3>5. Ignoring Stock Valuation</h3>
+                                    <p>Ageing analysis should be interpreted alongside the company's inventory valuation
+                                        method and accounting records. Do not assume that age alone determines the
+                                        correct accounting value.</p>
+                                </div>
+                            </div>
+                            <div class="mistake-card">
+                                <div class="mistake-icon"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h3>6. Not Reviewing Reports Regularly</h3>
+                                    <p>Infrequent reporting can allow old inventory to accumulate unnoticed. Set a
+                                        review schedule that suits your business, such as weekly for fast-moving goods
+                                        or monthly for general inventory.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="best-practices">
+                        <div class="section-eyebrow">PRACTICAL GUIDANCE</div>
+                        <h2>Best Practices for Stock Ageing in TallyPrime</h2>
+                        <p>Follow these practices to improve inventory control:</p>
+                        <div class="practice-roadmap">
+                            <div class="practice-step"><span class="practice-step-number">01</span>
+                                <div class="step-content">
+                                    <h3>Record receipts promptly</h3>
+                                    <p>Record purchase and stock receipt transactions with the correct dates.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">02</span>
+                                <div class="step-content">
+                                    <h3>Maintain accurate item details</h3>
+                                    <p>Maintain accurate stock item and batch information.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">03</span>
+                                <div class="step-content">
+                                    <h3>Use consistent ageing periods</h3>
+                                    <p>Apply the same ageing categories and calculation policy when comparing results.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">04</span>
+                                <div class="step-content">
+                                    <h3>Review ageing with stock movement</h3>
+                                    <p>Review ageing together with sales and stock movement.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">05</span>
+                                <div class="step-content">
+                                    <h3>Monitor expiry-sensitive products</h3>
+                                    <p>Monitor expiry-sensitive products separately.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">06</span>
+                                <div class="step-content">
+                                    <h3>Verify physical quantities</h3>
+                                    <p>Verify stock quantities against physical inventory.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">07</span>
+                                <div class="step-content">
+                                    <h3>Reconcile inventory records</h3>
+                                    <p>Reconcile inventory records and accounting balances.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">08</span>
+                                <div class="step-content">
+                                    <h3>Document the ageing method</h3>
+                                    <p>Document the ageing method used for management reporting.</p>
+                                </div>
+                            </div>
+                            <div class="practice-step"><span class="practice-step-number">09</span>
+                                <div class="step-content">
+                                    <h3>Review high-value, long-held stock</h3>
+                                    <p>Review high-value and long-held stock regularly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>These practices help businesses identify inventory risks earlier and make more informed
+                            purchasing decisions.</p>
+                    </section>
+
+                    <section class="article-section" id="faqs">
+                        <div class="section-eyebrow">FAQ</div>
+                        <h2>Frequently Asked Questions</h2>
+                        <div class="faq-list">
+                            <details class="faq-item">
+                                <summary>1. What is stock ageing in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock ageing is the process of analysing how long inventory has remained in
+                                        stock. TallyPrime's inventory records and reports can support this analysis, but
+                                        the availability of a dedicated ageing report depends on the version,
+                                        configuration, and tracking method.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>2. How do I check stock ageing in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Start with the Stock Summary and relevant stock item, purchase, and stock
+                                        movement reports. If your version provides an ageing-specific report, verify its
+                                        calculation method. Otherwise, use historical transaction records to prepare
+                                        ageing buckets.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>3. Does TallyPrime automatically show stock ageing?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>The availability of automatic ageing analysis depends on your TallyPrime version,
+                                        configuration, and any installed extensions. Do not assume that every
+                                        installation includes a dedicated stock ageing report.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>4. What are stock ageing buckets?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock ageing buckets are time ranges used to classify inventory, such as 0–30
+                                        days, 31–60 days, 61–90 days, and more than 90 days.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>5. What is the difference between stock ageing and stock valuation?<i
+                                        class="fa-solid fa-plus" aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Stock ageing measures how long inventory has been held. Stock valuation
+                                        determines the monetary value of inventory under the applicable accounting
+                                        method. The two analyses are related but serve different purposes.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>6. Can stock ageing help reduce inventory costs?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Yes. It can help businesses identify older inventory, reduce unnecessary
+                                        purchases, plan promotions, and investigate products that may become obsolete or
+                                        expire.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>7. Can I track expiry dates in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Expiry tracking depends on the product type and the relevant batch and expiry
+                                        features supported and configured in your TallyPrime installation. Check the
+                                        available features and maintain appropriate batch details for expiry-sensitive
+                                        products.</p>
+                                </div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>8. Who should learn stock ageing in TallyPrime?<i class="fa-solid fa-plus"
+                                        aria-hidden="true"></i></summary>
+                                <div class="faq-answer">
+                                    <p>Accounting students, inventory executives, storekeepers, accountants, business
+                                        owners, and inventory managers can benefit from understanding stock ageing and
+                                        inventory movement reports.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+
+                    <section class="article-section" id="conclusion">
+                        <div class="section-eyebrow">CONCLUSION</div>
+                        <h2>Track Inventory Age and Make Better Stock Decisions</h2>
+                        <p>Tracking stock ageing in TallyPrime helps businesses understand their inventory position,
+                            identify products that have remained in stock for extended periods, and make better
+                            purchasing and sales decisions.</p>
+                        <p>Start by maintaining accurate inventory records, reviewing stock summaries and movement
+                            reports, and using historical receipt information to calculate stock age where necessary.
+                            Combine ageing analysis with sales trends, expiry information, and stock valuation to build
+                            a more complete picture of inventory performance.</p>
+                        <p>For accounting students and aspiring professionals, learning stock management in TallyPrime
+                            is a useful step towards developing practical accounting and inventory control skills.</p>
+
+                        <div class="local-training-card">
+                            <div class="local-training-icon"><i class="fa-solid fa-graduation-cap"
+                                    aria-hidden="true"></i></div>
+                            <div class="local-training-copy">
+                                <span class="local-label">RLT EDZARO • TALLY TRAINING</span>
+                                <h3>Want to improve your practical TallyPrime and inventory management skills?</h3>
+                                <p>Explore Tally training at RLT Edzaro and strengthen your understanding of accounting,
+                                    inventory management, GST, and business reporting.</p>
+                                <div class="branch-pills"><span><i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                                        Practical Accounting</span><span><i class="fa-solid fa-boxes-stacked"
+                                            aria-hidden="true"></i> Inventory Management</span><span><i
+                                            class="fa-solid fa-file-invoice" aria-hidden="true"></i> GST &amp;
+                                        Reporting</span></div>
+                                <div class="local-training-actions">
+                                    <a class="primary-cta"
+                                        href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                                        rel="noopener noreferrer">Explore Tally Training <i
+                                            class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                                    <a class="secondary-cta" routerLink="/blogs">Explore More Blogs <i
+                                            class="fa-solid fa-book-open" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="back-to-top" href="#top" (click)="scrollToSection($event, 'top')"><i
+                                class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top</a>
+                    </section>
+
+                    <section class="related-articles" id="related-articles">
+                        <span class="section-eyebrow">KEEP LEARNING</span>
+                        <h2>Related TallyPrime Articles</h2>
+                        <p>Explore these tutorials to build a stronger understanding of inventory management, accounting
+                            entries, and financial reports.</p>
+                        <div class="related-links">
+                            <a routerLink="/create-stock-items-in-tallyprime"><span><strong>How to Create Stock Items in
+                                        TallyPrime</strong><small>Set up product masters, units, and opening
+                                        stock.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-check-stock-summary-in-tallyprime"><span><strong>How to Check Stock
+                                        Summary in TallyPrime</strong><small>Review inventory quantities, balances, and
+                                        stock values.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-track-stock-movement-in-tallyprime"><span><strong>How to Track Stock
+                                        Movement in TallyPrime</strong><small>Understand stock receipts, issues,
+                                        transfers, and adjustments.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/how-to-manage-batch-wise-inventory-in-tallyprime"><span><strong>How to
+                                        Manage Batch-Wise Inventory in TallyPrime</strong><small>Maintain batch details
+                                        and review expiry information.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/tallyprime-voucher-types-explained-with-examples"><span><strong>TallyPrime
+                                        Voucher Types Explained</strong><small>Learn how purchase, sales, and inventory
+                                        entries are recorded.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                            <a routerLink="/generate-trial-balance-in-tallyprime"><span><strong>How to Generate a Trial
+                                        Balance in TallyPrime</strong><small>Review ledger balances as part of
+                                        accounting verification.</small></span><i class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <a class="all-blogs-button" routerLink="/blogs">View All Articles <i
+                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>

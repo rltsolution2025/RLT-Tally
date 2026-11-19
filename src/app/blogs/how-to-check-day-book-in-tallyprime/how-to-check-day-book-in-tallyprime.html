@@ -1,0 +1,706 @@
+<article class="article-page day-book-article">
+    <!-- Hero -->
+    <header class="article-hero" id="top">
+        <div class="article-container hero-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a routerLink="/">Home</a>
+                <span aria-hidden="true">/</span>
+                <a routerLink="/blogs">Blogs</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Day Book in TallyPrime</span>
+            </nav>
+
+            <span class="hero-label">TALLYPRIME ACCOUNTING GUIDE</span>
+            <h1>How to Check Day Book in TallyPrime: Step-by-Step Guide</h1>
+            <p class="hero-description">
+                Learn how to open the Day Book in TallyPrime, review daily transactions,
+                filter vouchers by date, verify entries, and identify accounting mistakes.
+            </p>
+            <div class="hero-meta">
+                <span><i class="fa-regular fa-folder-open" aria-hidden="true"></i> TallyPrime</span>
+                <span><i class="fa-regular fa-clock" aria-hidden="true"></i> Practical accounting guide</span>
+            </div>
+            <a class="hero-button" href="#introduction" (click)="scrollToSection($event, 'introduction')">
+                Read the guide <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="article-container article-layout">
+        <!-- Main article -->
+        <main class="article-content">
+            <section class="article-section" id="introduction">
+                <span class="section-kicker">INTRODUCTION</span>
+                <h2>Introduction</h2>
+                <p>
+                    The Day Book in TallyPrime is an important accounting report that helps businesses,
+                    accountants, and accounting students review transactions recorded during a particular
+                    period. It provides a consolidated view of accounting vouchers, including sales,
+                    purchases, receipts, payments, and journal entries.
+                </p>
+                <p>
+                    Whether you are learning TallyPrime for the first time or working as an accountant,
+                    knowing how to check the Day Book helps you verify daily transactions, identify
+                    incorrect entries, and maintain accurate accounting records.
+                </p>
+                <p>
+                    TallyPrime allows users to view Day Book transactions, select a particular date or
+                    period, open individual vouchers, and examine transaction details.
+                </p>
+                <p>
+                    In this guide, you will learn how to open the Day Book in TallyPrime, filter transactions
+                    by date, understand the report, check voucher details, and troubleshoot common issues.
+                </p>
+            </section>
+
+            <section class="article-section" id="what-is-day-book">
+                <span class="section-kicker">BASICS</span>
+                <h2>What Is a Day Book in TallyPrime?</h2>
+                <p>
+                    A Day Book is an accounting report that displays the vouchers entered into a company
+                    during a selected period. It helps users review the transactions recorded in the
+                    accounting system.
+                </p>
+                <div class="example-callout">
+                    <span class="callout-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+                    <div>
+                        <h3>Example</h3>
+                        <p>
+                            If a business records five sales invoices, three purchase invoices, two payment
+                            vouchers, and four receipt vouchers in one day, the Day Book helps the accountant
+                            review those transactions in one place.
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    The Day Book is useful for monitoring daily accounting activities and checking whether
+                    transactions have been recorded correctly.
+                </p>
+            </section>
+
+            <section class="article-section" id="day-book-information">
+                <h2>What Information Does the Day Book Show?</h2>
+                <p>Depending on the report configuration and transaction type, the Day Book can display:</p>
+                <ul class="check-list">
+                    <li>Date of the transaction.</li>
+                    <li>Voucher type.</li>
+                    <li>Voucher number.</li>
+                    <li>Particulars or ledger details.</li>
+                    <li>Debit and credit amounts.</li>
+                    <li>Narration or transaction description.</li>
+                    <li>Voucher details available for further inspection.</li>
+                </ul>
+                <p class="note-text">
+                    The information displayed may vary depending on the report settings, voucher type,
+                    and TallyPrime version.
+                </p>
+            </section>
+
+            <section class="article-section" id="why-day-book-important">
+                <h2>Why Is the Day Book Important in Accounting?</h2>
+                <p>
+                    The Day Book is useful for businesses and accounting professionals because it provides
+                    a convenient way to review recorded transactions.
+                </p>
+                <ol class="numbered-list">
+                    <li><strong>Daily transaction monitoring:</strong> Review the vouchers entered on a particular day.
+                    </li>
+                    <li><strong>Error identification:</strong> Identify incorrect amounts, duplicate-looking entries, or
+                        unexpected vouchers.</li>
+                    <li><strong>Voucher verification:</strong> Open a transaction to check its details.</li>
+                    <li><strong>Accounting control:</strong> Help ensure transactions are recorded and classified
+                        appropriately.</li>
+                    <li><strong>Audit preparation:</strong> Provide a useful starting point for reviewing transaction
+                        records.</li>
+                    <li><strong>Bookkeeping practice:</strong> Help accounting students understand how different voucher
+                        types appear in accounting reports.</li>
+                </ol>
+                <p>
+                    Checking the Day Book regularly can help businesses identify issues before they affect
+                    financial statements or GST reconciliation. You can also learn how voucher entries are
+                    classified in our guide to
+                    <a routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime voucher types</a>.
+                </p>
+            </section>
+
+            <section class="article-section" id="how-to-open-day-book">
+                <span class="section-kicker">STEP-BY-STEP</span>
+                <h2>How to Check Day Book in TallyPrime</h2>
+                <p>Follow these steps to access the Day Book report.</p>
+
+                <div class="step-card">
+                    <span class="step-number">01</span>
+                    <div class="step-content">
+                        <h3>Step 1: Open TallyPrime</h3>
+                        <p>Launch TallyPrime on your computer and select the company whose transactions you want to
+                            review.</p>
+                        <p>Make sure the correct company is selected, especially if you maintain multiple company
+                            accounts.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">02</span>
+                    <div class="step-content">
+                        <h3>Step 2: Open the Day Book Report</h3>
+                        <p>From the main screen, open the Day Book report.</p>
+                        <div class="navigation-path">
+                            <span>Gateway of Tally</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                            <span>Display More Reports</span><i class="fa-solid fa-chevron-right"
+                                aria-hidden="true"></i>
+                            <strong>Day Book</strong>
+                        </div>
+                        <p>
+                            You may also be able to locate the report through the search or Go To feature by
+                            searching for <strong>Day Book</strong>.
+                        </p>
+                        <p class="note-text">The exact navigation may vary depending on your TallyPrime release and
+                            screen configuration.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">03</span>
+                    <div class="step-content">
+                        <h3>Step 3: View the Transactions</h3>
+                        <p>Once the Day Book opens, TallyPrime displays the transactions recorded for the selected
+                            period.</p>
+                        <p>Review the available details, including:</p>
+                        <ul>
+                            <li>Transaction date.</li>
+                            <li>Voucher type.</li>
+                            <li>Voucher number.</li>
+                            <li>Ledger particulars.</li>
+                            <li>Transaction amount.</li>
+                        </ul>
+                        <p>If you want to examine a particular transaction, select the relevant voucher and open it to
+                            review the details.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">04</span>
+                    <div class="step-content">
+                        <h3>Step 4: Select a Specific Date</h3>
+                        <p>If you want to check transactions recorded on a particular day, change the report period.</p>
+                        <p>For example, suppose you want to review all transactions recorded on 14 October 2026.</p>
+                        <ol>
+                            <li>Open the Day Book.</li>
+                            <li>Use the period or date-selection option.</li>
+                            <li>Enter the required start date.</li>
+                            <li>Enter the same date as the end date.</li>
+                            <li>Confirm the selection.</li>
+                        </ol>
+                        <p>The report should display the transactions within the selected date range, subject to the
+                            report configuration.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">05</span>
+                    <div class="step-content">
+                        <h3>Step 5: Check Transactions for a Date Range</h3>
+                        <p>You can also review transactions for an entire week, month, or another accounting period.</p>
+                        <p>For example, to review transactions from 1 October 2026 to 14 October 2026, set the start and
+                            end dates accordingly.</p>
+                        <p>This helps accountants review daily activity, compare entries across dates, and investigate
+                            transactions recorded during a particular period.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <span class="step-number">06</span>
+                    <div class="step-content">
+                        <h3>Step 6: Open and Verify a Voucher</h3>
+                        <p>If you notice an unfamiliar or incorrect-looking transaction, open the corresponding voucher.
+                        </p>
+                        <p>Check the following details:</p>
+                        <ul>
+                            <li>Voucher date and number.</li>
+                            <li>Ledger accounts selected.</li>
+                            <li>Debit and credit amounts.</li>
+                            <li>Tax details, where applicable.</li>
+                            <li>Narration.</li>
+                            <li>Supporting invoice or transaction information.</li>
+                        </ul>
+                        <p>If you identify an error, make corrections according to your company's accounting procedures
+                            and applicable controls.</p>
+                        <div class="warning-callout">
+                            <strong>Important:</strong> Do not modify or delete an entry merely because it looks
+                            unusual. Verify the source document and transaction details first.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-section" id="particular-date">
+                <h2>How to Check Day Book for a Particular Date in TallyPrime</h2>
+                <p>
+                    Checking a single day's transactions is useful when verifying daily cash receipts,
+                    sales, purchases, or payments.
+                </p>
+                <p>Suppose you want to check the transactions recorded on 10 October 2026.</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Particulars</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Report</td>
+                                <td>Day Book</td>
+                            </tr>
+                            <tr>
+                                <td>From date</td>
+                                <td>10 October 2026</td>
+                            </tr>
+                            <tr>
+                                <td>To date</td>
+                                <td>10 October 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Purpose</td>
+                                <td>Review transactions recorded on that date</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>After setting the period, examine the vouchers displayed in the report.</p>
+                <p>You can then open individual vouchers to verify the transaction amount, ledger accounts, and other
+                    relevant details.</p>
+            </section>
+
+            <section class="article-section" id="practical-example">
+                <h2>Practical Example: Understanding Day Book Entries</h2>
+                <p>Consider a small business that records the following transactions on a single day.</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Voucher Type</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cash sales</td>
+                                <td>Sales</td>
+                                <td>₹5,000</td>
+                            </tr>
+                            <tr>
+                                <td>Office stationery purchased on credit</td>
+                                <td>Purchase</td>
+                                <td>₹1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Payment of electricity bill</td>
+                                <td>Payment</td>
+                                <td>₹2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Cash received from a customer</td>
+                                <td>Receipt</td>
+                                <td>₹3,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    When you open the Day Book for that date, these transactions can be reviewed through
+                    their respective vouchers.
+                </p>
+                <p>
+                    The Day Book helps you identify which transactions were entered and open each voucher
+                    to check the corresponding ledger accounts and amounts.
+                </p>
+                <div class="note-callout">
+                    <strong>Remember:</strong> These amounts illustrate the transactions only. They are not
+                    intended to represent a complete trial balance or a reconciliation of the business's
+                    cash and bank balances.
+                </div>
+            </section>
+
+            <section class="article-section" id="voucher-types">
+                <h2>How to Check Different Voucher Types in the Day Book</h2>
+                <p>The Day Book can help you review several types of accounting transactions.</p>
+                <div class="info-grid">
+                    <div class="info-card"><span class="info-icon"><i class="fa-solid fa-file-invoice"
+                                aria-hidden="true"></i></span>
+                        <h3>1. Sales Vouchers</h3>
+                        <p>Review sales invoices and verify the customer ledger, taxable value, GST details where
+                            applicable, and total invoice amount.</p>
+                    </div>
+                    <div class="info-card"><span class="info-icon"><i class="fa-solid fa-cart-shopping"
+                                aria-hidden="true"></i></span>
+                        <h3>2. Purchase Vouchers</h3>
+                        <p>Check purchase invoices, supplier details, expense or stock ledgers, and applicable tax
+                            information.</p>
+                    </div>
+                    <div class="info-card"><span class="info-icon"><i class="fa-solid fa-money-bill-transfer"
+                                aria-hidden="true"></i></span>
+                        <h3>3. Payment Vouchers</h3>
+                        <p>Review payments made through cash or bank accounts, including expense payments and supplier
+                            settlements.</p>
+                    </div>
+                    <div class="info-card"><span class="info-icon"><i class="fa-solid fa-hand-holding-dollar"
+                                aria-hidden="true"></i></span>
+                        <h3>4. Receipt Vouchers</h3>
+                        <p>Check money received from customers, cash receipts, and other recorded receipts.</p>
+                    </div>
+                    <div class="info-card"><span class="info-icon"><i class="fa-solid fa-book"
+                                aria-hidden="true"></i></span>
+                        <h3>5. Journal Vouchers</h3>
+                        <p>Review adjustment entries, provisions, transfers, and other journal transactions.</p>
+                    </div>
+                </div>
+                <p>Selecting and opening the appropriate voucher allows you to examine the accounting details in more
+                    depth.</p>
+                <p>For a fuller explanation of transaction entry types, read <a
+                        routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types
+                        Explained</a>.</p>
+            </section>
+
+            <section class="article-section" id="identify-errors">
+                <h2>How to Identify Accounting Errors Using the Day Book</h2>
+                <p>The Day Book can help you identify transactions that require further investigation.</p>
+                <div class="issue-list">
+                    <div class="issue-item">
+                        <h3>Incorrect Transaction Date</h3>
+                        <p>A voucher may have been recorded under the wrong date. Check the transaction date against the
+                            original invoice or supporting document.</p>
+                    </div>
+                    <div class="issue-item">
+                        <h3>Wrong Ledger Selection</h3>
+                        <p>An expense may have been posted to an incorrect ledger, or a receipt may have been recorded
+                            against the wrong customer. Open the voucher and verify the accounts used.</p>
+                    </div>
+                    <div class="issue-item">
+                        <h3>Incorrect Amount</h3>
+                        <p>Compare the recorded amount with the original invoice, receipt, or payment record.</p>
+                    </div>
+                    <div class="issue-item">
+                        <h3>Duplicate-Looking Entries</h3>
+                        <p>Two similar vouchers may appear in the Day Book. Verify their voucher numbers, supporting
+                            documents, and transaction details before deciding whether a duplicate exists.</p>
+                    </div>
+                    <div class="issue-item">
+                        <h3>Missing Transactions</h3>
+                        <p>If an expected transaction does not appear, check the selected date range, company, voucher
+                            status, and report configuration.</p>
+                    </div>
+                </div>
+                <p>
+                    The Day Book is a useful checking tool, but it does not independently confirm that every
+                    transaction is complete or correct. Reconcile it with supporting documents and other
+                    accounting reports. For bank-related checks, see
+                    <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">how to perform Bank Reconciliation
+                        in TallyPrime</a>.
+                </p>
+            </section>
+
+            <section class="article-section" id="day-book-vs-ledger">
+                <h2>Day Book vs Ledger Report in TallyPrime</h2>
+                <p>Although both reports help accountants review transactions, they serve different purposes.</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Day Book</th>
+                                <th>Ledger Report</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Main purpose</td>
+                                <td>Review vouchers recorded during a period</td>
+                                <td>Review transactions associated with a particular ledger</td>
+                            </tr>
+                            <tr>
+                                <td>Scope</td>
+                                <td>Multiple voucher types and accounts</td>
+                                <td>One selected ledger account</td>
+                            </tr>
+                            <tr>
+                                <td>Typical use</td>
+                                <td>Daily transaction checking</td>
+                                <td>Account-wise transaction verification</td>
+                            </tr>
+                            <tr>
+                                <td>Example</td>
+                                <td>Review all vouchers recorded on a day</td>
+                                <td>Review all entries in the Bank Account ledger</td>
+                            </tr>
+                            <tr>
+                                <td>Error checking</td>
+                                <td>Identify transactions needing investigation</td>
+                                <td>Verify account-specific postings and balances</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>
+                    For example, use the Day Book to review all transactions entered on a particular day.
+                    Use the ledger report to investigate the detailed activity of a specific customer,
+                    supplier, expense, cash, or bank account.
+                </p>
+                <p>Both reports are useful for maintaining accurate accounting records.</p>
+            </section>
+
+            <section class="article-section" id="common-problems">
+                <h2>Common Problems When Checking Day Book in TallyPrime</h2>
+                <div class="problem-card">
+                    <h3>1. Day Book Shows No Transactions</h3>
+                    <p><strong>Possible reasons:</strong></p>
+                    <ul>
+                        <li>The wrong company is selected.</li>
+                        <li>The report period does not include the transaction date.</li>
+                        <li>No vouchers have been entered for the selected period.</li>
+                        <li>The report configuration is filtering the transactions.</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Verify the company, date range, and available report filters.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>2. A Transaction Is Missing</h3>
+                    <p><strong>Possible reasons:</strong></p>
+                    <ul>
+                        <li>The voucher date is incorrect.</li>
+                        <li>The transaction belongs to another company.</li>
+                        <li>The voucher is not recorded as expected.</li>
+                        <li>A report filter excludes the transaction.</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Check the voucher date, company, and report configuration. Search for
+                        the voucher separately if necessary.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>3. The Day Book Displays Too Many Transactions</h3>
+                    <p><strong>Possible reason:</strong> The report period covers a longer duration than required.</p>
+                    <p><strong>Solution:</strong> Narrow the period to a specific date, week, or month.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>4. You Cannot Find a Particular Voucher</h3>
+                    <p><strong>Possible reasons:</strong></p>
+                    <ul>
+                        <li>You are searching under the wrong voucher type.</li>
+                        <li>The voucher number or date is incorrect.</li>
+                        <li>You are viewing the wrong company or period.</li>
+                    </ul>
+                    <p><strong>Solution:</strong> Verify the voucher details and use the available search, navigation,
+                        or filtering options.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>5. You Need to Print or Export the Day Book</h3>
+                    <p>TallyPrime provides reporting and output options that may allow you to print or export reports.
+                    </p>
+                    <p>Open the Day Book and check the available printing or export options in your version. Review the
+                        date range and displayed information before producing the report.</p>
+                </div>
+            </section>
+
+            <section class="article-section" id="best-practices">
+                <h2>Best Practices for Checking the Day Book</h2>
+                <p>Follow these practices to improve your daily accounting process:</p>
+                <ul class="check-list">
+                    <li>Check the Day Book regularly.</li>
+                    <li>Select the correct company before reviewing transactions.</li>
+                    <li>Verify the date range before drawing conclusions.</li>
+                    <li>Open vouchers that require further investigation.</li>
+                    <li>Compare transactions with supporting documents.</li>
+                    <li>Review ledger classifications and amounts.</li>
+                    <li>Investigate duplicate-looking entries before changing them.</li>
+                    <li>Use ledger reports and other financial reports when additional verification is required.</li>
+                    <li>Follow your organisation's approval and recordkeeping procedures.</li>
+                </ul>
+                <p>Consistent Day Book checking helps accountants maintain better visibility over recorded transactions.
+                </p>
+                <p>
+                    You can build on this practice by learning to generate a
+                    <a routerLink="/generate-trial-balance-in-tallyprime">Trial Balance in TallyPrime</a>
+                    and review account balances.
+                </p>
+            </section>
+
+            <section class="article-section faq-section" id="faqs">
+                <span class="section-kicker">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>1. How do I open the Day Book in TallyPrime?</h3>
+                    <p>Open the relevant company, locate the Day Book through the available report navigation or Go To
+                        search, and select the report to view the recorded vouchers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>2. What is the shortcut to open the Day Book in TallyPrime?</h3>
+                    <p>The exact shortcut or navigation may vary by TallyPrime version and configuration. The Go To or
+                        report search feature is a practical way to locate the Day Book when you do not know the
+                        navigation path.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>3. Can I check the Day Book for one day only?</h3>
+                    <p>Yes. Use the report's date or period selection to set the start and end dates to the same day.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>4. What transactions appear in the Day Book?</h3>
+                    <p>Depending on the report configuration, the Day Book can display sales, purchases, receipts,
+                        payments, journal entries, and other recorded vouchers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>5. What is the difference between a Day Book and a ledger?</h3>
+                    <p>The Day Book provides a broader view of vouchers recorded during a period. A ledger report
+                        focuses on the transactions and balances associated with a particular account.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>6. Can I edit a voucher from the Day Book?</h3>
+                    <p>In supported workflows, you can open a voucher from the report and make changes if you have the
+                        required access and permissions. Follow your organisation's accounting controls before modifying
+                        saved transactions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>7. Can I print the Day Book in TallyPrime?</h3>
+                    <p>Yes. Depending on the version and available options, you can use the report's print or export
+                        features to produce a copy of the Day Book.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>8. Why is the Day Book important for accounting students?</h3>
+                    <p>It helps students understand how sales, purchase, payment, receipt, and journal vouchers appear
+                        in an accounting system. It also provides practical experience in transaction verification and
+                        bookkeeping.</p>
+                </div>
+            </section>
+
+            <section class="article-section" id="conclusion">
+                <span class="section-kicker">CONCLUSION</span>
+                <h2>Conclusion</h2>
+                <p>
+                    The Day Book in TallyPrime is a valuable report for reviewing accounting transactions
+                    recorded during a selected period. By learning how to open the report, select dates,
+                    review voucher details, and investigate unusual entries, users can improve their
+                    understanding of day-to-day accounting.
+                </p>
+                <p>
+                    For accounting students and aspiring accountants, practising Day Book verification
+                    alongside ledger reports, trial balance reports, and voucher entry exercises helps
+                    build practical TallyPrime skills.
+                </p>
+            </section>
+
+            <!-- Related articles: update the routerLink paths if your route configuration uses different slugs. -->
+            <section class="related-section" id="related-articles">
+                <div class="related-heading">
+                    <span class="section-kicker">KEEP LEARNING</span>
+                    <h2>Related Articles</h2>
+                    <p>Explore these guides to strengthen your practical TallyPrime and accounting knowledge.</p>
+                </div>
+                <div class="related-grid">
+                    <a class="related-card" routerLink="/generate-trial-balance-in-tallyprime">
+                        <span class="related-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+                        <span class="related-category">FINANCIAL REPORTS</span>
+                        <h3>How to Generate a Trial Balance in TallyPrime</h3>
+                        <span class="related-link">Read article <i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+                    <a class="related-card" routerLink="/tallyprime-voucher-types-explained-with-examples">
+                        <span class="related-icon"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i></span>
+                        <span class="related-category">VOUCHER ENTRY</span>
+                        <h3>TallyPrime Voucher Types Explained with Examples</h3>
+                        <span class="related-link">Read article <i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+                    <a class="related-card" routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">
+                        <span class="related-icon"><i class="fa-solid fa-building-columns"
+                                aria-hidden="true"></i></span>
+                        <span class="related-category">BANKING</span>
+                        <h3>How to Perform Bank Reconciliation in TallyPrime</h3>
+                        <span class="related-link">Read article <i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+                    <a class="related-card" routerLink="/how-to-create-company-in-tallyprime">
+                        <span class="related-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
+                        <span class="related-category">GETTING STARTED</span>
+                        <h3>How to Create a Company in TallyPrime</h3>
+                        <span class="related-link">Read article <i class="fa-solid fa-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="article-cta" id="enroll">
+                <div class="cta-content">
+                    <span class="section-kicker">BUILD PRACTICAL SKILLS</span>
+                    <h2>Want to develop your practical accounting skills?</h2>
+                    <p>
+                        RLT Edzaro offers Tally training to help learners build their understanding of
+                        accounting concepts, GST, and practical TallyPrime workflows.
+                    </p>
+                    <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                        rel="noopener noreferrer" class="cta-button">
+                        Explore Tally Training <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                    <p class="cta-footnote">Learn accounting step by step and build confidence in the software skills
+                        used in accounting roles.</p>
+                </div>
+            </section>
+
+            <div class="article-bottom-nav">
+                <a href="#top" (click)="scrollToSection($event, 'top')"><i class="fa-solid fa-arrow-up"
+                        aria-hidden="true"></i> Back to top</a>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar" aria-label="Article navigation and information">
+            <div class="sidebar-card toc-card">
+                <h2><i class="fa-solid fa-list-ul" aria-hidden="true"></i> In this article</h2>
+                <nav class="toc-nav" aria-label="Table of contents">
+                    <a href="#introduction" (click)="scrollToSection($event, 'introduction')">Introduction</a>
+                    <a href="#what-is-day-book" (click)="scrollToSection($event, 'what-is-day-book')">What Is a Day
+                        Book?</a>
+                    <a href="#day-book-information"
+                        (click)="scrollToSection($event, 'day-book-information')">Information Displayed</a>
+                    <a href="#why-day-book-important" (click)="scrollToSection($event, 'why-day-book-important')">Why It
+                        Is Important</a>
+                    <a href="#how-to-open-day-book" (click)="scrollToSection($event, 'how-to-open-day-book')">How to
+                        Check Day Book</a>
+                    <a href="#particular-date" (click)="scrollToSection($event, 'particular-date')">Check a Particular
+                        Date</a>
+                    <a href="#practical-example" (click)="scrollToSection($event, 'practical-example')">Practical
+                        Example</a>
+                    <a href="#voucher-types" (click)="scrollToSection($event, 'voucher-types')">Voucher Types</a>
+                    <a href="#identify-errors" (click)="scrollToSection($event, 'identify-errors')">Identify Accounting
+                        Errors</a>
+                    <a href="#day-book-vs-ledger" (click)="scrollToSection($event, 'day-book-vs-ledger')">Day Book vs
+                        Ledger</a>
+                    <a href="#common-problems" (click)="scrollToSection($event, 'common-problems')">Common Problems</a>
+                    <a href="#best-practices" (click)="scrollToSection($event, 'best-practices')">Best Practices</a>
+                    <a href="#faqs" (click)="scrollToSection($event, 'faqs')">FAQs</a>
+                    <a href="#conclusion" (click)="scrollToSection($event, 'conclusion')">Conclusion</a>
+                    <a href="#related-articles" (click)="scrollToSection($event, 'related-articles')">Related
+                        Articles</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-card learning-card">
+                <span class="sidebar-eyebrow">PRACTICAL LEARNING</span>
+                <h3>Improve your TallyPrime skills</h3>
+                <p>Explore accounting, GST, voucher entry, and reporting workflows with RLT Edzaro.</p>
+                <a href="https://rltedzaro.com/tally-training-institute-in-chennai" target="_blank"
+                    rel="noopener noreferrer">Explore Tally Training <i class="fa-solid fa-arrow-right"
+                        aria-hidden="true"></i></a>
+            </div>
+
+            <div class="sidebar-card related-mini-card">
+                <h3>Explore next</h3>
+                <a routerLink="/generate-trial-balance-in-tallyprime">Trial Balance in TallyPrime <i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a routerLink="/tallyprime-voucher-types-explained-with-examples">TallyPrime Voucher Types <i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a routerLink="/how-to-perform-bank-reconciliation-in-tallyprime">Bank Reconciliation <i
+                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </aside>
+    </div>
+</article>
